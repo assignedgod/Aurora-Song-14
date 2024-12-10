@@ -12,6 +12,10 @@
         },
         {
             "name": "cart-mail"
+        },
+        {
+            "name": "cart-chat"
         }
+
     ]
 }

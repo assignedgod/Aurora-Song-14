@@ -33,6 +33,7 @@
     preserveOnSale: true
   - type: DeletionCensusExempt
   # End Frontier: extra components
+  - type: NanoChatCard # DeltaV
 
 #IDs with layers
 
@@ -917,3 +918,5 @@
     interfaces:
       enum.AgentIDCardUiKey.Key:
         type: AgentIDCardBoundUserInterface
+  - type: NanoChatCard # DeltaV
+    notificationsMuted: true
