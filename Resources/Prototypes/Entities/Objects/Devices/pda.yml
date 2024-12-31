@@ -107,6 +107,7 @@
       - NewsReaderCartridge
       - BountyContractsCartridge # Frontier
       - AstroNavCartridge # Frontier
+      - NanoChatCartridge # DeltaV
     cartridgeSlot:
       priority: -1
       name: device-pda-slot-component-slot-name-cartridge
@@ -194,6 +195,7 @@
     - BountyContractsCartridge # Frontier
     - AstroNavCartridge # Frontier
     - WantedListCartridge
+    - NanoChatCartridge # DeltaV
 
 - type: entity
   parent: BasePDA
@@ -925,6 +927,7 @@
     - NewsReaderCartridge
     - WantedListCartridge
     - LogProbeCartridge
+    - NanoChatCartridge # DeltaV
 
 - type: entity
   parent: BaseSecurityPDA
@@ -996,6 +999,7 @@
       - WantedListCartridge
       - LogProbeCartridge
       - AstroNavCartridge
+      - NanoChatCartridge # DeltaV
 
 - type: entity
   parent: CentcomPDA
@@ -1014,6 +1018,7 @@
   - type: CartridgeLoader
     uiKey: enum.PdaUiKey.Key
     notificationsEnabled: false
+    diskSpace: 10 # DeltaV
     preinstalled:
       - CrewManifestCartridge
       - NotekeeperCartridge
@@ -1023,6 +1028,7 @@
       - WantedListCartridge
       - MedTekCartridge
       - AstroNavCartridge
+      - NanoChatCartridge # DeltaV
   - type: Tag #  Ignore Chameleon tags
     tags:
     - DoorBumpOpener
@@ -1143,6 +1149,7 @@
       - NotekeeperCartridge
       - NanoTaskCartridge
       - AstroNavCartridge # Frontier
+      - NanoChatCartridge # DeltaV
 
 - type: entity
   parent: BaseSecurityPDA
@@ -1176,6 +1183,7 @@
       - LogProbeCartridge
       - AstroNavCartridge
       - MailMetricsCartridge # Frontier
+      - NanoChatCartridge # DeltaV
 
 - type: entity
   parent: ERTLeaderPDA
@@ -1346,6 +1354,7 @@
     - NewsReaderCartridge
     - WantedListCartridge
     - LogProbeCartridge
+    - NanoChatCartridge # DeltaV
 
 - type: entity
   parent: BaseMedicalPDA
@@ -1374,6 +1383,7 @@
     - NewsReaderCartridge
     - WantedListCartridge
     - MedTekCartridge
+    - NanoChatCartridge # DeltaV
 
 - type: entity
   parent: ClownPDA
