@@ -104,6 +104,7 @@
       # - id: ClothingBeltPlant
       - id: ClothingBeltPlantFilled # Frontier
       - id: PlantBag ##Some maps don't have nutrivend
+      - id: PlantAnalyzer
       - id: BoxMouthSwab
       - id: Dropper
 #      - id: HandLabeler
