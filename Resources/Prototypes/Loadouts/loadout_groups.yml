@@ -491,6 +491,7 @@
   - EmergencyNitrogenClown
   - EmergencyOxygenClown
   - LoadoutSpeciesVoxNitrogen
+  - EmergencyIPCBox # DeltaV
   - EmergencyWaterVaporClown # DeltaV
 
 - type: loadoutGroup
@@ -549,6 +550,7 @@
   - EmergencyOxygenMime
   - EmergencySpeciesMothMime
   - LoadoutSpeciesVoxNitrogen
+  - EmergencyIPCBox # DeltaV
   - EmergencyWaterVaporMime # DeltaV
 
 - type: loadoutGroup
@@ -835,6 +837,7 @@
   - EmergencyNitrogenExtended
   - EmergencyOxygenExtended
   - LoadoutSpeciesVoxNitrogen
+  - EmergencyIPCBox # DeltaV
   - EmergencyWaterVaporExtended # DeltaV
 
 # Science
@@ -1117,6 +1120,7 @@
   - EmergencyNitrogenSecurity
   - EmergencyOxygenSecurity
   - LoadoutSpeciesVoxNitrogen
+  - EmergencyIPCBox # DeltaV
   - EmergencyWaterVaporSecurity # DeltaV
 
 - type: loadoutGroup
@@ -1319,6 +1323,7 @@
   - EmergencyNitrogenMedical
   - EmergencyOxygenMedical
   - LoadoutSpeciesVoxNitrogen
+  - EmergencyIPCBox # DeltaV
   - EmergencyWaterVaporMedical # DeltaV
 
 # Wildcards
@@ -1362,6 +1367,7 @@
   - EmergencyNitrogenSyndicate
   - EmergencyOxygenSyndicate
   - LoadoutSpeciesVoxNitrogen
+  - EmergencyIPCBox # DeltaV
   - EmergencyWaterVaporSyndicate # DeltaV
 
 - type: loadoutGroup
