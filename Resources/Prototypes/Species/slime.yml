@@ -8,6 +8,7 @@
   markingLimits: MobSlimeMarkingLimits
   dollPrototype: MobSlimePersonDummy
   skinColoration: Hues
+  customName: true
 
 - type: speciesBaseSprites
   id: MobSlimeSprites
@@ -15,9 +16,14 @@
     Head: MobSlimeHead
     Hair: MobSlimeMarkingFollowSkin
     FacialHair: MobSlimeMarkingFollowSkin
-    UndergarmentTop: MobHumanoidAnyMarking
-    UndergarmentBottom: MobHumanoidAnyMarking
+    Snout: MobSlimeMarkingFollowSkin
+    Underwear: MobHumanoidAnyMarking
+    Undershirt: MobHumanoidAnyMarking
     Chest: MobSlimeTorso
+    HeadTop: MobSlimeMarkingFollowSkin
+    HeadSide: MobSlimeMarkingFollowSkin
+    Tail: MobSlimeMarkingFollowSkin
+    Wings: MobSlimeMarkingFollowSkin
     Eyes: MobHumanoidEyes
     LArm: MobSlimeLArm
     RArm: MobSlimeRArm
@@ -37,14 +43,62 @@
     FacialHair:
       points: 1
       required: false
+    Tail:
+      points: 1
+      required: false
+    Wings:
+      points: 1
+      required: false
+    Snout:
+      points: 1
+      required: false
+    Head:
+      points: 1
+      required: false
+    HeadTop:
+      points: 2
+      required: false
+    HeadSide:
+      points: 2
+      required: false
     Chest:
-      points: 4 # imp 2<4
+      points: 4 # imp 1<4
       required: false
-    Legs:
-      points: 8 # imp 4<8
+    Genitals:
+      points: 1
       required: false
-    Arms:
-      points: 8 # imp 4<8
+    Nipples:
+      points: 2
+      required: false
+    Underwear:
+      points: 1
+      required: false
+    Undershirt:
+      points: 1
+      required: false
+    RightLeg:
+      points: 2
+      required: false
+    RightFoot:
+      points: 2
+      required: false
+    LeftLeg:
+      points: 2
+      required: false
+    LeftFoot:
+      points: 2
+      required: false
+    RightArm:
+      points: 2
+      required: false
+    RightHand:
+      points: 2
+      required: false
+    LeftArm:
+      points: 2
+      required: false
+    LeftHand:
+      points: 2
       required: false
 
 - type: humanoidBaseSprite
