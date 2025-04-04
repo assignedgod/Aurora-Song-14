@@ -67,6 +67,9 @@
       80: 0.5 # DeltaV - was 90
       100: 0.3 # DeltaV - was 120, which is irrelvant?
   - type: SiliconDownOnDead
+  - type: Speech
+  - type: Deathgasp
+    prototype: SiliconDeathgasp
   - type: Inventory
     templateId: ipc
   - type: GuideHelp
@@ -104,6 +107,8 @@
   - type: EmitBuzzWhileDamaged
   - type: CanHostGuardian
   - type: WeldingHealable
+  - type: CombatMode # DeltaV - let IPCs disarm
+    canDisarm: true
   - type: SnoutHelmet # DeltaV - IPC Snouts
     replacementRace: vulpkanin
 
