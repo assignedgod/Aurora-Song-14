@@ -1,4 +1,5 @@
 using System.Diagnostics.CodeAnalysis;
+using System.Net;
 using System.Numerics;
 using Content.Shared.ActionBlocker;
 using Content.Shared.CCVar;
@@ -20,6 +21,7 @@ using Robust.Shared.Physics;
 using Robust.Shared.Physics.Components;
 using Robust.Shared.Physics.Controllers;
 using Robust.Shared.Prototypes;
+using Robust.Shared.Serialization.Manager.Exceptions;
 using Robust.Shared.Timing;
 using Robust.Shared.Utility;
 using PullableComponent = Content.Shared.Movement.Pulling.Components.PullableComponent;
@@ -102,6 +104,7 @@ public abstract partial class SharedMoverController : VirtualController
         Subs.CVar(_configManager, CCVars.MinFriction, value => _minDamping = value, true);
         Subs.CVar(_configManager, CCVars.AirFriction, value => _airDamping = value, true);
         Subs.CVar(_configManager, CCVars.OffgridFriction, value => _offGridDamping = value, true);
+        UpdatesBefore.Add(typeof(TileFrictionController));
     }
 
     public override void Shutdown()
@@ -239,7 +242,7 @@ public abstract partial class SharedMoverController : VirtualController
 
             // If we're not on a grid, and not able to move in space check if we're close enough to a grid to touch.
             if (!touching && MobMoverQuery.TryComp(uid, out var mobMover))
-                touching |= IsAroundCollider(_lookup, (uid, physicsComponent, mobMover, xform));
+                touching |= IsAroundCollider(PhysicsSystem, xform, mobMover, uid, physicsComponent);
 
             // If we're touching then use the weightless values
             if (touching)
@@ -261,9 +264,8 @@ public abstract partial class SharedMoverController : VirtualController
         else
         {
             if (MapGridQuery.TryComp(xform.GridUid, out var gridComp)
-                && _mapSystem.TryGetTileRef(xform.GridUid.Value, gridComp, xform.Coordinates, out var tile)
-                && physicsComponent.BodyStatus == BodyStatus.OnGround)
-                tileDef = (ContentTileDefinition)_tileDefinitionManager[tile.Tile.TypeId];
+                && _mapSystem.TryGetTileRef(xform.GridUid.Value, gridComp, xform.Coordinates, out var tile))
+                tileDef = (ContentTileDefinition) _tileDefinitionManager[tile.Tile.TypeId];
 
             var walkSpeed = moveSpeedComponent?.CurrentWalkSpeed ?? MovementSpeedModifierComponent.DefaultBaseWalkSpeed;
             var sprintSpeed = moveSpeedComponent?.CurrentSprintSpeed ?? MovementSpeedModifierComponent.DefaultBaseSprintSpeed;
@@ -405,17 +407,6 @@ public abstract partial class SharedMoverController : VirtualController
         var speed = velocity.Length();
 
         if (speed < minimumFrictionSpeed)
-            return;
-
-        // This equation is lifted from the Physics Island solver.
-        // We re-use it here because Kinematic Controllers can't/shouldn't use the Physics Friction
-        velocity *= Math.Clamp(1.0f - frameTime * friction, 0.0f, 1.0f);
-
-    }
-
-    public void Friction(float minimumFrictionSpeed, float frameTime, float friction, ref float velocity)
-    {
-        if (Math.Abs(velocity) < minimumFrictionSpeed)
             return;
 
         // This equation is lifted from the Physics Island solver.
