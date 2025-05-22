@@ -20,3 +20,33 @@
   chatMessages: [ whirrs ]
   chatTriggers:
     - whirrs
+
+- type: emote
+  id: Mars
+  name: chat-emote-name-mars
+  category: Vocal
+  whitelist:
+    tags:
+    - ShadowkinEmotes
+    #- HarpyEmotes # Aurora
+  blacklist:
+    components:
+    - BorgChassis
+  chatMessages: [ mars ]
+  chatTriggers:
+  - mars
+
+- type: emote
+  id: Wurble
+  name: chat-emote-name-wurble
+  category: Vocal
+  whitelist:
+    tags:
+    - ShadowkinEmotes
+    #- HarpyEmotes # Aurora
+  blacklist:
+    components:
+    - BorgChassis
+  chatMessages: [ wurble ]
+  chatTriggers:
+  - wurble
