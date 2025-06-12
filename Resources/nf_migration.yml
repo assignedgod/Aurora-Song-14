@@ -603,3 +603,7 @@ LockerScienceFilled: NFLockerScienceFilled
 
 # 2025-07-01 | Aurora: M90 refactored to no longer have useless GL
 NFWeaponRifleAssaultM90GrenadeLauncher: NFWeaponRifleAssaultM90
+# 2025-06-07 The Great Charger Debacle
+PowerCellRechargerFlatpack: WeaponCapacitorRechargerFlatpack
+PowerCellRecharger: WeaponCapacitorRecharger
+CellRechargerCircuitboard: WeaponCapacitorRechargerCircuitboard
