@@ -114,7 +114,7 @@
   - type: EntityTableContainerFill
     containers:
       entity_storage: !type:NestedSelector
-        tableId: NFStorageFillGearChemistry # Frontier: LockerFillChemistry<NFStorageFillGearChemistry
+        tableId: LockerFillChemistry # Frontier: LockerFillChemistry<NFStorageFillGearChemistry # Aurora, reverted. It was ridiculous to even remove beakers from this
 
 - type: entityTable
   id: LockerFillParamedic

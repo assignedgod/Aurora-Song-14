@@ -337,7 +337,7 @@
   - type: EntityTableContainerFill
     containers:
       storagebase: !type:NestedSelector
-        tableId: NFStorageFillGearChemistry
+        tableId: LockerFillChemistry
 # endregion
 
 # region Departments
