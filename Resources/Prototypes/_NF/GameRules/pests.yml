@@ -45,7 +45,7 @@
     duration: 50
   - type: VentCrittersRule
     entries:
-    - id: MobCockroach
+    - id: MobMothroach
       prob: 0.03
     - id: MobMothroach
       prob: 0.072
