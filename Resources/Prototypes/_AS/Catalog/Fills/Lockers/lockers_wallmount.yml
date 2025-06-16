@@ -4,16 +4,8 @@
     children:
     - id: BoxSyringe
     - id: BoxBeaker
-    - id: BoxBeaker
-      prob: 0.3
     - id: BoxPillCanister
     - id: BoxBottle
-    - id: BaseChemistryEmptyVial
     - id: PlasmaChemistryVial
-    - id: ChemBag
-    - id: ClothingEyesGlassesChemical
-    - id: ClothingHandsGlovesLatex
-    - id: ClothingHeadsetMedical
-    - id: ClothingMaskSterile
     - id: HandLabeler
       prob: 0.5
