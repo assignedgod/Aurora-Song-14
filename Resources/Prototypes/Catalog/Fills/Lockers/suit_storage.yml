@@ -317,6 +317,6 @@
 #        - id: OxygenTankFilled
         - id: NFTankO2N2EqualFilled # Frontier
         # TODO: Gone until reworked to have no space protection
-        #- id: ClothingOuterHardsuitWizard
+        - id: ClothingOuterHardsuitWizard #Aurora: Added hardsuit. May Alora enjoy wizard time
         - id: ClothingMaskBreath
         - id: JetpackBlackFilled # Frontier: JetpackVoidFilled<JetpackBlackFilled
