@@ -67,3 +67,24 @@
     table: !type:NestedSelector
       tableId: DungeonLootMercenaryUIVGuns
       prob: 1
+
+- type: entity
+  parent: MarkerBase
+  id: DungeonLootMercenaryUIVGunsSpawnerRare
+  name: Merc UIV Gun Spawner Rare
+  suffix: UIV
+  components:
+  - type: Sprite
+    layers:
+    - state: green
+      scale: 0.7, 0.7
+    - sprite: Objects/Weapons/Guns/Pistols/mk58.rsi
+      state: icon
+    - sprite: Effects/crayondecals.rsi
+      state: 4
+      color: red
+  - type: EntityTableSpawner
+    offset: 0.0
+    table: !type:NestedSelector
+      tableId: DungeonLootMercenaryUIVGunsRare
+      prob: 1

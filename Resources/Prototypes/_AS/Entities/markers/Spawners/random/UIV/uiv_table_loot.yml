@@ -37,7 +37,7 @@
       children:
       - id: SpawnDungeonLootAmmoIncendiary
       - id: SpaceCash5000
-      - id: OmnizineChemistryBottle
+      - id: ChemistryBottleOmnizine
       - id: QuadraticCapacitorStockPart
       - !type:GroupSelector
        children:
@@ -55,7 +55,7 @@
       - id: SpawnDungeonLootMeleeT4
       - !type:GroupSelector
        children:
-       - id: DungeonLootMercenaryUIVGunsRare
+       - id: DungeonLootMercenaryUIVGunsSpawnerRare
        weight: 0.1
 
 - type: entityTable
