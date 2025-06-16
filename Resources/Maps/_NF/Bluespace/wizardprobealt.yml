@@ -5557,7 +5557,7 @@ entities:
     - type: Transform
       pos: -1.5,-17.5
       parent: 1
-- proto: SuitStorageBase
+- proto: SuitStorageWizard
   entities:
   - uid: 675
     components:
