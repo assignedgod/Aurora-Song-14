@@ -46,8 +46,6 @@
   - type: VentCrittersRule
     entries:
     - id: MobMothroach
-      prob: 0.03
-    - id: MobMothroach
       prob: 0.072
     - id: MobRosyMothroach
       prob: 0.008
