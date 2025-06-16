@@ -1,4 +1,5 @@
 ﻿using Content.Client.Stylesheets;
+using Content.Client.UserInterface.Systems.Chat.Controls.Denu;
 using Content.Shared.Chat;
 using Content.Shared.Input;
 using Robust.Client.UserInterface.Controls;
@@ -11,6 +12,7 @@ public class ChatInputBox : PanelContainer
     public readonly ChannelSelectorButton ChannelSelector;
     public readonly HistoryLineEdit Input;
     public readonly ChannelFilterButton FilterButton;
+    public readonly DenuButton DenuButton;
     protected readonly BoxContainer Container;
     protected ChatChannel ActiveChannel { get; private set; } = ChatChannel.Local;
 
@@ -45,6 +47,12 @@ public class ChatInputBox : PanelContainer
             StyleClasses = {"chatFilterOptionButton"}
         };
         Container.AddChild(FilterButton);
+        DenuButton = new DenuButton
+        {
+            Name = "DenuButton",
+            StyleClasses = {"chatFilterOptionButton"}
+        };
+        Container.AddChild(DenuButton);
         AddStyleClass(StyleNano.StyleClassChatSubPanel);
         ChannelSelector.OnChannelSelect += UpdateActiveChannel;
     }
