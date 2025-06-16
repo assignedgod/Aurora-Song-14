@@ -337,7 +337,7 @@
   - type: EntityTableContainerFill
     containers:
       storagebase: !type:NestedSelector
-        tableId: NFStorageFillGearChemistry
+        tableId: ASWallLockerFillChemistry # Just spits the vial on the floor so instead I add one vial to the wall locker
 # endregion
 
 # region Departments
