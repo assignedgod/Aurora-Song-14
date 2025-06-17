@@ -224,6 +224,14 @@
     Plastic: 2000 # box - free, 60 [bullets] * 10 [Plastic per bullet]
     Steel: 2000 # box - free, 60 [bullets] * 10 [Steel per bullet]
 
+#region .25 Ammo Box - Aurora Song
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: NFAmmunitionBoxRifle25
+  result: NFAmmunitionBoxRifle25
+  materials:
+    Steel: 1200 # box - free, 60 [bullets] * 20 [Steel per bullet]
+
 #region .30 Ammo Box
 - type: latheRecipe
   parent: BaseAmmoRecipe
