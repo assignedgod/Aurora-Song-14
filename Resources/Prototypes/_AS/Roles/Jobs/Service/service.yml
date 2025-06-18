@@ -15,7 +15,9 @@
   displayWeight: 55 # Second from the top
   canBeAntag: false
   accessGroups:
-  - GeneralAccess
+  access:
+  - Maintenance
+  - External # Frontier
   - Service
   - Frontier
   special:
