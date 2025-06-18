@@ -17,6 +17,7 @@
   accessGroups:
   - GeneralAccess
   - Service
+  - Frontier
   special:
   - !type:AddImplantSpecial
     implants: [ TrackingImplant ]

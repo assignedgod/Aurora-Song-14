@@ -46,4 +46,4 @@
   storage:
     back:
     - AppraisalTool
-    - ShipVoucherPirate
+    - ShipVoucherPirate # Aurora
