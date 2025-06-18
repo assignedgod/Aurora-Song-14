@@ -232,6 +232,13 @@
   materials:
     Steel: 1200 # box - free, 60 [bullets] * 20 [Steel per bullet]
 
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: NFAmmunitionBoxRifle25Overpressure
+  result: NFAmmunitionBoxRifle25Overpressure
+  materials:
+    Steel: 1800 # box - free, 60 [bullets] * 20 [Steel per bullet]
+
 #region .30 Ammo Box
 - type: latheRecipe
   parent: BaseAmmoRecipe
@@ -554,6 +561,20 @@
   result: NFMagazineRifle20
   materials:
     Steel: 530
+
+- type: latheRecipe
+  parent: BaseFilledMagazineRecipe
+  id: ASMagazineCaselessRifle
+  result: ASMagazineCaselessRifle
+  materials:
+    Steel: 680
+
+- type: latheRecipe
+  parent: BaseFilledMagazineRecipe
+  id: ASMagazineCaselessRifleShort
+  result: ASMagazineCaselessRifleShort
+  materials:
+    Steel: 600
 
 #region Weapons
 - type: latheRecipe

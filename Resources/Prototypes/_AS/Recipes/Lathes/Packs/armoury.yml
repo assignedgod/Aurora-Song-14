@@ -1,0 +1,10 @@
+﻿- type: latheRecipePack
+  id: ASMercenaryEmag
+  recipes:
+  - NFAmmunitionBoxRifle25
+  - NFAmmunitionBoxRifle25Overpressure
+  - ASMagazineCaselessRifleShort
+  - ASMagazineCaselessRifle
+  - FireAxe
+  - NFMagazineSubMachineGun35
+  - NFMagazineRifle20

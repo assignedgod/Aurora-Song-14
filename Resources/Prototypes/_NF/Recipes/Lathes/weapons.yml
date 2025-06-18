@@ -75,13 +75,12 @@
 - type: latheRecipe
   parent: BaseWeaponRecipeLong
   id: NFWeaponHoloflareGun
-  result: NFWeaponHoloflareGun  
+  result: NFWeaponHoloflareGun
   materials:
     Steel: 300
     Glass: 200
     Plastic: 200
 
-# region Melee weapons
 - type: latheRecipe
   id: NFWeaponPka
   result: NFWeaponPka
@@ -101,7 +100,7 @@
     Silver: 100
     Gold: 100
 
-# Melee weapons
+# region Melee weapons
 - type: latheRecipe
   id: BaseBallBatNF
   parent: BaseWeaponRecipeLong
@@ -168,3 +167,13 @@
   materials:
     Steel: 250
     Plastic: 100
+
+- type: latheRecipe
+  parent: BaseWeaponRecipe
+  id: FireAxe
+  result: FireAxe
+  materials:
+    Steel: 1200
+    Glass: 300
+    Durathread: 300
+    Plasteel: 450
