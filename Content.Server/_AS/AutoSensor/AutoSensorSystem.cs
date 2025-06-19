@@ -84,7 +84,6 @@ public sealed class AutoSensorSystem : EntitySystem
                 break;
 
             _pendingSuits.Remove(item);
-            Console.WriteLine("toggling coords on");
             _sensor.SetAllSensors(item.Uid, SuitSensorMode.SensorCords);
         }
     }
