@@ -20,7 +20,7 @@
 - type: gameMap
   id: Arrivals
   mapName: 'Arrival Relay'
-  mapPath: /Maps/_AS/POI/Arrival_station.yml
+  mapPath: /Maps/_AS/POI/arrival_station.yml
   minPlayers: 0
   stations:
     Arrivals:
