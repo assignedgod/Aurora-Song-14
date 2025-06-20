@@ -28,11 +28,135 @@
     - SpawnDungeonLootClothesEngi
     - SpawnDungeonLootVendingRestocks
     - SpawnDungeonLootFlatpacksEngi
+    - SpawnDungeonLootBureaucracy
+    - SpawnDungeonLootBureaucracyPen
+    - SpawnDungeonLootGunT2
+    - MechEmuCargo
+    - Telecrystal1
+    - Telecrystal5
+    - SpaceCash10000
+    - SpaceCash5000
+    - SpaceCash2500
+    - SpaceCash500
+    - SpaceCash100
+    - SpaceCash10
+    - SpaceCash
+    - CigaretteSpent
+    - FoodBowlBigTrash
+    - FoodFrozenPopsicleTrash
+    - FoodCornTrash
+    - TrashBananaPeel
+    - TrashBananaPeelExplosive
+    - FoodTinBeansTrash
+    - TrashBakedBananaPeel
+    - TrashMimanaPeel
+    - TrashBananiumPeel
+    - AirCanister
+    - AmmoniaCanister
+    - CarbonDioxideCanister
+    - FrezonCanister
+    - NitrogenCanister
+    - NitrousOxideCanister
+    - OxygenCanister
+    - PlasmaCanister
+    - TritiumCanister
+    - WaterVaporCanister
+    - NFWeaponLauncherPirateCannon # Frontier: WeaponLauncherPirateCannon<NFWeaponLauncherPirateCannon
+    - NFWeaponPistolCHIMP # Frontier: FWeaponPistolCHIMP<NFWeaponPistolCHIMP
+    - NFWeaponRifleBarlowsBolt # Frontier: WeaponSniperMosin<NFWeaponRifleBarlowsBolt
+    - NFWeaponEnergyPistolLaserMakeshift # Frontier: WeMakeshiftLaser<NFWeaponEnergyPistolLaserMakeshift
+    - Sledgehammer
+    - WeaponMeleeToolboxRobust
+    - ThrowingStar
+    - NFWeaponEnergyPistolLaser # Frontier: WeaponLaserGun<NFWeaponEnergyPistolLaser
+    - NFWeaponShotgunHandmade # Frontier: WeaponShotgunHandmade<NFWeaponShotgunHandmade
+    - WeaponFlareGun
+    - ToySword
+    - Shovel
+    - WeaponWaterPistol
+    - WeaponWaterBlaster
+    - WeaponTurretXeno
+    - NFWeaponRifleFoam # Frontier: WeaponRifleFoam<NFWeaponRifleFoam
+    - ClothingUniformJumpsuitFamilyGuy
+    - ClothingOuterFlannelBlue
+    - ClothingHeadHelmetBone
+    - ClothingOuterSuitCarp
+    - ClothingHeadHatCatEars
+    - ClothingHeadHatDogEars
+    - ClothingOuterArmorReflective
+    - ClothingUniformJumpskirtSyndieFormalDress
+    - ClothingNeckCloakNanotrasen
+    - ClothingUniformJumpsuitNanotrasen
+    - ClothingShoesSnakeskinBoots
+    - ClothingOuterCoatSpaceAsshole
+    - ClothingUniformJumpsuitHawaiYellow
+    - ClothingHeadSafari
+    - ClothingMaskGasMercenary
+    - ClothingHeadHatCardborg
+    - ClothingUnderSocksCoder
+    - ClothingUniformJumpskirtOfLife
+    - ClothingNeckBling
+    - ClothingShoesBling
+    - IngotGold
+    - GoldOre1
+    - GoldOre
+    - DrinkGoldenCup
+    - ToolboxGoldFilled
+    - ClothingEyesGlassesGar
+    - ClothingEyesGlassesGarGiga
+    - ClothingEyesGlassesGarOrange
+    - ClothingHeadHatChameleon
+    - ClothingBeltChampion
+    - PlushieRGBee
+    - PlushieGhost
+    - PlushieHampter
+    - PlushieGhostRevenant
+    - PlushiePenguin
+    - PlushieHuman
+    - PlushieLizard
+    - PlushieRouny
+    - PlushieLamp
+    - PlushieSharkBlue
+    - PlushieMoth
+    - PlushieArachind
+    - PlushieThrongler
+    - AmeJar
+    - SoapOmega
+    - ClothingEyesGlassesMeson
+    - MechVim
+    - Chainsaw
+    - Crowbar
+    - WelderIndustrial
+    - HydroponicsToolHatchet
+    - ToyAmongPequeno
+    - Lamp
+    - FloraTreeLarge
+    - LightTree #Funny mobs maybe
+    #neful
+    - LidSalami
+    - MobHamsterHamlet
+    - MobLaserRaptor
+    - DrinkNothing
+    - FoodOatmeal
+    - RagItem
+    - ClothingHandsGlovesColorYellowBudget
+    - NFCartridgeCap # Frontier: CartridgeCap<NFCartridgeCap
+    - EncryptionKeyCommon
+    - CableHVStack1
+    - DrinkMugBlue
+    - CablecuffsBroken
+    - FoodPlateTin
+    - NFMagazineBoxFoam # Frontier: MagazineFoamBox<
+    - NFBoxDonkSoftBox # Frontier: use NF variant
+    - GrenadeFoamDart
     chance: 1
     offset: 0.0
     rarePrototypes:
-    - SpawnDungeonLootCircuitBoard
-    - SpawnDungeonLootToolbox
-    - SpawnDungeonLootFlatpacksEngi
-    - SpawnDungeonLootFlatpacks
-    rareChance: 0.05
+    - SweepingSongGAMBLING
+    - ASWeaponPKSLAYGambling
+    - ClothingHandsGlovesNorthStarRaiden
+    - ClothingMagbootsGamblingCursed
+    - Omnihud
+    - Omnitool
+    - MobWizFedWizardViolet
+    rareChance: 0.001
