@@ -51,25 +51,14 @@
     - TrashBakedBananaPeel
     - TrashMimanaPeel
     - TrashBananiumPeel
-    - AirCanister
-    - AmmoniaCanister
-    - CarbonDioxideCanister
-    - FrezonCanister
-    - NitrogenCanister
-    - NitrousOxideCanister
-    - OxygenCanister
-    - PlasmaCanister
-    - TritiumCanister
-    - WaterVaporCanister
     - NFWeaponLauncherPirateCannon # Frontier: WeaponLauncherPirateCannon<NFWeaponLauncherPirateCannon
-    - NFWeaponPistolCHIMP # Frontier: FWeaponPistolCHIMP<NFWeaponPistolCHIMP
-    - NFWeaponRifleBarlowsBolt # Frontier: WeaponSniperMosin<NFWeaponRifleBarlowsBolt
-    - NFWeaponEnergyPistolLaserMakeshift # Frontier: WeMakeshiftLaser<NFWeaponEnergyPistolLaserMakeshift
+    - SpawnDungeonLootMeleeT3
+    - SpawnDungeonLootGunT2 # Frontier: WeaponSniperMosin<NFWeaponRifleBarlowsBolt
+    - SpawnDungeonLootGunT3 # Frontier: WeMakeshiftLaser<NFWeaponEnergyPistolLaserMakeshift
     - Sledgehammer
     - WeaponMeleeToolboxRobust
-    - ThrowingStar
-    - NFWeaponEnergyPistolLaser # Frontier: WeaponLaserGun<NFWeaponEnergyPistolLaser
-    - NFWeaponShotgunHandmade # Frontier: WeaponShotgunHandmade<NFWeaponShotgunHandmade
+    - ThrowingStar #
+    - SpawnDungeonLootMeleeT2 # Frontier: WeaponShotgunHandmade<NFWeaponShotgunHandmade
     - WeaponFlareGun
     - ToySword
     - Shovel
@@ -156,7 +145,7 @@
     - ASWeaponPKSLAYGambling
     - ClothingHandsGlovesNorthStarRaiden
     - ClothingMagbootsGamblingCursed
-    - Omnihud
+    - ClothingEyesHudOmni
     - Omnitool
     - MobWizFedWizardViolet
     rareChance: 0.001
