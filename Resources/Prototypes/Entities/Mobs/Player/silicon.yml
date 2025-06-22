@@ -497,3 +497,22 @@
       raffle:
         settings: default
     - type: GhostTakeoverAvailable
+
+- type: entity
+  id: PlayerBorgRemote
+  parent: BorgChassisSelectable
+  suffix: Remote
+  components:
+  - type: ContainerFill
+    containers:
+      borg_brain:
+      - AiRemoteBrain
+  - type: ItemSlots
+    slots:
+      cell_slot:
+        name: power-cell-slot-component-slot-name-default
+        startingItem: PowerCellMedium
+  - type: StartingMindRole
+    mindRole: "MindRoleSiliconBrain"
+    silent: true
+  - type: AiRemoteController

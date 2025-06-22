@@ -1,15 +1,20 @@
 using Content.Server.Radio.Components;
 using Content.Server.Silicons.Laws;
+using Content.Server.Chat.Managers;
 using Content.Shared._Corvax.Silicons.Borgs;
 using Content.Shared._Corvax.Silicons.Borgs.Components;
 using Content.Shared.Actions;
 using Content.Shared.Mind;
+using Content.Shared.Chat;
 using Content.Shared.Silicons.Laws.Components;
 using Content.Shared.Silicons.StationAi;
 using Content.Shared.StationAi;
 using Content.Shared.Verbs;
 using Robust.Server.GameObjects;
 using Robust.Shared.Player;
+using Robust.Shared.Map;
+using Robust.Shared.Audio;
+using Robust.Shared.Audio.Systems;
 
 namespace Content.Server._Corvax.Silicons.Borgs;
 
@@ -21,6 +26,9 @@ public sealed class AiRemoteControlSystem : SharedAiRemoteControlSystem
     [Dependency] private readonly SharedMindSystem _mind = default!;
     [Dependency] private readonly UserInterfaceSystem _userInterface = default!;
     [Dependency] private readonly SharedTransformSystem _xformSystem = default!;
+    [Dependency] private readonly IChatManager _chatManager = default!;
+    [Dependency] private readonly SharedAudioSystem _audio = default!;
+    private EntityCoordinates? _coordinates;
 
     public override void Initialize()
     {
@@ -91,6 +99,16 @@ public sealed class AiRemoteControlSystem : SharedAiRemoteControlSystem
 
         if (!TryComp<AiRemoteControllerComponent>(entity, out var aiRemoteComp))
             return;
+        if (_stationAiSystem.TryGetCore(ai, out var stationAiCore) && stationAiCore.Comp?.RemoteEntity != null
+                && (Transform(stationAiCore).Coordinates.Position - Transform(entity).Coordinates.Position).Length() > 5
+            )
+        {
+            var msg = Loc.GetString("ai-remote-out-of-range");
+            var wrappedMessage = Loc.GetString("chat-manager-server-wrap-message", ("message", msg));
+            _chatManager.ChatMessageToOne(ChatChannel.Server, msg, wrappedMessage, default, false, Comp<ActorComponent>(ai).PlayerSession.Channel, colorOverride: Color.FromHex("#f30707"));
+            // _audio.PlayEntity(new SoundPathSpecifier("Audio/Machines/buzz-sigh.ogg"), Comp<ActorComponent>(ai).PlayerSession, stationAiCore.Comp.RemoteEntity.Value); # Todo: Figure out how to make this work
+            return;
+        }
 
         if (TryComp(entity, out IntrinsicRadioTransmitterComponent? transmitter))
         {
@@ -114,9 +132,6 @@ public sealed class AiRemoteControlSystem : SharedAiRemoteControlSystem
 
         stationAiHeldComp.CurrentConnectedEntity = entity;
 
-        if (!_stationAiSystem.TryGetCore(ai, out var stationAiCore))
-            return;
-
         _stationAiSystem.SwitchRemoteEntityMode(stationAiCore, false);
 
         RewriteLaws(ai, entity);
@@ -138,10 +153,16 @@ public sealed class AiRemoteControlSystem : SharedAiRemoteControlSystem
             var data = new RemoteDevicesData
             {
                 NetEntityUid = GetNetEntity(queryUid),
-                DisplayName = Comp<MetaDataComponent>(queryUid).EntityName
+                DisplayName = Comp<MetaDataComponent>(queryUid).EntityName,
+                DevicePosX = Transform(queryUid).Coordinates.X,
+                DevicePosY = Transform(queryUid).Coordinates.Y
             };
-
-            remoteDevices.Add(data);
+            if (_stationAiSystem.TryGetCore(uid, out var stationAiCore) && stationAiCore.Comp?.RemoteEntity != null
+                    && (Transform(stationAiCore).Coordinates.Position - Transform(queryUid).Coordinates.Position).Length() < 3000
+                )
+            {
+                remoteDevices.Add(data);
+            };
         }
 
         var state = new RemoteDevicesBuiState(remoteDevices);

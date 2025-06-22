@@ -24,7 +24,7 @@ public sealed partial class RemoteDevicesMenu : FancyWindow
 
         foreach (var device in state.DeviceList)
         {
-            var control = new RemoteDeviceDisplay(device.NetEntityUid, device.DisplayName);
+            var control = new RemoteDeviceDisplay(device.NetEntityUid, device.DisplayName, device.DevicePosX, device.DevicePosY);
 
             control.OnRemoteDeviceAction += action =>
             {
