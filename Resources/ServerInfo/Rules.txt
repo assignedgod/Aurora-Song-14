@@ -54,8 +54,8 @@
 	• Antagonists might force you to do things, and while this can be interesting roleplay please remember your consent is important!
 
 [color=#a4885c][head=3]8. Follow Bus Docks Safezone Guidelines[/head][/color]
-	• [color=#ff0000] The Bus Depot and Arrival Areas are considered a safe zone and absolutely no antag activity or griefing is permitted within that zone.[/color] This includes but is not limited to destruction, modification, removal, or otherwise restriction of use of any machine or device designed for public use, and the structure of the station itself.
-	• Fights and confrontations is completely disallowed on the safezone such as shooting, attacking or any forms of harm.
+	• [color=#ff0000] The Bus dock hallway and Arrival Areas are considered a safe zone and absolutely no antag activity or griefing is permitted within that zone.[/color] This includes but is not limited to destruction, modification, removal, or otherwise restriction of use of any machine or device designed for public use, and the structure of the station itself.
+	• Fights and confrontations are completely disallowed on the safezone such as shooting, attacking or any forms of harm.
 	• Pirate actions may not begin on the Frontier. This includes stowing away while at the Frontier with intentions to steal the ship, outright stealing the ship or its cargo from the dock, selling someone else’s ship you hadn’t pirated outside the safe zone, or joining the crew under false pretenses with the intention to mutiny and take the ship.
 	• Dangerous research like artifacts and anomalies must not be done while inside the safezone boundaries.
 	• Do not transport any kind of creature or objects with the intent to cause harm/death, or bait into a conflict inside of the frontier.
@@ -68,19 +68,19 @@
 [color=#a4885c][head=3]10. Sector Command roles such as Station Rep and Sheriff are vital to the operation of the sector and are held to a much higher degree of roleplay and role handling.[/head][/color]
 	• Embezzlement of station funds is strictly forbidden.
 	• Both of these roles have higher access to station resources than should be allowed for most crew members. As such, if you must ever end your shift early, always bring your ID with you, and always return to cryosleep so that your access cannot be stolen and the station funds embezzled. If for any reason you cannot (disconnect, crash, power outage, etc.) Please ping the game admins in Discord and we will handle your in-game character accordingly.
-	• Sector Command is permitted and expected to issue and enforce any docking fines related to loitering in the terminal for shuttles that have been idle for more than 10 minutes in the station docks without a valid reason, up to and including forced eviction of shuttles.  Fines collected in this way are permitted to be used as payroll or the acquisition of station supplies. Time spent docked and waiting at the station is to be kept at a minimum.
+	• Sector Command is permitted and expected to issue and enforce any docking fines related to loitering in the terminal for shuttles that have been idle for more than 30 minutes in the station docks without a valid reason, up to and including forced eviction of shuttles.  Fines collected in this way are permitted to be used as payroll or the acquisition of station supplies. Time spent docked and waiting at the station is to be kept at a minimum.
 	• You may not tax, lease, rent, or otherwise reserve the free and fair use of station resources and space to the detriment of the public or for personal gain. This includes, but is not limited to: charging docking fees, granting docking extensions, vending access, and moving station resources behind access locked doors to restrict access.
 
 [color=#a4885c][head=3]11. Follow Escalation Guidelines[/head][/color]
-	• Antagonistic ghost roles, and pest ghost roles like mice are always fair game for attack. Don't grief nanotrasen-aligned ghost roles like familiars, drones, or pets without provocation.
-	• Do not attack another player without a legitimate, explainable roleplay reason that could be applied in a similar, real-life scenario. A fistfight does not suddenly escalate into a gunfight.
-	• If a fight results in someone being critically injured or killed, seek medical help for them.
+	• Antagonistic ghost roles, and pest ghost roles like mice are always fair game for attack. Don't attack sector-aligned ghost roles like familiars, drones, or pets without provocation.
+	• Do not attack another player without a legitimate, explainable roleplay reason that could be applied in a similar, real-life scenario.
+	• If a fight results in someone being critically injured or killed, do not hide the body. Take steps to prevent rot if it does not put you at risk.
 	• If at any point combat is disengaged and both parties leave the area, you cannot skip escalation and plunge back into a fight. What’s done is done.
-	• Security Forces are expected to resolve situations with non-lethal force and to de-escalate IC confrontation except in cases where there is a reasonable chance of harm/death.
+	• Security Forces, and only security forces, are expected to resolve situations with non-lethal force and to de-escalate IC confrontation except in cases where there is a reasonable chance of harm/death.
 	• Do not End of Round Grief (EORG), attacking/killing/griefing other players is not permitted after the shift ends.
 
 [color=#a4885c][head=3]12. Follow PVP & Piracy Guidelines[/head][/color]
-	• Pirates/antagonists must ahelp before starting a crew and receive permission to begin antag activity. Spamming ahelp asking to be a pirate or pirating without permission will likely lead to being banned.
+	• Antags have the full freedom to engage with their antagonistic nature, engaging in hostility and assault. However using the role as an excuse to constantly engage in PvP and 'robust' people will result in your access to the role being removed. Try and be more than a weapon so that people want you to show up in their stories.
 	• Pirate crews may never exceed a total force of four members, including the Captain.
-	• Non-hostile vessels that surrender: cannot be killed, left stranded, completely bankrupt, or otherwise. The safety of non-hostile merchant vessels is to be guaranteed by all parties. All vessels being boarded must first attempt to negotiate before any hostile actions may take place.
+	• Non-hostile vessels that surrender: cannot be killed, left stranded, completely bankrupt, or otherwise. The safety of non-hostile merchant vessels is to be guaranteed by all parties.
 	• Hostile forces that are known, declared, and confirmed, may be considered 'belligerent', boarded non-conventionally, and have their systems disabled in attempts to bring them to justice. All suspects taken alive must be adequately cared for and unharmed according to Space Law.
