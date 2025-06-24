@@ -8,7 +8,6 @@
     DrinkShaker: 5
     DrinkJigger: 5
     DrinkIceBucket: 2
-    Skimmer: 2 # DeltaV - adds skimmer
     BarSpoon: 3
     DrinkKegSteel: 2 # Frontier: kegs
     DrinkKegWood: 2 # Frontier: kegs
