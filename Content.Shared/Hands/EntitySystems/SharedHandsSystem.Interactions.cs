@@ -107,24 +107,6 @@ public abstract partial class SharedHandsSystem : EntitySystem
 
         TrySetActiveHand((session.AttachedEntity.Value, component), nextHand);
     }
-
-    // Frontier: swap hands
-    private void SwapHandsPreviousPressed(ICommonSession? session)
-    {
-        if (!TryComp(session?.AttachedEntity, out HandsComponent? component))
-            return;
-
-        if (!_actionBlocker.CanInteract(session.AttachedEntity.Value, null))
-            return;
-
-        if (component.ActiveHand == null || component.Hands.Count < 2)
-            return;
-
-        var newActiveIndex = component.SortedHands.IndexOf(component.ActiveHand.Name) + component.Hands.Count - 1; // Ensure no negatives
-        var nextHand = component.SortedHands[newActiveIndex % component.Hands.Count];
-
-        TrySetActiveHand(session.AttachedEntity.Value, nextHand, component);
-    }
     // End Frontier: swap hands
 
     private bool DropPressed(ICommonSession? session, EntityCoordinates coords, EntityUid netEntity)

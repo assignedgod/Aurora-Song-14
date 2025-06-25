@@ -16,7 +16,7 @@ public sealed class SiliconDeathSystem : EntitySystem
     [Dependency] private readonly SleepingSystem _sleep = default!;
     [Dependency] private readonly SiliconChargeSystem _silicon = default!;
     [Dependency] private readonly HumanoidAppearanceSystem _humanoidAppearanceSystem = default!;
-    [Dependency] private readonly SharedStatusEffectsSystem _statusEffectsNew = default!;
+    [Dependency] private readonly StatusEffectsSystem _statusEffect = default!;
 
     public static readonly EntProtoId StatusEffectForcedSleeping = "StatusEffectForcedSleeping";
 

@@ -1,6 +1,5 @@
 using Content.Shared._NF.LoggingExtensions; // Frontier
 using Content.Shared._NF.Item; // Frontier
-using Content.Shared.Clothing.Components;
 using System.Diagnostics;
 using Content.Shared.Database;
 using Content.Shared.Hands.Components;

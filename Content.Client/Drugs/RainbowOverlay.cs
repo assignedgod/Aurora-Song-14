@@ -43,8 +43,6 @@ public sealed class RainbowOverlay : Overlay
 
         _statusEffects = _sysMan.GetEntitySystem<StatusEffectsSystem>();
 
-        _statusEffects = _sysMan.GetEntitySystem<SharedStatusEffectsSystem>();
-
         _rainbowShader = _prototypeManager.Index(Shader).InstanceUnique();
         _config.OnValueChanged(CCVars.ReducedMotion, OnReducedMotionChanged, invokeImmediately: true);
     }
