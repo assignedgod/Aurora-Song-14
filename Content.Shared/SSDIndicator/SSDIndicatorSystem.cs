@@ -83,8 +83,7 @@ public sealed class SSDIndicatorSystem : EntitySystem
         while (query.MoveNext(out var uid, out var ssd))
         {
             // Forces the entity to sleep when the time has come
-            if(ssd.IsSSD &&
-                !ssd.PreventSleep && // Frontier
+            if (ssd.IsSSD &&
                 ssd.FallAsleepTime <= _timing.CurTime &&
                 !TerminatingOrDeleted(uid))
             {
