@@ -50,11 +50,7 @@
     - id: NFWeaponPistolCobraExpedition
       amount: 1
     - id: HLMagazinePistolCaselessRifle
-      amount: 1
-    - id: HLMagazinePistolCaselessRifle
-      amount: 1
-    - id: NFAmmunitionBoxRifle25
-      amount: 1
+      amount: 2
 
 
 - type: entity
