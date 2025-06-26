@@ -1,27 +1,22 @@
-using Content.Shared.Movement.Events;
-using Content.Shared.Movement.Systems;
 using Content.Shared.StatusEffectNew.Components;
 using Robust.Shared.Player;
 
 namespace Content.Shared.StatusEffectNew;
 
-public sealed partial class StatusEffectsSystem
+public abstract partial class SharedStatusEffectsSystem
 {
-    private void InitializeRelay()
+    protected void InitializeRelay()
     {
         SubscribeLocalEvent<StatusEffectContainerComponent, LocalPlayerAttachedEvent>(RelayStatusEffectEvent);
         SubscribeLocalEvent<StatusEffectContainerComponent, LocalPlayerDetachedEvent>(RelayStatusEffectEvent);
-
-        SubscribeLocalEvent<StatusEffectContainerComponent, RefreshFrictionModifiersEvent>(RefRelayStatusEffectEvent);
-        SubscribeLocalEvent<StatusEffectContainerComponent, TileFrictionEvent>(RefRelayStatusEffectEvent);
     }
 
-    private void RefRelayStatusEffectEvent<T>(EntityUid uid, StatusEffectContainerComponent component, ref T args) where T : struct
+    protected void RefRelayStatusEffectEvent<T>(EntityUid uid, StatusEffectContainerComponent component, ref T args) where T : struct
     {
         RelayEvent((uid, component), ref args);
     }
 
-    private void RelayStatusEffectEvent<T>(EntityUid uid, StatusEffectContainerComponent component, T args) where T : class
+    protected void RelayStatusEffectEvent<T>(EntityUid uid, StatusEffectContainerComponent component, T args) where T : class
     {
         RelayEvent((uid, component), args);
     }
@@ -30,7 +25,7 @@ public sealed partial class StatusEffectsSystem
     {
         // this copies the by-ref event if it is a struct
         var ev = new StatusEffectRelayedEvent<T>(args);
-        foreach (var activeEffect in statusEffect.Comp.ActiveStatusEffects?.ContainedEntities ?? [])
+        foreach (var activeEffect in statusEffect.Comp.ActiveStatusEffects)
         {
             RaiseLocalEvent(activeEffect, ref ev);
         }
@@ -42,7 +37,7 @@ public sealed partial class StatusEffectsSystem
     {
         // this copies the by-ref event if it is a struct
         var ev = new StatusEffectRelayedEvent<T>(args);
-        foreach (var activeEffect in statusEffect.Comp.ActiveStatusEffects?.ContainedEntities ?? [])
+        foreach (var activeEffect in statusEffect.Comp.ActiveStatusEffects)
         {
             RaiseLocalEvent(activeEffect, ref ev);
         }
