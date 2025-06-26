@@ -38,7 +38,7 @@
   id: ArrivalsExpress
   routeNumber: 4
   stationsPerBus: 2
-  dockTag: arrivalshuttle
+  dockTag: ArrivalShuttle
   busVessels:
   - ArrivalsBus
   liveryColor: "#4444aa"
