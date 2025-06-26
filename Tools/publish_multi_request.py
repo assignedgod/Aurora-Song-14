@@ -15,7 +15,7 @@ RELEASE_DIR = "release"
 # CONFIGURATION PARAMETERS
 # Forks should change these to publish to their own infrastructure.
 #
-ROBUST_CDN_URL = "https://cdn.aurorasong.com/"
+ROBUST_CDN_URL = "http://147.124.195.142:27690"
 FORK_ID = "AuroraSong14"
 
 def main():
@@ -39,7 +39,7 @@ def main():
     headers = {
         "Content-Type": "application/json"
     }
-    resp = session.post(f"{ROBUST_CDN_URL}fork/{fork_id}/publish/start", json=data, headers=headers)
+    resp = session.post(f"{ROBUST_CDN_URL}/fork/{fork_id}/publish/start", json=data, headers=headers)
     resp.raise_for_status()
     print("Publish successfully started, adding files...")
 
@@ -51,7 +51,7 @@ def main():
                 "Robust-Cdn-Publish-File": os.path.basename(file),
                 "Robust-Cdn-Publish-Version": VERSION
             }
-            resp = session.post(f"{ROBUST_CDN_URL}fork/{fork_id}/publish/file", data=f, headers=headers)
+            resp = session.post(f"{ROBUST_CDN_URL}/fork/{fork_id}/publish/file", data=f, headers=headers)
 
         resp.raise_for_status()
 
@@ -63,7 +63,7 @@ def main():
     headers = {
         "Content-Type": "application/json"
     }
-    resp = session.post(f"{ROBUST_CDN_URL}fork/{fork_id}/publish/finish", json=data, headers=headers)
+    resp = session.post(f"{ROBUST_CDN_URL}/fork/{fork_id}/publish/finish", json=data, headers=headers)
     resp.raise_for_status()
 
     print("SUCCESS!")
