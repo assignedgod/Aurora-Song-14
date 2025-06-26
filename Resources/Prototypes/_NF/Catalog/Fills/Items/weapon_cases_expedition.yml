@@ -49,8 +49,9 @@
     contents:
     - id: NFWeaponPistolCobraExpedition
       amount: 1
-    - id: NFMagazinePistol45
+    - id: HLMagazinePistolCaselessRifle
       amount: 2
+
 
 - type: entity
   parent: WeaponCaseShort
