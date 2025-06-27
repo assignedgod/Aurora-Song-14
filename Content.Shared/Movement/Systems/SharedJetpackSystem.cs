@@ -119,9 +119,7 @@ public abstract partial class SharedJetpackSystem : EntitySystem // Frontier: ad
         // Frontier: fix magboots vs. jetpack quibbles
         component.AddedCanMoveInAir = !HasComp<CanMoveInAirComponent>(user);
         EnsureComp<CanMoveInAirComponent>(user);
-        // Frontier: fix magboots vs. jetpack quibbles
-        if (component.AddedCanMoveInAir)
-            RemComp<CanMoveInAirComponent>(uid);
+        // End Frontier
 
         userComp.Jetpack = jetpackUid;
         userComp.WeightlessAcceleration = component.Acceleration;
