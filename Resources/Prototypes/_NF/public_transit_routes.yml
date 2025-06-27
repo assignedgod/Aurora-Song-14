@@ -37,7 +37,7 @@
 - type: publicTransitRoute
   id: ArrivalsExpress
   routeNumber: 4
-  stationsPerBus: 2
+  stationsPerBus: -1
   dockTag: ArrivalShuttle
   busVessels:
   - ArrivalsBus
