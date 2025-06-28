@@ -126,5 +126,5 @@
     - ClothingMagbootsGamblingCursed
     - ClothingEyesHudOmni
     - Omnitool
-    - MobWizFedWizardViolet
+    #- MobWizFedWizardViolet
     rareChance: 0.001
