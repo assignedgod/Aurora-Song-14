@@ -226,7 +226,7 @@
   id: GauzeHead
   bodyPart: Head
   markingCategory: Overlay
-  speciesRestriction: [Dwarf, Human, Reptilian, Arachnid, Moth, Goblin, Sheleg, Felinid, Oni, Vulpkanin, Rodentia, Chitinid, Feroxi
+  speciesRestriction: [Dwarf, Human, Reptilian, Arachnid, Moth, Goblin, Sheleg, Felinid, Oni, Vulpkanin, Rodentia, Chitinid, Feroxi]
   coloring:
     default:
       type:
