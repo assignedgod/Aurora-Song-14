@@ -600,3 +600,6 @@ LockerWallMedicalFilled: LockerWallColorMedicalFilled
 # 2025-06-06 Lockers migration, add lockers to this list
 LockerScientist: NFLockerScientist
 LockerScienceFilled: NFLockerScienceFilled
+
+# 2025-07-01 | Aurora: M90 refactored to no longer have useless GL
+NFWeaponRifleAssaultM90GrenadeLauncher: NFWeaponRifleAssaultM90

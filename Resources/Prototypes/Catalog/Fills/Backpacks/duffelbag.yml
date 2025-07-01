@@ -102,14 +102,10 @@
   components:
   - type: StorageFill
     contents:
-      - id: NFWeaponRifleAssaultM90GrenadeLauncher # Frontier: WeaponRifleM90GrenadeLauncher<NFWeaponRifleAssaultM90GrenadeLauncher
+      - id: NFWeaponRifleAssaultM90 # Aurora: NFWeaponRifleAssaultM90GrenadeLauncher<NFWeaponRifleAssaultM90
       - id: NFMagazineRifle20 # Frontier: MagazineRifle<NFMagazineRifle20
-        amount: 2
-      - id: NFGrenadeBlast # Frontier: GrenadeBlast<NFGrenadeBlast
-        amount: 2
-      - id: NFGrenadeFlash # Frontier: GrenadeFlash<NFGrenadeFlash
-        amount: 2
-      - id: NFGrenadeFrag # Frontier: GrenadeFrag<NFGrenadeFrag
+        amount: 4
+      - id: NFMagazineRifle20Overpressure
         amount: 2
 
 - type: entity

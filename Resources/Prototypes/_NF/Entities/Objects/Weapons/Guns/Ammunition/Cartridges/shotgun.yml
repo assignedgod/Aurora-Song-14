@@ -1,7 +1,7 @@
 #region Base
 - type: entity
   id: NFBaseShellShotgun
-  name: shell (.50)
+  name: shell (12g)
   parent: [ BaseC1Contraband, BaseShellShotgun ]
   abstract: true
   components:
@@ -24,7 +24,7 @@
 #region Pellets
 - type: entity
   id: NFShellShotgunBuckshot
-  name: shell (.50 buckshot)
+  name: shell (12g buckshot)
   parent: NFBaseShellShotgun
   components:
   - type: Sprite
@@ -36,7 +36,7 @@
 
 - type: entity
   id: NFShellShotgunIncendiary
-  name: shell (.50 incendiary)
+  name: shell (12g incendiary)
   parent: NFBaseShellShotgun
   components:
   - type: Sprite
@@ -50,7 +50,7 @@
 
 - type: entity
   id: NFShellShotgunPractice
-  name: shell (.50 practice)
+  name: shell (12g practice)
   parent: NFBaseShellShotgun
   components:
   - type: Sprite
@@ -64,7 +64,7 @@
 
 - type: entity
   id: NFShellShotgunUranium
-  name: shell (.50 uranium)
+  name: shell (12g uranium)
   parent: NFBaseShellShotgun
   components:
   - type: Sprite
@@ -78,7 +78,7 @@
 
 - type: entity
   id: NFShellShotgunImprovised
-  name: shell (.50 improvised)
+  name: shell (12g improvised)
   parent: NFBaseShellShotgun
   components:
   - type: Sprite
@@ -96,7 +96,7 @@
 #region Slugs
 - type: entity
   id: NFShellShotgunSlug
-  name: shell (.50 slug)
+  name: shell (12g slug)
   parent: NFBaseShellShotgun
   components:
   - type: Sprite
@@ -110,7 +110,7 @@
 
 - type: entity
   id: NFShellShotgunBeanbag
-  name: shell (.50 beanbag)
+  name: shell (12g beanbag)
   parent: NFBaseShellShotgunLight
   components:
   - type: Sprite
@@ -124,7 +124,7 @@
 
 - type: entity
   id: NFShellShotgunFlare
-  name: shell (.50 flare)
+  name: shell (12g flare)
   parent: NFBaseShellShotgunLight
   components:
   - type: Sprite
@@ -138,7 +138,7 @@
 
 - type: entity
   id: NFShellShotgunTranquilizer
-  name: shell (.50 tranquilizer)
+  name: shell (12g tranquilizer)
   parent: NFBaseShellShotgunLight
   components:
   - type: Sprite

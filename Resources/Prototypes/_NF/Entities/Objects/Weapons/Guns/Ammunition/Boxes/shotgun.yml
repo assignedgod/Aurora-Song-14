@@ -2,7 +2,7 @@
 - type: entity
   id: NFBaseAmmunitionBoxShellShotgun
   parent: NFBaseAmmunitionBox
-  name: shell box (.50 shell)
+  name: shell box (12g shell)
   abstract: true
   components:
   - type: BallisticAmmoProvider
@@ -17,7 +17,7 @@
 - type: entity
   id: NFAmmunitionBoxShellShotgunBuckshot
   parent: NFBaseAmmunitionBoxShellShotgun
-  name: shell box (.50 buckshot)
+  name: shell box (12g buckshot)
   components:
   - type: BallisticAmmoProvider
     proto: NFShellShotgunBuckshot
@@ -35,7 +35,7 @@
 - type: entity
   id: NFAmmunitionBoxShellShotgunIncendiary
   parent: NFBaseAmmunitionBoxShellShotgun
-  name: shell box (.50 incendiary)
+  name: shell box (12g incendiary)
   components:
   - type: BallisticAmmoProvider
     proto: NFShellShotgunIncendiary
@@ -53,7 +53,7 @@
 - type: entity
   id: NFAmmunitionBoxShellShotgunPractice
   parent: NFBaseAmmunitionBoxShellShotgun
-  name: shell box (.50 practice)
+  name: shell box (12g practice)
   components:
   - type: BallisticAmmoProvider
     proto: NFShellShotgunPractice
@@ -71,7 +71,7 @@
 - type: entity
   id: NFAmmunitionBoxShellShotgunUranium
   parent: NFBaseAmmunitionBoxShellShotgun
-  name: shell box (.50 uranium)
+  name: shell box (12g uranium)
   components:
   - type: BallisticAmmoProvider
     proto: NFShellShotgunUranium
@@ -90,7 +90,7 @@
 - type: entity
   id: NFAmmunitionBoxShellShotgunSlug
   parent: NFBaseAmmunitionBoxShellShotgun
-  name: shell box (.50 slug)
+  name: shell box (12g slug)
   components:
   - type: BallisticAmmoProvider
     proto: NFShellShotgunSlug
@@ -108,7 +108,7 @@
 - type: entity
   id: NFAmmunitionBoxShellShotgunBeanbag
   parent: NFBaseAmmunitionBoxShellShotgun
-  name: shell box (.50 beanbag)
+  name: shell box (12g beanbag)
   components:
   - type: BallisticAmmoProvider
     proto: NFShellShotgunBeanbag
@@ -126,7 +126,7 @@
 - type: entity
   id: NFAmmunitionBoxShellShotgunFlare
   parent: NFBaseAmmunitionBoxShellShotgun
-  name: shell box (.50 flare)
+  name: shell box (12g flare)
   components:
   - type: BallisticAmmoProvider
     proto: NFShellShotgunFlare
@@ -144,7 +144,7 @@
 - type: entity
   id: NFAmmunitionBoxShellShotgunTranquilizer
   parent: NFBaseAmmunitionBoxShellShotgun
-  name: shell box (.50 tranquilizer)
+  name: shell box (12g tranquilizer)
   components:
   - type: BallisticAmmoProvider
     proto: NFShellShotgunTranquilizer
