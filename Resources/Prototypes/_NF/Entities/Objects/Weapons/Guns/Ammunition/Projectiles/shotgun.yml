@@ -2,7 +2,7 @@
 - type: entity
   categories: [ HideSpawnMenu ]
   id: NFPelletShotgun
-  name: pellet (.50)
+  name: pellet (12g)
   parent: NFBasePellet
   components:
   - type: Projectile
@@ -14,7 +14,7 @@
 - type: entity
   categories: [ HideSpawnMenu ]
   id: NFPelletShotgunIncendiary
-  name: pellet (.50 incendiary)
+  name: pellet (12g incendiary)
   parent: NFBasePelletIncendiary
   components:
   - type: Projectile
@@ -26,7 +26,7 @@
 - type: entity
   categories: [ HideSpawnMenu ]
   id: NFPelletShotgunPractice
-  name: pellet (.50 practice)
+  name: pellet (12g practice)
   parent: NFBasePelletPractice
   components:
   - type: Projectile
@@ -37,7 +37,7 @@
 - type: entity
   categories: [ HideSpawnMenu ]
   id: NFPelletShotgunUranium
-  name: pellet (.50 uranium)
+  name: pellet (12g uranium)
   parent: NFBasePelletUranium
   components:
   - type: Projectile
@@ -49,7 +49,7 @@
 - type: entity
   categories: [ HideSpawnMenu ]
   id: NFPelletShotgunImprovised
-  name: pellet (.50 improvised)
+  name: pellet (12g improvised)
   parent: NFBasePelletPractice
   components:
   - type: Sprite
@@ -69,7 +69,7 @@
 - type: entity
   categories: [ HideSpawnMenu ]
   id: NFPelletShotgunGlass
-  name: pellet (.50 glass)
+  name: pellet (12g glass)
   parent: NFPelletShotgunImprovised
   components:
   - type: Projectile
@@ -80,7 +80,7 @@
 - type: entity
   categories: [ HideSpawnMenu ]
   id: NFPelletShotgunGrapeshot
-  name: pellet (.50 grapeshot)
+  name: pellet (12g grapeshot)
   parent: NFBasePellet
   components:
   - type: Projectile
@@ -159,7 +159,7 @@
   categories: [ HideSpawnMenu ]
   id: NFShotgunSlug
   parent: NFBaseBullet
-  name: slug (.50)
+  name: slug (12g)
   components:
   - type: Projectile
     damage:
@@ -171,7 +171,7 @@
   categories: [ HideSpawnMenu ]
   id: NFShotgunSlugBeanbag
   parent: NFBaseBulletRubber
-  name: slug (.50 beanbag)
+  name: slug (12g beanbag)
   components:
   - type: Projectile
     damage:
@@ -184,7 +184,7 @@
   categories: [ HideSpawnMenu ]
   id: NFShotgunSlugFlare
   parent: NFPelletShotgunFlare
-  name: slug (.50)
+  name: slug (12g)
   components:
   - type: Sprite
     noRot: false
@@ -204,7 +204,7 @@
   categories: [ HideSpawnMenu ]
   id: NFShotgunSlugTranquilizer
   parent: NFBaseBullet
-  name: slug (.50 tranquilizer)
+  name: slug (12g tranquilizer)
   components:
   - type: Sprite
     layers:

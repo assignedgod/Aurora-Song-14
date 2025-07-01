@@ -340,7 +340,7 @@
   components:
   - type: SpawnItemsOnUse
     items:
-      - id: NFWeaponRifleAssaultM90GrenadeLauncherExpedition
+      - id: NFWeaponRifleAssaultM90Expedition
       - id: NFMagazineRifle20
       - id: NFMagazineRifle20
       - id: ClothingShoesBootsMagSyndie
