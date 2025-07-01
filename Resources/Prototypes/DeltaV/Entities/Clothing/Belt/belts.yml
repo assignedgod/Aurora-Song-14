@@ -1,0 +1,38 @@
+- type: entity
+  parent: [NFClothingBeltStorageBase , ContentsExplosionResistanceBase, ClothingSlotBase] # Aurora - Add explosion resist
+  id: ClothingBeltCorpsmanWebbing
+  name: corpsman webbing
+  description: A set of security webbing with blue corpsman highlights.
+  components:
+  - type: Sprite
+    sprite: _DV/Clothing/Belt/corpsman.rsi
+  - type: Clothing
+    sprite: _DV/Clothing/Belt/corpsman.rsi
+  - type: ExplosionResistance # Aurora - Add explosion resist
+    damageCoefficient: 0.9
+  - type: ItemSlots # add medkit slot
+    slots:
+      medkit:
+        name: clothing-belt-medkit
+        whitelist:
+          tags:
+          - Medkit
+        insertOnInteract: false # or you can't easily stow medkits in your rig.
+# Aurora - Remove storage override.
+#  - type: Storage
+#    grid:
+#    - 0,0,2,1
+#    - 4,0,7,1
+  - type: ItemMapper # add stowed medkit sprite
+    mapLayers:
+      medkit:
+        whitelist:
+          tags:
+          - Medkit
+    sprite: _DV/Clothing/Belt/belt_overlay.rsi
+  - type: ContainerContainer
+    containers:
+      storagebase: !type:Container
+        ents: []
+      medkit: !type:ContainerSlot {}
+  - type: Appearance
