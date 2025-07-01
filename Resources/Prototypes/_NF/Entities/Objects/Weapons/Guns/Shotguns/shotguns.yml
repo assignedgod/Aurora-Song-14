@@ -208,10 +208,13 @@
     proto: NFShellShotgunBeanbag
     capacity: 5
 
-# Suplus
+# Suplus, Aurora
 - type: entity
-  parent: [ BaseC1Contraband, NFWeaponShotgunKammerer]
-  id: WeaponShotgunSurpKammerer
+  parent: [ BaseC1Contraband,  NFBaseWeaponShotgunChamber50, NFBaseWeaponFrameShotgunWieldable ]
+  id: WeaponShotgunSurpFalchion
+  name: Falchion
+  description: |-
+    The first home-grown custom weapon used by the colonial forces. A reliable weapon. It can survive rapid depressurization, being dropped in a plasma pool, a direct blast from a cannon, and still it will function just fine.
   suffix: Surplus
   components:
   - type: Item
@@ -223,3 +226,7 @@
     sprite: _NF/Objects/Weapons/Guns/Shotguns/surppump.rsi
   - type: Clothing
     sprite: _NF/Objects/Weapons/Guns/Shotguns/surppump.rsi
+  - type: BallisticAmmoProvider
+    capacity: 6
+  - type: NFWeaponDetails
+    manufacturer: weapon-details-colonial-weapon-manufacturer
