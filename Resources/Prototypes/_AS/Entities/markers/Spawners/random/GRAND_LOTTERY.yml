@@ -31,7 +31,6 @@
     - SpawnDungeonLootBureaucracy
     - SpawnDungeonLootBureaucracyPen
     - SpawnDungeonLootGunT2
-    - MechEmuCargo
     - Telecrystal1
     - Telecrystal5
     - SpaceCash10000
@@ -42,15 +41,6 @@
     - SpaceCash10
     - SpaceCash
     - CigaretteSpent
-    - FoodBowlBigTrash
-    - FoodFrozenPopsicleTrash
-    - FoodCornTrash
-    - TrashBananaPeel
-    - TrashBananaPeelExplosive
-    - FoodTinBeansTrash
-    - TrashBakedBananaPeel
-    - TrashMimanaPeel
-    - TrashBananiumPeel
     - NFWeaponLauncherPirateCannon # Frontier: WeaponLauncherPirateCannon<NFWeaponLauncherPirateCannon
     - SpawnDungeonLootMeleeT3
     - SpawnDungeonLootGunT2 # Frontier: WeaponSniperMosin<NFWeaponRifleBarlowsBolt
@@ -112,23 +102,12 @@
     - AmeJar
     - SoapOmega
     - ClothingEyesGlassesMeson
-    - MechVim
     - Chainsaw
     - Crowbar
     - WelderIndustrial
     - HydroponicsToolHatchet
     - ToyAmongPequeno
     - Lamp
-    - FloraTreeLarge
-    - LightTree #Funny mobs maybe
-    #neful
-    - LidSalami
-    - MobHamsterHamlet
-    - MobLaserRaptor
-    - DrinkNothing
-    - FoodOatmeal
-    - RagItem
-    - ClothingHandsGlovesColorYellowBudget
     - NFCartridgeCap # Frontier: CartridgeCap<NFCartridgeCap
     - EncryptionKeyCommon
     - CableHVStack1
@@ -147,5 +126,5 @@
     - ClothingMagbootsGamblingCursed
     - ClothingEyesHudOmni
     - Omnitool
-    - MobWizFedWizardViolet
+    #- MobWizFedWizardViolet
     rareChance: 0.001

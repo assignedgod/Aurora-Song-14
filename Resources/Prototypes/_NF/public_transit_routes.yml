@@ -37,8 +37,8 @@
 - type: publicTransitRoute
   id: ArrivalsExpress
   routeNumber: 4
-  stationsPerBus: 2
-  dockTag: arrivalshuttle
+  stationsPerBus: -1
+  dockTag: ArrivalShuttle
   busVessels:
   - ArrivalsBus
   liveryColor: "#4444aa"

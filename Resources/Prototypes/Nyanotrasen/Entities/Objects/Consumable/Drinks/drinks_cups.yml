@@ -10,10 +10,9 @@
     state: icon
 
 - type: entity
-  parent: DrinkSakeCupEmpty
+  parent: DrinkBaseCup
   id: DrinkSakeCup
   name: sakazuki
-  suffix: Full
   description: A ceremonial white cup for drinking sake.
   components:
   - type: SolutionContainerManager
@@ -22,3 +21,8 @@
         reagents:
         - ReagentId: Sake
           Quantity: 20
+  - type: Sprite
+    sprite: Nyanotrasen/Objects/Consumable/Drinks/sakecup.rsi
+    state: icon
+  - type: TrashOnSolutionEmpty
+    solution: drink
