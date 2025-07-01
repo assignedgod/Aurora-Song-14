@@ -7,13 +7,13 @@ station-event-bluespace-scrap-start-announcement = Storms detected in bluespace 
 station-event-bluespace-scrap-warning-announcement = Bluespace instability detected on wreckage, five minutes until expected departure.
 station-event-bluespace-scrap-end-announcement = Critical bluespace instability detected, storm wreckage has exited the sector.
 
-station-event-bluespace-vault-start-announcement = A NanoTrasen armored vault is inbound to the sector. The NFSD may declare the vault a No Fly Zone. Station accounts will be rewarded for its safe return.
-station-event-bluespace-vault-warning-announcement = Remote FTL procedures initialized, five minutes until vault extraction.
-station-event-bluespace-vault-end-announcement = We have retrieved the vault from your sector. Station accounts have been paid.
+station-event-bluespace-vault-start-announcement = A NanoTrasen armored vault is inbound to the sector. The SLE may declare the vault a No Fly Zone. NanoTrasen will pay good money for its contents to be safegaurded until its exit window arrives.
+station-event-bluespace-vault-warning-announcement = Remote FTL procedures initialized, five minutes until vault FTL.
+station-event-bluespace-vault-end-announcement = The vault has been retrieved from your sector. Station accounts have been paid.
 
-station-event-bluespace-cache-start-announcement = A Syndicate weapons cache is inbound to the sector. The NFSD may declare the cache a No Fly Zone. Station accounts will be rewarded for guarding the cache.
-station-event-bluespace-cache-warning-announcement = Remote FTL procedures initialized, five minutes until weapons cache extraction.
-station-event-bluespace-cache-end-announcement = We have retrieved the Syndicate weapons cache from your sector. Station accounts have been paid.
+station-event-bluespace-cache-start-announcement = A Syndicate weapons cache is inbound to the sector. The SLE may declare the cache a NFZ. Cyberstun will pay handsomely for its contents to be safeguarded until its FTL window arrives.
+station-event-bluespace-cache-warning-announcement = Remote FTL procedures initialized, five minutes until FTL.
+station-event-bluespace-cache-end-announcement = We have retrieved the cache has been retrieved. Station accounts have been paid.
 
 station-event-bluespace-asteroid-start-announcement = Long range scans indicate an unusually large asteroid entering the sector. NanoTrasen advises prospectors to divert operations for maximum profit potential.
 station-event-bluespace-asteroid-warning-announcement = Bluespace instability detected on asteroid, five minutes until estimated departure.
