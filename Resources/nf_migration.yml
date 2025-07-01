@@ -554,7 +554,7 @@ WeaponRifleGestio: NFWeaponRifleAssaultGestio
 WeaponRifleJackdaw: NFWeaponRifleAssaultJackdaw
 WeaponRifleLecter: NFWeaponRifleAssaultLecter
 WeaponRifleLecterRubber: NFWeaponRifleAssaultLecterLessLethal # ??
-WeaponRifleM90GrenadeLauncher: NFWeaponRifleAssaultM90GrenadeLauncher
+WeaponRifleM90GrenadeLauncher: NFWeaponRifleAssaultM90 # Aurora: NFWeaponRifleAssaultM90GrenadeLauncher < NFWeaponRifleAssaultM90
 WeaponRifleNovaliteC1: NFWeaponRifleAssaultNovaliteC1
 WeaponRifleSVS: NFWeaponRifleSVS
 WeaponRifleVulcan: NFWeaponRifleAssaultVulcan
