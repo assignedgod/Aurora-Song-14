@@ -15,7 +15,7 @@ uplink-mercenary-hardsuit-desc = A suit of space-proof vacuum armor that protect
 uplink-mercenary-rifle1-name = Surplus Lecter
 uplink-mercenary-rifle1-desc = A tried and true surplus automatic rifle. The benchmark.
 
-uplink-mercenary-shotgun1-name = Surplus Kammerer
+uplink-mercenary-shotgun1-name = Surplus Falchion
 uplink-mercenary-shotgun1-desc = Old reliable, rack and shoot. Marked for Suplus.
 
 uplink-mercenary-smg1-name = Surplus Drozd
