@@ -17,13 +17,13 @@
     Hair: MobSlimeMarkingFollowSkin
     FacialHair: MobSlimeMarkingFollowSkin
     Snout: MobSlimeMarkingFollowSkin
-    Underwear: MobHumanoidAnyMarking
-    Undershirt: MobHumanoidAnyMarking
+    UndergarmentBottom: MobHumanoidAnyMarking
+    UndergarmentTop: MobHumanoidAnyMarking
     Chest: MobSlimeTorso
     HeadTop: MobSlimeMarkingFollowSkin
     HeadSide: MobSlimeMarkingFollowSkin
     Tail: MobSlimeMarkingFollowSkin
-    Wings: MobSlimeMarkingFollowSkin
+#    Wings: MobSlimeMarkingFollowSkin //Need to work on this, Den has a different visual layer composition
     Eyes: MobHumanoidEyes
     LArm: MobSlimeLArm
     RArm: MobSlimeRArm
@@ -46,9 +46,9 @@
     Tail:
       points: 1
       required: false
-    Wings:
-      points: 1
-      required: false
+#    Wings:
+#      points: 1
+#      required: false
     Snout:
       points: 1
       required: false
@@ -70,35 +70,17 @@
     Nipples:
       points: 2
       required: false
-    Underwear:
+    UndergarmentBottom:
       points: 1
       required: false
-    Undershirt:
+    UndergarmentTop:
       points: 1
       required: false
-    RightLeg:
-      points: 2
+    Arms:
+      points: 4
       required: false
-    RightFoot:
-      points: 2
-      required: false
-    LeftLeg:
-      points: 2
-      required: false
-    LeftFoot:
-      points: 2
-      required: false
-    RightArm:
-      points: 2
-      required: false
-    RightHand:
-      points: 2
-      required: false
-    LeftArm:
-      points: 2
-      required: false
-    LeftHand:
-      points: 2
+    Legs:
+      points: 4
       required: false
 
 - type: humanoidBaseSprite

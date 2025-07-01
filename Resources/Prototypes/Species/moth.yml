@@ -17,8 +17,8 @@
   sprites:
     Head: MobMothHead
     Snout: MobHumanoidAnyMarking
-    Underwear: MobHumanoidAnyMarking
-    Undershirt: MobHumanoidAnyMarking
+    UndergarmentBottom: MobHumanoidAnyMarking
+    UndergarmentTop: MobHumanoidAnyMarking
     Chest: MobMothTorso
     HeadTop: MobHumanoidAnyMarking
     HeadSide: MobHumanoidAnyMarking

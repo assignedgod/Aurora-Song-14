@@ -375,7 +375,7 @@
 - type: marking
   id: DwarfMarkKangarooLHand
   bodyPart: LHand
-  markingCategory: LeftHand
+  markingCategory: Arms
   speciesRestriction: [ Dwarf ]
   coloring:
     default:
@@ -390,7 +390,7 @@
 - type: marking
   id: DwarfMarkKangarooRHand
   bodyPart: RHand
-  markingCategory: RightHand
+  markingCategory: Arms
   speciesRestriction: [ Dwarf ]
   coloring:
     default:
@@ -684,7 +684,7 @@
 - type: marking
   id: VoxLArmProsthetic
   bodyPart: LHand
-  markingCategory: LeftHand
+  markingCategory: Arms
   speciesRestriction: [ Vox ]
   forcedColoring: false
   followSkinColor: false
@@ -700,7 +700,7 @@
 - type: marking
   id: VoxRArmProsthetic
   bodyPart: RHand
-  markingCategory: RightHand
+  markingCategory: Arms
   speciesRestriction: [ Vox ]
   forcedColoring: false
   followSkinColor: false
@@ -817,7 +817,7 @@
 - type: marking
   id: VoxHandGradientRHand
   bodyPart: RHand
-  markingCategory: RightHand
+  markingCategory: Arms
   speciesRestriction: [ Vox ]
   forcedColoring: false
   followSkinColor: false
@@ -832,7 +832,7 @@
 - type: marking
   id: VoxHandGradientLHand
   bodyPart: LHand
-  markingCategory: LeftHand
+  markingCategory: Arms
   speciesRestriction: [ Vox ]
   forcedColoring: false
   followSkinColor: false
@@ -1124,7 +1124,7 @@
 - type: marking
   id: VitiligoHandR
   bodyPart: RHand
-  markingCategory: RightHand
+  markingCategory: Arms
   speciesRestriction: [ Human, Dwarf, Oni, Goblin, Felinid] # Frontier: add  Oni, Felinid
   forcedColoring: true
   coloring:
@@ -1139,7 +1139,7 @@
 - type: marking
   id: VitiligoHandL
   bodyPart: LHand
-  markingCategory: LeftHand
+  markingCategory: Arms
   speciesRestriction: [ Human, Dwarf, Oni, Goblin, Felinid] # Frontier: add  Oni, Felinid
   forcedColoring: true
   coloring:

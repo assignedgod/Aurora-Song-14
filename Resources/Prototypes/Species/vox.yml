@@ -72,9 +72,6 @@
     Overlay: # imp
       points: 4
       required: false
-    Overlay: # imp
-      points: 4
-      required: false
     Tail:
       points: 1
       required: true
