@@ -4,7 +4,7 @@
   parent: [ BaseC2ContrabandUnredeemable, NFBaseWeaponShotgunChamber12g, NFBaseWeaponFrameShotgunNanotrasen ]
   name: Adjutant
   description: |-
-    A rapid fire, tube-fed shotgun. Reloading takes a second.
+    A rapid fire, tube-fed shotgun. Reloading takes a second. Go-to weapon of the CAF.
   components:
   - type: Sprite
     sprite: _DV/Objects/Weapons/Guns/Shotguns/Adjutant.rsi
@@ -25,7 +25,7 @@
   parent: [ BaseC2ContrabandUnredeemable, NFBaseWeaponShotgunChamber12g, NFBaseWeaponFrameShotgunNanotrasen ]
   name: Bailiff
   description: |-
-    A tube-fed shotgun with full-auto capacity, favoured during riots.
+    A tube-fed shotgun with full-auto capacity. The commisoner's trusty longarm, It always finds its way back to its true master.
   components:
   - type: Sprite
     sprite: _DV/Objects/Weapons/Guns/Shotguns/Bailiff.rsi
@@ -41,5 +41,8 @@
     - FullAuto
   - type: BallisticAmmoProvider
     capacity: 7
+  - type: SentienceTarget
+    flavorKind: station-event-random-sentience-flavor-inanimate
+    weight: 0.1
   - type: NFWeaponDetails
     manufacturer: weapon-details-manufacturer-nanotrasen-munitions
