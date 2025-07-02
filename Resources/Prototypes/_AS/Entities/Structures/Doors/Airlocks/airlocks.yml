@@ -1,0 +1,7 @@
+﻿- type: entity
+  parent: AirlockGlassShuttle
+  id: AirlockExternalGlassShuttleArrival
+  suffix: Docking, Bus, Aurora
+  components:
+  - type: PriorityDock
+    tag: ArrivalShuttle

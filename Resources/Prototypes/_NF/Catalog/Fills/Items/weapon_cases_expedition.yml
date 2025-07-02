@@ -49,8 +49,9 @@
     contents:
     - id: NFWeaponPistolCobraExpedition
       amount: 1
-    - id: NFMagazinePistol45
+    - id: HLMagazinePistolCaselessRifle
       amount: 2
+
 
 - type: entity
   parent: WeaponCaseShort
@@ -350,7 +351,7 @@
   components:
   - type: StorageFill
     contents:
-    - id: NFWeaponRifleAssaultM90GrenadeLauncherExpedition
+    - id: NFWeaponRifleAssaultM90Expedition
       amount: 1
     - id: NFMagazineRifle20
       amount: 2
