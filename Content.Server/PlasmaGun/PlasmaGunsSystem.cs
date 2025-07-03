@@ -78,6 +78,16 @@ public sealed class PlasmaGunsSystem : SharedPlasmaGunsSystem
             _slots.TryEject(uid, PlasmaGunComponent.TankSlotId, args.User, out _);
             return;
         }
+        // Not the most elegant solution, but it removes the gas without poisoning everyone nearby. Take it or leave it.
+        var removed = _gasTank.RemoveAir(gas.Value, component.GasUsage);
+
+        // Just in case we wanted to use the pneumatic cannon way of polluting local atmos with plasma, would be funny
+        // var environment = _atmos.GetContainingMixture(cannon.Owner, false, true);
+        // var removed = _gasTank.RemoveAir(gas.Value, component.GasUsage);
+        // if (environment != null && removed != null)
+        // {
+        //     _atmos.Merge(environment, removed);
+        // }
 
         if (gas.Value.Comp.Air.TotalMoles >= component.GasUsage)
             return;
