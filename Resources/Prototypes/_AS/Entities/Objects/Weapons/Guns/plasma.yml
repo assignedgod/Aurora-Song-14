@@ -32,7 +32,7 @@
   - type: Gun
     fireRate: 2
   - type: PlasmaGun
-    GasUsage: 0.1f
+    gasUsage: 0.18
   - type: BatterySelfRecharger
     autoRecharge: true
     autoRechargeRate: 8
