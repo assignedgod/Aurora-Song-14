@@ -19,3 +19,25 @@
     contents:
     - id: NFMagazineSubMachineGun35Overpressure
       amount: 4
+
+- type: entity # Funny
+  name: A box of .35 honk boxes
+  parent: WeaponCaseShortAmmo
+  id: StorageFillAmmoBoxHonk35
+  suffix: .35, Nonlethal, x2 boxes
+  components:
+  - type: StorageFill
+    contents:
+    - id: ASAmmunitionBoxPistol35Funny
+      amount: 4
+
+- type: entity # Funny
+  name: A box of .35 honk SMG mags
+  parent: WeaponCaseShortAmmo
+  id: StorageFillAmmoBoxHonk35SMG
+  suffix: .35 SMG, Nonlethal, x4 mags
+  components:
+  - type: StorageFill
+    contents:
+    - id: ASMagazineSubMachineGun35Funny
+      amount: 4

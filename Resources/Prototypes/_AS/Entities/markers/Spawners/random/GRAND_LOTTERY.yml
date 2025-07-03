@@ -117,6 +117,8 @@
     - NFMagazineBoxFoam # Frontier: MagazineFoamBox<
     - NFBoxDonkSoftBox # Frontier: use NF variant
     - GrenadeFoamDart
+    - StorageFillAmmoBoxHonk35
+    - StorageFillAmmoBoxHonk35SMG
     chance: 1
     offset: 0.0
     rarePrototypes:
