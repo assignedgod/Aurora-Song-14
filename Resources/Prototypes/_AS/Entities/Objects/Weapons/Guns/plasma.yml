@@ -20,4 +20,4 @@
     proto: NFRedLightLaser
     fireCost: 60
   - type: PneumaticCannon
-    throwItems: false
+    ThrowItems: False
