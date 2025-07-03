@@ -469,9 +469,7 @@
     sprite: _DV/Clothing/Belt/security.rsi # DeltaV - resprite
   - type: Clothing
     sprite: _DV/Clothing/Belt/security.rsi # DeltaV - resprite
-  - type: ExplosionResistance
-    damageCoefficient: 0.9
-  # - type: ItemSlots # DeltaV - add sidearm slot
+  - type: ItemSlots # DeltaV - add sidearm slot
     slots:
       holster:
         name: clothing-belt-sidearm
@@ -479,6 +477,8 @@
           tags:
           - Sidearm
         insertOnInteract: false
+  - type: ExplosionResistance
+    damageCoefficient: 0.9
   # Frontier: commented out whitelist
   # - type: Storage
   #   whitelist:
