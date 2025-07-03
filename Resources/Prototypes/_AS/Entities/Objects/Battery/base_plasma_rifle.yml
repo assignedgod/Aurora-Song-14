@@ -1,0 +1,17 @@
+﻿- type: entity
+  id: ASBaseWeaponPlasmaModes
+  abstract: true
+  components:
+  - type: Gun
+    examineCaliber: gun-examine-energybolt-high
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/laser_cannon.ogg
+  - type: ProjectileBatteryAmmoProvider
+    proto: ASPlasmaBlastTest
+    fireCost: 80
+  - type: BatteryWeaponFireModes
+    fireModes:
+    - proto: ASPlasmaBlastTest
+      fireCost: 80
+    - proto: NFBulletDisabler
+      fireCost: 80

@@ -24,7 +24,7 @@
 
 - type: entity
   name: Plasma Rifle
-  parent: [ NFBaseWeaponFrameEnergyRifleNanotrasen, NFBaseWeaponEnergyRifleFireModes ]
+  parent: [ NFBaseWeaponFrameEnergyRifleNanotrasen, ASBaseWeaponPlasmaModes ]
   id: ASPlasmaRifle
   description: NT Weapons Research has produced a fine new energy weapon for your military needs
   suffix: PlasGun
