@@ -460,7 +460,7 @@
   - type: Appearance
 
 - type: entity
-  parent: [ClothingBeltStorageBase, ContentsExplosionResistanceBase, BaseC1Contraband, ClothingSlotBase] # Frontier: BaseSecurityContraband<BaseC1Contraband # DeltaV - add parent ClothingSlotBase
+  parent: [ClothingBeltStorageBase, ContentsExplosionResistanceBase, BaseC1Contraband] # Frontier: BaseSecurityContraband<BaseC1Contraband # DeltaV - add parent ClothingSlotBase
   id: ClothingBeltSecurity
   name: security belt
   description: Can hold security gear like handcuffs and flashes.
@@ -520,11 +520,6 @@
           tags:
           - Sidearm
     sprite: _DV/Clothing/Belt/belt_overlay.rsi
-  - type: ContainerContainer
-    containers:
-      storagebase: !type:Container
-        ents: []
-      holster: !type:ContainerSlot {}
   - type: Appearance
 
 - type: entity
