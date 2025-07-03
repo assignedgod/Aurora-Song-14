@@ -29,6 +29,9 @@
   description: NT Weapons Research has produced a fine new energy weapon for your military needs
   suffix: PlasGun
   components:
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
   - type: Gun
     fireRate: 2
   - type: PlasmaGun
@@ -53,6 +56,6 @@
         ents: [ ]
       gas_tank: !type:ContainerSlot
   - type: Sprite
-    sprite: Objects/Weapons/Guns/Battery/laser_gun.rsi
+    sprite: _AS/Objects/Weapons/Guns/PAS-2_Scourer.rsi
   - type: Clothing
-    sprite: Objects/Weapons/Guns/Battery/laser_gun.rsi
+    sprite: _AS/Objects/Weapons/Guns/PAS-2_Scourer.rsi
