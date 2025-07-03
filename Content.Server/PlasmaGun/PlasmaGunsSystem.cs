@@ -3,6 +3,7 @@ using Content.Server.Atmos.EntitySystems;
 using Content.Server.Storage.EntitySystems;
 using Content.Server.Stunnable;
 using Content.Server.Weapons.Ranged.Systems;
+using Content.Shared.Atmos;
 using Content.Shared.Atmos.Components;
 using Content.Shared.Containers.ItemSlots;
 using Content.Shared.Interaction;
@@ -44,6 +45,13 @@ public sealed class PlasmaGunsSystem : SharedPlasmaGunsSystem
         if (!TryComp<GasTankComponent>(args.EntityUid, out var gas))
             return;
 
+        // Check that the tank has the required amount of plasma in it, rather than just any gas
+        if (gas.Air.GetMoles(Gas.Plasma) < component.GasUsage)
+        {
+            args.Cancel();
+            return;
+        }
+
         // only accept tanks if it uses gas
         if (gas.Air.TotalMoles >= component.GasUsage && component.GasUsage > 0f)
             return;
@@ -63,12 +71,12 @@ public sealed class PlasmaGunsSystem : SharedPlasmaGunsSystem
         if (gas == null)
             return;
 
-        // this should always be possible, as we'll eject the gas tank when it no longer is
-        var environment = _atmos.GetContainingMixture(cannon.Owner, false, true);
-        var removed = _gasTank.RemoveAir(gas.Value, component.GasUsage);
-        if (environment != null && removed != null)
+        // Check the tank has enough plasma
+        if (gas.Value.Comp.Air.GetMoles(Gas.Plasma) < component.GasUsage)
         {
-            _atmos.Merge(environment, removed);
+            // Eject the tank if it no longer has enough plasma
+            _slots.TryEject(uid, PlasmaGunComponent.TankSlotId, args.User, out _);
+            return;
         }
 
         if (gas.Value.Comp.Air.TotalMoles >= component.GasUsage)
