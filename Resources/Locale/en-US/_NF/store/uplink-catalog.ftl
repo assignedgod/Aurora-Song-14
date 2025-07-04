@@ -5,8 +5,8 @@ uplink-security-hardsuit-desc = The standard-issue SLE space proof suit for patr
 uplink-security-hardsuit-patrol-name = Silver Patrol Suit
 uplink-security-hardsuit-patrol-desc = The standard-issue SLE space proof suit for patrol duty. This silver variant has officer rank markings.
 
-uplink-security-hardsuit-brigmedic-name = Brigmedic Patrol Suit
-uplink-security-hardsuit-brigmedic-desc = The standard-issue SLE space proof suit for patrol duty. This brighter variant has brigmedic rank markings.
+uplink-security-hardsuit-brigmedic-name = Corpsman Patrol Suit
+uplink-security-hardsuit-brigmedic-desc = The standard-issue SLE space proof suit for patrol duty. This brighter variant has corpsman rank markings.
 
 uplink-security-hardsuit-warden-name = Gold Patrol Suit
 uplink-security-hardsuit-warden-desc = The standard-issue SLE space proof suit for patrol duty. This gold variant has supervisor rank markings.
@@ -14,8 +14,8 @@ uplink-security-hardsuit-warden-desc = The standard-issue SLE space proof suit f
 uplink-security-hardsuit-experimental-name = Experimental Combat Suit
 uplink-security-hardsuit-experimental-desc = A very heavily armored SLE suit. This space proof marvel of engineering uses state of the art alloys to provide immense protection while sacrificing little mobility.
 
-uplink-security-hardsuit-sheriff-name = Sheriff's Patrol Suit
-uplink-security-hardsuit-sheriff-desc = The standard-issue SLE space proof suit for patrol duty. This gold variant has sheriff rank markings.
+uplink-security-hardsuit-sheriff-name = Commissioner's Patrol Suit
+uplink-security-hardsuit-sheriff-desc = The standard-issue SLE space proof suit for patrol duty. This gold variant has Commissioner rank markings.
 
 uplink-security-hardsuit-combat-name = Combat Suit
 uplink-security-hardsuit-combat-desc = A heavily armored SLE suit. Space proof, with thick armor plating at the expense of mobility.

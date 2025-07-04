@@ -6,14 +6,14 @@ highlights-mail-carrier = Mail Carrier
 highlights-security-guard = Security Guard, Station Guard, Guard
 highlights-director-of-care = "DOC", Director of Care
 
-highlights-cadet = Cadet, "SLE"
-highlights-deputy = Deputy, "SLE"
+highlights-cadet = Cadet, "SLE", Rookie
+highlights-deputy = Deputy, "SLE", Officer
 highlights-detective = Detective, "Det", "SLE"
-highlights-brigmedic = Brigmedic, Brigmed, "SLE"
+highlights-brigmedic = Brigmedic, Brigmed, "SLE", Corpsman, CM
 highlights-sergeant = Sergeant, Sarge, "SLE"
-highlights-bailiff = Bailiff, "SLE"
+highlights-bailiff = "SLE", Lieutenant
 highlights-public-affairs-liaison = Liaison, "PAL", "SLE"
-highlights-sheriff = Sheriff, "SLE"
+highlights-sheriff = Sheriff, "SLE", Commissioner
 
 highlights-prisoner = Prisoner
 highlights-pirate = Pirate
