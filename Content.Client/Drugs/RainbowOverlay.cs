@@ -12,6 +12,8 @@ namespace Content.Client.Drugs;
 
 public sealed class RainbowOverlay : Overlay
 {
+    private static readonly ProtoId<ShaderPrototype> Shader = "Rainbow";
+
     [Dependency] private readonly IConfigurationManager _config = default!;
     [Dependency] private readonly IEntityManager _entityManager = default!;
     [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
@@ -37,7 +39,9 @@ public sealed class RainbowOverlay : Overlay
     {
         IoCManager.InjectDependencies(this);
 
-        _rainbowShader = _prototypeManager.Index<ShaderPrototype>("Rainbow").InstanceUnique();
+        _statusEffects = _sysMan.GetEntitySystem<SharedStatusEffectsSystem>();
+
+        _rainbowShader = _prototypeManager.Index(Shader).InstanceUnique();
         _config.OnValueChanged(CCVars.ReducedMotion, OnReducedMotionChanged, invokeImmediately: true);
     }
 
