@@ -460,15 +460,23 @@
   - type: Appearance
 
 - type: entity
-  parent: [ClothingBeltStorageBase, ContentsExplosionResistanceBase, BaseC1Contraband] # Frontier: BaseSecurityContraband<BaseC1Contraband
+  parent: [ClothingBeltStorageBase, ContentsExplosionResistanceBase, BaseC1Contraband, ClothingSlotBase] # DeltaV - add parent ClothingSlotBase
   id: ClothingBeltSecurity
   name: security belt
   description: Can hold security gear like handcuffs and flashes.
   components:
   - type: Sprite
-    sprite: Clothing/Belt/security.rsi
+    sprite: _DV/Clothing/Belt/security.rsi # DeltaV - resprite
   - type: Clothing
-    sprite: Clothing/Belt/security.rsi
+    sprite: _DV/Clothing/Belt/security.rsi # DeltaV - resprite
+  - type: ItemSlots # DeltaV - add sidearm slot
+    slots:
+      holster:
+        name: clothing-belt-sidearm
+        whitelist:
+          tags:
+          - Sidearm
+        insertOnInteract: false
   - type: ExplosionResistance
     damageCoefficient: 0.9
   # Frontier: commented out whitelist
@@ -497,21 +505,26 @@
   #       - Whistle
   #       - BalloonPopper
   # End Frontier: commented out whitelist
-  - type: ItemMapper
+  - type: ItemMapper # DeltaV - adjust for DeltaV sprites.
     mapLayers:
-      flashbang:
-        whitelist:
-          components:
-          - FlashOnTrigger
-      stunbaton:
+      baton:
         whitelist:
           components:
           - Stunbaton
-      tear_gas_grenade:
+      gasgrenade:
         whitelist:
-          components:
-          - SmokeOnTrigger
-    sprite: Clothing/Belt/belt_overlay.rsi
+          tags:
+            - Grenade
+      slp:
+        whitelist:
+          tags:
+          - Sidearm
+    sprite: _DV/Clothing/Belt/belt_overlay.rsi
+  - type: ContainerContainer
+    containers:
+      storagebase: !type:Container
+        ents: []
+      holster: !type:ContainerSlot {}
   - type: Appearance
 
 - type: entity
@@ -618,15 +631,36 @@
         # - CartridgeAmmo
 
 - type: entity
-  parent: NFClothingBeltStorageBase # Frontier: ClothingBeltStorageBase<NFClothingBeltStorageBase
+  parent: [NFClothingBeltStorageBase, ClothingSlotBase] # Frontier: ClothingBeltStorageBase<NFClothingBeltStorageBase # DeltaV - add parent ClothingSlotBase
   id: ClothingBeltSecurityWebbing
   name: security carrier
   description: Unique and versatile chest rig, can hold security gear.
   components:
   - type: Sprite
-    sprite: Clothing/Belt/securitywebbing.rsi
+    sprite: _DV/Clothing/Belt/securitywebbing.rsi # DeltaV - resprite
   - type: Clothing
-    sprite: Clothing/Belt/securitywebbing.rsi
+    sprite: _DV/Clothing/Belt/securitywebbing.rsi # DeltaV - resprite
+  - type: ItemSlots # DeltaV - add sidearm slot
+    slots:
+      holster:
+        name: clothing-belt-sidearm
+        whitelist:
+          tags:
+          - Sidearm
+        insertOnInteract: false
+  - type: ItemMapper # DeltaV - add holstered sidearm sprite
+    mapLayers:
+      slp:
+        whitelist:
+          tags:
+          - Sidearm
+    sprite: _DV/Clothing/Belt/belt_overlay.rsi
+  - type: ContainerContainer
+    containers:
+      storagebase: !type:Container
+        ents: []
+      holster: !type:ContainerSlot {}
+  - type: Appearance # DeltaV
 
 - type: entity
   parent: NFClothingBeltStorageBase # Frontier: ClothingBeltStorageBase<NFClothingBeltStorageBase, remove BaseSecurityCargoContraband
