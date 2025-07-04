@@ -199,7 +199,7 @@
   categories: [ HideSpawnMenu ]
   components:
   - type: FaxMachine
-    name: "NFSD Outpost Sheriff"
+    name: "NFSD Outpost Commissioner"
 
 - type: entity
   parent: [BaseStructureDisableToolUse, FaxMachineBase]
