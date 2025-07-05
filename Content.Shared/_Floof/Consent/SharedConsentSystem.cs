@@ -92,4 +92,9 @@ public abstract partial class SharedConsentSystem : EntitySystem
 
         return toggle == "on";
     }
+
+    public virtual bool HasConsent(Entity<MindContainerComponent?> ent, ProtoId<ConsentTogglePrototype> consentId)
+    {
+        return false; // Implemented only on server side, prediction is *just a week away*
+    }
 }
