@@ -5,7 +5,7 @@
   price: 30000 #Appraisal is 19000
   category: Medium
   group: Medical
-  shuttlePath: /Maps/_AS/Shuttles/Potion_Seller.yml
+  shuttlePath: /Maps/_AS/Shuttles/potion_seller.yml
   class:
   - Medical
   engine:
@@ -14,7 +14,7 @@
 - type: gameMap
   id: Vitalis
   mapName: 'AS Potion Seller'
-  mapPath: /Maps/_AS/Shuttles/Potion_Seller.yml
+  mapPath: /Maps/_AS/Shuttles/potion_seller.yml
   minPlayers: 0
   stations:
     PotionSeller:
