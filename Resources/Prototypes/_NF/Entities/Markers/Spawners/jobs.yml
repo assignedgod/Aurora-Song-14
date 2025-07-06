@@ -155,7 +155,7 @@
 - type: entity
   id: SpawnPointSheriff
   parent: SpawnPointHeadOfSecurity
-  name: sheriff
+  name: Comissioner
   components:
   - type: SpawnPoint
     job_id: Sheriff
@@ -163,7 +163,7 @@
 - type: entity
   id: SpawnPointBailiff
   parent: SpawnPointWarden
-  name: bailiff
+  name: Lieutenant
   components:
   - type: SpawnPoint
     job_id: Bailiff
@@ -179,7 +179,7 @@
 - type: entity
   id: SpawnPointDeputy
   parent: SpawnPointSecurityOfficer
-  name: deputy
+  name: Officer
   components:
   - type: SpawnPoint
     job_id: Deputy
@@ -187,7 +187,7 @@
 - type: entity
   id: SpawnPointCadet
   parent: SpawnPointSecurityCadet
-  name: cadet
+  name: Rookie
   components:
   - type: SpawnPoint
     job_id: Cadet

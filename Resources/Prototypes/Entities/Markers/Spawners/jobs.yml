@@ -524,10 +524,10 @@
 - type: entity
   id: SpawnPointBrigmedic
   parent: SpawnPointJobBase
-  name: brigmedic
+  name: Corpsman # Aurora
   components:
   - type: SpawnPoint # Frontier
-    job_id: Brigmedic # Frontier
+    job_id: Brigmedic
   - type: Sprite
     layers:
       - state: green
