@@ -23,10 +23,10 @@
     GasUsage: 0.15f
 
 - type: entity
-  name: Plasma Rifle
-  parent: [ NFBaseWeaponFrameEnergyRifleNanotrasen, ASBaseWeaponPlasmaModes ]
-  id: ASPlasmaRifle
-  description: NT Weapons Research has produced a fine new energy weapon for your military needs
+  name: PAS-2 Scourer
+  parent: [ ASBaseWeaponFramePlasmaRifleNanotrasen, ASBaseWeaponPlasmaBolts ]
+  id: ASPlasmaRifleScourer
+  description: NT's R&D produced this 'top of the line' infantry solution for effectively putting down targets
   suffix: PlasGun
   components:
   - type: MagazineVisuals
