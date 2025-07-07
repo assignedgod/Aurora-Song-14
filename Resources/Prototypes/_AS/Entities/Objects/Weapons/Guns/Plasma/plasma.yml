@@ -24,7 +24,7 @@
 
 - type: entity
   name: PAS-2 Scourer
-  parent: [ ASBaseWeaponFramePlasmaRifleNanotrasen, ASBaseWeaponPlasmaBolts ]
+  parent: [ ASBaseWeaponPlasmaBolts, ASBaseWeaponFramePlasmaRifleNanotrasen ]
   id: ASPlasmaRifleScourer
   description: NT's R&D produced this 'top of the line' infantry solution for effectively putting down targets
   suffix: PlasGun
