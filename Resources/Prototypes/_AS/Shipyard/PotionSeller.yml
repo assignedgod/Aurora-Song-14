@@ -1,0 +1,31 @@
+﻿- type: vessel
+  id: PotionSeller
+  name: AS Potion Seller
+  description: Medium Medical Support Vessel for the Medical Personal, Designed for Cryogenic Deployment.
+  price: 40000 #Appraisal is 19000, this is an EXTREMELY well stocked ship and super cheap for what it can do. A goddamn chem vend for crying out loud
+  category: Medium
+  group: Medical
+  shuttlePath: /Maps/_AS/Shuttles/potion_seller.yml
+  class:
+  - Medical
+  engine:
+  - Uranium
+
+- type: gameMap
+  id: PotionSeller
+  mapName: 'AS Potion Seller'
+  mapPath: /Maps/_AS/Shuttles/potion_seller.yml
+  minPlayers: 0
+  stations:
+    PotionSeller:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Potion Seller {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            Contractor: [ 0, 0 ]
+            Pilot: [ 0, 0 ]
