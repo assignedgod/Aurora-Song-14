@@ -4,9 +4,6 @@
   startNode: start
   targetNode: wallSolidDiagonal
   category: construction-category-structures
-  icon:
-    sprite: /Textures/Structures/Walls/solid_diagonal.rsi
-    state: state0
   objectType: Structure
   placementMode: SnapgridCenter
   canRotate: true
@@ -20,9 +17,6 @@
   startNode: start
   targetNode: wallReinforcedDiagonal
   category: construction-category-structures
-  icon:
-    sprite: /Textures/Structures/Walls/reinforced_diagonal.rsi
-    state: state0
   objectType: Structure
   placementMode: SnapgridCenter
   canRotate: true
@@ -40,9 +34,6 @@
   conditions:
     - !type:EmptyOrWindowValidInTile
     - !type:NoWindowsInTile
-  icon:
-    sprite: Structures/Windows/directional.rsi
-    state: uranium_window
   objectType: Structure
   placementMode: SnapgridCenter
 
@@ -56,8 +47,5 @@
   conditions:
     - !type:EmptyOrWindowValidInTile
     - !type:NoWindowsInTile
-  icon:
-    sprite: Structures/Windows/directional.rsi
-    state: uranium_reinforced_window
   objectType: Structure
   placementMode: SnapgridCenter
