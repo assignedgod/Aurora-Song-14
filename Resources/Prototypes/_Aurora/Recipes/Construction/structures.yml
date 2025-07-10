@@ -5,7 +5,6 @@
   startNode: start
   targetNode: wallSolidDiagonal
   category: construction-category-structures
-  description: Keeps the air in and the greytide out.
   icon:
     sprite: /Textures/Structures/Walls/solid_diagonal.rsi
     state: state0
@@ -23,7 +22,6 @@
   startNode: start
   targetNode: wallReinforcedDiagonal
   category: construction-category-structures
-  description: Keeps the air in and the greytide out.
   icon:
     sprite: /Textures/Structures/Walls/reinforced_diagonal.rsi
     state: state0
@@ -42,7 +40,6 @@
   targetNode: uraniumWindowDirectional
   category: construction-category-structures
   canBuildInImpassable: true
-  description: Don't smudge up the glass down there.
   conditions:
     - !type:EmptyOrWindowValidInTile
     - !type:NoWindowsInTile
@@ -60,7 +57,6 @@
   targetNode: uraniumReinforcedWindowDirectional
   category: construction-category-structures
   canBuildInImpassable: true
-  description: Don't smudge up the glass down there.
   conditions:
     - !type:EmptyOrWindowValidInTile
     - !type:NoWindowsInTile
