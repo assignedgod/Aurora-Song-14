@@ -1,5 +1,5 @@
 
-station-event-bluespace-dungeon-start-announcement = Signatures of a large inbound object have been detected. Investigate with caution, Colonial is not liable for damages sustained or loss of life.
+station-event-bluespace-dungeon-start-announcement = Signatures of a large inbound object have been detected. Investigate with caution, Colonial Command is not liable for damages sustained or loss of life.
 station-event-bluespace-dungeon-warning-announcement = Bluespace instability detected on foreign object, five minutes until estimated departure.
 station-event-bluespace-dungeon-end-announcement = Critical bluespace instability detected, the foreign object has exited the sector.
 
@@ -35,7 +35,7 @@ station-event-bluespace-bloodmoon-start-announcement = Attention all available C
 station-event-bluespace-bloodmoon-warning-announcement = Remote FTL procedures initialized, five minutes until Blood Cult vessel dissipation.
 station-event-bluespace-bloodmoon-end-announcement = In compliance with Colonial FTL traffic patterns, the Blood Cult vessel has been dissipated to ensure non-collision.
 
-station-event-bluespace-generic-ftl-start-announcement = Attention all Colonial personnel! Colonial Naval Command has detected an unidentified vessel entering the Frontier Sector. Investigate with caution, Colonial is not liable for damages sustained or loss of life.
+station-event-bluespace-generic-ftl-start-announcement = Attention all Colonial personnel! Colonial Naval Command has detected an unidentified vessel entering the Aurora Song Sector. Investigate with caution, Colonial command is not liable for damages sustained or loss of life.
 station-event-bluespace-generic-ftl-warning-announcement = Remote FTL procedures initialized, five minutes until unidentified vessel dissipation.
 station-event-bluespace-generic-ftl-end-announcement = In compliance with Colonial FTL traffic patterns, the unidentified vessel has been dissipated to ensure non-collision.
 
