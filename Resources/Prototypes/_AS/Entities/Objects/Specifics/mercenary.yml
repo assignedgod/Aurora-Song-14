@@ -5,6 +5,7 @@
   suffix: 20 MC
   description: A plastic chip given from Expeditionary rewards for Mercenaries for their hard work. It can be exchanged at a Mercenary Vending Machine for a variety of items.
   components:
+  - type: NFCoin
   - type: Sprite
     sprite: _AS/Objects/Specific/Mercenary/merc_coin.rsi
     state: merc_coin
