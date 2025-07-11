@@ -1,8 +1,9 @@
 ﻿- type: vessel
   id: PotionSeller
+  parent: BaseVessel
   name: AS Potion Seller
   description: Medium Medical Support Vessel for the Medical Personal, Designed for Cryogenic Deployment.
-  price: 40000 #Appraisal is 19000, this is an EXTREMELY well stocked ship and super cheap for what it can do. A goddamn chem vend for crying out loud
+  price: 40000 #Appraisal is 19000
   category: Medium
   group: Medical
   shuttlePath: /Maps/_AS/Shuttles/potion_seller.yml
