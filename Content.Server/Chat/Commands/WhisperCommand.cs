@@ -37,7 +37,8 @@ namespace Content.Server.Chat.Commands
                 return;
 
             IoCManager.Resolve<IEntitySystemManager>().GetEntitySystem<ChatSystem>()
-                .TrySendInGameICMessage(playerEntity, message, InGameICChatType.Whisper, ChatTransmitRange.Normal, false, shell, player);
+                // ChatTransmitRange.Normal < ChatTransmitRange.NoGhosts | Should hide whispers from ghosts | Aurora
+                .TrySendInGameICMessage(playerEntity, message, InGameICChatType.Whisper, ChatTransmitRange.NoGhosts, false, shell, player);
         }
     }
 }
