@@ -11,6 +11,7 @@ using Content.Client.Stylesheets;
 using Content.Client.UserInterface.Systems.Guidebook;
 using Content.Shared.CCVar;
 using Content.Shared.Clothing;
+using Content.Shared.Dataset;
 using Content.Shared.GameTicking;
 using Content.Shared.Guidebook;
 using Content.Shared.Humanoid;
@@ -214,6 +215,8 @@ namespace Content.Client.Lobby.UI
 
             #endregion Gender
 
+            #region Species
+
             RefreshSpecies();
 
             SpeciesButton.OnItemSelected += args =>
@@ -223,6 +226,8 @@ namespace Content.Client.Lobby.UI
                 UpdateHairPickers();
                 OnSkinColorOnValueChanged();
             };
+
+            #endregion Species
 
             #region Skin
 
