@@ -4,7 +4,7 @@
   name: ammunition box (.35 pistol, Honk)
   components:
   - type: BallisticAmmoProvider
-    proto: NFCartridgePistol35Overpressure
+    proto: ASBulletPistol35Funny
   - type: Sprite
     layers:
     - state: base
