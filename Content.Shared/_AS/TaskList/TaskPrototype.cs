@@ -1,0 +1,43 @@
+using Content.Shared.Whitelist;
+using Robust.Shared.Prototypes;
+using Robust.Shared.Serialization;
+using Robust.Shared.Utility;
+
+[Prototype, Serializable, NetSerializable]
+public sealed partial class TaskPrototype : IPrototype
+{
+
+    [IdDataField]
+    public string ID { get; private set; } = default!;
+
+    [DataField(required: true)]
+    public int Reward;
+
+    [DataField]
+    public LocId Description = string.Empty;
+
+    [DataField]
+    public SpriteSpecifier? Sprite;
+
+    [DataField(required: true)]
+    public List<TaskItemEntry> ItemEntries = new List<TaskItemEntry>();
+}
+
+[Serializable, NetSerializable]
+public readonly partial record struct TaskItemEntry()
+{
+    [DataField]
+    public int Amount { get; init; } = 1;
+
+    [DataField]
+    public LocId Name { get; init; } = string.Empty;
+
+    [DataField(required: true)]
+    public EntityWhitelist Whitelist { get; init; } = default!;
+}
+
+// public readonly partial record struct TaskObjectiveEntry()
+// {
+//     [DataField]
+//     public
+// }
