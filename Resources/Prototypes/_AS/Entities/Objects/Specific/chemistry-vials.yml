@@ -1,0 +1,29 @@
+- type: entity
+  id: ArithrazineChemistryVial
+  parent: BaseChemistryEmptyVial
+  suffix: arithrazine
+  components:
+  - type: Label
+    currentLabel: med-desc-arithrazine
+  - type: SolutionContainerManager
+    solutions:
+      beaker:
+        maxVol: 30
+        reagents:
+          - ReagentId: Arithrazine
+            Quantity: 30
+
+- type: entity
+  id: DiphenhydramineChemistryVial
+  parent: BaseChemistryEmptyVial
+  suffix: diphenhydramine
+  components:
+  - type: Label
+    currentLabel: med-desc-diphenhydramine
+  - type: SolutionContainerManager
+    solutions:
+      beaker:
+        maxVol: 30
+        reagents:
+          - ReagentId: Diphenhydramine
+            Quantity: 30
