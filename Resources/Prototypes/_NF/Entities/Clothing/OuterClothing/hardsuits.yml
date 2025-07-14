@@ -1,7 +1,7 @@
 #Mercenary Hardsuit
 - type: entity
   parent: ClothingOuterHardsuitBaseNF
-  id: ClothingOuterHardsuitMercenary # stats are of luxury mining hardsuit
+  id: ClothingOuterHardsuitMercenary # Aurora: stats were of luxury mining hardsuit, adjusted to be more effective as a rare find or mid-game tool, with even a late-game usage-case
   name: mercenary hardsuit
   description: A special suit that protects from the danger of space, employed by mercenary forces. Not certified to be blunderbuss-proof.
   components:
@@ -19,13 +19,13 @@
       coefficients:
         Blunt: 0.70
         Slash: 0.70
-        Piercing: 0.70
-        Heat: 0.75
+        Piercing: 0.60
+        Heat: 0.65
         Radiation: 0.6
         Caustic: 0.8
   - type: ClothingSpeedModifier
     walkModifier: 0.95
-    sprintModifier: 0.9
+    sprintModifier: 0.95
   - type: HeldSpeedModifier
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitMercenary

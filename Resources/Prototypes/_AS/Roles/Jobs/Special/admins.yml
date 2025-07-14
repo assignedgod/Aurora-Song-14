@@ -1,0 +1,21 @@
+- type: startingGear
+  id: ShanaMercMedic
+  equipment:
+    back: ClothingBackpackDuffelTraumaShanaFilled
+    belt: ClothingBeltMilitaryWebbingMedShanaFilled
+    outerClothing: ClothingOuterHardsuitPrivateSecurity
+  inhand:
+    - WeaponRifleSurpLecter
+    - NFBoxMagazineRifle20Overpressure
+#  storage: # Commented out because prototypes are already filled, leaving for reference
+#    back:
+    #  - JugBruizine
+    #  - JugLacerinol
+    #  - JugPuncturase
+    #  - JugSaline
+    #  - JugTranexamicAcid
+    #  - JugPyrazine
+    #  - JugDexalinPlus
+    #  - JugEpinephrine
+    #  - ArithrazineChemistryVial
+    #  - DiphenhydramineChemistryVial
