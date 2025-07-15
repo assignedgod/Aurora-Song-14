@@ -21,7 +21,7 @@
   productEntity: ClothingOuterHardsuitPrivateSecurity
   icon: { sprite: _NF/Clothing/OuterClothing/Hardsuits/private_security.rsi, state: icon }
   cost:
-    MercCoin: 8
+    MercCoin: 10
   categories:
     - UplinkMercenaryHardsuits
   conditions:
