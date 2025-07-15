@@ -15,7 +15,7 @@
     damage:
       types:
         Heat: 10
-        Piercing: 10
+        Blunt: 10
 
 - type: entity
   id: ASPlasmaBoltMedium
@@ -33,4 +33,4 @@
     damage:
       types:
         Heat: 12
-        Piercing: 12
+        Blunt: 12
