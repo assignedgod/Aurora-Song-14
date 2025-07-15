@@ -218,8 +218,6 @@
     dynamicPacks:
     - ScienceExplosives
     - AdvancedTools
-    - NFArsenalBlueprintsMercenary
-    - NFArsenalBlueprintsMercenaryNfsd
     - NFPouches
   - type: EmagLatheRecipes
     emagStaticPacks:
