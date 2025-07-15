@@ -16,25 +16,25 @@
 - type: entity
   parent: ClothingNeckNfsdBadge
   id: ClothingNeckNfsdBadgeSecurityCadet
-  name: NFSD cadet badge
-  suffix: Bronze - Cadet
+  name: Rookie badge
+  suffix: Bronze - Rookie
 
 - type: entity
   parent: ClothingNeckNfsdBadge
   id: ClothingNeckNfsdBadgeSecurity
-  suffix: Silver - Deputy
-  name: NFSD deputy badge
+  suffix: Silver - Officer
+  name: Officer badge
   components:
   - type: Sprite
     sprite: _NF/Clothing/Neck/Scarfs/nfsd_silver_badge.rsi
   - type: Clothing
     sprite: _NF/Clothing/Neck/Scarfs/nfsd_silver_badge.rsi
-    
+
 - type: entity
   parent: ClothingNeckNfsdBadge
   id: ClothingNeckNfsdBadgeSecurityBrigmedic
   suffix: Silver - Brigmedic
-  name: NFSD brigmedic badge
+  name: Corpsman badge
   components:
   - type: Sprite
     sprite: _NF/Clothing/Neck/Scarfs/nfsd_silvercross_badge.rsi
@@ -45,7 +45,7 @@
   parent: ClothingNeckNfsdBadge
   id: ClothingNeckNfsdBadgeDetective
   suffix: Silver - Detective
-  name: NFSD detective badge
+  name: detective badge
   components:
   - type: Sprite
     sprite: _NF/Clothing/Neck/Scarfs/nfsd_silver_badge.rsi
@@ -56,7 +56,7 @@
   parent: ClothingNeckNfsdBadge
   id: ClothingNeckNfsdBadgeSeniorOfficer
   suffix: Gold - Sergeant
-  name: NFSD sergeant badge
+  name: sergeant badge
   components:
   - type: Sprite
     sprite: _NF/Clothing/Neck/Scarfs/nfsd_gold_badge.rsi
@@ -66,8 +66,8 @@
 - type: entity
   parent: ClothingNeckNfsdBadge
   id: ClothingNeckNfsdBadgeWarden
-  suffix: Gold - Bailiff
-  name: NFSD bailiff badge
+  suffix: Gold - Lieutenant
+  name: Lieutenant badge
   components:
   - type: Sprite
     sprite: _NF/Clothing/Neck/Scarfs/nfsd_gold_badge.rsi
@@ -77,8 +77,8 @@
 - type: entity
   parent: ClothingNeckNfsdBadge
   id: ClothingNeckNfsdBadgeSheriff
-  suffix: Star - Sheriff
-  name: NFSD sheriff badge
+  suffix: Star - Comissioner
+  name: Comissioner badge
   components:
   - type: Sprite
     sprite: _NF/Clothing/Neck/Scarfs/nfsd_star_badge.rsi
