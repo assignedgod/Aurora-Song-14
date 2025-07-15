@@ -206,7 +206,8 @@
   id: NFAmmunitionBoxBigRifle20Incendiary
   result: NFAmmunitionBoxBigRifle20Incendiary
   materials:
-    Plastic: 4000 # box - free, 200 [bullets] * 20 [Plastic per bullet]
+    Steel: 1000 # 200 [bullets] * 15 [Steel per bullet]
+    Plastic: 3000 # box - free, 200 [bullets] * 15 [Plastic per bullet]
 
 - type: latheRecipe
   parent: BaseAmmoRecipe
@@ -310,7 +311,8 @@
   id: NFAmmunitionBoxBigRifle30Incendiary
   result: NFAmmunitionBoxBigRifle30Incendiary
   materials:
-    Plastic: 4000 # box - free, 200 [bullets] * 20 [Plastic per bullet]
+    Steel: 1000 # 200 [bullets] * 15 [Steel per bullet]
+    Plastic: 3000 # box - free, 200 [bullets] * 15 [Plastic per bullet]
 
 - type: latheRecipe
   parent: BaseAmmoRecipe

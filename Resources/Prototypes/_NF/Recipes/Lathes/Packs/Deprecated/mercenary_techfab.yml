@@ -107,9 +107,12 @@
   - NFSpeedLoaderPistol35Empty
   - NFSpeedLoaderPistol45Empty
   - NFMagazineClipRifle20Empty
+  - NFMagazineRifle20
   - MagazineLightRifleLowCapacityEmpty
   - NFMagazineRifle30Empty
   - NFMagazinePistol35
+  - NFMagazineSubMachineGun35
+  - NFMagazineSubMachineGunTopMounted35
   - NFSpeedLoaderPistol35
   - NFSpeedLoaderPistol45
   - NFMagazineClipRifle20

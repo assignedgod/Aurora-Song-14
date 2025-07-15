@@ -215,6 +215,12 @@
     staticPacks:
     - NFMercenaryTechfabDeprecatedStatic
     - NfsdPracticeStatic
+    dynamicPacks:
+    - ScienceExplosives
+    - AdvancedTools
+    - NFArsenalBlueprintsMercenary
+    - NFArsenalBlueprintsMercenaryNfsd
+    - NFPouches
   - type: EmagLatheRecipes
     emagStaticPacks:
     - ASMercenaryEmag

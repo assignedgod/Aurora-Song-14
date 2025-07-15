@@ -3,8 +3,19 @@
   recipes:
   - NFAmmunitionBoxRifle25
   - NFAmmunitionBoxRifle25Overpressure
+  - NFAmmunitionBoxPistol45
   - ASMagazineCaselessRifleShort
   - ASMagazineCaselessRifle
   - FireAxe
   - NFMagazineSubMachineGun35
   - NFMagazineRifle20
+
+- type: latheRecipePack
+  id: ASAmmofabEmag
+  recipes:
+  - NFAmmunitionBoxRifle20Incendiary
+  - NFAmmunitionBoxPistol45Incendiary
+  - NFAmmunitionBoxPistol35Incendiary
+  - NFAmmunitionBoxRifle30Incendiary
+  - NFAmmunitionBoxShellShotgunIncendiary
+
