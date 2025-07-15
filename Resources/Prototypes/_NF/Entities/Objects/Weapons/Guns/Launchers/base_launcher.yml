@@ -97,6 +97,8 @@
     whitelist:
       tags:
         - Grenade
+        - NFCartridgeGrenade40mmFlash
+        - NFCartridgeGrenade40mmEmp
     capacity: 3
     proto: NFGrenadeFrag
 
