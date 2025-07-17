@@ -5,7 +5,7 @@
     belt: ClothingBeltMilitaryWebbingMedShanaFilled
     outerClothing: ClothingOuterHardsuitPrivateSecurity
   inhand:
-    - WeaponRifleSurpLecter
+    - ASWeaponRifleTFLecter
     - NFBoxMagazineRifle20Overpressure
 #  storage: # Commented out because prototypes are already filled, leaving for reference
 #    back:
