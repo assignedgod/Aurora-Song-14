@@ -42,7 +42,7 @@
     angleDecay: 3
     fireRate: 6
   - type: NFWeaponDetails
-    class: weapon-details-manufacturer-nanotrasen-munitions
+    manufacturer: weapon-details-manufacturer-nanotrasen-munitions
 
 - type: entity
   id: NFBaseWeaponFrameRifleAssaultCybersun
@@ -54,7 +54,7 @@
     angleDecay: 5
     fireRate: 5.5
   - type: NFWeaponDetails
-    class: weapon-details-manufacturer-cybersun-industries
+    manufacturer: weapon-details-manufacturer-cybersun-industries
 
 - type: entity
   id: NFBaseWeaponFrameRifleAssaultFrontierGunsmith
