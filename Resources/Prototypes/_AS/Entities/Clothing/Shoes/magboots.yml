@@ -5,7 +5,7 @@
   description: Go Fast... At a price.
   components:
   - type: ClothingSpeedModifier
-    walkModifier: 7.10
-    sprintModifier: 7.10
+    walkModifier: 1.10
+    sprintModifier: 1.10
   - type: StaticPrice
     price: 10000
