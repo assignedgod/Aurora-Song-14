@@ -9,7 +9,7 @@
       rootTask:
         task: SimpleRangedHostileCompound
     - type: HitscanBatteryAmmoProvider
-      proto: RedLaser
+      proto: NFRedMediumLaser
       fireCost: 62.5
     - type: Battery
       maxCharge: 1000
@@ -300,7 +300,7 @@
       100: Critical
       160: Dead
   - type: BasicEntityAmmoProvider
-    proto: BulletMagnum
+    proto: NFBulletPistol45
     capacity: 1
     count: 1
   - type: Gun
