@@ -1774,7 +1774,8 @@
   - NFAmmunitionBoxRifle30Overpressure
   - NFMagazineRifle20Empty
   - NFMagazineRifle30Empty
-  - NFMagazineDrumRifle20Empty
+ # - NFMagazineDrumRifle20Empty
+  - NFMagazineShotgunDrumEmpty
   - MagazineAsmgtUniversalEmpty
   technologyPrerequisites:
   - NFImprovedPistolAmmo
