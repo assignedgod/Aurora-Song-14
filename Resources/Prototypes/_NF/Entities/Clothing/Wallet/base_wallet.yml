@@ -22,6 +22,8 @@
       map: ["closed-coin"]
       visible: false
   - type: Storage
+    quickInsert: true
+    areaInsert: true
     maxItemSize: Small
     grid:
     - 0,0,3,1
