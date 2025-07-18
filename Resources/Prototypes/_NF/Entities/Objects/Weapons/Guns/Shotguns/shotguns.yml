@@ -211,14 +211,14 @@
 # Suplus, Aurora
 - type: entity
   parent: [ BaseC1Contraband,  NFBaseWeaponShotgunChamber12g, NFBaseWeaponFrameShotgunWieldable ]
-  id: WeaponShotgunSurpFalchion
+  id: ASWeaponShotgunSurpFalchion
   name: Falchion
   description: |-
     The first home-grown custom weapon used by the colonial forces. A reliable weapon. It can survive rapid depressurization, being dropped in a plasma pool, a direct blast from a cannon, and still it will function just fine.
   suffix: Surplus
   components:
   - type: Gun
-    fireRate: 2.5
+    fireRate: 1.8
   - type: Item
     size: Normal
     shape:
