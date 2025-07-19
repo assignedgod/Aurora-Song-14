@@ -31,7 +31,6 @@ entities:
       name: ISY - Mercy of Freefall
     - type: Transform
       pos: -0.5,-0.5
-      parent: invalid
     - type: MapGrid
       chunks:
         0,0:
@@ -3665,8 +3664,6 @@ entities:
       pos: 0.5,8.5
       parent: 1
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 748
 - proto: GasMixerOnFlipped
