@@ -24,6 +24,7 @@ using Content.Shared.Body.Components;
 using Content.Shared.Body.Part;
 using Content.Shared.Clumsy;
 using Content.Shared.Clothing.Components;
+using Content.Shared.Clothing.EntitySystems;
 using Content.Shared.Cluwne;
 using Content.Shared.Damage;
 using Content.Shared.Damage.Systems;
@@ -39,6 +40,7 @@ using Content.Shared.Movement.Systems;
 using Content.Shared.Nutrition.Components;
 using Content.Shared.Popups;
 using Content.Shared.Slippery;
+using Content.Shared.Stunnable;
 using Content.Shared.Tabletop.Components;
 using Content.Shared.Tools.Systems;
 using Content.Shared.Verbs;
@@ -49,13 +51,9 @@ using Robust.Shared.Physics.Components;
 using Robust.Shared.Physics.Systems;
 using Robust.Shared.Player;
 using Robust.Shared.Random;
+using Robust.Shared.Timing;
 using Robust.Shared.Utility;
 using Timer = Robust.Shared.Timing.Timer;
-using Robust.Shared.Audio.Systems; // Frontier
-using Robust.Shared.Audio; // Frontier
-using Content.Server._NF.Speech.Components; // Frontier
-using Content.Shared.Damage.Prototypes; // Frontier
-using Content.Shared.Bed.Sleep; // Frontier
 
 namespace Content.Server.Administration.Systems;
 
@@ -85,9 +83,6 @@ public sealed partial class AdminVerbSystem
     [Dependency] private readonly SharedTransformSystem _transformSystem = default!;
     [Dependency] private readonly SuperBonkSystem _superBonkSystem = default!;
     [Dependency] private readonly SlipperySystem _slipperySystem = default!;
-    [Dependency] private readonly SharedAudioSystem _audio = default!; // Frontier
-    [Dependency] private readonly DamageableSystem _damageable = default!; // Frontier
-    [Dependency] private readonly SleepingSystem _sleep = default!; // Frontier
 
     // All smite verbs have names so invokeverb works.
     private void AddSmiteVerbs(GetVerbsEvent<Verb> args)
@@ -597,7 +592,7 @@ public sealed partial class AdminVerbSystem
                 Icon = new SpriteSpecifier.Rsi(new ("/Textures/Clothing/Uniforms/Jumpskirt/janimaid.rsi"), "icon"),
                 Act = () =>
                 {
-                    SetOutfitCommand.SetOutfit(args.Target, "JanitorMaidGear", EntityManager, (_, clothing) =>
+                    _outfit.SetOutfit(args.Target, "JanitorMaidGear", (_, clothing) =>
                     {
                         if (HasComp<ClothingComponent>(clothing))
                             EnsureComp<UnremoveableComponent>(clothing);
@@ -889,7 +884,7 @@ public sealed partial class AdminVerbSystem
                 if (!hadSlipComponent)
                 {
                     slipComponent.SlipData.SuperSlippery = true;
-                    slipComponent.SlipData.ParalyzeTime = TimeSpan.FromSeconds(5);
+                    slipComponent.SlipData.StunTime = TimeSpan.FromSeconds(5);
                     slipComponent.SlipData.LaunchForwardsMultiplier = 20;
                 }
 
@@ -935,62 +930,19 @@ public sealed partial class AdminVerbSystem
         };
         args.Verbs.Add(omniaccent);
 
-        // Frontier
-        var cavemanName = Loc.GetString("admin-smite-caveman-name").ToLowerInvariant();
-        Verb caveman = new()
+        var crawlerName = Loc.GetString("admin-smite-crawler-name").ToLowerInvariant();
+        Verb crawler = new()
         {
-            Text = cavemanName,
+            Text = crawlerName,
             Category = VerbCategory.Smite,
-            Icon = new SpriteSpecifier.Rsi(new("_NF/Objects/Weapons/Melee/caveman_club.rsi"), "icon"),
+            Icon = new SpriteSpecifier.Rsi(new("Mobs/Animals/snake.rsi"), "icon"),
             Act = () =>
             {
-                // Remove whatever they're holding, summon & pickup the funny club, destroy on failure
-                var hand = _handsSystem.GetActiveHand(args.Target);
-                if (hand != null)
-                {
-                    _handsSystem.TryDrop(args.Target, hand);
-                    var club = EntityManager.SpawnNextToOrDrop("CavemanClubCursed", args.Target);
-                    if (club.Valid &&
-                        !_handsSystem.TryPickupAnyHand(args.Target, club, false))
-                    {
-                        QueueDel(club);
-                    }
-                }
-
-                if (_prototypeManager.TryIndex<DamageTypePrototype>("Blunt", out var bluntProto))
-                {
-                    var bluntDamage = new DamageSpecifier(bluntProto, 10);
-                    _damageable.TryChangeDamage(args.Target, bluntDamage, true);
-                }
-
-                // Make them slip and fall.
-                var hadSlipComponent = EnsureComp(args.Target, out SlipperyComponent slipComponent);
-                if (!hadSlipComponent)
-                {
-                    slipComponent.SlipData.SuperSlippery = true;
-                    slipComponent.SlipData.ParalyzeTime = TimeSpan.FromSeconds(10);
-                    slipComponent.SlipData.LaunchForwardsMultiplier = 1;
-                }
-
-                _slipperySystem.TrySlip(args.Target, slipComponent, args.Target, requiresContact: false);
-                if (!hadSlipComponent)
-                {
-                    RemComp(args.Target, slipComponent);
-                }
-
-                // Fall asleep
-                _sleep.TrySleeping(args.Target);
-
-                // Play a noise, they bonked their head
-                _popup.PopupEntity(Loc.GetString("admin-smite-caveman-self"), args.Target, player, PopupType.LargeCaution);
-                _audio.PlayPvs(new SoundPathSpecifier("/Audio/_NF/Effects/bonk.ogg"), args.Target, AudioParams.Default.WithMaxDistance(30.0f).WithVolume(3.0f));
-
-                EnsureComp<CavemanAccentComponent>(args.Target);
+                EnsureComp<WormComponent>(args.Target);
             },
             Impact = LogImpact.Extreme,
-            Message = string.Join(": ", cavemanName, Loc.GetString("admin-smite-caveman-description"))
+            Message = string.Join(": ", crawlerName, Loc.GetString("admin-smite-crawler-description"))
         };
-        args.Verbs.Add(caveman);
-        // End Frontier
+        args.Verbs.Add(crawler);
     }
 }
