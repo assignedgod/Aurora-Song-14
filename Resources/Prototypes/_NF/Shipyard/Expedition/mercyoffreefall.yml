@@ -13,9 +13,9 @@
   parent: BaseVessel
   name: IYS Mercy of Freefall
   description: A modified military dropship, with extra facilities for long-term deployment. Design modified by Perespekt Balveya and Shana McTavish.
-  price: 120000 # ~86400$ on mapinit + ~26000$ from 30% markup
+  price: 130000 # ~86400$ on mapinit + ~26000$ from 30% markup
   category: Medium
-  group: Expedition
+  group: Custom
   shuttlePath: /Maps/_AS/Shuttles/Custom/mercyoffreefall.yml
   guidebookPage: Null
   class:
