@@ -109,7 +109,6 @@ public sealed partial class SleepingSystem : EntitySystem
         {
             // Expiring status effects would remove the components needed for sleeping
             _statusEffectOld.TryRemoveStatusEffect(ent.Owner, "Stun");
-            _statusEffectOld.TryRemoveStatusEffect(ent.Owner, "KnockedDown");
 
             EnsureComp<StunnedComponent>(ent);
             EnsureComp<KnockedDownComponent>(ent);
