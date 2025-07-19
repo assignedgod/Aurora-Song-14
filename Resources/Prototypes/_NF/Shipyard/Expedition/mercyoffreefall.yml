@@ -19,7 +19,7 @@
   shuttlePath: /Maps/_AS/Shuttles/Custom/mercyoffreefall.yml
   guidebookPage: Null
   class:
-  - Custom
+  - Expedition
   engine:
   - AME
 
