@@ -51,7 +51,7 @@
   id: UplinkMercenarySurpKammerer
   name:  uplink-mercenary-shotgun1-name
   description: uplink-mercenary-shotgun1-desc
-  productEntity: WeaponShotgunSurpFalchion
+  productEntity: ASWeaponShotgunSurpFalchion
   icon: { sprite: _NF/Objects/Weapons/Guns/Shotguns/surppump.rsi, state: icon }
   cost:
     MercCoin: 9

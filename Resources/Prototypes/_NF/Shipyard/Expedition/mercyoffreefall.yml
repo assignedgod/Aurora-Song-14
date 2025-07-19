@@ -1,0 +1,44 @@
+# Author Info
+# GitHub: vandanna (https://github.com/cygnall)
+# Discord: ???
+
+# Maintainer Info
+# GitHub: vandanna (https://github.com/cygnall)
+# Discord: ???
+
+# Shuttle Notes:
+#
+- type: vessel
+  id: MercyOfFreefall
+  parent: BaseVessel
+  name: IYS Mercy of Freefall
+  description: A modified military dropship, with extra facilities for long-term deployment. Design modified by Perespekt Balveya and Shana McTavish.
+  price: 120000 # ~86400$ on mapinit + ~26000$ from 30% markup
+  category: Medium
+  group: Expedition
+  shuttlePath: /Maps/_AS/Shuttles/Custom/mercyoffreefall.yml
+  guidebookPage: Null
+  class:
+  - Expedition
+  engine:
+  - AME
+
+- type: gameMap
+  id: MercyOfFreefall
+  mapName: 'IYS Mercy of Freefall'
+  mapPath: /Maps/_AS/Shuttles/Custom/mercyoffreefall.yml
+  minPlayers: 0
+  stations:
+    MercyOfFreefall:
+      stationProto: StandardFrontierExpeditionVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'MercyOfFreefall {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            ContractorInterview: [ 0, 0 ]
+            PilotInterview: [ 0, 0 ]
+            MercenaryInterview: [ 0, 0 ]
