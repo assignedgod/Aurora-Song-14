@@ -33,7 +33,7 @@
       stationProto: StandardFrontierExpeditionVessel
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'MercyOfFreefall {1}'
+          mapNameTemplate: 'Mercy Of Freefall {1}'
           nameGenerator:
             !type:NanotrasenNameGenerator
             prefixCreator: '14'
