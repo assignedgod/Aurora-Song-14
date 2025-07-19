@@ -1,7 +1,7 @@
 #region WizDen
 - type: entity
   id: NFWeaponShotgunBulldog
-  parent: [BaseC3SyndicateContraband, NFBaseWeaponShotgunChamber12gMagazine, NFBaseWeaponFrameShotgunWieldable, NFBaseWeaponEncumbranceLMG]
+  parent: [BaseC3SyndicateContraband, NFBaseWeaponShotgunChamber12gMagazine, NFBaseWeaponFrameShotgunWieldable, NFBaseWeaponEncumbranceLMG, NFBaseWeaponFrameShotgunGorlex]
   name: Bulldog
   description: |-
     An automatic magazine-fed shotgun for close-quarters combat. Kicks like a mule on steroids.
@@ -10,6 +10,8 @@
     sprite: Objects/Weapons/Guns/Shotguns/bulldog.rsi
   - type: Clothing
     sprite: Objects/Weapons/Guns/Shotguns/bulldog.rsi
+  - type: Item
+    size: Large
   - type: Gun
     selectedMode: FullAuto
     availableModes:
@@ -218,7 +220,7 @@
   suffix: Surplus
   components:
   - type: Gun
-    fireRate: 2.5
+    fireRate: 1.8
   - type: Item
     size: Normal
     shape:
