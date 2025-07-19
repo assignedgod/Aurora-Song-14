@@ -19,7 +19,7 @@
   shuttlePath: /Maps/_AS/Shuttles/Custom/mercyoffreefall.yml
   guidebookPage: Null
   class:
-  - Expedition
+  - Custom
   engine:
   - AME
 
@@ -33,7 +33,7 @@
       stationProto: StandardFrontierExpeditionVessel
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'Mercy Of Freefall {1}'
+          mapNameTemplate: 'IYS Mercy Of Freefall {1}'
           nameGenerator:
             !type:NanotrasenNameGenerator
             prefixCreator: '14'
