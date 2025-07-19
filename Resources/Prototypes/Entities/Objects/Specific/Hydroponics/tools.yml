@@ -146,7 +146,7 @@
     # End Frontier
   - type: Item
     storedRotation: -90
-    size: Ginormous # Frontier
+    size: Normal # Aurora
   - type: Clothing
     quickEquip: false
     slots:
