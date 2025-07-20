@@ -18,7 +18,7 @@ public sealed partial class PlasmaGunComponent : Component
     /// <summary>
     ///     Amount of moles to consume for each shot at any power.
     /// </summary>
-    [DataField("gasUsage")]
+    [DataField("GasUsage")]
     [ViewVariables(VVAccess.ReadWrite)]
     public float GasUsage = 0.142f;
 
