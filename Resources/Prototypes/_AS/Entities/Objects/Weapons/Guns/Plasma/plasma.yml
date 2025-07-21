@@ -20,7 +20,7 @@
     proto: NFRedLightLaser
     fireCost: 60
   - type: PlasmaGun
-    GasUsage: 0.15f
+    GasUsage: 0.15
 
 - type: entity
   name: PAS-2 Scourer
@@ -35,7 +35,7 @@
   - type: Gun
     fireRate: 2
   - type: PlasmaGun
-    GasUsage: 0.18f
+    GasUsage: 0.18
   - type: BatterySelfRecharger
     autoRecharge: true
     autoRechargeRate: 8
