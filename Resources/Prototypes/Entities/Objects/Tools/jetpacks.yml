@@ -13,8 +13,6 @@
       sprite: Effects/atmospherics.rsi
       state: frezon_old
   - type: EffectVisuals
-  - type: Tag
-    tags:
   - type: AnimationPlayer
 
 - type: entity
