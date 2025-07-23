@@ -55,14 +55,14 @@ public sealed partial class ContrabandTurnInSystem : SharedContrabandTurnInSyste
         if (Transform(uid).GridUid is not EntityUid gridUid)
         {
             _uiSystem.SetUiState(uid, ContrabandPalletConsoleUiKey.Contraband,
-                new ContrabandPalletConsoleInterfaceState(0, 0, false));
+                new ContrabandPalletConsoleInterfaceState(0, 0, 0, false));
             return;
         }
 
         GetPalletGoods(gridUid, comp, out var toSell, out var amount);
 
         _uiSystem.SetUiState(uid, ContrabandPalletConsoleUiKey.Contraband,
-            new ContrabandPalletConsoleInterfaceState((int) amount, toSell.Count, true));
+            new ContrabandPalletConsoleInterfaceState((int) amount, toSell.Count, 0, true));
     }
 
     private void OnPalletUIOpen(EntityUid uid, ContrabandPalletConsoleComponent component, BoundUIOpenedEvent args)
@@ -197,7 +197,7 @@ public sealed partial class ContrabandTurnInSystem : SharedContrabandTurnInSyste
         if (Transform(uid).GridUid is not EntityUid gridUid)
         {
             _uiSystem.SetUiState(uid, ContrabandPalletConsoleUiKey.Contraband,
-                new ContrabandPalletConsoleInterfaceState(0, 0, false));
+                new ContrabandPalletConsoleInterfaceState(0, 0, 0, false));
             return;
         }
 

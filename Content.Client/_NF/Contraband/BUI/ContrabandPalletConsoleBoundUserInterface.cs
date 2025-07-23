@@ -1,4 +1,6 @@
 using Content.Client._NF.Contraband.UI;
+using Content.Client.Message; // Aurora
+using Content.Shared._AS.Contraband.Events; // Aurora
 using Content.Shared._NF.Contraband.BUI;
 using Content.Shared._NF.Contraband.Components;
 using Content.Shared._NF.Contraband.Events;
@@ -30,10 +32,13 @@ public sealed class ContrabandPalletConsoleBoundUserInterface : BoundUserInterfa
             _menu = this.CreateWindow<ContrabandPalletMenu>();
             _menu.AppraiseRequested += OnAppraisal;
             _menu.SellRequested += OnSell;
+            _menu.RegisterRequested += OnRegister; // Aurora
             _menu.SetWindowText(_locPrefix);
             var disclaimer = new FormattedMessage();
             disclaimer.AddText(Loc.GetString($"{_locPrefix}contraband-pallet-disclaimer"));
             _menu.Disclaimer.SetMessage(disclaimer);
+            _menu.SellDisclaimer.SetMarkup(Loc.GetString($"{_locPrefix}contraband-pallet-sell-disclaimer")); // Aurora
+            _menu.RegisterDisclaimer.SetMarkup(Loc.GetString($"{_locPrefix}contraband-pallet-register-disclaimer")); // Aurora
         }
     }
 
@@ -47,6 +52,12 @@ public sealed class ContrabandPalletConsoleBoundUserInterface : BoundUserInterfa
         SendMessage(new ContrabandPalletSellMessage());
     }
 
+    // Aurora
+    private void OnRegister()
+    {
+        SendMessage(new ContrabandPalletRegisterMessage());
+    }
+
     protected override void UpdateState(BoundUserInterfaceState state)
     {
         base.UpdateState(state);
@@ -57,5 +68,6 @@ public sealed class ContrabandPalletConsoleBoundUserInterface : BoundUserInterfa
         _menu?.SetEnabled(palletState.Enabled);
         _menu?.SetAppraisal(palletState.Appraisal);
         _menu?.SetCount(palletState.Count);
+        _menu?.SetUnregistered(palletState.Unregistered);
     }
 }
