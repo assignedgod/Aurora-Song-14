@@ -17,6 +17,8 @@ using Robust.Shared.Prototypes;
 using Content.Server._NF.Cargo.Systems;
 using Content.Server.Hands.Systems;
 using Content.Shared._AS.Contraband.Events;
+using Content.Shared.Containers.ItemSlots;
+using Robust.Shared.Containers;
 
 namespace Content.Server._NF.Contraband.Systems;
 
@@ -32,6 +34,7 @@ public sealed partial class ContrabandTurnInSystem : SharedContrabandTurnInSyste
     [Dependency] private readonly StationSystem _station = default!;
     [Dependency] private readonly TransformSystem _transform = default!;
     [Dependency] private readonly UserInterfaceSystem _uiSystem = default!;
+    [Dependency] private readonly SharedContainerSystem _container = default!; // Aurora
 
     private EntityQuery<MobStateComponent> _mobQuery;
     private EntityQuery<TransformComponent> _xformQuery;
@@ -238,6 +241,23 @@ public sealed partial class ContrabandTurnInSystem : SharedContrabandTurnInSyste
             ent.Comp.RegisterRecipies.TryGetValue(unregisteredProto, out var registeredProto);
             var registeredEnt = SpawnAtPosition(registeredProto, Transform(unregisteredEnt).Coordinates);
             _transform.SetLocalRotation(registeredEnt, Angle.Zero);
+
+            // Transfer items into new ent
+            if (TryComp<ContainerManagerComponent>(unregisteredEnt, out var unregisteredManager)
+                && TryComp<ContainerManagerComponent>(registeredEnt, out var registeredManager))
+            {
+                foreach (var registeredContainer in registeredManager.Containers)
+                {
+                    if (!unregisteredManager.Containers.TryGetValue(registeredContainer.Key, out var unregisteredContainer))
+                        continue;
+                    _container.CleanContainer(registeredContainer.Value);
+                    foreach (var item in unregisteredContainer.ContainedEntities)
+                    {
+                        _container.Insert(item, registeredContainer.Value);
+                    }
+                }
+            }
+
             Del(unregisteredEnt);
 
             Log.Debug($"{ent.Comp.Faction} registered {unregisteredEnt} into {registeredEnt}");
