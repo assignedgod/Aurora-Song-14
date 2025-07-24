@@ -231,16 +231,16 @@ public sealed partial class ContrabandTurnInSystem : SharedContrabandTurnInSyste
         }
         GetPalletGoods(gridUid, ent.Comp, out _, out _ , out var toRegister);
 
-        foreach (var unregistered in toRegister)
+        foreach (var unregisteredEnt in toRegister)
         {
-            if (MetaData(unregistered).EntityPrototype is not {} meta)
+            if (MetaData(unregisteredEnt).EntityPrototype is not {} unregisteredProto)
                 continue;
-            ent.Comp.RegisterRecipies.TryGetValue(meta, out var registered);
-            var registeredEnt = SpawnAtPosition(registered, Transform(unregistered).Coordinates);
+            ent.Comp.RegisterRecipies.TryGetValue(unregisteredProto, out var registeredProto);
+            var registeredEnt = SpawnAtPosition(registeredProto, Transform(unregisteredEnt).Coordinates);
             _transform.SetLocalRotation(registeredEnt, Angle.Zero);
-            Del(unregistered);
+            Del(unregisteredEnt);
 
-            Log.Debug($"{ent.Comp.Faction} registered {unregistered} into {registered}");
+            Log.Debug($"{ent.Comp.Faction} registered {unregisteredEnt} into {registeredEnt}");
 
             UpdatePalletConsoleInterface(ent, ent.Comp);
         }
