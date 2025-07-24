@@ -1,4 +1,5 @@
 using Content.Shared.Stacks;
+using Robust.Shared.Prototypes;
 using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototype;
 
 namespace Content.Shared._NF.Contraband.Components;
@@ -15,4 +16,10 @@ public sealed partial class ContrabandPalletConsoleComponent : Component
 
     [ViewVariables(VVAccess.ReadWrite), DataField]
     public string LocStringPrefix = string.Empty;
+
+    [DataField]
+    public Dictionary<EntProtoId, EntProtoId> RegisterRecipies = new()
+    {
+        {"NFWeaponPistolMk58Expedition","NFWeaponPistolMk58"},
+    };
 }

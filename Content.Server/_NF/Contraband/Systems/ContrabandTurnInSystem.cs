@@ -16,6 +16,7 @@ using Content.Shared.Mobs.Components;
 using Robust.Shared.Prototypes;
 using Content.Server._NF.Cargo.Systems;
 using Content.Server.Hands.Systems;
+using Content.Shared._AS.Contraband.Events;
 
 namespace Content.Server._NF.Contraband.Systems;
 
@@ -47,6 +48,7 @@ public sealed partial class ContrabandTurnInSystem : SharedContrabandTurnInSyste
         SubscribeLocalEvent<ContrabandPalletConsoleComponent, ContrabandPalletSellMessage>(OnPalletSale);
         SubscribeLocalEvent<ContrabandPalletConsoleComponent, ContrabandPalletAppraiseMessage>(OnPalletAppraise);
         SubscribeLocalEvent<ContrabandPalletConsoleComponent, BoundUIOpenedEvent>(OnPalletUIOpen);
+        SubscribeLocalEvent<ContrabandPalletConsoleComponent, ContrabandPalletRegisterMessage>(OnPalletRegister);
     }
 
     private void UpdatePalletConsoleInterface(EntityUid uid, ContrabandPalletConsoleComponent comp)
@@ -59,10 +61,10 @@ public sealed partial class ContrabandTurnInSystem : SharedContrabandTurnInSyste
             return;
         }
 
-        GetPalletGoods(gridUid, comp, out var toSell, out var amount);
+        GetPalletGoods(gridUid, comp, out var toSell, out var amount, out var unregistered);
 
         _uiSystem.SetUiState(uid, ContrabandPalletConsoleUiKey.Contraband,
-            new ContrabandPalletConsoleInterfaceState((int) amount, toSell.Count, 0, true));
+            new ContrabandPalletConsoleInterfaceState((int) amount, toSell.Count, unregistered.Count, true));
     }
 
     private void OnPalletUIOpen(EntityUid uid, ContrabandPalletConsoleComponent component, BoundUIOpenedEvent args)
@@ -109,7 +111,7 @@ public sealed partial class ContrabandTurnInSystem : SharedContrabandTurnInSyste
     private void SellPallets(EntityUid gridUid, ContrabandPalletConsoleComponent component, EntityUid? station, out int amount)
     {
         station ??= _station.GetOwningStation(gridUid);
-        GetPalletGoods(gridUid, component, out var toSell, out amount);
+        GetPalletGoods(gridUid, component, out var toSell, out amount , out _);
 
         Log.Debug($"{component.Faction} sold {toSell.Count} contraband items for {amount}");
 
@@ -125,10 +127,11 @@ public sealed partial class ContrabandTurnInSystem : SharedContrabandTurnInSyste
         }
     }
 
-    private void GetPalletGoods(EntityUid gridUid, ContrabandPalletConsoleComponent console, out HashSet<EntityUid> toSell, out int amount)
+    private void GetPalletGoods(EntityUid gridUid, ContrabandPalletConsoleComponent console, out HashSet<EntityUid> toSell, out int amount, out HashSet<EntityUid> unregistered)
     {
         amount = 0;
         toSell = new HashSet<EntityUid>();
+        unregistered = new HashSet<EntityUid>(); // Aurora
 
         foreach (var (palletUid, _) in GetContrabandPallets(gridUid))
         {
@@ -139,7 +142,7 @@ public sealed partial class ContrabandTurnInSystem : SharedContrabandTurnInSyste
                 // - anything already being sold
                 // - anything anchored (e.g. light fixtures)
                 // - anything blacklisted (e.g. players).
-                if (toSell.Contains(ent) ||
+                if (unregistered.Contains(ent) ||
                     _xformQuery.TryGetComponent(ent, out var xform) &&
                     (xform.Anchored || !CanSell(ent, xform)))
                 {
@@ -149,7 +152,7 @@ public sealed partial class ContrabandTurnInSystem : SharedContrabandTurnInSyste
                 if (_blacklistQuery.HasComponent(ent))
                     continue;
 
-                if (TryComp<ContrabandComponent>(ent, out var comp))
+                if (TryComp<ContrabandComponent>(ent, out var comp) && !toSell.Contains(ent))
                 {
                     if (!comp.TurnInValues.ContainsKey(console.RewardType))
                         continue;
@@ -159,6 +162,13 @@ public sealed partial class ContrabandTurnInSystem : SharedContrabandTurnInSyste
                     if (value <= 0)
                         continue;
                     amount += value;
+                }
+
+                // Aurora
+                if (MetaData(ent).EntityPrototype is {} proto
+                    && console.RegisterRecipies.ContainsKey(proto))
+                {
+                    unregistered.Add(ent);
                 }
             }
         }
@@ -208,5 +218,31 @@ public sealed partial class ContrabandTurnInSystem : SharedContrabandTurnInSyste
         if (!_hands.TryPickupAnyHand(args.Actor, stackUid))
             _transform.SetLocalRotation(stackUid, Angle.Zero); // Orient these to grid north instead of map north
         UpdatePalletConsoleInterface(uid, component);
+    }
+
+    // Aurora
+    private void OnPalletRegister(Entity<ContrabandPalletConsoleComponent> ent, ref ContrabandPalletRegisterMessage args)
+    {
+        if (Transform(ent).GridUid is not EntityUid gridUid)
+        {
+            _uiSystem.SetUiState(ent.Owner, ContrabandPalletConsoleUiKey.Contraband,
+                new ContrabandPalletConsoleInterfaceState(0, 0, 0, false));
+            return;
+        }
+        GetPalletGoods(gridUid, ent.Comp, out _, out _ , out var toRegister);
+
+        foreach (var unregistered in toRegister)
+        {
+            if (MetaData(unregistered).EntityPrototype is not {} meta)
+                continue;
+            ent.Comp.RegisterRecipies.TryGetValue(meta, out var registered);
+            var registeredEnt = SpawnAtPosition(registered, Transform(unregistered).Coordinates);
+            _transform.SetLocalRotation(registeredEnt, Angle.Zero);
+            Del(unregistered);
+
+            Log.Debug($"{ent.Comp.Faction} registered {unregistered} into {registered}");
+
+            UpdatePalletConsoleInterface(ent, ent.Comp);
+        }
     }
 }

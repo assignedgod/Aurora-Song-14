@@ -6,7 +6,4 @@ namespace Content.Shared._AS.Contraband.Events;
 /// Raised on a client request pallet sale
 /// </summary>
 [Serializable, NetSerializable]
-public sealed class ContrabandPalletRegisterMessage : BoundUserInterfaceMessage
-{
-
-}
+public sealed class ContrabandPalletRegisterMessage : BoundUserInterfaceMessage;
