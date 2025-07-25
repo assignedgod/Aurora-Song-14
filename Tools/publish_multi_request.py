@@ -15,8 +15,8 @@ RELEASE_DIR = "release"
 # CONFIGURATION PARAMETERS
 # Forks should change these to publish to their own infrastructure.
 #
-ROBUST_CDN_URL = "http://147.124.195.142:27690"
-FORK_ID = "AuroraSong14"
+ROBUST_CDN_URL = "https://aurorasong.net/cdn/"
+FORK_ID = "aurorasong"
 
 def main():
     parser = argparse.ArgumentParser()
