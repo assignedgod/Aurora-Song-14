@@ -129,7 +129,6 @@ public sealed class ClientClothingSystem : ClothingSystem
                 i++;
             }
 
-            if (inventory.SpeciesId != null && item.Sprite != null
             if (inventory.SpeciesId != null && item.RsiPath != null
                 && _cache.TryGetResource<RSIResource>(SpriteSpecifierSerializer.TextureRoot / item.RsiPath, out var rsi)
                 && rsi.RSI.TryGetState($"{layer.State}-{inventory.SpeciesId}", out _))
