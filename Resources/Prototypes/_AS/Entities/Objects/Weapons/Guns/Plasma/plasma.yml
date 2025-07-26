@@ -29,9 +29,6 @@
   description: NT's R&D produced this 'top of the line' infantry solution for effectively putting down targets
   suffix: PlasGun
   components:
-  - type: MagazineVisuals
-    magState: mag
-    steps: 1
   - type: Gun
     fireRate: 2
   - type: PlasmaGun
