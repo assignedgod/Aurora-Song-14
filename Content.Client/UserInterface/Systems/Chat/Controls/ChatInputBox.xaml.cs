@@ -1,4 +1,16 @@
-﻿using Content.Client.Stylesheets;
+// SPDX-FileCopyrightText: 2022 DrSmugleaf
+// SPDX-FileCopyrightText: 2022 Jezithyr
+// SPDX-FileCopyrightText: 2022 exincore
+// SPDX-FileCopyrightText: 2023 LordCarve
+// SPDX-FileCopyrightText: 2024 FoxxoTrystan
+// SPDX-FileCopyrightText: 2024 Sk1tch
+// SPDX-FileCopyrightText: 2025 Cam
+// SPDX-FileCopyrightText: 2025 Cami
+// SPDX-FileCopyrightText: 2025 sleepyyapril
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+using Content.Client.Stylesheets;
 using Content.Client.UserInterface.Systems.Chat.Controls.Denu;
 using Content.Shared.Chat;
 using Content.Shared.Input;
@@ -52,6 +64,7 @@ public class ChatInputBox : PanelContainer
             Name = "DenuButton",
             StyleClasses = {"chatFilterOptionButton"}
         };
+        
         Container.AddChild(DenuButton);
         AddStyleClass(StyleNano.StyleClassChatSubPanel);
         ChannelSelector.OnChannelSelect += UpdateActiveChannel;
