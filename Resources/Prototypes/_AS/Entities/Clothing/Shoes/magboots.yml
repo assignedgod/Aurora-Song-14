@@ -24,3 +24,4 @@
   - type: Contraband
     severity: Class2
     turnInValues:
+    allowedDepartments: [ Security, Command ]

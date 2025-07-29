@@ -36,6 +36,7 @@
   - type: Contraband
     severity: Class2
     turnInValues:
+    allowedDepartments: [ Security, Command ]
 
 - type: entity
   parent: ClothingOuterHardsuitSyndieElite
@@ -57,3 +58,4 @@
   - type: Contraband
     severity: Class2
     turnInValues:
+    allowedDepartments: [ Security, Command ]
