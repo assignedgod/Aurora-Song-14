@@ -1,3 +1,4 @@
+using System.Linq;
 using Content.Server._NF.Contraband.Components;
 using Content.Server.Cargo.Components;
 using Content.Server.Cargo.Systems;
@@ -66,8 +67,10 @@ public sealed partial class ContrabandTurnInSystem : SharedContrabandTurnInSyste
 
         GetPalletGoods(gridUid, comp, out var toSell, out var amount, out var unregistered);
 
+        var totalCount = toSell;
+        toSell.UnionWith(unregistered);
         _uiSystem.SetUiState(uid, ContrabandPalletConsoleUiKey.Contraband,
-            new ContrabandPalletConsoleInterfaceState((int) amount, toSell.Count, unregistered.Count, true));
+            new ContrabandPalletConsoleInterfaceState((int) amount, totalCount.Count, unregistered.Count, true));
     }
 
     private void OnPalletUIOpen(EntityUid uid, ContrabandPalletConsoleComponent component, BoundUIOpenedEvent args)
@@ -145,8 +148,7 @@ public sealed partial class ContrabandTurnInSystem : SharedContrabandTurnInSyste
                 // - anything already being sold
                 // - anything anchored (e.g. light fixtures)
                 // - anything blacklisted (e.g. players).
-                if (unregistered.Contains(ent) ||
-                    _xformQuery.TryGetComponent(ent, out var xform) &&
+                if (_xformQuery.TryGetComponent(ent, out var xform) &&
                     (xform.Anchored || !CanSell(ent, xform)))
                 {
                     continue;
@@ -155,15 +157,13 @@ public sealed partial class ContrabandTurnInSystem : SharedContrabandTurnInSyste
                 if (_blacklistQuery.HasComponent(ent))
                     continue;
 
-                if (TryComp<ContrabandComponent>(ent, out var comp) && !toSell.Contains(ent))
+                if (TryComp<ContrabandComponent>(ent, out var comp)
+                    && !toSell.Contains(ent)
+                    && comp.TurnInValues is { } turnInValues
+                    && turnInValues.ContainsKey(console.RewardType))
                 {
-                    if (!comp.TurnInValues.ContainsKey(console.RewardType))
-                        continue;
-
                     toSell.Add(ent);
                     var value = comp.TurnInValues[console.RewardType];
-                    if (value <= 0)
-                        continue;
                     amount += value;
                 }
 
@@ -223,7 +223,7 @@ public sealed partial class ContrabandTurnInSystem : SharedContrabandTurnInSyste
         UpdatePalletConsoleInterface(uid, component);
     }
 
-    // Aurora
+    // Aurora - Contra registering
     private void OnPalletRegister(Entity<ContrabandPalletConsoleComponent> ent, ref ContrabandPalletRegisterMessage args)
     {
         if (Transform(ent).GridUid is not EntityUid gridUid)
@@ -234,35 +234,44 @@ public sealed partial class ContrabandTurnInSystem : SharedContrabandTurnInSyste
         }
         GetPalletGoods(gridUid, ent.Comp, out _, out _ , out var toRegister);
 
-        foreach (var unregisteredEnt in toRegister)
+        // Award SCUs
+        var stackPrototype = _protoMan.Index<StackPrototype>(ent.Comp.RewardType);
+        // 1 SCU per registered item
+        var stackUid = _stack.Spawn(toRegister.Count, stackPrototype, args.Actor.ToCoordinates());
+        if (!_hands.TryPickupAnyHand(args.Actor, stackUid))
+            _transform.SetLocalRotation(stackUid, Angle.Zero); // Orient these to grid north instead of map north
+
+        //Exchange each item for their registered counterpart
+        foreach (var oldEnt in toRegister)
         {
-            if (MetaData(unregisteredEnt).EntityPrototype is not {} unregisteredProto)
+            if (MetaData(oldEnt).EntityPrototype is not {} oldProto)
                 continue;
-            ent.Comp.RegisterRecipies.TryGetValue(unregisteredProto, out var registeredProto);
-            var registeredEnt = SpawnAtPosition(registeredProto, Transform(unregisteredEnt).Coordinates);
-            _transform.SetLocalRotation(registeredEnt, Angle.Zero);
+            ent.Comp.RegisterRecipies.TryGetValue(oldProto, out var newProto);
+            var newEnt = SpawnAtPosition(newProto, Transform(oldEnt).Coordinates);
+            _transform.SetLocalRotation(newEnt, Angle.Zero);
 
             // Transfer items into new ent
-            if (TryComp<ContainerManagerComponent>(unregisteredEnt, out var unregisteredManager)
-                && TryComp<ContainerManagerComponent>(registeredEnt, out var registeredManager))
+            if (TryComp<ContainerManagerComponent>(oldEnt, out var oldManager)
+                && TryComp<ContainerManagerComponent>(newEnt, out var newManager))
             {
-                foreach (var registeredContainer in registeredManager.Containers)
+                foreach (var newContainer in newManager.Containers)
                 {
-                    if (!unregisteredManager.Containers.TryGetValue(registeredContainer.Key, out var unregisteredContainer))
+                    if (!oldManager.Containers.TryGetValue(newContainer.Key, out var oldContainer))
                         continue;
-                    _container.CleanContainer(registeredContainer.Value);
-                    foreach (var item in unregisteredContainer.ContainedEntities)
+                    _container.CleanContainer(newContainer.Value);
+                    var entsToTransfer = oldContainer.ContainedEntities;
+                    _container.EmptyContainer(oldContainer);
+                    foreach (var item in entsToTransfer)
                     {
-                        _container.Insert(item, registeredContainer.Value);
+                        _container.Insert(item, newContainer.Value);
                     }
                 }
             }
 
-            Del(unregisteredEnt);
-
-            Log.Debug($"{ent.Comp.Faction} registered {unregisteredEnt} into {registeredEnt}");
-
-            UpdatePalletConsoleInterface(ent, ent.Comp);
+            Del(oldEnt);
+            Log.Debug($"{ent.Comp.Faction} registered {oldEnt} into {newEnt}");
         }
+
+        UpdatePalletConsoleInterface(ent, ent.Comp);
     }
 }

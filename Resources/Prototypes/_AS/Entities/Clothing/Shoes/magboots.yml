@@ -9,3 +9,18 @@
     sprintModifier: 1.10
   - type: StaticPrice
     price: 10000
+
+- type: entity
+  parent: ClothingShoesBootsMagSyndie
+  id: ClothingShoesBootsMagSyndieRegistered
+  name: Licensed Surplus Magboots
+  description: Reverse-engineered magnetic boots that have a heavy magnetic pull and integrated thrusters. It can hold 0.75 L of gas.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Shoes/Boots/magboots-syndicate-registered.rsi
+    state: icon
+  - type: Clothing
+    sprite: _AS/Clothing/Shoes/Boots/magboots-syndicate-registered.rsi
+  - type: Contraband
+    severity: Class2
+    turnInValues:

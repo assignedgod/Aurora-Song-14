@@ -340,7 +340,7 @@ uplink-spaceblade-syndicate-desc = Made from real metal!
 uplink-emag-pass-name = Disposable Emag
 uplink-emag-pass-desc = A card used to hack devices. Usable three times.
 
-uplink-revolver-ritland-name = Ritland-45
+uplink-revolver-ritland-name = Python
 uplink-revolver-ritland-desc = Usually reliable, heavy revolver. Do you feel lucky, punk?
 
 uplink-pistol-cobra45-desc = A rugged, robust operator handgun with inbuilt silencer. Uses .45 pistol ammo.
