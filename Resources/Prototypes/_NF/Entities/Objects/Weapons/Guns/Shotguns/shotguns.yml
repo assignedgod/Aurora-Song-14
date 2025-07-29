@@ -212,7 +212,7 @@
 
 # Suplus, Aurora
 - type: entity
-  parent: [ BaseC1Contraband,  NFBaseWeaponShotgunChamber12g, NFBaseWeaponFrameShotgunWieldable ]
+  parent: [ BaseC2Contraband,  NFBaseWeaponShotgunChamber12g, NFBaseWeaponFrameShotgunWieldable ]
   id: ASWeaponShotgunSurpFalchion
   name: Falchion
   description: |-
