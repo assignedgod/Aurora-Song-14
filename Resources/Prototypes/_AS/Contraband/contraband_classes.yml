@@ -2,6 +2,7 @@
 - type: contrabandSeverity
   id: Class2Unregistered
   examineText: contraband-examine-text-Class2Unregistered
+  showDepartmentsAndJobs: false
 
 # Should not be redeemed for SCUs
 - type: entity
