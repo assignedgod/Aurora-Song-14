@@ -46,22 +46,22 @@
 #    sprite: Floof/Objects/Consumable/Drinks/doublecreamblaster.rsi
 #    state: icon
 
-- type: entity
-  parent: DrinkGlass
-  id: DrinkEmeraldSwingerGlass
-  suffix: emerald swinger
-  components:
-  - type: SolutionContainerManager
-    solutions:
-      drink:
-        maxVol: 30
-        reagents:
-        - ReagentId: EmeraldSwinger
-          Quantity: 30
-  - type: Icon
-    sprite: Floof/Objects/Consumable/Drinks/emeraldswinger.rsi
-    state: icon
-
+#- type: entity
+#  parent: DrinkGlass
+#  id: DrinkEmeraldSwingerGlass
+#  suffix: emerald swinger
+#  components:
+#  - type: SolutionContainerManager
+#    solutions:
+#      drink:
+#        maxVol: 30
+#        reagents:
+#        - ReagentId: EmeraldSwinger
+#          Quantity: 30
+#  - type: Icon
+#    sprite: Floof/Objects/Consumable/Drinks/emeraldswinger.rsi
+#    state: icon
+#
 - type: entity
   parent: DrinkGlass
   id: DrinkMarieJulepGlass
