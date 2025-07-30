@@ -16,20 +16,21 @@
     sprite: Floof/Objects/Consumable/Drinks/anisettebottle.rsi
   - type: Sealable
 
-- type: entity
-  parent: [DrinkBottleVisualsOpenable, DrinkBottleGlassBaseFull]
-  id: DrinkCumBottleFull
-  name: bottle'o'cum
-  description: Straight nard nectar. Ethically sourced.
-  components:
-  - type: SolutionContainerManager
-    solutions:
-      drink:
-        reagents:
-        - ReagentId: Cum
-          Quantity: 100
-  - type: Label
-    currentLabel: bottle'o'cum
-  - type: Sprite
-    sprite: Floof/Objects/Consumable/Drinks/bottleocum.rsi
-  - type: Sealable
+#- type: entity
+#  parent: [DrinkBottleVisualsOpenable, DrinkBottleGlassBaseFull]
+#  id: DrinkCumBottleFull
+#  name: bottle'o'cum
+#  description: Straight nard nectar. Ethically sourced.
+#  components:
+#  - type: SolutionContainerManager
+#    solutions:
+#      drink:
+#        reagents:
+#        - ReagentId: Cum
+#          Quantity: 100
+#  - type: Label
+#    currentLabel: bottle'o'cum
+#  - type: Sprite
+#    sprite: Floof/Objects/Consumable/Drinks/bottleocum.rsi
+#  - type: Sealable
+#

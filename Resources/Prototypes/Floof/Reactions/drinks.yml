@@ -63,19 +63,19 @@
   products:
     MarieJulep: 4
 
-- type: reaction
-  id: OrgasmOnTheBeach
-  reactants:
-    Cum:
-      amount: 1
-    JuiceOrange:
-      amount: 2
-    JuiceWatermelon:
-      amount: 2
-    Vodka:
-      amount: 1
-  products:
-    OrgasmOnTheBeach: 5
+#- type: reaction
+#  id: OrgasmOnTheBeach
+#  reactants:
+#    Cum:
+#      amount: 1
+#    JuiceOrange:
+#      amount: 2
+#    JuiceWatermelon:
+#      amount: 2
+#    Vodka:
+#      amount: 1
+#  products:
+#    OrgasmOnTheBeach: 5
 
 - type: reaction
   id: PomPassion
