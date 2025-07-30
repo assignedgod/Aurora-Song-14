@@ -53,7 +53,7 @@
 - type: marking
   id: ChimeraArmLeftMoth
   bodyPart: LArm
-  markingCategory: LeftArm
+  markingCategory: Arms
   speciesRestriction: [Moth]
   followSkinColor: false
   coloring:
@@ -68,7 +68,7 @@
 - type: marking
   id: ProstheticArmLeftMoth
   bodyPart: LArm
-  markingCategory: LeftArm
+  markingCategory: Arms
   speciesRestriction: [Moth]
   followSkinColor: false
   coloring:
@@ -83,7 +83,7 @@
 - type: marking
   id: TwistingArmLeftMoth
   bodyPart: LArm
-  markingCategory: LeftArm
+  markingCategory: Arms
   speciesRestriction: [Moth]
   followSkinColor: false
   sprites:
@@ -93,7 +93,7 @@
 - type: marking
   id: ProstheticArmRightMoth
   bodyPart: RArm
-  markingCategory: RightArm
+  markingCategory: Arms
   speciesRestriction: [Moth]
   followSkinColor: false
   coloring:
@@ -108,7 +108,7 @@
 - type: marking
   id: TwistingArmRightMoth
   bodyPart: RArm
-  markingCategory: RightArm
+  markingCategory: Arms
   speciesRestriction: [Moth]
   followSkinColor: false
   sprites:
@@ -229,7 +229,7 @@
 - type: marking
   id: FootChimeraLeftMoth
   bodyPart: LFoot
-  markingCategory: LeftFoot
+  markingCategory: Legs
   speciesRestriction: [Moth]
   followSkinColor: false
   coloring:
@@ -244,7 +244,7 @@
 - type: marking
   id: FootProstheticLeftMoth
   bodyPart: LFoot
-  markingCategory: LeftFoot
+  markingCategory: Legs
   speciesRestriction: [Moth]
   followSkinColor: false
   coloring:
@@ -259,7 +259,7 @@
 - type: marking
   id: FootProstheticRightMoth
   bodyPart: RFoot
-  markingCategory: RightFoot
+  markingCategory: Legs
   speciesRestriction: [Moth]
   followSkinColor: false
   coloring:
@@ -274,7 +274,7 @@
 - type: marking
   id: HandChimeraLeftMoth
   bodyPart: LHand
-  markingCategory: LeftHand
+  markingCategory: Arms
   speciesRestriction: [Moth]
   followSkinColor: false
   coloring:
@@ -289,7 +289,7 @@
 - type: marking
   id: HandProstheticLeftMoth
   bodyPart: LHand
-  markingCategory: LeftHand
+  markingCategory: Arms
   speciesRestriction: [Moth]
   followSkinColor: false
   coloring:
@@ -304,7 +304,7 @@
 - type: marking
   id: HandTwistingLeftMoth
   bodyPart: LHand
-  markingCategory: LeftHand
+  markingCategory: Arms
   speciesRestriction: [Moth]
   followSkinColor: false
   sprites:
@@ -314,7 +314,7 @@
 - type: marking
   id: HandProstheticRightMoth
   bodyPart: RHand
-  markingCategory: RightHand
+  markingCategory: Arms
   speciesRestriction: [Moth]
   followSkinColor: false
   coloring:
@@ -329,7 +329,7 @@
 - type: marking
   id: HandTwistingRightMoth
   bodyPart: RHand
-  markingCategory: RightHand
+  markingCategory: Arms
   speciesRestriction: [Moth]
   followSkinColor: false
   sprites:
@@ -384,7 +384,7 @@
 - type: marking
   id: LegChimeraLeftMoth
   bodyPart: LLeg
-  markingCategory: LeftLeg
+  markingCategory: Legs
   speciesRestriction: [Moth]
   followSkinColor: false
   coloring:
@@ -399,7 +399,7 @@
 - type: marking
   id: LegProstheticLeftMoth
   bodyPart: LLeg
-  markingCategory: LeftLeg
+  markingCategory: Legs
   speciesRestriction: [Moth]
   followSkinColor: false
   coloring:
@@ -414,7 +414,7 @@
 - type: marking
   id: LegTwistingLeftMoth
   bodyPart: LLeg
-  markingCategory: LeftLeg
+  markingCategory: Legs
   speciesRestriction: [Moth]
   followSkinColor: false
   sprites:
@@ -424,7 +424,7 @@
 - type: marking
   id: LegProstheticRightMoth
   bodyPart: RLeg
-  markingCategory: LeftLeg
+  markingCategory: Legs
   speciesRestriction: [Moth]
   followSkinColor: false
   coloring:
@@ -439,7 +439,7 @@
 - type: marking
   id: LegTwistingRightMoth
   bodyPart: RLeg
-  markingCategory: RightLeg
+  markingCategory: Legs
   speciesRestriction: [Moth]
   followSkinColor: false
   sprites:

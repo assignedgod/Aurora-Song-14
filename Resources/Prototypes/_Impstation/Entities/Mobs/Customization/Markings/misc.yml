@@ -327,7 +327,7 @@
 - type: marking
   id: DwarfArmHair
   bodyPart: LArm
-  markingCategory: LeftArm
+  markingCategory: Arms
   speciesRestriction: [ Dwarf ]
   sprites:
   - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
@@ -336,7 +336,7 @@
 - type: marking
   id: DwarfLegHair
   bodyPart: LLeg
-  markingCategory: LeftLeg
+  markingCategory: Legs
   speciesRestriction: [ Dwarf ]
   sprites:
   - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
@@ -773,7 +773,7 @@
 - type: marking
   id: VoxFootGradientLFoot
   bodyPart: LFoot
-  markingCategory: LeftFoot
+  markingCategory: Legs
   speciesRestriction: [ Vox ]
   forcedColoring: false
   followSkinColor: false
@@ -784,7 +784,7 @@
 - type: marking
   id: VoxFootGradientRFoot
   bodyPart: RFoot
-  markingCategory: RightFoot
+  markingCategory: Legs
   speciesRestriction: [ Vox ]
   forcedColoring: false
   followSkinColor: false
@@ -795,7 +795,7 @@
 - type: marking
   id: VoxLegGradientLLeg
   bodyPart: LLeg
-  markingCategory: LeftLeg
+  markingCategory: Legs
   speciesRestriction: [ Vox ]
   forcedColoring: false
   followSkinColor: false
@@ -806,7 +806,7 @@
 - type: marking
   id: VoxLegGradientRLeg
   bodyPart: RFoot
-  markingCategory: RightLeg
+  markingCategory: Legs
   speciesRestriction: [ Vox ]
   forcedColoring: false
   followSkinColor: false
@@ -931,7 +931,7 @@
 - type: marking
   id: VoxArmsStripesLHand
   bodyPart: LArm
-  markingCategory: LeftArm
+  markingCategory: Arms
   speciesRestriction: [ Vox ]
   forcedColoring: false
   followSkinColor: false
@@ -942,7 +942,7 @@
 - type: marking
   id: VoxArmsStripesRHand
   bodyPart: RArm
-  markingCategory: RightArm
+  markingCategory: Arms
   speciesRestriction: [ Vox ]
   forcedColoring: false
   followSkinColor: false
@@ -953,7 +953,7 @@
 - type: marking
   id: VoxLegsStripesLLeg
   bodyPart: LLeg
-  markingCategory: LeftLeg
+  markingCategory: Legs
   speciesRestriction: [ Vox ]
   forcedColoring: false
   followSkinColor: false
@@ -964,7 +964,7 @@
 - type: marking
   id: VoxLegsStripesRLeg
   bodyPart: RFoot
-  markingCategory: RightLeg
+  markingCategory: Legs
   speciesRestriction: [ Vox ]
   forcedColoring: false
   followSkinColor: false
@@ -1094,7 +1094,7 @@
 - type: marking
   id: VitiligoArmR
   bodyPart: RArm
-  markingCategory: RightArm
+  markingCategory: Arms
   speciesRestriction: [ Human, Dwarf, Oni, Goblin, Felinid] # Frontier: add  Oni, Felinid
   forcedColoring: true
   coloring:
@@ -1109,7 +1109,7 @@
 - type: marking
   id: VitiligoArmL
   bodyPart: LArm
-  markingCategory: LeftArm
+  markingCategory: Arms
   speciesRestriction: [ Human, Dwarf, Oni, Goblin, Felinid] # Frontier: add  Oni, Felinid
   forcedColoring: true
   coloring:
@@ -1154,7 +1154,7 @@
 - type: marking
   id: VitiligoLegR
   bodyPart: RFoot
-  markingCategory: RightLeg
+  markingCategory: Legs
   speciesRestriction: [ Human, Dwarf, Oni, Goblin, Felinid] # Frontier: add  Oni, Felinid
   forcedColoring: true
   coloring:
@@ -1169,7 +1169,7 @@
 - type: marking
   id: VitiligoLegL
   bodyPart: LLeg
-  markingCategory: LeftLeg
+  markingCategory: Legs
   speciesRestriction: [ Human, Dwarf, Oni, Goblin, Felinid] # Frontier: add  Oni, Felinid
   forcedColoring: true
   coloring:
