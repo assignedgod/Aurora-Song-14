@@ -1,0 +1,24 @@
+- type: entity
+  parent: Clothing
+  id: LicenceContraband
+  name: contraband handling licence
+  description: This license grants the named holder the legal allowance for the usage of C2-class contraband, and the transportation of C3-class contraband for turn-in to the authorities.
+  components:
+  - type: Sprite
+    sprite: _AS/Objects/Specific/Licence/contraband_handling_licence.rsi
+    state: icon
+  - type: Clothing
+    slots:
+    - idcard
+    sprite: _AS/Objects/Specific/Licence/contraband_handling_licence.rsi
+    state: icon
+  - type: Item
+    size: Small
+    storedRotation: -90
+  - type: Tag
+    tags:
+    - Licence
+  - type: CargoSellBlacklist
+  - type: ShipyardSellCondition
+    preserveOnSale: true
+  - type: DeletionCensusExempt

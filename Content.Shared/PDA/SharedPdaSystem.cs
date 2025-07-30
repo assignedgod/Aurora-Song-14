@@ -30,6 +30,7 @@ namespace Content.Shared.PDA
             ItemSlotsSystem.AddItemSlot(uid, PdaComponent.PdaPenSlotId, pda.PenSlot);
             ItemSlotsSystem.AddItemSlot(uid, PdaComponent.PdaPaiSlotId, pda.PaiSlot);
             ItemSlotsSystem.AddItemSlot(uid, PdaComponent.PdaBookSlotId, pda.BookSlot);
+            ItemSlotsSystem.AddItemSlot(uid, PdaComponent.PdaLicenceSlotId, pda.LicenceSlot); // Aurora
 
             UpdatePdaAppearance(uid, pda);
         }
