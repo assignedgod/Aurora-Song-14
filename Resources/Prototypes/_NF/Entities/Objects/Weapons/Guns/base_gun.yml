@@ -126,8 +126,8 @@
     - Back
     - suitStorage
   - type: SpeedModifiedOnWield
-    walkModifier: 0.3
-    sprintModifier: 0.3
+    walkModifier: 0.5
+    sprintModifier: 0.5
 
 # Sniper Rifles / LMGs
 - type: entity

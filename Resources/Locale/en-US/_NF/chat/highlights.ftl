@@ -6,14 +6,14 @@ highlights-mail-carrier = Mail Carrier
 highlights-security-guard = Security Guard, Station Guard, Guard
 highlights-director-of-care = "DOC", Director of Care
 
-highlights-cadet = Cadet, "NFSD"
-highlights-deputy = Deputy, "NFSD"
-highlights-detective = Detective, "Det", "NFSD"
-highlights-brigmedic = Brigmedic, Brigmed, "NFSD"
-highlights-sergeant = Sergeant, Sarge, "NFSD"
-highlights-bailiff = Bailiff, "NFSD"
-highlights-public-affairs-liaison = Liaison, "PAL", "NFSD"
-highlights-sheriff = Sheriff, "NFSD"
+highlights-cadet = Cadet, "SLE", Rookie
+highlights-deputy = Deputy, "SLE", Officer
+highlights-detective = Detective, "Det", "SLE"
+highlights-brigmedic = Brigmedic, Brigmed, "SLE", Corpsman, CM
+highlights-sergeant = Sergeant, Sarge, "SLE"
+highlights-bailiff = "SLE", Lieutenant
+highlights-public-affairs-liaison = Liaison, "PAL", "SLE"
+highlights-sheriff = Sheriff, "SLE", Commissioner
 
 highlights-prisoner = Prisoner
 highlights-pirate = Pirate

@@ -61,7 +61,7 @@
 - type: entity
   parent: IDCardStandard
   id: CadetIDCard
-  name: NFSD cadet ID card
+  name: Rookie ID card
   components:
   - type: PresetIdCard
     job: Cadet
@@ -78,7 +78,7 @@
 - type: entity
   parent: CadetIDCard
   id: DeputyIDCard
-  name: NFSD deputy ID card
+  name: Officer ID card
   components:
   - type: PresetIdCard
     job: Deputy
@@ -91,7 +91,7 @@
 - type: entity
   parent: CadetIDCard
   id: BrigmedicNFIDCard
-  name: NFSD brigmedic ID card
+  name: Corpsman ID card
   components:
   - type: PresetIdCard
     job: Brigmedic
@@ -117,7 +117,7 @@
 - type: entity
   parent: CadetIDCard
   id: BailiffIDCard
-  name: NFSD bailiff ID card
+  name: Lieutenant ID card
   components:
   - type: PresetIdCard
     job: Bailiff
@@ -130,7 +130,7 @@
 - type: entity
   parent: [CadetIDCard, BaseCommandContraband]
   id: ShriffIDCard
-  name: NFSD sheriff ID card
+  name: Commissioner ID card
   components:
   - type: PresetIdCard
     job: Sheriff
@@ -284,7 +284,39 @@
   - type: Clothing
     sprite: _NF/Objects/Misc/id_cards.rsi
   - type: Item
-    heldPrefix: medic #temporary to OBSERVE
+    heldPrefix: silver
+
+- type: entity
+  parent: IDCardStandard
+  id: PlantTechnicianIDCard
+  name: plant technician ID card
+  components:
+  - type: PresetIdCard
+    job: PlantTechnician
+  - type: Sprite
+    sprite: _NF/Objects/Misc/id_cards.rsi
+    layers:
+    - state: default
+    - state: idplanttechnician
+  - type: Clothing
+    sprite: _NF/Objects/Misc/id_cards.rsi
+
+- type: entity
+  parent: [IDCardStandard, BaseCommandContraband]
+  id: PlantManagerIDCard
+  name: plant manager ID card
+  components:
+  - type: PresetIdCard
+    job: PlantManager
+  - type: Sprite
+    sprite: _NF/Objects/Misc/id_cards.rsi
+    layers:
+    - state: silver
+    - state: idplantmanager
+  - type: Clothing
+    sprite: _NF/Objects/Misc/id_cards.rsi
+  - type: Item
+    heldPrefix: silver
 
 # Cats
 - type: entity

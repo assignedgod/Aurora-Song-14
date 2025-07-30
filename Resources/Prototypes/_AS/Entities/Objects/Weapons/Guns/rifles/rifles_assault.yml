@@ -1,0 +1,64 @@
+
+- type: entity
+  id: ASWeaponRifleAK
+  parent: [ NFBaseWeaponRifleAssaultChamber30, NFBaseWeaponFrameRifleAssaultCybersun ]
+  name: AKMS
+  description: |-
+    A somewhat battered combat rifle of a design originating from old Earth. Favored by criminals, militias, and terrorists due to its famed reliability and easy-to-manufacture design. Feeds from .30 rifle magazines.
+  components:
+  - type: Clothing
+    sprite: Objects/Weapons/Guns/Rifles/ak.rsi
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Rifles/ak.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Gun
+    fireRate: 6
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+
+# Surplus
+- type: entity
+  name: Lecter
+  description: |-
+    A reliable military-grade assault rifle. On the receiver is a label that says 'Certified Surplus.'
+  parent: [BaseC1Contraband, NFWeaponRifleAssaultLecter]
+  id: ASWeaponRifleSurpLecter
+  suffix: Surplus
+  components:
+  - type: Sprite
+    sprite: _NF/Objects/Weapons/Guns/Rifles/surplecter.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-0
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: _NF/Objects/Weapons/Guns/Rifles/surplecter.rsi
+
+# Admin
+
+- type: entity
+  name: Lecter
+  description: |-
+    A reliable military-grade assault rifle. Blacked-out finish. On the receiver is a blue spray-paint marking.
+  categories: [ HideSpawnMenu ] # Admin-only
+  parent: [BaseC1Contraband, NFWeaponRifleAssaultLecter]
+  id: ASWeaponRifleTFLecter
+  suffix: TF
+  components:
+  - type: Sprite
+    sprite: _AS/Objects/Weapons/Guns/Rifles/tflecter.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-0
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: _AS/Objects/Weapons/Guns/Rifles/tflecter.rsi

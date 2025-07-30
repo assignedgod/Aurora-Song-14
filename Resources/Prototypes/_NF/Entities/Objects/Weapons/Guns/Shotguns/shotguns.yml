@@ -1,7 +1,7 @@
 #region WizDen
 - type: entity
   id: NFWeaponShotgunBulldog
-  parent: [BaseC3SyndicateContraband, NFBaseWeaponShotgunChamber50Magazine, NFBaseWeaponFrameShotgunWieldable, NFBaseWeaponEncumbranceLMG]
+  parent: [BaseC3SyndicateContraband, NFBaseWeaponShotgunChamber12gMagazine, NFBaseWeaponFrameShotgunWieldable, NFBaseWeaponEncumbranceLMG, NFBaseWeaponFrameShotgunGorlex]
   name: Bulldog
   description: |-
     An automatic magazine-fed shotgun for close-quarters combat. Kicks like a mule on steroids.
@@ -10,6 +10,8 @@
     sprite: Objects/Weapons/Guns/Shotguns/bulldog.rsi
   - type: Clothing
     sprite: Objects/Weapons/Guns/Shotguns/bulldog.rsi
+  - type: Item
+    size: Large
   - type: Gun
     selectedMode: FullAuto
     availableModes:
@@ -19,7 +21,7 @@
 
 - type: entity
   id: NFWeaponShotgunDoubleBarreled
-  parent: [ NFBaseWeaponShotgunChamber50, NFBaseWeaponFrameShotgunWieldable ]
+  parent: [ NFBaseWeaponShotgunChamber12g, NFBaseWeaponFrameShotgunWieldable ]
   name: double-barreled shotgun
   description: |-
     An immortal classic. A civilian grade shotgun.
@@ -40,7 +42,7 @@
 
 - type: entity
   id: NFWeaponShotgunEnforcer
-  parent: [ NFBaseWeaponShotgunChamber50, NFBaseWeaponFrameShotgunNanotrasen ]
+  parent: [ NFBaseWeaponShotgunChamber12g, NFBaseWeaponFrameShotgunNanotrasen ]
   name: Enforcer
   description: |-
     A premium semi-automatic shotgun, featuring an upgraded tube capacity.
@@ -57,7 +59,7 @@
 
 - type: entity
   id: NFWeaponShotgunKammerer
-  parent: [ NFBaseWeaponShotgunChamber50, NFBaseWeaponFrameShotgunWieldable ]
+  parent: [ NFBaseWeaponShotgunChamber12g, NFBaseWeaponFrameShotgunWieldable ]
   name: Kammerer
   description: |-
     An old yet faithful design, and a favorite among irregular forces on many worlds.
@@ -78,7 +80,7 @@
 
 - type: entity
   id: NFWeaponShotgunSawn
-  parent: [ NFBaseWeaponShotgunChamber50, NFBaseWeaponFrameShotgun, NFBaseWeaponEncumbrancePistol ]
+  parent: [ NFBaseWeaponShotgunChamber12g, NFBaseWeaponFrameShotgun, NFBaseWeaponEncumbrancePistol ]
   name: sawn-off shotgun
   description: |-
     Groovy!
@@ -108,7 +110,7 @@
 
 - type: entity
   id: NFWeaponShotgunHandmade
-  parent: [ NFBaseWeaponShotgunChamber50, NFBaseWeaponFrameShotgun ]
+  parent: [ NFBaseWeaponShotgunChamber12g, NFBaseWeaponFrameShotgun ]
   name: handmade pistol
   description: |-
     Looks unreliable, but legal.
@@ -138,7 +140,7 @@
 
 - type: entity
   id: NFWeaponShotgunBlunderbuss
-  parent: [ BaseC3PirateContraband, NFBaseWeaponShotgunChamber50, NFBaseWeaponFrameShotgunWieldable ]
+  parent: [ BaseC3PirateContraband, NFBaseWeaponShotgunChamber12g, NFBaseWeaponFrameShotgunWieldable ]
   name: blunderbuss
   description: |-
     Deadly at close range, an illegal shotgun often found at the side of a pirate.
@@ -159,7 +161,7 @@
 
 - type: entity
   id: NFWeaponShotgunImprovised
-  parent: [ NFBaseWeaponShotgunChamber50, NFBaseWeaponFrameShotgunWieldable ]
+  parent: [ NFBaseWeaponShotgunChamber12g, NFBaseWeaponFrameShotgunWieldable ]
   name: improvised shotgun
   description: |-
     A shitty, but legal, hand-made shotgun. It can only hold one round in the chamber.
@@ -208,12 +210,17 @@
     proto: NFShellShotgunBeanbag
     capacity: 5
 
-# Suplus
+# Suplus, Aurora
 - type: entity
-  parent: [ BaseC1Contraband, NFWeaponShotgunKammerer]
-  id: WeaponShotgunSurpKammerer
+  parent: [ BaseC1Contraband,  NFBaseWeaponShotgunChamber12g, NFBaseWeaponFrameShotgunWieldable ]
+  id: ASWeaponShotgunSurpFalchion
+  name: Falchion
+  description: |-
+    The first home-grown custom weapon used by the colonial forces. A reliable weapon. It can survive rapid depressurization, being dropped in a plasma pool, a direct blast from a cannon, and still it will function just fine.
   suffix: Surplus
   components:
+  - type: Gun
+    fireRate: 1.8
   - type: Item
     size: Normal
     shape:
@@ -223,3 +230,7 @@
     sprite: _NF/Objects/Weapons/Guns/Shotguns/surppump.rsi
   - type: Clothing
     sprite: _NF/Objects/Weapons/Guns/Shotguns/surppump.rsi
+  - type: BallisticAmmoProvider
+    capacity: 6
+  - type: NFWeaponDetails
+    manufacturer: weapon-details-colonial-weapon-manufacturer

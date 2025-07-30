@@ -34,9 +34,9 @@ chat-manager-entity-me-wrap-message = [italic]{ PROPER($entity) ->
      [true] [Name]{CAPITALIZE($entityName)}[/Name] {$message}[/italic]
     }
 
-chat-manager-entity-subtle-wrap-message = [italic]{ PROPER($entity) ->
-    *[false] the {$entityName} subtly {$message}[/italic]
-     [true] [Name]{$entityName}[/Name] subtly {$message}[/italic]
+chat-manager-entity-subtle-wrap-message = [color=#909497][font size=11][italic]{ PROPER($entity) ->
+    *[false] the {$entityName} {$message}[/italic][/font][/color]
+     [true] [Name]{$entityName}[/Name] {$message}[/italic][/font][/color]
     }
 
 chat-manager-entity-looc-wrap-message = LOOC: [bold]{$entityName}:[/bold] {$message}
@@ -161,3 +161,9 @@ chat-speech-verb-name-electricity = Electricity
 chat-speech-verb-electricity-1 = crackles
 chat-speech-verb-electricity-2 = buzzes
 chat-speech-verb-electricity-3 = screeches
+
+chat-speech-verb-name-wawa = Wawa
+chat-speech-verb-wawa-1 = intones
+chat-speech-verb-wawa-2 = states
+chat-speech-verb-wawa-3 = declares
+chat-speech-verb-wawa-4 = ponders

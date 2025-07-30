@@ -16,7 +16,12 @@
 
 - type: entity
   id: ClothingBeltNfsdFilled
-  parent: [ClothingBeltNfsd, ClothingBeltSecurityFilled]
+  parent: ClothingBeltNfsd
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:NestedSelector
+        tableId: BeltSecurityEntityTable
 
 - type: entity
   id: ClothingBeltNfsdWebbingFilledBrigmedic
@@ -98,3 +103,19 @@
     containers:
       item:
       - CaptainSabreHilt
+
+- type: entity
+  id: ClothingBeltChiefEngineerFilledBasic
+  parent: ClothingBeltChiefEngineer
+  suffix: Filled, Basic
+  components:
+  - type: StorageFill
+    contents:
+    - id: CrowbarYellow
+    - id: Wrench
+    - id: Screwdriver
+    - id: Wirecutter
+    - id: Welder
+    - id: Multitool
+    - id: GasAnalyzer
+    - id: trayScanner

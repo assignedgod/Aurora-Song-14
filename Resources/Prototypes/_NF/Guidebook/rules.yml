@@ -6,6 +6,7 @@
   ruleEntry: true
   children:
     - FrontierRuleZeroTolerance
+    - AuroraERP # Aurora
     - FrontierRule1
     - FrontierRule2
     - FrontierRule3
@@ -24,6 +25,12 @@
   id: FrontierRuleZeroTolerance
   name: guide-entry-frontier-rule-zero-tolerance
   text: "/ServerInfo/_NF/Guidebook/Rules/Zero_Tolerance.xml"
+  ruleEntry: true
+
+- type: guideEntry
+  id: AuroraERP
+  name: guide-entry-AuroraERP
+  text: "/ServerInfo/_AS/Guidebook/ERP_Rules.xml"
   ruleEntry: true
 
 - type: guideEntry

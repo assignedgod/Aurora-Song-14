@@ -284,9 +284,9 @@
 - type: entity
   parent:
   - BaseExpeditionWeaponTier3Syndicate
-  - NFWeaponRifleAssaultM90GrenadeLauncher
+  - NFWeaponRifleAssaultM90
   categories: [ HideSpawnMenu ]
-  id: NFWeaponRifleAssaultM90GrenadeLauncherExpedition
+  id: NFWeaponRifleAssaultM90Expedition
 
 ## Snipers
 - type: entity

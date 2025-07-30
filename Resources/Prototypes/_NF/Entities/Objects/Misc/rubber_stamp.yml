@@ -26,7 +26,7 @@
     state: stamp-stc
 
 - type: entity
-  name: sheriff's rubber stamp
+  name: Commissioner's rubber stamp
   parent: [RubberStampBase, BaseCommandContraband]
   id: RubberStampSheriff
   categories: [ DoNotMap ]
@@ -95,7 +95,7 @@
     state: stamp-doc
 
 - type: entity
-  name: bailiff's rubber stamp
+  name: Lieutenant's rubber stamp
   parent: RubberStampBase
   id: RubberStampBailiff
   categories: [ DoNotMap ]
@@ -107,3 +107,17 @@
   - type: Sprite
     sprite: _NF/Objects/Misc/stamps.rsi
     state: stamp-bailiff
+
+- type: entity
+  name: plant manager's rubber stamp
+  parent: [RubberStampBase, BaseCommandContraband]
+  id: RubberStampPlantManager
+  categories: [ DoNotMap ]
+  components:
+  - type: Stamp
+    stampedName: stamp-component-stamped-name-plant-manager
+    stampedColor: "#d4760b"
+    stampState: "paper_stamp-nf-plant-manager"
+  - type: Sprite
+    sprite: _NF/Objects/Misc/stamps.rsi
+    state: stamp-plant-manager

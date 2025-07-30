@@ -114,7 +114,7 @@
   components:
   - type: Gun
     burstCooldown: 0.5
-    burstFireRate: 4.5
+    burstFireRate: 8.5
     shotsPerBurst: 5
     selectedMode: Burst
     availableModes:

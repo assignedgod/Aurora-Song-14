@@ -1,5 +1,5 @@
 #region WizDen
-- type: entity # TODO: switch to .25 rifle (caseless)
+- type: entity
   id: NFWeaponRifleAssaultSm
   parent: [ NFBaseWeaponRifleAssaultChamber30, NFBaseWeaponFrameRifleAssaultCybersun ]
   name: Soland-Moss # Renamed: real brand name
@@ -15,24 +15,27 @@
     steps: 4
     zeroVisible: true
 
-- type: entity # TODO: switch to .25 rifle (caseless)
-  id: NFWeaponRifleAssaultM90GrenadeLauncher
+- type: entity
+  id: NFWeaponRifleAssaultM90
   parent: [ NFBaseWeaponRifleAssaultChamber20, NFBaseWeaponFrameRifleAssaultCybersun ]
-  name: M-90gl
+  name: M-90
   description: |-
-    An older bullpup carbine model, with an attached underbarrel grenade launcher. An illegal firearm often used by Syndicate agents. Sadly, this ones grenade launcher is rusted shut.
+    An older bullpup carbine model, this illegal firearm is often used by Syndicate fireteams and security.
   components:
   - type: Clothing
-    sprite: Objects/Weapons/Guns/Rifles/carbine.rsi
+    sprite: _DV/Objects/Weapons/Guns/Rifles/carbinenogl.rsi
   - type: Sprite
-    sprite: Objects/Weapons/Guns/Rifles/carbine.rsi
+    sprite: _DV/Objects/Weapons/Guns/Rifles/carbinenogl.rsi
+  - type: Item
+    size: Large
+    sprite: _DV/Objects/Weapons/Guns/Rifles/carbinenogl.rsi
 
 - type: entity
   id: NFWeaponRifleAssaultLecter
   parent: [ BaseC2ContrabandUnredeemable, NFBaseWeaponRifleAssaultChamber20, NFBaseWeaponFrameRifleAssaultNanotrasen ]
   name: Lecter
   description: |-
-    A medium end military grade assault rifle. On the receiver is a label that says 'for authorized use only.'
+    A reliable military-grade assault rifle. On the receiver is a label that says 'for authorized use only.'
   components: &lecterComponents
   - type: Clothing
     sprite: _NF/Objects/Weapons/Guns/Rifles/lecter.rsi
@@ -150,19 +153,3 @@
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/ltrifle.ogg
 
-# Surplus
-- type: entity
-  name: Lecter
-  parent: [BaseC1Contraband, NFWeaponRifleAssaultLecter]
-  id: WeaponRifleSurpLecter
-  suffix: Surplus
-  components:
-  - type: Sprite
-    sprite: _NF/Objects/Weapons/Guns/Rifles/surplecter.rsi
-    layers:
-    - state: base
-      map: ["enum.GunVisualLayers.Base"]
-    - state: mag-0
-      map: ["enum.GunVisualLayers.Mag"]
-  - type: Clothing
-    sprite: _NF/Objects/Weapons/Guns/Rifles/surplecter.rsi
