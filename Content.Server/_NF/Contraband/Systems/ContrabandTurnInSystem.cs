@@ -256,11 +256,12 @@ public sealed partial class ContrabandTurnInSystem : SharedContrabandTurnInSyste
             {
                 foreach (var newContainer in newManager.Containers)
                 {
+                    if (newContainer.Key == "actions" || newContainer.Key == "toggleable-clothing")
+                        continue;
                     if (!oldManager.Containers.TryGetValue(newContainer.Key, out var oldContainer))
                         continue;
                     _container.CleanContainer(newContainer.Value);
                     var entsToTransfer = oldContainer.ContainedEntities;
-                    _container.EmptyContainer(oldContainer);
                     foreach (var item in entsToTransfer)
                     {
                         _container.Insert(item, newContainer.Value);
