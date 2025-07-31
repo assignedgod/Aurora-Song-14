@@ -1,52 +1,52 @@
-- type: ItemTask
+- type: task
   id: TestTask
   reward: 1000
   description: test-task-description
-  items:
+  itemEntries:
   - name: task-item-baseball-bat
     amount: 1
     whitelist:
       tags:
       - BaseballBat
 
-- type: ItemTask
+- type: task
   id: TestTask2
   reward: 1000
   description: test-task-description
-  items:
+  itemEntries:
   - name: task-item-baseball-bat
     amount: 2
     whitelist:
       tags:
       - BaseballBat
 
-- type: ItemTask
+- type: task
   id: TestTask3
   reward: 1000
   description: test-task-description
-  items:
+  itemEntries:
   - name: task-item-baseball-bat
     amount: 3
     whitelist:
       tags:
       - BaseballBat
 
-- type: ItemTask
+- type: task
   id: TestTask4
   reward: 1000
   description: test-task-description
-  items:
+  itemEntries:
   - name: task-item-baseball-bat
     amount: 4
     whitelist:
       tags:
       - BaseballBat
 
-- type: ItemTask
+- type: task
   id: TestTask5
   reward: 1000
   description: test-task-description
-  items:
+  itemEntries:
   - name: task-item-baseball-bat
     amount: 5
     whitelist:

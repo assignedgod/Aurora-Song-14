@@ -3,7 +3,9 @@ using Robust.Shared.Prototypes;
 using Robust.Shared.Serialization;
 using Robust.Shared.Utility;
 
-[Prototype, Serializable, NetSerializable]
+namespace Content.Shared._AS.TaskList.Prototypes;
+
+[Prototype("task"), Serializable, NetSerializable]
 public sealed partial class TaskPrototype : IPrototype
 {
 
@@ -20,10 +22,10 @@ public sealed partial class TaskPrototype : IPrototype
     public SpriteSpecifier? Sprite;
 
     [DataField(required: true)]
-    public List<TaskItemEntry> ItemEntries = new List<TaskItemEntry>();
+    public List<TaskItemEntry> ItemEntries = new();
 }
 
-[Serializable, NetSerializable]
+[DataDefinition, Serializable, NetSerializable]
 public readonly partial record struct TaskItemEntry()
 {
     [DataField]

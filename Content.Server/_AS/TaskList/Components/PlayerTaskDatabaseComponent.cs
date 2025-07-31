@@ -1,6 +1,6 @@
-using Microsoft.CodeAnalysis.CSharp.Syntax;
+using Content.Shared._AS.TaskList;
 
-namespace Content.Server.TaskList.Components;
+namespace Content.Server._AS.TaskList.Components;
 
 [RegisterComponent]
 public sealed partial class PlayerTaskDatabaseComponent : Component

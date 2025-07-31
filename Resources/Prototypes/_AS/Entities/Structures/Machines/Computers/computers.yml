@@ -1,0 +1,33 @@
+- type: entity
+  id: ComputerTaskConsole
+  parent: BaseComputerAiAccess
+  name: task console computer
+  description: Used to manage tasks.
+  components:
+  - type: Sprite
+    layers:
+    - map: ["computerLayerBody"]
+      state: computer
+    - map: ["computerLayerKeyboard"]
+      state: generic_keyboard
+    - map: ["computerLayerScreen"]
+      state: bounty
+    - map: ["computerLayerKeys"]
+      state: tech_key
+    - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
+      state: generic_panel_open
+  - type: TaskConsole
+  - type: ActivatableUI
+    key: enum.TaskConsoleUiKey.Task
+  - type: UserInterface
+    interfaces:
+      enum.TaskConsoleUiKey.Task:
+        type: TaskConsoleMenuBoundUserInterface
+      enum.WiresUiKey.Key:
+        type: WiresBoundUserInterface
+  - type: Computer
+    board: TaskConsoleComputerCircuitboard
+  - type: PointLight
+    radius: 1.5
+    energy: 1.6
+    color: "#b89f25"

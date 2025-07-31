@@ -1,7 +1,8 @@
 using Robust.Shared.Prototypes;
 using Robust.Shared.Serialization;
+using Content.Shared._AS.TaskList.Prototypes;
 
-namespace Content.Server.TaskList;
+namespace Content.Shared._AS.TaskList;
 
 [DataDefinition, NetSerializable, Serializable]
 public readonly partial record struct TaskData

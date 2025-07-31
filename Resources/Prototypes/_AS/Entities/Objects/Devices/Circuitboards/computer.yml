@@ -1,0 +1,11 @@
+- type: entity
+  id: TaskConsoleComputerCircuitboard
+  parent: BaseComputerCircuitboard
+  name: task console computer board
+  description: A computer printed circuit board for a task list computer.
+  components:
+  - type: Sprite
+    state: cpu_supply
+  - type: ComputerBoard
+    prototype: ComputerTaskConsole
+  - type: StaticPrice
