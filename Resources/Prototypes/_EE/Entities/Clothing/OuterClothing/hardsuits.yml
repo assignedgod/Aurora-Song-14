@@ -33,6 +33,10 @@
         shader: unshaded
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitShanlinUnpainted
+  - type: Contraband
+    severity: Class2
+    turnInValues:
+    allowedDepartments: [ Security, Command ]
 
 - type: entity
   parent: ClothingOuterHardsuitSyndieElite
@@ -51,3 +55,7 @@
         shader: unshaded
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitShiweiUnpainted
+  - type: Contraband
+    severity: Class2
+    turnInValues:
+    allowedDepartments: [ Security, Command ]

@@ -37,7 +37,7 @@
 
 - type: entity
   id: NFBaseWeaponFramePistolCybersun
-  parent: [ BaseC3SyndicateContraband, NFBaseWeaponFramePistol ]
+  parent: [ BaseC2ContrabandUnredeemable, NFBaseWeaponFramePistol ]
   abstract: true
   components:
   - type: Gun

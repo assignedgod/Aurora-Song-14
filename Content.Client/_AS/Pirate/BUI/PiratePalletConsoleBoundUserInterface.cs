@@ -1,23 +1,21 @@
-using Content.Client._NF.Contraband.UI;
-using Content.Client.Message; // Aurora
-using Content.Shared._AS.Contraband.Events; // Aurora
+using Content.Shared._AS.Contraband.Events;
 using Content.Shared._NF.Contraband.BUI;
 using Content.Shared._NF.Contraband.Components;
 using Content.Shared._NF.Contraband.Events;
 using Robust.Client.UserInterface;
 using Robust.Shared.Utility;
 
-namespace Content.Client._NF.Contraband.BUI;
+namespace Content.Client._AS.Pirate.BUI;
 
-public sealed class ContrabandPalletConsoleBoundUserInterface : BoundUserInterface
+public sealed class PiratePalletConsoleBoundUserInterface : BoundUserInterface
 {
     [ViewVariables]
-    private ContrabandPalletMenu? _menu;
+    private _AS.Pirate.UI.PiratePalletMenu? _menu;
 
     [ViewVariables]
     private string _locPrefix = string.Empty;
 
-    public ContrabandPalletConsoleBoundUserInterface(EntityUid owner, Enum uiKey) : base(owner, uiKey)
+    public PiratePalletConsoleBoundUserInterface(EntityUid owner, Enum uiKey) : base(owner, uiKey)
     {
         if (EntMan.TryGetComponent<ContrabandPalletConsoleComponent>(owner, out var console))
             _locPrefix = console.LocStringPrefix ?? string.Empty;
@@ -29,33 +27,24 @@ public sealed class ContrabandPalletConsoleBoundUserInterface : BoundUserInterfa
 
         if (_menu == null)
         {
-            _menu = this.CreateWindow<ContrabandPalletMenu>();
+            _menu = this.CreateWindow<_AS.Pirate.UI.PiratePalletMenu>();
             _menu.AppraiseRequested += OnAppraisal;
             _menu.SellRequested += OnSell;
-            _menu.RegisterRequested += OnRegister; // Aurora
             _menu.SetWindowText(_locPrefix);
             var disclaimer = new FormattedMessage();
             disclaimer.AddText(Loc.GetString($"{_locPrefix}contraband-pallet-disclaimer"));
             _menu.Disclaimer.SetMessage(disclaimer);
-            _menu.SellDisclaimer.SetMarkup(Loc.GetString($"{_locPrefix}contraband-pallet-sell-disclaimer")); // Aurora
-            _menu.RegisterDisclaimer.SetMarkup(Loc.GetString($"{_locPrefix}contraband-pallet-register-disclaimer")); // Aurora
         }
     }
 
     private void OnAppraisal()
     {
-        SendMessage(new ContrabandPalletAppraiseMessage());
+        SendMessage(new PiratePalletAppraiseMessage());
     }
 
     private void OnSell()
     {
-        SendMessage(new ContrabandPalletSellMessage());
-    }
-
-    // Aurora
-    private void OnRegister()
-    {
-        SendMessage(new ContrabandPalletRegisterMessage());
+        SendMessage(new PiratePalletSellMessage());
     }
 
     protected override void UpdateState(BoundUserInterfaceState state)
@@ -68,6 +57,5 @@ public sealed class ContrabandPalletConsoleBoundUserInterface : BoundUserInterfa
         _menu?.SetEnabled(palletState.Enabled);
         _menu?.SetAppraisal(palletState.Appraisal);
         _menu?.SetCount(palletState.Count);
-        _menu?.SetUnregistered(palletState.Unregistered);
     }
 }

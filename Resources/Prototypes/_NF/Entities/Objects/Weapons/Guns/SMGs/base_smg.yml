@@ -46,7 +46,7 @@
 
 - type: entity
   id: NFBaseWeaponFrameSubMachineGunCybersun
-  parent: [ BaseC3SyndicateContraband, NFBaseWeaponFrameSubMachineGun ]
+  parent: [ BaseC2ContrabandUnredeemable, NFBaseWeaponFrameSubMachineGun ]
   abstract: true
   components:
   - type: GunWieldBonus
@@ -69,7 +69,7 @@
 
 - type: entity
   id: NFBaseWeaponFrameSubMachineGunGorlex
-  parent: [ BaseC3SyndicateContraband, NFBaseWeaponFrameSubMachineGun ]
+  parent: [ BaseC2ContrabandUnredeemable, NFBaseWeaponFrameSubMachineGun ]
   abstract: true
   components:
   - type: GunWieldBonus
