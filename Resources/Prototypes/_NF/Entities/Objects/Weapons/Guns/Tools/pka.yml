@@ -52,8 +52,8 @@
   - type: Wieldable
     unwieldOnUse: false
   - type: GunWieldBonus
-    minAngle: -30
-    maxAngle: -30
+    minAngle: -35
+    maxAngle: -35
   - type: Gun
     #minAngle: 36.4
     #maxAngle: 49.2

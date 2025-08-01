@@ -286,7 +286,7 @@
   - type: Extractable
     grindableSolutionName: food
   - type: DamageOnInteract
-    damage: 
+    damage:
       types:
         Heat: 4
         Caustic: 4
@@ -313,7 +313,7 @@
             volume: -5
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
-  - type: DamageOnHit 
+  - type: DamageOnHit
     damage:
       types:
         Blunt: 5 # The nettle will "wilt" after 5 hits.
@@ -2730,3 +2730,36 @@
     entries:
       Taco: AnomalyBerry
       Burger: AnomalyBerryBurger
+
+
+- type: entity # Floofstation
+  name: pomegranate
+  parent: FoodProduceBase
+  id: FoodPomegranate
+  description: A delicious, sweet fruit, believed to have special properties.
+  components:
+  - type: FlavorProfile
+    flavors:
+      - sweet
+      - spooky
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 40
+        reagents:
+        - ReagentId: Pomelustine
+          Quantity: 30
+        - ReagentId: Nutriment
+          Quantity: 10
+  - type: Sprite
+    sprite: Objects/Specific/Hydroponics/pomegranate.rsi
+  - type: Produce
+    seedId: pomegranate
+  - type: Extractable
+    juiceSolution:
+      reagents:
+      - ReagentId: JuicePomegranate
+        Quantity: 20
+  - type: Tag
+    tags:
+    - Fruit

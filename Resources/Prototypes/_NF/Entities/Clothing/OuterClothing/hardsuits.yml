@@ -1,6 +1,6 @@
 #Mercenary Hardsuit
 - type: entity
-  parent: ClothingOuterHardsuitBaseNF
+  parent: [ClothingOuterHardsuitBaseNF, BaseC2Contraband]
   id: ClothingOuterHardsuitMercenary # Aurora: stats were of luxury mining hardsuit, adjusted to be more effective as a rare find or mid-game tool, with even a late-game usage-case
   name: mercenary hardsuit
   description: A special suit that protects from the danger of space, employed by mercenary forces. Not certified to be blunderbuss-proof.

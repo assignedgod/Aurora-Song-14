@@ -1,7 +1,7 @@
 #region WizDen
 - type: entity
   id: NFWeaponShotgunBulldog
-  parent: [BaseC3SyndicateContraband, NFBaseWeaponShotgunChamber12gMagazine, NFBaseWeaponFrameShotgunWieldable, NFBaseWeaponEncumbranceLMG]
+  parent: [BaseC2ContrabandUnredeemable, NFBaseWeaponShotgunChamber12gMagazine, NFBaseWeaponFrameShotgunWieldable, NFBaseWeaponEncumbranceLMG, NFBaseWeaponFrameShotgunGorlex]
   name: Bulldog
   description: |-
     An automatic magazine-fed shotgun for close-quarters combat. Kicks like a mule on steroids.
@@ -10,6 +10,8 @@
     sprite: Objects/Weapons/Guns/Shotguns/bulldog.rsi
   - type: Clothing
     sprite: Objects/Weapons/Guns/Shotguns/bulldog.rsi
+  - type: Item
+    size: Large
   - type: Gun
     selectedMode: FullAuto
     availableModes:
@@ -210,15 +212,15 @@
 
 # Suplus, Aurora
 - type: entity
-  parent: [ BaseC1Contraband,  NFBaseWeaponShotgunChamber12g, NFBaseWeaponFrameShotgunWieldable ]
-  id: WeaponShotgunSurpFalchion
+  parent: [ BaseC2Contraband,  NFBaseWeaponShotgunChamber12g, NFBaseWeaponFrameShotgunWieldable ]
+  id: ASWeaponShotgunSurpFalchion
   name: Falchion
   description: |-
     The first home-grown custom weapon used by the colonial forces. A reliable weapon. It can survive rapid depressurization, being dropped in a plasma pool, a direct blast from a cannon, and still it will function just fine.
   suffix: Surplus
   components:
   - type: Gun
-    fireRate: 2.5
+    fireRate: 1.8
   - type: Item
     size: Normal
     shape:

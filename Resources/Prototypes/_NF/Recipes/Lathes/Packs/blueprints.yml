@@ -166,6 +166,7 @@
   # IndustrialMedicine
   - MedicalAssemblerMachineCircuitboard
   - HotplateMachineCircuitboard
+  - DefibrillatorCompact
   # SyringeGun
   - LauncherSyringe
   - MiniSyringe
@@ -458,7 +459,8 @@
   - NFAmmunitionBoxRifle30Overpressure
   - NFMagazineRifle20Empty
   - NFMagazineRifle30Empty
-  - NFMagazineDrumRifle20Empty
+ # - NFMagazineDrumRifle20Empty
+  - NFMagazineShotgunDrumEmpty
   - MagazineAsmgtUniversalEmpty
   # BulkRifleAmmo
   - NFAmmunitionBoxBigRifle20

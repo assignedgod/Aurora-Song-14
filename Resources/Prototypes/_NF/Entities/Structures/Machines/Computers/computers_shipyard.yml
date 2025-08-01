@@ -282,3 +282,30 @@
       state: shipyard_sr
     - map: ["computerLayerKeys"]
       state: telesci_key
+
+- type: entity
+  id: ComputerShipyardExpeditionCustom
+  parent: [BaseStructureDisableToolUse, BaseStructureIndestructible, ComputerShipyard, ComputerShipyardExpedition]
+  name: custom expedition shipyard console
+  description: Used to buy custom ships outfitted for planetary expeditions.
+  components:
+  - type: ActivatableUI
+    key: enum.ShipyardConsoleUiKey.Expedition
+  - type: UserInterface
+    interfaces:
+      enum.ShipyardConsoleUiKey.Expedition:
+       type: ShipyardConsoleBoundUserInterface
+  - type: Sprite
+    sprite: _NF/Structures/Machines/computers.rsi
+    layers:
+    - map: ["computerLayerBody"]
+      state: computer_expedition
+    - map: ["computerLayerKeyboard"]
+      state: generic_keyboard
+    - map: ["computerLayerScreen"]
+      state: shipyard
+    - map: ["computerLayerKeys"]
+      state: telesci_key
+  - type: ShipyardListing
+    shuttles:
+    - MercyOfFreefall

@@ -13,9 +13,6 @@
       sprite: Effects/atmospherics.rsi
       state: frezon_old
   - type: EffectVisuals
-  - type: Tag
-    tags:
-      - HideContextMenu # Frontier - note, when updated, update NFSD jetpacks
   - type: AnimationPlayer
 
 - type: entity
@@ -124,7 +121,6 @@
   # Frontier: emaggable jetpacks
   - type: Tag
     tags:
-      - HideContextMenu
       - DemagImmune
   - type: Jetpack
     radarBlip: false

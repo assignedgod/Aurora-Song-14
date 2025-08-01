@@ -1,16 +1,13 @@
 <controls:FancyWindow xmlns="https://spacestation14.io"
             xmlns:gfx="clr-namespace:Robust.Client.Graphics;assembly=Robust.Client"
             xmlns:controls="clr-namespace:Content.Client.UserInterface.Controls"
-            SetSize="300 196"
-            MinSize="300 196">
-    <BoxContainer Orientation="Vertical">
+            SetSize="550 300"
+            MinSize="550 300"
+            Resizable="False">
+    <BoxContainer Orientation="Vertical" Margin="10 10 10 10">
         <BoxContainer Orientation="Horizontal" SetHeight="24">
-            <Label Name="AppraisalLabelLeft" Text="{Loc 'contraband-pallet-menu-appraisal-label'}"
-                   StyleClasses="LabelKeyText" />
-            <Label Name="AppraisalLabel"
-                   Text="{Loc 'contraband-pallet-menu-no-goods-text'}" />
-        </BoxContainer>
-        <BoxContainer Orientation="Horizontal" SetHeight="24">
+            <Button Name="AppraiseButton"
+                    Text="{Loc 'contraband-pallet-appraise-button'}"/>
             <Label Name="CountLabelLeft" Text="{Loc 'contraband-pallet-menu-count-label'}"
                    StyleClasses="LabelKeyText" />
             <Label Name="CountLabel"
@@ -19,10 +16,35 @@
         <BoxContainer Orientation = "Horizontal" VerticalExpand = "False" SetHeight="58">
             <RichTextLabel Name="Disclaimer" Access="Public" StyleClasses="LabelSubText"/>
         </BoxContainer>
-        <Button Name="AppraiseButton"
-                Text="{Loc 'contraband-pallet-appraise-button'}"/>
-        <Button Name="SellButton"
-                Text="{Loc 'contraband-pallet-sell-button'}"/>
-        <TextureButton VerticalExpand="True" />
+        <BoxContainer Orientation= "Horizontal" VerticalExpand= "True">
+            <BoxContainer Orientation= "Vertical" HorizontalExpand="False">
+                <BoxContainer Orientation="Horizontal" SetHeight="24">
+                    <Label Name="AppraisalLabelLeft" Text="{Loc 'contraband-pallet-menu-appraisal-label'}"
+                           StyleClasses="LabelKeyText" />
+                    <Label Name="AppraisalLabel"
+                           Text="{Loc 'contraband-pallet-menu-no-goods-text'}" />
+                </BoxContainer>
+                <BoxContainer Orientation = "Horizontal" VerticalExpand = "True" HorizontalExpand="False" SetWidth="260">
+                    <RichTextLabel Name="SellDisclaimer" Access="Public" StyleClasses="LabelSubText"/>
+                </BoxContainer>
+                <Button Name="SellButton"
+                        Text="{Loc 'contraband-pallet-sell-button'}"/>
+                <TextureButton />
+            </BoxContainer>
+            <BoxContainer Orientation= "Vertical" HorizontalExpand="False" Margin="10, 0, 0, 0">
+                <BoxContainer Orientation="Horizontal" SetHeight="24">
+                    <Label Name="RegisterLabelLeft" Text="{Loc 'contraband-pallet-menu-unregistered-count-label'}"
+                           StyleClasses="LabelKeyText" />
+                    <Label Name="RegisterLabel"
+                           Text="{Loc 'contraband-pallet-menu-no-unregistered-text'}" />
+                </BoxContainer>
+                <BoxContainer Orientation = "Horizontal" VerticalExpand = "True" HorizontalExpand="False" SetWidth="260">
+                    <RichTextLabel Name="RegisterDisclaimer" Access="Public" StyleClasses="LabelSubText"/>
+                </BoxContainer>
+                <Button Name="RegisterButton"
+                        Text="{Loc 'contraband-pallet-register-button'}"/>
+                <TextureButton />
+            </BoxContainer>
+        </BoxContainer>
     </BoxContainer>
 </controls:FancyWindow>

@@ -55,7 +55,7 @@
 - type: entity
   id: NFWeaponRevolverRitland45
   parent: [ NFBaseWeaponRevolverChamber45, NFBaseWeaponFrameRevolverGorlex ]
-  name: ritland-45
+  name: python
   description: |-
     An illegal revolver favoured by Syndicate agents.
   components:
