@@ -8,7 +8,7 @@
   color: "#771534"
   metabolisms:
     Medicine:
-      metabolismRate : 0.01
+      metabolismRate : 0.03 #One 5u dose is 2.7 minutes
       effects:
       - !type:PopupMessage
         type: Local
@@ -38,7 +38,7 @@
       - !type:Drunk
         conditions:
         - !type:ReagentThreshold
-          min: 25
+          min: 15
       - !type:HealthChange
         conditions:
         - !type:ReagentThreshold
