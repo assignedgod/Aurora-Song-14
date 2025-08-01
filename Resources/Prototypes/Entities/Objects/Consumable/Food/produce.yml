@@ -1876,7 +1876,7 @@
     seedId: gatfruit
   - type: Food
     trash:
-    - NFWeaponRevolverRitland45 # Frontier: WeaponRevolverPython<NFWeaponRevolverRitland45
+    - NFWeaponRevolverPython45 # Frontier: WeaponRevolverPython<NFWeaponRevolverPython45
   - type: Tag
     tags:
     - Fruit # It's in the name

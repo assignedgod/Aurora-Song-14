@@ -11,7 +11,7 @@
     mayTransfer: true
     whitelist:
       tags:
-        - CartridgeCaselessRifle
+        - NFCartridgeRifle25 # Aurora - this is the new cartridge prototype
     # proto: CartridgeCaselessRifle # Frontier
     capacity: 30
   - type: Item
@@ -65,7 +65,7 @@
   - type: BallisticAmmoProvider
     whitelist:
       tags:
-        - CartridgeCaselessRifle
+        - NFCartridgeRifle25 # Aurora - this is the new cartridge prototype
     # proto: CartridgeCaselessRifle # Frontier
     capacity: 10
   - type: Item

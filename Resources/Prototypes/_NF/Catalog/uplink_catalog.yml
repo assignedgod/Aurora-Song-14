@@ -12,10 +12,10 @@
   - UplinkWeaponry
 
 - type: listing
-  id: UplinkNFRevolverRitland
-  name: uplink-revolver-ritland-name
-  description: uplink-revolver-ritland-desc
-  productEntity: NFWeaponRevolverRitland45
+  id: UplinkNFRevolverPython
+  name: uplink-revolver-python-name2
+  description: uplink-revolver-python-desc2
+  productEntity: NFWeaponRevolverPython45
   discountCategory: rareDiscounts
   cost:
     Telecrystal: 4

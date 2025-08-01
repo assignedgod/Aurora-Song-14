@@ -828,6 +828,18 @@
   products:
     Martini: 3
 
+- type: reaction # Aurora - Trying to add an alternative Martini recipe
+  id: MartiniAlt
+  requiredMixerCategories:
+  - Stir
+  reactants:
+    Gin:
+      amount: 2
+    Vermouth:
+      amount: 1
+  products:
+    Martini: 3
+
 - type: reaction
   id: Mead
   reactants:
