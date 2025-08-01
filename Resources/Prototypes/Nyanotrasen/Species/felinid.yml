@@ -7,12 +7,13 @@
   markingLimits: MobFelinidMarkingLimits
   dollPrototype: MobFelinidDummy
   skinColoration: Hues #FloofStation copied from DeltaV
-  minHeight: 0.65
-  defaultHeight: 0.8
-  maxHeight: 1.1
-  minWidth: 0.6
-  defaultWidth: 0.8
-  maxWidth: 1.15
+  # Had to comment these out for now, will work on implementing them for all species later
+#  minHeight: 0.65
+#  defaultHeight: 0.8
+#  maxHeight: 1.1
+#  minWidth: 0.6
+#  defaultWidth: 0.8
+#  maxWidth: 1.15
 
 - type: markingPoints
   id: MobFelinidMarkingLimits
