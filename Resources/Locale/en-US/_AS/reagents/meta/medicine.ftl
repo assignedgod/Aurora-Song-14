@@ -23,3 +23,6 @@ reagent-desc-estrogen = A feminizing hormone that is produced by the body.
 
 reagent-name-testosterone = Testosterone
 reagent-desc-testosterone = A masculinizing hormone that is produced by the body.
+
+reagent-effect-estrogen = You feel girly.
+reagent-effect-testosterone = You want to eat a steak.

@@ -8,7 +8,15 @@
   color: "#f7b9cd"
   metabolisms:
     Medicine:
-      metabolismRate : 1
+      effects:
+      - !type:PopupMessage
+        conditions:
+        - !type:ReagentThreshold
+          min: 15
+        type: Local
+        visualType: Medium
+        messages: [ "reagent-effect-estrogen" ]
+        probability: 0.2
 
 - type: reagent
   id: Testosterone
@@ -20,4 +28,12 @@
   color: "#b9dcf7"
   metabolisms:
     Medicine:
-      metabolismRate : 1
+      effects:
+      - !type:PopupMessage
+        conditions:
+        - !type:ReagentThreshold
+          min: 15
+        type: Local
+        visualType: Medium
+        messages: [ "reagent-effect-testosterone" ]
+        probability: 0.2
