@@ -4,7 +4,7 @@
   group: Medicine
   desc: reagent-desc-estrogen
   physicalDesc: reagent-physical-desc-girly
-  flavor: girly
+  flavor: bitter
   color: "#f7b9cd"
   metabolisms:
     Medicine:
@@ -24,7 +24,7 @@
   group: Medicine
   desc: reagent-desc-testosterone
   physicalDesc: reagent-physical-desc-fizzy
-  flavor: boyish
+  flavor: bitter
   color: "#b9dcf7"
   metabolisms:
     Medicine:

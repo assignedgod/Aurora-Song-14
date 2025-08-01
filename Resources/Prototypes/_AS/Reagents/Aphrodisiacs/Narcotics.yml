@@ -4,7 +4,7 @@
   group: Narcotics
   desc: reagent-desc-forcefem
   physicalDesc: reagent-physical-desc-girly
-  flavor: girly
+  flavor: cinnamon
   color: "#771534"
   metabolisms:
     Medicine:
