@@ -1,0 +1,55 @@
+﻿- type: reagent
+  id: ForceFemDrugs
+  name: reagent-name-forcefem
+  group: Narcotics
+  desc: reagent-desc-forcefem
+  physicalDesc: reagent-physical-desc-girly
+  flavor: girly
+  color: "#771534"
+  metabolisms:
+    Medicine:
+      metabolismRate : 0.01
+      effects:
+      - !type:PopupMessage
+        type: Local
+        visualType: Medium
+        messages:
+          - "reagent-effect-forcefem1"
+          - "reagent-effect-forcefem2"
+          - "reagent-effect-forcefem3"
+          - "reagent-effect-forcefem4"
+          - "reagent-effect-forcefem5"
+          - "reagent-effect-forcefem6"
+          - "reagent-effect-forcefem7"
+          - "reagent-effect-forcefem8"
+        probability: 0.035
+        conditions:
+          - !type:ReagentThreshold
+            max: 30
+      - !type:PopupMessage # Overdose causes nausea and vomiting
+        type: Local
+        visualType: Medium
+        messages:
+          - "reagent-effect-forcefem-overdose"
+        probability: 0.06
+        conditions:
+          - !type:ReagentThreshold
+            min: 50
+      - !type:Drunk
+        conditions:
+        - !type:ReagentThreshold
+          min: 25
+      - !type:ChemVomit
+        conditions:
+        - !type:ReagentThreshold
+          min: 90
+        probability: 0.05
+      - !type:PopupMessage
+        type: Local
+        visualType: Small
+        messages:
+          - "reagent-effect-forcecem-fade" # A decent chance to notify the player when their meds run out, but could happen silently.
+        probability: 0.35
+        conditions:
+          - !type:ReagentThreshold
+            max: 0.1

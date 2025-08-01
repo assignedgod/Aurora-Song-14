@@ -1,0 +1,11 @@
+﻿- type: reagent
+  id: Estrogen
+  name: reagent-name-estrogen
+  group: Medicine
+  desc: reagent-desc-estrogen
+  physicalDesc: reagent-physical-desc-girly
+  flavor: girly
+  color: "#f7b9cd"
+  metabolisms:
+    Medicine:
+      metabolismRate : 1

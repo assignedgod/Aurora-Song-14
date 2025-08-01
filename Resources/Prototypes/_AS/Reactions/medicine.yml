@@ -1,0 +1,11 @@
+﻿- type: reaction
+  id: EstrogenSynthesis
+  impact: Medium
+  reactants:
+    Hydroxide:
+      amount: 1
+    Protein:
+      amount: 1
+  products:
+      Estrogen: 1
+
