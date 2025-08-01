@@ -52,6 +52,7 @@ weapon-details-manufacturer-gorlex-steel-works = Gorlex Steel Works
 weapon-details-manufacturer-nanotrasen-munitions = NanoTrasen Munitions
 weapon-details-manufacturer-nanotrasen-technologies = NanoTrasen Technologies
 weapon-details-manufacturer-steelbolt-tool-forge = Steelbolt Tool Forge
+weapon-details-manufacturer-arcadia-sec-solutions = Arcadia Security Solutions
 
 # Classes (alphabetical please)
 weapon-details-class-assault-rifle = Assault Rifle
