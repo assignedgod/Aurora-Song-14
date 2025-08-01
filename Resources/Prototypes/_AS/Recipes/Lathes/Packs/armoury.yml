@@ -9,7 +9,6 @@
   - FireAxe
   - NFMagazineSubMachineGun35
   - NFMagazineRifle20
-  - ExplosivePayload
 
 - type: latheRecipePack
   id: ASAmmofabEmag
@@ -20,3 +19,7 @@
   - NFAmmunitionBoxRifle30Incendiary
   - NFAmmunitionBoxShellShotgunIncendiary
 
+- type: latheRecipePack
+  id: ASSalvageLatheEmag
+  recipes:
+  - FireAxe
