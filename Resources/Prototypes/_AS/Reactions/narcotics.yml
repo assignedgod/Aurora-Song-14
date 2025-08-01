@@ -1,0 +1,12 @@
+﻿- type: reaction
+  id: ForceFemDrugsReaction
+  impact: Medium
+  reactants:
+    Estrogen:
+      amount: 2
+    Pomelustine:
+      amount: 1
+    MindbreakerToxin:
+      amount: 1
+  products:
+      ForceFemDrugs: 4
