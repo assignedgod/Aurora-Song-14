@@ -34,15 +34,22 @@
         probability: 0.06
         conditions:
           - !type:ReagentThreshold
-            min: 50
+            min: 30
       - !type:Drunk
         conditions:
         - !type:ReagentThreshold
           min: 25
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentThreshold
+          min: 35
+        damage:
+          types:
+            Poison: 1
       - !type:ChemVomit
         conditions:
         - !type:ReagentThreshold
-          min: 90
+          min: 35
         probability: 0.05
       - !type:PopupMessage
         type: Local
