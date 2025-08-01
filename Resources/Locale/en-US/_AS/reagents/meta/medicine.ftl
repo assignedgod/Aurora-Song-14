@@ -20,3 +20,6 @@ med-desc-arithrazine = Arith | Rads | Deals Brute
 
 reagent-name-estrogen = Estrogen
 reagent-desc-estrogen = A feminizing hormone that is produced by the body.
+
+reagent-name-testosterone = Testosterone
+reagent-desc-testosterone = A masculinizing hormone that is produced by the body.

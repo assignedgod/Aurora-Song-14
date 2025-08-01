@@ -9,3 +9,14 @@
   products:
       Estrogen: 1
 
+- type: reaction
+  id: TestosteroneSynthesis
+  impact: Medium
+  reactants:
+    Hydrogen:
+      amount: 1
+    Charcoal:
+      amount: 1
+    Oxygen: 1
+  products:
+      Testosterone: 1

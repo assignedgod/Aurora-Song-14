@@ -9,3 +9,15 @@
   metabolisms:
     Medicine:
       metabolismRate : 1
+
+- type: reagent
+  id: Testosterone
+  name: reagent-name-testosterone
+  group: Medicine
+  desc: reagent-desc-testosterone
+  physicalDesc: reagent-physical-desc-fizzy
+  flavor: boyish
+  color: "#b9dcf7"
+  metabolisms:
+    Medicine:
+      metabolismRate : 1
