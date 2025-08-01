@@ -13,7 +13,7 @@ namespace Content.Shared.PDA
         public const string PdaPenSlotId = "PDA-pen";
         public const string PdaPaiSlotId = "PDA-pai";
         public const string PdaBookSlotId = "PDA-book"; // Frontier
-        public const string PdaLicenceSlotId = "PDA-licence"; // Frontier
+        public const string PdaLicenseSlotId = "PDA-license"; // Frontier
 
         [DataField("idSlot")]
         public ItemSlot IdSlot = new();
@@ -27,8 +27,8 @@ namespace Content.Shared.PDA
         [DataField] // Frontier
         public ItemSlot BookSlot = new(); // Frontier
 
-        [DataField("licenceSlot")]
-        public ItemSlot LicenceSlot = new(); // Aurora
+        [DataField("licenseSlot")]
+        public ItemSlot LicenseSlot = new(); // Aurora
 
         // Really this should just be using ItemSlot.StartingItem. However, seeing as we have so many different starting
         // PDA's and no nice way to inherit the other fields from the ItemSlot data definition, this makes the yaml much

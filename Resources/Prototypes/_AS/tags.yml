@@ -28,6 +28,6 @@
 - type: Tag
   id: MercenaryUplink
 
-#region licences
+#region licenses
 - type: Tag
-  id: Licence
+  id: License

@@ -1,2 +1,2 @@
-licence-name-no-owner = {$licence}
-licence-name-owner = {$owner}'s {$licence}
+license-name-no-owner = {$license}
+license-name-owner = {$owner}'s {$license}

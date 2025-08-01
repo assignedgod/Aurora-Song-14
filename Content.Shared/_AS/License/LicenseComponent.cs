@@ -1,16 +1,16 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace Content.Shared._AS.Licence;
+namespace Content.Shared._AS.License;
 
 [RegisterComponent]
-public sealed partial class LicenceComponent : Component
+public sealed partial class LicenseComponent : Component
 {
     [DataField]
-    public LocId NoOwnerLoc = "licence-name-no-owner";
+    public LocId NoOwnerLoc = "license-name-no-owner";
 
     [DataField]
-    public LocId OwnerLoc = "licence-name-owner";
+    public LocId OwnerLoc = "license-name-owner";
 
     [DataField]
-    public string? LicenceName;
+    public string? LicenseName;
 }

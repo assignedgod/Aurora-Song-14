@@ -2,9 +2,9 @@ using System.Diagnostics.CodeAnalysis;
 using Content.Shared.Mind;
 using Robust.Shared.Containers;
 
-namespace Content.Shared._AS.Licence;
+namespace Content.Shared._AS.License;
 
-public sealed class LicenceSystem : EntitySystem
+public sealed class LicenseSystem : EntitySystem
 {
     [Dependency] private readonly SharedContainerSystem _container = default!;
     [Dependency] private readonly SharedMindSystem _mind = default!;
@@ -14,17 +14,17 @@ public sealed class LicenceSystem : EntitySystem
     {
         base.Initialize();
 
-        SubscribeLocalEvent<LicenceComponent, ComponentInit>(OnInit);
+        SubscribeLocalEvent<LicenseComponent, ComponentInit>(OnInit);
     }
 
-    private void OnInit(Entity<LicenceComponent> ent, ref ComponentInit args)
+    private void OnInit(Entity<LicenseComponent> ent, ref ComponentInit args)
     {
-        if (ent.Comp.LicenceName is not {} licence)
+        if (ent.Comp.LicenseName is not {} license)
             return;
 
         var newItemName = TryGetOwnerName(ent, out var owner)
-            ? Loc.GetString(ent.Comp.OwnerLoc, ("owner", owner), ("licence", licence))
-            : Loc.GetString(ent.Comp.NoOwnerLoc, ("licence", licence));
+            ? Loc.GetString(ent.Comp.OwnerLoc, ("owner", owner), ("license", license))
+            : Loc.GetString(ent.Comp.NoOwnerLoc, ("license", license));
         _meta.SetEntityName(ent, newItemName);
     }
 
@@ -34,7 +34,7 @@ public sealed class LicenceSystem : EntitySystem
         if (Transform(ent) is not { } xform)
             return false;
         // Outermost container owner is expected to be player entity
-        // This is true in this case as licences will be generated before a owner will be entering a potential container
+        // This is true in this case as licenses will be generated before a owner will be entering a potential container
         if (!_container.TryGetOuterContainer(ent, xform, out var container))
             return false;
         // Getting the player character name via mind
