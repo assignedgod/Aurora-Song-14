@@ -15,6 +15,7 @@
   - type: Item
     size: Small
     storedRotation: -90
+  - type: Licence
   - type: Tag
     tags:
     - Licence

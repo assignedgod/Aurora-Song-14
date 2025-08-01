@@ -37,6 +37,7 @@
   - type: Pda
     id: MercenaryIDCard
     licenceSlot:
+      name: licence
       startingItem: LicenceContraband
       ejectSound: /Audio/Machines/id_swipe.ogg
       insertSound: /Audio/Machines/id_insert.ogg

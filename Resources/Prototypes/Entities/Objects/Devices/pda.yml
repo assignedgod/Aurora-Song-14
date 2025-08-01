@@ -49,6 +49,7 @@
     # End Frontier: space law slot
     # Aurora - Licence slots
     licenceSlot:
+      name: licence
       startingItem:
       ejectSound: /Audio/Machines/id_swipe.ogg
       insertSound: /Audio/Machines/id_insert.ogg
