@@ -26,7 +26,7 @@ public sealed partial class ContrabandPalletConsoleComponent : Component
         {"NFWeaponRevolverArgentiExpedition","NFWeaponRevolverArgenti"},
         {"NFWeaponRevolverFaithExpedition","NFWeaponRevolverFaith"},
         {"NFWeaponRevolverDeckardExpedition","NFWeaponRevolverDeckard"},
-        {"NFWeaponRevolverRitland45Expedition","NFWeaponRevolverRitland45"},
+        {"NFWeaponRevolverPython45Expedition","NFWeaponRevolverPython45"},
         {"NFWeaponRifleBarlowsBoltExpedition","NFWeaponRifleBarlowsBolt"},
         {"NFWeaponRifleCeremonialExpedition","NFWeaponRifleCeremonial"},
         {"NFWeaponRifleRepeaterExpedition","NFWeaponRifleRepeater"},
