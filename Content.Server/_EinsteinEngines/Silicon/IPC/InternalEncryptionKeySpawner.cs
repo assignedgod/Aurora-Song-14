@@ -4,12 +4,13 @@ using Content.Shared.Containers;
 using Robust.Shared.Containers;
 
 namespace Content.Server._EinsteinEngines.Silicon.IPC;
+
 public sealed partial class InternalEncryptionKeySpawner : EntitySystem
 {
     [Dependency] private readonly SharedContainerSystem _container = default!;
     public void TryInsertEncryptionKey(EntityUid target, StartingGearPrototype startingGear, IEntityManager entityManager)
     {
-        if (!TryComp<EncryptionKeyHolderComponent>(target, out var keyHolderComp)
+        if (!entityManager.TryGetComponent<EncryptionKeyHolderComponent>(target, out var keyHolderComp)
             || !startingGear.Equipment.TryGetValue("ears", out var earEquipString)
             || string.IsNullOrEmpty(earEquipString))
             return;
