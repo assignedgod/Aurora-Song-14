@@ -19,8 +19,8 @@ public sealed class LicenceSystem : EntitySystem
 
     private void OnInit(Entity<LicenceComponent> ent, ref ComponentInit args)
     {
-        ent.Comp.LicenceName ??= MetaData(ent).EntityName;
-        var licence = ent.Comp.LicenceName;
+        if (ent.Comp.LicenceName is not {} licence)
+            return;
 
         var newItemName = TryGetOwnerName(ent, out var owner)
             ? Loc.GetString(ent.Comp.OwnerLoc, ("owner", owner), ("licence", licence))

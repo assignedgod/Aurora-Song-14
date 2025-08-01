@@ -16,6 +16,7 @@
     size: Small
     storedRotation: -90
   - type: Licence
+    licenceName: contraband handling licence
   - type: Tag
     tags:
     - Licence
