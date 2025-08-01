@@ -6,7 +6,14 @@
   sprites: MobHumanSprites
   markingLimits: MobFelinidMarkingLimits
   dollPrototype: MobFelinidDummy
-  skinColoration: HumanToned
+  skinColoration: Hues #FloofStation copied from DeltaV
+  # Had to comment these out for now, will work on implementing them for all species later
+#  minHeight: 0.65
+#  defaultHeight: 0.8
+#  maxHeight: 1.1
+#  minWidth: 0.6
+#  defaultWidth: 0.8
+#  maxWidth: 1.15
 
 - type: markingPoints
   id: MobFelinidMarkingLimits
@@ -28,17 +35,21 @@
     Chest:
       points: 4 # Frontier 1<4
       required: false
-    Legs:
-      points: 8 # Frontier 2<8
+    Genitals:
+      points: 1
+      required: false
+    Nipples:
+      points: 2
       required: false
     Arms:
-      points: 8 # Frontier 2<8
+      points: 4
       required: false
-    # Frontier: apparently these don't exist on Delta
-    UndergarmentTop:
-      points: 1
+    Legs:
+      points: 4
       required: false
     UndergarmentBottom:
       points: 1
       required: false
-    # End Frontier
+    UndergarmentTop:
+      points: 1
+      required: false
