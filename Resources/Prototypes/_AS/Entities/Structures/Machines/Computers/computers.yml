@@ -1,0 +1,39 @@
+- type: entity
+  parent: [BaseStructureIndestructible, BaseComputerAiAccess] # Frontier: added BaseStructureIndestructible
+  id: ComputerLicenseConsole
+  name: License computer
+  description: Terminal for printing licenses.
+  components:
+  - type: LicenseConsole
+  - type: ActivatableUI
+    key: enum.LicenseConsoleUiKey.Key
+  - type: UserInterface
+    interfaces:
+      enum.LicenseConsoleUiKey.Key:
+        type: LicenseConsoleBoundUserInterface
+      enum.WiresUiKey.Key:
+        type: WiresBoundUserInterface
+  - type: Speech
+    speechVerb: Robotic
+    speechSounds: Pai
+  - type: Sprite
+    layers:
+    - map: ["computerLayerBody"]
+      state: computer
+    - map: ["computerLayerKeyboard"]
+      state: generic_keyboard
+    - map: ["computerLayerScreen"]
+      state: id
+    - map: ["computerLayerKeys"]
+      state: id_key
+    - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
+      state: generic_panel_open
+  - type: Computer
+    board: LicenseComputerCircuitboard
+  - type: PointLight
+    radius: 1.5
+    energy: 1.6
+    color: "#3c5eb5"
+  - type: Tag
+    tags:
+    - AccessBreakerImmune
