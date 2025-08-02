@@ -8,6 +8,18 @@
   color: "#848789"
   boilingPoint: 2327.0
   meltingPoint: 660.0
+  metabolisms: #Floofstation, wipes aphrodisiacs
+    Medicine:
+      effects:
+      - !type:AdjustReagent
+        reagent: Pomelustine
+        amount: -5
+      - !type:AdjustReagent
+        reagent: Philterex
+        amount: -5
+      - !type:AdjustReagent
+        reagent: Libidozenithizine
+        amount: -3
 
 - type: reagent
   id: Carbon
@@ -228,7 +240,7 @@
   meltingPoint: 65.5
   boilingPoint: 759.0
   # Frontier: Sheleg
-  metabolisms: 
+  metabolisms:
     Food:
       effects:
       - !type:AdjustTemperature
