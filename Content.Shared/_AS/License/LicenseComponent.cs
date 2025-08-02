@@ -13,4 +13,7 @@ public sealed partial class LicenseComponent : Component
 
     [DataField]
     public string? LicenseName;
+
+    [DataField]
+    public string? OwnerName;
 }

@@ -1,6 +1,6 @@
 - type: entity
   parent: Clothing
-  id: LicenseContraband
+  id: LicenseContrabandHandling
   name: contraband handling license
   description: This license grants the named holder the legal allowance for the usage of C2-class contraband, the tackling of Bluespace threats, and the transportation of C3-class contraband for turn-in to the authorities.
   components:

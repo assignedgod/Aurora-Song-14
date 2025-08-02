@@ -1,4 +1,6 @@
 using System.Linq;
+using Content.Shared._AS.License;
+using Content.Shared.Containers.ItemSlots; // Aurora
 using Content.Shared.Hands.Components;
 using Content.Shared.Hands.EntitySystems;
 using Content.Shared.Inventory;
@@ -13,7 +15,8 @@ using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using Robust.Shared.Utility;
 using Content.Shared.Implants; // Frontier
-using Content.Shared.Implants.Components; // Frontier
+using Content.Shared.Implants.Components;
+using Content.Shared.Mind; // Frontier
 using Content.Shared.Radio.Components; // Frontier
 using Robust.Shared.Containers; // Frontier
 using Robust.Shared.Network; // Frontier
@@ -32,6 +35,8 @@ public abstract class SharedStationSpawningSystem : EntitySystem
     [Dependency] private readonly INetManager _net = default!; // Frontier
     [Dependency] private readonly SharedContainerSystem _container = default!; // Frontier
     [Dependency] private readonly SharedImplanterSystem _implanter = default!; // Frontier
+    [Dependency] private readonly LicenseSystem _license = default!; // Aurora
+    [Dependency] private readonly SharedMindSystem _mind = default!; // Aurora
 
     private EntityQuery<HandsComponent> _handsQuery;
     private EntityQuery<InventoryComponent> _inventoryQuery;
@@ -243,6 +248,25 @@ public abstract class SharedStationSpawningSystem : EntitySystem
         }
         // End Frontier
 
+        // Aurora - Add licenses
+        // Must be run on server, installation logic exists server-side.
+        if (_net.IsServer && startingGear.Licenses.Count > 0)
+        {
+            // Spawn and drop all licenses on the ground and rename them to the owner.
+            List<EntityUid> spawnedLicenses = new ();
+            foreach (var license in startingGear.Licenses)
+            {
+                var licenseEnt = SpawnAtPosition(license, xform.Coordinates);
+                spawnedLicenses.Add(licenseEnt);
+                if (!TryComp<LicenseComponent>(licenseEnt, out var licenseComponent))
+                    continue;
+                _license.SetName((licenseEnt,licenseComponent), MetaData(entity).EntityName);
+            }
+            // Try to insert any license first in pda then in bags. The remaining ones will remain on ground.
+            InsertLicenses(entity, spawnedLicenses, "id", "PDA-license");
+            InsertLicenses(entity, spawnedLicenses, "back", "storagebase");
+        }
+
         if (raiseEvent)
         {
             var ev = new StartingGearEquippedEvent(entity);
@@ -290,4 +314,34 @@ public abstract class SharedStationSpawningSystem : EntitySystem
     /// <param name="encryptionKeys">The PDA cartridge prototype IDs to equip.</param>
     protected abstract void EquipPdaCartridgesIfPossible(EntityUid entity, List<EntProtoId> encryptionKeys);
     // End Frontier: extra loadout fields
+
+    // Aurora - Licenses
+    /// <summary>
+    /// Function to insert license into given container.
+    /// Only called in practice server-side.
+    /// </summary>
+    /// <param name="entity">The entity to receive equipment.</param>
+    /// <param name="licenses">The license prototype IDs to equip</param>
+    /// <param name="slot">slot the container is found in</param>
+    /// <param name="container">container id</param>
+    /// <exception cref="NotImplementedException"></exception>
+    private void InsertLicenses(EntityUid entity, List<EntityUid> licenses, string slot, string container)
+    {
+        if (licenses.Count <= 0)
+            return;
+        if (!InventorySystem.TryGetSlotEntity(entity, slot, out var slotEnt))
+            return;
+        if (!_container.TryGetContainer(slotEnt.Value, container, out var keyContainer))
+            return;
+
+        var coords = _xformSystem.GetMapCoordinates(entity);
+
+        foreach (var license in licenses.ToList())
+        {
+            if (_container.Insert(license, keyContainer))
+            {
+                licenses.Remove(license);
+            }
+        }
+    }
 }
