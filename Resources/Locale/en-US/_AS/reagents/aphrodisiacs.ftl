@@ -12,6 +12,7 @@ reagent-effect-forcefem-overdose2 = You need to be filled.
 reagent-effect-forcefem-overdose3 = You can't think of anything but sex.
 reagent-effect-forcefem-overdose4 = You need to cum.
 reagent-effect-forcefem-overdose5 = You need to be touched.
+reagent-effect-forcefem-overdose6 = You should show everyone your pretty body.
 
 reagent-effect-forcecem-fade = You feel the euphoria leaving you... you need more.
 
