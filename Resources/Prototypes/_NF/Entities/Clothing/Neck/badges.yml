@@ -1,7 +1,7 @@
 - type: entity # Base Badge
   parent: ClothingNeckBase
   id: ClothingNeckNfsdBadge
-  name: NFSD badge
+  name: SLE badge
   description: Respect my authority!
   abstract: true
   components:

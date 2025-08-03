@@ -45,7 +45,7 @@
 - type: entity
   parent: [ BaseC2ContrabandUnredeemable, ClothingMaskGasSecurity ]
   id: ClothingMaskGasNfsd
-  name: NFSD gas mask
+  name: SLE gas mask
   description: A standard issue NFSD gas mask.
   components:
   - type: Sprite
@@ -57,7 +57,7 @@
 - type: entity
   parent: [ BaseC2ContrabandUnredeemable, ClothingMaskGasSwat ]
   id: ClothingMaskGasSheriff
-  name: NFSD sheriff gas mask
+  name: SLE sheriff gas mask
   description: A gas mask worthy of a sheriff.
   components:
   - type: Sprite

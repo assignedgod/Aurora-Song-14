@@ -1,6 +1,6 @@
 ##Grenade fills
 - type: entity
-  name: box of NFSD items
+  name: box of SLE items
   parent: BoxCardboard
   id: BoxBundleNfsd
   description: A box full of SLE items.

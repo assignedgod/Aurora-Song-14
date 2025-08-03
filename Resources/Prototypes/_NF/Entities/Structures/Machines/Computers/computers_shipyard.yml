@@ -81,7 +81,7 @@
 - type: entity
   id: ComputerShipyardNfsd
   parent: [BaseStructureDisableToolUse, BaseStructureIndestructible, ComputerShipyardBase]
-  name: NFSD shipyard console
+  name: SLE shipyard console
   description: Used to buy NFSD patrol vessels.
   components:
   - type: Sprite

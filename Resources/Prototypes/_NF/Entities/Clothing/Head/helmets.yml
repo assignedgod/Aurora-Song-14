@@ -16,7 +16,7 @@
 - type: entity
   parent: [ BaseC2ContrabandUnredeemable, ClothingHeadHelmetBasic ]
   id: ClothingHeadHelmetNfsd
-  name: NFSD helmet
+  name: SLE helmet
   description: An NFSD issued helmet to protect your head.
   components:
   - type: Sprite

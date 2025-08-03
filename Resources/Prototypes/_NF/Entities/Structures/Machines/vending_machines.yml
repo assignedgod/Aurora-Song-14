@@ -382,7 +382,7 @@
 - type: entity
   parent: [BaseStructureDisableAnchoring, VendingMachine]
   id: VendingMachineNfsdDrobe
-  name: NFSDDrobe
+  name: SLEDrobe
   description: A vending machine for NFSD and NFSD clothing!
   components:
   - type: VendingMachine
@@ -432,7 +432,7 @@
 - type: entity
   parent: [BaseStructureDisableAnchoring, VendingMachine]
   id: VendingMachineNfsdTech
-  name: NFSDTech
+  name: SLETech
   description: A vending machine for NFSD and NFSD tech!
   components:
   - type: VendingMachine
