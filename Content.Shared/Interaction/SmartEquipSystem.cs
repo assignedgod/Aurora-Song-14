@@ -36,6 +36,9 @@ public sealed class SmartEquipSystem : EntitySystem
             .Bind(ContentKeyFunctions.SmartEquipBackpack, InputCmdHandler.FromDelegate(HandleSmartEquipBackpack, handle: false, outsidePrediction: false))
             .Bind(ContentKeyFunctions.SmartEquipBelt, InputCmdHandler.FromDelegate(HandleSmartEquipBelt, handle: false, outsidePrediction: false))
             .Bind(ContentKeyFunctions.SmartEquipWallet, InputCmdHandler.FromDelegate(HandleSmartEquipWallet, handle: false, outsidePrediction: false)) // Frontier
+            .Bind(ContentKeyFunctions.SmartEquipSuitStorage, InputCmdHandler.FromDelegate(HandleSmartEquipSuitStorage, handle: false, outsidePrediction: false))
+            .Bind(ContentKeyFunctions.SmartEquipPocket1, InputCmdHandler.FromDelegate(HandleSmartEquipPocket1, handle: false, outsidePrediction: false))
+            .Bind(ContentKeyFunctions.SmartEquipPocket2, InputCmdHandler.FromDelegate(HandleSmartEquipPocket2, handle: false, outsidePrediction: false))
             .Register<SmartEquipSystem>();
     }
 
@@ -61,6 +64,36 @@ public sealed class SmartEquipSystem : EntitySystem
         HandleSmartEquip(session, "wallet");
     }
     // End Frontier: smart-equip to wallet
+    private void HandleSmartEquipSuitStorage(ICommonSession? session)
+    {
+        HandleSmartEquip(session, "suitstorage");
+    }
+
+    private void HandleSmartEquipPocket1(ICommonSession? session)
+    {
+        HandleSmartEquip(session, "pocket1");
+    }
+
+    private void HandleSmartEquipPocket2(ICommonSession? session)
+    {
+        HandleSmartEquip(session, "pocket2");
+    }
+
+    private void SaveLocation(StorageComponent storage, EntityUid itemUid)
+    {
+        var id = IoCManager.Resolve<IEntityManager>().GetNetEntity(itemUid).ToString();
+        storage.StoredItems.TryGetValue(itemUid, out var location);
+
+        if (!storage.SavedLocations.TryGetValue(id, out var locations))
+            locations = new();
+
+        if (locations.Contains(location))
+            return;
+
+        locations.Add(location);
+        storage.SavedLocations[id] = locations;
+    }
+
     private void HandleSmartEquip(ICommonSession? session, string equipmentSlot)
     {
         if (session is not { } playerSession)

@@ -12,10 +12,10 @@
   - UplinkWeaponry
 
 - type: listing
-  id: UplinkNFRevolverRitland
-  name: uplink-revolver-ritland-name
-  description: uplink-revolver-ritland-desc
-  productEntity: NFWeaponRevolverRitland45
+  id: UplinkNFRevolverPython
+  name: uplink-revolver-python-name2
+  description: uplink-revolver-python-desc2
+  productEntity: NFWeaponRevolverPython45
   discountCategory: rareDiscounts
   cost:
     Telecrystal: 4
@@ -71,7 +71,7 @@
   name: uplink-pistol-magazine-cobra-name
   description: uplink-pistol-magazine-cobra-desc
   icon: { sprite: /Textures/Objects/Weapons/Guns/Ammunition/Magazine/CaselessRifle/caseless_pistol_mag.rsi, state: red-icon }
-  productEntity: NFMagazinePistol45
+  productEntity: HLMagazinePistolCaselessRifle
   cost:
     Telecrystal: 1
   categories:

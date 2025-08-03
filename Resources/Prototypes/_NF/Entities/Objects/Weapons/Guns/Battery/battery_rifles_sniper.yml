@@ -16,7 +16,7 @@
 
 - type: entity
   id: NFWeaponEnergyRifleSniperXrayCannon
-  parent: [ BaseC3Contraband, NFBaseWeaponEnergyRifleSniperHitScanXray, NFBaseWeaponFrameEnergyRifleSniperNanotrasen ]
+  parent: [ BaseC2ContrabandUnredeemable, NFBaseWeaponEnergyRifleSniperHitScanXray, NFBaseWeaponFrameEnergyRifleSniperNanotrasen ]
   name: x-ray cannon
   suffix: Frontier
   description: |-

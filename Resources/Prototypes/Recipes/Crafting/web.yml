@@ -74,3 +74,14 @@
     tags:
     - SpiderCraft
   objectType: Item
+
+- type: construction
+  id: WebCocoon
+  graph: WebObjects
+  startNode: start
+  targetNode: cocoon
+  category: construction-category-clothing
+  entityWhitelist:
+    tags:
+    - SpiderCraft
+  objectType: Item

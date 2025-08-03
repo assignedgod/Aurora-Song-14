@@ -20,6 +20,7 @@ using Content.Shared.Mind; // Frontier
 using Content.Shared.Radio.Components; // Frontier
 using Robust.Shared.Containers; // Frontier
 using Robust.Shared.Network; // Frontier
+using Content.Shared._AS.IPC; // Aurora's Song 14
 
 namespace Content.Shared.Station;
 
@@ -37,6 +38,7 @@ public abstract class SharedStationSpawningSystem : EntitySystem
     [Dependency] private readonly SharedImplanterSystem _implanter = default!; // Frontier
     [Dependency] private readonly LicenseSystem _license = default!; // Aurora
     [Dependency] private readonly SharedMindSystem _mind = default!; // Aurora
+    [Dependency] private readonly InternalEncryptionLoadoutSystem _internalEncryptionLoadout = default!; // Aurora's Song 14
 
     private EntityQuery<HandsComponent> _handsQuery;
     private EntityQuery<InventoryComponent> _inventoryQuery;
@@ -220,6 +222,13 @@ public abstract class SharedStationSpawningSystem : EntitySystem
             }
         }
 
+        // Begin Aurora's Song 14 additions
+        if (_net.IsServer)
+        {
+            _internalEncryptionLoadout.TryEquipLoadoutEquipment(entity, startingGear);
+        }
+        // End Aurora's Song 14 additions
+
         // Frontier: extra fields
         // Implants must run on server, container initialization only runs on server, and lobby dummies don't work.
         if (_net.IsServer && startingGear.Implants.Count > 0)
@@ -283,6 +292,13 @@ public abstract class SharedStationSpawningSystem : EntitySystem
     /// <param name="encryptionKeys">The encryption key prototype IDs to equip.</param>
     protected void EquipEncryptionKeysIfPossible(EntityUid entity, List<EntProtoId> encryptionKeys)
     {
+        // Begin Aurora's Song 14 additions
+        if (_internalEncryptionLoadout.TryEquipLoadoutEncryptionKeys(entity, encryptionKeys))
+        {
+            return;
+        }
+        // End Aurora's Song 14 additions
+
         if (!InventorySystem.TryGetSlotEntity(entity, "ears", out var slotEnt))
         {
             DebugTools.Assert(false, $"Entity {entity} has a non-empty encryption key loadout, but doesn't have a headset!");

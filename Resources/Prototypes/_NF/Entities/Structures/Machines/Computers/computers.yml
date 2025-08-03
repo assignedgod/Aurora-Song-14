@@ -352,6 +352,12 @@
   - type: Construction
     graph: ComputerContrabandPalletConsolePirate
     node: repaired
+  - type: UserInterface
+    interfaces:
+      enum.ContrabandPalletConsoleUiKey.Contraband:
+        type: PiratePalletConsoleBoundUserInterface
+      enum.WiresUiKey.Key:
+        type: WiresBoundUserInterface
 
 - type: entity
   parent: [BaseStructureDisableToolUse, BaseStructureIndestructible, ComputerBroken]
