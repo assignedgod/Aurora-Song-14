@@ -100,7 +100,7 @@
   parent: NFClothingHeadHardsuitWithLightBaseNfsd
   id: ClothingHeadHelmetHardsuitNfsdBronze
   categories: [ HideSpawnMenu ]
-  name: NFSD patrol suit helmet
+  name: SLE patrol suit helmet
   description: Lightly armored softsuit helmet for beat-cop needs.
   components:
   - type: Sprite
@@ -161,8 +161,8 @@
   parent: NFClothingHeadHardsuitWithLightBaseNfsd
   id: ClothingHeadHelmetHardsuitNfsdExperimental
   categories: [ HideSpawnMenu ]
-  name: NFSD experimental combat suit helmet
-  description: Heavily armored hardsuit helmet for NFSD raids.
+  name: SLE experimental combat suit helmet
+  description: Heavily armored hardsuit helmet for SLE raids.
   components:
   - type: Sprite
     sprite: _NF/Clothing/Head/Hardsuits/nfsd_experimental.rsi
@@ -184,8 +184,8 @@
   parent: NFClothingHeadHardsuitWithLightBaseNfsd
   id: ClothingHeadHelmetHardsuitNfsdCombat
   categories: [ HideSpawnMenu ]
-  name: NFSD combat suit helmet
-  description: Medium armored hardsuit helmet for NFSD raids.
+  name: SLE combat suit helmet
+  description: Medium armored hardsuit helmet for SLE raids.
   components:
   - type: Sprite
     sprite: _NF/Clothing/Head/Hardsuits/nfsd_combat.rsi
@@ -209,8 +209,8 @@
   parent: NFClothingHeadHardsuitWithLightBaseNfsd
   id: ClothingHeadHelmetHardsuitNfsdCommand
   categories: [ HideSpawnMenu ]
-  name: NFSD command combat suit helmet
-  description: Medium armored hardsuit helmet for NFSD raids.
+  name: SLE command combat suit helmet
+  description: Medium armored hardsuit helmet for SLE raids.
   components:
   - type: Sprite
     sprite: _NF/Clothing/Head/Hardsuits/nfsd_command.rsi
