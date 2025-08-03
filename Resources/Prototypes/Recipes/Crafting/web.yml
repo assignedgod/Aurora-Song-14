@@ -76,7 +76,6 @@
   objectType: Item
 
 - type: construction
-  name: web cocoon
   id: WebCocoon
   graph: WebObjects
   startNode: start
@@ -85,7 +84,6 @@
   entityWhitelist:
     tags:
     - SpiderCraft
-  description: "Strong web cocoon used to restrain criminal or preys, its also prevent rotting."
   icon:
     sprite: Clothing/OuterClothing/Misc/webcocoon.rsi
     state: cocoon
