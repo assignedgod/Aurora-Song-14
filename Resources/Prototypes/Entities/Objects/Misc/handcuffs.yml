@@ -169,7 +169,7 @@
 
 - type: entity
   name: web cocoon
-  description: Strong web cocoon used to restrain criminal or preys, its also prevent rotting.
+  description: Strong web cocoon used to restrain criminals or prey, it also prevents rotting.
   id: WebCocoon
   parent: ClothingOuterStraightjacket
   components:
