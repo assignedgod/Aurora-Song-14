@@ -225,7 +225,7 @@
 - type: entity
   parent: [ ClothingBackpackDuffelNfsdBrown, StorageFillEVASuitNfsd ]
   id: ClothingBackpackDuffelEVABundleNfsd
-  name: NFSD EVA bundle
+  name: SLE EVA bundle
   suffix: Filled
 
 - type: entity

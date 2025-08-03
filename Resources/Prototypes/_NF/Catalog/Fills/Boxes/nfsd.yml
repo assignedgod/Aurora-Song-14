@@ -3,7 +3,7 @@
   name: box of NFSD items
   parent: BoxCardboard
   id: BoxBundleNfsd
-  description: A box full of NFSD items.
+  description: A box full of SLE items.
   components:
   - type: Sprite
     layers:
