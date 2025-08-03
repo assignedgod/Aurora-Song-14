@@ -155,7 +155,7 @@
   id: NfsdTechFab
   parent: [ NFBlueprintReceiverBase, SecurityTechFab ]
   name: SLE techfab
-  description: Prints equipment for use by NFSD.
+  description: Prints equipment for use by SLE.
   components:
   - type: Sprite
     sprite: _NF/Structures/Machines/techfab.rsi

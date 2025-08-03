@@ -1467,7 +1467,7 @@
   parent: NFDepartmentalEVASuitShoulderLight
   id: ClothingOuterEVASuitNfsd
   name: SLE EVA suit
-  description: An EVA suit with a built-in helmet commonly issued to NFSD personnel.
+  description: An EVA suit with a built-in helmet commonly issued to SLE personnel.
   components:
   - type: Sprite
     layers:

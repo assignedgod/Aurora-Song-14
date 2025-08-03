@@ -17,7 +17,7 @@
   parent: [ BaseC2ContrabandUnredeemable, ClothingHeadHelmetBasic ]
   id: ClothingHeadHelmetNfsd
   name: SLE helmet
-  description: An NFSD issued helmet to protect your head.
+  description: An SLE issued helmet to protect your head.
   components:
   - type: Sprite
     sprite: _NF/Clothing/Head/Helmets/nfsd.rsi

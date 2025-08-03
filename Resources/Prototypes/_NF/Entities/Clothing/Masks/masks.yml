@@ -46,7 +46,7 @@
   parent: [ BaseC2ContrabandUnredeemable, ClothingMaskGasSecurity ]
   id: ClothingMaskGasNfsd
   name: SLE gas mask
-  description: A standard issue NFSD gas mask.
+  description: A standard issue SLE gas mask.
   components:
   - type: Sprite
     sprite: _NF/Clothing/Mask/nfsd.rsi

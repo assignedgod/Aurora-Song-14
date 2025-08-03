@@ -143,7 +143,7 @@
   parent: ClothingHeadBaseButcherable
   id: ClothingHeadHatNfsdBeretGreen
   name: SLE beret
-  description: A green beret for use by NFSD officers.
+  description: A green beret for use by SLE officers.
   components:
   - type: Sprite
     sprite: _NF/Clothing/Head/Hats/nfsd_beret_green.rsi
@@ -155,7 +155,7 @@
   parent: ClothingHeadBaseButcherable
   id: ClothingHeadHatNfsdBeretBrown
   name: SLE beret
-  description: A brown beret for use by NFSD officers.
+  description: A brown beret for use by SLE officers.
   components:
   - type: Sprite
     sprite: _NF/Clothing/Head/Hats/nfsd_beret_brown.rsi
@@ -167,7 +167,7 @@
   parent: ClothingHeadBaseButcherable
   id: ClothingHeadHatNfsdBeretCream
   name: SLE beret
-  description: A cream beret for use by NFSD officers.
+  description: A cream beret for use by SLE officers.
   components:
   - type: Sprite
     sprite: _NF/Clothing/Head/Hats/nfsd_beret_cream.rsi

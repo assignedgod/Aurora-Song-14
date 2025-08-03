@@ -866,7 +866,7 @@
   parent: UniformPrinterFlatpack
   id: NfsdTechFabFlatpack
   name: SLEtechfab flatpack
-  description: A flatpack used for constructing an NFSD techfab.
+  description: A flatpack used for constructing an SLE techfab.
   components:
   - type: Flatpack
     entity: NfsdTechFab

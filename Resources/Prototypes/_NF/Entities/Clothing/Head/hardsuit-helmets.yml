@@ -162,7 +162,7 @@
   id: ClothingHeadHelmetHardsuitNfsdExperimental
   categories: [ HideSpawnMenu ]
   name: SLE experimental combat suit helmet
-  description: Heavily armored hardsuit helmet for NFSD raids.
+  description: Heavily armored hardsuit helmet for SLE raids.
   components:
   - type: Sprite
     sprite: _NF/Clothing/Head/Hardsuits/nfsd_experimental.rsi
@@ -185,7 +185,7 @@
   id: ClothingHeadHelmetHardsuitNfsdCombat
   categories: [ HideSpawnMenu ]
   name: SLE combat suit helmet
-  description: Medium armored hardsuit helmet for NFSD raids.
+  description: Medium armored hardsuit helmet for SLE raids.
   components:
   - type: Sprite
     sprite: _NF/Clothing/Head/Hardsuits/nfsd_combat.rsi
@@ -210,7 +210,7 @@
   id: ClothingHeadHelmetHardsuitNfsdCommand
   categories: [ HideSpawnMenu ]
   name: SLE command combat suit helmet
-  description: Medium armored hardsuit helmet for NFSD raids.
+  description: Medium armored hardsuit helmet for SLE raids.
   components:
   - type: Sprite
     sprite: _NF/Clothing/Head/Hardsuits/nfsd_command.rsi
