@@ -29,11 +29,11 @@
         layer:
         - TabletopMachineLayer
   - type: Sprite
-    sprite: _Floof/Structures/pole.rsi
+    sprite: Floof/Structures/pole.rsi
     state: pole
     drawdepth: SmallObjects
   - type: Icon
-    sprite: _Floof/Structures/pole.rsi
+    sprite: Floof/Structures/pole.rsi
     state: pole
   - type: Damageable
     damageContainer: Inorganic
@@ -88,11 +88,11 @@
         layer:
         - TabletopMachineLayer
   - type: Sprite
-    sprite: _Floof/Structures/pole.rsi
+    sprite: Floof/Structures/pole.rsi
     state: pole_base
     drawdepth: SmallObjects
   - type: Icon
-    sprite: _Floof/Structures/pole.rsi
+    sprite: Floof/Structures/pole.rsi
     state: pole_base
   - type: Construction
     graph: Lewd
