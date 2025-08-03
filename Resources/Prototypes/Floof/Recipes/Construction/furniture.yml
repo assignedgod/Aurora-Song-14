@@ -5,10 +5,9 @@
   startNode: start
   targetNode: FurnStripPole
   category: construction-category-furniture
-  description: A long pole on a pedestal used for showing off your great 'assets'.
-  icon:
-    sprite: Floof/Structures/pole.rsi
-    state: pole
+#  icon:
+#    sprite: Floof/Structures/pole.rsi
+#    state: pole
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
