@@ -84,7 +84,4 @@
   entityWhitelist:
     tags:
     - SpiderCraft
-  icon:
-    sprite: Clothing/OuterClothing/Misc/webcocoon.rsi
-    state: cocoon
   objectType: Item
