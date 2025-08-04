@@ -5,10 +5,9 @@ using System.Text.Json;
 using System.Threading;
 using System.Threading.Tasks;
 using Content.Server.Administration.Logs;
+using Content.Shared._Floof.Consent;
 using Content.Shared.Administration.Logs;
 using Content.Shared.CCVar;
-using Content.Shared.Consent;
-using Content.Shared.Construction.Prototypes;
 using Content.Shared.Database;
 using Content.Shared.Preferences;
 using Content.Shared.Ghost.Roles; // Frontier: ghost role whitelists

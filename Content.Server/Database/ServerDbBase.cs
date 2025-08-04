@@ -9,8 +9,11 @@ using System.Threading.Tasks;
 using Content.Server.Administration.Logs;
 using Content.Server.Administration.Managers;
 using Content.Shared.Administration.Logs;
-using Content.Shared.Consent; //Floofstation
 using Content.Shared.Construction.Prototypes;
+using Content.Shared._CD.Records;
+using Content.Shared._Floof.Consent;  //Floofstation
+using Content.Shared.Administration.Logs;
+using Content.Shared.Clothing.Loadouts.Systems;
 using Content.Shared.Database;
 using Content.Shared.Ghost.Roles;
 using Content.Shared.Humanoid;

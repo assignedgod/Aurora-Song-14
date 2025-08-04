@@ -30,7 +30,6 @@ public abstract partial class SharedMindSystem : EntitySystem
     [Dependency] private readonly MetaDataSystem _metadata = default!;
     [Dependency] private readonly EntityWhitelistSystem _whitelist = default!;
 
-    [ViewVariables]
     protected readonly Dictionary<NetUserId, EntityUid> UserMinds = new();
 
     public override void Initialize()

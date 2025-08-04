@@ -1,7 +1,13 @@
-using Content.Shared.Consent;
+// SPDX-FileCopyrightText: 2024 Pierson Arnold <greyalphawolf7@gmail.com>
+// SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+using Content.Shared._Floof.Consent;
 using Robust.Shared.Network;
 
-namespace Content.Client.Consent;
+
+namespace Content.Client._Floof.Consent;
 
 public sealed class ClientConsentManager : IClientConsentManager
 {

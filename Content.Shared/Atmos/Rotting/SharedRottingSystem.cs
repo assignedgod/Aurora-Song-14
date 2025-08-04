@@ -123,6 +123,9 @@ public abstract class SharedRottingSystem : EntitySystem
         if (TryComp<MobStateComponent>(uid, out var mobState) && !_mobState.IsDead(uid, mobState))
             return false;
 
+        if (HasComp<DragonUnrottingComponent>(uid))
+            return false;
+
         if (_container.TryGetOuterContainer(uid, Transform(uid), out var container) &&
             HasComp<AntiRottingContainerComponent>(container.Owner))
         {
