@@ -41,6 +41,7 @@ namespace Content.Shared.PDA
             ItemSlotsSystem.RemoveItemSlot(uid, pda.PenSlot);
             ItemSlotsSystem.RemoveItemSlot(uid, pda.PaiSlot);
             ItemSlotsSystem.RemoveItemSlot(uid, pda.BookSlot);
+            ItemSlotsSystem.RemoveItemSlot(uid, pda.LicenseSlot); // Aurora
         }
 
         protected virtual void OnItemInserted(EntityUid uid, PdaComponent pda, EntInsertedIntoContainerMessage args)

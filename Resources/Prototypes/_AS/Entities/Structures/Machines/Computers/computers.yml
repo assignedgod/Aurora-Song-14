@@ -5,6 +5,15 @@
   description: Terminal for printing licenses.
   components:
   - type: LicenseConsole
+    holderIdSlot:
+      ejectSound: /Audio/Machines/id_swipe.ogg
+      insertSound: /Audio/Machines/id_insert.ogg
+      whitelist:
+        components:
+        - IdCard
+    licenseName: LicenseContrabandHandling
+  - type: AccessReader
+    access: [["Bailiff"]]
   - type: ActivatableUI
     key: enum.LicenseConsoleUiKey.Key
   - type: UserInterface
@@ -37,3 +46,8 @@
   - type: Tag
     tags:
     - AccessBreakerImmune
+  - type: ItemSlots
+  - type: ContainerContainer
+    containers:
+      board: !type:Container
+      LicenseConsole-holderId: !type:ContainerSlot
