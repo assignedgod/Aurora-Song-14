@@ -37,11 +37,11 @@ public sealed partial class ContrabandComponent : Component
 
     // Frontier: turn-in features
     /// <summary>
-    ///     The set of currency types this item can be redeemed 
+    ///     The set of currency types this item can be redeemed
     /// </summary>
     [DataField]
     [AutoNetworkedField]
-    public Dictionary<ProtoId<CurrencyPrototype>, int> TurnInValues = new();
+    public Dictionary<ProtoId<CurrencyPrototype>, int>? TurnInValues = new();
 
     /// <summary>
     ///     If true, will not show contraband status on examine.  Useful for chameleon shoes and other camouflaged items.

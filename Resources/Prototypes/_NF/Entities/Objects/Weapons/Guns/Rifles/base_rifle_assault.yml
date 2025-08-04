@@ -46,7 +46,7 @@
 
 - type: entity
   id: NFBaseWeaponFrameRifleAssaultCybersun
-  parent: [ BaseC3SyndicateContraband, NFBaseWeaponFrameRifleAssault ]
+  parent: [ BaseC2ContrabandUnredeemable, NFBaseWeaponFrameRifleAssault ]
   abstract: true
   components:
   - type: Gun

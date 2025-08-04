@@ -8,6 +8,7 @@
   markingLimits: MobSlimeMarkingLimits
   dollPrototype: MobSlimePersonDummy
   skinColoration: Hues
+#  customName: true
 
 - type: speciesBaseSprites
   id: MobSlimeSprites
@@ -15,9 +16,14 @@
     Head: MobSlimeHead
     Hair: MobSlimeMarkingFollowSkin
     FacialHair: MobSlimeMarkingFollowSkin
-    UndergarmentTop: MobHumanoidAnyMarking
+    Snout: MobSlimeMarkingFollowSkin
     UndergarmentBottom: MobHumanoidAnyMarking
+    UndergarmentTop: MobHumanoidAnyMarking
     Chest: MobSlimeTorso
+    HeadTop: MobSlimeMarkingFollowSkin
+    HeadSide: MobSlimeMarkingFollowSkin
+    Tail: MobSlimeMarkingFollowSkin
+#    Wings: MobSlimeMarkingFollowSkin //Need to work on this, Den has a different visual layer composition
     Eyes: MobHumanoidEyes
     LArm: MobSlimeLArm
     RArm: MobSlimeRArm
@@ -37,14 +43,44 @@
     FacialHair:
       points: 1
       required: false
-    Chest:
-      points: 4 # imp 2<4
+    Tail:
+      points: 1
       required: false
-    Legs:
-      points: 8 # imp 4<8
+#    Wings:
+#      points: 1
+#      required: false
+    Snout:
+      points: 1
+      required: false
+    Head:
+      points: 1
+      required: false
+    HeadTop:
+      points: 2
+      required: false
+    HeadSide:
+      points: 2
+      required: false
+    Chest:
+      points: 4 # imp 1<4
+      required: false
+    Genitals:
+      points: 1
+      required: false
+    Nipples:
+      points: 2
+      required: false
+    UndergarmentBottom:
+      points: 1
+      required: false
+    UndergarmentTop:
+      points: 1
       required: false
     Arms:
-      points: 8 # imp 4<8
+      points: 4
+      required: false
+    Legs:
+      points: 4
       required: false
 
 - type: humanoidBaseSprite
