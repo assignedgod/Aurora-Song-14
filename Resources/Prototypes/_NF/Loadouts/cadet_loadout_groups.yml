@@ -3,7 +3,7 @@
   name: loadout-group-contractor-jumpsuit
   loadouts:
   - CadetClothingUniformJumpsuitCadet
-  - CadetClothingUniformJumpskirtCadet.
+  - CadetClothingUniformJumpskirtCadet
   - CadetClothingUniformJumpsuitSle # Aurora Song
   - CadetClothingUniformJumpskirtSle # Aurora Song
   fallbacks:
