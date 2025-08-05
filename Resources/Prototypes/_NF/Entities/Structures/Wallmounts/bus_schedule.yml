@@ -43,3 +43,11 @@
   components:
   - type: BusSchedule
     routeId: MinorPointsOfInterest
+# Aurora
+- type: entity
+  parent: BusSchedule
+  id: BusScheduleRoute4
+  suffix: Route 4, Arrivals
+  components:
+  - type: BusSchedule
+    routeId: ArrivalsExpress
