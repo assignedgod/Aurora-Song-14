@@ -1,6 +1,6 @@
 # Author Info
 # GitHub:
-# Discord: Tjsip
+# Discord: phoebe_the_phoenix0227, Inkbean, vandanna, .grimmn, Topazs
 
 # Maintainer Info
 # GitHub: ???
@@ -8,46 +8,46 @@
 
 # Notes:
 #
-#- type: pointOfInterest
-#  id: Nfsd
-#  parent: BasePOI
-#  name: 'NFSD Outpost'
-#  minimumDistance: 750
-#  maximumDistance: 1000
-#  spawnGroup: Required
-#  gridPath: /Maps/_NF/POI/nfsd.yml
-#  addComponents:
-#  - type: IFF
-#    color: "#ae7d57"
-#  - type: ProtectedGrid
-#    preventEmpEvents: true
-#  - type: StationTransit
-#    routes:
-#      SpawnPoints: 10
+- type: pointOfInterest
+  id: Sleo
+  parent: BasePOI
+  name: 'SLE Outpost'
+  minimumDistance: 750
+  maximumDistance: 1000
+  spawnGroup: Required
+  gridPath: /Maps/_AS/POI/sle_outpost.yml
+  addComponents:
+  - type: IFF
+    color: "#6690cc"
+  - type: ProtectedGrid
+    preventEmpEvents: true
+  - type: StationTransit
+    routes:
+      SpawnPoints: 10
 
 - type: gameMap
-  id: Nfsd
-  mapName: 'NFSD Outpost'
-  mapPath: /Maps/_NF/POI/nfsd.yml
+  id: Sleo
+  mapName: 'SLE Outpost'
+  mapPath: /Maps/_AS/POI/sle_outpost.yml
   minPlayers: 0
   stations:
-    Nfsd:
+    Sleo:
       stationProto: SecurityFrontierOutpost
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'NFSD Outpost'
+          mapNameTemplate: 'SLE Outpost'
         - type: ExtraStationInformation
           iconPath: /Textures/_NF/Structures/Decoration/banner.rsi/nfsd-banner.png
-          stationSubtext: 'frontier-lobby-nfsd-subtext'
-          stationDescription: 'frontier-lobby-nfsd-description'
+          stationSubtext: 'aurora-lobby-sle-subtext'
+          stationDescription: 'aurora-lobby-sle-description'
           lobbySortOrder: 2
         - type: StationJobs
           availableJobs:
             Sheriff: [ 1, 1 ]
             Bailiff: [ 1, 1 ]
             SeniorOfficer: [ 1, 1 ]
-            Brigmedic: [ 0, 0 ]
-            NFDetective: [ 0, 0 ]
+            Brigmedic: [ 1, 1 ]
+            NFDetective: [ 1, 1 ]
             Deputy: [ 3, 3 ]
             Cadet: [ 0, 0 ]
             # Others:

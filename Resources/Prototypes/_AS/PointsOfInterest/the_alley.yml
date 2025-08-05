@@ -1,6 +1,6 @@
 # Author Info
 # GitHub:
-# Discord: Checkraze
+# Discord: .grimmn, Vandanna, Topazs
 
 # Maintainer Info
 # GitHub: ???
@@ -8,36 +8,36 @@
 
 # Notes:
 # Provides higher end expeditionary ships and a space for vets to spawn in away from potential frontier shenanigans
-#- type: pointOfInterest
-#  id: Lodge
-#  parent: BasePOI
-#  name: 'Expeditionary Lodge'
-#  minimumDistance: 1650
-#  maximumDistance: 3400
-#  spawnGroup: Required
-#  gridPath: /Maps/_NF/POI/lodge.yml
-#  addComponents:
-#  - type: IFF
-#    color: "#3737F8"
-#  - type: StationTransit
-#    routes:
-#      SpawnPoints: 20
+- type: pointOfInterest
+  id: Alley
+  parent: BasePOI
+  name: 'The Alley'
+  minimumDistance: 1650
+  maximumDistance: 3400
+  spawnGroup: Required
+  gridPath: /Maps/_AS/POI/the_alley.yml
+  addComponents:
+  - type: IFF
+    color: "#C8A2C8"
+  - type: StationTransit
+    routes:
+      SpawnPoints: 20
 
 - type: gameMap
-  id: Lodge
-  mapName: 'Expeditionary Lodge'
-  mapPath: /Maps/_NF/POI/lodge.yml
+  id: Alley
+  mapName: 'The Alley'
+  mapPath: /Maps/_AS/POI/the_alley.yml
   minPlayers: 0
   stations:
-    Lodge:
+    Alley:
       stationProto: RecordsFrontierOutpost
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'Expeditionary Lodge'
+          mapNameTemplate: 'The Alley'
         - type: ExtraStationInformation
           iconPath: /Textures/_NF/Markers/jobs.rsi/mercenary.png
-          stationSubtext: 'frontier-lobby-exped-subtext'
-          stationDescription: 'frontier-lobby-exped-description'
+          stationSubtext: 'aurora-lobby-alley-subtext'
+          stationDescription: 'aurora-lobby-alley-description'
           lobbySortOrder: 3
         - type: StationJobs
           availableJobs:
