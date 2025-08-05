@@ -10,6 +10,11 @@
 
 # Aurora Song
 - type: loadout
+  id: SeniorOfficerClothingUniformJumpsuitNfsd
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitNfsd
+
+- type: loadout
   id: SeniorOfficerClothingUniformJumpsuitSle
   equipment:
     jumpsuit: ClothingUniformJumpsuitSle

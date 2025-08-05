@@ -4,11 +4,13 @@
   loadouts:
   - SeniorOfficerClothingUniformJumpsuitSeniorOfficer
   - SeniorOfficerClothingUniformJumpskirtSeniorOfficer
+  - SeniorOfficerClothingUniformJumpsuitNfsd # Aurora Song
   - SeniorOfficerClothingUniformJumpsuitSle # Aurora Song
   - SeniorOfficerClothingUniformJumpskirtSle # Aurora Song
   fallbacks:
   - SeniorOfficerClothingUniformJumpsuitSeniorOfficer
   - SeniorOfficerClothingUniformJumpskirtSeniorOfficer
+  - SeniorOfficerClothingUniformJumpsuitNfsd # Aurora Song
   - SeniorOfficerClothingUniformJumpsuitSle # Aurora Song
   - SeniorOfficerClothingUniformJumpskirtSle # Aurora Song
 
