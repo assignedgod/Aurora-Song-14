@@ -1,9 +1,0 @@
-- type: loadout
-  id: BrigmedicClothingUniformJumpsuitSle
-  equipment:
-    jumpsuit: ClothingUniformJumpsuitSle
-
-- type: loadout
-  id: BrigmedicClothingUniformJumpskirtSle
-  equipment:
-    jumpsuit: ClothingUniformJumpskirtSle
