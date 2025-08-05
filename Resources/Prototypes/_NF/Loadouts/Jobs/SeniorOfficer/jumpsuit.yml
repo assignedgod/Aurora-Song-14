@@ -7,3 +7,15 @@
   id: SeniorOfficerClothingUniformJumpskirtSeniorOfficer
   equipment:
     jumpsuit: ClothingUniformJumpskirtNfsd
+
+# Aurora Song
+- type: loadout
+  id: SeniorOfficerClothingUniformJumpsuitSle
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitSle
+
+- type: loadout
+  id: SeniorOfficerClothingUniformJumpskirtSle
+  equipment:
+    jumpsuit: ClothingUniformJumpskirtSle
+# Aurora Song

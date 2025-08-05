@@ -7,3 +7,15 @@
   id: BailiffClothingUniformJumpskirtBailiff
   equipment:
     jumpsuit: ClothingUniformJumpskirtNfsd
+
+# Aurora Song
+- type: loadout
+  id: BailiffClothingUniformJumpsuitSle
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitSle
+
+- type: loadout
+  id: BailiffClothingUniformJumpskirtSle
+  equipment:
+    jumpsuit: ClothingUniformJumpskirtSle
+# Aurora Song

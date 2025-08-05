@@ -4,9 +4,13 @@
   loadouts:
   - SheriffClothingUniformJumpsuitSheriff
   - SheriffClothingUniformJumpskirtSheriff
+  - SheriffClothingUniformJumpsuitSle # Aurora Song
+  - SheriffClothingUniformJumpskirtSle # Aurora Song
   fallbacks:
   - SheriffClothingUniformJumpsuitSheriff
   - SheriffClothingUniformJumpskirtSheriff
+  - SheriffClothingUniformJumpsuitSle # Aurora Song
+  - SheriffClothingUniformJumpskirtSle # Aurora Song
 
 - type: loadoutGroup
   id: SheriffOuterClothing

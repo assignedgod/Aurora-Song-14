@@ -4,10 +4,14 @@
   loadouts:
   - SeniorOfficerClothingUniformJumpsuitSeniorOfficer
   - SeniorOfficerClothingUniformJumpskirtSeniorOfficer
+  - SeniorOfficerClothingUniformJumpsuitSle # Aurora Song
+  - SeniorOfficerClothingUniformJumpskirtSle # Aurora Song
   fallbacks:
   - SeniorOfficerClothingUniformJumpsuitSeniorOfficer
   - SeniorOfficerClothingUniformJumpskirtSeniorOfficer
-  
+  - SeniorOfficerClothingUniformJumpsuitSle # Aurora Song
+  - SeniorOfficerClothingUniformJumpskirtSle # Aurora Song
+
 - type: loadoutGroup
   id: SeniorOfficerOuterClothing
   name: loadout-group-contractor-outerclothing

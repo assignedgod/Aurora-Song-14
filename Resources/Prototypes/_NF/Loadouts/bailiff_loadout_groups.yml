@@ -4,9 +4,13 @@
   loadouts:
   - BailiffClothingUniformJumpsuitBailiff
   - BailiffClothingUniformJumpskirtBailiff
+  - BailiffClothingUniformJumpsuitSle # Aurora Song
+  - BailiffClothingUniformJumpskirtSle # Aurora Song
   fallbacks:
   - BailiffClothingUniformJumpsuitBailiff
   - BailiffClothingUniformJumpskirtBailiff
+  - BailiffClothingUniformJumpsuitSle # Aurora Song
+  - BailiffClothingUniformJumpskirtSle # Aurora Song
 
 - type: loadoutGroup
   id: BailiffOuterClothing
