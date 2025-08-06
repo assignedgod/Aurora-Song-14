@@ -11,4 +11,5 @@
   components:
   - type: Contraband
     severity: Class2Unregistered
-    turnInValues:
+    turnInValues: &twoFUC
+      FrontierUplinkCoin: 2
