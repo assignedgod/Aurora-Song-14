@@ -1,25 +1,4 @@
 - type: entity
-  name: Siobhan
-  parent: MobArcticFox
-  id: MobArcticFoxSiobhan
-  description: Her name is pronounced "Shivahn", but she is known as Shivs by her associates. A fluffy, adorable arctic fox.
-  components:
-  - type: InteractionPopup
-    successChance: 1
-  - type: Butcherable
-    spawned:
-    - id: FoodMeat
-      amount: 3
-  - type: Grammar
-    attributes:
-      proper: true
-      gender: female
-  - type: Tag
-    tags:
-    - CannotSuicide
-    - VimPilot
-
-- type: entity
   name: Laika
   parent: MobSecDog
   id: MobSecDogLaika
@@ -48,3 +27,4 @@
     tags:
     - CannotSuicide
     - VimPilot
+    - DoorBumpOpener
