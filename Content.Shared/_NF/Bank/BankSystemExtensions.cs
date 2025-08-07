@@ -72,9 +72,10 @@ public static class BankSystemExtensions
         return ToCurrencyString(amount, culture, symbolOverride: "DB", symbolLocation: CurrencySymbolLocation.Suffix);
     }
 
-    public static string ToFUCString(int amount, CultureInfo? culture = null)
+    //Rewriting this to use SCU as the symbol, as part of the SLE rework. | - Aurora Song
+    public static string ToSCUString(int amount, CultureInfo? culture = null)
     {
-        return ToCurrencyString(amount, culture, symbolOverride: "FUC", symbolLocation: CurrencySymbolLocation.Suffix);
+        return ToCurrencyString(amount, culture, symbolOverride: "SCU", symbolLocation: CurrencySymbolLocation.Suffix);
     }
 }
 
