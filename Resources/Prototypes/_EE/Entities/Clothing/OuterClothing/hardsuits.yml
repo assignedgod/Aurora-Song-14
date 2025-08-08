@@ -19,7 +19,7 @@
 - type: entity
   parent: ClothingOuterHardsuitSyndie
   id: ClothingOuterHardsuitShanlinUnpainted
-  name: Cybersun tacsuit
+  name: Debranded Armored Hardsuit
   description: A special suit that protects against hazardous, low pressure environments. Has radiation shielding.
   components:
   - type: Sprite
@@ -41,7 +41,7 @@
 - type: entity
   parent: ClothingOuterHardsuitSyndieElite
   id: ClothingOuterHardsuitShiweiUnpainted
-  name: Cybersun tacsuit
+  name: Debranded Elite Armored Hardsuit
   description: A special suit that protects against hazardous, low pressure environments. Has radiation shielding.
   components:
   - type: Sprite

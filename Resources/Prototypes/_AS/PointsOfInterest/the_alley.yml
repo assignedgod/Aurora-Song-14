@@ -1,0 +1,47 @@
+# Author Info
+# GitHub:
+# Discord: .grimmn, Vandanna, Topazs
+
+# Maintainer Info
+# GitHub: ???
+# Discord: ???
+
+# Notes:
+# Provides higher end expeditionary ships and a space for vets to spawn in away from potential frontier shenanigans
+- type: pointOfInterest
+  id: Alley
+  parent: BasePOI
+  name: 'The Alley'
+  minimumDistance: 1650
+  maximumDistance: 3400
+  spawnGroup: Required
+  gridPath: /Maps/_AS/POI/the_alley.yml
+  addComponents:
+  - type: IFF
+    color: "#C8A2C8"
+  - type: StationTransit
+    routes:
+      SpawnPoints: 20
+
+- type: gameMap
+  id: Alley
+  mapName: 'The Alley'
+  mapPath: /Maps/_AS/POI/the_alley.yml
+  minPlayers: 0
+  stations:
+    Alley:
+      stationProto: RecordsFrontierOutpost
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'The Alley'
+        - type: ExtraStationInformation
+          iconPath: /Textures/_NF/Markers/jobs.rsi/mercenary.png
+          stationSubtext: 'aurora-lobby-alley-subtext'
+          stationDescription: 'aurora-lobby-alley-description'
+          lobbySortOrder: 3
+        - type: StationJobs
+          availableJobs:
+            Pilot: [ -1, -1 ]
+            Mercenary: [ -1, -1 ]
+        - type: StationDeadDrop
+          maxDeadDrops: 1 # Fewer here, players start here.

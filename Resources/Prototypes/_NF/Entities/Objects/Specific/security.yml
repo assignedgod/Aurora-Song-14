@@ -1,5 +1,5 @@
 - type: entity
-  name: frontier uplink coin
+  name: security credit unit
   parent: BaseItem
   id: FrontierUplinkCoin
   suffix: 20 TC
