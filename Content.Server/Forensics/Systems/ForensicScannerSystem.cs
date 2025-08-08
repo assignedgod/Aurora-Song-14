@@ -133,7 +133,7 @@ namespace Content.Server.Forensics
             {
                 msgString = msgString + " " + Loc.GetString("forensic-reward-amount",
                 ("spesos", BankSystemExtensions.ToSpesoString(spesoAmount)),
-                ("fuc", BankSystemExtensions.ToFUCString(fucAmount.Int())));
+                ("scu", BankSystemExtensions.ToSCUString(fucAmount.Int()))); // Aurora Song: use SCU as the symbol
             }
             else
             {

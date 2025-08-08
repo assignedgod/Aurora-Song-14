@@ -340,13 +340,13 @@ uplink-spaceblade-syndicate-desc = Made from real metal!
 uplink-emag-pass-name = Disposable Emag
 uplink-emag-pass-desc = A card used to hack devices. Usable three times.
 
-uplink-revolver-ritland-name = Ritland-45
-uplink-revolver-ritland-desc = Usually reliable, heavy revolver. Do you feel lucky, punk?
+uplink-revolver-python-name2 = Python
+uplink-revolver-python-desc2 = Usually reliable, heavy revolver. Do you feel lucky, punk?
 
 uplink-pistol-cobra45-desc = A rugged, robust operator handgun with inbuilt silencer. Uses .45 pistol ammo.
 
-uplink-pistol-magazine-cobra-name = Cobra .45 Pistol Magazine
-uplink-pistol-magazine-cobra-desc = A loaded magazine for Cobra .45 pistol.
+uplink-pistol-magazine-cobra-name = Cobra .25 Magazine
+uplink-pistol-magazine-cobra-desc = A loaded magazine for a Cobra pistol.
 
 uplink-speedloader-magnum-non-ap-name = .45 Pistol Speed Loader
 uplink-speedloader-magnum-non-ap-desc = A .45 pistol speed loader with 6 .45 pistol caliber rounds.

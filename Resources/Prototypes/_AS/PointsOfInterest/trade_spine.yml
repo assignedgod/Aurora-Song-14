@@ -1,0 +1,52 @@
+# Author Info
+# GitHub: ???
+# Discord: Vandanna, Topazs
+
+# Maintainer Info
+# GitHub: ???
+# Discord: ???
+
+# Notes:
+# Overflow Cargo pads and a collection of vendors
+- type: pointOfInterest
+  id: TradeSpine
+  parent: BasePOI
+  name: Trade Spine
+  minimumDistance: 250
+  maximumDistance: 300
+  spawnGroup: MarketStation
+  gridPath: /Maps/_AS/POI/trade_spine.yml
+  addComponents:
+  - type: IFF
+    color: "#37C837"
+  - type: StationTransit
+    routes:
+      TradeExpress: 10
+  - type: ProtectedGrid
+    preventArtifactTriggers: true
+  - type: SolarPoweredGrid
+    trackOnInit: true
+    doNotCull: true
+  - type: WorldGenDistanceCarver
+    distanceThresholds:
+      # Dead zone
+      - maxDistance: 500
+        prob: 0.0
+      - maxDistance: 1000
+        prob: 0.3
+
+- type: gameMap
+  id: TradeSpine
+  mapName: 'Trade Spine'
+  mapPath: /Maps/_AS/POI/trade_spine.yml
+  minPlayers: 0
+  stations:
+    TradeSpine:
+      stationProto: MarketFrontierOutpost
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Trade Spine'
+        - type: StationDeadDrop
+          maxDeadDrops: 2 # A few, its not as big as the original trade outpost
+        - type: TradeCrateDestination
+          destinationProto: Trade

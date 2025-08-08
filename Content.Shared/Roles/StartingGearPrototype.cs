@@ -50,6 +50,10 @@ public sealed partial class StartingGearPrototype : IPrototype, IInheritingProto
     [AlwaysPushInheritance]
     public List<EntProtoId> Cartridges { get; set; } = new();
     // End Frontier: extra fields
+
+    [DataField]
+    [AlwaysPushInheritance]
+    public List<EntProtoId> Licenses { get; set; } = new(); // Aurora - Licenses
 }
 
 /// <summary>
@@ -89,6 +93,7 @@ public interface IEquipmentLoadout
     /// </summary>
     public List<EntProtoId> Cartridges { get; set; }
     // End Frontier: extra fields
+    public List<EntProtoId> Licenses { get; set; } // Aurora - Licenses
 
     /// <summary>
     /// Gets the entity prototype ID of a slot in this starting gear.

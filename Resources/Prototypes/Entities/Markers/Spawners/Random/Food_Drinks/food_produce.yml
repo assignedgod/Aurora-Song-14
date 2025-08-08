@@ -154,6 +154,9 @@
       - id: FoodHoneyComb # Frontier
         amount: !type:RangeNumberSelector # Frontier
           range: 1, 5 # Frontier
+      - id: FoodPomegranate # Aurora
+        amount: !type:RangeNumberSelector # Aurora
+          range: 1, 5
     #rare
     - !type:GroupSelector
       children:

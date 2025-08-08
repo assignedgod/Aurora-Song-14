@@ -42,7 +42,7 @@
         orGroup: Guns
       - id: NFWeaponRevolverWard45 # Frontier WeaponRevolverMateba<NFWeaponRevolverWard45
         orGroup: Guns
-      - id: NFWeaponRevolverRitland45 # Frontier WeaponRevolverPython<NFWeaponRevolverRitland45
+      - id: NFWeaponRevolverPython45 # Frontier WeaponRevolverPython<NFWeaponRevolverPython45
         orGroup: Guns
       - id: NFWeaponRevolverPirate # Frontier: add NF prefix
         orGroup: Guns

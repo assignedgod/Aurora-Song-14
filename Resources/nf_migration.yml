@@ -403,7 +403,7 @@ MagazineGrenadeEmpty: NFMagazineGrenadeEmpty
 MagazineGrenadeFlash: NFMagazineGrenadeFlash
 MagazineGrenadeFrag: NFMagazineGrenadeFrag
 MagazineLightRifle: NFMagazineRifle30
-MagazineLightRifleBox: NFMagazineBoxRifle20 # 20??
+MagazineLightRifleBox: NFMagazineBoxRifle20 # 20?? // Aurora: NFMagazineBoxRifle30
 MagazineLightRifleEmpty: NFMagazineRifle30Empty
 MagazineLightRifleIncendiary: NFMagazineRifle30Incendiary
 MagazineLightRifleLowCapacity: NFMagazineLowCapacityRifle30
@@ -515,7 +515,7 @@ WeaponMailLake: NFWeaponLauncherMail
 WeaponMakeshiftLaser: NFWeaponEnergyPistolLaserMakeshift
 WeaponMinigun: null
 WeaponNFLaserPistol: NFWeaponEnergyPistolLaser
-WeaponParticleDecelerator: null
+WeaponParticleDecelerator: NFWeaponParticleDecelerator
 WeaponPistolCHIMP: NFWeaponPistolCHIMP
 WeaponPistolCHIMPUpgraded: NFWeaponPistolCHIMPUpgraded
 WeaponPistolCobra: NFWeaponPistolCobra
@@ -546,8 +546,8 @@ WeaponRevolverLucky: NFWeaponRevolverLucky
 WeaponRevolverMateba: NFWeaponRevolverWard45
 WeaponRevolverMatebaAP: NFWeaponRevolverWard45
 WeaponRevolverPirate: NFWeaponRevolverPirate
-WeaponRevolverPython: NFWeaponRevolverRitland45
-WeaponRevolverPythonAP: NFWeaponRevolverRitland45
+WeaponRevolverPython: NFWeaponRevolverPython45
+WeaponRevolverPythonAP: NFWeaponRevolverPython45
 WeaponRifleAk: NFWeaponRifleAssaultSm
 WeaponRifleFoam: NFWeaponRifleFoam
 WeaponRifleGestio: NFWeaponRifleAssaultGestio
@@ -603,3 +603,7 @@ LockerScienceFilled: NFLockerScienceFilled
 
 # 2025-07-01 | Aurora: M90 refactored to no longer have useless GL
 NFWeaponRifleAssaultM90GrenadeLauncher: NFWeaponRifleAssaultM90
+# 2025-06-07 The Great Charger Debacle
+PowerCellRechargerFlatpack: WeaponCapacitorRechargerFlatpack
+PowerCellRecharger: WeaponCapacitorRecharger
+CellRechargerCircuitboard: WeaponCapacitorRechargerCircuitboard

@@ -10,7 +10,10 @@ uplink-mercenary-scafhardsuit-name = SCAF HardsuitMore actions
 uplink-mercenary-scafhardsuit-desc = A suit of vacuum-proof armor highly resistant to projectile weaponry.
 
 uplink-mercenary-hardsuit-name = Merc Hardsuit
-uplink-mercenary-hardsuit-desc = A suit of space-proof vacuum armor that protects against general damage.
+uplink-mercenary-hardsuit-desc = A suit of space-proof vacuum armor that protects against general damage, focusing on bullets and lasers.
+
+uplink-mercenary-hardsuit1-name = Private Security Hardsuit
+uplink-mercenary-hardsuit1-desc = A space-proof armored vac suit that protects against general damage, focusing on bullets and lasers.
 
 uplink-mercenary-rifle1-name = Surplus Lecter
 uplink-mercenary-rifle1-desc = A tried and true surplus automatic rifle. The benchmark.
@@ -40,16 +43,16 @@ uplink-mercenary-combat-medkit-name = Combat Medkit
 uplink-mercenary-combat-medkit-desc = Advanced treatment for hot zones.
 
 uplink-mercenary-combat-punct-kit-name = Pierce Kit
-uplink-mercenary-combat-punct-kit-desc = 4 Ready-made Puncturase injectors, for those projectile wounds.
+uplink-mercenary-combat-punct-kit-desc = 3 Ready-made Puncturase injectors, for those projectile wounds.
 
 uplink-mercenary-combat-crisis-kit-name = Crisis Kit
-uplink-mercenary-combat-crisis-kit-desc = 4 Ready-made Crisis injectors, for when it goes south fast.
+uplink-mercenary-combat-crisis-kit-desc = 3 Ready-made Crisis injectors, for when it goes south fast.
 
 uplink-mercenary-combat-bruiz-kit-name = Bruiz Kit
-uplink-mercenary-combat-bruiz-kit-desc = 4 Ready-made Bruiz injectors, use when beaten black and blue.
+uplink-mercenary-combat-bruiz-kit-desc = 3 Ready-made Bruiz injectors, use when beaten black and blue.
 
 uplink-mercenary-combat-burn-kit-name = Burn Kit
-uplink-mercenary-combat-burn-kit-desc = 4 Ready-made Burn injectors, man burns suck bad.
+uplink-mercenary-combat-burn-kit-desc = 3 Ready-made Burn injectors, man burns suck bad.
 
 uplink-mercenary-35auto-mags-name = .35 Auto SMG mags
 uplink-mercenary-35auto-mags-desc = A quartet of SMG stick magazines loaded up with lethals, go get 'em tiger.

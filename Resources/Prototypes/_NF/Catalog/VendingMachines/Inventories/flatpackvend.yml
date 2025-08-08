@@ -3,7 +3,6 @@
   startingInventory:
     # General
     AutolatheFlatpack: 4294967295 # Infinite
-    PowerCellRechargerFlatpack: 4294967295 # Infinite
     WeaponCapacitorRechargerFlatpack: 4294967295 # Infinite
     BorgChargerFlatpack: 4294967295 # Infinite
     NFHolopadShipFlatpack: 4294967295 # Infinite
@@ -14,7 +13,7 @@
     ScrapProcessorFlatpack: 4294967295 # Infinite
     ShuttleGunKineticFlatpack: 4294967295 # Infinite
     # Service
-    #ServiceTechFabFlatpack: 4294967295 # Infinite
+    ServiceTechFabFlatpack: 4294967295 # Infinite #Aurora Restored
     CutterMachineFlatpack: 4294967295 # Infinite
     ComputerWithdrawBankATMFlatpack: 4294967295 # Infinite
     TelevisionFlatpack: 4294967295 # Infinite

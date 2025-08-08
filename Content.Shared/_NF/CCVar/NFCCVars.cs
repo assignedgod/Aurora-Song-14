@@ -84,12 +84,6 @@ public sealed class NFCCVars
         CVarDef.Create("nf14.worldgen.distance_modifier", 1f, CVar.SERVERONLY);
 
     /// <summary>
-    /// The rough minimum distance between POIs in meters.
-    /// </summary>
-    public static readonly CVarDef<float> MinPOIDistance =
-        CVarDef.Create("nf14.worldgen.min_poi_distance", 400f, CVar.SERVERONLY);
-
-    /// <summary>
     /// The maximum number of times to retry POI placement during world generation.
     /// </summary>
     public static readonly CVarDef<int> POIPlacementRetries =
@@ -239,7 +233,7 @@ public sealed class NFCCVars
     ///     If true, allows map extraction (scrubbing a planet's atmosphere).
     /// </summary>
     public static readonly CVarDef<bool> AllowMapGasExtraction =
-        CVarDef.Create("nf14.atmos.allow_map_gas_extraction", false, CVar.SERVER | CVar.REPLICATED);
+        CVarDef.Create("nf14.atmos.allow_map_gas_extraction", true, CVar.SERVER | CVar.REPLICATED);
 
     /*
      * Audio

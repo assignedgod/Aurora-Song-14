@@ -1,0 +1,10 @@
+- type: entity
+  id: ClothingBeltMilitaryWebbingMedShanaFilled
+  categories: [ HideSpawnMenu ]
+  parent: ClothingBeltMilitaryWebbingMed
+  suffix: Shana Filled
+  components:
+  - type: StorageFill
+    contents:
+      - id: BaseChemistryEmptyVial
+        amount: 8

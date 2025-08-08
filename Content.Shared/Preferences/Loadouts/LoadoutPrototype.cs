@@ -63,6 +63,10 @@ public sealed partial class LoadoutPrototype : IPrototype, IEquipmentLoadout
     public List<EntProtoId> Cartridges { get; set; } = new();
     // End Frontier: extra fields
 
+    [DataField]
+    [AlwaysPushInheritance]
+    public List<EntProtoId> Licenses { get; set; } = new(); // Aurora - Licenses
+
     /// <summary>
     /// Frontier - the cost of the item simple as
     /// </summary>

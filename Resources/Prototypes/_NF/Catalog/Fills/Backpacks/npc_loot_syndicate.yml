@@ -73,7 +73,7 @@
   components:
   - type: SpawnItemsOnUse
     items:
-      - id: NFWeaponRevolverRitland45Expedition
+      - id: NFWeaponRevolverPython45Expedition
       - id: NFSpeedLoaderPistol45
       - id: NFSpeedLoaderPistol45
       - id: SpaceCash5000
@@ -104,7 +104,7 @@
   components:
   - type: SpawnItemsOnUse
     items:
-      - id: NFWeaponRevolverRitland45Expedition
+      - id: NFWeaponRevolverPython45Expedition
       - id: NFSpeedLoaderPistol45
       - id: NFSpeedLoaderPistol45
       - id: SpaceCash2500

@@ -114,3 +114,4 @@
     species: IPC
   - type: Inventory
     templateId: ipc
+  - type: EncryptionKeyHolder # Aurora's Song 14

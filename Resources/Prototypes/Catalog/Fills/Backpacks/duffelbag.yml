@@ -60,12 +60,12 @@
 - type: entity
   parent: ClothingBackpackDuffelSyndicateBundle
   id: ClothingBackpackDuffelSyndicateFilledRevolver
-  name: ritland-45 bundle # Frontier
+  name: Python bundle # Frontier
   description: "Go loud and proud with a fully loaded Magnum Python, bundled with two speed loaders."
   components:
   - type: StorageFill
     contents:
-      - id: NFWeaponRevolverRitland45 # Frontier: WeaponRevolverPythonAP<NFWeaponRevolverRitland45
+      - id: NFWeaponRevolverPython45 # Frontier: WeaponRevolverPythonAP<NFWeaponRevolverPython45
       - id: NFSpeedLoaderPistol45 # Frontier: SpeedLoaderMagnumAP<NFSpeedLoaderPistol45
         amount: 2
 
@@ -122,7 +122,7 @@
         amount: 4
       - id: NFMagazineShotgunDrumSlug # Frontier: MagazineShotgunSlug<NFMagazineShotgunDrumSlug
         amount: 1
-      - id: NFMagazineBoxRifle20 # Frontier: MagazineLightRifleBox<NFMagazineBoxRifle20
+      - id: NFMagazineBoxRifle30 # Frontier: MagazineLightRifleBox<NFMagazineBoxRifle20
         amount: 2
 
 - type: entity
@@ -274,7 +274,7 @@
   - type: StorageFill
     contents:
       - id: SyringeRomerol
-      - id: NFWeaponRevolverRitland45 # Frontier: WeaponRevolverPython<NFWeaponRevolverRitland45
+      - id: NFWeaponRevolverPython45 # Frontier: WeaponRevolverPython<NFWeaponRevolverPython45
       - id: NFAmmunitionBoxPistol45Incendiary # Frontier: MagazineBoxMagnumIncendiary<NFAmmunitionBoxPistol45Incendiary
       - id: PillAmbuzolPlus
       - id: PillAmbuzol

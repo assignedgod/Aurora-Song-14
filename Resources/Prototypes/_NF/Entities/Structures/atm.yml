@@ -227,7 +227,7 @@
 - type: entity
   parent: BaseStationAdminBankATM
   id: StationAdminBankATMNfsd
-  description: Used to transfer funds to and from NFSD's bank account.
+  description: Used to transfer funds to and from SLE's bank account.
   suffix: NFSD
   components:
   - type: StationBankATM
@@ -241,3 +241,12 @@
   components:
   - type: StationBankATM
     account: Medical
+
+- type: entity
+  parent: BaseStationAdminBankATM
+  id: StationAdminBankATMEdison
+  description: Used to transfer funds to and from Edison's bank account.
+  suffix: Edison
+  components:
+  - type: StationBankATM
+    account: Edison

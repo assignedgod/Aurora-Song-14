@@ -1,0 +1,26 @@
+- type: entity
+  parent: ClothingOuterHardsuitBaseASsle
+  id: ClothingOuterHardsuitSleCombat
+  name: SLE combat suit
+  description: A heavily armored SLE suit. Space proof, with thick armor plating at the expense of mobility.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/OuterClothing/Hardsuits/sle_combat.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/OuterClothing/Hardsuits/sle_combat.rsi
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHelmetHardsuitSleCombat
+  - type: ExplosionResistance
+    damageCoefficient: 0.4
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.5
+        Slash: 0.6
+        Piercing: 0.6
+        Heat: 0.60
+        Radiation: 0.50
+        Caustic: 0.7
+  - type: ClothingSpeedModifier
+    walkModifier: 0.85
+    sprintModifier: 0.75

@@ -43,7 +43,7 @@
   parent: PosterBase
   id: NFPosterLegitWantedClarpy
   name: "Wanted: Clarpy"
-  description: Wanted for piracy and assault. If you can help end this biting spree, please contact the NFSD.
+  description: Wanted for piracy and assault. If you can help end this biting spree, please contact the SLE.
   components:
   - type: Sprite
     sprite: _NF/Structures/Wallmounts/posters.rsi
@@ -63,7 +63,7 @@
   parent: PosterBase
   id: NFPosterLegitHaveYouSeenThisEgg
   name: "Have You Seen This Egg?"
-  description: Please inform NFSD personnel of any strange sightings like roaming space monsters, gigantic purple eggs, and strange notes left behind posters or vending machines.
+  description: Please inform SLE personnel of any strange sightings like roaming space monsters, gigantic purple eggs, and strange notes left behind posters or vending machines.
   components:
   - type: Sprite
     sprite: _NF/Structures/Wallmounts/posters.rsi
@@ -73,7 +73,7 @@
   parent: PosterBase
   id: NFPosterLegitGunTurnIn
   name: "Turn In Your Guns!"
-  description: The NFSD reminds you to give in your unregistered guns found planetside. The FUCs these are worth help keep the department running. Do your duty!
+  description: The SLE reminds you to give in your unregistered guns found planetside. The FUCs these are worth help keep the department running. Do your duty!
   components:
   - type: Sprite
     sprite: _NF/Structures/Wallmounts/posters.rsi
@@ -260,7 +260,7 @@
   components:
   - type: Sprite
     sprite: _NF/Structures/Wallmounts/posters.rsi
-    state: nf_poster18_contraband    
+    state: nf_poster18_contraband
 
 - type: entity
   parent: PosterBase
@@ -270,11 +270,11 @@
   components:
   - type: Sprite
     sprite: _NF/Structures/Wallmounts/posters.rsi
-    state: nf_poster20_contraband      
+    state: nf_poster20_contraband
   - type: PointLight
     radius: 1.5
     energy: 2
-    color: "#F8F6F0"    
+    color: "#F8F6F0"
 
 - type: entity
   parent: PosterBase
@@ -284,8 +284,8 @@
   components:
   - type: Sprite
     sprite: _NF/Structures/Wallmounts/posters.rsi
-    state: nf_poster19_contraband    
-    
+    state: nf_poster19_contraband
+
 - type: entity
   parent: PosterBase
   id: NFPosterContrabandFsbCaladrius
