@@ -57,7 +57,7 @@
       - id: CommsComputerCircuitboard # Frontier
       - id: MedalCaseNfsd # Frontier
       - id: Demag # Frontier
-      - id: Bailiff # Aurora
+      - id: ASWeaponShotgunBailiff # Aurora
 
 - type: entity
   parent: GunSafe
