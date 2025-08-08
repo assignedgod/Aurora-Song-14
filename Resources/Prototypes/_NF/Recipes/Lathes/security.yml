@@ -590,7 +590,12 @@
 
 - type: latheRecipe
   parent: BaseFilledMagazineRecipe
-  id: NFMagazine
+  id: NFMagazineRifle20Incendiary
+  result: NFMagazineRifle20Incendiary
+  materials:
+    Steel: 340 # 40 [Steel for empty mag] + 300 [Steel for 30 bullets * 10 Steel per bullet]
+    Plastic: 150 # 0 plastic for mag, + 150 [Plastic for 30 bullets * 5 Plastic per bullet]
+
 
 #region Weapons
 - type: latheRecipe
