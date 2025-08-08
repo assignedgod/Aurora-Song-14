@@ -1,157 +1,174 @@
 #region hardsuits
-- type: listing
-  id: UplinkSecurityHardsuit
-  name:  uplink-security-hardsuit-name
-  description: uplink-security-hardsuit-desc
-  productEntity: ClothingOuterHardsuitNfsdBronze
-  icon: { sprite: _NF/Clothing/OuterClothing/Hardsuits/nfsd_bronze.rsi, state: icon }
-  cost:
-    FrontierUplinkCoin: 2
-  categories:
-    - UplinkSecurityHardsuits
-  conditions:
-    - !type:StoreWhitelistCondition
-      whitelist:
-        tags:
-          - SecurityUplink
+# Removed NFSD Suits - Aurora's Song
+# - type: listing
+#   id: UplinkSecurityHardsuit
+#   name:  uplink-security-hardsuit-name
+#   description: uplink-security-hardsuit-desc
+#   productEntity: ClothingOuterHardsuitNfsdBronze
+#   icon: { sprite: _NF/Clothing/OuterClothing/Hardsuits/nfsd_bronze.rsi, state: icon }
+#   cost:
+#     FrontierUplinkCoin: 2
+#   categories:
+#     - UplinkSecurityHardsuits
+#   conditions:
+#     - !type:StoreWhitelistCondition
+#       whitelist:
+#         tags:
+#           - SecurityUplink
 
-- type: listing
-  id: UplinkSecurityHardsuitPatrol
-  name:  uplink-security-hardsuit-patrol-name
-  description: uplink-security-hardsuit-patrol-desc
-  productEntity: ClothingOuterHardsuitNfsdSilver
-  icon: { sprite: _NF/Clothing/OuterClothing/Hardsuits/nfsd_silver.rsi, state: icon }
-  cost:
-    FrontierUplinkCoin: 2
-  categories:
-    - UplinkSecurityHardsuits
-  conditions:
-    - !type:StoreWhitelistCondition
-      whitelist:
-        tags:
-          - SecurityUplink
+# - type: listing
+#   id: UplinkSecurityHardsuitPatrol
+#   name:  uplink-security-hardsuit-patrol-name
+#   description: uplink-security-hardsuit-patrol-desc
+#   productEntity: ClothingOuterHardsuitNfsdSilver
+#   icon: { sprite: _NF/Clothing/OuterClothing/Hardsuits/nfsd_silver.rsi, state: icon }
+#   cost:
+#     FrontierUplinkCoin: 2
+#   categories:
+#     - UplinkSecurityHardsuits
+#   conditions:
+#     - !type:StoreWhitelistCondition
+#       whitelist:
+#         tags:
+#           - SecurityUplink
 
-- type: listing
-  id: UplinkSecurityHardsuitBrigmedic
-  name:  uplink-security-hardsuit-brigmedic-name
-  description: uplink-security-hardsuit-brigmedic-desc
-  productEntity: ClothingOuterHardsuitNfsdBrigmedic
-  icon: { sprite: _NF/Clothing/OuterClothing/Hardsuits/nfsd_brigmed.rsi, state: icon }
-  cost:
-    FrontierUplinkCoin: 2
-  categories:
-    - UplinkSecurityHardsuits
-  conditions:
-    - !type:StoreWhitelistCondition
-      whitelist:
-        tags:
-          - SecurityUplink
+# - type: listing
+#   id: UplinkSecurityHardsuitBrigmedic
+#   name:  uplink-security-hardsuit-brigmedic-name
+#   description: uplink-security-hardsuit-brigmedic-desc
+#   productEntity: ClothingOuterHardsuitNfsdBrigmedic
+#   icon: { sprite: _NF/Clothing/OuterClothing/Hardsuits/nfsd_brigmed.rsi, state: icon }
+#   cost:
+#     FrontierUplinkCoin: 2
+#   categories:
+#     - UplinkSecurityHardsuits
+#   conditions:
+#     - !type:StoreWhitelistCondition
+#       whitelist:
+#         tags:
+#           - SecurityUplink
 
-- type: listing
-  id: UplinkSecurityHardsuitWarden
-  name:  uplink-security-hardsuit-warden-name
-  description: uplink-security-hardsuit-warden-desc
-  productEntity: ClothingOuterHardsuitNfsdGold
-  icon: { sprite: _NF/Clothing/OuterClothing/Hardsuits/nfsd_gold.rsi, state: icon }
-  cost:
-    FrontierUplinkCoin: 3
-  categories:
-    - UplinkSecurityHardsuits
-  conditions:
-    - !type:StoreWhitelistCondition
-      whitelist:
-        tags:
-          - SecurityUplink
-    - !type:BuyerJobCondition
-      whitelist:
-        - Bailiff
-        - SeniorOfficer
-        - Sheriff
+# - type: listing
+#   id: UplinkSecurityHardsuitWarden
+#   name:  uplink-security-hardsuit-warden-name
+#   description: uplink-security-hardsuit-warden-desc
+#   productEntity: ClothingOuterHardsuitNfsdGold
+#   icon: { sprite: _NF/Clothing/OuterClothing/Hardsuits/nfsd_gold.rsi, state: icon }
+#   cost:
+#     FrontierUplinkCoin: 3
+#   categories:
+#     - UplinkSecurityHardsuits
+#   conditions:
+#     - !type:StoreWhitelistCondition
+#       whitelist:
+#         tags:
+#           - SecurityUplink
+#     - !type:BuyerJobCondition
+#       whitelist:
+#         - Bailiff
+#         - SeniorOfficer
+#         - Sheriff
 
-- type: listing
-  id: UplinkSecurityCombatHardsuit
-  name:  uplink-security-hardsuit-combat-name
-  description: uplink-security-hardsuit-combat-desc
-  productEntity: ClothingOuterHardsuitNfsdCombat
-  icon: { sprite: _NF/Clothing/OuterClothing/Hardsuits/nfsd_combat.rsi, state: icon }
-  cost:
-    FrontierUplinkCoin: 10
-  categories:
-    - UplinkSecurityHardsuits
-  conditions:
-    - !type:StoreWhitelistCondition
-      whitelist:
-        tags:
-          - SecurityUplink
+# - type: listing
+#   id: UplinkSecurityCombatHardsuit
+#   name:  uplink-security-hardsuit-combat-name
+#   description: uplink-security-hardsuit-combat-desc
+#   productEntity: ClothingOuterHardsuitNfsdCombat
+#   icon: { sprite: _NF/Clothing/OuterClothing/Hardsuits/nfsd_combat.rsi, state: icon }
+#   cost:
+#     FrontierUplinkCoin: 10
+#   categories:
+#     - UplinkSecurityHardsuits
+#   conditions:
+#     - !type:StoreWhitelistCondition
+#       whitelist:
+#         tags:
+#           - SecurityUplink
 
-- type: listing
-  id: UplinkSecurityCommandHardsuit
-  name:  uplink-security-hardsuit-commmand-name
-  description: uplink-security-hardsuit-commmand-desc
-  productEntity: ClothingOuterHardsuitNfsdCommand
-  icon: { sprite: _NF/Clothing/OuterClothing/Hardsuits/nfsd_command.rsi, state: icon }
-  cost:
-    FrontierUplinkCoin: 10
-  categories:
-    - UplinkSecurityHardsuits
-  conditions:
-    - !type:StoreWhitelistCondition
-      whitelist:
-        tags:
-          - SecurityUplink
-    - !type:BuyerJobCondition
-      whitelist:
-        - Bailiff
-        - SeniorOfficer
-        - Sheriff
+# - type: listing
+#   id: UplinkSecurityCommandHardsuit
+#   name:  uplink-security-hardsuit-commmand-name
+#   description: uplink-security-hardsuit-commmand-desc
+#   productEntity: ClothingOuterHardsuitNfsdCommand
+#   icon: { sprite: _NF/Clothing/OuterClothing/Hardsuits/nfsd_command.rsi, state: icon }
+#   cost:
+#     FrontierUplinkCoin: 10
+#   categories:
+#     - UplinkSecurityHardsuits
+#   conditions:
+#     - !type:StoreWhitelistCondition
+#       whitelist:
+#         tags:
+#           - SecurityUplink
+#     - !type:BuyerJobCondition
+#       whitelist:
+#         - Bailiff
+#         - SeniorOfficer
+#         - Sheriff
 
-- type: listing
-  id: UplinkSecurityHardsuitSheriff
-  name:  uplink-security-hardsuit-sheriff-name
-  description: uplink-security-hardsuit-sheriff-desc
-  productEntity: ClothingOuterHardsuitNfsdSheriff
-  icon: { sprite: _NF/Clothing/OuterClothing/Hardsuits/nfsd_sheriff.rsi, state: icon }
-  cost:
-    FrontierUplinkCoin: 3
-  categories:
-    - UplinkSecurityHardsuits
-  conditions:
-    - !type:StoreWhitelistCondition
-      whitelist:
-        tags:
-          - SecurityUplink
-    - !type:BuyerJobCondition
-      whitelist:
-        - Sheriff
+# - type: listing
+#   id: UplinkSecurityHardsuitSheriff
+#   name:  uplink-security-hardsuit-sheriff-name
+#   description: uplink-security-hardsuit-sheriff-desc
+#   productEntity: ClothingOuterHardsuitNfsdSheriff
+#   icon: { sprite: _NF/Clothing/OuterClothing/Hardsuits/nfsd_sheriff.rsi, state: icon }
+#   cost:
+#     FrontierUplinkCoin: 3
+#   categories:
+#     - UplinkSecurityHardsuits
+#   conditions:
+#     - !type:StoreWhitelistCondition
+#       whitelist:
+#         tags:
+#           - SecurityUplink
+#     - !type:BuyerJobCondition
+#       whitelist:
+#         - Sheriff
 
-- type: listing
-  id: UplinkSecurityHardsuitSyndieReverseEngineered
-  name:  uplink-security-hardsuit-experimental-name
-  description: uplink-security-hardsuit-experimental-desc
-  productEntity: ClothingOuterHardsuitNfsdExperimental
-  icon: { sprite: _NF/Clothing/OuterClothing/Hardsuits/nfsd_experimental.rsi, state: icon }
-  cost:
-    FrontierUplinkCoin: 20
-  categories:
-    - UplinkSecurityHardsuits
-  conditions:
-    - !type:StoreWhitelistCondition
-      whitelist:
-        tags:
-          - SecurityUplink
-    - !type:BuyerJobCondition
-      whitelist:
-        - Sheriff
+# - type: listing
+#   id: UplinkSecurityHardsuitSyndieReverseEngineered
+#   name:  uplink-security-hardsuit-experimental-name
+#   description: uplink-security-hardsuit-experimental-desc
+#   productEntity: ClothingOuterHardsuitNfsdExperimental
+#   icon: { sprite: _NF/Clothing/OuterClothing/Hardsuits/nfsd_experimental.rsi, state: icon }
+#   cost:
+#     FrontierUplinkCoin: 20
+#   categories:
+#     - UplinkSecurityHardsuits
+#   conditions:
+#     - !type:StoreWhitelistCondition
+#       whitelist:
+#         tags:
+#           - SecurityUplink
+#     - !type:BuyerJobCondition
+#       whitelist:
+#         - Sheriff
 
 # Begin Aurora Song
 - type: listing
   id: UplinkSleCombatHardsuit
-  name:  uplink-security-hardsuit-combat-name
-  description: uplink-security-hardsuit-combat-desc
+  name:  uplink-sle-hardsuit-combat-name
+  description: uplink-sle-hardsuit-combat-desc
   productEntity: ClothingOuterHardsuitSleCombat
   icon: { sprite:  _AS/Clothing/OuterClothing/Hardsuits/sle_combat.rsi, state: icon }
   cost:
     FrontierUplinkCoin: 10
+  categories:
+    - UplinkSecurityHardsuits
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
+
+- type: listing
+  id: UplinkSleSoftsuitPatrol
+  name:  uplink-sle-softsuit-patrol-name
+  description: uplink-sle-softsuit-patrol-desc
+  productEntity: ClothingOuterSoftsuitSlePatrol
+  icon: { sprite: _AS/Clothing/OuterClothing/Softsuits/sle_patrol.rsi, state: icon }
+  cost:
+    FrontierUplinkCoin: 2
   categories:
     - UplinkSecurityHardsuits
   conditions:
