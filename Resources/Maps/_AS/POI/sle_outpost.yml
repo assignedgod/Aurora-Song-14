@@ -5,7 +5,11 @@ meta:
   forkId: ""
   forkVersion: ""
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   time: 08/08/2025 16:01:16
+=======
+  time: 08/08/2025 18:18:05
+>>>>>>> Stashed changes
 =======
   time: 08/08/2025 18:18:05
 >>>>>>> Stashed changes
@@ -2927,7 +2931,11 @@ entities:
       parent: 1
     - type: Door
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       secondsUntilStateChange: -34860.562
+=======
+      secondsUntilStateChange: -34894.586
+>>>>>>> Stashed changes
 =======
       secondsUntilStateChange: -34894.586
 >>>>>>> Stashed changes
@@ -2996,7 +3004,11 @@ entities:
       parent: 1
     - type: Door
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       secondsUntilStateChange: -50206.883
+=======
+      secondsUntilStateChange: -50240.906
+>>>>>>> Stashed changes
 =======
       secondsUntilStateChange: -50240.906
 >>>>>>> Stashed changes
@@ -3011,7 +3023,11 @@ entities:
       parent: 1
     - type: Door
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       secondsUntilStateChange: -8055.024
+=======
+      secondsUntilStateChange: -8089.0493
+>>>>>>> Stashed changes
 =======
       secondsUntilStateChange: -8089.0493
 >>>>>>> Stashed changes
@@ -3046,7 +3062,11 @@ entities:
       parent: 1
     - type: Door
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       secondsUntilStateChange: -50210.414
+=======
+      secondsUntilStateChange: -50244.438
+>>>>>>> Stashed changes
 =======
       secondsUntilStateChange: -50244.438
 >>>>>>> Stashed changes
@@ -3066,7 +3086,11 @@ entities:
       parent: 1
     - type: Door
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       secondsUntilStateChange: -50991.95
+=======
+      secondsUntilStateChange: -51025.973
+>>>>>>> Stashed changes
 =======
       secondsUntilStateChange: -51025.973
 >>>>>>> Stashed changes
@@ -3106,7 +3130,11 @@ entities:
       parent: 1
     - type: Door
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       secondsUntilStateChange: -52319.98
+=======
+      secondsUntilStateChange: -52354.004
+>>>>>>> Stashed changes
 =======
       secondsUntilStateChange: -52354.004
 >>>>>>> Stashed changes
@@ -3220,7 +3248,11 @@ entities:
       parent: 1
     - type: Door
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       secondsUntilStateChange: -33993.934
+=======
+      secondsUntilStateChange: -34027.957
+>>>>>>> Stashed changes
 =======
       secondsUntilStateChange: -34027.957
 >>>>>>> Stashed changes
@@ -22138,7 +22170,11 @@ entities:
       parent: 1
     - type: Door
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       secondsUntilStateChange: -59305.066
+=======
+      secondsUntilStateChange: -59339.09
+>>>>>>> Stashed changes
 =======
       secondsUntilStateChange: -59339.09
 >>>>>>> Stashed changes
@@ -22150,7 +22186,11 @@ entities:
       parent: 1
     - type: Door
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       secondsUntilStateChange: -59303.434
+=======
+      secondsUntilStateChange: -59337.457
+>>>>>>> Stashed changes
 =======
       secondsUntilStateChange: -59337.457
 >>>>>>> Stashed changes
@@ -22162,7 +22202,11 @@ entities:
       parent: 1
     - type: Door
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       secondsUntilStateChange: -59302.066
+=======
+      secondsUntilStateChange: -59336.09
+>>>>>>> Stashed changes
 =======
       secondsUntilStateChange: -59336.09
 >>>>>>> Stashed changes
@@ -30588,7 +30632,11 @@ entities:
         DoorStatus: True
     - type: Door
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       secondsUntilStateChange: -58340.734
+=======
+      secondsUntilStateChange: -58374.758
+>>>>>>> Stashed changes
 =======
       secondsUntilStateChange: -58374.758
 >>>>>>> Stashed changes
