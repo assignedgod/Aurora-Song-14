@@ -123,8 +123,8 @@
 - type: entity
   id: NfsdTechFabCircuitboard
   parent: SecurityTechFabCircuitboard
-  name: NFSD techfab machine board
-  description: A machine printed circuit board for an NFSD techfab.
+  name: SLE techfab machine board
+  description: A machine printed circuit board for an SLE techfab.
   components:
     - type: Sprite
       sprite: _NF/Objects/Misc/module.rsi
@@ -150,7 +150,7 @@
 - type: entity
   id: ThrusterNfsdMachineCircuitboard
   parent: BaseMachineCircuitboard
-  name: NFSD thruster machine board
+  name: SLE thruster machine board
   components:
   - type: Sprite
     sprite: _NF/Objects/Misc/module.rsi
@@ -217,7 +217,7 @@
 - type: entity
   id: GyroscopeNfsdMachineCircuitboard
   parent: BaseMachineCircuitboard
-  name: NFSD gyroscope machine board
+  name: SLE gyroscope machine board
   components:
   - type: Sprite
     sprite: _NF/Objects/Misc/module.rsi
@@ -233,7 +233,7 @@
 - type: entity
   id: SmallGyroscopeNfsdMachineCircuitboard
   parent: BaseMachineCircuitboard
-  name: small NFSD gyroscope machine board
+  name: small SLE gyroscope machine board
   components:
   - type: Sprite
     sprite: _NF/Objects/Misc/module.rsi

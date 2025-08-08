@@ -1,0 +1,58 @@
+﻿- type: entity
+  name: Plasma Cannon
+  parent: [ WeaponImprovisedPneumaticCannon, BaseWeaponBattery ]
+  id: ASplasmacannon
+  description: Insert a gas tank, add a charge, and you have a superheated plasma cannon.
+  suffix: Gun
+  components:
+  - type: Gun
+    fireRate: 2
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+    soundEmpty:
+      path: /Audio/Items/hiss.ogg
+    clumsyProof: true
+    examineCaliber: gun-examine-hitscan-low
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/laser.ogg
+  - type: HitscanBatteryAmmoProvider
+    proto: NFRedLightLaser
+    fireCost: 60
+  - type: PlasmaGun
+    GasUsage: 0.15
+
+- type: entity
+  name: PAS-2 Scourer
+  parent: [ ASBaseWeaponFramePlasmaRifleNanotrasen, ASBaseWeaponPlasmaBolts ]
+  id: ASPlasmaRifleScourer
+  description: NT's R&D produced this 'top of the line' infantry solution for effectively putting down targets
+  suffix: PlasGun
+  components:
+  - type: Gun
+    fireRate: 2
+  - type: PlasmaGun
+    GasUsage: 0.18
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 8
+  - type: ItemSlots
+    slots:
+      gas_tank:
+        name: pneumatic-cannon-component-itemslot-name
+        whitelist:
+          components:
+          - GasTank
+        insertSound:
+          path: /Audio/Weapons/click.ogg
+          params:
+            volume: -3
+  - type: ContainerContainer
+    containers:
+      storagebase: !type:Container
+        ents: [ ]
+      gas_tank: !type:ContainerSlot
+  - type: Sprite
+    sprite: _AS/Objects/Weapons/Guns/PAS-2_Scourer.rsi
+  - type: Clothing
+    sprite: _AS/Objects/Weapons/Guns/PAS-2_Scourer.rsi

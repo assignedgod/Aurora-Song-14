@@ -2,7 +2,7 @@
   parent: [BaseStructureDisableAnchoring, StorePresetMercenaryUplink, VendingMachine]
   id: VendingMachineMercVend
   name: MercVend
-  description: For every sophant a rifle.
+  description: For every sophont a rifle.
   components:
   - type: VendingMachine
     cashSlot: Null

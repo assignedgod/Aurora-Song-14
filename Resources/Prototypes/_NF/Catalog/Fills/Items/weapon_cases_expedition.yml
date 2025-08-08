@@ -108,13 +108,13 @@
 
 - type: entity
   parent: WeaponCaseShort
-  id: WeaponCaseShortRitland45Expedition
-  suffix: Dungeon, Ritland-45
+  id: WeaponCaseShortPython45Expedition
+  suffix: Dungeon, Python
   categories: [ HideSpawnMenu ]
   components:
   - type: StorageFill
     contents:
-    - id: NFWeaponRevolverRitland45Expedition
+    - id: NFWeaponRevolverPython45Expedition
       amount: 1
     - id: NFSpeedLoaderPistol45
       amount: 2

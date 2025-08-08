@@ -1,3 +1,4 @@
+using System.Numerics;
 using Content.Client.DisplacementMap;
 using Content.Shared.CCVar;
 using Content.Shared.Humanoid;
@@ -227,6 +228,12 @@ public sealed class HumanoidAppearanceSystem : SharedHumanoidAppearanceSystem
         humanoid.Species = profile.Species;
         humanoid.SkinColor = profile.Appearance.SkinColor;
         humanoid.EyeColor = profile.Appearance.EyeColor;
+        humanoid.Height = profile.Appearance.Height;
+        humanoid.Width = profile.Appearance.Width;
+
+        // Apply scaling for client-side preview (width, height)
+        var sprite = Comp<SpriteComponent>(uid);
+        sprite.Scale = new Vector2(profile.Appearance.Width, profile.Appearance.Height);
 
         UpdateSprite(humanoid, Comp<SpriteComponent>(uid));
     }

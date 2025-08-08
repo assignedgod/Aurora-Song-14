@@ -1,0 +1,48 @@
+- type: entity
+  abstract: true
+  parent: ClothingOuterHardsuitBase
+  id: ClothingOuterHardsuitBaseAS
+
+- type: entity
+  abstract: true
+  parent:
+  - ClothingOuterStorageBase # Added pockets to make this suit somewhat viable alternative to hardsuits
+  - ClothingOuterEVASuitBase
+  - ClothingOuterHardsuitBase
+  id: ASClothingOuterEVASuitBase
+  components:
+  - type: ClothingSpeedModifier
+    walkModifier: 0.95
+    sprintModifier: 0.95
+  - type: Item
+    shape:
+    - 0,0,3,2
+  - type: Clothing
+    # For immersion
+    equipSound: /Audio/Mecha/mechmove03.ogg
+    unequipSound: /Audio/Mecha/mechmove03.ogg
+    #equipDelay: 2
+    #unequipDelay: 2
+  - type: ContainerContainer
+    containers:
+      toggleable-clothing: !type:ContainerSlot {}
+      storagebase: !type:Container
+        ents: []
+  - type: PhysicalComposition
+    materialComposition:
+      Durathread: 100
+      Cloth: 50
+  - type: Tag
+    tags:
+    - SuitEVA
+    - WhitelistChameleon
+
+- type: entity
+  abstract: true
+  parent: [ClothingOuterHardsuitBaseAS, BaseC2ContrabandUnredeemable]
+  id: ASClothingOuterHardsuitBaseSle
+  components:
+  - type: PressureProtection
+    highPressureMultiplier: 0.525
+    lowPressureMultiplier: 10000
+  - type: HeldSpeedModifier

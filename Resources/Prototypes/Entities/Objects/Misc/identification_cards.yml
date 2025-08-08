@@ -329,6 +329,22 @@
       tags:
       - DoorBumpOpener
 
+- type: entity # DeltaV - Security dog Laika ID card
+  parent: IDCardStandard
+  id: SecDogIDCard
+  name: Security Dog ID card
+  components:
+  - type: Sprite
+    layers:
+    - state: default
+    - state: idsecurityofficer
+  - type: PresetIdCard
+    job: SecurityOfficer
+    name: Laika
+  - type: Tag
+    tags:
+    - DoorBumpOpener
+
 - type: entity
   parent: IDCardStandard
   id: ChefIDCard

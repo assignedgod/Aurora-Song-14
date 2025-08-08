@@ -5,14 +5,14 @@
     Blunt:
       min: 150
       max: 400
-      value: 10
-      penalty: 10
+      value: 30
+      penalty: 30
     Asphyxiation:
       min: 50
       max: 200
-      value: 10
-      penalty: 10
-  baseReward: 2000 # 4K-8K
+      value: 30
+      penalty: 30
+  baseReward: 2000 # 8K-20K
 
 - type: medicalBounty
   id: MurderedPierce
@@ -20,14 +20,14 @@
     Piercing:
       min: 150
       max: 400
-      value: 10
-      penalty: 10
+      value: 30
+      penalty: 30
     Bloodloss:
       min: 50
       max: 200
-      value: 10
-      penalty: 10
-  baseReward: 2000 # 4K-8K
+      value: 30
+      penalty: 30
+  baseReward: 2000 # 8K-20K
 
 - type: medicalBounty
   id: MurderedSlash
@@ -35,14 +35,14 @@
     Slash:
       min: 150
       max: 400
-      value: 10
-      penalty: 10
+      value: 30
+      penalty: 30
     Bloodloss:
       min: 50
       max: 200
-      value: 10
-      penalty: 10
-  baseReward: 2000 # 4K-8K
+      value: 30
+      penalty: 30
+  baseReward: 2000 # 8K-20K
 
 - type: medicalBounty
   id: MildBruteMix
@@ -50,24 +50,24 @@
     Blunt:
       min: 75
       max: 150
-      value: 10
-      penalty: 10
+      value: 30
+      penalty: 30
     Piercing:
       min: 75
       max: 150
-      value: 10
-      penalty: 10
+      value: 30
+      penalty: 30
     Slash:
       min: 75
       max: 150
-      value: 10
-      penalty: 10
+      value: 30
+      penalty: 30
     Bloodloss:
       min: 75
       max: 150
-      value: 10
-      penalty: 10
-  baseReward: 2000 # 5K-8K
+      value: 30
+      penalty: 30
+  baseReward: 1000 # 10K-20K
 
 - type: medicalBounty
   id: Suffocated
@@ -75,14 +75,14 @@
     Asphyxiation:
       min: 150
       max: 400
-      value: 10
-      penalty: 10
+      value: 20
+      penalty: 20
     Bloodloss:
       min: 50
       max: 200
-      value: 10
-      penalty: 10
-  baseReward: 2000 # 4K-8K
+      value: 20
+      penalty: 20
+  baseReward: 2000 # 2K-10K
 
 - type: medicalBounty
   id: PlasmaFire
@@ -100,24 +100,24 @@
     Blunt:
       min: 50
       max: 100
-      value: 10
-      penalty: 10
+      value: 30
+      penalty: 30
     Piercing:
       min: 50
       max: 100
-      value: 10
-      penalty: 10
+      value: 30
+      penalty: 30
     Slash:
       min: 50
       max: 100
-      value: 10
-      penalty: 10
+      value: 30
+      penalty: 30
     Cold:
       min: 600
       max: 2000
       value: 10
       penalty: 10
-  baseReward: 1000 # 8500-24K
+  baseReward: 1000 # 11.5k - 33K
 
 - type: medicalBounty
   id: MildBurnMix
@@ -125,24 +125,24 @@
     Heat:
       min: 50
       max: 150
-      value: 10
-      penalty: 10
+      value: 30
+      penalty: 30
     Cold:
       min: 50
       max: 150
-      value: 10
-      penalty: 10
+      value: 30
+      penalty: 30
     Shock:
       min: 50
       max: 150
-      value: 10
-      penalty: 10
+      value: 30
+      penalty: 30
     Caustic:
       min: 50
       max: 150
-      value: 10
-      penalty: 10
-  baseReward: 2000 # 4K-8K
+      value: 30
+      penalty: 30
+  baseReward: 2000 # 8K-20K
 
 - type: medicalBounty
   id: Insuls
@@ -150,14 +150,14 @@
     Heat:
       min: 200
       max: 400
-      value: 10
-      penalty: 10
+      value: 15
+      penalty: 15
     Shock:
       min: 400
       max: 600
-      value: 10
-      penalty: 10
-  baseReward: 1500 # 7500-11500
+      value: 15
+      penalty: 15
+  baseReward: 1500 # 10.5k - 16.5k
 
 - type: medicalBounty
   id: AcidSlimes
@@ -257,7 +257,7 @@
       max: 140
       value: 25
       penalty: 25
-  baseReward: 2000 # 5500-9500
+  baseReward: 4500 # 5500-9500
 
 - type: medicalBounty
   id: DeliciousUranium
