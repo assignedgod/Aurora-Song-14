@@ -4,8 +4,8 @@ meta:
   engineVersion: 255.1.0
   forkId: ""
   forkVersion: ""
-  time: 08/06/2025 12:52:49
-  entityCount: 4677
+  time: 08/08/2025 16:01:16
+  entityCount: 4682
 maps: []
 grids:
 - 1
@@ -2922,7 +2922,7 @@ entities:
       pos: 17.5,-5.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -34703.145
+      secondsUntilStateChange: -34860.562
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -2987,7 +2987,7 @@ entities:
       pos: -2.5,2.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -50049.465
+      secondsUntilStateChange: -50206.883
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -2998,7 +2998,7 @@ entities:
       pos: -1.5,3.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -7897.607
+      secondsUntilStateChange: -8055.024
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -3029,7 +3029,7 @@ entities:
       pos: -11.5,1.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -50052.996
+      secondsUntilStateChange: -50210.414
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -3045,7 +3045,7 @@ entities:
       pos: -11.5,-0.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -50834.53
+      secondsUntilStateChange: -50991.95
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -3081,7 +3081,7 @@ entities:
       pos: -17.5,-2.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -52162.562
+      secondsUntilStateChange: -52319.98
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -3191,7 +3191,7 @@ entities:
       pos: 5.5,9.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -33836.516
+      secondsUntilStateChange: -33993.934
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -3564,6 +3564,13 @@ entities:
     - type: DeviceNetwork
       deviceLists:
       - 3855
+- proto: AntiAnomalyZone200
+  entities:
+  - uid: 2783
+    components:
+    - type: Transform
+      pos: 0.5,-26.5
+      parent: 1
 - proto: APCSuperCapacity
   entities:
   - uid: 229
@@ -12812,6 +12819,11 @@ entities:
       parent: 1
 - proto: DogBed
   entities:
+  - uid: 1305
+    components:
+    - type: Transform
+      pos: -9.5,3.5
+      parent: 1
   - uid: 4411
     components:
     - type: Transform
@@ -22093,7 +22105,7 @@ entities:
       pos: -1.5,33.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -59147.65
+      secondsUntilStateChange: -59305.066
       state: Opening
   - uid: 3347
     components:
@@ -22101,7 +22113,7 @@ entities:
       pos: 0.5,33.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -59146.016
+      secondsUntilStateChange: -59303.434
       state: Opening
   - uid: 3348
     components:
@@ -22109,7 +22121,7 @@ entities:
       pos: 2.5,33.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -59144.65
+      secondsUntilStateChange: -59302.066
       state: Opening
 - proto: HospitalCurtainsOpen
   entities:
@@ -23964,6 +23976,12 @@ entities:
       parent: 1
 - proto: Railing
   entities:
+  - uid: 1307
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: -9.5,3.5
+      parent: 1
   - uid: 3513
     components:
     - type: Transform
@@ -24131,6 +24149,14 @@ entities:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 8.5,-26.5
+      parent: 1
+- proto: RailingRound
+  entities:
+  - uid: 1306
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -9.5,3.5
       parent: 1
 - proto: RandomVendingSnacks
   entities:
@@ -24431,6 +24457,13 @@ entities:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: -10.5,-28.5
+      parent: 1
+- proto: SpawnMobSecDogLaika
+  entities:
+  - uid: 1304
+    components:
+    - type: Transform
+      pos: -9.5,3.5
       parent: 1
 - proto: SpawnPointBailiff
   entities:
@@ -30510,7 +30543,7 @@ entities:
       lastSignals:
         DoorStatus: True
     - type: Door
-      secondsUntilStateChange: -58183.316
+      secondsUntilStateChange: -58340.734
       state: Opening
     - type: Airlock
       autoClose: False
