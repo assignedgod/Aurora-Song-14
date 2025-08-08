@@ -49,7 +49,7 @@
     contents:
     - id: NFWeaponPistolCobraExpedition
       amount: 1
-    - id: HLMagazinePistolCaselessRifle
+    - id: ASMagazinePistolCaselessRifle
       amount: 2
 
 
