@@ -65,3 +65,10 @@ uplink-mercenary-20Rifle-OP-mags-desc = A quarter of .20 Rifle magazines, each f
 
 uplink-mercenary-30Rifle-OP-mags-name = .30 Rifle P+ Mags
 uplink-mercenary-30Rifle-OP-mags-desc = A quartet of .30 Rifle magazines, stacked with P+. Hit hard, soldier.
+
+# region Security Uplink
+uplink-sle-hardsuit-combat-name = SLE Combat Suit
+uplink-sle-hardsuit-combat-desc = A heavily armored SLE suit. Space proof, with thick armor plating at the expense of mobility.
+
+uplink-sle-softsuit-patrol-name = SLE Patrol Softsuit
+uplink-sle-softsuit-patrol-desc = The standard-issue SLE space proof suit for patrol duty.

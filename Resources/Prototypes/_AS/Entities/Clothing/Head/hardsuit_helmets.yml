@@ -10,7 +10,9 @@
   - type: Clothing
     sprite: _AS/Clothing/Head/Hardsuits/sle_combat.rsi
   - type: PointLight
-    color: "#79bb66"
+    color: "#ffeead"
+    radius: 7
+    energy: 3
   - type: PressureProtection
     highPressureMultiplier: 0.525
     lowPressureMultiplier: 1000
