@@ -4,15 +4,7 @@ meta:
   engineVersion: 255.1.0
   forkId: ""
   forkVersion: ""
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-  time: 08/08/2025 16:01:16
-=======
   time: 08/08/2025 18:18:05
->>>>>>> Stashed changes
-=======
-  time: 08/08/2025 18:18:05
->>>>>>> Stashed changes
   entityCount: 4682
 maps: []
 grids:
@@ -2930,15 +2922,7 @@ entities:
       pos: 17.5,-5.5
       parent: 1
     - type: Door
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-      secondsUntilStateChange: -34860.562
-=======
       secondsUntilStateChange: -34894.586
->>>>>>> Stashed changes
-=======
-      secondsUntilStateChange: -34894.586
->>>>>>> Stashed changes
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -3003,15 +2987,7 @@ entities:
       pos: -2.5,2.5
       parent: 1
     - type: Door
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-      secondsUntilStateChange: -50206.883
-=======
       secondsUntilStateChange: -50240.906
->>>>>>> Stashed changes
-=======
-      secondsUntilStateChange: -50240.906
->>>>>>> Stashed changes
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -3022,15 +2998,7 @@ entities:
       pos: -1.5,3.5
       parent: 1
     - type: Door
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-      secondsUntilStateChange: -8055.024
-=======
       secondsUntilStateChange: -8089.0493
->>>>>>> Stashed changes
-=======
-      secondsUntilStateChange: -8089.0493
->>>>>>> Stashed changes
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -3061,15 +3029,7 @@ entities:
       pos: -11.5,1.5
       parent: 1
     - type: Door
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-      secondsUntilStateChange: -50210.414
-=======
       secondsUntilStateChange: -50244.438
->>>>>>> Stashed changes
-=======
-      secondsUntilStateChange: -50244.438
->>>>>>> Stashed changes
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -3085,15 +3045,7 @@ entities:
       pos: -11.5,-0.5
       parent: 1
     - type: Door
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-      secondsUntilStateChange: -50991.95
-=======
       secondsUntilStateChange: -51025.973
->>>>>>> Stashed changes
-=======
-      secondsUntilStateChange: -51025.973
->>>>>>> Stashed changes
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -3129,15 +3081,7 @@ entities:
       pos: -17.5,-2.5
       parent: 1
     - type: Door
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-      secondsUntilStateChange: -52319.98
-=======
       secondsUntilStateChange: -52354.004
->>>>>>> Stashed changes
-=======
-      secondsUntilStateChange: -52354.004
->>>>>>> Stashed changes
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -3247,15 +3191,7 @@ entities:
       pos: 5.5,9.5
       parent: 1
     - type: Door
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-      secondsUntilStateChange: -33993.934
-=======
       secondsUntilStateChange: -34027.957
->>>>>>> Stashed changes
-=======
-      secondsUntilStateChange: -34027.957
->>>>>>> Stashed changes
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -22169,15 +22105,7 @@ entities:
       pos: -1.5,33.5
       parent: 1
     - type: Door
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-      secondsUntilStateChange: -59305.066
-=======
       secondsUntilStateChange: -59339.09
->>>>>>> Stashed changes
-=======
-      secondsUntilStateChange: -59339.09
->>>>>>> Stashed changes
       state: Opening
   - uid: 3347
     components:
@@ -22185,15 +22113,7 @@ entities:
       pos: 0.5,33.5
       parent: 1
     - type: Door
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-      secondsUntilStateChange: -59303.434
-=======
       secondsUntilStateChange: -59337.457
->>>>>>> Stashed changes
-=======
-      secondsUntilStateChange: -59337.457
->>>>>>> Stashed changes
       state: Opening
   - uid: 3348
     components:
@@ -22201,15 +22121,7 @@ entities:
       pos: 2.5,33.5
       parent: 1
     - type: Door
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-      secondsUntilStateChange: -59302.066
-=======
       secondsUntilStateChange: -59336.09
->>>>>>> Stashed changes
-=======
-      secondsUntilStateChange: -59336.09
->>>>>>> Stashed changes
       state: Opening
 - proto: HospitalCurtainsOpen
   entities:
@@ -30631,15 +30543,7 @@ entities:
       lastSignals:
         DoorStatus: True
     - type: Door
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-      secondsUntilStateChange: -58340.734
-=======
       secondsUntilStateChange: -58374.758
->>>>>>> Stashed changes
-=======
-      secondsUntilStateChange: -58374.758
->>>>>>> Stashed changes
       state: Opening
     - type: Airlock
       autoClose: False
