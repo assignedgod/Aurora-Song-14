@@ -29,6 +29,7 @@
       task: SimpleHostileCompound
   - type: Physics
   - type: Speech
+    allowedEmotes: ['Bark', 'Snarl', 'Howl', 'Awoo', 'Whine']
     speechVerb: Canine
     speechSounds: Vulpkanin
   - type: Fixtures
@@ -107,3 +108,6 @@
     tags:
     - DoorBumpOpener
     - VimPilot
+  - type: Vocal
+    sounds:
+      unsexed: MobDog
