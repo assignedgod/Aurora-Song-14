@@ -7,7 +7,7 @@
     head: ClothingHeadHatNfsdCampaignFilled
 
 - type: loadout
-  id: SheriffClothingHeadHatSheriff
+  id: SheriffClothingHeadAltHatSheriff
   hideEffects:
     - !type:GroupLoadoutEffect
       proto: NFHeadwearCapable
