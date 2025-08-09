@@ -3,5 +3,15 @@
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFHeadwearCapable
+  price: 0
   equipment:
     head: ClothingHeadHatNfsdCampaignFilled
+
+- type: loadout
+  id: SheriffClothingHeadAltHatSheriff
+  hideEffects:
+    - !type:GroupLoadoutEffect
+      proto: NFHeadwearCapable
+  price: 0
+  equipment:
+    head: ClothingHeadHatBeretCommissioner
