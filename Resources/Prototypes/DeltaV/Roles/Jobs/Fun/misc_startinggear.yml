@@ -7,6 +7,5 @@
   id: MobSecDogLaikaGear
   equipment:
     eyes: ClothingEyesGlassesSecurity
-    ears: ClothingHeadsetSecurity
     id: DeputyIDCard
 

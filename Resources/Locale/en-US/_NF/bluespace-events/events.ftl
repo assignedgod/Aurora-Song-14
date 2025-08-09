@@ -35,7 +35,7 @@ station-event-bluespace-bloodmoon-start-announcement = Attention all available C
 station-event-bluespace-bloodmoon-warning-announcement = Remote FTL procedures initialized, five minutes until Blood Cult vessel dissipation.
 station-event-bluespace-bloodmoon-end-announcement = In compliance with Colonial FTL traffic patterns, the Blood Cult vessel has been dissipated to ensure non-collision.
 
-station-event-bluespace-generic-ftl-start-announcement = Attention all Colonial personnel! Colonial command has detected an unidentified vessel entering the Aurora Sector illegally without IFF. As per Colonial Law, the belligerent vessel is legal salvage. Investigate with caution, Colonial command is not liable for damages sustained or loss of life.
+station-event-bluespace-generic-ftl-start-announcement = Attention all Colonial personnel! Colonial command has detected an unidentified vessel entering the Aurora Sector illegally without IFF. As per Colonial Law, the belligerent vessel is legal salvage for authorized personnel. Investigate with caution, Colonial command is not liable for damages sustained or loss of life.
 station-event-bluespace-generic-ftl-warning-announcement = Remote FTL procedures initialized, five minutes until unidentified vessel dissipation.
 station-event-bluespace-generic-ftl-end-announcement = In compliance with Colonial FTL traffic patterns, the unidentified vessel has been dissipated to ensure non-collision.
 

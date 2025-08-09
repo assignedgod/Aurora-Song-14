@@ -10,6 +10,10 @@
     allowMovement: true
     name: "Laika"
     description: "Security's resident she-dog. Badger the officers for headpats and nip at the heels of violent offenders."
+  - type: ActiveRadio
+    channels:
+    - Nfsd
+    - Common
   - type: GhostTakeoverAvailable
   - type: InteractionPopup
     successChance: 1
