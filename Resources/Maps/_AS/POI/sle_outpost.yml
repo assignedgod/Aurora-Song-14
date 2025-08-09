@@ -4,8 +4,8 @@ meta:
   engineVersion: 255.1.0
   forkId: ""
   forkVersion: ""
-  time: 08/08/2025 18:18:05
-  entityCount: 4682
+  time: 08/09/2025 08:17:40
+  entityCount: 4680
 maps: []
 grids:
 - 1
@@ -2922,7 +2922,7 @@ entities:
       pos: 17.5,-5.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -34894.586
+      secondsUntilStateChange: -35016.37
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -2987,7 +2987,7 @@ entities:
       pos: -2.5,2.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -50240.906
+      secondsUntilStateChange: -50362.69
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -2998,7 +2998,7 @@ entities:
       pos: -1.5,3.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -8089.0493
+      secondsUntilStateChange: -8210.835
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -3029,7 +3029,7 @@ entities:
       pos: -11.5,1.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -50244.438
+      secondsUntilStateChange: -50366.223
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -3045,7 +3045,7 @@ entities:
       pos: -11.5,-0.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -51025.973
+      secondsUntilStateChange: -51147.758
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -3081,7 +3081,7 @@ entities:
       pos: -17.5,-2.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -52354.004
+      secondsUntilStateChange: -52475.79
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -3191,7 +3191,7 @@ entities:
       pos: 5.5,9.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -34027.957
+      secondsUntilStateChange: -34149.742
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -5379,22 +5379,6 @@ entities:
     - type: Transform
       pos: -17.466064,11.494733
       parent: 1
-- proto: BoxMRE
-  entities:
-  - uid: 3555
-    components:
-    - type: Transform
-      parent: 3554
-    - type: Physics
-      canCollide: False
-    - type: InsideEntityStorage
-  - uid: 3556
-    components:
-    - type: Transform
-      parent: 3554
-    - type: Physics
-      canCollide: False
-    - type: InsideEntityStorage
 - proto: Bucket
   entities:
   - uid: 3364
@@ -22105,7 +22089,7 @@ entities:
       pos: -1.5,33.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -59339.09
+      secondsUntilStateChange: -59460.875
       state: Opening
   - uid: 3347
     components:
@@ -22113,7 +22097,7 @@ entities:
       pos: 0.5,33.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -59337.457
+      secondsUntilStateChange: -59459.242
       state: Opening
   - uid: 3348
     components:
@@ -22121,7 +22105,7 @@ entities:
       pos: 2.5,33.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -59336.09
+      secondsUntilStateChange: -59457.875
       state: Opening
 - proto: HospitalCurtainsOpen
   entities:
@@ -22276,24 +22260,11 @@ entities:
       parent: 1
 - proto: LockerFreezerBase
   entities:
-  - uid: 3554
+  - uid: 2785
     components:
     - type: Transform
       pos: 6.5,-18.5
       parent: 1
-    - type: ContainerContainer
-      containers:
-        entity_storage: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 3555
-          - 3556
-          - 3557
-        paper_label: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: null
   - uid: 3897
     components:
     - type: Transform
@@ -22817,15 +22788,6 @@ entities:
     - type: Transform
       pos: 9.6116905,-24.56495
       parent: 1
-- proto: PaperWrittenFrontierFridge
-  entities:
-  - uid: 3557
-    components:
-    - type: Transform
-      parent: 3554
-    - type: Physics
-      canCollide: False
-    - type: InsideEntityStorage
 - proto: Pen
   entities:
   - uid: 1484
@@ -25625,6 +25587,11 @@ entities:
       parent: 1
 - proto: VendingMachineFuelVend
   entities:
+  - uid: 2786
+    components:
+    - type: Transform
+      pos: 38.5,0.5
+      parent: 1
   - uid: 3301
     components:
     - type: Transform
@@ -30543,7 +30510,7 @@ entities:
       lastSignals:
         DoorStatus: True
     - type: Door
-      secondsUntilStateChange: -58374.758
+      secondsUntilStateChange: -58496.543
       state: Opening
     - type: Airlock
       autoClose: False

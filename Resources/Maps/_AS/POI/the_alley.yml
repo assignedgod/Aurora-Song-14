@@ -4,8 +4,8 @@ meta:
   engineVersion: 255.1.0
   forkId: ""
   forkVersion: ""
-  time: 08/06/2025 12:40:32
-  entityCount: 5374
+  time: 08/09/2025 07:38:59
+  entityCount: 5377
 maps: []
 grids:
 - 1
@@ -1550,7 +1550,7 @@ entities:
             0: 8191
           4,5:
             0: 61697
-            2: 68
+            1: 68
           4,6:
             0: 30719
           4,7:
@@ -1810,7 +1810,7 @@ entities:
           6,-1:
             0: 136
           7,-4:
-            1: 1568
+            2: 1568
           4,-9:
             0: 61713
           5,-8:
@@ -1891,7 +1891,7 @@ entities:
             0: 306
           -6,-9:
             0: 51200
-            1: 16
+            2: 16
           -5,-8:
             0: 61184
           -5,-7:
@@ -1955,7 +1955,7 @@ entities:
           6,6:
             0: 4368
           -7,-9:
-            1: 3072
+            2: 3072
           -5,-9:
             0: 868
           -5,-10:
@@ -2071,7 +2071,7 @@ entities:
         - volume: 2500
           temperature: 293.15
           moles:
-          - 0
+          - 6666.982
           - 0
           - 0
           - 0
@@ -2086,7 +2086,7 @@ entities:
         - volume: 2500
           temperature: 293.15
           moles:
-          - 6666.982
+          - 0
           - 0
           - 0
           - 0
@@ -2903,7 +2903,7 @@ entities:
       pos: 7.5,-56.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -6185.0415
+      secondsUntilStateChange: -6354.595
       state: Opening
     - type: Docking
       name: Bar-C
@@ -14972,7 +14972,7 @@ entities:
       pos: -13.5,12.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -6835.807
+      secondsUntilStateChange: -7005.361
       state: Closing
     - type: DeviceNetwork
       deviceLists:
@@ -25498,6 +25498,15 @@ entities:
     - type: Transform
       pos: 20.662685,1.9636676
       parent: 1
+- proto: NFHolopadTinnia
+  entities:
+  - uid: 5377
+    components:
+    - type: Transform
+      pos: -10.5,-27.5
+      parent: 1
+    - type: Label
+      currentLabel: Mercenary Bar, The Alley
 - proto: NFPlushieEngineer
   entities:
   - uid: 4724
@@ -28942,6 +28951,18 @@ entities:
     components:
     - type: Transform
       pos: -18.5,-17.5
+      parent: 1
+- proto: VendingMachineTankDispenserEVAPOI
+  entities:
+  - uid: 5375
+    components:
+    - type: Transform
+      pos: -15.5,-20.5
+      parent: 1
+  - uid: 5376
+    components:
+    - type: Transform
+      pos: -18.5,-20.5
       parent: 1
 - proto: VendingMachineVendomatPOI
   entities:
@@ -35111,7 +35132,7 @@ entities:
       pos: 29.5,1.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -17494.596
+      secondsUntilStateChange: -17664.148
       state: Opening
   - uid: 2765
     components:
