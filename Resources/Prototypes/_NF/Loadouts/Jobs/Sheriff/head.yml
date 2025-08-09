@@ -12,4 +12,4 @@
     - !type:GroupLoadoutEffect
       proto: NFHeadwearCapable
   equipment:
-    head: ClothingHeadHatNfsdCampaignFilled
+    head: ClothingHeadHatBeretCommissioner
