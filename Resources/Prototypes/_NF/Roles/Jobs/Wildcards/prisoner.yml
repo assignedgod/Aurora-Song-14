@@ -13,6 +13,8 @@
   startingGear: PrisonerGear
   alwaysUseSpawner: true
   canBeAntag: false
+  access:
+  - Prisoner # Aurora
   icon: "JobIconPrisoner"
   supervisors: job-supervisors-prisoner
   displayWeight: 10 # Frontier

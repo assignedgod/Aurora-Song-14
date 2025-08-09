@@ -768,6 +768,7 @@
   - type: Access
     tags:
     - GenpopEnter
+    - Prisoner
   - type: GenpopIdCard
   - type: IdCard
     jobTitle: job-name-prisoner
@@ -776,6 +777,7 @@
   - type: ExpireIdCard
     expireMessage: genpop-prisoner-id-expire
     expiredAccess:
+    - Prisoner
     - GenpopLeave
   - type: Speech
     speechVerb: Robotic

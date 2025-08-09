@@ -33,6 +33,7 @@
   - Sergeant
   - Bailiff
   - Brigmedic
+  - Prisoner
   accessGroups:
   - GeneralNfsdAccess
   special:

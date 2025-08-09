@@ -21,6 +21,7 @@
   canBeAntag: false
   access:
   - Brigmedic
+  - Prisoner
   accessGroups:
   - GeneralNfsdAccess
   special:
