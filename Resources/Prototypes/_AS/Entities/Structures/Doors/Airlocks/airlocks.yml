@@ -5,3 +5,21 @@
   components:
   - type: PriorityDock
     tag: ArrivalShuttle
+
+- type: entity
+  parent: AirlockNfsd
+  id: AirlockPrisonerLocked
+  suffix: Prisoner, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsPrisoner ]
+
+- type: entity
+  parent: AirlockNfsdGlass
+  id: AirlockPrisonerGlassLocked
+  suffix: Prisoner, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsPrisoner ]

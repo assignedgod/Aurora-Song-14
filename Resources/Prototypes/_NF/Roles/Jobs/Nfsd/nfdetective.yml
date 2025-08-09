@@ -21,6 +21,7 @@
   canBeAntag: false
   access:
   - Detective
+  - Prisoner
   accessGroups:
   - GeneralNfsdAccess
   special:
