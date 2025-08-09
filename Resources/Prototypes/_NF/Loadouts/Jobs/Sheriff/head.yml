@@ -1,11 +1,15 @@
 - type: loadout
   id: SheriffClothingHeadHatSheriff
   hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: NFHeadwearCapable
   equipment:
     head: ClothingHeadHatNfsdCampaignFilled
 
 - type: loadout
-  id: SheriffClothingHeadAltHatSheriff
+  id: SheriffClothingHeadHatSheriff
   hideEffects:
+    - !type:GroupLoadoutEffect
+      proto: NFHeadwearCapable
   equipment:
-    head: ClothingHeadHatBeretCommissioner
+    head: ClothingHeadHatNfsdCampaignFilled
