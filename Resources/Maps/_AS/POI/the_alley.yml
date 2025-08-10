@@ -4,8 +4,8 @@ meta:
   engineVersion: 255.1.0
   forkId: ""
   forkVersion: ""
-  time: 08/09/2025 07:38:59
-  entityCount: 5377
+  time: 08/10/2025 18:05:31
+  entityCount: 5378
 maps: []
 grids:
 - 1
@@ -2903,7 +2903,7 @@ entities:
       pos: 7.5,-56.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -6354.595
+      secondsUntilStateChange: -6430.742
       state: Opening
     - type: Docking
       name: Bar-C
@@ -2984,12 +2984,6 @@ entities:
       rot: 3.141592653589793 rad
       pos: 17.5,4.5
       parent: 1
-  - uid: 3089
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 20.5,-9.5
-      parent: 1
 - proto: AirlockMedicalGlassLocked
   entities:
   - uid: 571
@@ -3007,20 +3001,26 @@ entities:
   - uid: 2590
     components:
     - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: 23.5,-10.5
+      rot: -1.5707963267948966 rad
+      pos: 20.5,-9.5
       parent: 1
   - uid: 2688
     components:
     - type: Transform
-      rot: 1.5707963267948966 rad
+      rot: -1.5707963267948966 rad
       pos: 23.5,-8.5
       parent: 1
   - uid: 2701
     components:
     - type: Transform
-      rot: 1.5707963267948966 rad
+      rot: -1.5707963267948966 rad
       pos: 23.5,-9.5
+      parent: 1
+  - uid: 3089
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 23.5,-10.5
       parent: 1
 - proto: AirlockMercenaryGlass
   entities:
@@ -14972,7 +14972,7 @@ entities:
       pos: -13.5,12.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -7005.361
+      secondsUntilStateChange: -7081.508
       state: Closing
     - type: DeviceNetwork
       deviceLists:
@@ -28896,6 +28896,13 @@ entities:
     - type: Transform
       pos: 16.5,-0.5
       parent: 1
+- proto: VendingMachineCiviMed
+  entities:
+  - uid: 5378
+    components:
+    - type: Transform
+      pos: 19.5,-7.5
+      parent: 1
 - proto: VendingMachineCiviMedPlus
   entities:
   - uid: 902
@@ -35132,7 +35139,7 @@ entities:
       pos: 29.5,1.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -17664.148
+      secondsUntilStateChange: -17740.295
       state: Opening
   - uid: 2765
     components:
