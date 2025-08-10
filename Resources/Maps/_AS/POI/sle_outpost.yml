@@ -4,8 +4,8 @@ meta:
   engineVersion: 255.1.0
   forkId: ""
   forkVersion: ""
-  time: 08/10/2025 03:17:33
-  entityCount: 4697
+  time: 08/10/2025 12:55:44
+  entityCount: 4704
 maps: []
 grids:
 - 1
@@ -2926,7 +2926,7 @@ entities:
       pos: 17.5,-5.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -35526.082
+      secondsUntilStateChange: -35603.36
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -2991,7 +2991,7 @@ entities:
       pos: -2.5,2.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -50872.402
+      secondsUntilStateChange: -50949.68
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -3002,7 +3002,7 @@ entities:
       pos: -1.5,3.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -8720.546
+      secondsUntilStateChange: -8797.823
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -3033,7 +3033,7 @@ entities:
       pos: -11.5,1.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -50875.934
+      secondsUntilStateChange: -50953.21
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -3049,7 +3049,7 @@ entities:
       pos: -11.5,-0.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -51657.47
+      secondsUntilStateChange: -51734.746
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -3085,7 +3085,7 @@ entities:
       pos: -17.5,-2.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -52985.5
+      secondsUntilStateChange: -53062.777
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -3195,7 +3195,7 @@ entities:
       pos: 5.5,9.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -34659.453
+      secondsUntilStateChange: -34736.73
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -5360,6 +5360,20 @@ entities:
     - type: Transform
       pos: -17.591246,-9.351254
       parent: 1
+- proto: BoxFolderBlack
+  entities:
+  - uid: 2827
+    components:
+    - type: Transform
+      pos: -1.4101992,-19.380348
+      parent: 1
+- proto: BoxFolderClipboardPal
+  entities:
+  - uid: 2824
+    components:
+    - type: Transform
+      pos: -17.305283,11.088737
+      parent: 1
 - proto: BoxFolderMedicalDoctor
   entities:
   - uid: 4441
@@ -5394,6 +5408,13 @@ entities:
     components:
     - type: Transform
       pos: -17.466064,11.494733
+      parent: 1
+- proto: BoxFolderRed
+  entities:
+  - uid: 2828
+    components:
+    - type: Transform
+      pos: 3.6018524,-19.380348
       parent: 1
 - proto: Bucket
   entities:
@@ -14528,6 +14549,18 @@ entities:
     - type: Transform
       pos: -11.051517,-38.084972
       parent: 1
+- proto: FolderSpawner
+  entities:
+  - uid: 2825
+    components:
+    - type: Transform
+      pos: -2.573676,-19.369925
+      parent: 1
+  - uid: 2826
+    components:
+    - type: Transform
+      pos: 2.4230995,-19.390772
+      parent: 1
 - proto: FoodBoxDonut
   entities:
   - uid: 3433
@@ -22181,7 +22214,7 @@ entities:
       pos: -1.5,33.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -59970.586
+      secondsUntilStateChange: -60047.863
       state: Opening
   - uid: 3347
     components:
@@ -22189,7 +22222,7 @@ entities:
       pos: 0.5,33.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -59968.953
+      secondsUntilStateChange: -60046.23
       state: Opening
   - uid: 3348
     components:
@@ -22197,7 +22230,7 @@ entities:
       pos: 2.5,33.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -59967.586
+      secondsUntilStateChange: -60044.863
       state: Opening
 - proto: HospitalCurtainsOpen
   entities:
@@ -22853,6 +22886,16 @@ entities:
       parent: 1
 - proto: PaperBin20
   entities:
+  - uid: 2829
+    components:
+    - type: Transform
+      pos: -2.5,-19.5
+      parent: 1
+  - uid: 2830
+    components:
+    - type: Transform
+      pos: 2.5,-19.5
+      parent: 1
   - uid: 4305
     components:
     - type: Transform
@@ -30669,7 +30712,7 @@ entities:
       lastSignals:
         DoorStatus: True
     - type: Door
-      secondsUntilStateChange: -59006.254
+      secondsUntilStateChange: -59083.53
       state: Opening
     - type: Airlock
       autoClose: False
