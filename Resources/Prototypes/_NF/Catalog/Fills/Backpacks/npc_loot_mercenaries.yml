@@ -522,14 +522,20 @@
       prob: 0.4
     # Items
     - id: NFAmmunitionBoxBigRifle30Overpressure
-      prob: 0.9
+      prob: 0.5
     - id: NFAmmunitionBoxBigRifle30Overpressure
-      prob: 0.4
+      prob: 0.2
     - id: ClothingNeckIFFNeutral
       prob: 0.2
     - id: NFAmmunitionBoxBigRifle30Overpressure
-      prob: 0.2
+      prob: 0.1
     - id: AmmoTechFabCircuitboard
+      prob: 0.1
+    - id: NFAmmunitionBoxBigRifle20Overpressure
+      prob: 0.5
+    - id: NFAmmunitionBoxBigRifle20Overpressure
+      prob: 0.2
+    - id: NFAmmunitionBoxBigRifle20Overpressure
       prob: 0.1
     # Bonus Loot T4
     - id: SpaceCash2500
