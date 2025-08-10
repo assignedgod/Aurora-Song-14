@@ -4,8 +4,8 @@ meta:
   engineVersion: 255.1.0
   forkId: ""
   forkVersion: ""
-  time: 08/09/2025 08:17:40
-  entityCount: 4680
+  time: 08/10/2025 03:17:33
+  entityCount: 4697
 maps: []
 grids:
 - 1
@@ -686,6 +686,8 @@ entities:
             859: 4,-18
             867: 1,-17
             875: 17,-2
+            967: 3,10
+            968: 7,8
         - node:
             color: '#FFFFFFFF'
             id: BrickTileSteelInnerNw
@@ -1673,7 +1675,8 @@ entities:
             3: 256
             0: 19660
           1,-5:
-            0: 6002
+            0: 5938
+            5: 64
           1,-4:
             1: 2
           2,-3:
@@ -2112,6 +2115,21 @@ entities:
           - 0
           - 0
           - 0
+        - volume: 2500
+          temperature: 293.14996
+          moles:
+          - 20.078888
+          - 75.53487
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
         chunkSize: 4
     - type: GasTileOverlay
     - type: RadiationGridResistance
@@ -2426,20 +2444,6 @@ entities:
       - 4524
       - 4525
       - 4347
-- proto: AirlockBrigLocked
-  entities:
-  - uid: 3382
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: -2.5,29.5
-      parent: 1
-  - uid: 3383
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 3.5,29.5
-      parent: 1
 - proto: AirlockExternal
   entities:
   - uid: 13
@@ -2922,7 +2926,7 @@ entities:
       pos: 17.5,-5.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -35016.37
+      secondsUntilStateChange: -35526.082
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -2987,7 +2991,7 @@ entities:
       pos: -2.5,2.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -50362.69
+      secondsUntilStateChange: -50872.402
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -2998,7 +3002,7 @@ entities:
       pos: -1.5,3.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -8210.835
+      secondsUntilStateChange: -8720.546
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -3029,7 +3033,7 @@ entities:
       pos: -11.5,1.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -50366.223
+      secondsUntilStateChange: -50875.934
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -3045,7 +3049,7 @@ entities:
       pos: -11.5,-0.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -51147.758
+      secondsUntilStateChange: -51657.47
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -3081,7 +3085,7 @@ entities:
       pos: -17.5,-2.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -52475.79
+      secondsUntilStateChange: -52985.5
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -3191,7 +3195,7 @@ entities:
       pos: 5.5,9.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -34149.742
+      secondsUntilStateChange: -34659.453
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -3244,6 +3248,18 @@ entities:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: -21.5,0.5
+      parent: 1
+- proto: AirlockPrisonerGlassLocked
+  entities:
+  - uid: 385
+    components:
+    - type: Transform
+      pos: -2.5,29.5
+      parent: 1
+  - uid: 763
+    components:
+    - type: Transform
+      pos: 3.5,29.5
       parent: 1
 - proto: AirlockShuttle
   entities:
@@ -11254,14 +11270,6 @@ entities:
       rot: 1.5707963267948966 rad
       pos: -3.5,-18.5
       parent: 1
-- proto: ComputerRadar
-  entities:
-  - uid: 4518
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 21.5,-3.5
-      parent: 1
 - proto: ComputerShipyardNfsd
   entities:
   - uid: 4519
@@ -11371,6 +11379,38 @@ entities:
       rot: 1.5707963267948966 rad
       pos: -7.5,24.5
       parent: 1
+- proto: ComputerWallmountRadar
+  entities:
+  - uid: 2788
+    components:
+    - type: Transform
+      pos: 16.5,-2.5
+      parent: 1
+  - uid: 2789
+    components:
+    - type: Transform
+      pos: 37.5,-12.5
+      parent: 1
+  - uid: 2811
+    components:
+    - type: Transform
+      pos: 3.5,-15.5
+      parent: 1
+  - uid: 2820
+    components:
+    - type: Transform
+      pos: 37.5,13.5
+      parent: 1
+  - uid: 2821
+    components:
+    - type: Transform
+      pos: -2.5,-15.5
+      parent: 1
+  - uid: 2822
+    components:
+    - type: Transform
+      pos: 2.5,2.5
+      parent: 1
 - proto: ContrabandPallet
   entities:
   - uid: 1496
@@ -11387,6 +11427,52 @@ entities:
       parent: 1
 - proto: ConveyorBelt
   entities:
+  - uid: 2796
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 12.5,13.5
+      parent: 1
+  - uid: 2797
+    components:
+    - type: Transform
+      pos: 11.5,14.5
+      parent: 1
+  - uid: 2798
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 12.5,14.5
+      parent: 1
+  - uid: 2802
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 11.5,13.5
+      parent: 1
+  - uid: 2803
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 13.5,16.5
+      parent: 1
+  - uid: 2804
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 13.5,15.5
+      parent: 1
+  - uid: 2805
+    components:
+    - type: Transform
+      pos: 14.5,16.5
+      parent: 1
+  - uid: 2807
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 14.5,15.5
+      parent: 1
   - uid: 3127
     components:
     - type: Transform
@@ -11514,13 +11600,20 @@ entities:
     - type: Transform
       pos: 5.5,19.5
       parent: 1
-- proto: DefibrillatorCabinet
+- proto: DefibrillatorCabinetFilled
   entities:
-  - uid: 4380
+  - uid: 2787
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: -14.5,-5.5
+      parent: 1
+- proto: DefibrillatorCompact
+  entities:
+  - uid: 2823
+    components:
+    - type: Transform
+      pos: -12.518295,-10.474403
       parent: 1
 - proto: DisposalBend
   entities:
@@ -13521,12 +13614,6 @@ entities:
       rot: 3.141592653589793 rad
       pos: -1.5,22.5
       parent: 1
-  - uid: 763
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: 16.5,-2.5
-      parent: 1
   - uid: 767
     components:
     - type: Transform
@@ -13543,6 +13630,11 @@ entities:
     components:
     - type: Transform
       pos: 6.5,2.5
+      parent: 1
+  - uid: 2785
+    components:
+    - type: Transform
+      pos: 21.5,-4.5
       parent: 1
   - uid: 4387
     components:
@@ -22089,7 +22181,7 @@ entities:
       pos: -1.5,33.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -59460.875
+      secondsUntilStateChange: -59970.586
       state: Opening
   - uid: 3347
     components:
@@ -22097,7 +22189,7 @@ entities:
       pos: 0.5,33.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -59459.242
+      secondsUntilStateChange: -59968.953
       state: Opening
   - uid: 3348
     components:
@@ -22105,7 +22197,7 @@ entities:
       pos: 2.5,33.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -59457.875
+      secondsUntilStateChange: -59967.586
       state: Opening
 - proto: HospitalCurtainsOpen
   entities:
@@ -22211,10 +22303,10 @@ entities:
       parent: 1
 - proto: LessLethalVendingMachinePOI
   entities:
-  - uid: 4053
+  - uid: 2810
     components:
     - type: Transform
-      pos: 19.5,9.5
+      pos: 16.5,6.5
       parent: 1
 - proto: LightTree
   entities:
@@ -22260,7 +22352,7 @@ entities:
       parent: 1
 - proto: LockerFreezerBase
   entities:
-  - uid: 2785
+  - uid: 2790
     components:
     - type: Transform
       pos: 6.5,-18.5
@@ -22719,30 +22811,30 @@ entities:
       parent: 1
 - proto: NFWeaponEnergyPistolDisablerPractice
   entities:
-  - uid: 3630
+  - uid: 2794
     components:
     - type: Transform
-      parent: 3627
+      parent: 2791
     - type: Physics
       canCollide: False
-  - uid: 3631
+  - uid: 2795
     components:
     - type: Transform
-      parent: 3627
+      parent: 2791
     - type: Physics
       canCollide: False
 - proto: NFWeaponEnergyRifleCarbinePractice
   entities:
-  - uid: 3628
+  - uid: 2792
     components:
     - type: Transform
-      parent: 3627
+      parent: 2791
     - type: Physics
       canCollide: False
-  - uid: 3629
+  - uid: 2793
     components:
     - type: Transform
-      parent: 3627
+      parent: 2791
     - type: Physics
       canCollide: False
 - proto: NoticeBoardNF
@@ -24725,30 +24817,29 @@ entities:
       parent: 1
 - proto: StructureGunRackWallmounted
   entities:
-  - uid: 3627
+  - uid: 2791
     components:
     - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: 20.5,8.5
+      pos: 19.5,10.5
       parent: 1
     - type: ContainerContainer
       containers:
         weapon1: !type:ContainerSlot
           showEnts: False
           occludes: True
-          ent: 3628
+          ent: 2792
         weapon2: !type:ContainerSlot
           showEnts: False
           occludes: True
-          ent: 3629
+          ent: 2793
         weapon3: !type:ContainerSlot
           showEnts: False
           occludes: True
-          ent: 3630
+          ent: 2794
         weapon4: !type:ContainerSlot
           showEnts: False
           occludes: True
-          ent: 3631
+          ent: 2795
         weapon5: !type:ContainerSlot
           showEnts: False
           occludes: True
@@ -25371,32 +25462,37 @@ entities:
     - type: Transform
       pos: -11.5,15.5
       parent: 1
-- proto: TargetHuman
+- proto: TargetClown
   entities:
-  - uid: 385
+  - uid: 2799
+    components:
+    - type: Transform
+      pos: 15.508302,14.557276
+      parent: 1
+  - uid: 2800
+    components:
+    - type: Transform
+      pos: 13.591635,13.952689
+      parent: 1
+  - uid: 2801
+    components:
+    - type: Transform
+      pos: 12.581218,12.170201
+      parent: 1
+  - uid: 2808
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
-      pos: 12.575272,12.100598
+      pos: 11.5,13.5
       parent: 1
-    - type: Pullable
-      prevFixedRotation: True
-  - uid: 3626
+    - type: Conveyed
+  - uid: 2809
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
-      pos: 15.5,14.5
+      pos: 14.5,16.5
       parent: 1
-  - uid: 4075
-    components:
-    - type: Transform
-      rot: -1.782257318557475 rad
-      pos: 13.581546,13.896437
-      parent: 1
-    - type: DamagePopup
-      damagePopupType: Total
-    - type: Pullable
-      prevFixedRotation: True
+    - type: Conveyed
 - proto: ToiletDirtyWater
   entities:
   - uid: 3868
@@ -25504,6 +25600,69 @@ entities:
           - Off
         - - Right
           - Forward
+  - uid: 2819
+    components:
+    - type: Transform
+      pos: 19.5,9.5
+      parent: 1
+    - type: DeviceLinkSource
+      linkedPorts:
+        2796:
+        - - Left
+          - Off
+        - - Right
+          - Forward
+        - - Middle
+          - Off
+        2802:
+        - - Middle
+          - Off
+        - - Right
+          - Forward
+        - - Left
+          - Off
+        2797:
+        - - Left
+          - Off
+        - - Right
+          - Forward
+        - - Middle
+          - Off
+        2798:
+        - - Right
+          - Forward
+        - - Middle
+          - Off
+        - - Left
+          - Off
+        2804:
+        - - Left
+          - Off
+        - - Right
+          - Forward
+        - - Middle
+          - Off
+        2803:
+        - - Middle
+          - Off
+        - - Right
+          - Forward
+        - - Left
+          - Off
+        2805:
+        - - Left
+          - Off
+        - - Right
+          - Forward
+        - - Middle
+          - Off
+        2807:
+        - - Left
+          - Off
+        - - Right
+          - Forward
+        - - Middle
+          - Off
 - proto: VendingMachineAmmoPOI
   entities:
   - uid: 4153
@@ -30510,7 +30669,7 @@ entities:
       lastSignals:
         DoorStatus: True
     - type: Door
-      secondsUntilStateChange: -58496.543
+      secondsUntilStateChange: -59006.254
       state: Opening
     - type: Airlock
       autoClose: False
