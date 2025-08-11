@@ -36,6 +36,7 @@ using Robust.Shared.Utility;
 using Content.Shared.Physics;
 using Robust.Shared.Physics;
 using Content.Server.Speech.Prototypes;
+using Content.Shared._DEN.Earmuffs;
 
 namespace Content.Server.Chat.Systems;
 
@@ -932,6 +933,10 @@ public sealed partial class ChatSystem : SharedChatSystem
         {
             if (player.AttachedEntity is not { Valid: true } playerEntity)
                 continue;
+
+            // DEN edit: VRChat earmuffs, but on Den!
+            if (TryComp<EarmuffsComponent>(playerEntity, out var earmuffs))
+                voiceGetRange = earmuffs.HearRange;
 
             var transformEntity = xforms.GetComponent(playerEntity);
 
