@@ -41,9 +41,6 @@ public abstract class SharedStationSpawningSystem : EntitySystem
     [Dependency] private readonly INetManager _net = default!; // Frontier
     [Dependency] private readonly SharedContainerSystem _container = default!; // Frontier
     [Dependency] private readonly SharedImplanterSystem _implanter = default!; // Frontier
-    [Dependency] private readonly INetManager _net = default!; // Frontier
-    [Dependency] private readonly SharedContainerSystem _container = default!; // Frontier
-    [Dependency] private readonly SharedImplanterSystem _implanter = default!; // Frontier
     [Dependency] private readonly LicenseSystem _license = default!; // Aurora
     [Dependency] private readonly SharedMindSystem _mind = default!; // Aurora
     [Dependency] private readonly InternalEncryptionLoadoutSystem _internalEncryptionLoadout = default!; // Aurora's Song 14
