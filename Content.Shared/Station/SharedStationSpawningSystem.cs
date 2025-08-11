@@ -15,6 +15,11 @@ using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using Robust.Shared.Utility;
 using Content.Shared.Implants; // Frontier
+using Content.Shared.Implants.Components; // Frontier
+using Content.Shared.Radio.Components; // Frontier
+using Robust.Shared.Containers; // Frontier
+using Robust.Shared.Network; // Frontier
+using Content.Shared.Implants; // Frontier
 using Content.Shared.Implants.Components;
 using Content.Shared.Mind; // Frontier
 using Content.Shared.Radio.Components; // Frontier
@@ -33,6 +38,9 @@ public abstract class SharedStationSpawningSystem : EntitySystem
     [Dependency] private readonly MetaDataSystem _metadata = default!;
     [Dependency] private readonly SharedStorageSystem _storage = default!;
     [Dependency] private readonly SharedTransformSystem _xformSystem = default!;
+    [Dependency] private readonly INetManager _net = default!; // Frontier
+    [Dependency] private readonly SharedContainerSystem _container = default!; // Frontier
+    [Dependency] private readonly SharedImplanterSystem _implanter = default!; // Frontier
     [Dependency] private readonly INetManager _net = default!; // Frontier
     [Dependency] private readonly SharedContainerSystem _container = default!; // Frontier
     [Dependency] private readonly SharedImplanterSystem _implanter = default!; // Frontier

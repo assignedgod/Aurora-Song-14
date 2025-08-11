@@ -30,7 +30,6 @@ public sealed partial class JetpackComponent : Component
     [DataField, AutoNetworkedField]
     public bool AddedCanMoveInAir;
 
-    // Frontier
     [ViewVariables, DataField, AutoNetworkedField]
     public bool RadarBlip = true;
     // End Frontier

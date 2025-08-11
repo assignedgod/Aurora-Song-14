@@ -95,8 +95,8 @@
   abstract: true
   components:
   - type: ProjectileSpread
-    count: 5 # six total, includes the spread as a bullet
-    spread: 11
+    count: 7 # eight(?) total, includes the spread as a bullet
+    spread: 10
 
 - type: entity
   categories: [ HideSpawnMenu ]
@@ -105,6 +105,14 @@
   components:
   - type: ProjectileSpread
     proto: NFPelletShotgun
+
+- type: entity
+  categories: [ HideSpawnMenu ]
+  id: NFPelletShotgunOverpressureSpread
+  parent: [NFBasePelletShotgunSpread, NFPelletShotgunOverpressure]
+  components:
+  - type: ProjectileSpread
+    proto: NFPelletShotgunOverpressure
 
 - type: entity
   categories: [ HideSpawnMenu ]
