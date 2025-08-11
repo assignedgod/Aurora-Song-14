@@ -461,7 +461,7 @@
 
 - type: entity
   id: AmmoTechFab
-  parent: [ BaseLatheLube]
+  parent: [NFBlueprintReceiverBase, BaseLatheLube] # Frontier: added NFBlueprintReceiverBase
   name: ammo techfab
   description: Prints the bare minimum of bullets that any budget military or armory could need. Nothing fancy.
   components:
