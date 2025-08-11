@@ -493,6 +493,9 @@
           - RawMaterial
           - Ingot
     - type: OreSiloClient
+    - type: EmagLatheRecipes
+      emagStaticPacks:
+      - ASAmmofabEmag
     - type: BlueprintReceiver # Frontier
       whitelist: # Frontier
         tags: # Frontier
