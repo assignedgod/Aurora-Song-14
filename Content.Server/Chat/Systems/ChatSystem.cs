@@ -555,9 +555,14 @@ public sealed partial class ChatSystem : SharedChatSystem
             if (MessageRangeCheck(session, data, range) != MessageRangeCheckResult.Full)
                 continue; // Won't get logged to chat, and ghosts are too far away to see the pop-up, so we just won't send it to them.
 
-            string result;
+            // How the entity perceives the message depends on whether it can understand its language
+            // Result is the intermediate message derived from the perceived one via obfuscation
+            // Wrapped message is the result wrapped in an "x says y" string
+            string result, wrappedMessage;
 
-            if (data.Range <= WhisperClearRange)
+            // Floof: handle languages that require LOS
+            if (!language.SpeechOverride.RequireLOS && data.Range <= WhisperClearRange
+                || _interactionSystem.InRangeUnobstructed(source, listener, WhisperClearRange, _subtleWhisperMask))
             {
                 // Scenario 1: the listener can clearly understand the message
                 result = message;
@@ -797,6 +802,12 @@ public sealed partial class ChatSystem : SharedChatSystem
             if (session.AttachedEntity is not { Valid: true } playerEntity)
                 continue;
 
+            // DEN edit: VRChat earmuffs, but on Den!
+            if (TryComp<EarmuffsComponent>(playerEntity, out var earmuffs)
+                && earmuffs.Running && earmuffs.HearRange < data.Range
+                && channel == ChatChannel.Local || channel == ChatChannel.Emotes)
+                continue;
+
             var entRange = MessageRangeCheck(session, data, range);
             if (entRange == MessageRangeCheckResult.Disallowed)
                 continue;
@@ -933,10 +944,6 @@ public sealed partial class ChatSystem : SharedChatSystem
         {
             if (player.AttachedEntity is not { Valid: true } playerEntity)
                 continue;
-
-            // DEN edit: VRChat earmuffs, but on Den!
-            if (TryComp<EarmuffsComponent>(playerEntity, out var earmuffs))
-                voiceGetRange = earmuffs.HearRange;
 
             var transformEntity = xforms.GetComponent(playerEntity);
 
