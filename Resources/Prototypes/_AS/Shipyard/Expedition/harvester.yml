@@ -16,7 +16,7 @@
   price: 65000
   category: Medium
   group: Expedition
-  shuttlePath: /Maps/_AS/Shuttles/Expedition/Harvester.yml
+  shuttlePath: /Maps/_AS/Shuttles/Expedition/harvester.yml
   guidebookPage: Null
   class:
   - Expedition
