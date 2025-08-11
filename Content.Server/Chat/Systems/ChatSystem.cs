@@ -805,7 +805,7 @@ public sealed partial class ChatSystem : SharedChatSystem
             // DEN edit: VRChat earmuffs, but on Den!
             if (TryComp<EarmuffsComponent>(playerEntity, out var earmuffs)
                 && earmuffs.Running && earmuffs.HearRange < data.Range
-                && channel == ChatChannel.Local || channel == ChatChannel.Emotes)
+                && (channel == ChatChannel.Local || channel == ChatChannel.Emotes))
                 continue;
 
             var entRange = MessageRangeCheck(session, data, range);
