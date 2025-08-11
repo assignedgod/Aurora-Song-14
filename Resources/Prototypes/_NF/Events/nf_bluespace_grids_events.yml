@@ -38,7 +38,10 @@
         paths:
         - /Maps/_NF/Bluespace/cache.yml
     rewardAccounts:
-      Nfsd: 1.0
+      Nfsd: 0.25
+      Frontier: 0.25
+      Medical: 0.25
+      Edison: 0.25
 
 - type: entity
   id: BluespaceVaultError
@@ -79,7 +82,10 @@
         paths:
         - /Maps/_NF/Bluespace/vault.yml
     rewardAccounts:
-      Nfsd: 1.0
+      Nfsd: 0.25
+      Frontier: 0.25
+      Medical: 0.25
+      Edison: 0.25
 
 - type: entity
   id: BluespaceVaultSmallError
@@ -121,7 +127,10 @@
         paths:
         - /Maps/_NF/Bluespace/vaultsmall.yml
     rewardAccounts:
-      Nfsd: 1.0
+      Nfsd: 0.25
+      Frontier: 0.25
+      Medical: 0.25
+      Edison: 0.25
 
 - type: entity
   id: BluespaceSyndicateFTLInterception
@@ -144,8 +153,8 @@
       grid: !type:GridSpawnGroup
         nameLoc:
         - station-event-bluespace-name-UnidentifiedVessel
-        minCount: 2
-        maxCount: 3
+        minCount: 2 #Aurora's Song
+        maxCount: 3 #Aurora's Song
         minimumDistance: 1500
         maximumDistance: 2500
         addComponents:
@@ -184,8 +193,8 @@
       grid: !type:GridSpawnGroup
         nameLoc:
         - station-event-bluespace-name-UnidentifiedVessel
-        minCount: 2
-        maxCount: 3
+        minCount: 2 #Aurora's Song
+        maxCount: 3 #Aurora's Song
         minimumDistance: 1500
         maximumDistance: 2500
         addComponents:
@@ -224,8 +233,8 @@
       grid: !type:GridSpawnGroup
         nameLoc:
         - station-event-bluespace-name-UnidentifiedVessel
-        minCount: 2
-        maxCount: 3
+        minCount: 2 #Aurora's Song
+        maxCount: 3 #Aurora's Song
         minimumDistance: 1500
         maximumDistance: 2500
         addComponents:
@@ -335,8 +344,8 @@
       grid: !type:GridSpawnGroup
         nameLoc:
         - station-event-bluespace-name-UnidentifiedVessel
-        minCount: 2
-        maxCount: 3
+        minCount: 2 #Aurora's Song
+        maxCount: 3 #Aurora's Song
         minimumDistance: 1500
         maximumDistance: 2500
         addComponents:
