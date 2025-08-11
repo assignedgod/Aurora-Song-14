@@ -153,6 +153,8 @@
       grid: !type:GridSpawnGroup
         nameLoc:
         - station-event-bluespace-name-UnidentifiedVessel
+        minCount: 2 #Aurora's Song
+        maxCount: 3 #Aurora's Song
         minimumDistance: 1500
         maximumDistance: 2500
         addComponents:
@@ -191,6 +193,8 @@
       grid: !type:GridSpawnGroup
         nameLoc:
         - station-event-bluespace-name-UnidentifiedVessel
+        minCount: 2 #Aurora's Song
+        maxCount: 3 #Aurora's Song
         minimumDistance: 1500
         maximumDistance: 2500
         addComponents:
@@ -229,6 +233,8 @@
       grid: !type:GridSpawnGroup
         nameLoc:
         - station-event-bluespace-name-UnidentifiedVessel
+        minCount: 2 #Aurora's Song
+        maxCount: 3 #Aurora's Song
         minimumDistance: 1500
         maximumDistance: 2500
         addComponents:
@@ -287,7 +293,7 @@
   parent: BaseStationEventShortDelay
   components:
   - type: StationEvent
-    startAnnouncement: station-event-bluespace-mcargo-ftl-start-announcement # Aurora event text
+    startAnnouncement: station-event-bluespace-mcargo-ftl-start-announcement #Aurora event text
     startAudio:
       path: /Audio/Misc/notice1.ogg
     warningAnnouncement: station-event-bluespace-mcargo-ftl-warning-announcement
@@ -338,6 +344,8 @@
       grid: !type:GridSpawnGroup
         nameLoc:
         - station-event-bluespace-name-UnidentifiedVessel
+        minCount: 2 #Aurora's Song
+        maxCount: 3 #Aurora's Song
         minimumDistance: 1500
         maximumDistance: 2500
         addComponents:

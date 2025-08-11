@@ -35,9 +35,9 @@ station-event-bluespace-bloodmoon-start-announcement = Attention all available C
 station-event-bluespace-bloodmoon-warning-announcement = Remote FTL procedures initialized, five minutes until Blood Cult vessel dissipation.
 station-event-bluespace-bloodmoon-end-announcement = In compliance with Colonial FTL traffic patterns, the Blood Cult vessel has been dissipated to ensure non-collision.
 
-station-event-bluespace-generic-ftl-start-announcement = Attention all Colonial citizens and/ or immigrants! Colonial Command has detected an unidentified vessel entering the Aurora Sector illegally without IFF. As per Colonial Law, the belligerent vessel is now legal salvage for authorized personnel. Investigate with caution, Colonial Command is not liable for damages sustained or loss of life.
-station-event-bluespace-generic-ftl-warning-announcement = Remote FTL procedures initialized, five minutes until unidentified vessel dissipation.
-station-event-bluespace-generic-ftl-end-announcement = In compliance with Colonial FTL traffic patterns, the unidentified vessel has been dissipated to ensure non-collision.
+station-event-bluespace-generic-ftl-start-announcement = Attention all Colonial citizens and/ or immigrants! Colonial Command has detected a flotilla of unidentified vessels entering the Aurora Sector illegally without IFF. As per Colonial Law, the belligerent vessels are now legal salvage for authorized personnel. Investigate with caution, Colonial Command is not liable for damages sustained or loss of life.
+station-event-bluespace-generic-ftl-warning-announcement = Remote FTL procedures initialized, five minutes until unidentified vessels dissipate.
+station-event-bluespace-generic-ftl-end-announcement = In compliance with Colonial FTL traffic patterns, the unidentified vessels have been dissipated to ensure non-collision.
 
 station-event-bluespace-name-BrokenMcDelivery = McDelivery
 station-event-bluespace-name-Cave = Cave
