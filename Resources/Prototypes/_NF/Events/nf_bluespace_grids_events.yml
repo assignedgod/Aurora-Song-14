@@ -38,10 +38,7 @@
         paths:
         - /Maps/_NF/Bluespace/cache.yml
     rewardAccounts:
-      Nfsd: 0.25
-      Frontier: 0.25
-      Medical: 0.25
-      Edison: 0.25
+      Nfsd: 1.0
 
 - type: entity
   id: BluespaceVaultError
@@ -82,10 +79,7 @@
         paths:
         - /Maps/_NF/Bluespace/vault.yml
     rewardAccounts:
-      Nfsd: 0.25
-      Frontier: 0.25
-      Medical: 0.25
-      Edison: 0.25
+      Nfsd: 1.0
 
 - type: entity
   id: BluespaceVaultSmallError
@@ -127,10 +121,7 @@
         paths:
         - /Maps/_NF/Bluespace/vaultsmall.yml
     rewardAccounts:
-      Nfsd: 0.25
-      Frontier: 0.25
-      Medical: 0.25
-      Edison: 0.25
+      Nfsd: 1.0
 
 - type: entity
   id: BluespaceSyndicateFTLInterception
@@ -153,6 +144,8 @@
       grid: !type:GridSpawnGroup
         nameLoc:
         - station-event-bluespace-name-UnidentifiedVessel
+        minCount: 2
+        maxCount: 3
         minimumDistance: 1500
         maximumDistance: 2500
         addComponents:
@@ -191,6 +184,8 @@
       grid: !type:GridSpawnGroup
         nameLoc:
         - station-event-bluespace-name-UnidentifiedVessel
+        minCount: 2
+        maxCount: 3
         minimumDistance: 1500
         maximumDistance: 2500
         addComponents:
@@ -229,6 +224,8 @@
       grid: !type:GridSpawnGroup
         nameLoc:
         - station-event-bluespace-name-UnidentifiedVessel
+        minCount: 2
+        maxCount: 3
         minimumDistance: 1500
         maximumDistance: 2500
         addComponents:
@@ -287,11 +284,11 @@
   parent: BaseStationEventShortDelay
   components:
   - type: StationEvent
-    startAnnouncement: station-event-bluespace-mcargo-ftl-start-announcement # Aurora event text
+    startAnnouncement: station-event-bluespace-generic-ftl-start-announcement
     startAudio:
       path: /Audio/Misc/notice1.ogg
-    warningAnnouncement: station-event-bluespace-mcargo-ftl-warning-announcement
-    endAnnouncement: station-event-bluespace-mcargo-ftl-end-announcement
+    warningAnnouncement: station-event-bluespace-generic-ftl-warning-announcement
+    endAnnouncement: station-event-bluespace-generic-ftl-end-announcement
     earliestStart: 20
     maximumPlayers: 20
     weight: 5
@@ -338,6 +335,8 @@
       grid: !type:GridSpawnGroup
         nameLoc:
         - station-event-bluespace-name-UnidentifiedVessel
+        minCount: 2
+        maxCount: 3
         minimumDistance: 1500
         maximumDistance: 2500
         addComponents:
