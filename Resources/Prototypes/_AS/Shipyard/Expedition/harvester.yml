@@ -27,7 +27,7 @@
 - type: gameMap
   id: Harvester
   mapName: 'KC Harvester'
-  mapPath: /Maps/_AS/Shuttles/Expedition/Harvester.yml
+  mapPath: /Maps/_AS/Shuttles/Expedition/harvester.yml
   minPlayers: 0
   stations:
     Harvester:
