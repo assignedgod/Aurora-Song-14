@@ -24,7 +24,6 @@
 - type: guideEntry
   id: FrontierRuleZeroTolerance
   name: guide-entry-frontier-rule-zero-tolerance
-  ruleEntry: true
   text: "/ServerInfo/_NF/Guidebook/Rules/Zero_Tolerance.xml"
   ruleEntry: true
 
