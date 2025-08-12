@@ -515,6 +515,7 @@
   # PortableFission
   - PowerCellMicroreactor
   # HardsuitsBasic
-  - ClothingOuterHardsuitEVA
+  - ClothingOuterHardsuitSpatio
+  - ClothingOuterHardsuitPilot
   # HardsuitsAdvanced
   - ClothingOuterHardsuitCap

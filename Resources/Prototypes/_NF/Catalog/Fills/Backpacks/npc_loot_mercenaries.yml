@@ -250,9 +250,9 @@
   components:
   - type: SpawnItemsOnUse
     items:
-    - id: NFAmmunitionBoxShellShotgunOverpressure
+    - id: NFAmmunitionBoxShellShotgunBuckshot
       prob: 0.4
-    - id: NFAmmunitionBoxShellShotgunOverpressure
+    - id: NFAmmunitionBoxShellShotgunBuckshot
       prob: 0.2
     sound:
       path: /Audio/Items/jumpsuit_equip.ogg
