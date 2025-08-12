@@ -59,7 +59,7 @@
       rechargeSound:
         path: /Audio/_NF/Effects/silence.ogg
     - type: BasicEntityAmmoProvider
-      proto: NFCartridgePistol45Uranium
+      proto: NFCartridgePistol45
       capacity: 1
       count: 1
     - type: Gun
@@ -92,7 +92,7 @@
       prototypes:
         - SyndicateNavalCaptainGearC
     - type: BasicEntityAmmoProvider
-      proto: NFCartridgePistol45Overpressure
+      proto: NFCartridgePistol45
       capacity: 1
       count: 1
 
@@ -125,7 +125,7 @@
       rechargeSound:
         path: /Audio/_NF/Effects/silence.ogg
     - type: BasicEntityAmmoProvider
-      proto: NFShellShotgunUranium
+      proto: NFShellShotgunBuckshot
       capacity: 1
       count: 1
     - type: Gun
@@ -162,7 +162,7 @@
       prototypes:
         - SyndicateNavalEngineerGearC
     - type: BasicEntityAmmoProvider
-      proto: NFShellShotgunBuckshotOverpressure
+      proto: NFShellShotgunBuckshot
       capacity: 1
       count: 1
 

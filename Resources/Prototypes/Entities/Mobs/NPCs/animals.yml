@@ -1230,7 +1230,6 @@
   - type: HTN
     rootTask:
       task: SimpleHostileCompound
-  - type: LeashAnchor # Floofstation
     blackboard:
       NavClimb: !type:Bool
         true
