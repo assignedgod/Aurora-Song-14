@@ -18,7 +18,8 @@
   - type: Appearance
   - type: GenericVisualizer
     visuals:
-      enum.ToggleVisuals.Toggled:
+      enum.ToggleableVisuals.Enabled:
+        enum.ToggleableVisuals.Layer:
         on:
           True: { visible: true }
           False: { visible: false }
