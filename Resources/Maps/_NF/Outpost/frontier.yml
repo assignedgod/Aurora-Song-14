@@ -5727,12 +5727,10 @@ entities:
 - proto: ActionToggleLight
   entities:
   - uid: 4
-    mapInit: true
-    paused: true
     components:
     - type: Transform
       parent: 3
-    - type: Action
+    - type: InstantAction
       container: 3
 - proto: AirAlarm
   entities:
