@@ -9,11 +9,11 @@ station-event-bluespace-scrap-end-announcement = Critical bluespace instability 
 
 station-event-bluespace-vault-start-announcement = A NanoTrasen armored vault is inbound to the sector. The SLE may declare the vault a No Fly Zone. NanoTrasen will pay good money for its contents to be safegaurded until its exit window arrives.
 station-event-bluespace-vault-warning-announcement = Remote FTL procedures initialized, five minutes until vault FTL.
-station-event-bluespace-vault-end-announcement = The vault has been retrieved from your sector. Station accounts have been paid.
+station-event-bluespace-vault-end-announcement = The vault has been retrieved from the sector. Station accounts have been paid.
 
 station-event-bluespace-cache-start-announcement = A Syndicate weapons cache is inbound to the sector. The SLE may declare the cache a NFZ. Cybersun will pay handsomely for its contents to be safeguarded until its FTL window arrives.
 station-event-bluespace-cache-warning-announcement = Remote FTL procedures initialized, five minutes until FTL.
-station-event-bluespace-cache-end-announcement = We have retrieved the cache has been retrieved. Station accounts have been paid.
+station-event-bluespace-cache-end-announcement = The cache has been retrieved from the sector. Station accounts have been paid.
 
 station-event-bluespace-asteroid-start-announcement = Long range scans indicate an unusually large asteroid entering the sector. Colonial Command advises prospectors to divert operations for maximum profit potential.
 station-event-bluespace-asteroid-warning-announcement = Bluespace instability detected on asteroid, five minutes until estimated departure.
