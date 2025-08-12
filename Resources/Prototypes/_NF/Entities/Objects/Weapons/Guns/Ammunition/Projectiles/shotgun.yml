@@ -106,13 +106,13 @@
   - type: ProjectileSpread
     proto: NFPelletShotgun
 
-- type: entity
-  categories: [ HideSpawnMenu ]
-  id: NFPelletShotgunOverpressureSpread
-  parent: [NFBasePelletShotgunSpread, NFPelletShotgunOverpressure]
-  components:
-  - type: ProjectileSpread
-    proto: NFPelletShotgunOverpressure
+#- type: entity
+#  categories: [ HideSpawnMenu ]
+#  id: NFPelletShotgunOverpressureSpread
+#  parent: [NFBasePelletShotgunSpread, NFPelletShotgunOverpressure]
+#  components:
+#  - type: ProjectileSpread
+#    proto: NFPelletShotgunOverpressure
 
 - type: entity
   categories: [ HideSpawnMenu ]
