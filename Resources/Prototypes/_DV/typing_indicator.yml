@@ -18,6 +18,8 @@
   typingState: feroxi0
   idleState: feroxi0
   offset: 0, 0.2 # 0625
+
+- type: typingIndicator
   id: paper
   spritePath: /Textures/_DV/Effects/speech.rsi
   typingState: paper0
