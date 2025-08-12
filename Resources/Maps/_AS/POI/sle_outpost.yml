@@ -4,8 +4,8 @@ meta:
   engineVersion: 255.1.0
   forkId: ""
   forkVersion: ""
-  time: 08/12/2025 20:04:24
-  entityCount: 4692
+  time: 08/12/2025 22:02:09
+  entityCount: 4693
 maps: []
 grids:
 - 1
@@ -826,6 +826,7 @@ entities:
             903: -4,1
             905: -10,1
             925: -19,2
+            974: 0,-2
         - node:
             color: '#FFFFFFFF'
             id: BrickTileSteelLineS
@@ -2920,7 +2921,7 @@ entities:
       pos: 17.5,-5.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -41654.855
+      secondsUntilStateChange: -41736.31
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -2973,7 +2974,7 @@ entities:
       pos: -2.5,2.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -57001.176
+      secondsUntilStateChange: -57082.63
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -2984,7 +2985,7 @@ entities:
       pos: -1.5,3.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -14849.32
+      secondsUntilStateChange: -14930.772
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -3015,7 +3016,7 @@ entities:
       pos: -11.5,1.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -57004.707
+      secondsUntilStateChange: -57086.16
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -3031,7 +3032,7 @@ entities:
       pos: -11.5,-0.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -57786.242
+      secondsUntilStateChange: -57867.695
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -3067,7 +3068,7 @@ entities:
       pos: -17.5,-2.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -59114.273
+      secondsUntilStateChange: -59195.727
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -3177,7 +3178,7 @@ entities:
       pos: 5.5,9.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -40788.227
+      secondsUntilStateChange: -40869.68
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -11430,6 +11431,13 @@ entities:
       parent: 1
     - type: Physics
       bodyType: Static
+- proto: CrateServiceJanitorialSupplies
+  entities:
+  - uid: 965
+    components:
+    - type: Transform
+      pos: 7.5,-8.5
+      parent: 1
 - proto: Crematorium
   entities:
   - uid: 1638
@@ -22054,7 +22062,7 @@ entities:
       pos: -1.5,33.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -66099.36
+      secondsUntilStateChange: -66180.81
       state: Opening
   - uid: 3347
     components:
@@ -22062,7 +22070,7 @@ entities:
       pos: 0.5,33.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -66097.73
+      secondsUntilStateChange: -66179.18
       state: Opening
   - uid: 3348
     components:
@@ -22070,7 +22078,7 @@ entities:
       pos: 2.5,33.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -66096.36
+      secondsUntilStateChange: -66177.81
       state: Opening
 - proto: HospitalCurtainsOpen
   entities:
@@ -30649,7 +30657,7 @@ entities:
       lastSignals:
         DoorStatus: True
     - type: Door
-      secondsUntilStateChange: -65135.027
+      secondsUntilStateChange: -65216.48
       state: Opening
     - type: Airlock
       autoClose: False
