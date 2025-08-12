@@ -11960,7 +11960,7 @@ entities:
       parent: 2
 - proto: ContainmentFieldGenerator
   entities:
-  - uid: 1073
+  - uid: 3895
     components:
     - type: Transform
       pos: 7.5,35.5
