@@ -5725,28 +5725,15 @@ entities:
     - type: SpreaderGrid
     - type: IFF
       readOnly: True
-  - uid: 5691
-    components:
-    - type: MetaData
-      name: map 1234
-    - type: Transform
-    - type: Map
-      mapPaused: True
-    - type: PhysicsMap
-    - type: GridTree
-    - type: MovedGrids
-    - type: Broadphase
-    - type: Parallax
-      parallax: FrontierStation
-    - type: OccluderTree
+    - type: NavMap
 - proto: ActionToggleLight
   entities:
-  - uid: 2428
+  - uid: 4
     components:
     - type: Transform
-      parent: 1474
+      parent: 3
     - type: InstantAction
-      container: 1474
+      container: 3
 - proto: AirAlarm
   entities:
   - uid: 5
@@ -47043,8 +47030,27 @@ entities:
   - uid: 9067
     components:
     - type: Transform
-      pos: 43.550877,10.587616
-      parent: 2173
+      rot: 3.141592653589793 rad
+      pos: -9.5,18.5
+      parent: 2
+- proto: PhoneInstrument
+  entities:
+  - uid: 8998
+    components:
+    - type: Transform
+      pos: -10.5,20.5
+      parent: 2
+- proto: PianoInstrument
+  entities:
+  - uid: 5731
+    components:
+    - type: Transform
+      anchored: True
+      rot: 1.5707963267948966 rad
+      pos: 37.5,11.5
+      parent: 2
+    - type: Physics
+      bodyType: Static
 - proto: PillCanister
   entities:
   - uid: 5732
@@ -55166,8 +55172,8 @@ entities:
   - uid: 6869
     components:
     - type: Transform
-      pos: -49.5,18.5
-      parent: 2173
+      pos: -54.5,20.5
+      parent: 2
 - proto: VendingMachineCuddlyCritterVend
   entities:
   - uid: 6870
