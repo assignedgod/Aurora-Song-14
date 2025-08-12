@@ -312,8 +312,8 @@
   - type: SpawnItemsOnUse
     items:
       - id: NFWeaponRifleAssaultSmExpedition
-      - id: NFMagazineRifle30Uranium
-      - id: NFMagazineRifle30Uranium
+      - id: NFMagazineRifle30
+      - id: NFMagazineRifle30
         prob: 0.2
       - id: ClothingShoesBootsMagSyndie
       - id: SpaceCash10000
