@@ -30,3 +30,14 @@
   storage:
     back:
     - ShipVoucherAuroraMedic
+
+- type: chameleonOutfit
+  id: MedicChameleonOutfit
+  job: Medic
+  equipment:
+    head: ClothingHeadNurseHat
+    eyes: ClothingEyesHudMedical
+    mask: ClothingMaskSterile
+    neck: ClothingNeckStethoscope
+    outerClothing: ClothingOuterCoatLab
+    gloves: ClothingHandsGlovesLatex

@@ -31,3 +31,14 @@
   storage:
     back:
     - EncryptionKeyService # Frontier
+
+- type: chameleonOutfit
+  id: ServiceChameleonOutfit
+  job: Service
+  equipment:
+    head: ClothingHeadHatWelding
+    eyes: ClothingEyesGlassesCheapSunglasses
+    mask: ClothingMaskGas
+    neck: ClothingNeckMantle
+    outerClothing: ClothingOuterWinterCoat
+    gloves: ClothingHandsGlovesColorYellowBudget
