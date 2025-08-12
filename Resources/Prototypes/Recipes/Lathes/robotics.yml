@@ -119,7 +119,7 @@
     Gold: 100
     Silver: 100
     Plasma: 1000
-    
+
 # AI
 - type: latheRecipe
   id: AiRemoteBrain

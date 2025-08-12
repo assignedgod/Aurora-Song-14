@@ -154,7 +154,7 @@ public sealed partial class BorgSystem : SharedBorgSystem
             args.Handled = true;
             UpdateUI(uid, component);
         }
-        
+
         // Corvax-Next-AiRemoteControl-Start
         if (component.BrainEntity == null && aiBrain != null &&
     _whitelistSystem.IsWhitelistPassOrNull(component.BrainWhitelist, used))
@@ -170,7 +170,7 @@ public sealed partial class BorgSystem : SharedBorgSystem
         }
         // Corvax-Next-AiRemoteControl-End
     }
-    
+
 
     /// <summary>
     /// Inserts a new module into a borg, the same as if a player inserted it manually.

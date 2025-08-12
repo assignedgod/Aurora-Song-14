@@ -329,7 +329,7 @@ public sealed class SiliconLawSystem : SharedSiliconLawSystem
             // Corvax-Next-AiRemoteControl-End
         }
     }
-    
+
     // Corvax-Next-AiRemoteControl-Start
     public void SetLawsSilent(List<SiliconLaw> newLaws, EntityUid target, SoundSpecifier? cue = null)
     {
