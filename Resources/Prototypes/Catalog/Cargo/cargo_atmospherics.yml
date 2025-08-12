@@ -88,7 +88,7 @@
     sprite: _NF/Structures/Storage/canister.rsi # Frontier: _NF
     state: water_vapor
   product: WaterVaporCanister
-  cost: 1100
+  cost: 2000
   category: cargoproduct-category-name-atmospherics
   group: market
 
