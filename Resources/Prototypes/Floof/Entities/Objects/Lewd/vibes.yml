@@ -20,12 +20,8 @@
     visuals:
       enum.ToggleableVisuals.Enabled:
         enum.ToggleableVisuals.Layer:
-        on:
           True: { visible: true }
           False: { visible: false }
-        base:
-          True: { visible: false }
-          False: { visible: true }
 
 - type: entity
   parent: BaseVibe
