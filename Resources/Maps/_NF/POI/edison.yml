@@ -11953,7 +11953,7 @@ entities:
       parent: 2
 - proto: CondenserMachineCircuitBoard
   entities:
-  - uid: 3855
+  - uid: 4999
     components:
     - type: Transform
       pos: 8.4751625,39.49154
