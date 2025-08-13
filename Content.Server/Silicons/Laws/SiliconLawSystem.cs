@@ -199,7 +199,7 @@ public sealed class SiliconLawSystem : SharedSiliconLawSystem
         base.RemoveSubvertedSiliconRole(mindId);
 
         if (_roles.MindHasRole<SubvertedSiliconRoleComponent>(mindId))
-            _roles.MindTryRemoveRole<SubvertedSiliconRoleComponent>(mindId);
+            _roles.MindRemoveRole<SubvertedSiliconRoleComponent>(mindId);
     }
 
     public SiliconLawset GetLaws(EntityUid uid, SiliconLawBoundComponent? component = null)
@@ -329,7 +329,7 @@ public sealed class SiliconLawSystem : SharedSiliconLawSystem
             // Corvax-Next-AiRemoteControl-End
         }
     }
-    
+
     // Corvax-Next-AiRemoteControl-Start
     public void SetLawsSilent(List<SiliconLaw> newLaws, EntityUid target, SoundSpecifier? cue = null)
     {

@@ -20,8 +20,8 @@
   - type: Wieldable
     unwieldOnUse: false
   - type: GunWieldBonus
-    minAngle: -1.3
-    maxAngle: -2.5
+    minAngle: -0.6
+    maxAngle: -2.2
   - type: Gun
     projectileSpeed: 30
     minAngle: 4.1

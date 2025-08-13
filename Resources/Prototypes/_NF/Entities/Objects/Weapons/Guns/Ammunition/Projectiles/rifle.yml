@@ -9,7 +9,7 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 10
+        Piercing: 11
 
 - type: entity
   id: NFBulletRifle10Practice
@@ -20,7 +20,7 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 2
+        Piercing: 1
 
 - type: entity
   id: NFBulletRifle10Rubber
@@ -31,7 +31,7 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 2
+        Piercing: 1
   - type: StaminaDamageOnCollide
     damage: 10.5 # ~10 hits to stun sounds reasonable, less effective than pistol because rifle round is smaller in size
 
@@ -91,7 +91,7 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 4
+        Piercing: 2
 
 - type: entity
   id: NFBulletRifle20Rubber
@@ -102,7 +102,7 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 4
+        Piercing: 2
   - type: StaminaDamageOnCollide
     damage: 12 # ~9 hits to stun sounds reasonable, less effective than pistol because rifle round is smaller in size
 
@@ -150,8 +150,8 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 9
-        Radiation: 9
+        Piercing: 11.4 # 0.6 * (1.4 * base total dmg)
+        Radiation: 7.6 # 0.4 * (1.4 * base total dmg)
 
 - type: entity
   id: NFBulletRifle25Practice
@@ -162,7 +162,7 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 4
+        Piercing: 2
 
 - type: entity
   id: NFBulletRifle25Rubber
@@ -173,7 +173,7 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 4
+        Piercing: 2
   - type: StaminaDamageOnCollide
     damage: 17
 
@@ -233,7 +233,7 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 4
+        Piercing: 2
 
 - type: entity
   id: NFBulletRifle30Rubber
@@ -244,7 +244,7 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 4
+        Piercing: 2
   - type: StaminaDamageOnCollide
     damage: 14 # ~8 hits to stun sounds reasonable
 
@@ -275,4 +275,4 @@
       types:
         Blunt: 45
   - type: StaminaDamageOnCollide
-    damage: 60
+    damage: 70

@@ -78,7 +78,7 @@
 
 - type: entity
   id: NFWeaponRifleAssaultJackdaw
-  parent: [ BaseC2ContrabandUnredeemable, HLBaseWeaponRifleAssaultChamber25, NFBaseWeaponFrameRifleAssaultFrontierGunsmith ]
+  parent: [ BaseC2ContrabandUnredeemable, ASBaseWeaponRifleAssaultChamber25, NFBaseWeaponFrameRifleAssaultFrontierGunsmith ]
   name: Jackdaw
   description: |-
     The beginning of the end is heralded by the song of a Jackdaw.

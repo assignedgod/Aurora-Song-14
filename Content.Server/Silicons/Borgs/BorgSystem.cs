@@ -34,6 +34,7 @@ using Content.Shared.Throwing;
 using Content.Shared.Whitelist;
 using Content.Shared.Wires;
 using Robust.Server.GameObjects;
+using Robust.Shared.Configuration;
 using Robust.Shared.Containers;
 using Robust.Shared.Player;
 using Robust.Shared.Random;
@@ -49,6 +50,7 @@ public sealed partial class BorgSystem : SharedBorgSystem
 {
     [Dependency] private readonly IAdminLogManager _adminLog = default!;
     [Dependency] private readonly IBanManager _banManager = default!;
+    [Dependency] private readonly IConfigurationManager _cfgManager = default!;
     [Dependency] private readonly IGameTiming _timing = default!;
     [Dependency] private readonly IRobustRandom _random = default!;
     [Dependency] private readonly ActionsSystem _actions = default!;
@@ -152,7 +154,7 @@ public sealed partial class BorgSystem : SharedBorgSystem
             args.Handled = true;
             UpdateUI(uid, component);
         }
-        
+
         // Corvax-Next-AiRemoteControl-Start
         if (component.BrainEntity == null && aiBrain != null &&
     _whitelistSystem.IsWhitelistPassOrNull(component.BrainWhitelist, used))
@@ -168,7 +170,7 @@ public sealed partial class BorgSystem : SharedBorgSystem
         }
         // Corvax-Next-AiRemoteControl-End
     }
-    
+
 
     /// <summary>
     /// Inserts a new module into a borg, the same as if a player inserted it manually.

@@ -15,6 +15,9 @@ permanent-blindness-trait-examined = [color=lightblue]{CAPITALIZE(POSS-ADJ($targ
 trait-lightweight-name = Lightweight drunk
 trait-lightweight-desc = Alcohol has a stronger effect on you.
 
+trait-monochromancy-name = Monochromancy
+trait-monochromancy-desc = You are fully colorblind, everything you perceive ranges from blacks to whites.
+
 trait-muted-name = Muted
 trait-muted-desc = You can't speak.
 
@@ -30,8 +33,8 @@ trait-pirate-accent-desc = You can't stop speaking like a pirate!
 trait-accentless-name = Accentless
 trait-accentless-desc = You don't have the accent that your species would usually have
 
-trait-wheelchair-bound-name = Wheelchair-bound
-trait-wheelchair-bound-desc = You cannot move without your wheelchair. Wheelchair included.
+trait-wheelchair-user-name = Wheelchair User
+trait-wheelchair-user-desc = You cannot move without your wheelchair. Wheelchair included.
 
 trait-frontal-lisp-name = Frontal lisp
 trait-frontal-lisp-desc = You thpeak with a lithp.

@@ -44,6 +44,7 @@
   - type: Contraband
     allowedDepartments: [ Engineering ]
 
+
 - type: entity
   parent: BaseC2ContrabandUnredeemable
   id: BaseC2ExpeditionContraband
@@ -53,6 +54,7 @@
     severity: Class2Expedition
     turnInValues: &oneFUC
       FrontierUplinkCoin: 1
+      Doubloon: 1
 
 - type: entity
   parent: BaseC2ContrabandUnredeemable
@@ -62,6 +64,7 @@
   - type: Contraband
     turnInValues: &noFUCs
       FrontierUplinkCoin: 0
+      Doubloon: 0
 # endregion
 
 # region Class 3 Objects
@@ -82,6 +85,7 @@
     severity: Class3Expedition
     turnInValues:
       FrontierUplinkCoin: 2
+      Doubloon: 2
 
 - type: entity
   parent: BaseC3ContrabandUnredeemable
@@ -138,7 +142,9 @@
   abstract: true
   components:
   - type: Contraband
-    turnInValues: *oneFUC
+    turnInValues:
+      FrontierUplinkCoin: 1
+      Doubloon: 0
 
 - type: entity
   parent: BaseC3ContrabandUnredeemable

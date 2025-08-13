@@ -56,7 +56,7 @@
   - type: Projectile
     damage:
       types:
-        Blunt: 1
+        Blunt: 0.5
 
 # Frontier
 # .35 pistol
@@ -70,6 +70,9 @@
     damage:
       types:
         Shock: 4
+        Blunt: 4
+  - type: StaminaDamageOnCollide
+    damage: 4 # 15 hits to slowdown
 
 - type: entity
   id: NFBulletPistol35Rubber
@@ -80,7 +83,7 @@
   - type: Projectile
     damage:
       types:
-        Blunt: 2
+        Blunt: 1
   - type: StaminaDamageOnCollide
     damage: 17 # 6 shots to stun is good to me
 
@@ -140,7 +143,7 @@
   - type: Projectile
     damage:
       types:
-        Blunt: 2
+        Blunt: 1
 
 # Frontier
 # .45 pistol
@@ -154,6 +157,9 @@
     damage:
       types:
         Shock: 6
+        Blunt: 6
+  - type: StaminaDamageOnCollide
+    damage: 6 # 10 hits to slowdown
 
 - type: entity
   id: NFBulletPistol45Rubber
@@ -164,6 +170,6 @@
   - type: Projectile
     damage:
       types:
-        Blunt: 3
+        Blunt: 2
   - type: StaminaDamageOnCollide
     damage: 35

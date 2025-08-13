@@ -30,3 +30,7 @@
   equipment:
     shoes: ClothingShoesColorBlack
     ears: ClothingHeadsetGrey
+
+- type: chameleonOutfit
+  id: PrisonerChameleonOutfit
+  job: Prisoner

@@ -35,9 +35,9 @@ chat-manager-entity-me-wrap-message = [italic]{ PROPER($entity) ->
      [true] [Name]{CAPITALIZE($entityName)}[/Name] {$message}[/italic]
     }
 
-chat-manager-entity-subtle-wrap-message = [color=#909497][font size=11][italic]{ PROPER($entity) ->
-    *[false] the {$entityName} {$message}[/italic][/font][/color]
-     [true] [Name]{$entityName}[/Name] {$message}[/italic][/font][/color]
+chat-manager-entity-subtle-wrap-message = [italic][color={$color}]{ PROPER($entity) ->
+    *[false] the {$entityName} {$message}[/color][/italic]
+     [true] {$entityName} {$message}[/color][/italic]
     }
 
 chat-manager-entity-looc-wrap-message = LOOC: [bold]{$entityName}:[/bold] {$message}
@@ -50,6 +50,7 @@ chat-manager-send-admin-chat-wrap-message = {$adminChannelName}: [bold]{$playerN
 chat-manager-send-admin-announcement-wrap-message = [bold]{$adminChannelName}: {$message}[/bold]
 
 chat-manager-send-hook-ooc-wrap-message = OOC: [bold](D){$senderName}:[/bold] {$message}
+chat-manager-send-hook-admin-wrap-message = ADMIN: [bold](D){$senderName}:[/bold] {$message}
 
 chat-manager-dead-channel-name = DEAD
 chat-manager-admin-channel-name = ADMIN

@@ -19,6 +19,7 @@
     price: 250
   - type: NFWeaponDetails
     class: weapon-details-class-pistol
+  - type: FireOnLand # DeltaV - gun safety
 
 #region manufacturer
 - type: entity
@@ -196,13 +197,13 @@
     slots:
       gun_magazine:
         name: Magazine
-        startingItem: HLMagazinePistolCaselessRifle
+        startingItem: ASMagazinePistolCaselessRifle
         insertSound: /Audio/Weapons/Guns/MagIn/pistol_magin.ogg
         ejectSound: /Audio/Weapons/Guns/MagOut/pistol_magout.ogg
         priority: 2
         whitelist:
           tags:
-            - HLMagazinePistolCaselessRifle
+            - ASMagazinePistolCaselessRifle
         whitelistFailPopup: gun-magazine-whitelist-fail
       gun_chamber:
         name: Chamber

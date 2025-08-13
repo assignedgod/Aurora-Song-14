@@ -18,13 +18,10 @@
   - type: Appearance
   - type: GenericVisualizer
     visuals:
-      enum.ToggleVisuals.Toggled:
-        on:
+      enum.ToggleableVisuals.Enabled:
+        enum.ToggleableVisuals.Layer:
           True: { visible: true }
           False: { visible: false }
-        base:
-          True: { visible: false }
-          False: { visible: true }
 
 - type: entity
   parent: BaseVibe
