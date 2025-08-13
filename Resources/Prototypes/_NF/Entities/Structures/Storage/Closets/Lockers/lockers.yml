@@ -180,7 +180,7 @@
 # NFSD Sheriff
 - type: entity
   id: LockerNfsdSheriff
-  parent: [NFLockerBaseSecure, LockerHeadOfSecurity]
+  parent: [BaseStructureIndestructible, BaseStructureLockImmuneToEmag, BaseStructureAccessReaderImmuneToEmag, NFLockerBaseSecure, LockerHeadOfSecurity] # Aurora - Made indestructible and immune to emag, due to new effort to enforce not robbing offline roles.
   name: SLE locker
   suffix: Sheriff
   components:

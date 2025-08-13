@@ -4,7 +4,7 @@ meta:
   engineVersion: 255.1.0
   forkId: ""
   forkVersion: ""
-  time: 08/08/2025 15:56:54
+  time: 08/13/2025 00:22:00
   entityCount: 9109
 maps:
 - 1
@@ -46109,7 +46109,7 @@ entities:
     - type: Transform
       pos: 49.5,10.5
       parent: 2
-- proto: LockerChiefMedicalOfficerFilledHardsuit
+- proto: LockerDirectorOfCareFilledHardsuit
   entities:
   - uid: 5600
     components:
