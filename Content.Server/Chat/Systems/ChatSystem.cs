@@ -65,6 +65,7 @@ public sealed partial class ChatSystem : SharedChatSystem
     public const int WhisperClearRange = 2; // how far whisper goes while still being understandable, in world units
     public const int WhisperMuffledRange = 5; // how far whisper goes at all, in world units
     public const string DefaultAnnouncementSound = "/Audio/Announcements/announce.ogg";
+    public readonly Color DefaultSpeakColor = Color.White;
 
     private bool _loocEnabled = true;
     private bool _deadLoocEnabled;
@@ -172,7 +173,6 @@ public sealed partial class ChatSystem : SharedChatSystem
         string? nameOverride = null,
         bool checkRadioPrefix = true,
         bool ignoreActionBlocker = false,
-        LanguagePrototype? languageOverride = null,
         string? color = null
         )
     {
@@ -216,8 +216,6 @@ public sealed partial class ChatSystem : SharedChatSystem
             checkRadioPrefix = false;
             message = message[1..];
         }
-
-        var language = languageOverride ?? _language.GetLanguage(source);
 
         bool shouldCapitalize = (desiredType != InGameICChatType.Emote && desiredType != InGameICChatType.Subtle && desiredType != InGameICChatType.SubtleOOC);
         bool shouldPunctuate = _configurationManager.GetCVar(CCVars.ChatPunctuation);
@@ -264,10 +262,6 @@ public sealed partial class ChatSystem : SharedChatSystem
                 break;
             case InGameICChatType.SubtleOOC:
                 SendEntitySubtle(source, $"ooc: {message}", range, nameOverride, hideLog: hideLog, ignoreActionBlocker: ignoreActionBlocker, color: color);
-                break;
-            //Nyano - Summary: case adds the telepathic chat sending ability.
-            case InGameICChatType.Telepathic:
-                _telepath.SendTelepathicChat(source, message, range == ChatTransmitRange.HideChat);
                 break;
         }
     }
@@ -1049,12 +1043,14 @@ public sealed class NFEntityEmotedEvent : EntityEventArgs
 ///     InGame IC chat is for chat that is specifically ingame (not lobby) but is also in character, i.e. speaking.
 /// </summary>
 // ReSharper disable once InconsistentNaming
+[Serializable]
 public enum InGameICChatType : byte
 {
     Speak,
     Emote,
-    Whisper,
-    Subtle
+    Subtle, // Floofstation
+    SubtleOOC, // Den
+    Whisper
 }
 
 /// <summary>
