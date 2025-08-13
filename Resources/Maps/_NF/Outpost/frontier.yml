@@ -5727,6 +5727,8 @@ entities:
 - proto: ActionToggleLight
   entities:
   - uid: 4
+    mapInit: true
+    paused: true
     components:
     - type: Transform
       parent: 3
