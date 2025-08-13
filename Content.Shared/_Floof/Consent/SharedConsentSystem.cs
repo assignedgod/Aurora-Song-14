@@ -22,6 +22,7 @@ public abstract partial class SharedConsentSystem : EntitySystem
     [Dependency] private readonly SharedMindSystem _mindSystem = default!;
     [Dependency] private readonly ExamineSystemShared _examineSystem = default!;
     [Dependency] private readonly ISharedPlayerManager _playerManager = default!;
+    [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
     [Dependency] private readonly ILogManager _log = default!;
 
     private ISawmill _sawmill = default!;
@@ -86,11 +87,14 @@ public abstract partial class SharedConsentSystem : EntitySystem
 
     public bool HasConsent(Entity<MindContainerComponent?> ent, ProtoId<ConsentTogglePrototype> consentId)
     {
+        if (!_prototypeManager.TryIndex(consentId, out var consentToggle))
+            return false;
+
         if (!_mindSystem.TryGetMind(ent.Owner, out _, out var mind)
             || mind.UserId == null
             || !UserConsents.TryGetValue(mind.UserId.Value, out var consentSettings)
             || !consentSettings.Toggles.TryGetValue(consentId, out var toggle))
-            return false;
+            return consentToggle.DefaultValue;
 
         return toggle == "on";
     }

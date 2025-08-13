@@ -37,4 +37,7 @@ public sealed partial class ConsentTogglePrototype : IPrototype, IComparable
         
         return this.ID.CompareTo(other.ID); // Category and priority are the same, sort by ID
     }
+    
+    [DataField]
+    public bool DefaultValue { get; private set; }
 }
