@@ -215,6 +215,13 @@
     staticPacks:
     - NFMercenaryTechfabDeprecatedStatic
     - NfsdPracticeStatic
+    dynamicPacks:
+    - ScienceExplosives
+    - AdvancedTools
+    - NFPouches
+  - type: EmagLatheRecipes
+    emagStaticPacks:
+    - ASMercenaryEmag
   - type: BlueprintReceiver
     whitelist:
       tags:

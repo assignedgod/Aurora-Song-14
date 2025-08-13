@@ -10,7 +10,7 @@
   name: chat-radio-nfsd
   keycode: 's'
   frequency: 1023
-  color: "#7eac69"
+  color: "#33578a"
 
 - type: radioChannel
   id: Greeting
