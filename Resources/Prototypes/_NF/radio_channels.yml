@@ -12,3 +12,9 @@
   frequency: 1023
   color: "#33578a"
 
+- type: radioChannel
+  id: Greeting
+  name: chat-radio-greeting
+  keycode: 'r'
+  frequency: 1024
+  color: "#ff4fdf"

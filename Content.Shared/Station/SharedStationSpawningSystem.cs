@@ -15,6 +15,11 @@ using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using Robust.Shared.Utility;
 using Content.Shared.Implants; // Frontier
+using Content.Shared.Implants.Components; // Frontier
+using Content.Shared.Radio.Components; // Frontier
+using Robust.Shared.Containers; // Frontier
+using Robust.Shared.Network; // Frontier
+using Content.Shared.Implants; // Frontier
 using Content.Shared.Implants.Components;
 using Content.Shared.Mind; // Frontier
 using Content.Shared.Radio.Components; // Frontier
@@ -282,6 +287,37 @@ public abstract class SharedStationSpawningSystem : EntitySystem
             RaiseLocalEvent(entity, ref ev);
         }
     }
+
+    /// <summary>
+    ///     Gets all the gear for a given slot when passed a loadout.
+    /// </summary>
+    /// <param name="loadout">The loadout to look through.</param>
+    /// <param name="slot">The slot that you want the clothing for.</param>
+    /// <returns>
+    ///     If there is a value for the given slot, it will return the proto id for that slot.
+    ///     If nothing was found, will return null
+    /// </returns>
+    public string? GetGearForSlot(RoleLoadout? loadout, string slot)
+    {
+        if (loadout == null)
+            return null;
+
+        foreach (var group in loadout.SelectedLoadouts)
+        {
+            foreach (var items in group.Value)
+            {
+                if (!PrototypeManager.TryIndex(items.Prototype, out var loadoutPrototype))
+                    return null;
+
+                var gear = ((IEquipmentLoadout) loadoutPrototype).GetGear(slot);
+                if (gear != string.Empty)
+                    return gear;
+            }
+        }
+
+        return null;
+    }
+
 
     // Frontier: extra loadout fields
     /// Function to equip an entity with encryption keys.

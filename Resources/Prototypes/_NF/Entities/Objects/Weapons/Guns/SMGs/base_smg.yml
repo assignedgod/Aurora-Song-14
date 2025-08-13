@@ -8,8 +8,8 @@
   - type: Wieldable
     unwieldOnUse: false
   - type: GunWieldBonus
-    minAngle: -2.1
-    maxAngle: -6.3
+    minAngle: -0.8
+    maxAngle: -4
   - type: Gun
     projectileSpeed: 30
     minAngle: 4.2
@@ -32,9 +32,6 @@
   parent: NFBaseWeaponFrameSubMachineGun
   abstract: true
   components:
-  - type: GunWieldBonus
-    minAngle: -1.7
-    maxAngle: -7.5
   - type: Gun
     minAngle: 6.7
     maxAngle: 17
@@ -90,9 +87,6 @@
   parent: [ NFBaseWeaponFrameSubMachineGun ]
   abstract: true
   components:
-  - type: GunWieldBonus
-    minAngle: -1.8
-    maxAngle: -6.5
   - type: Gun
     minAngle: 6.7
     maxAngle: 21

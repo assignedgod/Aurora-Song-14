@@ -960,5 +960,5 @@
   result: ClothingNeckCollarCmd
   completetime: 2
   materials:
-    Cloth: 100
+    Cloth: 200
     Durathread: 50

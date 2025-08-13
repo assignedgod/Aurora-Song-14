@@ -99,7 +99,7 @@ public sealed class NFCCVars
         CVarDef.Create("shuttle.shipyard", true, CVar.SERVERONLY);
 
     /// <summary>
-    /// Base sell rate (multiplier: 0.75 = 75%)
+    /// Base sell rate (multiplier: 0.95 = 95%)
     /// </summary>
     public static readonly CVarDef<float> ShipyardSellRate =
         CVarDef.Create("shuttle.shipyard_base_sell_rate", 1f, CVar.SERVERONLY);
@@ -292,4 +292,26 @@ public sealed class NFCCVars
     /// </summary>
     public static readonly CVarDef<int> GarbageCollectionTally =
         CVarDef.Create("nf14.gc.idle_count", 3, CVar.SERVER | CVar.ARCHIVE);
+
+    /*
+     * Greeting
+     */
+
+    /// <summary>
+    /// If true, enables a radio greeting whenever a new player spawns.
+    /// </summary>
+    public static readonly CVarDef<bool> NewPlayerRadioGreetingEnabled =
+        CVarDef.Create("nf14.greeting.enabled", true, CVar.REPLICATED);
+
+    /// <summary>
+    /// The maximum playtime, in minutes, for a new player radio message to be sent.
+    /// </summary>
+    public static readonly CVarDef<int> NewPlayerRadioGreetingMaxPlaytime =
+        CVarDef.Create("nf14.greeting.max_playtime", 180, CVar.REPLICATED); // Three hours
+
+    /// <summary>
+    /// The channel the radio message should be sent off on.
+    /// </summary>
+    public static readonly CVarDef<string> NewPlayerRadioGreetingChannel =
+        CVarDef.Create("nf14.greeting.channel", "Service", CVar.REPLICATED);
 }

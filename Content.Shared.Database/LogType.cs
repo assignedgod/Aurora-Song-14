@@ -470,6 +470,11 @@ public enum LogType
     /// </summary>
     ArtifactNode = 101,
 
+    /// <summary>
+    /// Damaging grid collision has occurred.
+    /// </summary>
+    ShuttleImpact = 102,
+
     // Frontier Station Specific
     #region Frontier Values
     ATMUsage = 200,
@@ -517,7 +522,7 @@ public enum LogType
     /// </summary>
     ObjectiveSummary = 422,
     #endregion DeltaV Values
-	
+
 	#region Aurora
     StationPayDeposit = 14001,
     #endregion
