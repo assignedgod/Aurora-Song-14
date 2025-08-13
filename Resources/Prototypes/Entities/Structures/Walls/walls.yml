@@ -552,6 +552,7 @@
     drawdepth: Walls
     sprite: Structures/Walls/plastitanium_diagonal.rsi
     state: state0
+    color: "#cdf3cd" # Frontier
   - type: Icon
     sprite: Structures/Walls/plastitanium_diagonal.rsi
     state: state0
@@ -572,7 +573,7 @@
     drawdepth: Walls
     sprite: Structures/Walls/plastitanium_diagonal.rsi
     state: state0
-    color: "#cdf3cd" # Frontier
+    color: "#ffffff" # Frontier
   - type: Icon
     sprite: Structures/Walls/plastitanium_diagonal.rsi
     state: state0
