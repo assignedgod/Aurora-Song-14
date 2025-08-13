@@ -149,7 +149,7 @@
       prototypes:
         - SyndicateNavalEngineerGearB
     - type: BasicEntityAmmoProvider
-      proto: NFShellShotgun
+      proto: NFShellShotgunBuckshot
       capacity: 1
       count: 1
 
@@ -819,7 +819,7 @@
       prototypes:
         - SyndicateNavalEngineerVoidGear
     - type: BasicEntityAmmoProvider
-      proto: NFShellShotgun
+      proto: NFShellShotgunBuckshot
       capacity: 1
       count: 1
 
