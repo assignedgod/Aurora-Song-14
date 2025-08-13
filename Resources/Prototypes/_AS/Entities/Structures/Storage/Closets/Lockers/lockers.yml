@@ -1,0 +1,13 @@
+# Director of Care
+- type: entity
+  id: LockerDirectorOfCare
+  parent: [BaseStructureIndestructible, BaseStructureLockImmuneToEmag, BaseStructureAccessReaderImmuneToEmag, LockerBaseSecure, LockerChiefMedicalOfficer] # Aurora - Made indestructible and immune to emag, due to new effort to enforce not robbing offline roles.
+  name: Director of Care's locker
+  components:
+  - type: Appearance
+  - type: EntityStorageVisuals
+    stateBaseClosed: cmo
+    stateDoorOpen: cmo_open
+    stateDoorClosed: cmo_door
+  - type: AccessReader
+    access: [["HeadOfPersonnel"]]
