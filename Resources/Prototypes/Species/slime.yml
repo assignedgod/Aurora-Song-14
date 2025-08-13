@@ -77,10 +77,10 @@
       points: 1
       required: false
     Arms:
-      points: 4
+      points: 8 # Aurora: 4>8
       required: false
     Legs:
-      points: 4
+      points: 8 # Aurora: 4>8
       required: false
 
 - type: humanoidBaseSprite
