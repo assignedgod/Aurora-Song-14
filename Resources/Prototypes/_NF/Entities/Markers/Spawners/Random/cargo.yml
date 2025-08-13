@@ -66,7 +66,7 @@
         - CrateEngineeringAMEControl
 #        - CrateEngineeringSingularityGenerator
 #        - CrateEngineeringSingularityContainment
-#        - CrateEngineeringSingularityCollector
+        - CrateEngineeringSingularityCollector # Aurora - re-added
 #        - CrateEngineeringParticleAccelerator
 #        - CrateEngineeringSolar
 #        - CrateFoodMRE

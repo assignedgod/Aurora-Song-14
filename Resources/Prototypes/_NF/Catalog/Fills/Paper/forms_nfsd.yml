@@ -320,7 +320,7 @@
   components:
   - type: Paper
     content: |2 # When updating this, update PaperWrittenFrontierAuthorization
-      [color=#33578a][bold]Aurora[/bold] [bold]Sector Law Enforcement[/bold][/color]
+      [bold]Aurora[/bold] [bold]Sector Law Enforcement[/bold][/color]
       [color=#33578a]‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾[/color]
       [head=2]Authorization for Bluespace Threats[/head]
 
@@ -334,11 +334,12 @@
 
       This document authorizes the above vessel and its captain to assist and cooperate with the SLE and Aurora Sector authorities in neutralizing hostile bluespace threats to the sector. These include, but are not limited to:
           [bullet] Cultist vessels
-          [bullet] Syndicate vessels
+          [bullet] Rogue Syndicate vessels
           [bullet] Wizard Federation vessels
           [bullet] Arcadia Industries vessels
+          [bullet] Unaffiliated Mercenary vessels
 
-      This document does NOT recruit the authorized party into the SLE. The authorized party is not granted special privileges to arrest, detain, and prosecute individuals associated with Nanotrasen.
+      This document does NOT recruit the authorized party into the SLE. The authorized party is not granted special privileges to arrest, detain, and/ or prosecute any individuals under the eyes of the law.
 
       [bold]Any contraband seized during operations aboard hostile vessels must be surrendered, either to the SLE or the Station Representative, for a cash bounty. Failure to surrender contraband will lead to the forfeiture of this agreement, and the authorized party may be liable for criminal charges.[/bold]
 
