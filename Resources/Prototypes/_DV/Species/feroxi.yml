@@ -57,10 +57,10 @@
       points: 3
       required: false
     Arms:
-      points: 1
+      points: 8 #Aurora: Match human values from imp
       required: false
     Legs:
-      points: 1
+      points: 8 #Aurora: Match human values from imp
       required: false
     Tail:
       points: 1

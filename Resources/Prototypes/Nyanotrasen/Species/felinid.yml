@@ -42,10 +42,10 @@
       points: 2
       required: false
     Arms:
-      points: 4
+      points: 8 #Aurora: Match human values from imp
       required: false
     Legs:
-      points: 4
+      points: 8 #Aurora: Match human values from imp
       required: false
     UndergarmentBottom:
       points: 1

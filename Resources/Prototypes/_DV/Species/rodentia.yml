@@ -48,10 +48,10 @@
       required: true
       defaultMarkings: [ RodentiaTailDefault ]
     Legs:
-      points: 4
+      points: 8 #Aurora: Match human values from imp
       required: false
     Arms:
-      points: 4
+      points: 8 #Aurora: Match human values from imp
       required: false
     Snout:
       points: 1

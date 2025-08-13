@@ -55,10 +55,10 @@
       points: 2
       required: false
     Legs:
-      points: 2
+      points: 8 #Aurora: Match human values from imp
       required: false
     Arms:
-      points: 2
+      points: 8 #Aurora: Match human values from imp
       required: false
     Overlay:
       points: 1
