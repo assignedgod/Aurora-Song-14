@@ -1,13 +1,13 @@
 # Aurora - With the refactor from .25 caseless to .25 rifle, we need to update the magazine prototypes accordingly.
 
 - type: entity
-  id: HLMagazinePistolCaselessRifle
+  id: ASMagazinePistolCaselessRifle
   name: pistol magazine (.25 rifle)
   parent: BaseMagazinePistolCaselessRifle
   components:
   - type: Tag
     tags:
-      - HLMagazinePistolCaselessRifle
+      - ASMagazinePistolCaselessRifle
   - type: BallisticAmmoProvider
     proto: NFCartridgeRifle25
     capacity: 10
@@ -25,13 +25,13 @@
   - type: Appearance
 
 - type: entity
-  id: HLMagazineCaselessRifle
+  id: ASMagazineCaselessRifle
   name: magazine (.25 rifle)
   parent: BaseMagazineCaselessRifle
   components:
   - type: Tag
     tags:
-      - HLMagazineCaselessRifle
+      - ASMagazineCaselessRifle
   - type: BallisticAmmoProvider
     proto: NFCartridgeRifle25
   - type: Sprite
@@ -43,13 +43,13 @@
       map: ["enum.GunVisualLayers.Mag"]
 
 - type: entity
-  id: HLMagazineCaselessRifleShort
+  id: ASMagazineCaselessRifleShort
   name: short magazine (.25 rifle)
   parent: BaseMagazineCaselessRifleShort
   components:
   - type: Tag
     tags:
-      - HLMagazineCaselessRifle
+      - ASMagazineCaselessRifle
   - type: BallisticAmmoProvider
     proto: NFCartridgeRifle25
     capacity: 20

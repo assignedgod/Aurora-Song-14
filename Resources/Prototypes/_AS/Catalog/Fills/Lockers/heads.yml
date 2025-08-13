@@ -1,0 +1,41 @@
+# No hardsuit table
+- type: entityTable
+  id: LockerFillDirectorOfCareNoHardsuit
+  table: !type:AllSelector
+    children:
+#    - id: BoxEncryptionKeyMedical # Frontier - bloat
+#    - id: ClothingBackpackDuffelSurgeryFilled # Frontier - bloat
+#    - id: ClothingCloakCmo # Frontier - bloat
+    - id: ClothingEyesHudMedical
+#    - id: ClothingHandsGlovesNitrile # Frontier - bloat
+#    - id: ClothingHeadHatBeretCmo # Frontier - bloat
+    - id: ClothingHeadsetAltMedical
+#    - id: ClothingMaskSterile # Frontier - bloat
+#    - id: DoorRemoteMedical # Frontier - bloat
+    - id: HandheldCrewMonitor
+    # - id: Hypospray # Frontier - balance
+    - id: HypoMini # Frontier
+    # - id: MedicalTechFabCircuitboard # Frontier - bloat
+    # - id: CargoRequestMedicalComputerCircuitboard # Frontier - bloat
+    # - id: MedkitFilled # Frontier - bloat
+    # - id: RubberStampCMO # Frontier - MOM stamp
+    - id: MedTekCartridge
+    - id: ClothingBeltMedicalFilled # Frontier - add more bloat
+    - id: RubberStampDoctor # Frontier
+    - id: EncryptionKeyDoc # Aurora - for new DoC fill
+    - id: DocIDCard
+
+# No hardsuit + Hardsuit locker
+- type: entity
+  id: LockerDirectorOfCareFilledHardsuit
+  suffix: Filled, Hardsuit
+  parent: LockerDirectorOfCare
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:AllSelector
+        children:
+        - !type:NestedSelector
+          tableId: LockerFillDirectorOfCareNoHardsuit
+        - !type:NestedSelector
+          tableId: FillChiefMedicalOfficerHardsuit
