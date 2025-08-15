@@ -36,8 +36,10 @@
     back:
     - Flash
     - RubberStampStc
-    - EncryptionKeyStationMaster
+    - EncryptionKeySecurity
+    - EncryptionKeyTraffic
     - ShipVoucherFrontierStc
+    - EncryptionKeyService
   encryptionKeys:
   - BoxFolderStc
 
