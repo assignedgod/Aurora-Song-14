@@ -91,8 +91,8 @@ public abstract partial class SharedConsentSystem : EntitySystem
             return false;
 
         if (!_mindSystem.TryGetMind(ent.Owner, out _, out var mind)
-            || mind.UserId == null
-            || !UserConsents.TryGetValue(mind.UserId.Value, out var consentSettings)
+            || mind.Session == null
+            || !UserConsents.TryGetValue(mind.Session.UserId, out var consentSettings)
             || !consentSettings.Toggles.TryGetValue(consentId, out var toggle))
             return consentToggle.DefaultValue;
 

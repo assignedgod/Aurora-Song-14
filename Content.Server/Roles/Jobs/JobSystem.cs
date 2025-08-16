@@ -1,8 +1,10 @@
 ﻿using System.Globalization;
 using Content.Server.Chat.Managers;
+using Content.Server.Mind;
 using Content.Shared.Mind;
 using Content.Shared.Roles;
 using Content.Shared.Roles.Jobs;
+using Robust.Shared.Player;
 
 namespace Content.Server.Roles.Jobs;
 

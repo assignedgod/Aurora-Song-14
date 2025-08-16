@@ -1372,7 +1372,10 @@ namespace Content.Client.Lobby.UI
                 _flavorSfwTextEdit.TextRope = new Rope.Leaf(Profile?.FlavorText ?? "");
 
             if (_flavorNsfwTextEdit != null)
+            {
+                _sawmill.Info(Profile?.NsfwFlavorText ?? "empty");
                 _flavorNsfwTextEdit.TextRope = new Rope.Leaf(Profile?.NsfwFlavorText ?? "");
+            }
         }
 
         private void UpdateAgeEdit()

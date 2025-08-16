@@ -161,7 +161,7 @@ namespace Content.Shared.Preferences
         {
             Name = name;
             FlavorText = flavorText;
-
+            NsfwFlavorText = nsfwFlavorText;
             Species = species;
             Age = age;
             Sex = sex;
@@ -584,15 +584,26 @@ namespace Content.Shared.Preferences
                 name = GetName(Species, gender);
             }
 
-            string flavortext;
+            var flavorText = string.Empty;
+            var nsfwFlavorText = string.Empty;
             var maxFlavorTextLength = configManager.GetCVar(CCVars.MaxFlavorTextLength);
+
             if (FlavorText.Length > maxFlavorTextLength)
             {
-                flavortext = FormattedMessage.RemoveMarkupOrThrow(FlavorText)[..maxFlavorTextLength];
+                flavorText = FormattedMessage.RemoveMarkupOrThrow(FlavorText)[..maxFlavorTextLength];
             }
             else
             {
-                flavortext = FormattedMessage.RemoveMarkupOrThrow(FlavorText);
+                flavorText = FormattedMessage.RemoveMarkupOrThrow(FlavorText);
+            }
+
+            if (NsfwFlavorText.Length > maxFlavorTextLength)
+            {
+                nsfwFlavorText = FormattedMessage.RemoveMarkupOrThrow(NsfwFlavorText)[..maxFlavorTextLength];
+            }
+            else
+            {
+                nsfwFlavorText = FormattedMessage.RemoveMarkupOrThrow(NsfwFlavorText);
             }
 
             // Frontier
@@ -651,7 +662,8 @@ namespace Content.Shared.Preferences
                          .ToList();
 
             Name = name;
-            FlavorText = flavortext;
+            FlavorText = flavorText;
+            NsfwFlavorText = nsfwFlavorText;
             Age = age;
             Sex = sex;
             Gender = gender;
@@ -762,6 +774,7 @@ namespace Content.Shared.Preferences
             hashCode.Add(_loadouts);
             hashCode.Add(Name);
             hashCode.Add(FlavorText);
+            hashCode.Add(NsfwFlavorText);
             hashCode.Add(Species);
             hashCode.Add(Age);
             hashCode.Add((int)Sex);

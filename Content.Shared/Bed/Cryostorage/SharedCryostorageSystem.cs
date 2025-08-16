@@ -26,6 +26,7 @@ public abstract class SharedCryostorageSystem : EntitySystem
     [Dependency] private readonly SharedAppearanceSystem _appearance = default!;
     [Dependency] protected readonly SharedMindSystem Mind = default!;
     [Dependency] private readonly MobStateSystem _mobState = default!;
+    [Dependency] private readonly SharedMapSystem _map = default!;
 
     protected EntityUid? PausedMap { get; private set; }
 

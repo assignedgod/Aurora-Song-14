@@ -160,9 +160,13 @@ public sealed class StationSpawningSystem : SharedStationSpawningSystem
             _humanoidSystem.LoadProfile(entity.Value, profile);
             _metaSystem.SetEntityName(entity.Value, profile.Name);
 
-            if (profile.FlavorText != "" && _configurationManager.GetCVar(CCVars.FlavorText))
+            if ((profile.FlavorText != string.Empty
+                || profile.NsfwFlavorText != string.Empty)
+                && _configurationManager.GetCVar(CCVars.FlavorText))
             {
-                AddComp<DetailExaminableComponent>(entity.Value).Content = profile.FlavorText;
+                var detail = EnsureComp<DetailExaminableComponent>(entity.Value);
+                detail.Content = profile.FlavorText;
+                detail.NsfwContent = profile.NsfwFlavorText;
             }
         }
 
