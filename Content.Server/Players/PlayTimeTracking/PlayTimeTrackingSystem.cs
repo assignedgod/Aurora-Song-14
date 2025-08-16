@@ -117,7 +117,7 @@ public sealed class PlayTimeTrackingSystem : EntitySystem
 
     private void OnRoleEvent(RoleEvent ev)
     {
-        if (_playerManager.TryGetSessionById(ev.Mind.UserId, out var session))
+        if (_minds.TryGetSession(ev.Mind, out var session))
             _tracking.QueueRefreshTrackers(session);
     }
 
