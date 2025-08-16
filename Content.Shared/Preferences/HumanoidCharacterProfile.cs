@@ -86,6 +86,12 @@ namespace Content.Shared.Preferences
         public string NsfwFlavorText { get; set; } = string.Empty;
 
         /// <summary>
+        /// A consent sheet, adds onto your original for this character specifically.
+        /// </summary>
+        [DataField]
+        public string CharacterConsent { get; set; } = string.Empty;
+
+        /// <summary>
         /// Associated <see cref="SpeciesPrototype"/> for this profile.
         /// </summary>
         [DataField]
@@ -146,6 +152,7 @@ namespace Content.Shared.Preferences
             string name,
             string flavorText,
             string nsfwFlavorText,
+            string characterConsent,
             string species,
             int age,
             Sex sex,
@@ -162,6 +169,7 @@ namespace Content.Shared.Preferences
             Name = name;
             FlavorText = flavorText;
             NsfwFlavorText = nsfwFlavorText;
+            CharacterConsent = characterConsent;
             Species = species;
             Age = age;
             Sex = sex;
@@ -183,7 +191,7 @@ namespace Content.Shared.Preferences
             HashSet<ProtoId<AntagPrototype>> antagPreferences,
             HashSet<ProtoId<TraitPrototype>> traitPreferences,
             Dictionary<string, RoleLoadout> loadouts)
-            : this(other.Name, other.FlavorText, other.NsfwFlavorText, other.Species, other.Age, other.Sex, other.Gender, other.BankBalance, other.Appearance, other.SpawnPriority,
+            : this(other.Name, other.FlavorText, other.NsfwFlavorText, other.CharacterConsent, other.Species, other.Age, other.Sex, other.Gender, other.BankBalance, other.Appearance, other.SpawnPriority,
                 jobPriorities, other.PreferenceUnavailable, antagPreferences, traitPreferences, loadouts)
         {
         }
@@ -193,6 +201,7 @@ namespace Content.Shared.Preferences
             : this(other.Name,
                 other.FlavorText,
                 other.NsfwFlavorText,
+                other.CharacterConsent,
                 other.Species,
                 other.Age,
                 other.Sex,
@@ -295,6 +304,11 @@ namespace Content.Shared.Preferences
         public HumanoidCharacterProfile WithNsfwFlavorText(string flavorText)
         {
             return new(this) { NsfwFlavorText = flavorText };
+        }
+
+        public HumanoidCharacterProfile WithCharacterConsent(string content)
+        {
+            return new(this) { CharacterConsent = content };
         }
 
         public HumanoidCharacterProfile WithAge(int age)
@@ -506,6 +520,7 @@ namespace Content.Shared.Preferences
             if (!Loadouts.SequenceEqual(other.Loadouts)) return false;
             if (FlavorText != other.FlavorText) return false;
             if (NsfwFlavorText != other.NsfwFlavorText) return false;
+            if (CharacterConsent != other.CharacterConsent) return false;
             return Appearance.MemberwiseEquals(other.Appearance);
         }
 

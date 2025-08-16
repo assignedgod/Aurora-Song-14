@@ -472,6 +472,7 @@ public abstract class SharedHumanoidAppearanceSystem : EntitySystem
         humanoid.Age = profile.Age;
         humanoid.Height = profile.Appearance.Height;
         humanoid.Width = profile.Appearance.Width;
+        humanoid.LastProfileLoaded = profile;
 
         // Apply scaling (height and width)
         if (profile.Appearance.Height != 1.0f || profile.Appearance.Width != 1.0f)

@@ -1,3 +1,4 @@
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using Content.Shared._AS.License;
 using Content.Shared.Containers.ItemSlots; // Aurora
@@ -25,7 +26,9 @@ using Content.Shared.Mind; // Frontier
 using Content.Shared.Radio.Components; // Frontier
 using Robust.Shared.Containers; // Frontier
 using Robust.Shared.Network; // Frontier
-using Content.Shared._AS.IPC; // Aurora's Song 14
+using Content.Shared._AS.IPC;
+using Content.Shared.Humanoid;
+using Content.Shared.Preferences; // Aurora's Song 14
 
 namespace Content.Shared.Station;
 
@@ -355,6 +358,24 @@ public abstract class SharedStationSpawningSystem : EntitySystem
                 DebugTools.Assert(false, $"Entity {entity} could not insert their loadout encryption key {entProto} into their headset!");
             }
         }
+    }
+
+    public bool GetProfile(EntityUid? uid, [NotNullWhen(true)] out HumanoidCharacterProfile? profile)
+    {
+        if (!TryComp(uid, out HumanoidAppearanceComponent? appearance))
+        {
+            profile = null;
+            return false;
+        }
+
+        if (appearance.LastProfileLoaded is { } lastProfileLoaded)
+        {
+            profile = lastProfileLoaded;
+            return true;
+        }
+
+        profile = HumanoidCharacterProfile.DefaultWithSpecies(appearance.Species);
+        return true;
     }
 
     /// <summary>

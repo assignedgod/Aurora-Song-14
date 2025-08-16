@@ -72,7 +72,7 @@ public sealed class ConsentCardSystem : SharedConsentCardSystem
             hideChat: false,
             client: session.Channel);
 
-        _audio.PlayGlobal(new SoundPathSpecifier("/Audio/Admin/ahelp_send.ogg"), Filter.Empty().AddPlayers(_admin.ActiveAdmins), false);
+        _audio.PlayGlobal(new SoundPathSpecifier("/Audio/Effects/adminhelp.ogg"), Filter.Empty().AddPlayers(_admin.ActiveAdmins), false);
         _popup.PopupPredicted(string.Empty, Loc.GetString(cardComp.PopupMessage), playerEnt, playerEnt, PopupType.MediumCaution);
     }
 }
