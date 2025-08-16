@@ -759,7 +759,7 @@ public sealed partial class ChatUIController : UIController
         _typingIndicator?.ClientSubmittedChatText();
 
         var text = box.ChatInput.Input.Text;
-        
+
         box.ChatInput.Input.Clear();
         box.ChatInput.Input.ReleaseKeyboardFocus();
         UpdateSelectedChannel(box);
@@ -790,7 +790,7 @@ public sealed partial class ChatUIController : UIController
         {
             text = _denuUIController.FormatMessage(text);
         }
-        
+
         _manager.SendMessage(text, prefixChannel == 0 ? channel : prefixChannel);
     }
 

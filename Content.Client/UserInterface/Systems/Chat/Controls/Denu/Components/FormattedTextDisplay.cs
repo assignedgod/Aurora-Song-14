@@ -103,7 +103,7 @@ public sealed class FormattedTextDisplay : PanelContainer
 
         if (_lastFormattedText == formattedText)
             return;
-        
+
         _lastFormattedText = formattedText;
 
         FormattedMessage message = FormattedMessage.FromMarkupOrThrow(formattedText);
