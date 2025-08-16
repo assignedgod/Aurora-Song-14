@@ -228,7 +228,9 @@ public sealed partial class ChatSystem : SharedChatSystem
         bool shouldCapitalizeTheWordI = (!CultureInfo.CurrentCulture.IsNeutralCulture && CultureInfo.CurrentCulture.Parent.Name == "en")
             || (CultureInfo.CurrentCulture.IsNeutralCulture && CultureInfo.CurrentCulture.Name == "en");
 
-        message = SanitizeInGameICMessage(source, message, out var emoteStr, shouldCapitalize, shouldPunctuate, shouldCapitalizeTheWordI);
+        message = SanitizeInGameICMessage(source, message, out var emoteStr, shouldCapitalize, shouldPunctuate, shouldCapitalizeTheWordI, desiredType);
+        message = FormattedMessage.EscapeText(message);
+        message = FormattedMessage.RemoveMarkupPermissive(message);
 
         // Was there an emote in the message? If so, send it.
         if (player != null && emoteStr != message && emoteStr != null)
@@ -465,7 +467,7 @@ public sealed partial class ChatSystem : SharedChatSystem
             ("verb", verb),
             ("fontType", speech.FontId),
             ("fontSize", speech.FontSize),
-            ("message", FormattedMessage.EscapeText(message)));
+            ("message", message));
 
         SendInVoiceRange(ChatChannel.Local, message, wrappedMessage, source, range);
 
@@ -508,7 +510,7 @@ public sealed partial class ChatSystem : SharedChatSystem
         if (!_actionBlocker.CanSpeak(source) && !ignoreActionBlocker)
             return;
 
-        var message = TransformSpeech(source, FormattedMessage.RemoveMarkupOrThrow(originalMessage));
+        var message = TransformSpeech(source, originalMessage);
         if (message.Length == 0)
             return;
 
@@ -531,13 +533,13 @@ public sealed partial class ChatSystem : SharedChatSystem
         name = FormattedMessage.EscapeText(name);
 
         var wrappedMessage = Loc.GetString("chat-manager-entity-whisper-wrap-message",
-            ("entityName", name), ("message", FormattedMessage.EscapeText(message)));
+            ("entityName", name), ("message", message));
 
         var wrappedobfuscatedMessage = Loc.GetString("chat-manager-entity-whisper-wrap-message",
-            ("entityName", nameIdentity), ("message", FormattedMessage.EscapeText(obfuscatedMessage)));
+            ("entityName", nameIdentity), ("message", obfuscatedMessage));
 
         var wrappedUnknownMessage = Loc.GetString("chat-manager-entity-whisper-unknown-wrap-message",
-            ("message", FormattedMessage.EscapeText(obfuscatedMessage)));
+            ("message", obfuscatedMessage));
 
 
         foreach (var (session, data) in GetRecipients(source, WhisperMuffledRange))
@@ -547,9 +549,6 @@ public sealed partial class ChatSystem : SharedChatSystem
                 || !_interactionSystem.InRangeUnobstructed(source, listener, WhisperClearRange, _subtleWhisperMask))
                 continue;
 
-            if (Transform(session.AttachedEntity.Value).GridUid != Transform(source).GridUid
-                && !CheckAttachedGrids(source, session.AttachedEntity.Value))
-                continue;
             listener = session.AttachedEntity.Value;
 
             if (MessageRangeCheck(session, data, range) != MessageRangeCheckResult.Full)
@@ -627,7 +626,7 @@ public sealed partial class ChatSystem : SharedChatSystem
         var wrappedMessage = Loc.GetString("chat-manager-entity-me-wrap-message",
             ("entityName", name),
             ("entity", ent),
-            ("message", FormattedMessage.RemoveMarkupOrThrow(action)));
+            ("message", action));
 
         bool soundEmoteSent = true; // Frontier: if check emote is false, assume somebody's sending an emote
         if (checkEmote)
@@ -693,7 +692,7 @@ public sealed partial class ChatSystem : SharedChatSystem
             ("entityName", name),
             ("entity", ent),
             ("color", color ?? DefaultSpeakColor.ToHex()),
-            ("message", FormattedMessage.RemoveMarkupPermissive(action)));
+            ("message", action));
 
         foreach (var (session, data) in GetRecipients(source, WhisperClearRange))
         {
@@ -845,10 +844,21 @@ public sealed partial class ChatSystem : SharedChatSystem
     }
 
     // ReSharper disable once InconsistentNaming
-    private string SanitizeInGameICMessage(EntityUid source, string message, out string? emoteStr, bool capitalize = true, bool punctuate = false, bool capitalizeTheWordI = true)
+    private string SanitizeInGameICMessage(EntityUid source,
+        string message,
+        out string? emoteStr,
+        bool capitalize = true,
+        bool punctuate = false,
+        bool capitalizeTheWordI = true,
+        InGameICChatType channel = InGameICChatType.Speak)
     {
-        var newMessage = SanitizeMessageReplaceWords(message.Trim());
+        if (channel == InGameICChatType.SubtleOOC)
+        {
+            emoteStr = null;
+            return message;
+        }
 
+        var newMessage = SanitizeMessageReplaceWords(message.Trim());
         GetRadioKeycodePrefix(source, newMessage, out newMessage, out var prefix);
 
         // Sanitize it first as it might change the word order
