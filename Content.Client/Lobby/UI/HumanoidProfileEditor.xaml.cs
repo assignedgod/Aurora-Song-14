@@ -39,6 +39,8 @@ using Direction = Robust.Shared.Maths.Direction;
 
 namespace Content.Client.Lobby.UI
 {
+
+    // This place is hell.
     [GenerateTypedNameReferences]
     public sealed partial class HumanoidProfileEditor : BoxContainer
     {
@@ -512,14 +514,14 @@ namespace Content.Client.Lobby.UI
                 _flavorSfwTextEdit = _flavorText.CFlavorTextSFWInput;
                 _flavorNsfwTextEdit = _flavorText.CFlavorTextNSFWInput;
 
-                CTabContainer.AddTab(_flavorText, Loc.GetString("humanoid-profile-editor-flavortext-tab"));
+                TabContainer.SetTabTitle(_flavorText, Loc.GetString("humanoid-profile-editor-flavortext-tab"));
             }
             else
             {
                 if (_flavorText == null)
                     return;
 
-                CTabContainer.RemoveChild(_flavorText);
+                TabContainer.RemoveChild(_flavorText);
 
                 _flavorText.OnSfwFlavorTextChanged -= OnSfwFlavorTextChange;
                 _flavorText.OnNsfwFlavorTextChanged -= OnNsfwFlavorTextChange;
@@ -1133,7 +1135,7 @@ namespace Content.Client.Lobby.UI
             if (Profile is null)
                 return;
 
-            Profile = Profile.WithNSFWFlavorText(content);
+            Profile = Profile.WithNsfwFlavorText(content);
             SetDirty();
         }
 

@@ -16,10 +16,7 @@ using Robust.Client.UserInterface.XAML;
 using Robust.Shared.Configuration;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
-using System.Linq;
 using Content.Shared._AS.Consent;
-using Robust.Client.Player;
-using Robust.Client.UserInterface;
 using Robust.Shared.Player;
 
 namespace Content.Client._Floof.Consent.UI.Windows;
@@ -48,9 +45,11 @@ public sealed partial class ConsentWindow : FancyWindow
 
         FreetextTab.Orphan();
         TogglesTab.Orphan();
+        ConsentCardsTab.Orphan();
 
         ConsentTabs.AddTab(FreetextTab, Loc.GetString("consent-window-freetext-label"));
         ConsentTabs.AddTab(TogglesTab, Loc.GetString("consent-window-toggles-label"));
+        ConsentTabs.AddTab(ConsentCardsTab, Loc.GetString("consent-window-cards-label"));
 
         InitializeCategories();
 
@@ -71,6 +70,9 @@ public sealed partial class ConsentWindow : FancyWindow
 
         ConsentFreetext.Placeholder = new Rope.Leaf(Loc.GetString("consent-window-freetext-placeholder"));
         ConsentFreetext.OnTextChanged += _ => UnsavedChanges();
+
+        // Aurora - Add consent cards
+        XCard.OnPressed += _ => { RaiseConsentCard("XCard"); };
     }
 
     private void InitializeCategories()
@@ -116,8 +118,14 @@ public sealed partial class ConsentWindow : FancyWindow
 
         foreach (var entry in _entries)
         {
-            if (entry.Button != null && entry.Button.Pressed)
-                toggles[entry.Consent.ID] = "on";
+            if (entry.Button == null
+                || entry.Consent.DefaultValue == entry.Button.Pressed)
+                continue;
+
+            // DEN: I now have to save offs as well.
+            // Side note, who saved this to database as a string?
+            var value = entry.Button.Pressed ? "on" : "off";
+            toggles[entry.Consent] = value;
         }
 
         return new(text, toggles);
@@ -126,7 +134,7 @@ public sealed partial class ConsentWindow : FancyWindow
     private void UnsavedChanges()
     {
         // Validate freetext length
-        var maxLength = _configManager.GetCVar(FloofCCVars.ConsentFreetextMaxLength); // Flooftier
+        var maxLength = _configManager.GetCVar(CCVars.ConsentFreetextMaxLength);
         var length = Rope.Collapse(ConsentFreetext.TextRope).Length;
 
         if (length > maxLength)
@@ -169,26 +177,27 @@ public sealed partial class ConsentWindow : FancyWindow
             HorizontalExpand = true
         };
 
+        var defaultValue = toggle.DefaultValue;
+
         var buttonOff = new Button { Text = "Off" };
         buttonOff.StyleClasses.Add("OpenRight");
-        buttonOff.Pressed = true;
+        buttonOff.Pressed = !defaultValue;
 
         var buttonOn = new Button { Text = "On" };
         buttonOn.StyleClasses.Add("OpenLeft");
+        buttonOn.Pressed = defaultValue;
         state.Button = buttonOn;
 
         buttonOff.OnPressed += _ => ButtonOnPress(buttonOff, buttonOn);
         buttonOn.OnPressed += _ => ButtonOnPress(buttonOn, buttonOff);
 
         var consent = _consentManager.GetConsent();
+        consent.Toggles.TryGetValue(toggle.ID, out var toggleValue);
 
-        foreach (var toggleValue in consent.Toggles)
+        if (toggleValue != null)
         {
-            if (toggleValue.Key != toggle.ID || toggleValue.Value != "on")
-                continue;
-
-            buttonOn.Pressed = true;
-            buttonOff.Pressed = false;
+            buttonOn.Pressed = toggleValue == "on";
+            buttonOff.Pressed = !buttonOn.Pressed;
         }
 
         header.AddChild(name);
@@ -197,7 +206,7 @@ public sealed partial class ConsentWindow : FancyWindow
 
         container.AddChild(header);
 
-        var desc = new Label
+        var desc = new RichTextLabel
         {
             Text = Loc.GetString($"consent-{toggle.ID}-desc"),
             MaxWidth = 850,
@@ -228,6 +237,12 @@ public sealed partial class ConsentWindow : FancyWindow
 
             AddConsentEntry(category, toggle);
         }
+    }
+
+    private void RaiseConsentCard(string cardName)
+    {
+        if (_player.LocalSession is { } player)
+            _card.RaiseConsentCard(player.UserId, cardName);
     }
 
     private void ButtonOnPress(Button currentButton, Button otherbutton)
