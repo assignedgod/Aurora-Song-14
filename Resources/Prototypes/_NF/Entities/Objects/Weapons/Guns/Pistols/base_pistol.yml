@@ -30,8 +30,8 @@
   - type: Gun
     minAngle: 1
     maxAngle: 20
-    angleIncrease: 8
-    angleDecay: 9
+    angleIncrease: 3
+    angleDecay: 3
     fireRate: 4
   - type: NFWeaponDetails
     manufacturer: weapon-details-manufacturer-nanotrasen-munitions
