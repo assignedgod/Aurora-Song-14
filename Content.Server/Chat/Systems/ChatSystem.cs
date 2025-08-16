@@ -558,11 +558,10 @@ public sealed partial class ChatSystem : SharedChatSystem
             // How the entity perceives the message depends on whether it can understand its language
             // Result is the intermediate message derived from the perceived one via obfuscation
             // Wrapped message is the result wrapped in an "x says y" string
-            string result, wrappedMessage;
+            string result;
 
             // Floof: handle languages that require LOS
-            if (!language.SpeechOverride.RequireLOS && data.Range <= WhisperClearRange
-                || _interactionSystem.InRangeUnobstructed(source, listener, WhisperClearRange, _subtleWhisperMask))
+            if (_interactionSystem.InRangeUnobstructed(source, listener, WhisperClearRange, _subtleWhisperMask))
             {
                 // Scenario 1: the listener can clearly understand the message
                 result = message;
