@@ -2,12 +2,8 @@ using Content.Client.Administration.Managers;
 using Content.Client.Changelog;
 using Content.Client.Chat.Managers;
 using Content.Client.Clickable;
-using Content.Client._DV.NanoChat;
 using Content.Client._Floof.Consent;
-using Content.Client.DiscordAuth;
-using Content.Client.JoinQueue;
 using Content.Client.DebugMon;
-using Content.Client.Consent; //Floofstation
 using Content.Client.Eui;
 using Content.Client.Fullscreen;
 using Content.Client.GameTicking.Managers;

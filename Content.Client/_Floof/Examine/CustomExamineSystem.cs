@@ -26,13 +26,13 @@ public sealed class CustomExamineSystem : SharedCustomExamineSystem
     {
         base.Initialize();
         SubscribeLocalEvent<GetVerbsEvent<Verb>>(OnGetVerbs);
-        SubscribeLocalEvent<ActivateInWorldEvent>(OnActivateInWorld, after: [typeof(StrippableSystem)]);
         SubscribeLocalEvent<CustomExamineComponent, AfterAutoHandleStateEvent>(OnStateUpdate);
     }
 
     private void OnGetVerbs(GetVerbsEvent<Verb> args)
     {
-        if (_player.LocalSession is null || !CanChangeExamine(_player.LocalSession, args.Target))
+        if (_player.LocalSession is null
+            || !CanChangeExamine(args.User, args.Target))
             return;
 
         var target = args.Target;
@@ -44,18 +44,6 @@ public sealed class CustomExamineSystem : SharedCustomExamineSystem
             ClientExclusive = true,
             DoContactInteraction = false
         });
-    }
-
-    private void OnActivateInWorld(ActivateInWorldEvent ev)
-    {
-        // This one works only if user == target, because otherwise it would conflict with stripping ui
-        if (ev.User != ev.Target || _player.LocalEntity != ev.User || ev.Handled)
-            return;
-
-        if (!_timing.IsFirstTimePredicted)
-            return;
-
-        OpenUi(ev.Target);
     }
 
     private void OnStateUpdate(Entity<CustomExamineComponent> ent, ref AfterAutoHandleStateEvent args)

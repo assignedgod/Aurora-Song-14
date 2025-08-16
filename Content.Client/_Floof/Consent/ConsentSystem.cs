@@ -1,5 +1,4 @@
-using Content.Shared.Consent;
-
+using Content.Shared._Floof.Consent;
 
 namespace Content.Client._Floof.Consent;
 

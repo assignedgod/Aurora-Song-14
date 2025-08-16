@@ -1,4 +1,5 @@
-﻿using Content.Shared.Examine;
+﻿using Content.Shared._DEN.Unrotting;
+using Content.Shared.Examine;
 using Content.Shared.IdentityManagement;
 using Content.Shared.Mobs;
 using Content.Shared.Mobs.Components;
