@@ -17,12 +17,3 @@ med-desc-epinephrine = Epi | Crit | 20U OD
 med-desc-diphenhydramine = Diphen | Poison | No OD
 
 med-desc-arithrazine = Arith | Rads | Deals Brute
-
-reagent-name-estrogen = Estrogen
-reagent-desc-estrogen = A feminizing hormone that is produced by the body.
-
-reagent-name-testosterone = Testosterone
-reagent-desc-testosterone = A masculinizing hormone that is produced by the body.
-
-reagent-effect-estrogen = You feel girly.
-reagent-effect-testosterone = You want to eat a steak.
