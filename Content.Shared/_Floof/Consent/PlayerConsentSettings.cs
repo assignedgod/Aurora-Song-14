@@ -1,4 +1,5 @@
 using System.Linq;
+using Content.Shared.CCVar;
 using Content.Shared.Floofstation; // Flooftier
 using Robust.Shared.Configuration;
 using Robust.Shared.Prototypes;
@@ -29,7 +30,7 @@ public sealed class PlayerConsentSettings
 
     public void EnsureValid(IConfigurationManager configManager, IPrototypeManager prototypeManager)
     {
-        var maxLength = configManager.GetCVar(FloofCCVars.ConsentFreetextMaxLength); // Flooftier
+        var maxLength = configManager.GetCVar(CCVars.ConsentFreetextMaxLength); // Flooftier
         Freetext = Freetext.Trim();
         if (Freetext.Length > maxLength)
             Freetext = Freetext.Substring(0, maxLength);

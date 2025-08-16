@@ -514,7 +514,8 @@ namespace Content.Client.Lobby.UI
                 _flavorSfwTextEdit = _flavorText.CFlavorTextSFWInput;
                 _flavorNsfwTextEdit = _flavorText.CFlavorTextNSFWInput;
 
-                TabContainer.SetTabTitle(_flavorText, Loc.GetString("humanoid-profile-editor-flavortext-tab"));
+                TabContainer.AddChild(_flavorText);
+                TabContainer.SetTabTitle(4, Loc.GetString("humanoid-profile-editor-flavortext-tab"));
             }
             else
             {
