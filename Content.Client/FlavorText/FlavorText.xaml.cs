@@ -25,7 +25,7 @@ namespace Content.Client.FlavorText
 
             TabSFW.Orphan();
             TabNSFW.Orphan();
-            
+
             FlavorTextTabs.AddTab(TabSFW, loc.GetString("flavor-text-title"));
             FlavorTextTabs.AddTab(TabNSFW, loc.GetString("flavor-text-nsfw-title"));
         }
