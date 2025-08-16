@@ -560,7 +560,7 @@ public sealed partial class ChatSystem : SharedChatSystem
             // Wrapped message is the result wrapped in an "x says y" string
             string result;
 
-            // Floof: handle languages that require LOS
+            // DEN: should only hear subtle with no obstructions
             if (_interactionSystem.InRangeUnobstructed(source, listener, WhisperClearRange, _subtleWhisperMask))
             {
                 // Scenario 1: the listener can clearly understand the message
