@@ -6,6 +6,13 @@
   description: |-
     A detective's best friend. On the handle is a label that says 'for authorized use only.'
   components:
+  - type: Gun
+    projectileSpeed: 30
+    minAngle: 3
+    maxAngle: 15
+    angleIncrease: 1.1
+    angleDecay: 4.5
+    fireRate: 2.5
   - type: Sprite
     sprite: Objects/Weapons/Guns/Revolvers/inspector.rsi
   - type: Clothing

@@ -45,7 +45,7 @@
   - type: Gun
     minAngle: 4.1
     maxAngle: 20.5
-    angleIncrease: 1.8
+    angleIncrease: 2
     angleDecay: 6.5
   - type: NFWeaponDetails
     manufacturer: weapon-details-manufacturer-gorlex-steel-works
