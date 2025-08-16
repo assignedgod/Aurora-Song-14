@@ -414,6 +414,7 @@ namespace Content.Server.Database
         [Column("char_name")] public string CharacterName { get; set; } = null!;
         public string FlavorText { get; set; } = null!;
         public string NsfwFlavorText { get; set; } = null!;
+        public string CharacterConsent { get; set; } = null!;
         public int Age { get; set; }
         public int BankBalance { get; set; }
         public string Sex { get; set; } = null!;

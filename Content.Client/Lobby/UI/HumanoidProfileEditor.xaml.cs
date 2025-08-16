@@ -63,6 +63,7 @@ namespace Content.Client.Lobby.UI
         private FlavorText.FlavorText? _flavorText;
         private TextEdit? _flavorSfwTextEdit;
         private TextEdit? _flavorNsfwTextEdit;
+        private TextEdit? _characterConsent;
 
         // One at a time.
         private LoadoutWindow? _loadoutWindow;
@@ -510,9 +511,11 @@ namespace Content.Client.Lobby.UI
 
                 _flavorText.OnSfwFlavorTextChanged += OnSfwFlavorTextChange;
                 _flavorText.OnNsfwFlavorTextChanged += OnNsfwFlavorTextChange;
+                _flavorText.OnCharacterConsentChanged += OnCharacterConsentChange;
 
                 _flavorSfwTextEdit = _flavorText.CFlavorTextSFWInput;
                 _flavorNsfwTextEdit = _flavorText.CFlavorTextNSFWInput;
+                _characterConsent = _flavorText.CFlavorTextConsentInput;
 
                 TabContainer.AddChild(_flavorText);
                 TabContainer.SetTabTitle(4, Loc.GetString("humanoid-profile-editor-flavortext-tab"));
@@ -526,14 +529,18 @@ namespace Content.Client.Lobby.UI
 
                 _flavorText.OnSfwFlavorTextChanged -= OnSfwFlavorTextChange;
                 _flavorText.OnNsfwFlavorTextChanged -= OnNsfwFlavorTextChange;
+                _flavorText.OnCharacterConsentChanged -= OnCharacterConsentChange;
 
                 _flavorText.Dispose();
+
                 _flavorSfwTextEdit?.Dispose();
                 _flavorNsfwTextEdit?.Dispose();
+                _characterConsent?.Dispose();
 
                 _flavorText = null;
                 _flavorSfwTextEdit = null;
                 _flavorNsfwTextEdit = null;
+                _characterConsent = null;
             }
         }
 
@@ -1140,6 +1147,15 @@ namespace Content.Client.Lobby.UI
             SetDirty();
         }
 
+        private void OnCharacterConsentChange(string content)
+        {
+            if (Profile is null)
+                return;
+
+            Profile = Profile.WithCharacterConsent(content);
+            SetDirty();
+        }
+
         private void OnMarkingChange(MarkingSet markings)
         {
             if (Profile is null)
@@ -1372,10 +1388,10 @@ namespace Content.Client.Lobby.UI
                 _flavorSfwTextEdit.TextRope = new Rope.Leaf(Profile?.FlavorText ?? "");
 
             if (_flavorNsfwTextEdit != null)
-            {
-                _sawmill.Info(Profile?.NsfwFlavorText ?? "empty");
                 _flavorNsfwTextEdit.TextRope = new Rope.Leaf(Profile?.NsfwFlavorText ?? "");
-            }
+
+            if (_characterConsent != null)
+                _characterConsent.TextRope = new Rope.Leaf(Profile?.CharacterConsent ?? "");
         }
 
         private void UpdateAgeEdit()

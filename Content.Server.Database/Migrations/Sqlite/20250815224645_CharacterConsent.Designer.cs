@@ -3,6 +3,7 @@ using System;
 using Content.Server.Database;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Content.Server.Database.Migrations.Sqlite
 {
     [DbContext(typeof(SqliteServerDbContext))]
-    partial class SqliteServerDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250815224645_CharacterConsent")]
+    partial class CharacterConsent
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "9.0.1");
@@ -545,6 +548,76 @@ namespace Content.Server.Database.Migrations.Sqlite
                     b.ToTable("blacklist", (string)null);
                 });
 
+            modelBuilder.Entity("Content.Server.Database.CDModel+CDProfile", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER")
+                        .HasColumnName("cdprofile_id");
+
+                    b.Property<byte[]>("CharacterRecords")
+                        .HasColumnType("jsonb")
+                        .HasColumnName("character_records");
+
+                    b.Property<float>("Height")
+                        .HasColumnType("REAL")
+                        .HasColumnName("height");
+
+                    b.Property<int>("ProfileId")
+                        .HasColumnType("INTEGER")
+                        .HasColumnName("profile_id");
+
+                    b.HasKey("Id")
+                        .HasName("PK_cdprofile");
+
+                    b.HasIndex("ProfileId")
+                        .IsUnique();
+
+                    b.ToTable("cdprofile", (string)null);
+                });
+
+            modelBuilder.Entity("Content.Server.Database.CDModel+CharacterRecordEntry", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER")
+                        .HasColumnName("cd_character_record_entries_id");
+
+                    b.Property<int>("CDProfileId")
+                        .HasColumnType("INTEGER")
+                        .HasColumnName("cdprofile_id");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("TEXT")
+                        .HasColumnName("description");
+
+                    b.Property<string>("Involved")
+                        .IsRequired()
+                        .HasColumnType("TEXT")
+                        .HasColumnName("involved");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("TEXT")
+                        .HasColumnName("title");
+
+                    b.Property<byte>("Type")
+                        .HasColumnType("INTEGER")
+                        .HasColumnName("type");
+
+                    b.HasKey("Id")
+                        .HasName("PK_cd_character_record_entries");
+
+                    b.HasIndex("CDProfileId")
+                        .HasDatabaseName("IX_cd_character_record_entries_cdprofile_id");
+
+                    b.HasIndex("Id")
+                        .HasDatabaseName("IX_cd_character_record_entries_cd_character_record_entries_id");
+
+                    b.ToTable("cd_character_record_entries", (string)null);
+                });
+
             modelBuilder.Entity("Content.Server.Database.ConnectionLog", b =>
                 {
                     b.Property<int>("Id")
@@ -652,35 +725,6 @@ namespace Content.Server.Database.Migrations.Sqlite
                     b.ToTable("consent_toggle", (string)null);
                 });
 
-            modelBuilder.Entity("Content.Server.Database.IPIntelCache", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER")
-                        .HasColumnName("ipintel_cache_id");
-
-                    b.Property<string>("Address")
-                        .IsRequired()
-                        .HasColumnType("TEXT")
-                        .HasColumnName("address");
-
-                    b.Property<float>("Score")
-                        .HasColumnType("REAL")
-                        .HasColumnName("score");
-
-                    b.Property<DateTime>("Time")
-                        .HasColumnType("TEXT")
-                        .HasColumnName("time");
-
-                    b.HasKey("Id")
-                        .HasName("PK_ipintel_cache");
-
-                    b.HasIndex("Address")
-                        .IsUnique();
-
-                    b.ToTable("ipintel_cache", (string)null);
-                });
-
             modelBuilder.Entity("Content.Server.Database.Job", b =>
                 {
                     b.Property<int>("Id")
@@ -714,6 +758,47 @@ namespace Content.Server.Database.Migrations.Sqlite
                         .HasFilter("priority = 3");
 
                     b.ToTable("job", (string)null);
+                });
+
+            modelBuilder.Entity("Content.Server.Database.Loadout", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER")
+                        .HasColumnName("loadout_id");
+
+                    b.Property<string>("CustomColorTint")
+                        .HasColumnType("TEXT")
+                        .HasColumnName("custom_color_tint");
+
+                    b.Property<string>("CustomDescription")
+                        .HasColumnType("TEXT")
+                        .HasColumnName("custom_description");
+
+                    b.Property<bool?>("CustomHeirloom")
+                        .HasColumnType("INTEGER")
+                        .HasColumnName("custom_heirloom");
+
+                    b.Property<string>("CustomName")
+                        .HasColumnType("TEXT")
+                        .HasColumnName("custom_name");
+
+                    b.Property<string>("LoadoutName")
+                        .IsRequired()
+                        .HasColumnType("TEXT")
+                        .HasColumnName("loadout_name");
+
+                    b.Property<int>("ProfileId")
+                        .HasColumnType("INTEGER")
+                        .HasColumnName("profile_id");
+
+                    b.HasKey("Id")
+                        .HasName("PK_loadout");
+
+                    b.HasIndex("ProfileId", "LoadoutName")
+                        .IsUnique();
+
+                    b.ToTable("loadout", (string)null);
                 });
 
             modelBuilder.Entity("Content.Server.Database.PlayTime", b =>
@@ -751,6 +836,10 @@ namespace Content.Server.Database.Migrations.Sqlite
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER")
                         .HasColumnName("player_id");
+
+                    b.Property<bool?>("AcceptedPrompt")
+                        .HasColumnType("INTEGER")
+                        .HasColumnName("accepted_prompt");
 
                     b.Property<DateTime>("FirstSeenTime")
                         .HasColumnType("TEXT")
@@ -804,11 +893,6 @@ namespace Content.Server.Database.Migrations.Sqlite
                         .HasColumnType("TEXT")
                         .HasColumnName("admin_ooc_color");
 
-                    b.PrimitiveCollection<string>("ConstructionFavorites")
-                        .IsRequired()
-                        .HasColumnType("TEXT")
-                        .HasColumnName("construction_favorites");
-
                     b.Property<int>("SelectedCharacterSlot")
                         .HasColumnType("INTEGER")
                         .HasColumnName("selected_character_slot");
@@ -837,9 +921,10 @@ namespace Content.Server.Database.Migrations.Sqlite
                         .HasColumnType("INTEGER")
                         .HasColumnName("age");
 
-                    b.Property<int>("BankBalance")
-                        .HasColumnType("INTEGER")
-                        .HasColumnName("bank_balance");
+                    b.Property<string>("Backpack")
+                        .IsRequired()
+                        .HasColumnType("TEXT")
+                        .HasColumnName("backpack");
 
                     b.Property<string>("CharacterConsent")
                         .IsRequired()
@@ -850,6 +935,29 @@ namespace Content.Server.Database.Migrations.Sqlite
                         .IsRequired()
                         .HasColumnType("TEXT")
                         .HasColumnName("char_name");
+
+                    b.Property<string>("Clothing")
+                        .IsRequired()
+                        .HasColumnType("TEXT")
+                        .HasColumnName("clothing");
+
+                    b.Property<string>("CustomSpecieName")
+                        .IsRequired()
+                        .HasColumnType("TEXT")
+                        .HasColumnName("custom_specie_name");
+
+                    b.Property<string>("CyborgName")
+                        .HasColumnType("TEXT")
+                        .HasColumnName("cyborg_name");
+
+                    b.Property<string>("DisplayPronouns")
+                        .HasColumnType("TEXT")
+                        .HasColumnName("display_pronouns");
+
+                    b.Property<string>("Employer")
+                        .IsRequired()
+                        .HasColumnType("TEXT")
+                        .HasColumnName("employer");
 
                     b.Property<string>("EyeColor")
                         .IsRequired()
@@ -881,18 +989,28 @@ namespace Content.Server.Database.Migrations.Sqlite
                         .HasColumnType("TEXT")
                         .HasColumnName("hair_color");
 
-                    b.Property<float>("Height")
-                        .HasColumnType("REAL")
-                        .HasColumnName("height");
-
                     b.Property<string>("HairName")
                         .IsRequired()
                         .HasColumnType("TEXT")
                         .HasColumnName("hair_name");
 
+                    b.Property<float>("Height")
+                        .HasColumnType("REAL")
+                        .HasColumnName("height");
+
+                    b.Property<string>("Lifepath")
+                        .IsRequired()
+                        .HasColumnType("TEXT")
+                        .HasColumnName("lifepath");
+
                     b.Property<byte[]>("Markings")
                         .HasColumnType("jsonb")
                         .HasColumnName("markings");
+
+                    b.Property<string>("Nationality")
+                        .IsRequired()
+                        .HasColumnType("TEXT")
+                        .HasColumnName("nationality");
 
                     b.Property<string>("NsfwFlavorText")
                         .IsRequired()
@@ -930,6 +1048,15 @@ namespace Content.Server.Database.Migrations.Sqlite
                         .HasColumnType("TEXT")
                         .HasColumnName("species");
 
+                    b.Property<string>("StationAiName")
+                        .HasColumnType("TEXT")
+                        .HasColumnName("station_ai_name");
+
+                    b.Property<string>("Voice")
+                        .IsRequired()
+                        .HasColumnType("TEXT")
+                        .HasColumnName("voice");
+
                     b.Property<float>("Width")
                         .HasColumnType("REAL")
                         .HasColumnName("width");
@@ -944,83 +1071,6 @@ namespace Content.Server.Database.Migrations.Sqlite
                         .IsUnique();
 
                     b.ToTable("profile", (string)null);
-                });
-
-            modelBuilder.Entity("Content.Server.Database.ProfileLoadout", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER")
-                        .HasColumnName("profile_loadout_id");
-
-                    b.Property<string>("LoadoutName")
-                        .IsRequired()
-                        .HasColumnType("TEXT")
-                        .HasColumnName("loadout_name");
-
-                    b.Property<int>("ProfileLoadoutGroupId")
-                        .HasColumnType("INTEGER")
-                        .HasColumnName("profile_loadout_group_id");
-
-                    b.HasKey("Id")
-                        .HasName("PK_profile_loadout");
-
-                    b.HasIndex("ProfileLoadoutGroupId");
-
-                    b.ToTable("profile_loadout", (string)null);
-                });
-
-            modelBuilder.Entity("Content.Server.Database.ProfileLoadoutGroup", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER")
-                        .HasColumnName("profile_loadout_group_id");
-
-                    b.Property<string>("GroupName")
-                        .IsRequired()
-                        .HasColumnType("TEXT")
-                        .HasColumnName("group_name");
-
-                    b.Property<int>("ProfileRoleLoadoutId")
-                        .HasColumnType("INTEGER")
-                        .HasColumnName("profile_role_loadout_id");
-
-                    b.HasKey("Id")
-                        .HasName("PK_profile_loadout_group");
-
-                    b.HasIndex("ProfileRoleLoadoutId");
-
-                    b.ToTable("profile_loadout_group", (string)null);
-                });
-
-            modelBuilder.Entity("Content.Server.Database.ProfileRoleLoadout", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER")
-                        .HasColumnName("profile_role_loadout_id");
-
-                    b.Property<string>("EntityName")
-                        .HasMaxLength(256)
-                        .HasColumnType("TEXT")
-                        .HasColumnName("entity_name");
-
-                    b.Property<int>("ProfileId")
-                        .HasColumnType("INTEGER")
-                        .HasColumnName("profile_id");
-
-                    b.Property<string>("RoleName")
-                        .IsRequired()
-                        .HasColumnType("TEXT")
-                        .HasColumnName("role_name");
-
-                    b.HasKey("Id")
-                        .HasName("PK_profile_role_loadout");
-
-                    b.HasIndex("ProfileId");
-
-                    b.ToTable("profile_role_loadout", (string)null);
                 });
 
             modelBuilder.Entity("Content.Server.Database.RoleWhitelist", b =>
@@ -1660,6 +1710,30 @@ namespace Content.Server.Database.Migrations.Sqlite
                     b.Navigation("Profile");
                 });
 
+            modelBuilder.Entity("Content.Server.Database.CDModel+CDProfile", b =>
+                {
+                    b.HasOne("Content.Server.Database.Profile", "Profile")
+                        .WithOne("CDProfile")
+                        .HasForeignKey("Content.Server.Database.CDModel+CDProfile", "ProfileId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired()
+                        .HasConstraintName("FK_cdprofile_profile_profile_id");
+
+                    b.Navigation("Profile");
+                });
+
+            modelBuilder.Entity("Content.Server.Database.CDModel+CharacterRecordEntry", b =>
+                {
+                    b.HasOne("Content.Server.Database.CDModel+CDProfile", "CDProfile")
+                        .WithMany("CharacterRecordEntries")
+                        .HasForeignKey("CDProfileId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired()
+                        .HasConstraintName("FK_cd_character_record_entries_cdprofile_cdprofile_id");
+
+                    b.Navigation("CDProfile");
+                });
+
             modelBuilder.Entity("Content.Server.Database.ConnectionLog", b =>
                 {
                     b.HasOne("Content.Server.Database.Server", "Server")
@@ -1701,16 +1775,16 @@ namespace Content.Server.Database.Migrations.Sqlite
                 });
 
             modelBuilder.Entity("Content.Server.Database.ConsentToggle", b =>
-            {
-                b.HasOne("Content.Server.Database.ConsentSettings", "ConsentSettings")
-                    .WithMany("ConsentToggles")
-                    .HasForeignKey("ConsentSettingsId")
-                    .OnDelete(DeleteBehavior.Cascade)
-                    .IsRequired()
-                    .HasConstraintName("FK_consent_toggle_consent_settings_consent_settings_id");
+                {
+                    b.HasOne("Content.Server.Database.ConsentSettings", "ConsentSettings")
+                        .WithMany("ConsentToggles")
+                        .HasForeignKey("ConsentSettingsId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired()
+                        .HasConstraintName("FK_consent_toggle_consent_settings_consent_settings_id");
 
-                b.Navigation("ConsentSettings");
-            });
+                    b.Navigation("ConsentSettings");
+                });
 
             modelBuilder.Entity("Content.Server.Database.Job", b =>
                 {
@@ -1720,6 +1794,18 @@ namespace Content.Server.Database.Migrations.Sqlite
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired()
                         .HasConstraintName("FK_job_profile_profile_id");
+
+                    b.Navigation("Profile");
+                });
+
+            modelBuilder.Entity("Content.Server.Database.Loadout", b =>
+                {
+                    b.HasOne("Content.Server.Database.Profile", "Profile")
+                        .WithMany("Loadouts")
+                        .HasForeignKey("ProfileId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired()
+                        .HasConstraintName("FK_loadout_profile_profile_id");
 
                     b.Navigation("Profile");
                 });
@@ -1765,42 +1851,6 @@ namespace Content.Server.Database.Migrations.Sqlite
                         .HasConstraintName("FK_profile_preference_preference_id");
 
                     b.Navigation("Preference");
-                });
-
-            modelBuilder.Entity("Content.Server.Database.ProfileLoadout", b =>
-                {
-                    b.HasOne("Content.Server.Database.ProfileLoadoutGroup", "ProfileLoadoutGroup")
-                        .WithMany("Loadouts")
-                        .HasForeignKey("ProfileLoadoutGroupId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired()
-                        .HasConstraintName("FK_profile_loadout_profile_loadout_group_profile_loadout_group_id");
-
-                    b.Navigation("ProfileLoadoutGroup");
-                });
-
-            modelBuilder.Entity("Content.Server.Database.ProfileLoadoutGroup", b =>
-                {
-                    b.HasOne("Content.Server.Database.ProfileRoleLoadout", "ProfileRoleLoadout")
-                        .WithMany("Groups")
-                        .HasForeignKey("ProfileRoleLoadoutId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired()
-                        .HasConstraintName("FK_profile_loadout_group_profile_role_loadout_profile_role_loadout_id");
-
-                    b.Navigation("ProfileRoleLoadout");
-                });
-
-            modelBuilder.Entity("Content.Server.Database.ProfileRoleLoadout", b =>
-                {
-                    b.HasOne("Content.Server.Database.Profile", "Profile")
-                        .WithMany("Loadouts")
-                        .HasForeignKey("ProfileId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired()
-                        .HasConstraintName("FK_profile_role_loadout_profile_profile_id");
-
-                    b.Navigation("Profile");
                 });
 
             modelBuilder.Entity("Content.Server.Database.RoleWhitelist", b =>
@@ -2031,15 +2081,20 @@ namespace Content.Server.Database.Migrations.Sqlite
                     b.Navigation("Flags");
                 });
 
+            modelBuilder.Entity("Content.Server.Database.CDModel+CDProfile", b =>
+                {
+                    b.Navigation("CharacterRecordEntries");
+                });
+
             modelBuilder.Entity("Content.Server.Database.ConnectionLog", b =>
                 {
                     b.Navigation("BanHits");
                 });
 
             modelBuilder.Entity("Content.Server.Database.ConsentSettings", b =>
-            {
-                b.Navigation("ConsentToggles");
-            });
+                {
+                    b.Navigation("ConsentToggles");
+                });
 
             modelBuilder.Entity("Content.Server.Database.Player", b =>
                 {
@@ -2089,21 +2144,13 @@ namespace Content.Server.Database.Migrations.Sqlite
                 {
                     b.Navigation("Antags");
 
+                    b.Navigation("CDProfile");
+
                     b.Navigation("Jobs");
 
                     b.Navigation("Loadouts");
 
                     b.Navigation("Traits");
-                });
-
-            modelBuilder.Entity("Content.Server.Database.ProfileLoadoutGroup", b =>
-                {
-                    b.Navigation("Loadouts");
-                });
-
-            modelBuilder.Entity("Content.Server.Database.ProfileRoleLoadout", b =>
-                {
-                    b.Navigation("Groups");
                 });
 
             modelBuilder.Entity("Content.Server.Database.Round", b =>

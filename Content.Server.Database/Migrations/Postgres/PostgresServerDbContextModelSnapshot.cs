@@ -893,6 +893,11 @@ namespace Content.Server.Database.Migrations.Postgres
                         .HasColumnType("integer")
                         .HasColumnName("bank_balance");
 
+                    b.Property<string>("CharacterConsent")
+                        .IsRequired()
+                        .HasColumnType("text")
+                        .HasColumnName("character_consent");
+
                     b.Property<string>("CharacterName")
                         .IsRequired()
                         .HasColumnType("text")

@@ -268,6 +268,7 @@ namespace Content.Server.Database
                 profile.CharacterName,
                 profile.FlavorText,
                 profile.NsfwFlavorText,
+                profile.CharacterConsent,
                 profile.Species,
                 profile.Age,
                 sex,
@@ -308,6 +309,7 @@ namespace Content.Server.Database
             profile.CharacterName = humanoid.Name;
             profile.FlavorText = humanoid.FlavorText;
             profile.NsfwFlavorText = humanoid.NsfwFlavorText;
+            profile.CharacterConsent = humanoid.CharacterConsent;
             profile.Species = humanoid.Species;
             profile.Age = humanoid.Age;
             profile.Sex = humanoid.Sex.ToString();
