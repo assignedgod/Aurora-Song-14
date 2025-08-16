@@ -71,6 +71,7 @@ public sealed partial class ConsentWindow : FancyWindow
 
         ConsentFreetext.Placeholder = new Rope.Leaf(Loc.GetString("consent-window-freetext-placeholder"));
         ConsentFreetext.OnTextChanged += _ => UnsavedChanges();
+    }
 
     private void InitializeCategories()
     {
