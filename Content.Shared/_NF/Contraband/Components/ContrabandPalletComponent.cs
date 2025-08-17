@@ -19,7 +19,7 @@ public sealed partial class ContrabandPalletConsoleComponent : Component
     public ProtoId<AccessLevelPrototype> AccessRequired = "Bailiff";
 
     [DataField]
-    public EntProtoId LicenseRequired = "contraband handling license";
+    public string LicenseRequired = "contraband handling license";
 
     [ViewVariables(VVAccess.ReadWrite), DataField(serverOnly: true)]
     public string Faction = "NFSD";
