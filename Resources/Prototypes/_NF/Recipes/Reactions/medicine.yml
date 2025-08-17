@@ -49,3 +49,34 @@
       amount: 2
   products:
       Aloxadone: 4
+
+
+#don't use past here if something breaks
+
+- type: reaction #Aurora chem
+  id: Mothrazine
+  impact: Medium
+  reactants:
+    Fiber:
+      amount: 3
+    Lipozine:
+      amount: 3
+    Ethanol:
+      amount: 1
+  products:
+      Mothrazine: 2
+
+- type: reaction #Aurora chem
+  id: Catgirlium
+  impact: Medium
+  reactants:
+    Estrogen:
+      amount: 2
+    Pomelustine:
+      amount: 1
+    Ethanol:
+      amount: 1
+    Acetone:
+      amount: 1
+  products:
+      Catgirlium: 3 
