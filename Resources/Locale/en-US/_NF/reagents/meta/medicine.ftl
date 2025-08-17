@@ -8,4 +8,4 @@ reagent-name-mothrazine = mothrazine
 reagent-desc-mothrazine = A fibrous chemical that bubbles intermittently... Sounds like mischief.
 
 reagent-name-catgirlium = catgirlium
-reagent-desc-catgirlium = a synthesized chemical with an odd glow- the kind that makes you go, what's this?
+reagent-desc-catgirlium = a synthesized chemical with an odd glow- the kind that makes you go, what's this? 

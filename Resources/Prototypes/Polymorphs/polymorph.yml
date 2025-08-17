@@ -252,7 +252,7 @@
     revertOnCrit: true
     duration: 30
 
-- type: polymorph #Aurora's Song polymorph prototype
+- type: polymorph #Aurora's Song polymorph prototype 
   id: ChemicalFelinid
   configuration:
     entity: MobChemFelinid

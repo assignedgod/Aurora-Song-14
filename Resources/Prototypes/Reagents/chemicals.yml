@@ -185,3 +185,70 @@
         key: Adrenaline
         component: IgnoreSlowOnDamage
         time: 120
+
+
+# don't use past here if something breaks
+
+- type: reagent #Aurora Chem
+  id: Mothrazine
+  name: reagent-name-mothrazine
+  group: Toxins
+  desc: reagent-desc-mothrazine
+  flavor: fluffy
+  physicalDesc: reagent-physical-desc-fluffy
+  color: "#ffc1c1"
+  metabolisms:
+    Drink:
+      metabolismRate: 0.15
+      effects:
+        - !type:Emote
+          emote: Chitter
+          showInChat: true
+          force: true
+          probability: 0.18
+        - !type:Polymorph
+          prototype: ChemicalMothroach
+          conditions:
+            - !type:NFIsHumanoid
+            - !type:ReagentThreshold
+              min: 10
+        - !type:AdjustReagent
+          reagent: Mothrazine
+          amount: -3
+          conditions:
+            - !type:ReagentThreshold
+              min: 10
+              
+
+- type: reagent #Aurora Chem
+  id: Catgirlium
+  name: reagent-name-catgirlium
+  group: Toxins
+  desc: reagent-desc-catgirlium
+  flavor: sweet
+  physicalDesc: reagent-physical-desc-powdery
+  color: "#e0ffff"
+  metabolisms:
+    Drink:
+      metabolismRate: 0.15
+      effects:
+        - !type:Emote
+          emote: Meow
+          showInChat: true
+          force: true
+          probability: 0.18
+        - !type:Polymorph
+          prototype: ChemicalFelinid
+          conditions:
+            - !type:NFIsHumanoid
+            - !type:ReagentThreshold
+              min: 15
+        - !type:AdjustReagent
+          reagent: Catgirlium
+          amount: -2
+          conditions:
+            - !type:ReagentThreshold
+              min: 15
+        - !type:GenericStatusEffect
+          key: Stutter
+          component: ScrambledAccent
