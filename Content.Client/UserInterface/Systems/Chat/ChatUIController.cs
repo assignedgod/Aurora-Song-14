@@ -13,6 +13,7 @@ using Content.Client.Mind;
 using Content.Client.Roles;
 using Content.Client.Stylesheets;
 using Content.Client.UserInterface.Screens;
+using Content.Client.UserInterface.Systems.Chat.Controls.Denu;
 using Content.Client.UserInterface.Systems.Chat.Widgets;
 using Content.Client.UserInterface.Systems.Gameplay;
 using Content.Shared.Administration;
@@ -58,6 +59,7 @@ public sealed partial class ChatUIController : UIController
     [Dependency] private readonly IStateManager _state = default!;
     [Dependency] private readonly IGameTiming _timing = default!;
     [Dependency] private readonly IReplayRecordingManager _replayRecording = default!;
+    [Dependency] private readonly DenuUIController _denuUIController = default!;
 
     [UISystemDependency] private readonly ExamineSystem? _examine = default;
     [UISystemDependency] private readonly GhostSystem? _ghost = default;
@@ -757,6 +759,7 @@ public sealed partial class ChatUIController : UIController
         _typingIndicator?.ClientSubmittedChatText();
 
         var text = box.ChatInput.Input.Text;
+
         box.ChatInput.Input.Clear();
         box.ChatInput.Input.ReleaseKeyboardFocus();
         UpdateSelectedChannel(box);
@@ -781,6 +784,11 @@ public sealed partial class ChatUIController : UIController
         {
             // radio must have prefix as it goes through the say command.
             text = $";{text}";
+        }
+
+        if (_denuUIController!.AutoFormatterEnabled)
+        {
+            text = _denuUIController.FormatMessage(text);
         }
 
         _manager.SendMessage(text, prefixChannel == 0 ? channel : prefixChannel);

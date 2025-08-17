@@ -80,6 +80,18 @@ namespace Content.Shared.Preferences
         public string FlavorText { get; set; } = string.Empty;
 
         /// <summary>
+        /// Detailed text that can appear for the character if <see cref="CCVars.FlavorText"/> is enabled and the consent is on.
+        /// </summary>
+        [DataField]
+        public string NsfwFlavorText { get; set; } = string.Empty;
+
+        /// <summary>
+        /// A consent sheet, adds onto your original for this character specifically.
+        /// </summary>
+        [DataField]
+        public string CharacterConsent { get; set; } = string.Empty;
+
+        /// <summary>
         /// Associated <see cref="SpeciesPrototype"/> for this profile.
         /// </summary>
         [DataField]
@@ -138,7 +150,9 @@ namespace Content.Shared.Preferences
 
         public HumanoidCharacterProfile(
             string name,
-            string flavortext,
+            string flavorText,
+            string nsfwFlavorText,
+            string characterConsent,
             string species,
             int age,
             Sex sex,
@@ -153,7 +167,9 @@ namespace Content.Shared.Preferences
             Dictionary<string, RoleLoadout> loadouts)
         {
             Name = name;
-            FlavorText = flavortext;
+            FlavorText = flavorText;
+            NsfwFlavorText = nsfwFlavorText;
+            CharacterConsent = characterConsent;
             Species = species;
             Age = age;
             Sex = sex;
@@ -175,7 +191,7 @@ namespace Content.Shared.Preferences
             HashSet<ProtoId<AntagPrototype>> antagPreferences,
             HashSet<ProtoId<TraitPrototype>> traitPreferences,
             Dictionary<string, RoleLoadout> loadouts)
-            : this(other.Name, other.FlavorText, other.Species, other.Age, other.Sex, other.Gender, other.BankBalance, other.Appearance, other.SpawnPriority,
+            : this(other.Name, other.FlavorText, other.NsfwFlavorText, other.CharacterConsent, other.Species, other.Age, other.Sex, other.Gender, other.BankBalance, other.Appearance, other.SpawnPriority,
                 jobPriorities, other.PreferenceUnavailable, antagPreferences, traitPreferences, loadouts)
         {
         }
@@ -184,6 +200,8 @@ namespace Content.Shared.Preferences
         public HumanoidCharacterProfile(HumanoidCharacterProfile other)
             : this(other.Name,
                 other.FlavorText,
+                other.NsfwFlavorText,
+                other.CharacterConsent,
                 other.Species,
                 other.Age,
                 other.Sex,
@@ -281,6 +299,16 @@ namespace Content.Shared.Preferences
         public HumanoidCharacterProfile WithFlavorText(string flavorText)
         {
             return new(this) { FlavorText = flavorText };
+        }
+
+        public HumanoidCharacterProfile WithNsfwFlavorText(string flavorText)
+        {
+            return new(this) { NsfwFlavorText = flavorText };
+        }
+
+        public HumanoidCharacterProfile WithCharacterConsent(string content)
+        {
+            return new(this) { CharacterConsent = content };
         }
 
         public HumanoidCharacterProfile WithAge(int age)
@@ -491,6 +519,8 @@ namespace Content.Shared.Preferences
             if (!_traitPreferences.SequenceEqual(other._traitPreferences)) return false;
             if (!Loadouts.SequenceEqual(other.Loadouts)) return false;
             if (FlavorText != other.FlavorText) return false;
+            if (NsfwFlavorText != other.NsfwFlavorText) return false;
+            if (CharacterConsent != other.CharacterConsent) return false;
             return Appearance.MemberwiseEquals(other.Appearance);
         }
 
@@ -569,15 +599,26 @@ namespace Content.Shared.Preferences
                 name = GetName(Species, gender);
             }
 
-            string flavortext;
+            var flavorText = string.Empty;
+            var nsfwFlavorText = string.Empty;
             var maxFlavorTextLength = configManager.GetCVar(CCVars.MaxFlavorTextLength);
+
             if (FlavorText.Length > maxFlavorTextLength)
             {
-                flavortext = FormattedMessage.RemoveMarkupOrThrow(FlavorText)[..maxFlavorTextLength];
+                flavorText = FormattedMessage.RemoveMarkupOrThrow(FlavorText)[..maxFlavorTextLength];
             }
             else
             {
-                flavortext = FormattedMessage.RemoveMarkupOrThrow(FlavorText);
+                flavorText = FormattedMessage.RemoveMarkupOrThrow(FlavorText);
+            }
+
+            if (NsfwFlavorText.Length > maxFlavorTextLength)
+            {
+                nsfwFlavorText = FormattedMessage.RemoveMarkupOrThrow(NsfwFlavorText)[..maxFlavorTextLength];
+            }
+            else
+            {
+                nsfwFlavorText = FormattedMessage.RemoveMarkupOrThrow(NsfwFlavorText);
             }
 
             // Frontier
@@ -636,7 +677,8 @@ namespace Content.Shared.Preferences
                          .ToList();
 
             Name = name;
-            FlavorText = flavortext;
+            FlavorText = flavorText;
+            NsfwFlavorText = nsfwFlavorText;
             Age = age;
             Sex = sex;
             Gender = gender;
@@ -747,6 +789,7 @@ namespace Content.Shared.Preferences
             hashCode.Add(_loadouts);
             hashCode.Add(Name);
             hashCode.Add(FlavorText);
+            hashCode.Add(NsfwFlavorText);
             hashCode.Add(Species);
             hashCode.Add(Age);
             hashCode.Add((int)Sex);

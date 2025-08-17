@@ -160,9 +160,13 @@ public sealed class StationSpawningSystem : SharedStationSpawningSystem
             _humanoidSystem.LoadProfile(entity.Value, profile);
             _metaSystem.SetEntityName(entity.Value, profile.Name);
 
-            if (profile.FlavorText != "" && _configurationManager.GetCVar(CCVars.FlavorText))
+            if ((profile.FlavorText != string.Empty
+                || profile.NsfwFlavorText != string.Empty)
+                && _configurationManager.GetCVar(CCVars.FlavorText))
             {
-                AddComp<DetailExaminableComponent>(entity.Value).Content = profile.FlavorText;
+                var detail = EnsureComp<DetailExaminableComponent>(entity.Value);
+                detail.Content = profile.FlavorText;
+                detail.NsfwContent = profile.NsfwFlavorText;
             }
         }
 
@@ -260,6 +264,7 @@ public sealed class StationSpawningSystem : SharedStationSpawningSystem
 
         var gearEquippedEv = new StartingGearEquippedEvent(entity.Value);
         RaiseLocalEvent(entity.Value, ref gearEquippedEv);
+        UpdateFlavorText(entity.Value, profile);
 
         if (prototype != null && TryComp(entity.Value, out MetaDataComponent? metaData))
         {
@@ -269,6 +274,20 @@ public sealed class StationSpawningSystem : SharedStationSpawningSystem
         DoJobSpecials(job, entity.Value);
         _identity.QueueIdentityUpdate(entity.Value);
         return entity.Value;
+    }
+
+    private void UpdateFlavorText(EntityUid uid, HumanoidCharacterProfile? profile)
+    {
+        if (profile == null)
+            return;
+
+        var detail = EnsureComp<DetailExaminableComponent>(uid);
+
+        if (!string.IsNullOrWhiteSpace(profile.FlavorText))
+            detail.Content = profile.FlavorText;
+
+        if (!string.IsNullOrWhiteSpace(profile.NsfwFlavorText))
+            detail.NsfwContent = profile.NsfwFlavorText;
     }
 
     private void DoJobSpecials(ProtoId<JobPrototype>? job, EntityUid entity)

@@ -9,8 +9,9 @@ using System.Threading.Tasks;
 using Content.Server.Administration.Logs;
 using Content.Server.Administration.Managers;
 using Content.Shared.Administration.Logs;
-using Content.Shared.Consent; //Floofstation
 using Content.Shared.Construction.Prototypes;
+using Content.Shared._Floof.Consent;  //Floofstation
+using Content.Shared.Administration.Logs;
 using Content.Shared.Database;
 using Content.Shared.Ghost.Roles;
 using Content.Shared.Humanoid;
@@ -266,6 +267,8 @@ namespace Content.Server.Database
             return new HumanoidCharacterProfile(
                 profile.CharacterName,
                 profile.FlavorText,
+                profile.NsfwFlavorText,
+                profile.CharacterConsent,
                 profile.Species,
                 profile.Age,
                 sex,
@@ -305,6 +308,8 @@ namespace Content.Server.Database
 
             profile.CharacterName = humanoid.Name;
             profile.FlavorText = humanoid.FlavorText;
+            profile.NsfwFlavorText = humanoid.NsfwFlavorText;
+            profile.CharacterConsent = humanoid.CharacterConsent;
             profile.Species = humanoid.Species;
             profile.Age = humanoid.Age;
             profile.Sex = humanoid.Sex.ToString();

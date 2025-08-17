@@ -841,6 +841,11 @@ namespace Content.Server.Database.Migrations.Sqlite
                         .HasColumnType("INTEGER")
                         .HasColumnName("bank_balance");
 
+                    b.Property<string>("CharacterConsent")
+                        .IsRequired()
+                        .HasColumnType("TEXT")
+                        .HasColumnName("character_consent");
+
                     b.Property<string>("CharacterName")
                         .IsRequired()
                         .HasColumnType("TEXT")
@@ -888,6 +893,11 @@ namespace Content.Server.Database.Migrations.Sqlite
                     b.Property<byte[]>("Markings")
                         .HasColumnType("jsonb")
                         .HasColumnName("markings");
+
+                    b.Property<string>("NsfwFlavorText")
+                        .IsRequired()
+                        .HasColumnType("TEXT")
+                        .HasColumnName("nsfw_flavor_text");
 
                     b.Property<int>("PreferenceId")
                         .HasColumnType("INTEGER")
