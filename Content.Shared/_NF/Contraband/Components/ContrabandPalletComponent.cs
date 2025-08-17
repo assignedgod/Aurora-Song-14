@@ -1,3 +1,4 @@
+using Content.Shared.Access;
 using Content.Shared.Stacks;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototype;
@@ -11,11 +12,23 @@ public sealed partial class ContrabandPalletConsoleComponent : Component
     [ViewVariables(VVAccess.ReadWrite), DataField("cashType", serverOnly: true, customTypeSerializer:typeof(PrototypeIdSerializer<StackPrototype>))]
     public string RewardType = "FrontierUplinkCoin";
 
+    [DataField]
+    public EntProtoId RewardCashPrototype = "SpaceCash5000";
+
+    [DataField]
+    public ProtoId<AccessLevelPrototype> AccessRequired = "Bailiff";
+
+    [DataField]
+    public EntProtoId LicenseRequired = "contraband handling license";
+
     [ViewVariables(VVAccess.ReadWrite), DataField(serverOnly: true)]
     public string Faction = "NFSD";
 
     [ViewVariables(VVAccess.ReadWrite), DataField]
     public string LocStringPrefix = string.Empty;
+
+    [ViewVariables(VVAccess.ReadWrite), DataField]
+    public int PalletDistance = 8;
 
     [DataField]
     public Dictionary<EntProtoId, EntProtoId> RegisterRecipies = new()
