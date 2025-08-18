@@ -38,6 +38,8 @@
     - NFMagazineHighCapacityPistol35Overpressure
     - NFMagazineHighCapacityPistol35Rubber
     - FrontierUplinkCoin10
+  licenses:
+  - LicenseContrabandHandling
 
 - type: chameleonOutfit
   id: DeputyChameleonOutfit

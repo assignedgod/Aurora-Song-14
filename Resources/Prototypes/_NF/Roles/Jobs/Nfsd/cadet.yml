@@ -36,6 +36,8 @@
     - NFMagazineHighCapacityPistol35
     - NFMagazineHighCapacityPistol35Rubber
     - FrontierUplinkCoin10
+  licenses:
+  - LicenseContrabandHandling
 
 - type: chameleonOutfit
   id: CadetChameleonOutfit

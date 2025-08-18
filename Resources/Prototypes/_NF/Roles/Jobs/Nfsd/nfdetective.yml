@@ -47,6 +47,8 @@
     - LogProbeCartridge
     - RubberStampDetective
     - ContrabandForensicsModule
+  licenses:
+  - LicenseContrabandHandling
 
 - type: chameleonOutfit
   id: NFDetectiveChameleonOutfit

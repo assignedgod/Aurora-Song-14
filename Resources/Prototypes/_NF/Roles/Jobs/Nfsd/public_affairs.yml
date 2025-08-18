@@ -39,6 +39,8 @@
     - BoxFolderPalBrown
     - BoxFolderNfsdForms
     - RubberStampPal
+  licenses:
+  - LicenseContrabandHandling
 
 - type: chameleonOutfit
   id: PublicAffairsLiaisonChameleonOutfit
