@@ -895,7 +895,7 @@
   discountDownTo:
     Telecrystal: 2
   cost:
-    Telecrystal: 4
+    Telecrystal: 5 # Aurora - make unable to be acquired from one vendor
   categories:
   - UplinkDisruption
 
