@@ -42,4 +42,50 @@
   #    balance:
   #      MercCoin: 0 # Waits for the player to put in money
   - type: AccessReader
-    access: [["NuclearOperative"], ["SyndicateAgent"], ["Pilot"], ["Mercenary"]]
+    access: [["NuclearOperative"], ["SyndicateAgent"], ["Mercenary"]]
+
+- type: entity
+  parent: [BaseStructureDisableAnchoring, StorePresetExchangeUplink, VendingMachine]
+  id: VendingMachineExchangeVend
+  name: ExchangeVend
+  description: Get your wacky toys here!
+  components:
+  - type: VendingMachine
+    cashSlot: Null
+    offState: off
+    brokenState: broken
+    normalState: normal-unshaded
+    ejectState: eject-unshaded
+    denyState: deny-unshaded
+  #   screenState: screen
+  - type: Sprite
+    sprite: _AS/Structures/Machines/VendingMachines/mercvend.rsi
+    layers:
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.Base"]
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
+      shader: unshaded
+    #   - state: "screen"
+    #     map: ["enum.VendingMachineVisualLayers.Screen"]
+    #     shader: unshaded
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: PointLight
+    radius: 1.5
+    energy: 1.3
+    color: "#0492c2"
+  - type: UserInterface
+    interfaces:
+      enum.StoreUiKey.Key:
+        type: StoreBoundUserInterface
+  - type: ActivatableUI
+    key: enum.StoreUiKey.Key
+  - type: Tag
+    tags:
+    - ExchangeUplink
+  #  - type: Store
+  #    balance:
+  #      ExchangeCoin: 0 # Waits for the player to put in money
+  - type: AccessReader
+    access: [["NuclearOperative"], ["SyndicateAgent"], ["Mercenary"]]

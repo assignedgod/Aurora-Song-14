@@ -1,9 +1,9 @@
-﻿- type: entity
-  name: merc coin
+- type: entity
+  name: exchange coin
   parent: BaseItem
-  id: MercCoin
-  suffix: 20 MC
-  description: A plastic chip given from Expeditionary rewards for Mercenaries for their hard work. It can be exchanged at a Mercenary Vending Machine for a variety of items.
+  id: ExchangeCoin
+  suffix: 20 EC
+  description: A plastic chip paid to contractors for contraband turn-in. It can be used at an Exchange Vending Machine for a variety of items.
   components:
   - type: NFCoin
   - type: Sprite
@@ -14,77 +14,76 @@
     size: Tiny
   - type: Stack
     count: 20
-    stackType: MercCoin
+    stackType: ExhangeCoin
   - type: StaticPrice
     price: 0
   - type: StackPrice
-    price: 800 # set to 800 to multiply by 1.25 to 1000 by the "High" cargo sales computers standard to main station/ trade spine
+    price: 4000 # set to 4000 to multiply by 1.25 to 5000 by the "High" cargo sales computers standard to main station/ trade spine, which matches 5000 spesos exchange rate at the Exchange Vend
   - type: Currency
     price:
-      MercCoin: 1
+      ExchangeCoin: 1
 
 - type: entity
-  parent: MercCoin
-  id: MercCoin1
-  suffix: 1 MC
+  parent: ExchangeCoin
+  id: ExchangeCoin1
+  suffix: 1 EC
   components:
   - type: Stack
     count: 1
 
 - type: entity
-  parent: MercCoin
-  id: MercCoin2
-  suffix: 2 MC
+  parent: ExchangeCoin
+  id: ExchangeCoin2
+  suffix: 2 EC
   components:
   - type: Stack
     count: 2
 
 - type: entity
-  parent: MercCoin
-  id: MercCoin3
-  suffix: 3 MC
+  parent: ExchangeCoin
+  id: ExchangeCoin3
+  suffix: 3 EC
   components:
   - type: Stack
     count: 3
 
 - type: entity
-  parent: MercCoin
-  id: MercCoin4
-  suffix: 4 MC
+  parent: ExchangeCoin
+  id: ExchangeCoin4
+  suffix: 4 EC
   components:
   - type: Stack
     count: 4
 
 - type: entity
-  parent: MercCoin
-  id: MercCoin5
-  suffix: 5 MC
+  parent: ExchangeCoin
+  id: ExchangeCoin5
+  suffix: 5 EC
   components:
   - type: Stack
     count: 5
 
 - type: entity
-  parent: MercCoin
-  id: MercCoin10
-  suffix: 10 MC
+  parent: ExchangeCoin
+  id: ExchangeCoin10
+  suffix: 10 EC
   components:
   - type: Stack
     count: 10
 
 - type: entity
-  parent: MercCoin
-  id: MercCoin15
-  suffix: 15 MC
+  parent: ExchangeCoin
+  id: ExchangeCoin15
+  suffix: 15 EC
   components:
   - type: Stack
     count: 15
 
-# Uplinks
 - type: entity
-  parent: [ BaseItem, StorePresetMercenaryUplink ]
-  id: BaseMercenaryUplinkRadio
-  name: mercenary uplink
-  description: Retro looking old radio... But like, Merc-flavored...
+  parent: [ BaseItem, StorePresetExchangeUplink ]
+  id: BaseExchangeUplinkRadio
+  name: exchange uplink
+  description: Retro looking old radio... But like, for exchanging contra...
   suffix: Empty
   categories: [ HideSpawnMenu ]
   components:
@@ -103,22 +102,22 @@
     key: enum.StoreUiKey.Key
   - type: Tag
     tags:
-    - MercenaryUplink
+    - ExchangeUplink
 
 - type: entity
-  parent: BaseMercenaryUplinkRadio
-  id: BaseMercenaryUplinkRadioDebug
-  suffix: Mercenary, DEBUG
+  parent: BaseExchangeUplinkRadio
+  id: BaseExchangeUplinkRadioDebug
+  suffix: Exchange, DEBUG
   components:
   - type: Store
     balance:
-      MercCoin: 99999
+      ExchangeCoin: 99999
 
 - type: entity
-  parent: BaseMercenaryUplinkRadio
-  id: BaseMercenaryUplinkRadioEmptyTesting
-  suffix: Mercenary, Empty (Testing)
+  parent: BaseExchangeUplinkRadio
+  id: BaseExchangeUplinkRadioEmptyTesting
+  suffix: Exchange, Empty (Testing)
   components:
   - type: Store
     balance:
-      MercCoin: 0
+      ExchangeCoin: 0
