@@ -7,10 +7,10 @@
   components:
   - type: NFCoin
   - type: Sprite
-    sprite: _AS/Objects/Specific/Exchange/exchange_coin.rsi
-    state: exchange_coin
+    sprite: _AS/Objects/Specific/Mercenary/merc_coin.rsi
+    state: merc_coin
   - type: Item
-    sprite: _AS/Objects/Specific/Exchange/exchange_coin.rsi
+    sprite: _AS/Objects/Specific/Mercenary/merc_coin.rsi
     size: Tiny
   - type: Stack
     count: 20
