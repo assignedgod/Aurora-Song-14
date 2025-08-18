@@ -83,3 +83,24 @@
   - type: ContainerContainer
     containers:
       board: !type:Container
+
+- type: entity
+  parent: SyndicateComputerComms
+  id: ExfilCommsComputer
+  name: exfiltrator communications computer
+  description: A computer capable of remotely hacking into the station's communications systems. Using this to make an announcement will alert the system to your presence.
+  components:
+  - type: AccessReader
+    access: [[ "NuclearOperative" ]]
+  - type: CommunicationsConsole
+    title: comms-console-announcement-title-exfil
+    color: "#ff0000"
+    canShuttle: false
+    global: true #announce to everyone they're about to fuck shit up
+    announceSentBy: false # The title already says who they are.
+    sound: /Audio/Announcements/war.ogg
+  - type: Computer
+    board: SyndicateCommsComputerCircuitboard
+  - type: PointLight
+    radius: 1.5
+    energy: 1.6

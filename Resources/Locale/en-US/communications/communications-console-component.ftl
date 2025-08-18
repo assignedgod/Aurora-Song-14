@@ -30,3 +30,5 @@ comms-console-announcement-title-centcom = Colonial Command
 comms-console-announcement-title-nukie = Syndicate Nuclear Operative
 comms-console-announcement-title-station-ai = Station AI
 comms-console-announcement-title-wizard = Wizard
+# Aurora
+comms-console-announcement-title-exfil: Exfiltrator Operative
