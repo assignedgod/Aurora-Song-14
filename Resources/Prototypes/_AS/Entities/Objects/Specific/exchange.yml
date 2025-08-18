@@ -14,7 +14,7 @@
     size: Tiny
   - type: Stack
     count: 20
-    stackType: ExhangeCoin
+    stackType: ExchangeCoin
   - type: StaticPrice
     price: 0
   - type: StackPrice
