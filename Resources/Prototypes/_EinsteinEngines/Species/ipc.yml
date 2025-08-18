@@ -48,7 +48,6 @@
 
 - type: markingPoints
   id: MobIPCMarkingLimits
-  onlyWhitelisted: true
   points:
     Hair:
       points: 1 # DeltaV - Fixes hair not displaying

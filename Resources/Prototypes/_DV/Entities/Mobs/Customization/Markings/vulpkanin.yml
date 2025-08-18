@@ -645,7 +645,7 @@
 - type: marking
   id: VulpHairAdhara
   bodyPart: Hair
-  speciesRestriction: [Vulpkanin]
+  speciesRestriction: [Vulpkanin, IPC]
   markingCategory: Hair
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/hair.rsi
@@ -654,7 +654,7 @@
 - type: marking
   id: VulpHairAnita
   bodyPart: Hair
-  speciesRestriction: [Vulpkanin]
+  speciesRestriction: [Vulpkanin, IPC]
   markingCategory: Hair
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/hair.rsi
@@ -663,7 +663,7 @@
 - type: marking
   id: VulpHairApollo
   bodyPart: Hair
-  speciesRestriction: [Vulpkanin]
+  speciesRestriction: [Vulpkanin, IPC]
   markingCategory: Hair
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/hair.rsi
@@ -672,7 +672,7 @@
 - type: marking
   id: VulpHairBelle
   bodyPart: Hair
-  speciesRestriction: [Vulpkanin]
+  speciesRestriction: [Vulpkanin, IPC]
   markingCategory: Hair
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/hair.rsi
@@ -682,7 +682,7 @@
   id: VulpHairBraided
   bodyPart: Hair
   markingCategory: Hair
-  speciesRestriction: [Vulpkanin]
+  speciesRestriction: [Vulpkanin, IPC]
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/hair.rsi
       state: braided
@@ -691,7 +691,7 @@
   id: VulpHairBun
   bodyPart: Hair
   markingCategory: Hair
-  speciesRestriction: [Vulpkanin]
+  speciesRestriction: [Vulpkanin, IPC]
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/hair.rsi
       state: bun
@@ -700,7 +700,7 @@
   id: VulpHairCleanCut
   bodyPart: Hair
   markingCategory: Hair
-  speciesRestriction: [Vulpkanin]
+  speciesRestriction: [Vulpkanin, IPC]
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/hair.rsi
       state: clean_cut
@@ -709,7 +709,7 @@
   id: VulpHairCurl
   bodyPart: Hair
   markingCategory: Hair
-  speciesRestriction: [Vulpkanin]
+  speciesRestriction: [Vulpkanin, IPC]
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/hair.rsi
       state: curl
@@ -718,7 +718,7 @@
   id: VulpHairHawk
   bodyPart: Hair
   markingCategory: Hair
-  speciesRestriction: [Vulpkanin]
+  speciesRestriction: [Vulpkanin, IPC]
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/hair.rsi
       state: hawk
@@ -727,7 +727,7 @@
   id: VulpHairJagged
   bodyPart: Hair
   markingCategory: Hair
-  speciesRestriction: [Vulpkanin]
+  speciesRestriction: [Vulpkanin, IPC]
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/hair.rsi
       state: jagged
@@ -736,7 +736,7 @@
   id: VulpHairJeremy
   bodyPart: Hair
   markingCategory: Hair
-  speciesRestriction: [Vulpkanin]
+  speciesRestriction: [Vulpkanin, IPC]
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/hair.rsi
       state: jeremy
@@ -745,7 +745,7 @@
   id: VulpHairKajam
   bodyPart: Hair
   markingCategory: Hair
-  speciesRestriction: [Vulpkanin]
+  speciesRestriction: [Vulpkanin, IPC]
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/hair.rsi
       state: kajam
@@ -754,7 +754,7 @@
   id: VulpHairKeid
   bodyPart: Hair
   markingCategory: Hair
-  speciesRestriction: [Vulpkanin]
+  speciesRestriction: [Vulpkanin, IPC]
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/hair.rsi
       state: keid
@@ -763,7 +763,7 @@
   id: VulpHairKleeia
   bodyPart: Hair
   markingCategory: Hair
-  speciesRestriction: [Vulpkanin]
+  speciesRestriction: [Vulpkanin, IPC]
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/hair.rsi
       state: kleeia
@@ -772,7 +772,7 @@
   id: VulpHairMizar
   bodyPart: Hair
   markingCategory: Hair
-  speciesRestriction: [Vulpkanin]
+  speciesRestriction: [Vulpkanin, IPC]
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/hair.rsi
       state: mizar
@@ -781,7 +781,7 @@
   id: VulpHairPunkBraided
   bodyPart: Hair
   markingCategory: Hair
-  speciesRestriction: [Vulpkanin]
+  speciesRestriction: [Vulpkanin, IPC]
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/hair.rsi
       state: punkbraided
@@ -790,7 +790,7 @@
   id: VulpHairRaine
   bodyPart: Hair
   markingCategory: Hair
-  speciesRestriction: [Vulpkanin]
+  speciesRestriction: [Vulpkanin, IPC]
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/hair.rsi
       state: raine
@@ -799,7 +799,7 @@
   id: VulpHairRough
   bodyPart: Hair
   markingCategory: Hair
-  speciesRestriction: [Vulpkanin]
+  speciesRestriction: [Vulpkanin, IPC]
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/hair.rsi
       state: rough
@@ -808,7 +808,7 @@
   id: VulpHairShort
   bodyPart: Hair
   markingCategory: Hair
-  speciesRestriction: [Vulpkanin]
+  speciesRestriction: [Vulpkanin, IPC]
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/hair.rsi
       state: short
@@ -817,7 +817,7 @@
   id: VulpHairShort2
   bodyPart: Hair
   markingCategory: Hair
-  speciesRestriction: [Vulpkanin]
+  speciesRestriction: [Vulpkanin, IPC]
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/hair.rsi
       state: short2
@@ -826,7 +826,7 @@
   id: VulpHairSpike
   bodyPart: Hair
   markingCategory: Hair
-  speciesRestriction: [Vulpkanin]
+  speciesRestriction: [Vulpkanin, IPC]
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/hair.rsi
       state: spike
@@ -836,7 +836,7 @@
   id: VulpFacialHairRuff
   bodyPart: FacialHair
   markingCategory: FacialHair
-  speciesRestriction: [Vulpkanin]
+  speciesRestriction: [Vulpkanin, IPC]
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/facial_hair.rsi
       state: ruff
@@ -845,7 +845,7 @@
   id: VulpFacialHairElder
   bodyPart: FacialHair
   markingCategory: FacialHair
-  speciesRestriction: [Vulpkanin]
+  speciesRestriction: [Vulpkanin, IPC]
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/facial_hair.rsi
       state: elder
@@ -854,7 +854,7 @@
   id: VulpFacialHairElderChin
   bodyPart: FacialHair
   markingCategory: FacialHair
-  speciesRestriction: [Vulpkanin]
+  speciesRestriction: [Vulpkanin, IPC]
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/facial_hair.rsi
       state: elder_chin
@@ -863,7 +863,7 @@
   id: VulpFacialHairKita
   bodyPart: FacialHair
   markingCategory: FacialHair
-  speciesRestriction: [Vulpkanin]
+  speciesRestriction: [Vulpkanin, IPC]
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/facial_hair.rsi
       state: kita
