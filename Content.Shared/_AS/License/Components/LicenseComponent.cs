@@ -12,7 +12,7 @@ public sealed partial class LicenseComponent : Component
     public LocId OwnerLoc = "license-name-owner";
 
     [DataField]
-    public string? LicenseName;
+    public string LicenseName = string.Empty;
 
     [DataField]
     public string? OwnerName;
