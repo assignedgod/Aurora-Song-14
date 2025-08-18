@@ -15,3 +15,21 @@
     - MercCoin
     balance:
       MercCoin: 0
+
+- type: entity
+  id: StorePresetExchangeUplink
+  abstract: true
+  components:
+  - type: Store
+    name: store-preset-name-exchange-uplink
+    categories:
+    - UplinkExchangeHardsuits
+    - UplinkExchangeWeapons
+    - UplinkExchangeAmmo
+    - UplinkExchangeUtility
+    - UplinkExchangeExplosives
+    - UplinkExchangeBundles
+    currencyWhitelist:
+    - ExchangeCoin
+    balance:
+      ExchangeCoin: 0
