@@ -59,7 +59,7 @@
     denyState: deny-unshaded
   #   screenState: screen
   - type: Sprite
-    sprite: _AS/Structures/Machines/VendingMachines/mercvend.rsi
+    sprite: _AS/Structures/Machines/VendingMachines/exchangevend.rsi
     layers:
     - state: "off"
       map: ["enum.VendingMachineVisualLayers.Base"]
