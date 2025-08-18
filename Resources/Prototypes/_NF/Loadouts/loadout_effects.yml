@@ -15,6 +15,7 @@
     - SlimePerson
     - Vox
     - Sheleg # Different meds
+    - IPC
     inverted: true
 
 - type: loadoutEffectGroup

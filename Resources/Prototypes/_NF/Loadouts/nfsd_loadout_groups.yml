@@ -89,6 +89,7 @@
   - NfsdBoxSurvivalNfsdOxygen
   - NfsdBoxSurvivalNfsdNitrogen
   - NfsdBoxSurvivalNfsdSheleg
+  - EmergencyIPCBox
   fallbacks:
   - NfsdBoxSurvivalNfsdOxygen
   - NfsdBoxSurvivalNfsdNitrogen
