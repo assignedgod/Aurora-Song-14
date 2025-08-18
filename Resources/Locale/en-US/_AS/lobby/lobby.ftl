@@ -15,3 +15,10 @@ aurora-lobby-sle-description = The SLEO is the center of operations for the sect
    - Apply for a various licenses
    - Do contraband trade-ins or registrations
    - Report crimes
+
+aurora-lobby-exfiltrators-subtext = Syndicate operators working to undermine NT and make the sector feel less safe.
+aurora-lobby-exfiltrators-description = A small cell of specialised Syndicate Operators, possibly even being mind controlled. Here you can:
+  - Serve Syndicate interests
+  - Lead a Cell of operatives in espionage actions
+  - Damage NanoTransen's public image
+ The roles on this station are whitelist-only and require an application in the discord to be accepted.

@@ -101,7 +101,7 @@
   abstract: true # Frontier
   id: Xenoborg
   name: chat-radio-xenoborg
-  keycode: 'x'
+  keycode: 'j' #Aurora: Change to J as this goes unused
   frequency: 2002
   color: "#2288ff"
   # long range since I don't wanna make a special xenoborg telecomm server
