@@ -174,7 +174,7 @@
       - Hands # prevent mouse buying grenade penguin since its not telepathic
   - type: Store
     balance:
-      Telecrystal: 0
+      Telecrystal: 10 #Aurora: This is only used for exfiltrators, so 0>10
   - type: UserInterface
     interfaces:
       enum.StoreUiKey.Key:

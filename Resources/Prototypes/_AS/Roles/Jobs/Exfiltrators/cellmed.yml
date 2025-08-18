@@ -13,6 +13,7 @@
   startingGear: CellMedGear
   alwaysUseSpawner: true
   requireAdminNotify: false
+  icon: "JobIconSyndicate"
   supervisors: job-supervisors-cellcomm
   weight: 180
   displayWeight: 55 # Second from the top
@@ -20,7 +21,11 @@
   access:
   - SyndicateAgent
   - NuclearOperative
+  accessGroups:
+  - GeneralAccess
   special:
+  - !type:AddImplantSpecial
+    implants: [ DeathRattleExfilImplant, UplinkImplant ]
   - !type:AddComponentSpecial
     components:
     - type: MailDisabled
@@ -28,7 +33,7 @@
       recordGeneration: FalseRecord
     - type: NpcFactionMember
       factions:
-      - ExfiltratorsNF
+      - Exfiltrators
   - !type:GiveItemOnHolidaySpecial
     holiday: FrontierBirthday
     prototype: FrontierBirthdayGift
@@ -41,6 +46,5 @@
     ears: ClothingHeadsetExfiltrator
   storage:
     back:
-    - BaseUplinkRadio10TC
     - NFMagazineHighCapacityPistol35
     - NFMagazineHighCapacityPistol35

@@ -83,8 +83,9 @@
   - MercenariesExpeditionNF
   - SiliconsExpeditionNF
   - AberrantFleshExpeditionNF
-  - ContrabandClothing
+  #- ContrabandClothing
   - ContrabandDetection
+  - Exfiltrators # Aurora
 
 - type: npcFaction
   id: WizFedFaction
@@ -118,6 +119,7 @@
   - AberrantFleshExpeditionNF
   - ContrabandClothing
   - ContrabandDetection
+  - Exfiltrators # Aurora
 
 - type: npcFaction
   id: BloodCultNF
@@ -151,6 +153,7 @@
   - AberrantFleshExpeditionNF
   - ContrabandClothing
   - ContrabandDetection
+  - Exfiltrators # Aurora
 
 - type: npcFaction
   id: NFPirate
@@ -184,6 +187,7 @@
   - AberrantFleshExpeditionNF
   # - ContrabandClothing
   - ContrabandDetection
+  - Exfiltrators # Aurora
 
 - type: npcFaction
   id: ArtifactConstruct
@@ -217,6 +221,8 @@
   - AberrantFleshExpeditionNF
   - ContrabandClothing
   - ContrabandDetection
+  - Exfiltrators # Aurora
+
 
 - type: npcFaction
   id: StreetGangNF
@@ -250,6 +256,8 @@
   - AberrantFleshExpeditionNF
   - ContrabandClothing
   - ContrabandDetection
+  - Exfiltrators # Aurora
+
 
 - type: npcFaction
   id: DinosaursNF
@@ -283,6 +291,8 @@
   - AberrantFleshExpeditionNF
   - ContrabandClothing
   - ContrabandDetection
+  - Exfiltrators # Aurora
+
 
 - type: npcFaction
   id: ExplorersExpeditionNF
@@ -316,6 +326,8 @@
   - AberrantFleshExpeditionNF
   - ContrabandClothing
   - ContrabandDetection
+  - Exfiltrators # Aurora
+
 
 - type: npcFaction
   id: MercenariesExpeditionNF
@@ -349,6 +361,8 @@
   - AberrantFleshExpeditionNF
   - ContrabandClothing
   - ContrabandDetection
+  - Exfiltrators # Aurora
+
 
 - type: npcFaction
   id: SiliconsExpeditionNF
@@ -382,6 +396,8 @@
   - AberrantFleshExpeditionNF
   - ContrabandClothing
   - ContrabandDetection
+  - Exfiltrators # Aurora
+
 
 - type: npcFaction
   id: AberrantFleshExpeditionNF
@@ -415,6 +431,8 @@
   #- AberrantFleshExpeditionNF
   - ContrabandClothing
   - ContrabandDetection
+  - Exfiltrators # Aurora
+
 
 - type: npcFaction
   id: ContrabandClothing
@@ -490,3 +508,4 @@
   - AberrantFleshExpeditionNF
   - ContrabandClothing
   - ContrabandDetection
+  - Exfiltrators # Aurora

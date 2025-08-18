@@ -36,10 +36,10 @@
   parent: BasePDA
   id: CellCommPDA
   name: Cell-Commander PDA
-  description: This PDA smells like... Warcrimes.
+  description: This PDA smells like... Operation Efficiency.
   components:
   - type: Pda
-    id: CellCommanderNFIDCard
+    id: CellCommanderASIDCard
   - type: Appearance
     appearanceDataInit:
       enum.PdaVisuals.PdaType:

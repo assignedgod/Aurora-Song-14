@@ -14,13 +14,18 @@
   alwaysUseSpawner: true
   requireAdminNotify: false
   supervisors: job-supervisors-cellcomm
+  icon: "JobIconSyndicate"
   weight: 170
   displayWeight: 55 # Second from the top
   canBeAntag: true
   access:
   - SyndicateAgent
   - NuclearOperative
+  accessGroups:
+  - GeneralAccess
   special:
+  - !type:AddImplantSpecial
+    implants: [ DeathRattleExfilImplant, UplinkImplant ]
   - !type:AddComponentSpecial
     components:
     - type: MailDisabled
@@ -28,7 +33,7 @@
       recordGeneration: FalseRecord
     - type: NpcFactionMember
       factions:
-      - ExfiltratorsNF
+      - Exfiltrators
   - !type:GiveItemOnHolidaySpecial
     holiday: FrontierBirthday
     prototype: FrontierBirthdayGift
@@ -41,6 +46,6 @@
     ears: ClothingHeadsetExfiltrator
   storage:
     back:
-    - BaseUplinkRadio10TC
+    - UplinkImplant
     - NFMagazineHighCapacityPistol35
     - NFMagazineHighCapacityPistol35

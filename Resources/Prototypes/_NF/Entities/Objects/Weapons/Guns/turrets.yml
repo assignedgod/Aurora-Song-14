@@ -175,7 +175,7 @@
     fireCost: 10
   - type: NpcFactionMember
     factions:
-    - NFSyndicate
+    - Syndicate
 
 - type: entity
   id: WeaponTurretLaserHostileNF

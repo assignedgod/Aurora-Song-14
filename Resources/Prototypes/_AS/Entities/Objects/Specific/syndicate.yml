@@ -6,3 +6,15 @@
   - type: Store
     balance:
       Telecrystal: 10
+
+- type: entity
+  parent: BaseSubdermalImplant
+  id: RadioImplantExfiltrator
+  name: Exfiltrator radio implant
+  description: This implant grants access to the Exfiltrator channel without a headset.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: SubdermalImplant
+  - type: RadioImplant
+    radioChannels:
+    - Exfiltrator

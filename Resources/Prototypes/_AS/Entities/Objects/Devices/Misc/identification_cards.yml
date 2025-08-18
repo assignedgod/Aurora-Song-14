@@ -36,7 +36,7 @@
 
 - type: entity
   parent: SyndicateIDCard
-  id: CellCommanderNFIDCard
+  id: CellCommanderASIDCard
   name: Cell Commander ID card
   description: You know what you're doing, or do you.
   components:

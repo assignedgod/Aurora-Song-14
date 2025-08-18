@@ -25,8 +25,8 @@
       - type: StationNameSetup
         mapNameTemplate: Voidpost Delta
       - type: ExtraStationInformation
-        stationSubtext: 'frontier-lobby-exfiltrators-subtext'
-        stationDescription: 'frontier-lobby-exfiltrators-description'
+        stationSubtext: 'aurora-lobby-exfiltrators-subtext'
+        stationDescription: 'aurora-lobby-exfiltrators-description'
         lobbySortOrder: 4
       - type: StationJobs
         availableJobs:

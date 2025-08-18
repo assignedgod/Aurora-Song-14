@@ -21,6 +21,8 @@
     - AberrantFleshExpeditionNF # Frontier
     - ContrabandClothing # Frontier
     - ContrabandDetection # Frontier
+    - Exfiltrators # Aurora
+
 
 - type: npcFaction
   id: NanoTrasen
@@ -46,6 +48,7 @@
   - SiliconsExpeditionNF # Frontier
   - AberrantFleshExpeditionNF # Frontier
   - ContrabandClothing # Frontier
+  - Exfiltrators # Aurora
 
 - type: npcFaction
   id: Mouse
@@ -96,6 +99,7 @@
   - AberrantFleshExpeditionNF # Frontier
   - ContrabandClothing # Frontier
   - ContrabandDetection # Frontier
+  - Exfiltrators # Aurora
 
 - type: npcFaction
   id: SimpleNeutral
@@ -104,6 +108,7 @@
   id: Syndicate
   friendly: # Frontier
   - NFSyndicate # Frontier
+  - Exfiltrators # Aurora
   hostile:
   - NanoTrasen
   - SimpleHostile
@@ -124,7 +129,7 @@
   - MercenariesExpeditionNF # Frontier
   - SiliconsExpeditionNF # Frontier
   - AberrantFleshExpeditionNF # Frontier
-  - ContrabandClothing # Frontier
+#  - ContrabandClothing # Frontier
   - ContrabandDetection # Frontier
 
 - type: npcFaction
@@ -153,6 +158,7 @@
   - AberrantFleshExpeditionNF # Frontier
   - ContrabandClothing # Frontier
   - ContrabandDetection # Frontier
+  - Exfiltrators # Aurora
 
 - type: npcFaction
   id: Zombie
@@ -181,6 +187,7 @@
   - AberrantFleshExpeditionNF # Frontier
   - ContrabandClothing # Frontier
   - ContrabandDetection # Frontier
+  - Exfiltrators # Aurora
 
 - type: npcFaction
   id: Revolutionary
@@ -204,6 +211,7 @@
   - AberrantFleshExpeditionNF # Frontier
   - ContrabandClothing # Frontier
   - ContrabandDetection # Frontier
+  - Exfiltrators # Aurora
 
 - type: npcFaction
   id: AllHostile # Frontier: use HostileUniversally
@@ -221,6 +229,7 @@
   - Revolutionary
   - Wizard
   - Xenoborg
+  - Exfiltrators # Aurora
 
 - type: npcFaction
   id: Wizard
@@ -251,6 +260,7 @@
   - AberrantFleshExpeditionNF # Frontier
   - ContrabandClothing # Frontier
   - ContrabandDetection # Frontier
+  - Exfiltrators # Aurora
 
 - type: npcFaction
   id: Xenoborg
@@ -265,7 +275,7 @@
   - Xeno # rivalry
 
   # cause they are hostile to them
-  - SimpleHostile 
+  - SimpleHostile
   - AllHostile
   - WizFedFaction # Frontier
   - BloodCultNF # Frontier
@@ -279,3 +289,4 @@
   - AberrantFleshExpeditionNF # Frontier
   - ContrabandClothing # Frontier
   - ContrabandDetection # Frontier
+  - Exfiltrators # Aurora
