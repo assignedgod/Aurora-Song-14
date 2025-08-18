@@ -39,6 +39,8 @@ using Direction = Robust.Shared.Maths.Direction;
 
 namespace Content.Client.Lobby.UI
 {
+
+    // This place is hell.
     [GenerateTypedNameReferences]
     public sealed partial class HumanoidProfileEditor : BoxContainer
     {
@@ -59,7 +61,9 @@ namespace Content.Client.Lobby.UI
         private bool _allowFlavorText;
 
         private FlavorText.FlavorText? _flavorText;
-        private TextEdit? _flavorTextEdit;
+        private TextEdit? _flavorSfwTextEdit;
+        private TextEdit? _flavorNsfwTextEdit;
+        private TextEdit? _characterConsent;
 
         // One at a time.
         private LoadoutWindow? _loadoutWindow;
@@ -503,12 +507,18 @@ namespace Content.Client.Lobby.UI
                 if (_flavorText != null)
                     return;
 
-                _flavorText = new FlavorText.FlavorText();
-                TabContainer.AddChild(_flavorText);
-                TabContainer.SetTabTitle(TabContainer.ChildCount - 1, Loc.GetString("humanoid-profile-editor-flavortext-tab"));
-                _flavorTextEdit = _flavorText.CFlavorTextInput;
+                _flavorText = new();
 
-                _flavorText.OnFlavorTextChanged += OnFlavorTextChange;
+                _flavorText.OnSfwFlavorTextChanged += OnSfwFlavorTextChange;
+                _flavorText.OnNsfwFlavorTextChanged += OnNsfwFlavorTextChange;
+                _flavorText.OnCharacterConsentChanged += OnCharacterConsentChange;
+
+                _flavorSfwTextEdit = _flavorText.CFlavorTextSFWInput;
+                _flavorNsfwTextEdit = _flavorText.CFlavorTextNSFWInput;
+                _characterConsent = _flavorText.CFlavorTextConsentInput;
+
+                TabContainer.AddChild(_flavorText);
+                TabContainer.SetTabTitle(4, Loc.GetString("humanoid-profile-editor-flavortext-tab"));
             }
             else
             {
@@ -516,11 +526,21 @@ namespace Content.Client.Lobby.UI
                     return;
 
                 TabContainer.RemoveChild(_flavorText);
-                _flavorText.OnFlavorTextChanged -= OnFlavorTextChange;
+
+                _flavorText.OnSfwFlavorTextChanged -= OnSfwFlavorTextChange;
+                _flavorText.OnNsfwFlavorTextChanged -= OnNsfwFlavorTextChange;
+                _flavorText.OnCharacterConsentChanged -= OnCharacterConsentChange;
+
                 _flavorText.Dispose();
-                _flavorTextEdit?.Dispose();
-                _flavorTextEdit = null;
+
+                _flavorSfwTextEdit?.Dispose();
+                _flavorNsfwTextEdit?.Dispose();
+                _characterConsent?.Dispose();
+
                 _flavorText = null;
+                _flavorSfwTextEdit = null;
+                _flavorNsfwTextEdit = null;
+                _characterConsent = null;
             }
         }
 
@@ -1109,12 +1129,30 @@ namespace Content.Client.Lobby.UI
             UpdateJobPriorities();
         }
 
-        private void OnFlavorTextChange(string content)
+        private void OnSfwFlavorTextChange(string content)
         {
             if (Profile is null)
                 return;
 
             Profile = Profile.WithFlavorText(content);
+            SetDirty();
+        }
+
+        private void OnNsfwFlavorTextChange(string content)
+        {
+            if (Profile is null)
+                return;
+
+            Profile = Profile.WithNsfwFlavorText(content);
+            SetDirty();
+        }
+
+        private void OnCharacterConsentChange(string content)
+        {
+            if (Profile is null)
+                return;
+
+            Profile = Profile.WithCharacterConsent(content);
             SetDirty();
         }
 
@@ -1346,10 +1384,14 @@ namespace Content.Client.Lobby.UI
 
         private void UpdateFlavorTextEdit()
         {
-            if (_flavorTextEdit != null)
-            {
-                _flavorTextEdit.TextRope = new Rope.Leaf(Profile?.FlavorText ?? "");
-            }
+            if (_flavorSfwTextEdit != null)
+                _flavorSfwTextEdit.TextRope = new Rope.Leaf(Profile?.FlavorText ?? "");
+
+            if (_flavorNsfwTextEdit != null)
+                _flavorNsfwTextEdit.TextRope = new Rope.Leaf(Profile?.NsfwFlavorText ?? "");
+
+            if (_characterConsent != null)
+                _characterConsent.TextRope = new Rope.Leaf(Profile?.CharacterConsent ?? "");
         }
 
         private void UpdateAgeEdit()

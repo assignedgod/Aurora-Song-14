@@ -236,8 +236,8 @@ public sealed partial class ZombieSystem
         _npc.SleepNPC(target, htn);
 
         //He's gotta have a mind
-        var hasMind = _mind.TryGetMind(target, out var mindId, out var mind);
-        if (hasMind && mind != null && _player.TryGetSessionById(mind.UserId, out var session))
+        var hasMind = _mind.TryGetMind(target, out var mindId, out _);
+        if (hasMind && _mind.TryGetSession(mindId, out var session))
         {
             //Zombie role for player manifest
             _role.MindAddRole(mindId, "MindRoleZombie", mind: null, silent: true);

@@ -52,9 +52,9 @@
   - type: Gun
     minAngle: 2
     maxAngle: 10
-    angleIncrease: 0.9
-    angleDecay: 3.2
-    fireRate: 2.7
+    angleIncrease: 1
+    angleDecay: 3.5
+    fireRate: 3
   - type: NFWeaponDetails
     manufacturer: weapon-details-manufacturer-steelbolt-tool-forge
 

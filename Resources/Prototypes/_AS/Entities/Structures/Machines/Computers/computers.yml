@@ -52,3 +52,34 @@
     containers:
       board: !type:Container
       LicenseConsole-holderId: !type:ContainerSlot
+
+- type: entity
+  parent: [BaseStructureIndestructible, BaseComputerAiAccess] # Frontier: added BaseStructureIndestructible
+  id: ComputerScuOutput
+  name: SCU Output Terminal
+  description: Terminal for receiving SCUs for contraband turn-ins.
+  components:
+  - type: ScuOutput
+  - type: Speech
+    speechVerb: Robotic
+    speechSounds: Pai
+  - type: Sprite
+    layers:
+    - map: ["computerLayerBody"]
+      state: computer
+    - map: ["computerLayerKeyboard"]
+      state: generic_keyboard
+    - map: ["computerLayerScreen"]
+      state: id
+    - map: ["computerLayerKeys"]
+      state: id_key
+    - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
+      state: generic_panel_open
+  - type: Computer
+  - type: PointLight
+    radius: 1.5
+    energy: 1.6
+    color: "#3c5eb5"
+  - type: ContainerContainer
+    containers:
+      board: !type:Container
