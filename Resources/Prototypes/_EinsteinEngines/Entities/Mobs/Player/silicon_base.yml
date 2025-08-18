@@ -23,7 +23,7 @@
       soundHit:
         path: /Audio/Effects/hit_kick.ogg
     - type: Damageable
-      damageContainer: Silicon
+      damageContainer: HumanoidSilicon # DeltaV - change from Silicon
       damageModifierSet: IPC
     - type: InteractionOutline
     - type: MovementSpeedModifier
@@ -72,7 +72,7 @@
           Cold: 0.1 #per second, scales with temperature & other constants
       heatDamage:
         types:
-          Heat: 3 #per second, scales with temperature & other constants
+          Heat: 2 # DeltaV - was 3
       atmosTemperatureTransferEfficiency: 0.05
     - type: Deathgasp
       prototype: SiliconDeathgasp

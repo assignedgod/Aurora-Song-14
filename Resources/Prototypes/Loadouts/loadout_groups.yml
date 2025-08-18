@@ -80,6 +80,7 @@
   - EmergencyOxygen
   - LoadoutSpeciesVoxNitrogen
   - EmergencyWaterVapor # DeltaV
+  - EmergencyIPCBox # DeltaV
 
 # nitrogen or oxygen tank, depending on what your species needs
 - type: loadoutGroup
