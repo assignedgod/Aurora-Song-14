@@ -1,5 +1,4 @@
 ﻿- type: entity
-  parent: Oilpack
   id: OmniPatch
   suffix: Full
   name: omni patch
