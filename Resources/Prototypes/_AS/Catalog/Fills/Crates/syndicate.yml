@@ -23,7 +23,7 @@
 - type: entity
   id: CrateSyndicateLockedHardsuitFilled
   suffix: Filled, Hardsuit
-  parent: CrateSyndicateLocked
+  parent: [ C2ContrabandUnregistered, CrateSyndicateLocked ]
   components:
   - type: EntityTableContainerFill
     containers:
