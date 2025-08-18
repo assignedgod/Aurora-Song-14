@@ -13,7 +13,7 @@ public sealed partial class ContrabandPalletConsoleComponent : Component
     public string RewardType = "FrontierUplinkCoin";
 
     [DataField]
-    public EntProtoId RewardCashPrototype = "SpaceCash5000";
+    public EntProtoId RewardCashPrototype = "ExchangeCoin"; // SpaceCash5000 > ExchangeCoin | switched from cash to ExchangeCoin as economy experiment - Aurora
 
     [DataField]
     public ProtoId<AccessLevelPrototype> AccessRequired = "Bailiff";
