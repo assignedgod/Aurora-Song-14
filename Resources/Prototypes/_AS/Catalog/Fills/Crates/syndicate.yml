@@ -23,7 +23,7 @@
 - type: entity
   id: CrateSyndicateLockedHardsuitFilled
   suffix: Filled, Hardsuit
-  parent: CrateSyndicateLocked
+  parent: [ CrateSyndicateLocked, C2ContrabandUnregistered ]
   components:
   - type: EntityTableContainerFill
     containers:
@@ -36,7 +36,7 @@
 - type: entity
   id: CrateSyndicateLockedEliteHardsuitFilled
   suffix: Filled, Elite Hardsuit
-  parent: CrateSyndicateLocked
+  parent: [ CrateSyndicateLocked, BaseC3SyndicateContraband ]
   components:
   - type: EntityTableContainerFill
     containers:
@@ -49,7 +49,7 @@
 - type: entity
   id: CrateSyndicateLockedJuggernautHardsuitFilled
   suffix: Filled, Juggernaut Hardsuit
-  parent: CrateSyndicateLocked
+  parent: [ CrateSyndicateLocked, BaseC3SyndicateContraband ]
   components:
   - type: EntityTableContainerFill
     containers:
