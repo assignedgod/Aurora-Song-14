@@ -5,7 +5,7 @@
   description: uplink-exchange-debranded-hardsuit-desc
   productEntity: ClothingOuterHardsuitShanlinUnpainted
   cost:
-    ExchangeCoin: 20
+    ExchangeCoin: 30
   categories:
   - UplinkExchangeHardsuits
   conditions:
@@ -20,7 +20,7 @@
   description: uplink-exchange-debranded-elite-hardsuit-desc
   productEntity: ClothingOuterHardsuitShiweiUnpainted
   cost:
-    ExchangeCoin: 25
+    ExchangeCoin: 50
   categories:
   - UplinkExchangeHardsuits
   conditions:

@@ -1,0 +1,24 @@
+- type: entity
+  name: blood-red hardsuit crate spawner
+  id: SpawnDungeonLootHardsuitCrateSyndicate
+  parent: MarkerBasePlaceFree
+  suffix: "Dungeon, Syndicate"
+  components:
+  - type: Sprite
+    layers:
+      - state: green
+        scale: 0.7, 0.7
+      - sprite: _AS/Structures/Storage/Crates/syndicate_locked.rsi
+        state: icon
+      - sprite: _NF/Markers/general.rsi
+        state: questionmark
+        color: red
+  - type: RandomSpawner
+    prototypes:
+    - CrateSyndicateLockedHardsuitFilled
+    chance: 0.25
+    offset: 0.0
+    rarePrototypes:
+    - CrateSyndicateLockedEliteHardsuitFilled
+    - CrateSyndicateLockedJuggernautHardsuitFilled
+    rareChance: 0.1
