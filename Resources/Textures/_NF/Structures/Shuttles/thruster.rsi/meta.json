@@ -19,6 +19,10 @@
             "directions": 4
         },
         {
+            "name": "base_syndi",
+            "directions": 4
+        },
+        {
             "name": "base_sec",
             "directions": 4
         },

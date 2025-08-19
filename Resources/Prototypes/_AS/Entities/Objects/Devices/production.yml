@@ -9,3 +9,17 @@
       state: security
     - type: MachineBoard
       prototype: Synditechfab
+
+- type: entity
+  id: ThrusterSyndicateMachineCircuitboard
+  parent: BaseMachineCircuitboard
+  name: Syndicate thruster machine board
+  components:
+  - type: Sprite
+    state: security
+  - type: MachineBoard
+    prototype: ThrusterSyndicate
+    requirements:
+      Capacitor: 3
+    stackRequirements:
+      Steel: 5
