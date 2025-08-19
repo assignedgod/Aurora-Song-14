@@ -1,0 +1,13 @@
+﻿- type: entity
+  parent: UniformPrinterFlatpack
+  id: SyndiFabFlatpack
+  name: Syndicate Techfab flatpack
+  description: A flatpack used for constructing an syndicate techfab.
+  components:
+  - type: Flatpack
+    entity: Synditechfab
+  - type: StaticPrice
+    price: 250
+  - type: Item
+    shape:
+    - 0,0,1,1

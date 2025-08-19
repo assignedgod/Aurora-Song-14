@@ -73,7 +73,7 @@
   id: ExfilImplant
   name: uplink-syndieradioimplant-name
   description: uplink-syndieradioimplant-desc
-  icon: { sprite: Objects/Weapons/Guns/Ammunition/Explosives/explosives.rsi, state: blast }
+  icon: { sprite: /Textures/Objects/Devices/encryption_keys.rsi, state: synd_label}
   productEntity: RadioImplantExfiltrator
   discountCategory: veryRareDiscounts
   discountDownTo:
@@ -82,6 +82,26 @@
     Telecrystal: 2
   categories:
   - UplinkImplants
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - NukeOpsUplink
+      - ExfiltratorUplink
+
+- type: listing
+  id: SyndiFabFlatpack
+  name: uplink-exfilfab-name
+  description: uplink-exfilfab-desc
+  icon: { sprite: Objects/Misc/module.rsi, state: security }
+  productEntity: RadioImplantExfiltrator
+  discountCategory: veryRareDiscounts
+  discountDownTo:
+    Telecrystal: 12
+  cost:
+    Telecrystal: 12
+  categories:
+  - UplinkAmmo
   conditions:
   - !type:StoreWhitelistCondition
     whitelist:

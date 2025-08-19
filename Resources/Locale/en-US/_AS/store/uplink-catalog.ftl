@@ -102,3 +102,5 @@ uplink-syndieexplosives-desc = A refill of explosive ammunition for use in shipm
 uplink-syndieradioimplant-name = Exfiltrator Radio Implant
 uplink-syndieradioimplant-desc = You can never be too careful.
 
+uplink-exfilfab-name = Syndicate Techfab
+uplink-exfilfab-desc = A syndicate techfab for printing resupply for materials. Highly valuable. Don't lose it.
