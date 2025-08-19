@@ -42,14 +42,14 @@
     coefficient: 0.1
   - type: Flammable
     fireStackIncreaseMultiplier: 1.35 # until you light it up, cuz it's oily too
-  - type: NightVision
-    color: "#808080"
-    activateSound: null
-    deactivateSound: null
-  - type: Flashable
-    eyeDamageChance: 0.3
-    eyeDamage: 1
-    durationMultiplier: 1.5
+  # - type: NightVision Aurora's Song
+  #   color: "#808080"
+  #   activateSound: null
+  #   deactivateSound: null
+  # - type: Flashable
+  #   eyeDamageChance: 0.3
+  #   eyeDamage: 1
+  #   durationMultiplier: 1.5
   - type: MeleeWeapon
     soundHit:
       collection: Punch
@@ -83,27 +83,27 @@
       Unsexed: MaleFelinid
   - type: Felinid # real
   - type: NoShoesSilentFootsteps
-  - type: StepTriggerImmune
-    whitelist:
-      types:
-        - Shard
-        - Landmine
-        - Mousetrap
-        - SlipEntity
-  - type: LanguageKnowledge
-    speaks:
-    - TauCetiBasic
-    - SiikMaas
-    understands:
-    - TauCetiBasic
-    - SiikMaas
+  # - type: StepTriggerImmune Aurora's Song
+  #   whitelist:
+  #     types:
+  #       - Shard
+  #       - Landmine
+  #       - Mousetrap
+  #       - SlipEntity
+  # - type: LanguageKnowledge
+  #   speaks:
+  #   - TauCetiBasic
+  #   - SiikMaas
+  #   understands:
+  #   - TauCetiBasic
+  #   - SiikMaas
   - type: Tag
     tags:
     - CanPilot
     - FootstepSound
     - DoorBumpOpener
-    - FelinidEmotes
-  - type: FootPrints
+  # - FelinidEmotes Aurora's Song
+  # - type: FootPrints Aurora's Song
   - type: Temperature
     coldDamageThreshold: 248.15 # -25 degrees centigrade, like 12 degrees below normal
     currentTemperature: 311.76  # Body temperature of cat

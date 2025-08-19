@@ -16,7 +16,7 @@
   maleFirstNames: names_tajaran_first
   femaleFirstNames: names_tajaran_first
   lastNames: names_tajaran_last
-  
+
 
 - type: markingPoints
   id: MobTajaranMarkingLimits
@@ -38,29 +38,11 @@
     Chest:
       points: 1
       required: false
-    RightLeg:
-      points: 2
+    Arms:
+      points: 8 # Aurora: 4>8
       required: false
-    RightFoot:
-      points: 2
-      required: false
-    LeftLeg:
-      points: 2
-      required: false
-    LeftFoot:
-      points: 2
-      required: false
-    RightArm:
-      points: 2
-      required: false
-    RightHand:
-      points: 3
-      required: false
-    LeftArm:
-      points: 2
-      required: false
-    LeftHand:
-      points: 3
+    Legs:
+      points: 8 # Aurora: 4>8
       required: false
 
 - type: speciesBaseSprites
