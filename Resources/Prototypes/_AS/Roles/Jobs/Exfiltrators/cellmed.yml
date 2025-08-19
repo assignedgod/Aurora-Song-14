@@ -48,3 +48,13 @@
     back:
     - NFMagazineHighCapacityPistol35
     - NFMagazineHighCapacityPistol35
+
+
+- type: chameleonOutfit
+  id: CellMedicOutfit
+  name: job-name-cell-medic
+  startingGear: SyndicateOperativeMedicFull
+  icon: "JobIconSyndicate"
+  equipment:
+    head: ClothingHeadHelmetHardsuitSyndieMedic
+    neck: ClothingNeckScarfStripedLightBlue

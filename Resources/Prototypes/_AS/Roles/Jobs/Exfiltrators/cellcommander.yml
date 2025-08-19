@@ -48,3 +48,12 @@
     back:
     - NFMagazineHighCapacityPistol35
     - NFMagazineHighCapacityPistol35
+
+- type: chameleonOutfit
+  id: CellCommanderCommanderOutfit
+  name: job-name-cell-comm
+  startingGear: SyndicateCommanderGearFull
+  icon: "JobIconSyndicate"
+  equipment:
+    head: ClothingHeadHelmetHardsuitSyndieCommander
+    neck: ClothingNeckScarfStripedSyndieGreen

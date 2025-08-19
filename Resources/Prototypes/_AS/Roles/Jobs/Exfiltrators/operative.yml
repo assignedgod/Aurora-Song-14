@@ -49,3 +49,12 @@
     - UplinkImplant
     - NFMagazineHighCapacityPistol35
     - NFMagazineHighCapacityPistol35
+
+- type: chameleonOutfit
+  id: CellOperativeOutfit
+  name: job-name-cell-operative
+  startingGear: SyndicateOperativeGearFullNoUplink
+  icon: "JobIconSyndicate"
+  equipment:
+    head: ClothingHeadHelmetHardsuitSyndie
+    neck: ClothingNeckScarfStripedSyndieRed
