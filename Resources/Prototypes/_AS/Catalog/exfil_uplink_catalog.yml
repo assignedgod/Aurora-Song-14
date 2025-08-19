@@ -108,3 +108,6 @@
       tags:
       - NukeOpsUplink
       - ExfiltratorUplink
+  - !type:BuyerJobCondition
+    whitelist:
+      - CellCommander
