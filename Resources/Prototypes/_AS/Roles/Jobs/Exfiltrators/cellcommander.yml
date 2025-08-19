@@ -51,6 +51,7 @@
 
 - type: chameleonOutfit
   id: CellCommanderCommanderOutfit
+  job: CellCommander
   name: job-name-cell-comm
   startingGear: SyndicateCommanderGearFull
   icon: "JobIconSyndicate"

@@ -52,6 +52,7 @@
 
 - type: chameleonOutfit
   id: CellMedicOutfit
+  job: CellMedic
   name: job-name-cell-medic
   startingGear: SyndicateOperativeMedicFull
   icon: "JobIconSyndicate"

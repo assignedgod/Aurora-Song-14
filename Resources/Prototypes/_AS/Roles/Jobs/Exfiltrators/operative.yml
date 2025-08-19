@@ -52,6 +52,7 @@
 
 - type: chameleonOutfit
   id: CellOperativeOutfit
+  job: CellOperative
   name: job-name-cell-operative
   startingGear: SyndicateOperativeGearFullNoUplink
   icon: "JobIconSyndicate"
