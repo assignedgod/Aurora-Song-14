@@ -39,10 +39,9 @@
     - state: icon
     - state: icon-unshaded
       shader: unshaded
-    - state: light-overlay
-      visible: false
-      shader: unshaded
-      map: [ "light" ]
+  - type: PointLight
+    color: green
+    radius: 6
   - type: Clothing
     sprite: Clothing/Head/Hardsuits/syndicate-base.rsi
     clothingVisuals:
@@ -68,10 +67,9 @@
     - state: icon
     - state: icon-unshaded
       shader: unshaded
-    - state: light-overlay
-      visible: false
-      shader: unshaded
-      map: [ "light" ]
+  - type: PointLight
+    color: red
+    radius: 6
   - type: Clothing
     sprite: Clothing/Head/Hardsuits/syndicate-elite-base.rsi
     clothingVisuals:

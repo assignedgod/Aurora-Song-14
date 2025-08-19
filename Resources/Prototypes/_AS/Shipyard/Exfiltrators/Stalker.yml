@@ -1,0 +1,31 @@
+﻿- type: vessel
+  id: Stalker
+  parent: BaseVesselAntag
+  name: Stalker
+  description: A stealth vessel designed for exfiltration operations.
+  price: 85000
+  category: Medium
+  group: Custom
+  shuttlePath: /Maps/_NF/Shuttles/Syndicate/Stalker.yml
+  guidebookPage: Null
+  class:
+  - Syndicate #Give exfils their own shipyard
+  engine:
+  - Plasma
+
+- type: gameMap
+  id: Stalker
+  mapName: 'Stalker'
+  mapPath: /Maps/_NF/Shuttles/Syndicate/Stalker.yml
+  minPlayers: 0
+  stations:
+    Stalker:
+      stationProto: StandardFrontierAntagVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Stalker {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs: {}

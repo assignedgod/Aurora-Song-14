@@ -1,0 +1,31 @@
+﻿#Blood-red hardsuit
+- type: entity
+  id: SuitStorageSyndieCommander
+  parent: SuitStorageBase
+  suffix: Syndicate Hardsuit
+  components:
+  - type: StorageFill
+    contents:
+#        - id: NitrogenTankFilled
+#        - id: OxygenTankFilled
+        - id: NFTankO2N2EqualFilled # Frontier
+        - id: ClothingOuterHardsuitSyndieCommander
+        - id: ClothingShoesBootsMagSyndie
+        - id: ClothingMaskGasSyndicate
+        - id: JetpackBlackFilled # Frontier
+
+#Blood-red hardsuit
+- type: entity
+  id: SuitStorageSyndieMedic
+  parent: SuitStorageBase
+  suffix: Syndicate Hardsuit
+  components:
+  - type: StorageFill
+    contents:
+#        - id: NitrogenTankFilled
+#        - id: OxygenTankFilled
+        - id: NFTankO2N2EqualFilled # Frontier
+        - id: ClothingOuterHardsuitSyndieMedic
+        - id: ClothingShoesBootsMagSyndie
+        - id: ClothingMaskGasSyndicate
+        - id: JetpackBlackFilled # Frontier
