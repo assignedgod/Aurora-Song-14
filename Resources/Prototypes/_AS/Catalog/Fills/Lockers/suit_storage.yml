@@ -1,4 +1,4 @@
-
+﻿
 #EVA + blood-red mags and mask
 - type: entity
   id: SuitStorageEVASyndicateAdvanced
@@ -48,7 +48,7 @@
         - id: ClothingMaskPilot # Aurora
         - id: JetpackBlackFilled # Frontier
 
-﻿#Blood-red hardsuit, Commander
+#Blood-red hardsuit, Commander
 - type: entity
   id: SuitStorageSyndieCommander
   parent: SuitStorageBase
