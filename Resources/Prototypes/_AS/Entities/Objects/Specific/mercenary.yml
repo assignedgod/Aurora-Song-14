@@ -18,7 +18,7 @@
   - type: StaticPrice
     price: 0
   - type: StackPrice
-    price: 200
+    price: 800 # set to 800 to multiply by 1.25 to 1000 by the "High" cargo sales computers standard to main station/ trade spine
   - type: Currency
     price:
       MercCoin: 1

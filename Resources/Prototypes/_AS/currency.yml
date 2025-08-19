@@ -4,3 +4,10 @@
   cash:
     1: MercCoin1
   canWithdraw: true
+
+- type: currency
+  id: ExchangeCoin
+  displayName: store-currency-display-exchange-telecrystal
+  cash:
+    1: ExchangeCoin1
+  canWithdraw: true

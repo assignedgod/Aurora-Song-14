@@ -1,0 +1,13 @@
+- type: entity
+  parent: [ BaseStructureIndestructible, CrateBaseSecure, CrateSyndicate, BaseC3SyndicateContraband ] # Aurora - Syndicate Locked Crate
+  id: CrateSyndicateLocked
+  name: Syndicate crate
+  suffix: Locked
+  description: A dark steel crate with red bands and a letter S embossed on the front. It's locked.
+  components:
+  - type: Icon
+    sprite: _AS/Structures/Storage/Crates/syndicate_locked.rsi
+  - type: Sprite
+    sprite: _AS/Structures/Storage/Crates/syndicate_locked.rsi
+  - type: AccessReader
+    access: [["NuclearOperative"], ["SyndicateAgent"]]

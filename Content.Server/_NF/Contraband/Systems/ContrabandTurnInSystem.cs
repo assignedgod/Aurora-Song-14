@@ -248,7 +248,9 @@ public sealed partial class ContrabandTurnInSystem : SharedContrabandTurnInSyste
         var stackPrototype = _protoMan.Index<StackPrototype>(component.RewardType);
         var stackUid = _stack.Spawn(price, stackPrototype, _scuOutput.ToCoordinates()); // Aurora spawn on scu output
         _transform.SetLocalRotation(stackUid, Angle.Zero); // Orient these to grid north instead of map north
-        stackUid = SpawnAtPosition(component.RewardCashPrototype, args.Actor.ToCoordinates()); // Aurora: spawn cash
+
+        var rewardPrototype = _protoMan.Index<StackPrototype>(component.RewardCashPrototype); // Aurora: need EC prototype defined in scope
+        stackUid = _stack.Spawn(price, rewardPrototype, args.Actor.ToCoordinates()); // Aurora: spawn "cash" (now EC)
         if (!_hands.TryPickupAnyHand(args.Actor, stackUid))
             _transform.SetLocalRotation(stackUid, Angle.Zero); // Orient these to grid north instead of map north
         UpdatePalletConsoleInterface(uid, component);

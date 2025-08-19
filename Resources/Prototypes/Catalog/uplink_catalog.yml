@@ -893,9 +893,9 @@
   productEntity: AccessBreaker
   discountCategory: rareDiscounts
   discountDownTo:
-    Telecrystal: 2
+    Telecrystal: 3
   cost:
-    Telecrystal: 4
+    Telecrystal: 5 # Aurora - make unable to be acquired from one vendor
   categories:
   - UplinkDisruption
 
