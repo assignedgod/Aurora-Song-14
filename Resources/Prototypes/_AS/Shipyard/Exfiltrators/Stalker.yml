@@ -16,7 +16,7 @@
 - type: gameMap
   id: Stalker
   mapName: 'Stalker'
-  mapPath: /Maps/_NF/Shuttles/Syndicate/Stalker.yml
+  mapPath: /Maps/_AS/Shuttles/Exfiltrators/Stalker.yml
   minPlayers: 0
   stations:
     Stalker:

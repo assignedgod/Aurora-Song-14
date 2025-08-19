@@ -1,0 +1,11 @@
+﻿- type: entity
+  id: SyndiTechFabCircuitboard
+  parent: SecurityTechFabCircuitboard
+  name: Syndicate techfab machine board
+  description: A machine printed circuit board for an SLE techfab.
+  components:
+    - type: Sprite
+      sprite: Objects/Misc/module.rsi
+      state: security
+    - type: MachineBoard
+      prototype: Synditechfab

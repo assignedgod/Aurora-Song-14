@@ -10,3 +10,5 @@
       containers:
         key_slots:
         - EncryptionKeyExfiltrator
+    - type: Sprite
+      sprite: _AS/Clothing/Ears/Headsets/Exfil.rsi

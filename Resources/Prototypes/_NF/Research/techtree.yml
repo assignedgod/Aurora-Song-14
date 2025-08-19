@@ -1028,7 +1028,7 @@
   entityIcon: hydroponicsTray
   discipline: NFService
   tier: 1
-  cost: 10000
+  cost: 7500
   recipeUnlocks:
   - HydroponicsTrayMachineCircuitboard
   technologyPrerequisites:
@@ -1479,13 +1479,13 @@
 - type: technology
   id: NFPersonalPropulsion
   name: nf-research-technology-personal-propulsion
-  entityIcon: JetpackCaptain
+  entityIcon: JetpackVoid
   discipline: NFSalvage
   secondaryDiscipline: NFEngineering
   tier: 1
   cost: 2500
   recipeUnlocks:
-  - JetpackCaptain
+  - JetpackVoid
   technologyPrerequisites:
   - NFBasicPersonalPropulsion
   position: 1, 36
@@ -1506,13 +1506,13 @@
 - type: technology
   id: NFAdvancedPersonalPropulsion
   name: nf-research-technology-advanced-personal-propulsion
-  entityIcon: JetpackVoid
+  entityIcon: JetpackCaptain
   discipline: NFSalvage
   secondaryDiscipline: NFEngineering
   tier: 1
   cost: 2500
   recipeUnlocks:
-  - JetpackVoid
+  - JetpackCaptain
   technologyPrerequisites:
   - NFPersonalPropulsion
   position: 2, 36

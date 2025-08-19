@@ -1,0 +1,10 @@
+﻿- type: latheRecipe
+  id: ClothingEyesHudSyndicate
+  result: ClothingEyesHudSyndicate
+  categories:
+  - Clothing
+  completetime: 2
+  materials:
+    Steel: 300
+    Glass: 200
+
