@@ -82,5 +82,8 @@ public sealed partial class ContrabandPalletConsoleComponent : Component
         {"ClothingOuterHardsuitSyndieElite","ClothingOuterHardsuitShiweiUnpainted"},
 
         {"ClothingShoesBootsMagSyndie","ClothingShoesBootsMagSyndieRegistered"},
+
+        {"CrateSyndicateLockedHardsuitFilled","ClothingOuterHardsuitShanlinUnpainted"},
+        {"CrateSyndicateLockedEliteHardsuitFilled","ClothingOuterHardsuitShiweiUnpainted"},
     };
 }

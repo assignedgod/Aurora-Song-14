@@ -4,8 +4,8 @@ meta:
   engineVersion: 261.1.0
   forkId: ""
   forkVersion: ""
-  time: 08/18/2025 04:53:43
-  entityCount: 4703
+  time: 08/18/2025 20:04:54
+  entityCount: 4704
 maps: []
 grids:
 - 1
@@ -2922,7 +2922,7 @@ entities:
       pos: 17.5,-5.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -42013.664
+      secondsUntilStateChange: -42617.566
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -2975,7 +2975,7 @@ entities:
       pos: -2.5,2.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -57359.984
+      secondsUntilStateChange: -57963.887
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -2986,7 +2986,7 @@ entities:
       pos: -1.5,3.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -15208.127
+      secondsUntilStateChange: -15812.029
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -3017,7 +3017,7 @@ entities:
       pos: -11.5,1.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -57363.516
+      secondsUntilStateChange: -57967.418
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -3033,7 +3033,7 @@ entities:
       pos: -11.5,-0.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -58145.05
+      secondsUntilStateChange: -58748.953
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -3069,7 +3069,7 @@ entities:
       pos: -17.5,-2.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -59473.082
+      secondsUntilStateChange: -60076.984
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -3179,7 +3179,7 @@ entities:
       pos: 5.5,9.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -41147.035
+      secondsUntilStateChange: -41750.938
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -22097,7 +22097,7 @@ entities:
       pos: -1.5,33.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -66458.164
+      secondsUntilStateChange: -67062.06
       state: Opening
   - uid: 3347
     components:
@@ -22105,7 +22105,7 @@ entities:
       pos: 0.5,33.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -66456.53
+      secondsUntilStateChange: -67060.43
       state: Opening
   - uid: 3348
     components:
@@ -22113,7 +22113,7 @@ entities:
       pos: 2.5,33.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -66455.164
+      secondsUntilStateChange: -67059.06
       state: Opening
 - proto: HospitalCurtainsOpen
   entities:
@@ -22840,6 +22840,22 @@ entities:
     components:
     - type: Transform
       pos: 9.635128,-23.7212
+      parent: 1
+- proto: PlasmaReinforcedWindowDirectional
+  entities:
+  - uid: 1006
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 4.5,-3.5
+      parent: 1
+- proto: PlasmaWindoorSecureArmoryLocked
+  entities:
+  - uid: 978
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 4.5,-2.5
       parent: 1
 - proto: PlastitaniumWindow
   entities:
@@ -25759,6 +25775,13 @@ entities:
     components:
     - type: Transform
       pos: 16.5,-45.5
+      parent: 1
+- proto: VendingMachineExchangeVend
+  entities:
+  - uid: 977
+    components:
+    - type: Transform
+      pos: 10.5,-19.5
       parent: 1
 - proto: VendingMachineFuelVend
   entities:
@@ -30716,7 +30739,7 @@ entities:
       lastSignals:
         DoorStatus: True
     - type: Door
-      secondsUntilStateChange: -65493.836
+      secondsUntilStateChange: -66097.734
       state: Opening
     - type: Airlock
       autoClose: False
@@ -30724,12 +30747,6 @@ entities:
     components:
     - type: Transform
       pos: 15.5,8.5
-      parent: 1
-  - uid: 4175
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: 4.5,-3.5
       parent: 1
 - proto: WindoorSecureArmoryLocked
   entities:
@@ -31133,11 +31150,5 @@ entities:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 9.5,-29.5
-      parent: 1
-  - uid: 4174
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: 4.5,-2.5
       parent: 1
 ...
