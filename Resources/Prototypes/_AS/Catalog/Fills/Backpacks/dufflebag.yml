@@ -1,0 +1,12 @@
+﻿- type: entity
+  parent: ClothingBackpackDuffelSyndicateBundle
+  id: ClothingBackpackDuffelSyndicateGrenadeLauncherRefillAS
+  name: Explosives bundle
+  description: "A refill of explosive ammunition for use in shipmount weaponry and grenade launchers."
+  components:
+  - type: StorageFill
+    contents:
+      - id: NFGrenadeBlast # Frontier: GrenadeBlast<NFGrenadeBlast
+        amount: 6
+      - id: NFGrenadeFrag # Frontier: GrenadeFrag<NFGrenadeFrag
+        amount: 6

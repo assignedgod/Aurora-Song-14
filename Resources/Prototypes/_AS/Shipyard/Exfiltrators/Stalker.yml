@@ -3,13 +3,14 @@
   parent: BaseVesselAntag
   name: Stalker
   description: A stealth vessel designed for exfiltration operations.
-  price: 85000
+  price: 40000
   category: Medium
-  group: Custom
-  shuttlePath: /Maps/_NF/Shuttles/Syndicate/Stalker.yml
+  group: Custom #Todo: Give exfils their own shipyard
+  access: NuclearOperative
+  shuttlePath: /Maps/_AS/Shuttles/Exfiltrators/Stalker.yml
   guidebookPage: Null
   class:
-  - Syndicate #Give exfils their own shipyard
+  - Syndicate
   engine:
   - Plasma
 

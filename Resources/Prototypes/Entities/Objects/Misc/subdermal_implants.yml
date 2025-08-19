@@ -179,6 +179,9 @@
     interfaces:
       enum.StoreUiKey.Key:
         type: StoreBoundUserInterface
+  - type: Tag # Aurora
+    tags:
+    - ExfiltratorUplink
 
 - type: entity
   parent: BaseSubdermalImplant

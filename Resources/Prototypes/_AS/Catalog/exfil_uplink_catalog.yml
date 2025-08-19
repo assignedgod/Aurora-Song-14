@@ -1,0 +1,90 @@
+﻿
+- type: listing
+  id: UplinkGrenadeRefillAS
+  name: uplink-syndieexplosives-name
+  description: uplink-syndieexplosives-desc
+  icon: { sprite: Objects/Weapons/Guns/Ammunition/Explosives/explosives.rsi, state: blast }
+  productEntity: ClothingBackpackDuffelSyndicateGrenadeLauncherRefillAS
+  discountCategory: veryRareDiscounts
+  discountDownTo:
+    Telecrystal: 8
+  cost:
+    Telecrystal: 12
+  categories:
+  - UplinkWeaponry
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - NukeOpsUplink
+      - ExfiltratorUplink
+
+
+- type: listing
+  id: CommanderSuitAS
+  name: uplink-syndiecommander-name
+  description: uplink-syndiecommander-desc
+  icon: { sprite: Clothing/OuterClothing/Hardsuits/syndiecommander.rsi, state: icon }
+  productEntity: ClothingOuterHardsuitSyndieCommander
+  discountCategory: veryRareDiscounts
+  discountDownTo:
+    Telecrystal: 8
+  cost:
+    Telecrystal: 8
+  categories:
+  - UplinkWearables
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - NukeOpsUplink
+      - ExfiltratorUplink
+  - !type:BuyerJobCondition
+    whitelist:
+      - CellCommander
+
+
+- type: listing
+  id: MEDICsuitAS
+  name: uplink-syndiemedic-name
+  description: uplink-syndiemedic-desc
+  icon: { sprite: Clothing/OuterClothing/Hardsuits/syndiemedic.rsi, state: icon }
+  productEntity: ClothingOuterHardsuitSyndieMedic
+  discountCategory: veryRareDiscounts
+  discountDownTo:
+    Telecrystal: 8
+  cost:
+    Telecrystal: 8
+  categories:
+  - UplinkWearables
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - NukeOpsUplink
+      - ExfiltratorUplink
+  - !type:BuyerJobCondition
+    whitelist:
+      - CellCommander
+      - CellMedic
+
+
+- type: listing
+  id: ExfilImplant
+  name: uplink-syndieradioimplant-name
+  description: uplink-syndieradioimplant-desc
+  icon: { sprite: Objects/Weapons/Guns/Ammunition/Explosives/explosives.rsi, state: blast }
+  productEntity: RadioImplantExfiltrator
+  discountCategory: veryRareDiscounts
+  discountDownTo:
+    Telecrystal: 2
+  cost:
+    Telecrystal: 2
+  categories:
+  - UplinkImplants
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - NukeOpsUplink
+      - ExfiltratorUplink

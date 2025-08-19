@@ -1,6 +1,6 @@
 ﻿- type: entity
   id: ComputerShipyardExfiltrator
-  parent: [BaseStructureDisableToolUse, BaseStructureIndestructible, ComputerShipyardBase, ComputerShipyardSyndicate]
+  parent: [BaseStructureDisableToolUse, BaseStructureIndestructible, ComputerShipyardBase]
   name: Exfiltrator shipyard console
   description: Used to buy ships not available through other means.
   components:

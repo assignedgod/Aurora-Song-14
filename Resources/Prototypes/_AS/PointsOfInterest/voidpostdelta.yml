@@ -10,7 +10,7 @@
   addComponents:
   - type: IFF
     color: "#f54242"
-    flags: [ HideLabel ]
+    flags: [HideLabel, Hide]
     readOnly: false
 
 - type: gameMap

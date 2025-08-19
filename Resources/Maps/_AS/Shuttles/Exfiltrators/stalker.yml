@@ -4,8 +4,8 @@ meta:
   engineVersion: 261.1.0
   forkId: ""
   forkVersion: ""
-  time: 08/19/2025 14:30:16
-  entityCount: 229
+  time: 08/19/2025 14:55:10
+  entityCount: 231
 maps: []
 grids:
 - 1
@@ -1137,14 +1137,14 @@ entities:
     - type: Transform
       pos: -0.5,-5.5
       parent: 1
-  - uid: 176
+  - uid: 143
     components:
     - type: Transform
       pos: -1.5,-5.5
       parent: 1
 - proto: LockerWallMaterialsFuelPlasmaFilled2
   entities:
-  - uid: 143
+  - uid: 144
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
@@ -1152,28 +1152,28 @@ entities:
       parent: 1
 - proto: MedicalBed
   entities:
-  - uid: 144
+  - uid: 145
     components:
     - type: Transform
       pos: 1.5,0.5
       parent: 1
 - proto: Mirror
   entities:
-  - uid: 145
+  - uid: 146
     components:
     - type: Transform
       pos: -1.5,1.5
       parent: 1
 - proto: NFHolopadShipAntag
   entities:
-  - uid: 146
+  - uid: 147
     components:
     - type: Transform
       pos: -0.5,2.5
       parent: 1
 - proto: NitrogenCanister
   entities:
-  - uid: 147
+  - uid: 148
     components:
     - type: Transform
       anchored: True
@@ -1183,7 +1183,7 @@ entities:
       bodyType: Static
 - proto: OxygenCanister
   entities:
-  - uid: 148
+  - uid: 149
     components:
     - type: Transform
       anchored: True
@@ -1191,21 +1191,33 @@ entities:
       parent: 1
     - type: Physics
       bodyType: Static
+- proto: PinpointerUniversal
+  entities:
+  - uid: 230
+    components:
+    - type: Transform
+      pos: 2.7636042,0.85356677
+      parent: 1
+  - uid: 231
+    components:
+    - type: Transform
+      pos: 2.2006865,0.80669177
+      parent: 1
 - proto: PlasmaWindowDirectional
   entities:
-  - uid: 149
+  - uid: 150
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 1.5,-3.5
       parent: 1
-  - uid: 150
+  - uid: 151
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 1.5,-4.5
       parent: 1
-  - uid: 151
+  - uid: 152
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
@@ -1213,36 +1225,36 @@ entities:
       parent: 1
 - proto: PortableGeneratorPacmanShuttle
   entities:
-  - uid: 152
+  - uid: 153
     components:
     - type: Transform
       pos: 2.5,-3.5
       parent: 1
 - proto: PoweredlightUltraviolet
   entities:
-  - uid: 153
+  - uid: 154
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 2.5,-0.5
       parent: 1
-  - uid: 154
+  - uid: 155
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: -0.5,0.5
       parent: 1
-  - uid: 155
+  - uid: 156
     components:
     - type: Transform
       pos: 0.5,-2.5
       parent: 1
-  - uid: 156
+  - uid: 157
     components:
     - type: Transform
       pos: -0.5,-7.5
       parent: 1
-  - uid: 157
+  - uid: 158
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
@@ -1250,44 +1262,44 @@ entities:
       parent: 1
 - proto: ReinforcedPlasmaWindow
   entities:
-  - uid: 158
+  - uid: 159
     components:
     - type: Transform
       pos: -1.5,3.5
       parent: 1
-  - uid: 159
+  - uid: 160
     components:
     - type: Transform
       pos: 0.5,4.5
       parent: 1
-  - uid: 160
+  - uid: 161
     components:
     - type: Transform
       pos: 1.5,4.5
       parent: 1
-  - uid: 161
+  - uid: 162
     components:
     - type: Transform
       pos: 2.5,3.5
       parent: 1
-  - uid: 162
+  - uid: 163
     components:
     - type: Transform
       pos: -0.5,4.5
       parent: 1
-  - uid: 163
+  - uid: 164
     components:
     - type: Transform
       pos: 3.5,-0.5
       parent: 1
 - proto: ReinforcedPlasmaWindowDiagonal
   entities:
-  - uid: 164
+  - uid: 165
     components:
     - type: Transform
       pos: -1.5,4.5
       parent: 1
-  - uid: 165
+  - uid: 166
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
@@ -1295,7 +1307,7 @@ entities:
       parent: 1
 - proto: SignalButton
   entities:
-  - uid: 166
+  - uid: 167
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
@@ -1318,7 +1330,7 @@ entities:
         19:
         - - Pressed
           - Toggle
-  - uid: 167
+  - uid: 168
     components:
     - type: Transform
       pos: 1.5,1.5
@@ -1331,7 +1343,7 @@ entities:
         8:
         - - Pressed
           - DoorBolt
-  - uid: 168
+  - uid: 169
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
@@ -1356,48 +1368,48 @@ entities:
           - Toggle
 - proto: SinkWide
   entities:
-  - uid: 169
+  - uid: 170
     components:
     - type: Transform
       pos: -1.5,0.5
       parent: 1
 - proto: SpawnPointCellMedic
   entities:
-  - uid: 170
+  - uid: 171
     components:
     - type: Transform
       pos: -0.5,-2.5
       parent: 1
 - proto: SpawnPointCellOperative
   entities:
-  - uid: 171
+  - uid: 172
     components:
     - type: Transform
       pos: -0.5,-3.5
       parent: 1
 - proto: SpawnPointLatejoin
   entities:
-  - uid: 172
+  - uid: 173
     components:
     - type: Transform
       pos: -0.5,-4.5
       parent: 1
 - proto: SubstationWallBasic
   entities:
-  - uid: 173
+  - uid: 174
     components:
     - type: Transform
       pos: 2.5,-1.5
       parent: 1
 - proto: SuitStorageWallmountEVASyndicate
   entities:
-  - uid: 174
+  - uid: 175
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: -1.5,-7.5
       parent: 1
-  - uid: 175
+  - uid: 176
     components:
     - type: Transform
       rot: -1.5707963267948966 rad

@@ -31,6 +31,9 @@
 - type: Tag
   id: ExchangeUplink
 
+- type: Tag
+  id: ExfiltratorUplink
+
 #region licenses
 - type: Tag
   id: License

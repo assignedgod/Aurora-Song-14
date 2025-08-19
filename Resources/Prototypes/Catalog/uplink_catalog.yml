@@ -161,6 +161,7 @@
     whitelist:
       tags:
       - NukeOpsUplink
+      - ExfiltratorUplink
 
 - type: listing
   id: UplinkSniperBundle
@@ -569,6 +570,7 @@
       whitelist:
         tags:
           - NukeOpsUplink
+          - ExfiltratorUplink
     - !type:BuyerWhitelistCondition
       blacklist:
         components:
@@ -1722,6 +1724,7 @@
     whitelist:
       tags:
       - NukeOpsUplink
+      - ExfiltratorUplink
 
 - type: listing
   id: UplinkClothingEyesHudSyndicate
@@ -1737,6 +1740,7 @@
       whitelist:
         tags:
           - NukeOpsUplink
+          - ExfiltratorUplink
 
 - type: listing
   id: UplinkClothingConductingGloves

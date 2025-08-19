@@ -89,3 +89,16 @@ uplink-exchange-debranded-elite-hardsuit-desc = An Elite Cybersun hardsuit with 
 
 uplink-exchange-spesos-name = 5000 spesos
 uplink-exchange-spesos-desc = A stack of 5000 spesos, hard currency.
+
+uplink-syndiecommander-name = Syndicate Commander Hardsuit
+uplink-syndiecommander-desc = A mechanized movement-assisted hardsuit saved for Syndicate commanders. Comes with a firm grip.
+
+uplink-syndiemedic-name = Syndicate Medic Hardsuit
+uplink-syndiemedic-desc = A heavily armored and agile advanced hardsuit specifically designed for field medic operations.
+
+uplink-syndieexplosives-name = Explosive Grenade Ammo Refill
+uplink-syndieexplosives-desc = A refill of explosive ammunition for use in shipmount weaponry and grenade launchers
+
+uplink-syndieradioimplant-name = Exfiltrator Radio Implant
+uplink-syndieradioimplant-desc = You can never be too careful.
+
