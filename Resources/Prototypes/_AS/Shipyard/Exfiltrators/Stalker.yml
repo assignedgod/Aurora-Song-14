@@ -7,7 +7,7 @@
   category: Medium
   group: Custom #Todo: Give exfils their own shipyard
   access: NuclearOperative
-  shuttlePath: /Maps/_AS/Shuttles/Exfiltrators/Stalker.yml
+  shuttlePath: /Maps/_AS/Shuttles/Exfiltrators/stalker.yml
   guidebookPage: Null
   class:
   - Syndicate
@@ -17,7 +17,7 @@
 - type: gameMap
   id: Stalker
   mapName: 'Stalker'
-  mapPath: /Maps/_AS/Shuttles/Exfiltrators/Stalker.yml
+  mapPath: /Maps/_AS/Shuttles/Exfiltrators/stalker.yml
   minPlayers: 0
   stations:
     Stalker:
