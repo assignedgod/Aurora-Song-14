@@ -49,11 +49,11 @@
           min: 35
         damage:
           types:
-            Poison: 0.1
+            Poison: 0.01
       - !type:ChemVomit
         conditions:
         - !type:ReagentThreshold
-          min: 35
+          min: 50
         probability: 0.05
       - !type:PopupMessage
         type: Local
