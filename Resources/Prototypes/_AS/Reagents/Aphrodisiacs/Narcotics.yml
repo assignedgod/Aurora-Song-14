@@ -49,7 +49,7 @@
           min: 35
         damage:
           types:
-            Poison: 1
+            Poison: 0.1
       - !type:ChemVomit
         conditions:
         - !type:ReagentThreshold
