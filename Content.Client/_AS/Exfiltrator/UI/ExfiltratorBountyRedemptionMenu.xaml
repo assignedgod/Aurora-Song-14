@@ -1,0 +1,11 @@
+﻿<controls:FancyWindow xmlns="https://spacestation14.io"
+                      xmlns:controls="clr-namespace:Content.Client.UserInterface.Controls"
+                      SetSize="300 150"
+                      MinSize="300 150"
+                      Title="{Loc 'exfiltrator-bounty-redemption-console-menu-title'}">
+    <BoxContainer Orientation="Vertical" Margin="5">
+        <Button Name="SellButton"
+                Text="{Loc 'exfiltrator-bounty-redemption-sell-button'}"/>
+        <TextureButton VerticalExpand="True" />
+    </BoxContainer>
+</controls:FancyWindow>
