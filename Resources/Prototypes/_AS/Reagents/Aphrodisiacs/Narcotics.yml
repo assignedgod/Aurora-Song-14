@@ -22,20 +22,20 @@
           - "reagent-effect-forcefem6"
           - "reagent-effect-forcefem7"
           - "reagent-effect-forcefem8"
-        probability: 0.035
+        probability: 0.04
         conditions:
           - !type:ReagentThreshold
             max: 30
       - !type:PopupMessage # Overdose causes nausea and vomiting
         type: Local
-        visualType: Medium
+        visualType: LargeCaution
+        probability: 0.2
         messages:
           - "reagent-effect-forcefem-overdose"
           - "reagent-effect-forcefem-overdose2"
           - "reagent-effect-forcefem-overdose3"
           - "reagent-effect-forcefem-overdose4"
           - "reagent-effect-forcefem-overdose5"
-        probability: 0.06
         conditions:
           - !type:ReagentThreshold
             min: 30
