@@ -44,6 +44,7 @@
     pocket1: NFWeaponEnergyPistolDisabler
     pocket2: NFWeaponPistolViper
     ears: ClothingHeadsetExfiltrator
+    wallet: ClothingWalletLeatherBlack
   storage:
     back:
     - UplinkImplant

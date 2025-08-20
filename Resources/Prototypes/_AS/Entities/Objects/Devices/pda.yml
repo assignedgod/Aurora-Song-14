@@ -36,7 +36,7 @@
   parent: BasePDA
   id: CellCommPDA
   name: Cell-Commander PDA
-  description: This PDA smells like... Operation Efficiency.
+  description: This PDA smells like... Operational Efficiency.
   components:
   - type: Pda
     id: CellCommanderASIDCard

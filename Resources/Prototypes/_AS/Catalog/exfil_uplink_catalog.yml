@@ -28,9 +28,9 @@
   productEntity: ClothingOuterHardsuitSyndieCommander
   discountCategory: veryRareDiscounts
   discountDownTo:
-    Telecrystal: 8
+    Telecrystal: 10
   cost:
-    Telecrystal: 8
+    Telecrystal: 10
   categories:
   - UplinkWearables
   conditions:

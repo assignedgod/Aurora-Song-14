@@ -25,6 +25,7 @@
       - type: StationNameSetup
         mapNameTemplate: Voidpost Delta
       - type: ExtraStationInformation
+        iconPath: /Textures/Objects/Misc/id_cards.rsi/syndie.png
         stationSubtext: 'aurora-lobby-exfiltrators-subtext'
         stationDescription: 'aurora-lobby-exfiltrators-description'
         lobbySortOrder: 4
