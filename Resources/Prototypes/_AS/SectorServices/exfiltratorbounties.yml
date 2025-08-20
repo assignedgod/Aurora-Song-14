@@ -1,4 +1,0 @@
-﻿- type: sectorService
-  id: ExfiltratorBounties
-  components:
-    - type: SectorExfiltratorBountyDatabase

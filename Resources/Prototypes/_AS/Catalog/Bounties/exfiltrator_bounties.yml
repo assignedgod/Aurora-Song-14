@@ -1,8 +1,0 @@
-﻿- type: exfiltratorBounty
-  id: ExfiltratorBountyGasMask
-  reward: 3
-  description: exfiltrator-bounty-description-generic
-  entries:
-  - name: exfiltrator-bounty-item-gasMask
-    amount: 2
-    id: ClothingMaskGasSyndicate
