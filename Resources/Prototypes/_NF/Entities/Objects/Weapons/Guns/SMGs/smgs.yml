@@ -108,7 +108,7 @@
 # Surplus
 - type: entity
   name: Drozd
-  parent: [ BaseC1Contraband, NFWeaponSubMachineGunDrozd ]
+  parent: [ BaseC2Contraband, NFWeaponSubMachineGunDrozd ]
   id: WeaponSubMachineGunSurpDrozd
   suffix: Surplus
   components:

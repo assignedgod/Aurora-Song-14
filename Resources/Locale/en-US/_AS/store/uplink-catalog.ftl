@@ -6,7 +6,7 @@ store-category-mercenaryammo = Ammunition
 store-category-mercenaryexplosives = Explosives
 store-category-mercenarybundles = Bundles
 
-uplink-mercenary-scafhardsuit-name = SCAF HardsuitMore actions
+uplink-mercenary-scafhardsuit-name = SCAF Hardsuit
 uplink-mercenary-scafhardsuit-desc = A suit of vacuum-proof armor highly resistant to projectile weaponry.
 
 uplink-mercenary-hardsuit-name = Merc Hardsuit
@@ -65,3 +65,27 @@ uplink-mercenary-20Rifle-OP-mags-desc = A quarter of .20 Rifle magazines, each f
 
 uplink-mercenary-30Rifle-OP-mags-name = .30 Rifle P+ Mags
 uplink-mercenary-30Rifle-OP-mags-desc = A quartet of .30 Rifle magazines, stacked with P+. Hit hard, soldier.
+
+# region Security Uplink
+uplink-sle-hardsuit-combat-name = SLE Combat Suit
+uplink-sle-hardsuit-combat-desc = A heavily armored SLE suit. Space proof, with thick armor plating at the expense of mobility.
+
+uplink-sle-softsuit-patrol-name = SLE Patrol Softsuit
+uplink-sle-softsuit-patrol-desc = The standard-issue SLE space proof suit for patrol duty.
+
+# region ExchangeVend - Aurora
+store-category-exchangehardsuits = EVA Suits
+store-category-exchangeweapons = Weapons
+store-category-exchangeutility = Utility
+store-category-exchangeammo = Ammunition
+store-category-exchangeexplosives = Explosives
+store-category-exchangebundles = Bundles
+
+uplink-exchange-debranded-hardsuit-name = Debranded Armored Hardsuit
+uplink-exchange-debranded-hardsuit-desc = A Cybersun hardsuit with the paint stripped and trackers removed.
+
+uplink-exchange-debranded-elite-hardsuit-name = Debranded Elite Armored Hardsuit
+uplink-exchange-debranded-elite-hardsuit-desc = An Elite Cybersun hardsuit with the paint stripped and trackers removed.
+
+uplink-exchange-spesos-name = 5000 spesos
+uplink-exchange-spesos-desc = A stack of 5000 spesos, hard currency.

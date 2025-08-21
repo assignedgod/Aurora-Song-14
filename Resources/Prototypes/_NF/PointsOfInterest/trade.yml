@@ -35,18 +35,19 @@
 #      - maxDistance: 1000
 #        prob: 0.3
 
-- type: gameMap
-  id: Trade
-  mapName: 'Trade Outpost'
-  mapPath: /Maps/_NF/POI/trade.yml
-  minPlayers: 0
-  stations:
-    Trade:
-      stationProto: MarketFrontierOutpost
-      components:
-        - type: StationNameSetup
-          mapNameTemplate: 'Trade Outpost'
-        - type: StationDeadDrop
-          maxDeadDrops: 3 # Many here, it's huge.
-        - type: TradeCrateDestination
-          destinationProto: Trade
+#- type: gameMap
+#  id: Trade
+#  mapName: 'Trade Outpost'
+#  mapPath: /Maps/_NF/POI/trade.yml
+#  minPlayers: 0
+#  stations:
+#    Trade:
+#      stationProto: MarketFrontierOutpost
+#      components:
+#        - type: StationNameSetup
+#          mapNameTemplate: 'Trade Outpost'
+#        - type: StationDeadDrop
+#          maxDeadDrops: 3 # Many here, it's huge.
+#        - type: TradeCrateDestination
+#          destinationProto: Trade
+#

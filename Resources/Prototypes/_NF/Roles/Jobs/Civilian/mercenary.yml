@@ -38,6 +38,7 @@
   accessGroups:
   - GeneralAccess
   jobEntity: InterviewHologramMercenary
+  newPlayerMessage: false
 
 - type: startingGear
   id: MercenaryHologramGear
@@ -49,3 +50,16 @@
   id: MercenaryGear
   equipment:
     pocket1: MercCoin15
+  licenses:
+  - LicenseContrabandHandling
+
+- type: chameleonOutfit
+  id: MercenaryChameleonOutfit
+  job: Mercenary
+  equipment:
+    head: ClothingHeadHelmetMercenary
+    eyes: ClothingEyesGlassesCheapSunglasses
+    mask: ClothingMaskGasMercenary
+    neck: ClothingNeckIFFNeutral
+    outerClothing: ClothingOuterVestWebMercenary
+    gloves: ClothingHandsGlovesCombat

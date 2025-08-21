@@ -21,6 +21,7 @@
   canBeAntag: false
   access:
   - Brigmedic
+  - Prisoner
   accessGroups:
   - GeneralNfsdAccess
   special:
@@ -41,3 +42,19 @@
     - NFMagazineHighCapacityPistol35Overpressure
     - NFMagazineHighCapacityPistol35Rubber
     - FrontierUplinkCoin10
+  licenses:
+  - LicenseContrabandHandling
+
+- type: chameleonOutfit
+  id: BrigmedicChameleonOutfit
+  job: Brigmedic
+  hasMindShield: true
+  equipment:
+    head: ClothingHeadHatNfsdBeretCream
+    mask: ClothingMaskBreathMedicalSecurity
+    eyes: ClothingEyesHudNfsdMed
+    outerClothing: ClothingOuterCoatNfsdBomberBrigmed
+    neck: ClothingNeckNfsdBadgeSecurityBrigmedic
+    belt: ClothingBeltNfsdWebbingFilledBrigmedic
+    gloves: ClothingHandsGlovesNitrile
+    shoes: ClothingShoesBootsNfsdCreamFilled

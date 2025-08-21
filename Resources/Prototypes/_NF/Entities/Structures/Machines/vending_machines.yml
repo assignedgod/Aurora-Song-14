@@ -382,8 +382,8 @@
 - type: entity
   parent: [BaseStructureDisableAnchoring, VendingMachine]
   id: VendingMachineNfsdDrobe
-  name: NFSDDrobe
-  description: A vending machine for NFSD and NFSD clothing!
+  name: SLEDrobe
+  description: A vending machine for SLE and SEC clothing!
   components:
   - type: VendingMachine
     pack: NfsdDrobeInventory
@@ -432,8 +432,8 @@
 - type: entity
   parent: [BaseStructureDisableAnchoring, VendingMachine]
   id: VendingMachineNfsdTech
-  name: NFSDTech
-  description: A vending machine for NFSD and NFSD tech!
+  name: SECTech
+  description: A vending machine for NFSD and SEC tech!
   components:
   - type: VendingMachine
     pack: NfsdTechInventory
@@ -591,6 +591,8 @@
   components:
   - type: VendingMachine
     pack: CiviMedVendInventory
+    taxAccounts:
+      Medical: 0.4
     offState: off
     brokenState: broken
     normalState: normal-unshaded
@@ -676,6 +678,8 @@
     brokenState: broken
     normalState: normal-unshaded
     # ejectState: eject-unshaded  No sprite, see chefvend/dinnerware/BODA/etc for expamples
+    taxAccounts:
+      Frontier: 0.75
   - type: Advertise
     pack: MailVendAds
   - type: SpeakOnUIClosed

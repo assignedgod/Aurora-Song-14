@@ -22,6 +22,13 @@
   description: |-
     An older bullpup carbine model, this illegal firearm is often used by Syndicate fireteams and security.
   components:
+  - type: Gun
+    projectileSpeed: 30
+    minAngle: 3
+    maxAngle: 10
+    angleIncrease: 2
+    angleDecay: 4
+    fireRate: 6
   - type: Clothing
     sprite: _DV/Objects/Weapons/Guns/Rifles/carbinenogl.rsi
   - type: Sprite
@@ -78,7 +85,7 @@
 
 - type: entity
   id: NFWeaponRifleAssaultJackdaw
-  parent: [ BaseC3Contraband, HLBaseWeaponRifleAssaultChamber25, NFBaseWeaponFrameRifleAssaultFrontierGunsmith ]
+  parent: [ BaseC2ContrabandUnredeemable, ASBaseWeaponRifleAssaultChamber25, NFBaseWeaponFrameRifleAssaultFrontierGunsmith ]
   name: Jackdaw
   description: |-
     The beginning of the end is heralded by the song of a Jackdaw.
@@ -88,9 +95,9 @@
   - type: Clothing
     sprite: _DV/Objects/Weapons/Guns/Rifles/jackdaw.rsi
   - type: Gun
-    minAngle: 11
-    maxAngle: 36
-    angleIncrease: 2
+    minAngle: 10
+    maxAngle: 35
+    angleIncrease: 2.5
     angleDecay: 8
     fireRate: 8
     selectedMode: FullAuto
@@ -128,6 +135,7 @@
     burstFireRate: 4.5
     shotsPerBurst: 3
     burstCooldown: 0.6
+    minAngle: 3
     selectedMode: Burst
     availableModes:
       - Burst

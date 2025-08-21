@@ -100,7 +100,7 @@
   parent: NFClothingHeadHardsuitWithLightBaseNfsd
   id: ClothingHeadHelmetHardsuitNfsdBronze
   categories: [ HideSpawnMenu ]
-  name: NFSD patrol suit helmet
+  name: SLE patrol suit helmet
   description: Lightly armored softsuit helmet for beat-cop needs.
   components:
   - type: Sprite
@@ -161,8 +161,8 @@
   parent: NFClothingHeadHardsuitWithLightBaseNfsd
   id: ClothingHeadHelmetHardsuitNfsdExperimental
   categories: [ HideSpawnMenu ]
-  name: NFSD experimental combat suit helmet
-  description: Heavily armored hardsuit helmet for NFSD raids.
+  name: SLE experimental combat suit helmet
+  description: Heavily armored hardsuit helmet for SLE raids.
   components:
   - type: Sprite
     sprite: _NF/Clothing/Head/Hardsuits/nfsd_experimental.rsi
@@ -184,8 +184,8 @@
   parent: NFClothingHeadHardsuitWithLightBaseNfsd
   id: ClothingHeadHelmetHardsuitNfsdCombat
   categories: [ HideSpawnMenu ]
-  name: NFSD combat suit helmet
-  description: Medium armored hardsuit helmet for NFSD raids.
+  name: SLE combat suit helmet
+  description: Medium armored hardsuit helmet for SLE raids.
   components:
   - type: Sprite
     sprite: _NF/Clothing/Head/Hardsuits/nfsd_combat.rsi
@@ -209,8 +209,8 @@
   parent: NFClothingHeadHardsuitWithLightBaseNfsd
   id: ClothingHeadHelmetHardsuitNfsdCommand
   categories: [ HideSpawnMenu ]
-  name: NFSD command combat suit helmet
-  description: Medium armored hardsuit helmet for NFSD raids.
+  name: SLE command combat suit helmet
+  description: Medium armored hardsuit helmet for SLE raids.
   components:
   - type: Sprite
     sprite: _NF/Clothing/Head/Hardsuits/nfsd_command.rsi
@@ -302,3 +302,28 @@
         Slash: 0.9
         Piercing: 0.9
         Heat: 0.9
+
+#Wizard Hardsuit
+- type: entity
+  parent: [ ClothingHeadHardsuitBase, ClothingHeadSuitWithLightBase ]
+  id: ClothingHeadHelmetHardsuitWizardBrick
+  name: brick wizard hardsuit helmet
+  description: A weird helmet with ornaments made of baked clay and magical gemstones.
+  components:
+  - type: Sprite
+    sprite: _NF/Clothing/Head/Hardsuits/brickwizard.rsi
+    offset: 0,0.1
+  - type: Clothing
+    sprite: _NF/Clothing/Head/Hardsuits/brickwizard.rsi
+  - type: PointLight
+    color: "#6dead6"
+  - type: PressureProtection
+    highPressureMultiplier: 0.27
+    lowPressureMultiplier: 1000
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.8
+        Slash: 0.8
+        Piercing: 0.8
+        Heat: 0.8

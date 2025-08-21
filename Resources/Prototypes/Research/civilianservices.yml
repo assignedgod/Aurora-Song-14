@@ -81,6 +81,7 @@
   cost: 7500
   recipeUnlocks:
   - FatExtractorMachineCircuitboard
+  - BiogeneratorMachineCircuitboard # Frontier BiofabricatorMachineCircuitboard<BiogeneratorMachineCircuitboard
   - BiofabricatorMachineCircuitboard
   - BiomassReclaimerMachineCircuitboard
 
@@ -227,6 +228,8 @@
   recipeUnlocks:
   - BluespaceBeaker
   - SyringeBluespace
+  - JugBluespace # Frontier
+  - VialBluespace # Frontier
 
 - type: technology
   id: LauncherSyringe

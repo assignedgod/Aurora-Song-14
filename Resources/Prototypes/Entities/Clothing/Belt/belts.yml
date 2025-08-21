@@ -35,6 +35,7 @@
       # components:
       #   - StationMap
       #   - SprayPainter
+      #   - SprayPainterAmmo
       #   - NetworkConfigurator
       #   - RCD
       #   - RCDAmmo
@@ -95,36 +96,36 @@
     #grid: # Frontier
     #- 0,0,9,1 # Frontier
     # TODO: Fill this out more.
-    # whitelist: # Frontier: commented out whitelist
-    #   tags:
-    #     - Wirecutter
-    #     - Crowbar
-    #     - Screwdriver
-    #     - Flashlight
-    #     - Wrench
-    #     - GeigerCounter
-    #     - Flare
-    #     - CableCoil
-    #     - Powerdrill
-    #     - JawsOfLife
-    #     - CigPack
-    #     - Radio
-    #     - HolofanProjector
-    #     - Multitool
-    #     - AppraisalTool
-    #   components:
-    #     - StationMap
-    #     - SprayPainter
-    #     - NetworkConfigurator
-    #     - RCD
-    #     - RCDAmmo
-    #     - Welder
-    #     - Flash
-    #     - Handcuff
-    #     - PowerCell
-    #     - Geiger
-    #     - TrayScanner
-    #     - GasAnalyzer
+    #whitelist: # Frontier: commented out whitelist
+    #  tags:
+    #    - Wirecutter
+    #    - Crowbar
+    #    - Screwdriver
+    #    - Flashlight
+    #    - Wrench
+    #    - GeigerCounter
+    #    - Flare
+    #    - CableCoil
+    #    - Powerdrill
+    #    - JawsOfLife
+    #    - CigPack
+    #    - Radio
+    #    - HolofanProjector
+    #    - Multitool
+    #    - AppraisalTool
+    #  components:
+    #    - StationMap
+    #    - SprayPainter
+    #    - NetworkConfigurator
+    #    - RCD
+    #    - RCDAmmo
+    #    - Welder
+    #    - Flash
+    #    - Handcuff
+    #    - PowerCell
+    #    - Geiger
+    #    - TrayScanner
+    #    - GasAnalyzer
   - type: ItemMapper
     mapLayers:
       drill:
@@ -163,7 +164,7 @@
   - type: Appearance
 
 - type: entity
-  parent: NFClothingBeltStorageBase # Frontier: ClothingBeltStorageBase<NFClothingBeltStorageBase
+  parent: [NFClothingBeltStorageHolsterBase] # Frontier: ClothingBeltStorageBase<NFClothingBeltStorageBase
   id: ClothingBeltAssault
   name: assault belt
   description: A tactical assault belt.
@@ -185,22 +186,7 @@
         # - Handcuff
         # - BallisticAmmoProvider
         # - Ammo
-  - type: ItemMapper
-    mapLayers:
-      flashbang:
-        whitelist:
-          components:
-          - FlashOnTrigger
-      stunbaton:
-        whitelist:
-          components:
-          - Stunbaton
-      tear_gas_grenade:
-        whitelist:
-          components:
-          - SmokeOnTrigger
-    sprite: Clothing/Belt/belt_overlay.rsi
-  - type: Appearance
+
 
 - type: entity
   parent: NFClothingBeltStorageBase
@@ -249,7 +235,7 @@
   - type: Appearance
 
 - type: entity
-  parent: NFClothingBeltStorageBase # Frontier: ClothingBeltStorageBase<NFClothingBeltStorageBase
+  parent: NFClothingSBeltStorageMedkitBase # Frontier: ClothingBeltStorageBase<NFClothingBeltStorageBase
   id: ClothingBeltMedical
   name: medical belt
   description: Can hold various medical equipment.
@@ -460,7 +446,7 @@
   - type: Appearance
 
 - type: entity
-  parent: [ClothingBeltStorageBase, ContentsExplosionResistanceBase, BaseC1Contraband, ClothingSlotBase] # DeltaV - add parent ClothingSlotBase
+  parent: [NFClothingBeltStorageHolsterBase, BaseC1Contraband, ] # DeltaV - add parent ClothingSlotBase
   id: ClothingBeltSecurity
   name: security belt
   description: Can hold security gear like handcuffs and flashes.
@@ -469,16 +455,6 @@
     sprite: _DV/Clothing/Belt/security.rsi # DeltaV - resprite
   - type: Clothing
     sprite: _DV/Clothing/Belt/security.rsi # DeltaV - resprite
-  - type: ItemSlots # DeltaV - add sidearm slot
-    slots:
-      holster:
-        name: clothing-belt-sidearm
-        whitelist:
-          tags:
-          - Sidearm
-        insertOnInteract: false
-  - type: ExplosionResistance
-    damageCoefficient: 0.9
   # Frontier: commented out whitelist
   # - type: Storage
   #   whitelist:
@@ -505,27 +481,6 @@
   #       - Whistle
   #       - BalloonPopper
   # End Frontier: commented out whitelist
-  - type: ItemMapper # DeltaV - adjust for DeltaV sprites.
-    mapLayers:
-      baton:
-        whitelist:
-          components:
-          - Stunbaton
-      gasgrenade:
-        whitelist:
-          tags:
-            - Grenade
-      slp:
-        whitelist:
-          tags:
-          - Sidearm
-    sprite: _DV/Clothing/Belt/belt_overlay.rsi
-  - type: ContainerContainer
-    containers:
-      storagebase: !type:Container
-        ents: []
-      holster: !type:ContainerSlot {}
-  - type: Appearance
 
 - type: entity
   parent: [ClothingBeltBase, ClothingSlotBase, BaseC1Contraband] # Frontier: BaseCommandContraband<BaseC1Contraband
@@ -595,7 +550,7 @@
     - Kangaroo
 
 - type: entity
-  parent: NFClothingBeltStorageBase # Frontier: ClothingBeltStorageBase<NFClothingBeltStorageBase
+  parent: NFClothingBeltStorageHolsterBase # Frontier: ClothingBeltStorageBase<NFClothingBeltStorageBase
   id: ClothingBeltHolster
   name: shoulder holster
   description: 'A holster to carry a handgun and ammo. WARNING: Badasses only.'
@@ -609,7 +564,7 @@
     # - 0,0,3,1 # Frontier: commented out
 
 - type: entity
-  parent: [NFClothingBeltStorageBase, BaseC3SyndicateContraband, ContrabandClothing] # Frontier: ClothingBeltStorageBase<NFClothingBeltStorageBase, BaseSyndicateContraband<BaseC3SyndicateContraband, added ContrabandClothing as parent
+  parent: [NFClothingBeltStorageHolsterBase, BaseC3SyndicateContraband, ContrabandClothing] # Frontier: ClothingBeltStorageBase<NFClothingBeltStorageBase, BaseSyndicateContraband<BaseC3SyndicateContraband, added ContrabandClothing as parent
   id: ClothingBeltSyndieHolster
   name: syndicate shoulder holster
   description: A deep shoulder holster capable of holding many types of ballistics.
@@ -631,7 +586,7 @@
         # - CartridgeAmmo
 
 - type: entity
-  parent: [NFClothingBeltStorageBase, ClothingSlotBase] # Frontier: ClothingBeltStorageBase<NFClothingBeltStorageBase # DeltaV - add parent ClothingSlotBase
+  parent: [NFClothingBeltStorageHolsterBase] # Frontier: ClothingBeltStorageBase<NFClothingBeltStorageBase # DeltaV - add parent ClothingSlotBase
   id: ClothingBeltSecurityWebbing
   name: security carrier
   description: Unique and versatile chest rig, can hold security gear.
@@ -640,30 +595,9 @@
     sprite: _DV/Clothing/Belt/securitywebbing.rsi # DeltaV - resprite
   - type: Clothing
     sprite: _DV/Clothing/Belt/securitywebbing.rsi # DeltaV - resprite
-  - type: ItemSlots # DeltaV - add sidearm slot
-    slots:
-      holster:
-        name: clothing-belt-sidearm
-        whitelist:
-          tags:
-          - Sidearm
-        insertOnInteract: false
-  - type: ItemMapper # DeltaV - add holstered sidearm sprite
-    mapLayers:
-      slp:
-        whitelist:
-          tags:
-          - Sidearm
-    sprite: _DV/Clothing/Belt/belt_overlay.rsi
-  - type: ContainerContainer
-    containers:
-      storagebase: !type:Container
-        ents: []
-      holster: !type:ContainerSlot {}
-  - type: Appearance # DeltaV
 
 - type: entity
-  parent: NFClothingBeltStorageBase # Frontier: ClothingBeltStorageBase<NFClothingBeltStorageBase, remove BaseSecurityCargoContraband
+  parent: [NFClothingBeltStorageHolsterBase] # Frontier: ClothingBeltStorageBase<NFClothingBeltStorageBase, remove BaseSecurityCargoContraband
   id: ClothingBeltMercenaryWebbing # Frontier: Merc to Mercenary
   name: mercenary webbing
   description: Ideal for storing everything from ammo to weapons and combat essentials.
@@ -674,7 +608,7 @@
     sprite: Clothing/Belt/mercwebbing.rsi
 
 - type: entity
-  parent: NFClothingBeltStorageBase # Frontier: ClothingBeltStorageBase<NFClothingBeltStorageBase
+  parent: [NFClothingBeltStorageHolsterBase] # Frontier: ClothingBeltStorageBase<NFClothingBeltStorageBase
   id: ClothingBeltSalvageWebbing
   name: salvage rig
   description: Universal unloading system for work in space.
@@ -685,7 +619,7 @@
     sprite: Clothing/Belt/salvagewebbing.rsi
 
 - type: entity
-  parent: [NFClothingBeltStorageBase, ContentsExplosionResistanceBase, BaseC1Contraband] # Frontier: ClothingBeltStorageBase<NFClothingBeltStorageBase, BaseSyndicateContraband<BaseC1Contraband
+  parent: [NFClothingBeltStorageHolsterBase, BaseC1Contraband] # Frontier: ClothingBeltStorageBase<NFClothingBeltStorageBase, BaseSyndicateContraband<BaseC1Contraband
   id: ClothingBeltMilitaryWebbing
   name: chest rig
   description: A set of tactical webbing worn by boarding parties. # Frontier
@@ -694,11 +628,9 @@
     sprite: Clothing/Belt/militarywebbing.rsi
   - type: Clothing
     sprite: Clothing/Belt/militarywebbing.rsi
-  - type: ExplosionResistance
-    damageCoefficient: 0.1
 
 - type: entity
-  parent: ClothingBeltMilitaryWebbing
+  parent: [NFClothingSBeltStorageHolsterMedkitBase]
   id: ClothingBeltMilitaryWebbingMed
   name: medical chest rig
   description: A set of tactical webbing worn by medic operatives. # Frontier
@@ -707,10 +639,6 @@
     sprite: Clothing/Belt/militarywebbingmed.rsi
   - type: Clothing
     sprite: Clothing/Belt/militarywebbingmed.rsi
-  #- type: Item # Frontier
-    #size: Huge # Frontier
-  - type: ExplosionResistance
-    damageCoefficient: 0.1
 
 - type: entity
   parent: NFClothingBeltStorageBase # Frontier: ClothingBeltStorageBase<NFClothingBeltStorageBase

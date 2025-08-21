@@ -38,7 +38,10 @@
         paths:
         - /Maps/_NF/Bluespace/cache.yml
     rewardAccounts:
-      Nfsd: 1.0
+      Nfsd: 0.25
+      Frontier: 0.25
+      Medical: 0.25
+      Edison: 0.25
 
 - type: entity
   id: BluespaceVaultError
@@ -79,8 +82,10 @@
         paths:
         - /Maps/_NF/Bluespace/vault.yml
     rewardAccounts:
-      Nfsd: 1.0
-
+      Nfsd: 0.25
+      Frontier: 0.25
+      Medical: 0.25
+      Edison: 0.25
 - type: entity
   id: BluespaceVaultSmallError
   parent: BaseStationEventShortDelay
@@ -121,8 +126,10 @@
         paths:
         - /Maps/_NF/Bluespace/vaultsmall.yml
     rewardAccounts:
-      Nfsd: 1.0
-
+      Nfsd: 0.25
+      Frontier: 0.25
+      Medical: 0.25
+      Edison: 0.25
 - type: entity
   id: BluespaceSyndicateFTLInterception
   parent: BaseStationEventShortDelay
@@ -144,6 +151,8 @@
       grid: !type:GridSpawnGroup
         nameLoc:
         - station-event-bluespace-name-UnidentifiedVessel
+        minCount: 2 #Aurora's Song
+        maxCount: 3 #Aurora's Song
         minimumDistance: 1500
         maximumDistance: 2500
         addComponents:
@@ -182,6 +191,8 @@
       grid: !type:GridSpawnGroup
         nameLoc:
         - station-event-bluespace-name-UnidentifiedVessel
+        minCount: 2 #Aurora's Song
+        maxCount: 3 #Aurora's Song
         minimumDistance: 1500
         maximumDistance: 2500
         addComponents:
@@ -220,6 +231,8 @@
       grid: !type:GridSpawnGroup
         nameLoc:
         - station-event-bluespace-name-UnidentifiedVessel
+        minCount: 2 #Aurora's Song
+        maxCount: 3 #Aurora's Song
         minimumDistance: 1500
         maximumDistance: 2500
         addComponents:
@@ -278,11 +291,11 @@
   parent: BaseStationEventShortDelay
   components:
   - type: StationEvent
-    startAnnouncement: station-event-bluespace-generic-ftl-start-announcement
+    startAnnouncement: station-event-bluespace-mcargo-ftl-start-announcement #Aurora event text
     startAudio:
       path: /Audio/Misc/notice1.ogg
-    warningAnnouncement: station-event-bluespace-generic-ftl-warning-announcement
-    endAnnouncement: station-event-bluespace-generic-ftl-end-announcement
+    warningAnnouncement: station-event-bluespace-mcargo-ftl-warning-announcement
+    endAnnouncement: station-event-bluespace-mcargo-ftl-end-announcement
     earliestStart: 20
     maximumPlayers: 20
     weight: 5
@@ -329,6 +342,8 @@
       grid: !type:GridSpawnGroup
         nameLoc:
         - station-event-bluespace-name-UnidentifiedVessel
+        minCount: 2 #Aurora's Song
+        maxCount: 3 #Aurora's Song
         minimumDistance: 1500
         maximumDistance: 2500
         addComponents:

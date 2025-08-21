@@ -231,7 +231,7 @@
   parent:
   - MobNonHumanHostileBase
   - MobHumanoidInvetory
-  - NFMobRestrictions
+  - NFBaseMobRestrictions
   id: MobClownBase
   description: A joyous, terrible thing, twisted and warped in The Honkmother's light.
   components:

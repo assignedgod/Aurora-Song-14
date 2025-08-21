@@ -64,7 +64,7 @@
 
 - type: cargoProduct
   id: EngineSingularityCollector
-  abstract: true # Frontier
+#  abstract: true # Aurora - re-added to manifest
   icon:
     sprite: Structures/Power/Generation/Singularity/collector.rsi
     state: ca_on

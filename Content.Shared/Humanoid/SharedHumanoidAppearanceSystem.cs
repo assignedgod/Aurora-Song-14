@@ -38,6 +38,7 @@ public abstract class SharedHumanoidAppearanceSystem : EntitySystem
     [Dependency] private readonly IPrototypeManager _proto = default!;
     [Dependency] private readonly ISerializationManager _serManager = default!;
     [Dependency] private readonly MarkingManager _markingManager = default!;
+    [Dependency] private readonly SharedAppearanceSystem _appearance = default!;
     [Dependency] private readonly GrammarSystem _grammarSystem = default!;
     [Dependency] private readonly SharedIdentitySystem _identity = default!;
 
@@ -153,6 +154,8 @@ public abstract class SharedHumanoidAppearanceSystem : EntitySystem
         targetHumanoid.SkinColor = sourceHumanoid.SkinColor;
         targetHumanoid.EyeColor = sourceHumanoid.EyeColor;
         targetHumanoid.Age = sourceHumanoid.Age;
+        targetHumanoid.Height = sourceHumanoid.Height;
+        targetHumanoid.Width = sourceHumanoid.Width;
         SetSex(target, sourceHumanoid.Sex, false, targetHumanoid);
         targetHumanoid.CustomBaseLayers = new(sourceHumanoid.CustomBaseLayers);
         targetHumanoid.MarkingSet = new(sourceHumanoid.MarkingSet);
@@ -161,6 +164,14 @@ public abstract class SharedHumanoidAppearanceSystem : EntitySystem
 
         if (TryComp<GrammarComponent>(target, out var grammar))
             _grammarSystem.SetGender((target, grammar), sourceHumanoid.Gender);
+
+        // Apply scaling (height and width)
+        if (sourceHumanoid.Height != 1.0f || sourceHumanoid.Width != 1.0f)
+        {
+            var scaleVisuals = EnsureComp<ScaleVisualsComponent>(target);
+            var appearance = EnsureComp<AppearanceComponent>(target);
+            _appearance.SetData(target, ScaleVisuals.Scale, new Vector2(sourceHumanoid.Width, sourceHumanoid.Height), appearance);
+        }
 
         _identity.QueueIdentityUpdate(target);
         Dirty(target, targetHumanoid);
@@ -459,6 +470,17 @@ public abstract class SharedHumanoidAppearanceSystem : EntitySystem
         }
 
         humanoid.Age = profile.Age;
+        humanoid.Height = profile.Appearance.Height;
+        humanoid.Width = profile.Appearance.Width;
+        humanoid.LastProfileLoaded = profile;
+
+        // Apply scaling (height and width)
+        if (profile.Appearance.Height != 1.0f || profile.Appearance.Width != 1.0f)
+        {
+            var scaleVisuals = EnsureComp<ScaleVisualsComponent>(uid);
+            var appearance = EnsureComp<AppearanceComponent>(uid);
+            _appearance.SetData(uid, ScaleVisuals.Scale, new Vector2(profile.Appearance.Width, profile.Appearance.Height), appearance);
+        }
 
         Dirty(uid, humanoid);
     }

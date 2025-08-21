@@ -117,6 +117,8 @@ entities:
     - type: Shuttle
       dampingModifier: 0.25
     - type: GridPathfinding
+    - type: BecomesStation
+      id: Lodge
     - type: Gravity
       gravityShakeSound: !type:SoundPathSpecifier
         path: /Audio/Effects/alert.ogg
@@ -15871,7 +15873,7 @@ entities:
     - type: Transform
       pos: 1.2363214,3.5525398
       parent: 1
-- proto: SpawnDungeonVendomatsClothes
+- proto: SpawnShuttleVendomatsClothes
   entities:
   - uid: 208
     components:

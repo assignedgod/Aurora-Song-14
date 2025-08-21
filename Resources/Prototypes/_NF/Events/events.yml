@@ -4,9 +4,9 @@
     children:
     - id: NFBreakerFlip
     - id: NFIonStorm
-    - id: NFPowerGridCheck
+#    - id: NFPowerGridCheck
     - id: NFRandomSentience
-    - id: NFSolarFlare
+#    - id: NFSolarFlare
     - id: NFVentClog
     - id: NFBluespaceCargoCrate
     - id: NFBluespaceMcCargoCrate
@@ -25,22 +25,22 @@
     minimumPlayers: 15
   - type: BreakerFlipRule
 
-- type: entity
-  id: NFPowerGridCheck
-  parent: BaseStationEventShortDelay
-  components:
-  - type: StationEvent
-    weight: 5
-    earliestStart: 15 # Frontier
-    startAnnouncement: station-event-power-grid-check-nf-start-announcement # Frontier: add nf-
-    endAnnouncement: station-event-power-grid-check-nf-end-announcement # Frontier: add nf-
-    startAudio:
-      path: /Audio/Announcements/power_off.ogg
-      params:
-        volume: -4
-    duration: 60
-    maxDuration: 120
-  - type: PowerGridCheckRule
+#- type: entity
+#  id: NFPowerGridCheck
+#  parent: BaseStationEventShortDelay
+#  components:
+#  - type: StationEvent
+#    weight: 5
+#    earliestStart: 15 # Frontier
+#    startAnnouncement: #station-event-power-grid-check-nf-start-announcement # #Frontier: add nf-
+#    endAnnouncement: #station-event-power-grid-check-nf-end-announcement # #Frontier: add nf-
+#    startAudio:
+#      path: /Audio/Announcements/power_off.ogg
+#      params:
+#        volume: -4
+#    duration: 60
+#    maxDuration: 120
+#  - type: PowerGridCheckRule
 
 - type: entity
   parent: BaseGameRule
@@ -50,8 +50,8 @@
     weight: 4
     earliestStart: 15
     reoccurrenceDelay: 45
-    startAnnouncement: station-event-solar-flare-nf-start-announcement
-    endAnnouncement: station-event-solar-flare-nf-end-announcement
+    startAnnouncement: #station-event-solar-flare-nf-start-announcement
+    endAnnouncement: #station-event-solar-flare-nf-end-announcement
     startAudio:
       path: /Audio/Announcements/attention.ogg
     duration: 120
@@ -69,7 +69,7 @@
     - Supply
     - Traffic # Frontier
     - Nfsd # Frontier
-    extraCount: 2
+    extraCount: 1
     lightBreakChancePerSecond: 0.0003
     doorToggleChancePerSecond: 0.001
 

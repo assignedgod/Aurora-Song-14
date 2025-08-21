@@ -295,7 +295,7 @@ public sealed class LeashSystem : EntitySystem
         var pulledCoords = Transform(pulled).Coordinates;
         var pullDir = _xform.ToMapCoordinates(playerCoords).Position - _xform.ToMapCoordinates(pulledCoords).Position;
 
-        _throwing.TryThrow(pulled, pullDir * 0.5f, user: player, pushbackRatio: 1f, animated: false, recoil: false, playSound: false, doSpin: false);
+        _throwing.TryThrow(pulled, pullDir * 0.5f, user: player, pushbackRatio: 1f, baseThrowSpeed: 3f, animated: false, recoil: false, playSound: false, doSpin: false);
 
         leashComp.NextPull = _timing.CurTime + leashComp.PullInterval;
         return true;
@@ -316,7 +316,7 @@ public sealed class LeashSystem : EntitySystem
 
         if (TryComp<ClothingComponent>(ent, out var clothing))
         {
-            if (clothing.InSlot == null || !_container.TryGetContainingContainer(ent, out var container))
+            if (clothing.InSlot == null || !_container.TryGetContainingContainer(ent.Owner, out var container))
                 return false;
 
             leashTarget = container.Owner;
@@ -373,8 +373,7 @@ public sealed class LeashSystem : EntitySystem
             && TryGetLeashTarget(anchor!, out var leashTarget)
             && CompOrNull<LeashedComponent>(leashTarget)?.JointId == null
             && Transform(anchor).Coordinates.TryDistance(EntityManager, Transform(leash).Coordinates, out var dst)
-            && dst <= leash.Comp.Length
-            && anchor.Comp.Enabled; // Flooftier change
+            && dst <= leash.Comp.Length;
     }
 
 
@@ -386,6 +385,7 @@ public sealed class LeashSystem : EntitySystem
         var doAfter = new DoAfterArgs(EntityManager, user, leash.Comp.AttachDelay, new LeashAttachDoAfterEvent(), anchor, leashTarget, leash)
         {
             BreakOnDamage = true,
+            BreakOnMove = true,
             BreakOnWeightlessMove = true,
             NeedHand = true
         };
@@ -415,6 +415,7 @@ public sealed class LeashSystem : EntitySystem
         var doAfter = new DoAfterArgs(EntityManager, user, delay, new LeashDetachDoAfterEvent(), leashed.Owner, leashed)
         {
             BreakOnDamage = true,
+            BreakOnMove = true,
             BreakOnWeightlessMove = true,
             NeedHand = true
         };

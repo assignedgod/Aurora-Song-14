@@ -1,0 +1,11 @@
+- type: entity
+  parent: ClothingHeadHatNfsdCampaignFilled
+  id: ClothingHeadHatBeretCommissioner
+  name: Commissioner's beret
+  description: A blue beret with a golden rank emblem.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Head/Hats/beret_commissioner.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/Head/Hats/beret_commissioner.rsi
+  - type: HamsterWearable

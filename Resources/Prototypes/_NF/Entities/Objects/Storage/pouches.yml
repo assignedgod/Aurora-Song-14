@@ -932,7 +932,7 @@
         color: "#4960ed"
 
 ## WILDCARDS
-#region mercanary
+#region mercenary
 - type: entity
   id: NFPouchMercenary
   parent: NFPouchUtility
@@ -1038,7 +1038,7 @@
 - type: entity
   id: NFPouchNfsd
   parent: NFPouchUtility
-  name: NFSD pouch
+  name: SLE pouch
   components:
   - type: Sprite
     layers:

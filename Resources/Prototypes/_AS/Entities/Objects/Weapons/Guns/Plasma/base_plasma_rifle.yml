@@ -1,0 +1,91 @@
+﻿#region frames
+- type: entity
+  id: ASBaseWeaponFramePlasmaRifle
+  parent: [ NFBaseWeaponEncumbranceRifle, BaseWeaponBattery ]
+  suffix: Frontier
+  abstract: true
+  components:
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+  - type: Appearance
+  - type: Wieldable
+    unwieldOnUse: false
+  - type: GunRequiresWield
+  - type: GunWieldBonus
+    minAngle: -0 # Set to 0 because GunRequiresWield
+    maxAngle: -0
+  - type: Gun
+    projectileSpeed: 30
+    minAngle: 1.5
+    maxAngle: 3
+    angleIncrease: 0.5
+    angleDecay: 1
+    fireRate: 3
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+  - type: SpeedModifiedOnWield
+    walkModifier: 0.8
+    sprintModifier: 0.8
+  - type: Battery # Default: 30 shots with 80 fireCost
+    maxCharge: 2400
+    startingCharge: 2400
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 4 # Default recharge rate: 1 shot per 20 seconds with 80 fireCost
+  - type: StaticPrice
+    price: 400
+  - type: NFWeaponDetails
+    class: weapon-details-class-rifle
+
+#region manufacturers
+- type: entity
+  id: ASBaseWeaponFramePlasmaRifleNanotrasen
+  parent: ASBaseWeaponFramePlasmaRifle
+  abstract: true
+  components:
+  - type: Gun
+    minAngle: 1.7
+    maxAngle: 3.2
+    fireRate: 2
+  - type: NFWeaponDetails
+    manufacturer: weapon-details-manufacturer-nanotrasen-munitions
+
+- type: entity
+  id: ASBaseWeaponFramePlasmaRifleArcadia
+  parent: ASBaseWeaponFramePlasmaRifle
+  abstract: true
+  components:
+  - type: Gun
+    minAngle: 1.2
+    maxAngle: 2.8
+    fireRate: 2.5
+  - type: NFWeaponDetails
+    manufacturer: weapon-details-manufacturer-arcadia-sec-solutions
+
+#region modes
+- type: entity
+  id: ASBaseWeaponPlasmaBolts
+  abstract: true
+  components:
+  - type: Gun
+    examineCaliber: gun-examine-energybolt-high
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/laser_cannon.ogg
+  - type: ProjectileBatteryAmmoProvider
+    proto: ASPlasmaBlastTest
+    fireCost: 60
+
+- type: entity
+  id: ASBaseWeaponPlasmaBoltsArcadian
+  abstract: true
+  components:
+  - type: Gun
+    examineCaliber: gun-examine-energybolt-high
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/laser_cannon.ogg
+  - type: ProjectileBatteryAmmoProvider
+    proto: ASPlasmaBlastTest
+    fireCost: 40

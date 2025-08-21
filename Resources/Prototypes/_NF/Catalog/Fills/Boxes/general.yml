@@ -103,16 +103,13 @@
     maxItemSize: Normal
     grid:
     - 0,0,2,3
-    whitelist:
-      tags:
-        - CapacitorStockPart
   - type: Sprite
     layers:
       - state: box
 #      - state: wet_floor_sign
 
 - type: entity
-  name: NFSD encryption key box
+  name: SLE encryption key box
   parent: BoxEncryptionKeySecurity
   id: BoxEncryptionKeyNfsd
   components:

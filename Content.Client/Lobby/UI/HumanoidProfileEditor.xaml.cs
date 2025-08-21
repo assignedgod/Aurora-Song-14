@@ -11,6 +11,7 @@ using Content.Client.Stylesheets;
 using Content.Client.UserInterface.Systems.Guidebook;
 using Content.Shared.CCVar;
 using Content.Shared.Clothing;
+using Content.Shared.Dataset;
 using Content.Shared.GameTicking;
 using Content.Shared.Guidebook;
 using Content.Shared.Humanoid;
@@ -38,6 +39,8 @@ using Direction = Robust.Shared.Maths.Direction;
 
 namespace Content.Client.Lobby.UI
 {
+
+    // This place is hell.
     [GenerateTypedNameReferences]
     public sealed partial class HumanoidProfileEditor : BoxContainer
     {
@@ -53,8 +56,14 @@ namespace Content.Client.Lobby.UI
         private readonly LobbyUIController _controller;
         private readonly SpriteSystem _sprite;
 
+        // CCvar.
+        private int _maxNameLength;
+        private bool _allowFlavorText;
+
         private FlavorText.FlavorText? _flavorText;
-        private TextEdit? _flavorTextEdit;
+        private TextEdit? _flavorSfwTextEdit;
+        private TextEdit? _flavorNsfwTextEdit;
+        private TextEdit? _characterConsent;
 
         // One at a time.
         private LoadoutWindow? _loadoutWindow;
@@ -132,6 +141,9 @@ namespace Content.Client.Lobby.UI
             _controller = UserInterfaceManager.GetUIController<LobbyUIController>();
             _sprite = _entManager.System<SpriteSystem>();
 
+            _maxNameLength = _cfgManager.GetCVar(CCVars.MaxNameLength);
+            _allowFlavorText = _cfgManager.GetCVar(CCVars.FlavorText);
+
             ImportButton.OnPressed += args =>
             {
                 ImportProfile();
@@ -167,6 +179,7 @@ namespace Content.Client.Lobby.UI
             #region Name
 
             NameEdit.OnTextChanged += args => { SetName(args.Text); };
+            NameEdit.IsValid = args => args.Length <= _maxNameLength;
             NameRandomize.OnPressed += args => RandomizeName();
             RandomizeEverythingButton.OnPressed += args => { RandomizeEverything(); };
             WarningLabel.SetMarkup($"[color=red]{Loc.GetString("humanoid-profile-editor-naming-rules-warning")}[/color]");
@@ -214,6 +227,8 @@ namespace Content.Client.Lobby.UI
 
             #endregion Gender
 
+            #region Species
+
             RefreshSpecies();
 
             SpeciesButton.OnItemSelected += args =>
@@ -223,6 +238,8 @@ namespace Content.Client.Lobby.UI
                 UpdateHairPickers();
                 OnSkinColorOnValueChanged();
             };
+
+            #endregion Species
 
             #region Skin
 
@@ -374,6 +391,34 @@ namespace Content.Client.Lobby.UI
 
             #endregion Eyes
 
+            #region Height
+
+            HeightSlider.OnValueChanged += args =>
+            {
+                SetHeight((float)args.Value);
+            };
+
+            HeightResetButton.OnPressed += _ =>
+            {
+                ResetHeight();
+            };
+
+            #endregion Height
+
+            #region Width
+
+            WidthSlider.OnValueChanged += args =>
+            {
+                SetWidth((float)args.Value);
+            };
+
+            WidthResetButton.OnPressed += _ =>
+            {
+                ResetWidth();
+            };
+
+            #endregion Width
+
             #endregion Appearance
 
             #region Jobs
@@ -457,17 +502,23 @@ namespace Content.Client.Lobby.UI
         /// </summary>
         public void RefreshFlavorText()
         {
-            if (_cfgManager.GetCVar(CCVars.FlavorText))
+            if (_allowFlavorText)
             {
                 if (_flavorText != null)
                     return;
 
-                _flavorText = new FlavorText.FlavorText();
-                TabContainer.AddChild(_flavorText);
-                TabContainer.SetTabTitle(TabContainer.ChildCount - 1, Loc.GetString("humanoid-profile-editor-flavortext-tab"));
-                _flavorTextEdit = _flavorText.CFlavorTextInput;
+                _flavorText = new();
 
-                _flavorText.OnFlavorTextChanged += OnFlavorTextChange;
+                _flavorText.OnSfwFlavorTextChanged += OnSfwFlavorTextChange;
+                _flavorText.OnNsfwFlavorTextChanged += OnNsfwFlavorTextChange;
+                _flavorText.OnCharacterConsentChanged += OnCharacterConsentChange;
+
+                _flavorSfwTextEdit = _flavorText.CFlavorTextSFWInput;
+                _flavorNsfwTextEdit = _flavorText.CFlavorTextNSFWInput;
+                _characterConsent = _flavorText.CFlavorTextConsentInput;
+
+                TabContainer.AddChild(_flavorText);
+                TabContainer.SetTabTitle(4, Loc.GetString("humanoid-profile-editor-flavortext-tab"));
             }
             else
             {
@@ -475,11 +526,21 @@ namespace Content.Client.Lobby.UI
                     return;
 
                 TabContainer.RemoveChild(_flavorText);
-                _flavorText.OnFlavorTextChanged -= OnFlavorTextChange;
+
+                _flavorText.OnSfwFlavorTextChanged -= OnSfwFlavorTextChange;
+                _flavorText.OnNsfwFlavorTextChanged -= OnNsfwFlavorTextChange;
+                _flavorText.OnCharacterConsentChanged -= OnCharacterConsentChange;
+
                 _flavorText.Dispose();
-                _flavorTextEdit?.Dispose();
-                _flavorTextEdit = null;
+
+                _flavorSfwTextEdit?.Dispose();
+                _flavorNsfwTextEdit?.Dispose();
+                _characterConsent?.Dispose();
+
                 _flavorText = null;
+                _flavorSfwTextEdit = null;
+                _flavorNsfwTextEdit = null;
+                _characterConsent = null;
             }
         }
 
@@ -762,6 +823,8 @@ namespace Content.Client.Lobby.UI
             UpdateGenderControls();
             UpdateSkinColor();
             UpdateSpawnPriorityControls();
+            UpdateHeightControls();
+            UpdateWidthControls();
             UpdateAgeEdit();
             UpdateEyePickers();
             UpdateSaveButton();
@@ -1066,12 +1129,30 @@ namespace Content.Client.Lobby.UI
             UpdateJobPriorities();
         }
 
-        private void OnFlavorTextChange(string content)
+        private void OnSfwFlavorTextChange(string content)
         {
             if (Profile is null)
                 return;
 
             Profile = Profile.WithFlavorText(content);
+            SetDirty();
+        }
+
+        private void OnNsfwFlavorTextChange(string content)
+        {
+            if (Profile is null)
+                return;
+
+            Profile = Profile.WithNsfwFlavorText(content);
+            SetDirty();
+        }
+
+        private void OnCharacterConsentChange(string content)
+        {
+            if (Profile is null)
+                return;
+
+            Profile = Profile.WithCharacterConsent(content);
             SetDirty();
         }
 
@@ -1257,6 +1338,32 @@ namespace Content.Client.Lobby.UI
             SetDirty();
         }
 
+        private void SetHeight(float newHeight)
+        {
+            Profile = Profile?.WithCharacterAppearance(Profile.Appearance.WithHeight(newHeight));
+            SetDirty();
+            ReloadPreview();
+        }
+
+        private void ResetHeight()
+        {
+            SetHeight(1.0f);
+            UpdateHeightControls();
+        }
+
+        private void SetWidth(float newWidth)
+        {
+            Profile = Profile?.WithCharacterAppearance(Profile.Appearance.WithWidth(newWidth));
+            SetDirty();
+            ReloadPreview();
+        }
+
+        private void ResetWidth()
+        {
+            SetWidth(1.0f);
+            UpdateWidthControls();
+        }
+
         public bool IsDirty
         {
             get => _isDirty;
@@ -1277,10 +1384,14 @@ namespace Content.Client.Lobby.UI
 
         private void UpdateFlavorTextEdit()
         {
-            if (_flavorTextEdit != null)
-            {
-                _flavorTextEdit.TextRope = new Rope.Leaf(Profile?.FlavorText ?? "");
-            }
+            if (_flavorSfwTextEdit != null)
+                _flavorSfwTextEdit.TextRope = new Rope.Leaf(Profile?.FlavorText ?? "");
+
+            if (_flavorNsfwTextEdit != null)
+                _flavorNsfwTextEdit.TextRope = new Rope.Leaf(Profile?.NsfwFlavorText ?? "");
+
+            if (_characterConsent != null)
+                _characterConsent.TextRope = new Rope.Leaf(Profile?.CharacterConsent ?? "");
         }
 
         private void UpdateAgeEdit()
@@ -1458,6 +1569,26 @@ namespace Content.Client.Lobby.UI
             }
 
             SpawnPriorityButton.SelectId((int) Profile.SpawnPriority);
+        }
+
+        private void UpdateHeightControls()
+        {
+            if (Profile == null)
+            {
+                return;
+            }
+
+            HeightSlider.Value = Profile.Appearance.Height;
+        }
+
+        private void UpdateWidthControls()
+        {
+            if (Profile == null)
+            {
+                return;
+            }
+
+            WidthSlider.Value = Profile.Appearance.Width;
         }
 
         private void UpdateHairPickers()

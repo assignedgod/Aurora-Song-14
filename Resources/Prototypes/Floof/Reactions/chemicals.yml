@@ -1,0 +1,15 @@
+- type: reaction
+  minTemp: 369
+  id: Libidozenithizine
+  impact: High
+  reactants:
+    Pomelustine:
+      amount: 1
+    Philterex:
+      amount: 1
+    Impedrezene:
+      amount: 1
+    Silicon:
+      amount: 1
+  products:
+    Libidozenithizine: 5

@@ -329,6 +329,22 @@
       tags:
       - DoorBumpOpener
 
+- type: entity # DeltaV - Security dog Laika ID card
+  parent: IDCardStandard
+  id: SecDogIDCard
+  name: Security Dog ID card
+  components:
+  - type: Sprite
+    layers:
+    - state: default
+    - state: idsecurityofficer
+  - type: PresetIdCard
+    job: SecurityOfficer
+    name: Laika
+  - type: Tag
+    tags:
+    - DoorBumpOpener
+
 - type: entity
   parent: IDCardStandard
   id: ChefIDCard
@@ -752,6 +768,7 @@
   - type: Access
     tags:
     - GenpopEnter
+    - Prisoner
   - type: GenpopIdCard
   - type: IdCard
     jobTitle: job-name-prisoner
@@ -760,6 +777,7 @@
   - type: ExpireIdCard
     expireMessage: genpop-prisoner-id-expire
     expiredAccess:
+    - Prisoner
     - GenpopLeave
   - type: Speech
     speechVerb: Robotic
@@ -798,6 +816,7 @@
     - state: idcluwne
   - type: IdCard
     jobTitle: job-title-cluwne
+    jobIcon: JobIconCluwne
   - type: Unremoveable
 
 - type: entity

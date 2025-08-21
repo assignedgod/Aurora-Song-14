@@ -1,0 +1,66 @@
+- type: reagent
+  id: ForceFemDrugs
+  name: reagent-name-forcefem
+  group: Narcotics
+  desc: reagent-desc-forcefem
+  physicalDesc: reagent-physical-desc-girly
+  flavor: cinnamon
+  color: "#771534"
+  metabolisms:
+    Medicine:
+      metabolismRate : 0.03 #One 5u dose is 2.7 minutes
+      effects:
+      - !type:PopupMessage
+        type: Local
+        visualType: Medium
+        messages:
+          - "reagent-effect-forcefem1"
+          - "reagent-effect-forcefem2"
+          - "reagent-effect-forcefem3"
+          - "reagent-effect-forcefem4"
+          - "reagent-effect-forcefem5"
+          - "reagent-effect-forcefem6"
+          - "reagent-effect-forcefem7"
+          - "reagent-effect-forcefem8"
+        probability: 0.04
+        conditions:
+          - !type:ReagentThreshold
+            max: 30
+      - !type:PopupMessage # Overdose causes nausea and vomiting
+        type: Local
+        visualType: LargeCaution
+        probability: 0.2
+        messages:
+          - "reagent-effect-forcefem-overdose"
+          - "reagent-effect-forcefem-overdose2"
+          - "reagent-effect-forcefem-overdose3"
+          - "reagent-effect-forcefem-overdose4"
+          - "reagent-effect-forcefem-overdose5"
+        conditions:
+          - !type:ReagentThreshold
+            min: 30
+      - !type:Drunk
+        conditions:
+        - !type:ReagentThreshold
+          min: 15
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentThreshold
+          min: 35
+        damage:
+          types:
+            Poison: 0.01
+      - !type:ChemVomit
+        conditions:
+        - !type:ReagentThreshold
+          min: 50
+        probability: 0.05
+      - !type:PopupMessage
+        type: Local
+        visualType: Small
+        messages:
+          - "reagent-effect-forcecem-fade" # A decent chance to notify the player when their meds run out, but could happen silently.
+        probability: 0.35
+        conditions:
+          - !type:ReagentThreshold
+            max: 0.1

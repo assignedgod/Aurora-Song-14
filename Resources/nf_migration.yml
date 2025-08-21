@@ -546,8 +546,8 @@ WeaponRevolverLucky: NFWeaponRevolverLucky
 WeaponRevolverMateba: NFWeaponRevolverWard45
 WeaponRevolverMatebaAP: NFWeaponRevolverWard45
 WeaponRevolverPirate: NFWeaponRevolverPirate
-WeaponRevolverPython: NFWeaponRevolverRitland45
-WeaponRevolverPythonAP: NFWeaponRevolverRitland45
+WeaponRevolverPython: NFWeaponRevolverPython45
+WeaponRevolverPythonAP: NFWeaponRevolverPython45
 WeaponRifleAk: NFWeaponRifleAssaultSm
 WeaponRifleFoam: NFWeaponRifleFoam
 WeaponRifleGestio: NFWeaponRifleAssaultGestio
@@ -597,13 +597,21 @@ LockerWallChemistryFilled: LockerWallColorChemistryFilled
 LockerWallMedical: LockerWallColorMedical
 LockerWallMedicalFilled: LockerWallColorMedicalFilled
 
+# 2025-05-29 Frontier Scrap Processor Buff
+SpawnRandomRefinedScrap: SpawnRandomScrapMaterial
+
 # 2025-06-06 Lockers migration, add lockers to this list
 LockerScientist: NFLockerScientist
 LockerScienceFilled: NFLockerScienceFilled
 
-# 2025-07-01 | Aurora: M90 refactored to no longer have useless GL
-NFWeaponRifleAssaultM90GrenadeLauncher: NFWeaponRifleAssaultM90
 # 2025-06-07 The Great Charger Debacle
 PowerCellRechargerFlatpack: WeaponCapacitorRechargerFlatpack
 PowerCellRecharger: WeaponCapacitorRecharger
 CellRechargerCircuitboard: WeaponCapacitorRechargerCircuitboard
+
+# 2025-07-15 Upstream hardsuit changes
+SuitStorageWallmountBasic: SuitStorageWallmountEVA
+
+# 2025-07-01 | Aurora: M90 refactored to no longer have useless GL
+NFWeaponRifleAssaultM90GrenadeLauncher: NFWeaponRifleAssaultM90
+

@@ -46,7 +46,7 @@
 
 - type: entity
   id: NFBaseWeaponFrameRifleAssaultCybersun
-  parent: [ BaseC3SyndicateContraband, NFBaseWeaponFrameRifleAssault ]
+  parent: [ BaseC2ContrabandUnredeemable, NFBaseWeaponFrameRifleAssault ]
   abstract: true
   components:
   - type: Gun
@@ -244,7 +244,7 @@
       gun_chamber: *chamber30Rubber
 
 - type: entity
-  id: HLBaseWeaponRifleAssaultChamber25
+  id: ASBaseWeaponRifleAssaultChamber25
   parent: NFBaseWeaponRifleAssaultChamber
   abstract: true
   components:
@@ -256,13 +256,13 @@
     slots:
       gun_magazine:
         name: Magazine
-        startingItem: HLMagazineCaselessRifle
+        startingItem: ASMagazineCaselessRifle
         insertSound: /Audio/Weapons/Guns/MagIn/batrifle_magin.ogg
         ejectSound: /Audio/Weapons/Guns/MagOut/batrifle_magout.ogg
         priority: 2
         whitelist:
           tags:
-            - HLMagazineCaselessRifle
+            - ASMagazineCaselessRifle
         whitelistFailPopup: gun-magazine-whitelist-fail
       gun_chamber:
         name: Chamber

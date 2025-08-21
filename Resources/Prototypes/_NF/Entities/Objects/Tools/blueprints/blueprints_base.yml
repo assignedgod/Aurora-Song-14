@@ -89,7 +89,6 @@
   - type: Blueprint
     providedRecipes: []
 
-# region Generic
 - type: entity
   parent: NFBaseBlueprint
   id: NFBaseBlueprintFaxable
@@ -321,7 +320,7 @@
   parent: NFBaseBlueprintFaxable
   id: NFBlueprintArsenalMercenary
   name: combat blueprint
-  description: A blueprint with combat schematics on it. It can be inserted into an NFSD or mercenary techfab or sent via fax.
+  description: A blueprint with combat schematics on it. It can be inserted into an SLE or mercenary techfab or sent via fax.
   categories: [HideSpawnMenu, DoNotMap]
   components:
   - type: Sprite
@@ -358,7 +357,7 @@
   parent: NFBaseBlueprintFaxable
   id: NFBlueprintArsenalNfsd
   name: restricted combat blueprint
-  description: A blueprint with combat schematics on it. It can be inserted into an NFSD techfab or sent via fax.
+  description: A blueprint with combat schematics on it. It can be inserted into an SLE techfab or sent via fax.
   categories: [HideSpawnMenu, DoNotMap]
   components:
   - type: Sprite

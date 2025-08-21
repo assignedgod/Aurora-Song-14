@@ -48,15 +48,13 @@
   parent: [ NFBaseWeaponFramePka ]
   abstract: true
   components:
-  # Effective range ~8 tiles on wield
+  # Effective range ~12 tiles on wield
   - type: Wieldable
     unwieldOnUse: false
   - type: GunWieldBonus
     minAngle: -35
     maxAngle: -35
   - type: Gun
-    #minAngle: 36.4
-    #maxAngle: 49.2
     fireRate: 0.5
   - type: NFWeaponDetails
     manufacturer: weapon-details-manufacturer-nanotrasen-munitions

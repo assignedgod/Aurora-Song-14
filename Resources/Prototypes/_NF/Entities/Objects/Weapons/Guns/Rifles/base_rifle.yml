@@ -12,10 +12,10 @@
     maxAngle: -0
   - type: Gun
     projectileSpeed: 30
-    minAngle: 2.2
-    maxAngle: 6.6
-    angleIncrease: 2
-    angleDecay: 3
+    minAngle: 1.8
+    maxAngle: 9
+    angleIncrease: 0.5
+    angleDecay: 2.5
     fireRate: 3
     selectedMode: SemiAuto
     availableModes:
@@ -36,24 +36,24 @@
   abstract: true
   components:
   - type: Gun
-    minAngle: 3
-    maxAngle: 9
-    angleIncrease: 2
-    angleDecay: 3
-    fireRate: 2
+    minAngle: 2.2
+    maxAngle: 11
+    angleIncrease: 1.1
+    angleDecay: 3.5
+    fireRate: 2.4
   - type: NFWeaponDetails
     manufacturer: weapon-details-manufacturer-frontier-gunsmith-consortium
 
 - type: entity
   id: NFBaseWeaponFrameRifleSteelbolt
-  parent: [ BaseC3PirateContraband, NFBaseWeaponFrameRifle ]
+  parent: [ BaseC2ContrabandUnredeemable, NFBaseWeaponFrameRifle ]
   abstract: true
   components:
   - type: Gun
-    minAngle: 4
-    maxAngle: 12
-    angleIncrease: 3
-    angleDecay: 3
+    minAngle: 2
+    maxAngle: 10
+    angleIncrease: 1
+    angleDecay: 3.5
     fireRate: 3
   - type: NFWeaponDetails
     manufacturer: weapon-details-manufacturer-steelbolt-tool-forge

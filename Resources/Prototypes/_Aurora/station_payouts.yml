@@ -96,3 +96,14 @@
   id: cadetPay
   payPerHour: 15000
   job: Cadet
+
+#Edison
+- type: stationPay
+  id: TechnicianPay
+  payPerHour: 15000
+  job: PlantTechnician
+
+- type: stationPay
+  id: managerPay
+  payPerHour: 30000
+  job: PlantManager

@@ -1,13 +1,15 @@
 using Content.Server.Body.Components;
 using Content.Server.Body.Systems;
+using Content.Shared._DEN.Unrotting;
 using Content.Shared.Chemistry.Components;
 using Content.Shared.Devour;
 using Content.Shared.Devour.Components;
 using Content.Shared.Humanoid;
+using Content.Shared.Mobs;
 
 namespace Content.Server.Devour;
 
-public sealed class DevourSystem : SharedDevourSystem
+public sealed partial class DevourSystem : SharedDevourSystem
 {
     [Dependency] private readonly BloodstreamSystem _bloodstreamSystem = default!;
 
@@ -17,6 +19,7 @@ public sealed class DevourSystem : SharedDevourSystem
 
         SubscribeLocalEvent<DevourerComponent, DevourDoAfterEvent>(OnDoAfter);
         SubscribeLocalEvent<DevourerComponent, BeingGibbedEvent>(OnGibContents);
+        SubscribeLocalEvent<DragonUnrottingComponent, MobStateChangedEvent>(OnMobStateChanged);
     }
 
     private void OnDoAfter(EntityUid uid, DevourerComponent component, DevourDoAfterEvent args)

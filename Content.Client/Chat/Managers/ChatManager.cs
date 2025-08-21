@@ -61,9 +61,13 @@ internal sealed class ChatManager : IChatManager
                 _consoleHost.ExecuteCommand($"subtle \"{CommandParsing.Escape(str)}\"");
                 break;
 
-            case ChatSelectChannel.Dead:
-                if (_systems.GetEntitySystemOrNull<GhostSystem>() is {IsGhost: true})
-                    goto case ChatSelectChannel.Local;
+                case ChatSelectChannel.SubtleOOC: // Den
+                    _consoleHost.ExecuteCommand($"subtleooc \"{CommandParsing.Escape(str)}\"");
+                    break;
+
+                case ChatSelectChannel.Dead:
+                    if (_systems.GetEntitySystemOrNull<GhostSystem>() is {IsGhost: true})
+                        goto case ChatSelectChannel.Local;
 
                 if (_adminMgr.HasFlag(AdminFlags.Admin))
                     _consoleHost.ExecuteCommand($"dsay \"{CommandParsing.Escape(str)}\"");

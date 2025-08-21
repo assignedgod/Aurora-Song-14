@@ -34,6 +34,7 @@ using Content.Shared.Throwing;
 using Content.Shared.Whitelist;
 using Content.Shared.Wires;
 using Robust.Server.GameObjects;
+using Robust.Shared.Configuration;
 using Robust.Shared.Containers;
 using Robust.Shared.Player;
 using Robust.Shared.Random;
@@ -49,6 +50,7 @@ public sealed partial class BorgSystem : SharedBorgSystem
 {
     [Dependency] private readonly IAdminLogManager _adminLog = default!;
     [Dependency] private readonly IBanManager _banManager = default!;
+    [Dependency] private readonly IConfigurationManager _cfgManager = default!;
     [Dependency] private readonly IGameTiming _timing = default!;
     [Dependency] private readonly IRobustRandom _random = default!;
     [Dependency] private readonly ActionsSystem _actions = default!;
@@ -127,10 +129,9 @@ public sealed partial class BorgSystem : SharedBorgSystem
         if (component.BrainEntity == null && brain != null &&
             _whitelistSystem.IsWhitelistPassOrNull(component.BrainWhitelist, used))
         {
-            if (_mind.TryGetMind(used, out _, out var mind) &&
-                _player.TryGetSessionById(mind.UserId, out var session))
+            if (_mind.TryGetMind(used, out _, out var mind) && mind.Session != null)
             {
-                if (!CanPlayerBeBorged(session))
+                if (!CanPlayerBeBorged(mind.Session))
                 {
                     Popup.PopupEntity(Loc.GetString("borg-player-not-allowed"), used, args.User);
                     return;
@@ -152,7 +153,7 @@ public sealed partial class BorgSystem : SharedBorgSystem
             args.Handled = true;
             UpdateUI(uid, component);
         }
-        
+
         // Corvax-Next-AiRemoteControl-Start
         if (component.BrainEntity == null && aiBrain != null &&
     _whitelistSystem.IsWhitelistPassOrNull(component.BrainWhitelist, used))
@@ -168,7 +169,7 @@ public sealed partial class BorgSystem : SharedBorgSystem
         }
         // Corvax-Next-AiRemoteControl-End
     }
-    
+
 
     /// <summary>
     /// Inserts a new module into a borg, the same as if a player inserted it manually.
@@ -300,11 +301,10 @@ public sealed partial class BorgSystem : SharedBorgSystem
             container.ID != chassisComponent.BrainContainerId)
             return;
 
-        if (!_mind.TryGetMind(uid, out var mindId, out var mind) ||
-            !_player.TryGetSessionById(mind.UserId, out var session))
+        if (!_mind.TryGetMind(uid, out var mindId, out var mind) || mind.Session == null)
             return;
 
-        if (!CanPlayerBeBorged(session))
+        if (!CanPlayerBeBorged(mind.Session))
         {
             Popup.PopupEntity(Loc.GetString("borg-player-not-allowed-eject"), uid);
             Container.RemoveEntity(containerEnt, uid);

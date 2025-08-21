@@ -22,3 +22,28 @@
 - type: storeCategory
   id: UplinkMercenaryExplosives
   name: store-category-mercenaryexplosives
+
+#exchange
+- type: storeCategory
+  id: UplinkExchangeBundles
+  name: store-category-exchangebundles
+
+- type: storeCategory
+  id: UplinkExchangeHardsuits
+  name: store-category-exchangehardsuits
+
+- type: storeCategory
+  id: UplinkExchangeWeapons
+  name: store-category-exchangeweapons
+
+- type: storeCategory
+  id: UplinkExchangeAmmo
+  name: store-category-exchangeammo
+
+- type: storeCategory
+  id: UplinkExchangeUtility
+  name: store-category-exchangeutility
+
+- type: storeCategory
+  id: UplinkExchangeExplosives
+  name: store-category-exchangeexplosives

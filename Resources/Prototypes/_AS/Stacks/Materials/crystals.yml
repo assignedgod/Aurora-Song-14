@@ -3,3 +3,9 @@
   name: stack-aurora-merc-coin
   icon: _AS/Objects/Specific/Mercenary/merc_coin.rsi
   spawn: MercCoin1
+
+- type: stack
+  id: ExchangeCoin
+  name: stack-aurora-exchange-coin
+  icon: _AS/Objects/Specific/Mercenary/merc_coin.rsi
+  spawn: ExchangeCoin1

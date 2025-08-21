@@ -48,14 +48,18 @@
   id: NfsdAmmoStatic
   recipes:
   # Ammo boxes
-  - NFAmmunitionBoxShellShotgunBuckshot
+  #- NFAmmunitionBoxShellShotgunOverpressure
   - NFAmmunitionBoxShellShotgunSlug
   - NFAmmunitionBoxShellShotgunBeanbag
   - NFAmmunitionBoxRifle20
+  - NFAmmunitionBoxBigRifle20
   - NFAmmunitionBoxRifle20Overpressure
+  - NFAmmunitionBoxBigRifle20Overpressure
   - NFAmmunitionBoxRifle20Rubber
   - NFAmmunitionBoxRifle30
+  - NFAmmunitionBoxBigRifle30
   - NFAmmunitionBoxRifle30Overpressure
+  - NFAmmunitionBoxBigRifle30Overpressure
   - NFAmmunitionBoxRifle30Rubber
   - NFAmmunitionBoxPistol35
   - NFAmmunitionBoxPistol35Overpressure

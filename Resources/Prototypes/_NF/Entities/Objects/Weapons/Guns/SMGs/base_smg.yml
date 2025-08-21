@@ -8,8 +8,8 @@
   - type: Wieldable
     unwieldOnUse: false
   - type: GunWieldBonus
-    minAngle: -2.1
-    maxAngle: -6.3
+    minAngle: -0.8
+    maxAngle: -4
   - type: Gun
     projectileSpeed: 30
     minAngle: 4.2
@@ -32,9 +32,6 @@
   parent: NFBaseWeaponFrameSubMachineGun
   abstract: true
   components:
-  - type: GunWieldBonus
-    minAngle: -1.7
-    maxAngle: -7.5
   - type: Gun
     minAngle: 6.7
     maxAngle: 17
@@ -46,16 +43,16 @@
 
 - type: entity
   id: NFBaseWeaponFrameSubMachineGunCybersun
-  parent: [ BaseC3SyndicateContraband, NFBaseWeaponFrameSubMachineGun ]
+  parent: [ BaseC2ContrabandUnredeemable, NFBaseWeaponFrameSubMachineGun ]
   abstract: true
   components:
   - type: GunWieldBonus
     minAngle: -4.2
     maxAngle: -7.3
   - type: Gun
-    minAngle: 12.2
-    maxAngle: 21.6
-    angleIncrease: 0.5
+    minAngle: 4
+    maxAngle: 21
+    angleIncrease: 1
     angleDecay: 2
     fireRate: 7
     burstCooldown: 0.5
@@ -69,7 +66,7 @@
 
 - type: entity
   id: NFBaseWeaponFrameSubMachineGunGorlex
-  parent: [ BaseC3SyndicateContraband, NFBaseWeaponFrameSubMachineGun ]
+  parent: [ BaseC2ContrabandUnredeemable, NFBaseWeaponFrameSubMachineGun ]
   abstract: true
   components:
   - type: GunWieldBonus
@@ -90,9 +87,6 @@
   parent: [ NFBaseWeaponFrameSubMachineGun ]
   abstract: true
   components:
-  - type: GunWieldBonus
-    minAngle: -1.8
-    maxAngle: -6.5
   - type: Gun
     minAngle: 6.7
     maxAngle: 21

@@ -9,3 +9,17 @@
   - type: ComputerBoard
     prototype: ComputerTaskConsole
   - type: StaticPrice
+- type: entity
+  parent: [BaseComputerCircuitboard, BaseC2ContrabandUnredeemable] # Frontier: BaseGrandTheftContraband<BaseC2ContrabandUnredeemable
+  id: LicenseComputerCircuitboard
+  name: License computer board
+  description: A computer printed circuit board for an License console.
+  components:
+    - type: Sprite
+      state: cpu_command
+    - type: ComputerBoard
+      prototype: ComputerLicenseConsole
+    - type: Tag
+      tags:
+      - DroneUsable
+      - HighRiskItem

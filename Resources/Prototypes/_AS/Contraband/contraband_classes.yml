@@ -1,0 +1,15 @@
+# Unregistered contraband. Can be registered by aurora police to become C2.
+- type: contrabandSeverity
+  id: Class2Unregistered
+  examineText: contraband-examine-text-Class2Unregistered
+  showDepartmentsAndJobs: false
+
+# Should not be redeemed for SCUs
+- type: entity
+  id: C2ContrabandUnregistered
+  abstract: true
+  components:
+  - type: Contraband
+    severity: Class2Unregistered
+    turnInValues: &twoFUC
+      FrontierUplinkCoin: 2

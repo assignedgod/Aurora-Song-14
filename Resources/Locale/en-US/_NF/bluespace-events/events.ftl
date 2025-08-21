@@ -9,11 +9,11 @@ station-event-bluespace-scrap-end-announcement = Critical bluespace instability 
 
 station-event-bluespace-vault-start-announcement = A NanoTrasen armored vault is inbound to the sector. The SLE may declare the vault a No Fly Zone. NanoTrasen will pay good money for its contents to be safegaurded until its exit window arrives.
 station-event-bluespace-vault-warning-announcement = Remote FTL procedures initialized, five minutes until vault FTL.
-station-event-bluespace-vault-end-announcement = The vault has been retrieved from your sector. Station accounts have been paid.
+station-event-bluespace-vault-end-announcement = The vault has been retrieved from the sector. Station accounts have been paid.
 
 station-event-bluespace-cache-start-announcement = A Syndicate weapons cache is inbound to the sector. The SLE may declare the cache a NFZ. Cybersun will pay handsomely for its contents to be safeguarded until its FTL window arrives.
 station-event-bluespace-cache-warning-announcement = Remote FTL procedures initialized, five minutes until FTL.
-station-event-bluespace-cache-end-announcement = We have retrieved the cache has been retrieved. Station accounts have been paid.
+station-event-bluespace-cache-end-announcement = The cache has been retrieved from the sector. Station accounts have been paid.
 
 station-event-bluespace-asteroid-start-announcement = Long range scans indicate an unusually large asteroid entering the sector. Colonial Command advises prospectors to divert operations for maximum profit potential.
 station-event-bluespace-asteroid-warning-announcement = Bluespace instability detected on asteroid, five minutes until estimated departure.
@@ -35,9 +35,9 @@ station-event-bluespace-bloodmoon-start-announcement = Attention all available C
 station-event-bluespace-bloodmoon-warning-announcement = Remote FTL procedures initialized, five minutes until Blood Cult vessel dissipation.
 station-event-bluespace-bloodmoon-end-announcement = In compliance with Colonial FTL traffic patterns, the Blood Cult vessel has been dissipated to ensure non-collision.
 
-station-event-bluespace-generic-ftl-start-announcement = Attention all Colonial personnel! Colonial Naval Command has detected an unidentified vessel entering the Aurora Song Sector. Investigate with caution, Colonial command is not liable for damages sustained or loss of life.
-station-event-bluespace-generic-ftl-warning-announcement = Remote FTL procedures initialized, five minutes until unidentified vessel dissipation.
-station-event-bluespace-generic-ftl-end-announcement = In compliance with Colonial FTL traffic patterns, the unidentified vessel has been dissipated to ensure non-collision.
+station-event-bluespace-generic-ftl-start-announcement = Attention all Colonial citizens and/ or immigrants! Colonial Command has detected a flotilla of unidentified vessels entering the Aurora Sector illegally without IFF. As per Colonial Law, the belligerent vessels are now legal salvage for authorized personnel. Investigate with caution, Colonial Command is not liable for damages sustained or loss of life.
+station-event-bluespace-generic-ftl-warning-announcement = Remote FTL procedures initialized, five minutes until unidentified vessels dissipate.
+station-event-bluespace-generic-ftl-end-announcement = In compliance with Colonial FTL traffic patterns, the unidentified vessels have been dissipated to ensure non-collision.
 
 station-event-bluespace-name-BrokenMcDelivery = McDelivery
 station-event-bluespace-name-Cave = Cave

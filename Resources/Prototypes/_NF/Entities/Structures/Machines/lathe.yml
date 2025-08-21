@@ -154,8 +154,8 @@
 - type: entity
   id: NfsdTechFab
   parent: [ NFBlueprintReceiverBase, SecurityTechFab ]
-  name: NFSD techfab
-  description: Prints equipment for use by NFSD.
+  name: SLE techfab
+  description: Prints equipment for use by SLE.
   components:
   - type: Sprite
     sprite: _NF/Structures/Machines/techfab.rsi
@@ -215,6 +215,13 @@
     staticPacks:
     - NFMercenaryTechfabDeprecatedStatic
     - NfsdPracticeStatic
+    dynamicPacks:
+    - ScienceExplosives
+    - AdvancedTools
+    - NFPouches
+  - type: EmagLatheRecipes
+    emagStaticPacks:
+    - ASMercenaryEmag
   - type: BlueprintReceiver
     whitelist:
       tags:
@@ -397,7 +404,7 @@
   id: ScrapProcessor
   parent: BaseLatheLube
   name: scrap processor
-  description: It produces sheets and ingots using scrap.
+  description: This machine reclaims scrap into usable materials.
   components:
   - type: Sprite
     sprite: _NF/Structures/Machines/scrap_processor.rsi
@@ -423,7 +430,7 @@
     runningState: building
     unlitIdleState: unshaded
     unlitRunningState: building-unshaded
-    defaultProductionAmount: 10
+    defaultProductionAmount: 1
     productValueModifier: null
     staticPacks:
     - NFScrapStatic

@@ -1,0 +1,45 @@
+# Author Info
+# GitHub: Turtles Github
+# Discord: ???
+
+# Maintainer Info
+# GitHub: ???
+# Discord: ???
+
+# Shuttle Notes:
+#
+- type: vessel
+  id: Harvester
+  parent: BaseVessel
+  name: IAC Harvester
+  description: A simple gas mining vessel with room for expansion and hull reinforcements suitable for planetary travel.
+  price: 65000
+  category: Medium
+  group: Expedition
+  shuttlePath: /Maps/_AS/Shuttles/Expedition/harvester.yml
+  guidebookPage: Null
+  class:
+  - Expedition
+  - Atmospherics
+  engine:
+  - AME
+
+- type: gameMap
+  id: Harvester
+  mapName: 'KC Harvester'
+  mapPath: /Maps/_AS/Shuttles/Expedition/harvester.yml
+  minPlayers: 0
+  stations:
+    Harvester:
+      stationProto: StandardFrontierExpeditionVessel
+      components:
+      - type: StationNameSetup
+        mapNameTemplate: 'Harvester {1}'
+        nameGenerator:
+          !type:NanotrasenNameGenerator
+          prefixCreator: '14'
+      - type: StationJobs
+        availableJobs:
+          ContractorInterview: [ 0, 0 ]
+          PilotInterview: [ 0, 0 ]
+          MercenaryInterview: [ 0, 0 ]
