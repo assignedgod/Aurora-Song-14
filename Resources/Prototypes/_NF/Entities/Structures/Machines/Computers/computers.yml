@@ -124,6 +124,8 @@
   - type: ContrabandPalletConsole
   - type: ActivatableUI
     key: enum.ContrabandPalletConsoleUiKey.Contraband
+  - type: AccessReader
+    access: [["NFSD"]]
   - type: UserInterface
     interfaces:
       enum.ContrabandPalletConsoleUiKey.Contraband:

@@ -1,5 +1,6 @@
 using Content.Shared.Access;
 using Content.Shared.Stacks;
+using Robust.Shared.Audio;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototype;
 
@@ -16,7 +17,7 @@ public sealed partial class ContrabandPalletConsoleComponent : Component
     public EntProtoId RewardCashPrototype = "ExchangeCoin"; // SpaceCash5000 > ExchangeCoin | switched from cash to ExchangeCoin as economy experiment - Aurora
 
     [DataField]
-    public ProtoId<AccessLevelPrototype> AccessRequired = "Bailiff";
+    public SoundSpecifier ErrorSound = new SoundCollectionSpecifier("CargoError"); // Aurora: add deny sound
 
     [DataField]
     public string LicenseRequired = "contraband handling license";
