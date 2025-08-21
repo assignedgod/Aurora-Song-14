@@ -326,6 +326,8 @@ public sealed partial class ContrabandTurnInSystem : SharedContrabandTurnInSyste
 
     private bool CheckLicense(ContrabandPalletConsoleComponent console, EntityUid user) // Aurora
     {
+        if (console.LicenseRequired == null)
+            return true;
         if (!_inventory.TryGetSlotEntity(user, "id", out var slotEnt))
             return false;
         if (TryComp<LicenseComponent>(slotEnt, out var license) && license.LicenseName == console.LicenseRequired)

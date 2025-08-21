@@ -19,8 +19,11 @@ public sealed partial class ContrabandPalletConsoleComponent : Component
     [DataField]
     public SoundSpecifier ErrorSound = new SoundCollectionSpecifier("CargoError"); // Aurora: add deny sound
 
+    /// <summary>
+    /// Leave null for no licence required
+    /// </summary>
     [DataField]
-    public string LicenseRequired = "contraband handling license";
+    public string? LicenseRequired = "contraband handling license";
 
     [ViewVariables(VVAccess.ReadWrite), DataField(serverOnly: true)]
     public string Faction = "NFSD";

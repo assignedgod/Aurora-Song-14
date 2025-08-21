@@ -337,6 +337,7 @@
   - type: ContrabandPalletConsole
     cashType: Doubloon
     faction: Pirates
+    licenseRequired: Null
     locStringPrefix: pirate-
   - type: Destructible
     thresholds:
