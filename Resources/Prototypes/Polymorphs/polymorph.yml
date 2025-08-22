@@ -263,3 +263,15 @@
     revertOnDeath: true
     revertOnCrit: true
     duration: 30
+
+- type: polymorph #Aurora's Song polymorph prototype 
+  id: ChemicalBee
+  configuration:
+    entity: MobAngryBee
+    forced: true
+    transferName: true
+    transferHumanoidAppearance: true
+    inventory: None
+    revertOnDeath: true
+    revertOnCrit: true
+    duration: 40
