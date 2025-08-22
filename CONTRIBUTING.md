@@ -40,7 +40,7 @@ A single line comment on a changed yml field:
 - type: entity
   id: TorsoHarpy
   name: "harpy torso"
-  parent: [PartHarpy, BaseTorso] # Frontier: add BaseTorso
+  parent: [PartHarpy, BaseTorso] # Aurora Song: add BaseTorso
 ```
 
 A change to a value (note: `OLD<NEW`)
