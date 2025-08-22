@@ -239,7 +239,6 @@
     effectProto: EffectDesynchronizer
 
 # moth stuff here don't use if something breaks
-
 - type: polymorph #Aurora's Song polymorph prototype
   id: ChemicalMothroach
   configuration:
@@ -252,7 +251,7 @@
     revertOnCrit: true
     duration: 30
 
-- type: polymorph #Aurora's Song polymorph prototype 
+- type: polymorph #Aurora's Song polymorph prototype
   id: ChemicalFelinid
   configuration:
     entity: MobChemFelinid
@@ -264,7 +263,7 @@
     revertOnCrit: true
     duration: 30
 
-- type: polymorph #Aurora's Song polymorph prototype 
+- type: polymorph #Aurora's Song polymorph prototype
   id: ChemicalBee
   configuration:
     entity: MobAngryBee

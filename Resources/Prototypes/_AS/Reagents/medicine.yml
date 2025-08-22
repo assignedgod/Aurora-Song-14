@@ -38,7 +38,6 @@
         messages: [ "reagent-effect-testosterone" ]
         probability: 0.2
 
-
 - type: reagent #Aurora Polymorph Chem
   id: Mothrazine
   name: reagent-name-mothrazine
@@ -68,7 +67,6 @@
           conditions:
             - !type:ReagentThreshold
               min: 10
-              
 
 - type: reagent #Aurora Polymorph Chem
   id: Catgirlium

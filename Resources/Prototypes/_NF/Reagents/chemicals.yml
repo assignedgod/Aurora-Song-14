@@ -6,7 +6,6 @@
   color: "#EEEEEE"
 
 # don't use past here if something breaks
-
 - type: reagent #Aurora Chem
   id: Mothrazine
   name: reagent-name-mothrazine
@@ -36,7 +35,6 @@
           conditions:
             - !type:ReagentThreshold
               min: 10
-              
 
 - type: reagent #Aurora Chem
   id: Catgirlium

@@ -35,7 +35,7 @@
   products:
       Mothrazine: 2
 
-- type: reaction #Aurora Polymorph chem 
+- type: reaction #Aurora Polymorph chem
   id: Catgirlium
   impact: Medium
   reactants:
@@ -48,8 +48,7 @@
     Acetone:
       amount: 1
   products:
-      Catgirlium: 3 
-
+      Catgirlium: 3
 
 - type: reaction #Aurora Polymorph chem, wip
   id: Davisicium
