@@ -119,9 +119,9 @@
       tags:
       - NukeOpsUplink
       - ExfiltratorUplink
-  - !type:BuyerJobCondition
-    whitelist:
-      - CellCommander
     blacklist:
       components:
         - SurplusBundle
+  - !type:BuyerJobCondition
+    whitelist:
+      - CellCommander
