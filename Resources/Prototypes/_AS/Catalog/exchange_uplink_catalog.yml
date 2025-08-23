@@ -100,10 +100,10 @@
   id: UplinkExchangeSpesos2
   name:  uplink-exchange-spesos2-name
   description: uplink-exchange-spesos2-desc
-  productEntity: SpaceCash50000
+  productEntity: SpaceCash25000
   #icon: { sprite: , state: icon }
   cost:
-    ExchangeCoin: 10
+    ExchangeCoin: 5
   categories:
   - UplinkExchangeUtility
   conditions:
