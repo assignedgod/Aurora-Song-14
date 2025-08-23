@@ -2,10 +2,11 @@ nsfw-disclaimer-title = ⚠️ Adult Only Server ⚠️
 nsfw-disclaimer-text =
     This server contains mature themes and allows roleplay scenarios that are not suitable for minors.
 
-    We aim to ensure you do not ever see anything you don't wish to, such as erotic roleplay and/or heavy or uncomfortable topics. 
-    If you do ever encounter such themes without your consent, you are encouraged to report your consent being broken to an admin.
+    We aim to ensure that player consent and comfort is respected, however please be aware that we cannot guarantee
+    you will not encounter content that you find distressing due to the nature of the mature roleplay environment.
+    And so provide an X-Card feature in the consent menu to allow you to 'tap out' of any mature scene you find uncomfortable.
 
-    Due to our server allowing ERP in private and ONLY in private, you must be 18 or older to play on The Den.
+    Due to our server allowing adult content both of erotic and violent nature, you must be 18 years of age or older to enter.
     By clicking accept & continue, you affirm you are 18 years of age or older.
 
 nsfw-disclaimer-decline = Decline & exit
