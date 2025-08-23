@@ -699,7 +699,7 @@
     damageCoefficient: 0.1
 
 - type: entity
-  parent: ClothingBeltMilitaryWebbing
+  parent: [NFClothingBeltStorageBase, ContentsExplosionResistanceBase, BaseC1Contraband]
   id: ClothingBeltMilitaryWebbingMed
   name: medical chest rig
   description: A set of tactical webbing worn by medic operatives. # Frontier
