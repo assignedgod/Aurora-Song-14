@@ -129,6 +129,7 @@
   equipment:
     mask: ClothingMaskBreathMedicalSecurity
 
+# IPC
 - type: loadoutEffectGroup
   id: HumanoidSilicon
   effects:

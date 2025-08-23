@@ -48,6 +48,8 @@
     - NFMagazineHighCapacityPistol35Rubber
     - BaseSecurityUplinkRadioOfficer
     - ShipVoucherNfsdSergeant
+  licenses:
+  - LicenseContrabandHandling
 
 - type: chameleonOutfit
   id: SeniorOfficerChameleonOutfit

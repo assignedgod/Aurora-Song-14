@@ -50,3 +50,15 @@
 - type: font
   id: Helvetica
   path: /Fonts/Helvetica/Helvetica-Bold.ttf
+
+- type: font
+  id: Sriracha
+  path: /Fonts/Sriracha/Sriracha.ttf
+
+- type: font
+  id: GrenzeGotisch
+  path: /Fonts/Grenze_Gotisch/GrenzeGotisch.ttf
+
+- type: font
+  id: RubikDirt
+  path: /Fonts/Rubik_Dirt/RubikDirt.ttf

@@ -56,6 +56,8 @@
     - BaseSecurityUplinkRadioOfficer
     - ShipVoucherNfsdBailiff
     - RubberStampBailiff
+  licenses:
+  - LicenseContrabandHandling
 
 - type: chameleonOutfit
   id: BailiffChameleonOutfit

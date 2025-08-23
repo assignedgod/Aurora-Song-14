@@ -124,6 +124,8 @@
   - type: ContrabandPalletConsole
   - type: ActivatableUI
     key: enum.ContrabandPalletConsoleUiKey.Contraband
+  - type: AccessReader
+    access: [["Security"]]
   - type: UserInterface
     interfaces:
       enum.ContrabandPalletConsoleUiKey.Contraband:
@@ -335,6 +337,7 @@
   - type: ContrabandPalletConsole
     cashType: Doubloon
     faction: Pirates
+    licenseRequired: Null
     locStringPrefix: pirate-
   - type: Destructible
     thresholds:
