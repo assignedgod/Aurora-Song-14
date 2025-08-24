@@ -3,7 +3,7 @@
   name: reagent-name-estrogen
   group: Medicine
   desc: reagent-desc-estrogen
-  physicalDesc: reagent-physical-desc-girly
+  physicalDesc: reagent-physical-desc-clear
   flavor: bitter
   color: "#f7b9cd"
   metabolisms:
