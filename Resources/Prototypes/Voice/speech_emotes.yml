@@ -464,12 +464,13 @@
   category: Vocal
   icon: Interface/Emotes/ping.png
   whitelist:
-    components:
-    - BorgChassis
-    - Silicon # DeltaV - Removes 'requireAll' component and adds IPCs to whitelist
+    tags:
+    - SiliconEmotes
+    #- HarpyEmotes
   chatMessages: ["chat-emote-msg-ping"]
   chatTriggers:
     - ping
     - pings
     - pinged
     - pinging
+

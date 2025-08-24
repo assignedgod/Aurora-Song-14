@@ -11,10 +11,10 @@
   components:
   - type: Sprite
     sprite: _EinsteinEngines/Mobs/Species/Shadowkin/parts.rsi
-    state: "chest_m"
+    state: "torso_m"
   - type: Icon
     sprite: _EinsteinEngines/Mobs/Species/Shadowkin/parts.rsi
-    state: "chest_m"
+    state: "torso_m"
   - type: Extractable
     juiceSolution:
       reagents:
@@ -29,9 +29,9 @@
   parent: [PartShadowkin, BaseTorso]
   components:
     - type: Sprite
-      state: "chest_m"
+      state: "torso_m"
     - type: Icon
-      state: "chest_m"
+      state: "torso_m"
 
 #- type: entity # Aurora: We don't have these lol
 #  id: GroinShadowkin

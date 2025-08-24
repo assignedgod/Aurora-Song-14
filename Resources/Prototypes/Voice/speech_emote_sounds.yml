@@ -247,8 +247,97 @@
       collection: Belch # Frontier
   params:
     variation: 0.125
+    # End Of Aurora's Song port of Imp Slime Sounds
+- type: emoteSounds
+  id: MaleShadowkin
+  params:
+    variation: 0.125
+  sounds: # Den shadowkin sounds
+    Scream:
+      collection: ShadowkinMaleScreams
+    Laugh:
+      collection: ShadowkinMaleLaughs
+      params:
+        pitch: 1.02
+        variation: 0.08
+    Sneeze:
+      collection: MaleSneezes
+    Cough:
+      collection: MaleCoughs
+    Yawn:
+      collection: MaleYawn
+    Snore:
+      collection: Snores
+    Honk:
+      collection: BikeHorn
+    Sigh:
+      collection: MaleSigh
+    Crying:
+      collection: MaleCry
+    Whistle:
+      collection: Whistles
+    Weh:
+      collection: Weh
+    Hiss:
+      collection: FelinidHisses
+    Meow:
+      collection: FelinidMeows
+    Mew:
+      collection: FelinidMews
+    Growl:
+      collection: FelinidGrowls
+    Purr:
+      collection: FelinidPurrs
+    Mars:
+      collection: Mars
+    Wurble:
+      collection: Wurble
 
-# End Of Aurora's Song port of Imp Slime Sounds
+
+- type: emoteSounds
+  id: FemaleShadowkin
+  params:
+    variation: 0.125
+  sounds:
+    Scream:
+      collection: ShadowkinFemaleScreams
+    Laugh:
+      collection: ShadowkinFemaleLaughs
+      params:
+        pitch: 1.04
+        variation: 0.08
+    Sneeze:
+      collection: FemaleSneezes
+    Cough:
+      collection: FemaleCoughs
+    Yawn:
+      collection: FemaleYawn
+    Snore:
+      collection: Snores
+    Honk:
+      collection: BikeHorn
+    Sigh:
+      collection: FemaleSigh
+    Crying:
+      collection: FemaleCry
+    Whistle:
+      collection: Whistles
+    Weh:
+      collection: Weh
+    Hiss:
+      collection: FelinidHisses
+    Meow:
+      collection: FelinidMeows
+    Mew:
+      collection: FelinidMews
+    Growl:
+      collection: FelinidGrowls
+    Purr:
+      collection: FelinidPurrs
+    Mars:
+      collection: Mars
+    Wurble:
+      collection: Wurble # End Den Sounds
 
 - type: emoteSounds
   id: UnisexVox

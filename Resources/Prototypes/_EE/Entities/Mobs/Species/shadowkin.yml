@@ -1,7 +1,7 @@
 - type: entity
   save: false
   parent:
-  - BaseMobSpeciesOrganic
+  - BaseMobSpeciesOrganicNoBreathing # Remove breathing
   id: MobShadowkinBase
   name: Urist McShadow
   abstract: true
@@ -22,21 +22,21 @@
             #    EffectFlashShadowkinShadeskip:
             #      min: 1
             #      max: 1
-        - trigger:
-            !type:DamageTypeTrigger
-            damageType: Heat
-            damage: 1500
-          behaviors:
-            - !type:SpawnEntitiesBehavior
-              spawnInContainer: true
-              spawn:
-                Ash:
-                  min: 1
-                  max: 1
-            - !type:BurnBodyBehavior {}
-            - !type:PlaySoundBehavior
-              sound:
-                collection: MeatLaserImpact
+        # trigger: #Aurora: No ashing
+        #   !type:DamageTypeTrigger
+        #   damageType: Heat
+        #   damage: 1500
+        # behaviors:
+        #   - !type:SpawnEntitiesBehavior
+        #     spawnInContainer: true
+        #     spawn:
+        #       Ash:
+        #         min: 1
+        #         max: 1
+        #   - !type:BurnBodyBehavior {}
+        #   - !type:PlaySoundBehavior
+        #     sound:
+        #       collection: MeatLaserImpact
     - type: PassiveDamage # Slight passive regen. Assuming one damage type, comes out to about 4 damage a minute.
       allowedStates:
         - Alive
@@ -58,7 +58,7 @@
     - type: Perishable
     - type: FireVisuals
       alternateState: Standing
-    - type: Crawler
+    - type: Crawler # Aurora: Add crawling
     - type: Hunger
     - type: Thirst
     - type: Carriable
