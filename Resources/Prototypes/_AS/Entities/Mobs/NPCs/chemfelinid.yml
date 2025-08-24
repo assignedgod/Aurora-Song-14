@@ -6,7 +6,8 @@
   components:
   - type: RandomHumanoidAppearance
   - type: Grammar
-    proper: true
-    gender: female
+    attributes:
+      proper: true
+      gender: female
   - type: Speech
     speechVerb: Felinid

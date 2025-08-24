@@ -1,10 +1,10 @@
 # These two dont actually do anything, theyre just here for rp
-# - type: reagent Aurora Song Commented out
-#   id: Estradiol
-#   name: reagent-name-estradiol
-#   desc: reagent-desc-estradiol
-#   physicalDesc: reagent-physical-desc-clear
-#   color: "pink"
+- type: reagent
+  id: Estradiol
+  name: reagent-name-estradiol
+  desc: reagent-desc-estradiol
+  physicalDesc: reagent-physical-desc-clear
+  color: "pink"
 
 # - type: reagent
 #   id: Testosterone

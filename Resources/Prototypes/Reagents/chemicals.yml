@@ -185,4 +185,3 @@
         key: Adrenaline
         component: IgnoreSlowOnDamage
         time: 120
-# don't use past here if something breaks

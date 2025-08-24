@@ -238,7 +238,6 @@
     duration: 120
     effectProto: EffectDesynchronizer
 
-# moth stuff here don't use if something breaks
 - type: polymorph #Aurora's Song polymorph prototype
   id: ChemicalMothroach
   configuration:
