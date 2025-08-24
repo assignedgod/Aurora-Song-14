@@ -6,9 +6,9 @@
   physicalDesc: reagent-physical-desc-clear
   color: "pink"
 
-# - type: reagent
-#   id: Testosterone
-#   name: reagent-name-testosterone
-#   desc: reagent-desc-testosterone
-#   physicalDesc: reagent-physical-desc-chalky
-#   color: "#267ef0"
+- type: reagent
+  id: Testosterone
+  name: reagent-name-testosterone
+  desc: reagent-desc-testosterone
+  physicalDesc: reagent-physical-desc-chalky
+  color: "#267ef0"

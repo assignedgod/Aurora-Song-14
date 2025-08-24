@@ -1,44 +1,4 @@
-﻿- type: reagent
-  id: Estrogen
-  name: reagent-name-estrogen
-  group: Medicine
-  desc: reagent-desc-estrogen
-  physicalDesc: reagent-physical-desc-clear
-  flavor: bitter
-  color: "#f7b9cd"
-  metabolisms:
-    Medicine:
-      effects:
-      - !type:PopupMessage
-        conditions:
-        - !type:ReagentThreshold
-          min: 15
-        type: Local
-        visualType: Medium
-        messages: [ "reagent-effect-estrogen" ]
-        probability: 0.2
-
-- type: reagent
-  id: Testosterone
-  name: reagent-name-testosterone
-  group: Medicine
-  desc: reagent-desc-testosterone
-  physicalDesc: reagent-physical-desc-fizzy
-  flavor: bitter
-  color: "#b9dcf7"
-  metabolisms:
-    Medicine:
-      effects:
-      - !type:PopupMessage
-        conditions:
-        - !type:ReagentThreshold
-          min: 15
-        type: Local
-        visualType: Medium
-        messages: [ "reagent-effect-testosterone" ]
-        probability: 0.2
-
-- type: reagent #Aurora Polymorph Chem
+﻿- type: reagent #Aurora Polymorph Chem
   id: Mothrazine
   name: reagent-name-mothrazine
   group: Toxins
@@ -84,7 +44,7 @@
           emote: Meow
           showInChat: true
           force: true
-          probability: 0.18
+          probability: 0.09
         - !type:Polymorph
           prototype: ChemicalFelinid
           conditions:
