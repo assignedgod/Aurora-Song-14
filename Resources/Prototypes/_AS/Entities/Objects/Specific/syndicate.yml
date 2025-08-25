@@ -18,3 +18,11 @@
   - type: RadioImplant
     radioChannels:
     - Exfiltrator
+
+- type: entity
+  id: RadioImplanterExfil
+  name: Exfiltrator radio implanter
+  parent: BaseImplantOnlyImplanterSyndi
+  components:
+  - type: Implanter
+    implant: RadioImplantExfiltrator

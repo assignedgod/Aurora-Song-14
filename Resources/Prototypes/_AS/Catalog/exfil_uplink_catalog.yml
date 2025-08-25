@@ -82,7 +82,7 @@
   name: uplink-syndieradioimplant-name
   description: uplink-syndieradioimplant-desc
   icon: { sprite: /Textures/Objects/Devices/encryption_keys.rsi, state: synd_label}
-  productEntity: RadioImplantExfiltrator
+  productEntity: RadioImplanterExfil
   discountCategory: veryRareDiscounts
   discountDownTo:
     Telecrystal: 2
@@ -105,7 +105,7 @@
   name: uplink-exfilfab-name
   description: uplink-exfilfab-desc
   icon: { sprite: Objects/Misc/module.rsi, state: security }
-  productEntity: RadioImplantExfiltrator
+  productEntity: SyndiFabFlatpack
   discountCategory: veryRareDiscounts
   discountDownTo:
     Telecrystal: 12
