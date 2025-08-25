@@ -10,20 +10,7 @@
     allowMovement: true
     name: "Laika"
     description: "Security's resident she-dog. Badger the officers for headpats and nip at the heels of violent offenders."
-  - type: AutoImplant
-    implants:
-    - MindShieldImplant
-    - TrackingImplant
-    - LightImplant
-  - type: FlashImmunity
-  - type: IntrinsicRadioTransmitter
-    channels:
-    - Nfsd
-    - Common
-  - type: ActiveRadio
-    channels:
-    - Nfsd
-    - Common
+
   - type: GhostTakeoverAvailable
   - type: InteractionPopup
     successChance: 1

@@ -104,3 +104,6 @@ uplink-syndieradioimplant-desc = You can never be too careful.
 
 uplink-exfilfab-name = Syndicate Techfab
 uplink-exfilfab-desc = A syndicate techfab for printing resupply for materials. Highly valuable. Don't lose it.
+
+uplink-exchange-spesos2-name = 25,000 spesos
+uplink-exchange-spesos2-desc = A stack of 25,000 spesos, hard currency.

@@ -1,6 +1,6 @@
-# Frontier Station Code of Conduct
+# Aurora Song's Code of Conduct
 
-Frontier Station's staff and community is made up volunteers from all over the world, working on every aspect of the project - including development, teaching, and hosting integral tools.
+Aurora Song's staff and community is made up volunteers from all over the world, working on every aspect of the project - including development, teaching, and hosting integral tools.
 
 Diversity is one of our huge strengths, but it can also lead to communication issues and unhappiness. To that end, we have a few ground rules that we ask people to adhere to. This code applies equally to all levels of the project, from commenters to contributors to staff.
 
@@ -8,7 +8,7 @@ This isn’t an exhaustive list of things that you can’t do. Rather, take it i
 
 This code of conduct applies specifically to the Github repositories, discord community, and other spaces managed by the Frontier Station project or Frontier Station Staff. Some spaces, such as the Frontier Station Discord or the official Frontier Station game servers, have additional rules but are in spirit equal to what may be found in here.
 
-If you believe someone is violating the code of conduct, we ask that you report it by contacting a Maintainer or staff member through [Discord](https://discord.gg/frontier), or emailing [zuus87@gmail.com](mailto:zuus87@gmail.com).
+If you believe someone is violating the code of conduct, we ask that you report it by contacting a Maintainer or staff member through our ticketing system on [Discord](https://discord.gg/zUXmPrwbbM).
 
 - **Be friendly and patient.**
 - **Be welcoming.** We strive to be a community that welcomes and supports people of all backgrounds and identities. This includes, but is not limited to members of any race, ethnicity, culture, national origin, colour, immigration status, social and economic class, educational level, sex, sexual orientation, gender identity and expression, age, size, family status, political belief, religion, and mental and physical ability.
@@ -33,8 +33,8 @@ Deviating from the Code of Conduct on the Github repository may result in modera
 
 This is to ensure Frontier Station is a healthy community in which contributors feel encouraged and empowered to contribute, and to give you as a member of this community a chance to reflect on how you are interacting with it. While outright offensive and bigoted content will *always* be unacceptable on the repository, Maintainers are at liberty to take moderative actions against more ambiguous content that fail to provide constructive criticism, or that provides constructive criticism in a non-constructive manner. Examples of this include using hyperbole, bringing up PRs/changes unrelated to the discussion at hand, hostile tone, off-topic comments, creating PRs/Issues for the sole purpose of causing discussions, skirting the line of acceptable behavior, etc. Disagreeing with content or each other is fine and appreciated, but only as long as it's done with respect and in a constructive manner.
 
-Maintainers are expected to adhere to the guidelines as listed in the [Github Moderation Guidelines](https://docs.spacestation14.com/en/general-development/github-moderation-guidelines.html), though may deviate should they feel it's in the best interest of the community. If you believe you had an action incorrectly applied against you, you are encouraged to contact staff via [Discord](https://discord.gg/frontier).
+Maintainers are expected to adhere to the guidelines as listed in the [Github Moderation Guidelines](https://docs.spacestation14.com/en/general-development/github-moderation-guidelines.html), though may deviate should they feel it's in the best interest of the community. If you believe you had an action incorrectly applied against you, you are encouraged to contact staff via [Discord](https://discord.gg/zUXmPrwbbM).
 
 ## Attribution
 
-This Code of Conduct is an edited version of the [Space Station 14 Code of Conduct](https://github.com/space-wizards/space-station-14/blob/master/CODE_OF_CONDUCT.md), which is an edited version of the [Django Code of Conduct](https://www.djangoproject.com/conduct/), licensed under CC BY 3.0, for the Frontier Station Github repository.
+This Code of Conduct is an edited version of the [Frontier Station](https://github.com/new-frontiers-14/frontier-station-14/blob/master/CODE_OF_CONDUCT.md) which is edited from [Space Station 14 Code of Conduct](https://github.com/space-wizards/space-station-14/blob/master/CODE_OF_CONDUCT.md), which is an edited version of the [Django Code of Conduct](https://www.djangoproject.com/conduct/), licensed under CC BY 3.0, for the Aurora Song Github repository.

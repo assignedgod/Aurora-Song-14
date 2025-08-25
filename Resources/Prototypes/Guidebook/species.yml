@@ -18,7 +18,8 @@
     - Felinid # DeltaV
     - Oni # DeltaV
     - Rodentia # DeltaV
-    - Feroxi
+    - Feroxi # DeltaV
+    - Tajaran # EE
 
 - type: guideEntry
   id: Arachnid
@@ -65,3 +66,8 @@
   id: IPC
   name: species-name-ipc
   text: "/ServerInfo/Guidebook/Mobs/IPCs.xml"
+
+- type: guideEntry
+  id: Tajaran
+  name: species-name-tajaran
+  text: "/ServerInfo/Guidebook/Mobs/Tajaran.xml"
