@@ -18,12 +18,12 @@ namespace Content.Shared.Physics.Controllers;
 public abstract class SharedConveyorController : VirtualController
 {
     [Dependency] protected readonly IMapManager MapManager = default!;
-    [Dependency] private   readonly IParallelManager _parallel = default!;
-    [Dependency] private   readonly CollisionWakeSystem _wake = default!;
+    [Dependency] private readonly IParallelManager _parallel = default!;
+    [Dependency] private readonly CollisionWakeSystem _wake = default!;
     [Dependency] protected readonly EntityLookupSystem Lookup = default!;
-    [Dependency] private   readonly FixtureSystem _fixtures = default!;
-    [Dependency] private   readonly SharedGravitySystem _gravity = default!;
-    [Dependency] private   readonly SharedMoverController _mover = default!;
+    [Dependency] private readonly FixtureSystem _fixtures = default!;
+    [Dependency] private readonly SharedGravitySystem _gravity = default!;
+    [Dependency] private readonly SharedMoverController _mover = default!;
 
     protected const string ConveyorFixture = "conveyor";
 
@@ -59,11 +59,9 @@ public abstract class SharedConveyorController : VirtualController
     private void OnConveyedFriction(Entity<ConveyedComponent> ent, ref TileFrictionEvent args)
     {
         // Wizden#37468: Conveyors spin fix
-        if(!TryComp<FixturesComponent>(ent, out var fixture) || !IsConveyed((ent, fixture)))
+        if(!ent.Comp.Conveying)
             return;
 
-        if(!PhysicsQuery.TryComp(ent, out var body) || body.BodyStatus != BodyStatus.OnGround)
-            return;
         // End Wizden#37468: Conveyors spin fix
 
         // Conveyed entities don't get friction, they just get wishdir applied so will inherently slowdown anyway.
@@ -145,7 +143,10 @@ public abstract class SharedConveyorController : VirtualController
             var physics = ent.Entity.Comp3;
 
             if (physics.BodyStatus != BodyStatus.OnGround) // Wizden#37468
+            {
+                SetConveying(ent.Entity.Owner, ent.Entity.Comp1, false);
                 continue; // Wizden#37468
+            }
 
             var velocity = physics.LinearVelocity;
             var angularVelocity = physics.AngularVelocity; // Wizden#37468
@@ -169,7 +170,6 @@ public abstract class SharedConveyorController : VirtualController
                 if (!_mover.UsedMobMovement.TryGetValue(ent.Entity.Owner, out var usedMob) || !usedMob)
                 {
                     _mover.Friction(0f, frameTime: frameTime, friction: 5f, ref velocity);
-                    _mover.Friction(0f, frameTime: frameTime, friction: 5f, ref angularVelocity); // Wizden#37468
                 }
 
                 SharedMoverController.Accelerate(ref velocity, targetDir, 20f, frameTime);
@@ -179,7 +179,6 @@ public abstract class SharedConveyorController : VirtualController
                 // Need friction to outweigh the movement as it will bounce a bit against the wall.
                 // This facilitates being able to sleep entities colliding into walls.
                 _mover.Friction(0f, frameTime: frameTime, friction: 40f, ref velocity);
-                _mover.Friction(0f, frameTime: frameTime, friction: 40f, ref angularVelocity); // Wizden#37468
             }
 
             PhysicsSystem.SetAngularVelocity(ent.Entity.Owner, angularVelocity); // Wizden#37468
