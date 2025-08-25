@@ -89,3 +89,6 @@ uplink-exchange-debranded-elite-hardsuit-desc = An Elite Cybersun hardsuit with 
 
 uplink-exchange-spesos-name = 5000 spesos
 uplink-exchange-spesos-desc = A stack of 5000 spesos, hard currency.
+
+uplink-exchange-spesos2-name = 25,000 spesos
+uplink-exchange-spesos2-desc = A stack of 25,000 spesos, hard currency.

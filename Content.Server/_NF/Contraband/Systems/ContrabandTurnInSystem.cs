@@ -1,30 +1,29 @@
-using System.Linq;
+using Content.Server._NF.Cargo.Systems;
 using Content.Server._NF.Contraband.Components;
 using Content.Server.Cargo.Components;
-using Content.Server.Cargo.Systems;
+using Content.Server.Hands.Systems;
+using Content.Server.Popups;
 using Content.Server.Stack;
 using Content.Server.Station.Systems;
-using Content.Shared._NF.Contraband;
+using Content.Shared._AS.Contraband.Events; // Aurora
+using Content.Shared._AS.Contraband.ScuOutput; // Aurora
+using Content.Shared._AS.License; // Aurora
 using Content.Shared._NF.Contraband.BUI;
 using Content.Shared._NF.Contraband.Components;
 using Content.Shared._NF.Contraband.Events;
-using Content.Shared.Contraband;
-using Content.Shared.Stacks;
-using Robust.Server.GameObjects;
-using Content.Shared.Coordinates;
-using Content.Shared.Mobs;
-using Content.Shared.Mobs.Components;
-using Robust.Shared.Prototypes;
-using Content.Server._NF.Cargo.Systems;
-using Content.Server.Hands.Systems;
-using Content.Shared._AS.Contraband.Events;
-using Content.Shared._AS.Contraband.ScuOutput;
-using Content.Shared._AS.License;
+using Content.Shared._NF.Contraband;
 using Content.Shared.Access.Systems;
-using Content.Shared.Containers.ItemSlots;
-using Content.Shared.Interaction.Events;
+using Content.Shared.Contraband;
+using Content.Shared.Coordinates;
+using Content.Shared.Inventory;
+using Content.Shared.Mobs.Components;
+using Content.Shared.Mobs;
+using Content.Shared.Stacks;
+using Robust.Server.Audio;
+using Robust.Server.GameObjects;
 using Robust.Shared.Containers;
-using Robust.Shared.Map;
+using Robust.Shared.Map; // Aurora
+using Robust.Shared.Prototypes;
 
 namespace Content.Server._NF.Contraband.Systems;
 
@@ -34,8 +33,12 @@ namespace Content.Server._NF.Contraband.Systems;
 public sealed partial class ContrabandTurnInSystem : SharedContrabandTurnInSystem
 {
     [Dependency] private readonly IPrototypeManager _protoMan = default!;
+    [Dependency] private readonly AudioSystem _audio = default!; // Aurora
+    [Dependency] private readonly AccessReaderSystem _reader = default!; // Aurora
+    [Dependency] private readonly PopupSystem _popup = default!; // Aurora
     [Dependency] private readonly EntityLookupSystem _lookup = default!;
     [Dependency] private readonly HandsSystem _hands = default!;
+    [Dependency] private readonly InventorySystem _inventory = default!; // Aurora
     [Dependency] private readonly StackSystem _stack = default!;
     [Dependency] private readonly StationSystem _station = default!;
     [Dependency] private readonly TransformSystem _transform = default!;
@@ -236,6 +239,12 @@ public sealed partial class ContrabandTurnInSystem : SharedContrabandTurnInSyste
     {
         var player = args.Actor;
 
+        if (!CheckLicense(component, player)) // Aurora: add check for chl
+        {
+            PlayDenyEffect((uid,component));
+            return;
+        }
+
         if (Transform(uid).GridUid is not EntityUid gridUid)
         {
             _uiSystem.SetUiState(uid, ContrabandPalletConsoleUiKey.Contraband,
@@ -259,6 +268,12 @@ public sealed partial class ContrabandTurnInSystem : SharedContrabandTurnInSyste
     // Aurora - Contra registering
     private void OnPalletRegister(Entity<ContrabandPalletConsoleComponent> ent, ref ContrabandPalletRegisterMessage args)
     {
+        if (!CheckLicense(ent.Comp, args.Actor)) // check for chl
+        {
+            PlayDenyEffect(ent);
+            return;
+        }
+
         if (Transform(ent).GridUid is not EntityUid gridUid)
         {
             _uiSystem.SetUiState(ent.Owner, ContrabandPalletConsoleUiKey.Contraband,
@@ -309,6 +324,36 @@ public sealed partial class ContrabandTurnInSystem : SharedContrabandTurnInSyste
         UpdatePalletConsoleInterface(ent, ent.Comp);
     }
 
+    private bool CheckLicense(ContrabandPalletConsoleComponent console, EntityUid user) // Aurora
+    {
+        if (console.LicenseRequired == null)
+            return true;
+        if (!_inventory.TryGetSlotEntity(user, "id", out var slotEnt))
+            return false;
+        if (TryComp<LicenseComponent>(slotEnt, out var license) && license.LicenseName == console.LicenseRequired)
+            return true;
+        if (!_container.TryGetContainer(slotEnt.Value, "PDA-license", out var container))
+            return false;
+        foreach (var containerEnt in container.ContainedEntities)
+        {
+            if (TryComp<LicenseComponent>(containerEnt, out license) && license.LicenseName == console.LicenseRequired)
+                return true;
+        }
+        foreach (var heldEnt in _hands.EnumerateHeld(user))
+        {
+            if (TryComp<LicenseComponent>(heldEnt, out license) && license.LicenseName == console.LicenseRequired)
+                return true;
+        }
+        return false;
+    }
+
+    public void PlayDenyEffect(Entity<ContrabandPalletConsoleComponent> target)
+    {
+        _popup.PopupCoordinates(Loc.GetString("chl-required"), Transform(target).Coordinates);
+        _audio.PlayPvs(_audio.ResolveSound(target.Comp.ErrorSound), target);
+    }
+
+    // Aurora - copied from NFCargoSystem
     /// <summary>
     /// Calculates distance between two EntityCoordinates
     /// Used to check for cargo pallets around the console instead of on the grid.

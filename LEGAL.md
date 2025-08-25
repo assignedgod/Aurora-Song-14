@@ -20,7 +20,7 @@ Where code from other authors is used, you must follow the terms of both the AGP
 
 For code taken under the MIT license, this means you must not remove the copy of the MIT license from any distribution.
 
-Code created by Frontier contributors is found in _NF Namespaces.
+Code created by Aurora Song contributors is found in _AS Namespaces.
 
 Upstream code from [Space Station 14](https://github.com/space-wizards/space-station-14) was taken under [the MIT license](https://github.com/new-frontiers-14/frontier-station-14/blob/master/LICENSE-MIT.txt). Any code not in a specific Namespace, excluding Nyanotrasen subdirectories, is sublicensed as MIT plus AGPLv3 from the Space Wizards Federation.
 
@@ -32,6 +32,7 @@ The table below lists all Namespaces (along with the Nyanotrasen subdirectory) i
 
 | Subdirectory | Fork Name | Source Repository | Original License |
 |--------------|-----------|-------------------|------------------|
+| `_AS` | Aurora Song | https://github.com/AuroraSong14/Aurora-Song-14 | AGPL 3.0 |
 | `_NF` | Frontier Station | https://github.com/new-frontiers-14/frontier-station-14 | AGPL 3.0 |
 | `_CD` | Cosmatic Drift | https://github.com/cosmatic-drift-14/cosmatic-drift | MIT |
 | `_Corvax` | Corvax | https://github.com/space-syndicate/space-station-14 | MIT |

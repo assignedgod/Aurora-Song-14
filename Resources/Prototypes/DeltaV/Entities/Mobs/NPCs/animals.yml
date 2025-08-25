@@ -1,6 +1,6 @@
 - type: entity
   name: security dog
-  parent: SimpleMobBase
+  parent: [NFMobPet, SimpleMobBase]
   id: MobSecDog
   description: Funnily enough, this pig is actually a dog.
   components:
@@ -65,6 +65,21 @@
       40: 0.70
       80: 0.30
   - type: Appearance
+  # Begin AS changes
+  - type: FlashImmunity
+  - type: IntrinsicRadioTransmitter
+    channels:
+    - Nfsd
+    - Common
+  - type: ActiveRadio
+    channels:
+    - Nfsd
+    - Common
+  - type: AutoImplant
+    implants:
+    - MindShieldImplant
+    - MedicalTrackingImplant
+    #end AS changes
   - type: Inventory
     speciesId: secdog
     templateId: secdog
