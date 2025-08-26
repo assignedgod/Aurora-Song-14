@@ -1,8 +1,9 @@
-using Content.Shared._AS.TaskList;
+using Content.Shared._AS.TaskList.Prototypes;
+using Robust.Shared.GameStates;
 
-namespace Content.Server._AS.TaskList.Components;
+namespace Content.Shared._AS.TaskList.Components;
 
-[RegisterComponent]
+[RegisterComponent, NetworkedComponent]
 public sealed partial class PlayerTaskDatabaseComponent : Component
 {
     [DataField]
@@ -16,4 +17,7 @@ public sealed partial class PlayerTaskDatabaseComponent : Component
 
     [DataField]
     public int TotalTasks = 0;
+
+    [DataField(required: true)]
+    public TaskGroupPrototype TaskGroup = new();
 }

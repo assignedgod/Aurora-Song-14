@@ -1,9 +1,9 @@
-﻿using Robust.Shared.Configuration;
+using Robust.Shared.Configuration;
 
-namespace Content.Server._AS;
+namespace Content.Shared._AS.CCVar;
 
 [CVarDefs]
-public sealed class AuroraCVars
+public sealed partial class AuroraCVars
 {
     /// <summary>
     /// How often station staff wages are paid.
@@ -26,4 +26,10 @@ public sealed class AuroraCVars
             CVar.SERVERONLY,
             "how long before dead player's suit sensors are toggled, in seconds"
         );
+
+    /// <summary>
+    /// Whether players should start with tasks or have to pull them from a task board.
+    /// </summary>
+    public static readonly CVarDef<bool> StartWithTasks =
+        CVarDef.Create("task.start_with_tasks", true, CVar.REPLICATED | CVar.SERVER);
 }

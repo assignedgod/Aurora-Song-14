@@ -3,6 +3,7 @@ using Content.Server._NF.Bank;
 using Content.Server.Administration.Logs;
 using Content.Server.Chat.Managers;
 using Content.Server.GameTicking;
+using Content.Shared._AS.CCVar;
 using Content.Shared._NF.Bank.Components;
 using Content.Shared._NF.Roles.Components;
 using Content.Shared.Chat;

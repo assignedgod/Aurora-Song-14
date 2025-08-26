@@ -13,6 +13,9 @@ public sealed partial class TaskPrototype : IPrototype
     public string ID { get; private set; } = default!;
 
     [DataField(required: true)]
+    public ProtoId<TaskGroupPrototype> TaskGroup = "CivilianTaskGroup";
+
+    [DataField(required: true)]
     public int Reward;
 
     [DataField]
@@ -38,6 +41,7 @@ public readonly partial record struct TaskItemEntry()
     public EntityWhitelist Whitelist { get; init; } = default!;
 }
 
+// TODO: Create objectives as tasks
 // public readonly partial record struct TaskObjectiveEntry()
 // {
 //     [DataField]
