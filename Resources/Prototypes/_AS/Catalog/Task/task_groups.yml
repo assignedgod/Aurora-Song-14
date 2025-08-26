@@ -1,11 +1,11 @@
 - type: taskGroup
   id: BaseTaskGroup
-  rewardType: SpaceCash
+  rewardType: Credit
 
 - type: taskGroup
   parent: BaseTaskGroup
   id: CivilianTaskGroup
-  rewardType: SpaceCash
+  rewardType: Credit
   groupJobs:
     - Contractor
     - NFJanitor
@@ -51,7 +51,7 @@
 - type: taskGroup
   parent: BaseTaskGroup
   id: MedicalTaskGroup
-  rewardType: SpaceCash
+  rewardType: Credit
   groupJobs:
     - MedicalIntern
     - DirectorOfCare

@@ -117,9 +117,12 @@ public sealed partial class TaskListSystem : EntitySystem
     {
         _nameIdentifier.GenerateUniqueName(uid, TaskNameIdentifierGroup, out var randomVal);
         var allTasks = _protoMan.EnumeratePrototypes<TaskPrototype>().ToList().FindAll(x => x.TaskGroup == taskDb.TaskGroup);
-        var task = _random.Pick(allTasks);
-        taskDb.Tasks.Add(new TaskData(task, randomVal));
-        taskDb.TotalTasks = taskDb.Tasks.Count;
+        if (allTasks.Count > 0)
+        {
+            var task = _random.Pick(allTasks);
+            taskDb.Tasks.Add(new TaskData(task, randomVal));
+            taskDb.TotalTasks = taskDb.Tasks.Count;
+        }
     }
 
     private void OnTaskCompletedMessage(EntityUid uid, TaskConsoleComponent component, TaskCompletedMessage args)
