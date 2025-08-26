@@ -1,5 +1,6 @@
 ﻿using Content.Server.GameTicking;
 using Content.Server.Medical.SuitSensors;
+using Content.Shared._AS.CCVar;
 using Content.Shared.Medical.SuitSensor;
 using Content.Shared.Mind.Components;
 using Content.Shared.Mobs;

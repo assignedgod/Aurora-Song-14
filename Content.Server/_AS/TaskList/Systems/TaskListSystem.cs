@@ -5,15 +5,20 @@ using Content.Server._NF.Bank;
 using Content.Server.Chat.Managers;
 using Content.Server.NameIdentifier;
 using Content.Shared.NameIdentifier;
-using Content.Server._AS.TaskList.Components;
-using Content.Shared.Chat;
-using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using Content.Shared._AS.TaskList.Prototypes;
 using Content.Shared._AS.TaskList;
 using Content.Shared._AS.TaskList.Components;
-using System.Threading.Tasks;
+using Content.Shared._NF.Roles.Components;
+using Content.Shared.GameTicking;
+using Robust.Shared.Configuration;
+using Content.Shared._AS.CCVar;
+using Content.Shared.Stacks;
+using Content.Server.Stack;
+using Content.Shared.Coordinates;
+using Content.Server.Hands.Systems;
+using Robust.Server.GameObjects;
 
 namespace Content.Server._AS.TaskList;
 
@@ -25,19 +30,27 @@ public sealed partial class TaskListSystem : EntitySystem
     [Dependency] private readonly IRobustRandom _random = default!;
     [Dependency] private readonly NameIdentifierSystem _nameIdentifier = default!;
     [Dependency] private readonly SharedUserInterfaceSystem _uiSystem = default!;
+    [Dependency] private readonly IConfigurationManager _configManager = default!;
+    [Dependency] private readonly StackSystem _stack = default!;
+    [Dependency] private readonly HandsSystem _hands = default!;
+    [Dependency] private readonly TransformSystem _transform = default!;
 
     [ValidatePrototypeId<NameIdentifierGroupPrototype>]
     private const string TaskNameIdentifierGroup = "Bounty"; // Use the bounty name ID group (0-999) for now.
+
+    private bool _startWithTasks = false;
 
     public override void Initialize()
     {
         base.Initialize();
 
+        Subs.CVar(_configManager, AuroraCVars.StartWithTasks, value => _startWithTasks = value, true);
+
         SubscribeLocalEvent<TaskConsoleComponent, BoundUIOpenedEvent>(OnTaskConsoleOpened);
         SubscribeLocalEvent<TaskConsoleComponent, TaskCompletedMessage>(OnTaskCompletedMessage);
         SubscribeLocalEvent<TaskConsoleComponent, NewTaskMessage>(OnNewTaskMessage);
 
-        SubscribeLocalEvent<PlayerAttachedEvent>(OnPlayerAttached);
+        SubscribeLocalEvent<PlayerSpawnCompleteEvent>(OnPlayerSpawnComplete);
         SubscribeLocalEvent<TaskCompletedEvent>(OnTaskCompleted);
     }
 
@@ -54,38 +67,62 @@ public sealed partial class TaskListSystem : EntitySystem
         _uiSystem.SetUiState(uid, TaskConsoleUiKey.Task, new TaskConsoleState(taskDb.Tasks));
     }
 
-    private void OnPlayerAttached(PlayerAttachedEvent args)
+    private void OnPlayerSpawnComplete(PlayerSpawnCompleteEvent ev)
     {
-        TryCreateTask(args.Entity);
+        TryCreateDatabase(ev.Mob);
+    }
+
+    private void TryCreateDatabase(EntityUid uid)
+    {
+        var taskDb = EnsureComp<PlayerTaskDatabaseComponent>(uid);
+        var groups = _protoMan.EnumeratePrototypes<TaskGroupPrototype>().ToList();
+
+        if (TryComp<JobTrackingComponent>(uid, out var jobTracker))
+        {
+            if (jobTracker.Job != null)
+            {
+                var taskGroup = groups.Find(x => x.GroupJobs.Contains(jobTracker.Job));
+                taskDb.TaskGroup = taskGroup != null ? taskGroup : new TaskGroupPrototype();
+            }
+        }
+
+        if (_startWithTasks) TryCreateTask(uid);
     }
 
     public void TryCreateTask(EntityUid uid)
     {
-        var component = EnsureComp<PlayerTaskDatabaseComponent>(uid);
-
-        if (component.TotalTasks >= component.MaxTasks)
+        if (!TryComp<PlayerTaskDatabaseComponent>(uid, out var taskDb))
             return;
 
-        _nameIdentifier.GenerateUniqueName(uid, TaskNameIdentifierGroup, out var randomVal);
-        var allTasks = _protoMan.EnumeratePrototypes<TaskPrototype>().ToList();
-        var task = _random.Pick(allTasks);
-        component.Tasks.Add(new TaskData(task, randomVal));
-        component.TotalTasks = component.Tasks.Count;
+        if (taskDb.TotalTasks >= taskDb.MaxTasks)
+            return;
+
+        CreateTask(uid, taskDb);
     }
 
     public void TryCreateTask(EntityUid uid, EntityUid actorUid)
     {
-        var component = EnsureComp<PlayerTaskDatabaseComponent>(actorUid);
-
-        if (component.TotalTasks >= component.MaxTasks)
+        if (!TryComp<PlayerTaskDatabaseComponent>(uid, out var taskDb))
             return;
 
-        _nameIdentifier.GenerateUniqueName(actorUid, TaskNameIdentifierGroup, out var randomVal);
-        var allTasks = _protoMan.EnumeratePrototypes<TaskPrototype>().ToList();
-        var task = _random.Pick(allTasks);
-        component.Tasks.Add(new TaskData(task, randomVal));
-        component.TotalTasks = component.Tasks.Count;
-        _uiSystem.SetUiState(uid, TaskConsoleUiKey.Task, new TaskConsoleState(component.Tasks));
+        if (taskDb.TotalTasks >= taskDb.MaxTasks)
+            return;
+
+        CreateTask(actorUid, taskDb);
+
+        _uiSystem.SetUiState(uid, TaskConsoleUiKey.Task, new TaskConsoleState(taskDb.Tasks));
+    }
+
+    private void CreateTask(EntityUid uid, PlayerTaskDatabaseComponent taskDb)
+    {
+        _nameIdentifier.GenerateUniqueName(uid, TaskNameIdentifierGroup, out var randomVal);
+        var allTasks = _protoMan.EnumeratePrototypes<TaskPrototype>().ToList().FindAll(x => x.TaskGroup == taskDb.TaskGroup);
+        if (allTasks.Count > 0)
+        {
+            var task = _random.Pick(allTasks);
+            taskDb.Tasks.Add(new TaskData(task, randomVal));
+            taskDb.TotalTasks = taskDb.Tasks.Count;
+        }
     }
 
     private void OnTaskCompletedMessage(EntityUid uid, TaskConsoleComponent component, TaskCompletedMessage args)
@@ -113,13 +150,15 @@ public sealed partial class TaskListSystem : EntitySystem
         if (!_protoMan.TryIndex(data.Task, out var task))
             return;
 
-        if (!_bankSystem.TryBankDeposit(actorUid, task.Reward))
-        {
-            Log.Error($"Failed to deposit station pay for uid: {ToPrettyString(actorUid)}");
-        }
 
         if (!TryComp<PlayerTaskDatabaseComponent>(actorUid, out var taskDb))
             return;
+
+        var rewardPrototype = _protoMan.Index<StackPrototype>(taskDb.TaskGroup.RewardType);
+        var stackUid = _stack.Spawn(task.Reward, rewardPrototype, actorUid.ToCoordinates());
+
+        if (!_hands.TryPickupAnyHand(actorUid, stackUid))
+            _transform.SetLocalRotation(stackUid, Angle.Zero); // Orient these to grid north instead of map north
 
         taskDb.History.Add(data);
         taskDb.Tasks.Remove(data);

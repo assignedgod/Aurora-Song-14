@@ -1,0 +1,53 @@
+- type: taskGroup
+  id: BaseTaskGroup
+  rewardType: Credit
+
+- type: taskGroup
+  id: CivilianTaskGroup
+  rewardType: Credit
+  groupJobs:
+    - Contractor
+    - NFJanitor
+    - ServiceWorker
+
+- type: taskGroup
+  id: MercenaryTaskGroup
+  rewardType: MercCoin
+  groupJobs:
+    - Pilot
+    - Mercenary
+
+- type: taskGroup
+  id: SLETaskGroup
+  rewardType: FrontierUplinkCoin
+  groupJobs:
+    - Cadet
+    - Sheriff
+    - Bailiff
+    - Deputy
+    - NFDetective
+    - Brigmedic
+    - SeniorOfficer
+
+- type: taskGroup
+  id: PirateTaskGroup
+  rewardType: Doubloon
+  groupJobs:
+    - NFPirate
+    - NFPirateFirstMate
+    - NFPirateCaptain
+
+- type: taskGroup
+  id: ExfiltratorTaskGroup
+  rewardType: ExchangeCoin
+  groupJobs:
+    - Passenger
+
+- type: taskGroup
+  id: MedicalTaskGroup
+  rewardType: Credit
+  groupJobs:
+    - MedicalIntern
+    - DirectorOfCare
+    - MedicalDoctor
+    - Paramedic

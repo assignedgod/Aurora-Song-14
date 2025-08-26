@@ -1,0 +1,11 @@
+- type: task
+  id: ServiceTestTask
+  taskGroup: CivilianTaskGroup
+  reward: 1000
+  description: test-task-description
+  itemEntries:
+  - name: task-item-baseball-bat
+    amount: 1
+    whitelist:
+      tags:
+      - BaseballBat

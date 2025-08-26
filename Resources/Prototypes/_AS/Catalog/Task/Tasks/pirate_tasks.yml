@@ -1,0 +1,11 @@
+- type: task
+  id: PirateTestTask
+  taskGroup: PirateTaskGroup
+  reward: 1
+  description: test-task-description
+  itemEntries:
+  - name: task-item-baseball-bat
+    amount: 1
+    whitelist:
+      tags:
+      - BaseballBat
