@@ -92,7 +92,7 @@
     amount: 1
     whitelist:
       tags:
-      - atreides
+      - Atreides
 
 - type: task
   id: ExfiltratorTaskChinaLake
