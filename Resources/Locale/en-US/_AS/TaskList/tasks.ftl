@@ -6,7 +6,7 @@ task-item-exfil-infiltration =  We have detectied an uncontrolled piece of syndi
 task-item-exfil-armor = An uncontrolled hardsuit has been deployed within the sector. Find it and retrieve it. Use caution.
 
 task-item-SolandMoss = Soland Moss
-task-item-Atredies = Atredies
+task-item-atreides = Atreides
 task-item-c20 = c20
 task-item-bloodred = Blood Red Hardsuit
 task-item-elitesuit = Syndicate Elite Hardsuit
