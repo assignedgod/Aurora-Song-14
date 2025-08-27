@@ -3,8 +3,10 @@ using Content.Shared._EinsteinEngines.Silicon.Systems;
 using Content.Shared.Bed.Sleep;
 using Content.Server._EinsteinEngines.Silicon.Charge;
 using Content.Server._EinsteinEngines.Power.Components;
+using Content.Shared.StatusEffectNew;
 using Content.Server.Humanoid;
 using Content.Shared.Humanoid;
+using Robust.Shared.Prototypes;
 
 namespace Content.Server._EinsteinEngines.Silicon.Death;
 
@@ -13,6 +15,9 @@ public sealed class SiliconDeathSystem : EntitySystem
     [Dependency] private readonly SleepingSystem _sleep = default!;
     [Dependency] private readonly SiliconChargeSystem _silicon = default!;
     [Dependency] private readonly HumanoidAppearanceSystem _humanoidAppearanceSystem = default!;
+    [Dependency] private readonly SharedStatusEffectsSystem _statusEffectsNew = default!;
+
+    public static readonly EntProtoId StatusEffectForcedSleeping = "StatusEffectForcedSleeping";
 
     public override void Initialize()
     {
@@ -47,7 +52,7 @@ public sealed class SiliconDeathSystem : EntitySystem
             return;
 
         EntityManager.EnsureComponent<SleepingComponent>(uid);
-        EntityManager.EnsureComponent<ForcedSleepingComponent>(uid);
+        EntityManager.EnsureComponent<ForcedSleepingStatusEffectComponent>(uid);
 
         if (TryComp(uid, out HumanoidAppearanceComponent? humanoidAppearanceComponent))
         {
@@ -62,7 +67,7 @@ public sealed class SiliconDeathSystem : EntitySystem
 
     private void SiliconUnDead(EntityUid uid, SiliconDownOnDeadComponent siliconDeadComp, BatteryComponent? batteryComp, EntityUid batteryUid)
     {
-        RemComp<ForcedSleepingComponent>(uid);
+        RemComp<ForcedSleepingStatusEffectComponent>(uid);
         _sleep.TryWaking(uid, true, null);
 
         siliconDeadComp.Dead = false;
