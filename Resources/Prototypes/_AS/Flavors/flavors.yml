@@ -1,0 +1,9 @@
+- type: flavor
+  id: flat
+  flavorType: Base
+  description: flavor-base-flat
+
+- type: flavor
+  id: fluffy
+  flavorType: Base
+  description: flavor-base-fluffy
