@@ -103,7 +103,7 @@ namespace Content.Server.Lathe
                 if (lathe.CurrentRecipe == null)
                     continue;
 
-                if (_timing.CurTime - comp.StartTime >= (comp.ProductionLength * 3))
+                if (_timing.CurTime - comp.StartTime >= (comp.ProductionLength * 2))
                     FinishProducing(uid, lathe);
             }
 
