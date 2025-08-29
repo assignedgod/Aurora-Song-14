@@ -957,8 +957,6 @@ entities:
       pos: 6.5,-4.5
       parent: 1
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 2
   - uid: 122
@@ -984,8 +982,6 @@ entities:
       pos: -2.5,-4.5
       parent: 1
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 2
 - proto: GasVentScrubber
@@ -997,8 +993,6 @@ entities:
       pos: 4.5,-4.5
       parent: 1
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 2
   - uid: 124
@@ -1007,9 +1001,6 @@ entities:
       pos: -0.5,-0.5
       parent: 1
     - type: DeviceNetwork
-      configurators:
-      - invalid
-      - invalid
       deviceLists:
       - 2
     - type: AtmosPipeColor
@@ -1021,9 +1012,6 @@ entities:
       pos: -0.5,-4.5
       parent: 1
     - type: DeviceNetwork
-      configurators:
-      - invalid
-      - invalid
       deviceLists:
       - 2
     - type: AtmosPipeColor
@@ -1034,8 +1022,6 @@ entities:
       pos: 4.5,-0.5
       parent: 1
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 2
 - proto: GravityGenerator
