@@ -4653,9 +4653,7 @@ Entries:
 - author: dustylens
   changes:
     - type: Tweak
-      message: >-
-        Shuttle update and housekeeping. Small adjustments to shuttles and
-        POIs.
+      message: Shuttle update and housekeeping. Small adjustments to shuttles and POIs.
   id: 6212
   time: '2025-07-20T15:04:22.0000000+00:00'
   url: https://github.com/new-frontiers-14/frontier-station-14/pull/3738
@@ -4858,3 +4856,16 @@ Entries:
   id: 6235
   time: '2025-08-08T07:33:53.0000000+00:00'
   url: https://github.com/new-frontiers-14/frontier-station-14/pull/3792
+- author: assignedgod
+  changes:
+    - type: Add
+      message: Added mk38S
+    - type: Remove
+      message: Removed universal from SLE loadouts
+    - type: Tweak
+      message: Added mk38s to sle and medic loadouts
+    - type: Tweak
+      message: 'Gave medics c2 licensees '
+  id: 6236
+  time: '2025-08-29T03:26:00.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/428
