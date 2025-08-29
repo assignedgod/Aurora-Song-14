@@ -43,6 +43,7 @@
     - RubberStampDoc
     - ShipVoucherAuroraMedic # Aurora
     - NFWeaponPistolUniversalNfsdLessLethal # Aurora
+    - Hypospray
   licenses:
   - LicenseContrabandHandling
 
