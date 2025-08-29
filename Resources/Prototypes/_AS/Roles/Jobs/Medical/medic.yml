@@ -26,10 +26,13 @@
 - type: startingGear
   id: MedicGear
   equipment:
+    pocket1: ASWeaponPistol58SLELessLethal
     pocket2: MedicalAppraisalTool
   storage:
     back:
     - ShipVoucherAuroraMedic
+  licenses:
+  - LicenseContrabandHandling
 
 - type: chameleonOutfit
   id: MedicChameleonOutfit
