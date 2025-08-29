@@ -16,7 +16,7 @@
   price: 51000 # ~45500 appraise.
   category: Medium
   group: Shipyard
-  shuttlePath: /Maps/_NF/Shuttles/campfire.yml
+  shuttlePath: /Maps/_AS/Shuttles/campfire.yml
   guidebookPage: Null
   class:
   - Civilian
@@ -27,7 +27,7 @@
 - type: gameMap
   id: Campfire
   mapName: 'BH Campfire'
-  mapPath: /Maps/_NF/Shuttles/campfire.yml
+  mapPath: /Maps/_AS/Shuttles/campfire.yml
   minPlayers: 0
   stations:
     Campfire:
