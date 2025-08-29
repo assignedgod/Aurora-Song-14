@@ -41,7 +41,6 @@ entities:
       name: Campfire
     - type: Transform
       pos: -0.5,-0.49537036
-      parent: invalid
     - type: MapGrid
       chunks:
         0,0:
@@ -3040,8 +3039,6 @@ entities:
       pos: -0.5,0.5
       parent: 1
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 3
     - type: AtmosPipeColor
@@ -3063,8 +3060,6 @@ entities:
       pos: 2.5,5.5
       parent: 1
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 3
     - type: AtmosPipeColor
@@ -3119,8 +3114,6 @@ entities:
       pos: 4.5,-1.5
       parent: 1
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 3
     - type: AtmosPipeColor
@@ -3134,8 +3127,6 @@ entities:
       pos: 4.5,1.5
       parent: 1
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 3
     - type: AtmosPipeLayers
@@ -3238,8 +3229,6 @@ entities:
     - type: AtmosPipeLayers
       pipeLayer: Secondary
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 3
     - type: AtmosPipeColor
@@ -3252,8 +3241,6 @@ entities:
     - type: AtmosPipeLayers
       pipeLayer: Secondary
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 3
     - type: AtmosPipeColor
@@ -3266,8 +3253,6 @@ entities:
     - type: AtmosPipeLayers
       pipeLayer: Secondary
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 3
     - type: AtmosPipeColor
@@ -3280,8 +3265,6 @@ entities:
     - type: AtmosPipeLayers
       pipeLayer: Secondary
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 3
     - type: AtmosPipeColor
@@ -3295,8 +3278,6 @@ entities:
     - type: AtmosPipeLayers
       pipeLayer: Secondary
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 3
     - type: AtmosPipeColor
@@ -3310,8 +3291,6 @@ entities:
     - type: AtmosPipeLayers
       pipeLayer: Secondary
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 3
     - type: AtmosPipeColor
@@ -3325,8 +3304,6 @@ entities:
     - type: AtmosPipeLayers
       pipeLayer: Secondary
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 3
     - type: AtmosPipeColor
