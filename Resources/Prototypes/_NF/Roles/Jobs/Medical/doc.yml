@@ -42,6 +42,9 @@
     - BoxFolderMedicalDoctor
     - RubberStampDoc
     - ShipVoucherAuroraMedic # Aurora
+    - NFWeaponPistolUniversalNfsdLessLethal # Aurora
+  licenses:
+  - LicenseContrabandHandling
 
 - type: chameleonOutfit
   id: DirectorOfCareChameleonOutfit
