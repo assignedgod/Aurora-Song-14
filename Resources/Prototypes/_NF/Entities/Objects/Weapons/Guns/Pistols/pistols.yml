@@ -57,6 +57,27 @@
   - type: Clothing
     sprite: _DV/Objects/Weapons/Guns/Pistols/universal.rsi
 
+#region DeltaV
+- type: entity
+  id: NFWeaponPistolUniversal
+  parent: [ NFBaseWeaponPistolChamber35, NFBaseWeaponFramePistolNanotrasen ]
+  name: mk32 "Universal"
+  description: The Mark 32 Offensive Handgun.
+  components:
+  - type: Gun
+    soundGunshot:
+      path: /Audio/_DV/Weapons/Guns/Gunshots/universal.ogg
+  - type: Sprite
+    sprite: _DV/Objects/Weapons/Guns/Pistols/universal.rsi
+  - type: Clothing
+    sprite: _DV/Objects/Weapons/Guns/Pistols/universal.rsi
+  - type: Gun
+    minAngle: 1
+    maxAngle: 15
+    angleIncrease: 3
+    angleDecay: 3
+    fireRate: 3
+
 - type: entity
   id: NFWeaponPistolUniversalNfsd
   parent: [ BaseC2ContrabandUnredeemable, NFBaseWeaponPistolChamber35HighCapacityOverpressure, NFWeaponPistolUniversal ]
