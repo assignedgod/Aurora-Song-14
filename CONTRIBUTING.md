@@ -11,7 +11,7 @@ Importantly, do not make webedits. From the text above:
 
 # Aurora Song specific content
 
-In general, anything you create from scratch (vs. modifying something that exists from upstream) should go in a Frontier-specific subfolder, `_AS`.
+In general, anything you create from scratch (vs. modifying something that exists from upstream) should go in an Aurora Song subfolder, `_AS`.
 
 Examples:
 - `Content.Server/_AS/`
