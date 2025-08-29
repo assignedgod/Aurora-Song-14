@@ -6,6 +6,7 @@ using Content.Server._EinsteinEngines.Power.Components;
 using Content.Shared.StatusEffectNew;
 using Content.Server.Humanoid;
 using Content.Shared.Humanoid;
+using Content.Shared.StatusEffectNew.Components;
 using Robust.Shared.Prototypes;
 
 namespace Content.Server._EinsteinEngines.Silicon.Death;
@@ -52,7 +53,8 @@ public sealed class SiliconDeathSystem : EntitySystem
             return;
 
         EntityManager.EnsureComponent<SleepingComponent>(uid);
-        EntityManager.EnsureComponent<ForcedSleepingStatusEffectComponent>(uid);
+        EntityManager.EnsureComponent<StatusEffectComponent>(uid);  // New Status Effect System - Aurora
+        EntityManager.EnsureComponent<ForcedSleepingStatusEffectComponent>(uid); // New Forced Sleep component from StatusEffectNew - Aurora
 
         if (TryComp(uid, out HumanoidAppearanceComponent? humanoidAppearanceComponent))
         {
@@ -67,7 +69,7 @@ public sealed class SiliconDeathSystem : EntitySystem
 
     private void SiliconUnDead(EntityUid uid, SiliconDownOnDeadComponent siliconDeadComp, BatteryComponent? batteryComp, EntityUid batteryUid)
     {
-        RemComp<ForcedSleepingStatusEffectComponent>(uid);
+        RemComp<ForcedSleepingStatusEffectComponent>(uid); // New Forced Sleep component from StatusEffectNew - Aurora
         _sleep.TryWaking(uid, true, null);
 
         siliconDeadComp.Dead = false;
