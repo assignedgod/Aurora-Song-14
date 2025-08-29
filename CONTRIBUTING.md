@@ -1,5 +1,7 @@
 # Contributing to Aurora Song
 
+Modified contributing from [Frontier](https://github.com/new-frontiers-14/frontier-station-14/blob/master/CONTRIBUTING.md)
+
 If you're considering contributing to Aurora Song, [Wizard's Den's PR guidelines](https://docs.spacestation14.com/en/general-development/codebase-info/pull-request-guidelines.html) are a good starting point for code quality and version tracking etiquette. Note that we do not have the same master/stable branch distinction.
 
 Importantly, do not make webedits. From the text above:
@@ -60,7 +62,7 @@ A cyborg module with an added moduleId field (inline blank comment), a commented
     - HydroponicsToolSpade
     - HydroponicsToolClippers
     # - Bucket # Aurora Song
-  # Frontier: droppable borg items
+  # Aurora Song: droppable borg items
   - type: DroppableBorgModule
     moduleId: Gardening
     items:
