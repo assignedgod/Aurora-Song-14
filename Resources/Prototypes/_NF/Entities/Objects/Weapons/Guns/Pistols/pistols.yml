@@ -45,11 +45,16 @@
 #region DeltaV
 - type: entity
   id: NFWeaponPistolUniversal
-  parent: [ NFBaseWeaponPistolChamber35, NFBaseWeaponFramePistolNanotrasen ]
+  parent: [ NFBaseWeaponPistolChamber45, NFBaseWeaponFramePistolNanotrasen ]
   name: mk32 "Universal"
   description: The Mark 32 Offensive Handgun.
   components:
   - type: Gun
+    minAngle: 1
+    maxAngle: 15
+    angleIncrease: 3
+    angleDecay: 3
+    fireRate: 3
     soundGunshot:
       path: /Audio/_DV/Weapons/Guns/Gunshots/universal.ogg
   - type: Sprite
