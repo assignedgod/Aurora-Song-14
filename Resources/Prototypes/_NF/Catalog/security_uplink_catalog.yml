@@ -181,8 +181,8 @@
 #region weapons
 - type: listing
   id: UplinkSecurityMk32
-  name:  uplink-security-mk58-name #Auroar
-  description: uplink-security-mk58-desc #Aurora
+  name:  uplink-security-mk58S-name #Auroar
+  description: uplink-security-mk58S-desc #Aurora
   productEntity: ASWeaponPistolMK58SLE #Aurora
   icon: { sprite: _AS/Objects/Weapons/Guns/Pistols/mk58.rsi, state: icon }
   cost:
