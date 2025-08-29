@@ -41,7 +41,7 @@ jobs:
 
       - name: Generate Changelog
         run: |
-          cd "Tools"
+          cd "Tools/_NF/changelog"
           node changelog.js
         shell: bash
 
