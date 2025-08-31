@@ -29,8 +29,8 @@
     availableModes:
     - SemiAuto
   - type: SpeedModifiedOnWield
-    walkModifier: 0.5
-    sprintModifier: 0.5
+    walkModifier: 0.5 # Half speed when wielded | Aurora
+    sprintModifier: 0.5 # Half speed when wielded | Aurora
   - type: CursorOffsetRequiresWield
   - type: EyeCursorOffset
     maxOffset: 10

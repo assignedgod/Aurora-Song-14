@@ -16,7 +16,7 @@
 
 - type: entity
   id: NFWeaponEnergyRifleSniperXrayCannon
-  parent: [ BaseC2ContrabandUnredeemable, NFBaseWeaponEnergyRifleSniperHitScanXray, NFBaseWeaponFrameEnergyRifleSniperNanotrasen ]
+  parent: [ BaseC2ContrabandUnredeemable, NFBaseWeaponEnergyRifleSniperHitScanXray, NFBaseWeaponFrameEnergyRifleSniperNanotrasen ] # Contraband status adjusted | Aurora
   name: x-ray cannon
   suffix: Frontier
   description: |-
