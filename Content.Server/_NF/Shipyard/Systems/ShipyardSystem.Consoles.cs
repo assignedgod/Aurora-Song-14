@@ -67,6 +67,7 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
     [Dependency] private readonly MindSystem _mind = default!;
     [Dependency] private readonly ShuttleRecordsSystem _shuttleRecordsSystem = default!;
     [Dependency] private readonly IEntityManager _entityManager = default!;
+    [Dependency] private readonly ShipyardDirectionSystem _directionSystem = default!; // Aurora Song port of Monolith direction system
 
     private static readonly Regex DeedRegex = new(@"\s*\([^()]*\)");
 
@@ -283,7 +284,7 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
         if (component.SecretShipyardChannel is { } secretChannel)
             SendPurchaseMessage(shipyardConsoleUid, player, name, secretChannel, secret: true);
 
-        Get<ShipyardDirectionSystem>().SendShipDirectionMessage(player, shuttleUid);
+        _directionSystem.SendShipDirectionMessage(player, shuttleUid); // Monolith Direction System
 
         PlayConfirmSound(player, shipyardConsoleUid, component);
         if (voucherUsed)
