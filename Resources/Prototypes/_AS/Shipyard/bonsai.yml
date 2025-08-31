@@ -1,0 +1,43 @@
+# Author Info
+# GitHub: Zenixic
+# Discord: zenixic
+
+# Maintainer Info
+# GitHub: Zenixic
+# Discord: zenixic
+
+# Shuttle Notes:
+#
+- type: vessel
+  id: Bonsai
+  parent: BaseVessel
+  name: BH Bonsai
+  description: A small and nimble ship. Features a private room.
+  price: 31000 # 28735 appraise, ~8% markup
+  category: Small
+  group: Shipyard
+  shuttlePath: /Maps/_AS/Shuttles/bonsai.yml
+  guidebookPage: Null
+  class:
+  - Civilian
+  engine:
+  - Uranium
+
+- type: gameMap
+  id: Bonsai
+  mapName: 'BH Bonsai'
+  mapPath: /Maps/_AS/Shuttles/bonsai.yml
+  minPlayers: 0
+  stations:
+    Bonsai:
+      stationProto: StandardFrontierVessel
+      components:
+      - type: StationNameSetup
+        mapNameTemplate: 'Bonsai {1}'
+        nameGenerator: !type:NanotrasenNameGenerator
+          prefixCreator: '14'
+      - type: StationJobs
+        availableJobs:
+          ContractorInterview: [ 0, 0 ]
+          PilotInterview: [ 0, 0 ]
+          MercenaryInterview: [ 0, 0 ]
