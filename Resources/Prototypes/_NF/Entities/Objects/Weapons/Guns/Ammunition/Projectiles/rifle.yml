@@ -45,7 +45,7 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 17
+        Piercing: 17 # Damage rebalanced | Aurora
 
 - type: entity
   id: NFBulletRifle20Overpressure
@@ -56,7 +56,7 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 20
+        Piercing: 20 # Damage rebalanced | Aurora
 
 - type: entity
   id: NFBulletRifle20Incendiary
@@ -67,8 +67,8 @@
   - type: Projectile
     damage:
       types:
-        Blunt: 3
-        Heat: 16
+        Blunt: 3 # Incendiary damage rebalanced | Aurora
+        Heat: 16 # Damage rebalanced | Aurora
 
 - type: entity
   id: NFBulletRifle20Uranium
@@ -79,8 +79,8 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 10
-        Radiation: 9
+        Piercing: 10 # damage rebalanced | Aurora
+        Radiation: 9 # damage rebalanced | Aurora
 
 - type: entity
   id: NFBulletRifle20Practice
@@ -116,7 +116,7 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 19
+        Piercing: 19 # damage rebalanced | Aurora
 
 - type: entity
   id: NFBulletRifle25Overpressure
@@ -127,7 +127,7 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 21
+        Piercing: 21 # damage rebalanced | Aurora
 
 - type: entity
   id: NFBulletRifle25Incendiary
@@ -138,8 +138,8 @@
   - type: Projectile
     damage:
       types:
-        Blunt: 3
-        Heat: 17
+        Blunt: 3 # Incendiary damage rebalanced | Aurora
+        Heat: 17 # damage rebalanced | Aurora
 
 - type: entity
   id: NFBulletRifle25Uranium
@@ -175,7 +175,7 @@
       types:
         Piercing: 2
   - type: StaminaDamageOnCollide
-    damage: 17
+    damage: 17 # ~6 hits to stun sounds reasonable | Aurora
 
 #region .30 rifle
 - type: entity
@@ -187,7 +187,7 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 21
+        Piercing: 21 # damage rebalanced | Aurora
 
 - type: entity
   id: NFBulletRifle30Overpressure
@@ -198,7 +198,7 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 23
+        Piercing: 23 # damage rebalanced | Aurora
 
 - type: entity
   id: NFBulletRifle30Incendiary
@@ -209,8 +209,8 @@
   - type: Projectile
     damage:
       types:
-        Blunt: 3
-        Heat: 16
+        Blunt: 3 # Incendiary damage rebalanced | Aurora
+        Heat: 16 # damage rebalanced | Aurora
 
 - type: entity
   id: NFBulletRifle30Uranium
@@ -221,8 +221,8 @@
   - type: Projectile
     damage:
       types:
-        Radiation: 9
-        Piercing: 10
+        Radiation: 9 # damage rebalanced | Aurora
+        Piercing: 10 # damage rebalanced | Aurora
 
 - type: entity
   id: NFBulletRifle30Practice
@@ -246,7 +246,7 @@
       types:
         Piercing: 2
   - type: StaminaDamageOnCollide
-    damage: 14 # ~8 hits to stun sounds reasonable
+    damage: 14 # ~8 hits to stun sounds reasonable | Aurora
 
 #region .60 rifle
 - type: entity
@@ -258,8 +258,8 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 60
-        Structural: 225
+        Piercing: 60 # damage rebalanced | Aurora
+        Structural: 225 # damage rebalanced | Aurora
     penetrationThreshold: 360
     penetrationDamageTypeRequirement:
     - Structural
@@ -273,6 +273,6 @@
   - type: Projectile
     damage:
       types:
-        Blunt: 45
+        Blunt: 45 # damage rebalanced | Aurora
   - type: StaminaDamageOnCollide
     damage: 70

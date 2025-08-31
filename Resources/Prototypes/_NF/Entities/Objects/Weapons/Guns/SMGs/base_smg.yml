@@ -10,7 +10,7 @@
   - type: GunWieldBonus
     minAngle: -0.8
     maxAngle: -4
-  - type: Gun
+  - type: Gun # base stats, to be modified by manufacturers, slight increase to projectile speed and fireRate | Aurora
     projectileSpeed: 30
     minAngle: 4.2
     maxAngle: 14.6
@@ -34,7 +34,7 @@
   components:
   - type: Gun
     minAngle: 6.7
-    maxAngle: 17
+    maxAngle: 17 # Slightly less accurate but faster fire rate | Aurora
     angleIncrease: 1
     angleDecay: 2
     fireRate: 7
@@ -43,10 +43,10 @@
 
 - type: entity
   id: NFBaseWeaponFrameSubMachineGunCybersun
-  parent: [ BaseC2ContrabandUnredeemable, NFBaseWeaponFrameSubMachineGun ]
+  parent: [ BaseC2ContrabandUnredeemable, NFBaseWeaponFrameSubMachineGun ] # Contraband adjusted | Aurora
   abstract: true
   components:
-  - type: GunWieldBonus
+  - type: GunWieldBonus # Make the C-20r better in two hands, but useable in one | Aurora
     minAngle: -4.2
     maxAngle: -7.3
   - type: Gun
@@ -66,10 +66,10 @@
 
 - type: entity
   id: NFBaseWeaponFrameSubMachineGunGorlex
-  parent: [ BaseC2ContrabandUnredeemable, NFBaseWeaponFrameSubMachineGun ]
+  parent: [ BaseC2ContrabandUnredeemable, NFBaseWeaponFrameSubMachineGun ] # Contraband adjusted | Aurora
   abstract: true
   components:
-  - type: GunWieldBonus
+  - type: GunWieldBonus #Gorlex SMG doesn't become more accurate, but does handle recoil better in two hands | Aurora
     minAngle: 0
     maxAngle: 0
     angleIncrease: -1
