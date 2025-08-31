@@ -4,7 +4,7 @@ meta:
   engineVersion: 261.1.0
   forkId: ""
   forkVersion: ""
-  time: 08/31/2025 18:58:38
+  time: 08/31/2025 19:32:23
   entityCount: 428
 maps: []
 grids:
@@ -2042,8 +2042,7 @@ entities:
   - uid: 230
     components:
     - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: -7.5,-0.5
+      pos: -1.5,0.5
       parent: 1
 - proto: LockerPilotFilled
   entities:
