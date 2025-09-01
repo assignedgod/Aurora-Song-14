@@ -83,17 +83,19 @@
 - type: loadoutGroup
   id: NfsdBoxSurvival
   name: loadout-group-contractor-survival-box
-  hidden: true # No point in showing this, it gets auto-selected.
+  hidden: false # Aurora Song unhiding so feroxi can pick water vapor.
   minLimit: 1
   loadouts:
   - NfsdBoxSurvivalNfsdOxygen
   - NfsdBoxSurvivalNfsdNitrogen
   - NfsdBoxSurvivalNfsdSheleg
   - EmergencyIPCBox
+  - SleBoxSurvivalSleFeroxi # Aurora Song
   fallbacks:
   - NfsdBoxSurvivalNfsdOxygen
   - NfsdBoxSurvivalNfsdNitrogen
   - NfsdBoxSurvivalNfsdSheleg
+  - SleBoxSurvivalSleFeroxi # Aurora Song
 
 - type: loadoutGroup
   id: NfsdFace
