@@ -4922,3 +4922,12 @@ Entries:
   id: 6243
   time: '2025-08-29T03:26:00.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/428
+- author: Karlm4x
+  changes:
+    - type: Fix
+      message: 'Removed duplicate cybernatic limbs '
+    - type: Fix
+      message: Fixed Unnamed markings
+  id: 6244
+  time: '2025-08-28T20:40:12.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/417
