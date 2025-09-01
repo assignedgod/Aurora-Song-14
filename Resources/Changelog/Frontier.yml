@@ -4902,3 +4902,10 @@ Entries:
   id: 6241
   time: '2025-08-29T02:16:24.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/425
+- author: Cygnall
+  changes:
+    - type: Tweak
+      message: darker ejector port on slide open for mk58s
+  id: 6242
+  time: '2025-08-29T02:37:33.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/426
