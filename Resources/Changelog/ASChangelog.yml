@@ -1,2 +1,9 @@
 Order: 1
 Entries:
+  - author: BudaLope
+    changes:
+    - message: A test Changelog
+      type: Tweak
+    id: 1
+    time: '2025-08-31T02:55:20.0000000+00:00'
+    url: https://github.com/AuroraSong14/Aurora-Song-14/pull/438
