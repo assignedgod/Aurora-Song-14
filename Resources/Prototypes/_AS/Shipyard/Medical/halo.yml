@@ -2,7 +2,7 @@
   id: halo
   parent: BaseVessel
   name: CS Halo
-  description: The CyberSun Halo is a high speed search and rescue ship with specialized material efficient thrusters. The design was comissioned for use within the Aurora Song sector.
+  description: The Cybersun Halo is a high speed search and rescue ship with specialized material efficient thrusters. The design was comissioned for use within the Aurora Song sector.
   price: 50000 #Appraisal is 39000
   category: Medium
   group: Medical
