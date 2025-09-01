@@ -4869,3 +4869,10 @@ Entries:
   id: 6236
   time: '2025-08-29T03:26:00.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/428
+- author: Cygnall
+  changes:
+    - type: Add
+      message: blacked-out MK58 sprites
+  id: 6237
+  time: '2025-08-29T02:09:30.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/424
