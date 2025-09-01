@@ -4954,3 +4954,10 @@ Entries:
   id: 6247
   time: '2025-08-25T21:22:39.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/407
+- author: GreyScaleHarlequin
+  changes:
+    - type: Tweak
+      message: On-Join disclaimer changed to reflect Aurora Song
+  id: 6248
+  time: '2025-08-23T08:40:14.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/406
