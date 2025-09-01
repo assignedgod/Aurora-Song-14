@@ -4947,3 +4947,10 @@ Entries:
   id: 6246
   time: '2025-08-28T17:24:13.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/416
+- author: assignedgod
+  changes:
+    - type: Fix
+      message: 'Fixed an ammo bag opening infinitely '
+  id: 6247
+  time: '2025-08-25T21:22:39.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/407
