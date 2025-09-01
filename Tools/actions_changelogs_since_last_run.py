@@ -15,8 +15,8 @@ import requests
 import yaml
 import time
 
-DEBUG = False
-DEBUG_CHANGELOG_FILE_OLD = Path("Resources/Changelog/Old.yml")
+DEBUG = True
+DEBUG_CHANGELOG_FILE_OLD = Path("Resources/Changelog/Frontier.yml")
 GITHUB_API_URL = os.environ.get("GITHUB_API_URL", "https://api.github.com")
 
 # https://discord.com/developers/docs/resources/webhook
