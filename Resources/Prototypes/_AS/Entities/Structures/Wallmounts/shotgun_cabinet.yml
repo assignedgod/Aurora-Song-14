@@ -10,3 +10,10 @@
       - NFWeaponShotgunKammerer # Aurora: use NF version
   - type: AccessReader
     access: [["Medical"]]
+  - type: ItemSlots
+    slots:
+      ItemCabinet:
+        ejectOnInteract: true
+        whitelist:
+          tags:
+          - WeaponShotgunKammerer
