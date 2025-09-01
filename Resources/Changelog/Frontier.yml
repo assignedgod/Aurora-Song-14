@@ -4883,3 +4883,10 @@ Entries:
   id: 6238
   time: '2025-08-29T21:33:52.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/431
+- author: Zenixic
+  changes:
+    - type: Add
+      message: Added the BH Campfire into the normal shipyard
+  id: 6239
+  time: '2025-08-29T22:55:57.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/429
