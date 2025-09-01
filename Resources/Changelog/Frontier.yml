@@ -4931,3 +4931,12 @@ Entries:
   id: 6244
   time: '2025-08-28T20:40:12.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/417
+- author: Houtblokje
+  changes:
+    - type: Add
+      message: >-
+        Added multiple recipes for synthesizing olive oil. See the guidebook for
+        more information.
+  id: 6245
+  time: '2025-08-28T23:08:30.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/418
