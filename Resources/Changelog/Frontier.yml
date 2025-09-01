@@ -4909,3 +4909,16 @@ Entries:
   id: 6242
   time: '2025-08-29T02:37:33.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/426
+- author: assignedgod
+  changes:
+    - type: Add
+      message: Added mk38S
+    - type: Remove
+      message: Removed universal from SLE loadouts
+    - type: Tweak
+      message: Added mk38s to sle and medic loadouts
+    - type: Tweak
+      message: 'Gave medics c2 licensees '
+  id: 6243
+  time: '2025-08-29T03:26:00.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/428
