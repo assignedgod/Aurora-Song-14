@@ -4961,3 +4961,14 @@ Entries:
   id: 6248
   time: '2025-08-23T08:40:14.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/406
+- author: Cygnall
+  changes:
+    - type: Fix
+      message: military and military med webbings
+    - type: Add
+      message: 25k option to ECvend
+    - type: Fix
+      message: admin loadout
+  id: 6249
+  time: '2025-08-23T03:35:49.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/405
