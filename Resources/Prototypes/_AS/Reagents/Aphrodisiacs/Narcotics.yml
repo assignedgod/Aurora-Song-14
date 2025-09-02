@@ -42,7 +42,7 @@
       - !type:Drunk
         conditions:
         - !type:ReagentThreshold
-          min: 15
+          min: 50
       - !type:HealthChange
         conditions:
         - !type:ReagentThreshold
