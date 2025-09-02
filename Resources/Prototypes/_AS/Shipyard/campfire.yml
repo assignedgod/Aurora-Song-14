@@ -1,0 +1,44 @@
+# Author Info
+# GitHub: Zenixic
+# Discord: zenixic
+
+# Maintainer Info
+# GitHub: Zenixic
+# Discord: zenixic
+
+# Shuttle Notes:
+#
+- type: vessel
+  id: Campfire
+  parent: BaseVessel
+  name: BH Campfire
+  description: Gather your friends around the Campfire! Fitted with a bar, kitchen and living spaces.
+  price: 51000 # ~45500 appraise.
+  category: Medium
+  group: Shipyard
+  shuttlePath: /Maps/_AS/Shuttles/campfire.yml
+  guidebookPage: Null
+  class:
+  - Civilian
+  - Kitchen
+  engine:
+  - Uranium
+
+- type: gameMap
+  id: Campfire
+  mapName: 'BH Campfire'
+  mapPath: /Maps/_AS/Shuttles/campfire.yml
+  minPlayers: 0
+  stations:
+    Campfire:
+      stationProto: StandardFrontierVessel
+      components:
+      - type: StationNameSetup
+        mapNameTemplate: 'Campfire {1}'
+        nameGenerator: !type:NanotrasenNameGenerator
+          prefixCreator: '14'
+      - type: StationJobs
+        availableJobs:
+          ContractorInterview: [ 0, 0 ]
+          PilotInterview: [ 0, 0 ]
+          MercenaryInterview: [ 0, 0 ]

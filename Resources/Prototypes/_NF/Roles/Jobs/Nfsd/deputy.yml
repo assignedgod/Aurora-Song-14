@@ -6,9 +6,9 @@
   requirements:
     - !type:OverallPlaytimeRequirement
       time: 43200 # 12 hours
-    - !type:DepartmentTimeRequirement
-      department: Security
-      time: 21600 # 6 hours
+    - !type:RoleTimeRequirement # Aurora Song
+      role: JobSecurityCadet
+      time: 10800 # 3 hours
   alternateRequirementSets:
     longerPlaytimeLessSec:
     - !type:OverallPlaytimeRequirement
@@ -31,7 +31,7 @@
 - type: startingGear
   id: DeputyGear
   equipment:
-    pocket1: NFWeaponPistolUniversalNfsdLessLethal
+    pocket1: ASWeaponPistol58SLELessLethal
   storage:
     back:
     - Flash

@@ -64,6 +64,7 @@
   - type: MagazineVisuals
     steps: 7
 
+# Reinstated old .30 Box mag for L6 | Aurora
 - type: entity
   id: NFBaseMagazineBoxRifle30
   name: box magazine (.30 rifle)
@@ -206,7 +207,7 @@
         color: "#dddddd"
 
 #region .30 box mags
-- type: entity
+- type: entity # L6 Box mag | Aurora
   id: NFMagazineBoxRifle30
   name: box magazine (.30 rifle)
   parent: NFBaseMagazineBoxRifle30

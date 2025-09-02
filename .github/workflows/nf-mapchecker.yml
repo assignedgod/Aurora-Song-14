@@ -6,6 +6,7 @@ on:
     paths:
     # Entity pathspecs - If any of these change (i.e. suffix changes etc), this check should run.
     - "Resources/Prototypes/Entities/**/*.yml"
+    - "Resources/Prototypes/_AS/Entities/**/*.yml" # Aurora Song
     - "Resources/Prototypes/_NF/Entities/**/*.yml"
     - "Resources/Prototypes/Nyanotrasen/Entities/**/*.yml"
     - "Resources/Prototypes/_DV/Entities/**/*.yml"

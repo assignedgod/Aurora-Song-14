@@ -64,7 +64,7 @@
   description: |-
     An excellent SMG. On the receiver is a label that says 'for authorized use only.'
   components:
-  - type: Gun
+  - type: Gun # Stats tweaked to give WT-550 more accurate performance profile | Aurora
     minAngle: 6.7
     maxAngle: 15
   - type: Sprite
@@ -105,10 +105,10 @@
   - type: Clothing
     sprite: _DV/Objects/Weapons/Guns/SMGs/typewriter.rsi
 
-# Surplus
+# Surplus | Aurora
 - type: entity
   name: Drozd
-  parent: [ BaseC2Contraband, NFWeaponSubMachineGunDrozd ]
+  parent: [ BaseC2Contraband, NFWeaponSubMachineGunDrozd ] # Contraband adjusted | Aurora
   id: WeaponSubMachineGunSurpDrozd
   suffix: Surplus
   components:

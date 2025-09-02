@@ -24,6 +24,10 @@
     - id: RubberStampDoctor # Frontier
     - id: EncryptionKeyDoc # Aurora - for new DoC fill
     - id: DocIDCard
+    - id: ASWeaponShotgunSurpFalchion
+    - id: NFAmmunitionBoxShellShotgunBuckshot
+    - id: NFAmmunitionBoxShellShotgunTranquilizer
+    - id: Hypospray
 
 # No hardsuit + Hardsuit locker
 - type: entity

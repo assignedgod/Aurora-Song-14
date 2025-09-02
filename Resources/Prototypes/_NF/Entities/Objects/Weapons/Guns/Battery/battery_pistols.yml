@@ -243,8 +243,8 @@
       path: /Audio/Weapons/Guns/Gunshots/flaregun.ogg
     projectileSpeed: 15
   - type: Battery
-    maxCharge: 720
-    startingCharge: 720
+    maxCharge: 720 # charge adjusted, more flares | Aurora
+    startingCharge: 720 # charge adjusted, more flares | Aurora
   - type: BatterySelfRecharger
     autoRecharge: true
     autoRechargeRate: 10

@@ -29,7 +29,7 @@
     maxAngle: 7.5
     angleIncrease: 0.4
     angleDecay: 2
-    fireRate: 5
+    fireRate: 5 # fire rate tweak | Aurora
     selectedMode: FullAuto
     availableModes:
       - SemiAuto
@@ -73,7 +73,7 @@
   - type: Gun
     angleIncrease: 1.2
     angleDecay: 2
-    fireRate: 7.5
+    fireRate: 7.5 # fire rate tweak | Aurora
     soundGunshot:
       path: /Audio/_DV/Weapons/Guns/Gunshots/laser.ogg
     soundEmpty:
