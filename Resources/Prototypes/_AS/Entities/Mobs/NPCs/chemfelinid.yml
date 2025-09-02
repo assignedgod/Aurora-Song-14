@@ -1,0 +1,13 @@
+- type: entity #Aurora's Song- entity used for catgirl tf potion
+  save: false
+  name: Felinid
+  parent: [MobFelinidBase, BaseMob]
+  id: MobChemFelinid
+  components:
+  - type: RandomHumanoidAppearance
+  - type: Grammar
+    attributes:
+      proper: true
+      gender: female
+  - type: Speech
+    speechVerb: Felinid

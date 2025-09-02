@@ -50,7 +50,7 @@
 - type: startingGear
   id: SheriffGear
   equipment:
-    pocket1: NFWeaponPistolUniversalNfsdLessLethal
+    pocket1: ASWeaponPistol58SLELessLethal
     pocket2: NFWeaponEnergyPistolLaserX01Multiphase
   storage:
     back:

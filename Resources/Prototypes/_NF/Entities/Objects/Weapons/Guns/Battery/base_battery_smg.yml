@@ -28,7 +28,7 @@
     maxAngle: 8.2
     angleIncrease: 0.25
     angleDecay: 1
-    fireRate: 5
+    fireRate: 5 # fire rate tweak | Aurora
     selectedMode: FullAuto
     availableModes:
     - FullAuto
@@ -50,9 +50,9 @@
   abstract: true
   components:
   - type: Gun
-    minAngle: 4.5
-    maxAngle: 8.5
-    fireRate: 4
+    minAngle: 4.5 # Refine accuracy | Aurora
+    maxAngle: 8.5 # Refine accuracy | Aurora
+    fireRate: 4 # fire rate tweak | Aurora
   - type: NFWeaponDetails
     manufacturer: weapon-details-manufacturer-nanotrasen-munitions
 

@@ -8,7 +8,7 @@
   components:
   - type: Tag
     tags:
-      - NFMagazineRifle20 # TODO: make it make sense, change the tags
+      - NFMagazineRifle20 # TODO: make it make sense, change the tags | Aurora
   - type: BallisticAmmoProvider
     mayTransfer: true
     whitelist:
@@ -38,7 +38,7 @@
 - type: entity
   id: NFBaseMagazineDrumRifle20
   name: drum magazine (.20 rifle)
-  parent: [ BaseC2ContrabandUnredeemable, RecyclableItemSteelTiny, BaseMagazineRifle ]
+  parent: [ BaseC2ContrabandUnredeemable, RecyclableItemSteelTiny, BaseMagazineRifle ] # Drum mags are restricted | Aurora
   abstract: true
   components:
   - type: Tag
@@ -291,7 +291,7 @@
     whitelist:
       tags:
         - NFCartridgeRifle20
-    capacity: 25
+    capacity: 25 #Novalite mags hold 25 rounds, same as standard mags. No reason they shouldn't. | Aurora
   - type: ContainerContainer
     containers:
       ballistic-ammo: !type:Container

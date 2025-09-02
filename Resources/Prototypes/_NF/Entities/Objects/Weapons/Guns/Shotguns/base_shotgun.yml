@@ -1,14 +1,14 @@
 #region frame
 - type: entity
   id: NFBaseWeaponFrameShotgun
-  parent: [ NFBaseWeaponEncumbranceRifle, NFBaseItemWeaponGun ]
+  parent: [ NFBaseWeaponEncumbranceRifle, NFBaseItemWeaponGun ] # Encumberance adjusted | Aurora
   abstract: true
   components:
   - type: Sprite
     layers:
     - state: icon
       map: [ "enum.GunVisualLayers.Base" ]
-  - type: Gun
+  - type: Gun # Speed and angle adjusted | Aurora
     projectileSpeed: 30
     minAngle: 2
     maxAngle: 30
@@ -40,6 +40,7 @@
     maxAngle: -21.8
 
 #region manufacturer
+# Giving both NT and Gorlex shotguns their own unique frames to allow for future customization | Aurora
 - type: entity
   id: NFBaseWeaponFrameShotgunNanotrasen
   parent: NFBaseWeaponFrameShotgunWieldable
@@ -66,11 +67,11 @@
 
 #region chamber
 - type: entity
-  id: NFBaseWeaponShotgunChamber12g
+  id: NFBaseWeaponShotgunChamber12g # renamed from .50 to 12g | Aurora
   abstract: true
   components:
   - type: Gun
-    examineCaliber: gun-examine-caliber-12g
+    examineCaliber: gun-examine-caliber-12g # renamed from .50 to 12g | Aurora
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/shotgun.ogg
   - type: BallisticAmmoProvider
@@ -86,7 +87,7 @@
 
 - type: entity
   parent: NFBaseItemWeaponGunMagazineFed
-  id: NFBaseWeaponShotgunChamber12gMagazine
+  id: NFBaseWeaponShotgunChamber12gMagazine # renamed from .50 to 12g | Aurora
   abstract: true
   components:
   - type: Sprite # janky here, but mag is optional and tied with chamber
@@ -100,7 +101,7 @@
     steps: 1
     zeroVisible: true
   - type: Gun
-    examineCaliber: gun-examine-caliber-12g
+    examineCaliber: gun-examine-caliber-12g # renamed from .50 to 12g | Aurora
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/shotgun.ogg
   - type: MagazineAmmoProvider

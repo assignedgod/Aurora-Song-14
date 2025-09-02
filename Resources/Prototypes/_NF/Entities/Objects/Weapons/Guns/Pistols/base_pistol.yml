@@ -6,7 +6,7 @@
   abstract: true
   components:
   - type: Gun
-    projectileSpeed: 30
+    projectileSpeed: 30 # Increased speed to feel less sluggish | Aurora
     minAngle: 4.7
     maxAngle: 14.1
     angleIncrease: 1
@@ -28,23 +28,23 @@
   abstract: true
   components:
   - type: Gun
-    minAngle: 1
-    maxAngle: 20
-    angleIncrease: 3
-    angleDecay: 3
-    fireRate: 4
+    minAngle: 1 # General gun rebalance | Aurora
+    maxAngle: 20 # General gun rebalance | Aurora
+    angleIncrease: 3 # Recoil tweak to account for rate of fire | Aurora
+    angleDecay: 3 # Recoil tweak to account for rate of fire | Aurora
+    fireRate: 4 # General gun rebalance | Aurora
   - type: NFWeaponDetails
     manufacturer: weapon-details-manufacturer-nanotrasen-munitions
 
 - type: entity
   id: NFBaseWeaponFramePistolCybersun
-  parent: [ BaseC2ContrabandUnredeemable, NFBaseWeaponFramePistol ]
+  parent: [ BaseC2ContrabandUnredeemable, NFBaseWeaponFramePistol ] # Contraband adjusted | Aurora
   abstract: true
   components:
   - type: Gun
     angleIncrease: 1
     angleDecay: 1
-    fireRate: 4 # This frame is only used in the cobra which is a stealth weapon designed for quick kills, its got limited and rare ammo so this seems fine to me
+    fireRate: 4 # Fire rate tweak | Aurora
   - type: NFWeaponDetails
     manufacturer: weapon-details-manufacturer-cybersun-industries
 
@@ -183,7 +183,7 @@
         whitelist:
           tags:
             - NFCartridgePistol45
-
+#region caliber .25 | Aurora
 - type: entity
   id: NFBaseWeaponPistolChamber25
   parent: NFBaseWeaponPistolChamber
@@ -212,3 +212,4 @@
         whitelist:
           tags:
             - NFCartridgeRifle25
+#endregion caliber .25 | Aurora

@@ -19,7 +19,10 @@
         amount: -5
       - !type:AdjustReagent
         reagent: Libidozenithizine
-        amount: -3
+        amount: -5 #Aurora 3<5
+      - !type:AdjustReagent
+        reagent: ForceFemDrugs # Aurora
+        amount: -5
 
 - type: reagent
   id: Carbon

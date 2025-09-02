@@ -97,8 +97,8 @@
     whitelist:
       tags:
         - Grenade
-        - NFCartridgeGrenade40mmFlash
-        - NFCartridgeGrenade40mmEmp
+        - NFCartridgeGrenade40mmFlash # Base launcher can use flashbangs | Aurora
+        - NFCartridgeGrenade40mmEmp # Base launcher can use emp grenades | Aurora
     capacity: 3
     proto: NFGrenadeFrag
 

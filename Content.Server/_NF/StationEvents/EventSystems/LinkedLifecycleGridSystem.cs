@@ -10,7 +10,7 @@ using Content.Shared.Movement.Pulling.Components;
 using Robust.Shared.Map;
 using Robust.Shared.Player;
 using Content.Shared._Goobstation.Vehicles;
-using Content.Server.Touched;
+using Content.Server._AS.Touched;
 
 namespace Content.Server.StationEvents.Events;
 
@@ -97,6 +97,7 @@ public sealed class LinkedLifecycleGridSystem : EntitySystem
         List<(Entity<TransformComponent> Entity, EntityUid MapUid, Vector2 MapPosition)> reparentEntities = new();
         HashSet<EntityUid> handledMindContainers = new();
 
+        // Begin Aurora Song
         var itemQuery = AllEntityQuery<TouchedComponent, TransformComponent>();
         while (itemQuery.MoveNext(out var touched, out var xform))
         {
@@ -108,6 +109,7 @@ public sealed class LinkedLifecycleGridSystem : EntitySystem
 
             reparentEntities.Add(((targetUid, targetXform), targetXform.MapUid!.Value, _transform.GetWorldPosition(targetXform)));
         }
+        // End Aurora Song
 
         // Get player characters
         var mobQuery = AllEntityQuery<HumanoidAppearanceComponent, BankAccountComponent, TransformComponent>();

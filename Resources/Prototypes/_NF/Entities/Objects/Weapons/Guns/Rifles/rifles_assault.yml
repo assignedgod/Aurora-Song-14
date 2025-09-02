@@ -16,13 +16,13 @@
     zeroVisible: true
 
 - type: entity
-  id: NFWeaponRifleAssaultM90
+  id: NFWeaponRifleAssaultM90 #M90 has no grenade launcher, so we stop referring to it as having one | Aurora
   parent: [ NFBaseWeaponRifleAssaultChamber20, NFBaseWeaponFrameRifleAssaultCybersun ]
   name: M-90
   description: |-
     An older bullpup carbine model, this illegal firearm is often used by Syndicate fireteams and security.
   components:
-  - type: Gun
+  - type: Gun #M90 given its own stats | Aurora
     projectileSpeed: 30
     minAngle: 3
     maxAngle: 10
@@ -30,7 +30,7 @@
     angleDecay: 4
     fireRate: 6
   - type: Clothing
-    sprite: _DV/Objects/Weapons/Guns/Rifles/carbinenogl.rsi
+    sprite: _DV/Objects/Weapons/Guns/Rifles/carbinenogl.rsi # New M90 Sprite without grenade launcher | Aurora
   - type: Sprite
     sprite: _DV/Objects/Weapons/Guns/Rifles/carbinenogl.rsi
   - type: Item
@@ -85,7 +85,7 @@
 
 - type: entity
   id: NFWeaponRifleAssaultJackdaw
-  parent: [ BaseC2ContrabandUnredeemable, ASBaseWeaponRifleAssaultChamber25, NFBaseWeaponFrameRifleAssaultFrontierGunsmith ]
+  parent: [ BaseC2ContrabandUnredeemable, ASBaseWeaponRifleAssaultChamber25, NFBaseWeaponFrameRifleAssaultFrontierGunsmith ] #Contraband adjusted | Aurora
   name: Jackdaw
   description: |-
     The beginning of the end is heralded by the song of a Jackdaw.
@@ -94,7 +94,7 @@
     sprite: _DV/Objects/Weapons/Guns/Rifles/jackdaw.rsi
   - type: Clothing
     sprite: _DV/Objects/Weapons/Guns/Rifles/jackdaw.rsi
-  - type: Gun
+  - type: Gun # Jackdaw given its own stats | Aurora
     minAngle: 10
     maxAngle: 35
     angleIncrease: 2.5
@@ -120,7 +120,7 @@
 #region Frontier
 - type: entity
   id: NFWeaponRifleAssaultGestio
-  parent: [ NFBaseWeaponRifleAssaultChamber30, NFBaseWeaponFrameRifleAssaultFrontierGunsmith ]
+  parent: [ NFBaseWeaponRifleAssaultChamber30, NFBaseWeaponFrameRifleAssaultFrontierGunsmith ] #Changed from low cap to standard cap | Aurora
   name: Gestio
   description: |-
     An old burst-fire rifle designed by Silver Industries that never left trials.
@@ -131,7 +131,7 @@
     sprite: _NF/Objects/Weapons/Guns/Rifles/gestio.rsi
   - type: Item
     sprite: _NF/Objects/Weapons/Guns/Rifles/gestio.rsi
-  - type: Gun
+  - type: Gun # Minor adjustments to make it less of a meta pick | Aurora
     burstFireRate: 4.5
     shotsPerBurst: 3
     burstCooldown: 0.6

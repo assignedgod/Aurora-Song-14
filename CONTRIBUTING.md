@@ -1,5 +1,7 @@
 # Contributing to Aurora Song
 
+Modified contributing from [Frontier](https://github.com/new-frontiers-14/frontier-station-14/blob/master/CONTRIBUTING.md)
+
 If you're considering contributing to Aurora Song, [Wizard's Den's PR guidelines](https://docs.spacestation14.com/en/general-development/codebase-info/pull-request-guidelines.html) are a good starting point for code quality and version tracking etiquette. Note that we do not have the same master/stable branch distinction.
 
 Importantly, do not make webedits. From the text above:
@@ -9,7 +11,7 @@ Importantly, do not make webedits. From the text above:
 
 # Aurora Song specific content
 
-In general, anything you create from scratch (vs. modifying something that exists from upstream) should go in a Frontier-specific subfolder, `_AS`.
+In general, anything you create from scratch (vs. modifying something that exists from upstream) should go in an Aurora Song subfolder, `_AS`.
 
 Examples:
 - `Content.Server/_AS/`
@@ -60,7 +62,7 @@ A cyborg module with an added moduleId field (inline blank comment), a commented
     - HydroponicsToolSpade
     - HydroponicsToolClippers
     # - Bucket # Aurora Song
-  # Frontier: droppable borg items
+  # Aurora Song: droppable borg items
   - type: DroppableBorgModule
     moduleId: Gardening
     items:
@@ -102,7 +104,7 @@ For ship submissons, refer to the [Ship Submission Guidelines](https://frontiers
 
 In general:
 
-Aurora Song uses specific prototypes for points of interest and ship maps (e.g. to store spawn information, station spawn data, or ship price and categories).  For ships, these are stored in the VesselPrototype (Resources/Prototypes/_NF/Shipyard) or PointOfInterestPrototype (Resources/Prototypes/_NF/PointsOfInterest).  If creating a new ship or POI, refer to existing prototypes.
+Aurora Song uses specific prototypes for points of interest and ship maps (e.g. to store spawn information, station spawn data, or ship price and categories).  For ships, these are stored in the VesselPrototype (Resources/Prototypes/_NF/Shipyard) or PointOfInterestPrototype (Resources/Prototypes/_NF/PointsOfInterest).  If creating a new ship or POI, refer to existing prototypes, and submit new creations to Resources/Prototypes/_AS/Shipyard and Resources/Prototypes/_AS/PointsOfInterest respectively.
 
 If you are making changes to a map, check with the map's maintainer (or if none, its author), and avoid having multiple open features with changes to the same map.
 

@@ -51,7 +51,7 @@
   components:
   - type: BallisticAmmoProvider
     proto: NFCartridgePistol35
-  - type: Sprite
+  - type: Sprite  # Updated sprite to match the empty version | Aurora
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]

@@ -1,0 +1,106 @@
+﻿- type: reagent #Aurora Polymorph Chem
+  id: Mothrazine
+  name: reagent-name-mothrazine
+  group: Toxins
+  desc: reagent-desc-mothrazine
+  flavor: fluffy
+  physicalDesc: reagent-physical-desc-fluffy
+  color: "#ffc1c1"
+  metabolisms:
+    Drink:
+      metabolismRate: 0.15
+      effects:
+        - !type:Emote
+          emote: Chitter
+          showInChat: true
+          force: true
+          probability: 0.18
+        - !type:Polymorph
+          prototype: ChemicalMothroach
+          conditions:
+            - !type:NFIsHumanoid
+            - !type:ReagentThreshold
+              min: 10
+        - !type:AdjustReagent
+          reagent: Mothrazine
+          amount: -3
+          conditions:
+            - !type:ReagentThreshold
+              min: 10
+
+- type: reagent #Aurora Polymorph Chem
+  id: Catgirlium
+  name: reagent-name-catgirlium
+  group: Toxins
+  desc: reagent-desc-catgirlium
+  flavor: sweet
+  physicalDesc: reagent-physical-desc-powdery
+  color: "#e0ffff"
+  metabolisms:
+    Drink:
+      metabolismRate: 0.15
+      effects:
+        - !type:Emote
+          emote: Meow
+          showInChat: true
+          force: true
+          probability: 0.09
+        - !type:Polymorph
+          prototype: ChemicalFelinid
+          conditions:
+            - !type:NFIsHumanoid
+            - !type:ReagentThreshold
+              min: 15
+        - !type:AdjustReagent
+          reagent: Catgirlium
+          amount: -2
+          conditions:
+            - !type:ReagentThreshold
+              min: 15
+        - !type:GenericStatusEffect
+          key: Stutter
+          component: ScrambledAccent
+
+- type: reagent #Aurora Polymorph Chem, wip
+  id: Davisicium
+  name: reagent-name-davisicium
+  group: Toxins
+  desc: reagent-desc-davisicium
+  flavor: flat
+  physicalDesc: reagent-physical-desc-buzzy
+  color: "#FFDE21"
+  metabolisms:
+    Poison:
+      effects:
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentThreshold
+          min: 15
+        damage:
+          types:
+            Asphyxiation: 2
+    Narcotic:
+      effects:
+      - !type:MovespeedModifier
+        walkSpeedModifier: 1.20
+        sprintSpeedModifier: 1.20
+    Drink:
+      metabolismRate: 0.15
+      effects:
+        - !type:Emote
+          emote: Buzz
+          showInChat: true
+          force: true
+          probability: 0.18
+        - !type:Polymorph
+          prototype: ChemicalBee
+          conditions:
+            - !type:NFIsHumanoid
+            - !type:ReagentThreshold
+              min: 20
+        - !type:AdjustReagent
+          reagent: Davisicium
+          amount: -3
+          conditions:
+            - !type:ReagentThreshold
+              min: 20

@@ -2,7 +2,7 @@
 - type: entity
   categories: [ HideSpawnMenu ]
   id: NFPelletShotgun
-  name: pellet (12g)
+  name: pellet (12g) # renamed from .50 to 12g | Aurora
   parent: NFBasePellet
   components:
   - type: Projectile
@@ -14,42 +14,42 @@
 - type: entity
   categories: [ HideSpawnMenu ]
   id: NFPelletShotgunIncendiary
-  name: pellet (12g incendiary)
+  name: pellet (12g incendiary) # renamed from .50 to 12g | Aurora
   parent: NFBasePelletIncendiary
   components:
   - type: Projectile
     damage:
       types:
-        Blunt: 3
-        Heat: 7
+        Blunt: 3 # Incendiary damage rebalanced | Aurora
+        Heat: 7 # Damage rebalanced | Aurora
 
 - type: entity
   categories: [ HideSpawnMenu ]
   id: NFPelletShotgunPractice
-  name: pellet (12g practice)
+  name: pellet (12g practice) # renamed from .50 to 12g | Aurora
   parent: NFBasePelletPractice
   components:
   - type: Projectile
     damage:
       types:
-        Blunt: 1
+        Blunt: 1 # Damage rebalanced | Aurora
 
 - type: entity
   categories: [ HideSpawnMenu ]
   id: NFPelletShotgunUranium
-  name: pellet (12g uranium)
+  name: pellet (12g uranium) # renamed from .50 to 12g | Aurora
   parent: NFBasePelletUranium
   components:
   - type: Projectile
     damage:
       types:
-        Radiation: 5
-        Piercing: 5
+        Radiation: 5 # Damage rebalanced | Aurora
+        Piercing: 5 # Damage rebalanced | Aurora
 
 - type: entity
   categories: [ HideSpawnMenu ]
   id: NFPelletShotgunImprovised
-  name: pellet (12g improvised)
+  name: pellet (12g improvised) # renamed from .50 to 12g | Aurora
   parent: NFBasePelletPractice
   components:
   - type: Sprite
@@ -63,30 +63,30 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 3
-        Slash: 3
+        Piercing: 3 # Damage rebalanced | Aurora
+        Slash: 3 # Damage rebalanced | Aurora
 
 - type: entity
   categories: [ HideSpawnMenu ]
   id: NFPelletShotgunGlass
-  name: pellet (12g glass)
+  name: pellet (12g glass) # renamed from .50 to 12g | Aurora
   parent: NFPelletShotgunImprovised
   components:
   - type: Projectile
     damage:
       types:
-        Slash: 10
+        Slash: 10 # Damage rebalanced | Aurora
 
 - type: entity
   categories: [ HideSpawnMenu ]
   id: NFPelletShotgunGrapeshot
-  name: pellet (12g grapeshot)
+  name: pellet (12g grapeshot) # renamed from .50 to 12g | Aurora
   parent: NFBasePellet
   components:
   - type: Projectile
     damage:
       types:
-        Piercing: 25
+        Piercing: 25 # Grapeshot does more piercing damage | Aurora
         Structural: 5
 
 #region PelletsSpread
@@ -167,19 +167,19 @@
   categories: [ HideSpawnMenu ]
   id: NFShotgunSlug
   parent: NFBaseBullet
-  name: slug (12g)
+  name: slug (12g) # renamed from .50 to 12g | Aurora
   components:
   - type: Projectile
     damage:
       types:
-        Piercing: 40
-        Structural: 15
+        Piercing: 40 # Slugs do more piercing damage | Aurora
+        Structural: 15 # Slugs do more structural damage | Aurora
 
 - type: entity
   categories: [ HideSpawnMenu ]
   id: NFShotgunSlugBeanbag
   parent: NFBaseBulletRubber
-  name: slug (12g beanbag)
+  name: slug (12g beanbag) # renamed from .50 to 12g | Aurora
   components:
   - type: Projectile
     damage:
@@ -192,7 +192,7 @@
   categories: [ HideSpawnMenu ]
   id: NFShotgunSlugFlare
   parent: NFPelletShotgunFlare
-  name: slug (12g)
+  name: slug (12g) # renamed from .50 to 12g | Aurora
   components:
   - type: Sprite
     noRot: false
@@ -212,7 +212,7 @@
   categories: [ HideSpawnMenu ]
   id: NFShotgunSlugTranquilizer
   parent: NFBaseBullet
-  name: slug (12g tranquilizer)
+  name: slug (12g tranquilizer) # renamed from .50 to 12g | Aurora
   components:
   - type: Sprite
     layers:

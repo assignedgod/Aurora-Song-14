@@ -17,7 +17,7 @@
   id: NFWeaponPistolN1984
   parent: [ NFBaseWeaponPistolChamber45, NFBaseWeaponFramePistolNanotrasen ]
   name: N1984
-  description: |-
+  description: |- # Nod to user in testing | Aurora
     The sidearm of any self respecting logistics officer. On the handle is a label that says 'for authorized use only.'
   components:
   - type: Sprite
@@ -27,7 +27,7 @@
 
 - type: entity
   id: NFWeaponPistolCobra
-  parent: [ NFBaseWeaponPistolChamber25, NFBaseWeaponFramePistolCybersun ]
+  parent: [ NFBaseWeaponPistolChamber25, NFBaseWeaponFramePistolCybersun ] # Back to being .25 | Aurora
   name: cobra
   description: |-
     A rugged, robust operator handgun with inbuilt silencer. An illegal firearm often used by Syndicate agents.
@@ -36,7 +36,7 @@
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/silenced.ogg
       params:
-        volume: -8 # Quiet but not as quiet as upstream's upstream
+        volume: -8 # Quiet but not as quiet as upstream's upstream | Aurora
   - type: Sprite
     sprite: _NF/Objects/Weapons/Guns/Pistols/cobra.rsi
   - type: Clothing
@@ -45,11 +45,16 @@
 #region DeltaV
 - type: entity
   id: NFWeaponPistolUniversal
-  parent: [ NFBaseWeaponPistolChamber35, NFBaseWeaponFramePistolNanotrasen ]
+  parent: [ NFBaseWeaponPistolChamber45, NFBaseWeaponFramePistolNanotrasen ] # Restored to .45 | Aurora
   name: mk32 "Universal"
   description: The Mark 32 Offensive Handgun.
-  components:
+  components: #MK32 restored as accessible .45 pistol, status and soudns adjusted | Aurora
   - type: Gun
+    minAngle: 1
+    maxAngle: 15
+    angleIncrease: 3
+    angleDecay: 3
+    fireRate: 3
     soundGunshot:
       path: /Audio/_DV/Weapons/Guns/Gunshots/universal.ogg
   - type: Sprite

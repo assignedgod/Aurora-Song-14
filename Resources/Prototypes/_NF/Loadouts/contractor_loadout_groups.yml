@@ -899,10 +899,13 @@
   - ContractorNFBoxSurvivalSheleg
   - ContractorNFBoxSurvivalExtendedSheleg
   - EmergencyIPCBox
+  - ContractorASBoxSurvivalFeroxi # Aurora Song
+  - ContractorASBoxSurvivalExtendedFeroxi # Aurora Song
   fallbacks:
   - ContractorNFBoxSurvival
   - ContractorNFBoxSurvivalNitrogen
   - ContractorNFBoxSurvivalSheleg
+  - ContractorASBoxSurvivalFeroxi # Aurora Song
 
 - type: loadoutGroup
   id: ContractorEncryptionKey

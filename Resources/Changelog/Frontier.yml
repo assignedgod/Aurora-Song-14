@@ -4653,9 +4653,7 @@ Entries:
 - author: dustylens
   changes:
     - type: Tweak
-      message: >-
-        Shuttle update and housekeeping. Small adjustments to shuttles and
-        POIs.
+      message: Shuttle update and housekeeping. Small adjustments to shuttles and POIs.
   id: 6212
   time: '2025-07-20T15:04:22.0000000+00:00'
   url: https://github.com/new-frontiers-14/frontier-station-14/pull/3738
@@ -4858,3 +4856,126 @@ Entries:
   id: 6235
   time: '2025-08-08T07:33:53.0000000+00:00'
   url: https://github.com/new-frontiers-14/frontier-station-14/pull/3792
+- author: assignedgod
+  changes:
+    - type: Add
+      message: Added mk38S
+    - type: Remove
+      message: Removed universal from SLE loadouts
+    - type: Tweak
+      message: Added mk38s to sle and medic loadouts
+    - type: Tweak
+      message: 'Gave medics c2 licensees '
+  id: 6236
+  time: '2025-08-29T03:26:00.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/428
+- author: Cygnall
+  changes:
+    - type: Add
+      message: blacked-out MK58 sprites
+  id: 6237
+  time: '2025-08-29T02:09:30.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/424
+- author: the-hivequeen
+  changes:
+    - type: Fix
+      message: Arrival Station YML fix.
+  id: 6238
+  time: '2025-08-29T21:33:52.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/431
+- author: Zenixic
+  changes:
+    - type: Add
+      message: Added the BH Campfire into the normal shipyard
+  id: 6239
+  time: '2025-08-29T22:55:57.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/429
+- author: assignedgod
+  changes:
+    - type: Tweak
+      message: Increased caliber of universal
+  id: 6240
+  time: '2025-08-29T03:25:43.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/427
+- author: Cygnall
+  changes: []
+  id: 6241
+  time: '2025-08-29T02:16:24.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/425
+- author: Cygnall
+  changes:
+    - type: Tweak
+      message: darker ejector port on slide open for mk58s
+  id: 6242
+  time: '2025-08-29T02:37:33.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/426
+- author: assignedgod
+  changes:
+    - type: Add
+      message: Added mk38S
+    - type: Remove
+      message: Removed universal from SLE loadouts
+    - type: Tweak
+      message: Added mk38s to sle and medic loadouts
+    - type: Tweak
+      message: 'Gave medics c2 licensees '
+  id: 6243
+  time: '2025-08-29T03:26:00.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/428
+- author: Karlm4x
+  changes:
+    - type: Fix
+      message: 'Removed duplicate cybernatic limbs '
+    - type: Fix
+      message: Fixed Unnamed markings
+  id: 6244
+  time: '2025-08-28T20:40:12.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/417
+- author: Houtblokje
+  changes:
+    - type: Add
+      message: >-
+        Added multiple recipes for synthesizing olive oil. See the guidebook for
+        more information.
+  id: 6245
+  time: '2025-08-28T23:08:30.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/418
+- author: assignedgod
+  changes:
+    - type: Tweak
+      message: Increased machine work speed
+  id: 6246
+  time: '2025-08-28T17:24:13.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/416
+- author: assignedgod
+  changes:
+    - type: Fix
+      message: 'Fixed an ammo bag opening infinitely '
+  id: 6247
+  time: '2025-08-25T21:22:39.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/407
+- author: GreyScaleHarlequin
+  changes:
+    - type: Tweak
+      message: On-Join disclaimer changed to reflect Aurora Song
+  id: 6248
+  time: '2025-08-23T08:40:14.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/406
+- author: Cygnall
+  changes:
+    - type: Fix
+      message: military and military med webbings
+    - type: Add
+      message: 25k option to ECvend
+    - type: Fix
+      message: admin loadout
+  id: 6249
+  time: '2025-08-23T03:35:49.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/405
+- author: Cygnall
+  changes:
+    - type: Tweak
+      message: MK58 sprite colors
+  id: 6250
+  time: '2025-08-29T02:16:24.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/425

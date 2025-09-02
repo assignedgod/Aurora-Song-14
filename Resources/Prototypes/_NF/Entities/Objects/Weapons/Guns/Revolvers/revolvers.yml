@@ -6,7 +6,7 @@
   description: |-
     A detective's best friend. On the handle is a label that says 'for authorized use only.'
   components:
-  - type: Gun
+  - type: Gun # Inspector given its own gun stats to make it more distinct | Aurora
     projectileSpeed: 30
     minAngle: 3
     maxAngle: 15
@@ -60,9 +60,9 @@
     zeroVisible: true
 
 - type: entity
-  id: NFWeaponRevolverPython45
+  id: NFWeaponRevolverPython45 # Renamed back to Python | Aurora
   parent: [ NFBaseWeaponRevolverChamber45, NFBaseWeaponFrameRevolverGorlex ]
-  name: python
+  name: python # Renamed back to Python | Aurora
   description: |-
     An illegal revolver favoured by Syndicate agents.
   components:
@@ -90,7 +90,7 @@
   description: |-
     A pirate's companion. Yarrr! An illegal weapon often used by pirates.
   components:
-  - type: Item
+  - type: Item # Flintlock size adjusted | Aurora
     size: Small
     shape:
     - 0,0,1,0

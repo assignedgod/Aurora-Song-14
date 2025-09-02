@@ -237,3 +237,39 @@
     exitPolymorphSound: /Audio/Magic/ethereal_exit.ogg
     duration: 120
     effectProto: EffectDesynchronizer
+
+- type: polymorph #Aurora's Song polymorph prototype
+  id: ChemicalMothroach
+  configuration:
+    entity: MobRosyMothroach
+    forced: true
+    transferName: true
+    transferHumanoidAppearance: true
+    inventory: None
+    revertOnDeath: true
+    revertOnCrit: true
+    duration: 30
+
+- type: polymorph #Aurora's Song polymorph prototype
+  id: ChemicalFelinid
+  configuration:
+    entity: MobChemFelinid
+    forced: true
+    transferName: true
+    transferHumanoidAppearance: false
+    inventory: Transfer
+    revertOnDeath: true
+    revertOnCrit: true
+    duration: 30
+
+- type: polymorph #Aurora's Song polymorph prototype
+  id: ChemicalBee
+  configuration:
+    entity: MobAngryBee
+    forced: true
+    transferName: true
+    transferHumanoidAppearance: true
+    inventory: None
+    revertOnDeath: true
+    revertOnCrit: true
+    duration: 40

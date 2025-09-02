@@ -70,7 +70,6 @@
       - state: internals
       - state: extendedtank
 
-# Sheleg
 - type: entity
   parent: BoxSurvival
   id: NFBoxSurvivalSheleg
@@ -104,3 +103,42 @@
     layers:
       - state: internals
       - state: extendedtank
+
+
+# Begin Aurora Song
+- type: entity
+  parent: BoxSurvival
+  id: ASBoxSurvivalFeroxi
+  suffix: Water Vapor
+  components:
+  - type: StorageFill
+    contents:
+      - id: EmergencyWaterVaporTankFilled
+      - id: SpaceMedipen
+      - id: EmergencyMedipen
+      - id: FoodPSB
+      - id: DrinkWaterBottleFull
+      - id: Flare
+  - type: Sprite
+    layers:
+      - state: internals
+      - state: emergencytank
+
+- type: entity
+  parent: BoxSurvivalEngineering
+  id: ASBoxSurvivalExtendedFeroxi
+  suffix: Water Vapor
+  components:
+  - type: StorageFill
+    contents:
+      - id: DoubleEmergencyWaterVaporTankFilled
+      - id: SpaceMedipen
+      - id: EmergencyMedipen
+      - id: FoodPSB
+      - id: DrinkWaterBottleFull
+      - id: CrowbarPocket
+  - type: Sprite
+    layers:
+      - state: internals
+      - state: extendedtank
+# End Aurora Song

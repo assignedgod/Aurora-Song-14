@@ -282,7 +282,7 @@
 - type: entity
   id: CrossbowImprovised
   parent: [ BaseCrossbowWieldable, BaseC1Contraband ]
-  name: improvised crossbow
+  name: improvised crossbow # improvised crossbow name adjusted for clarity | Aurora
   components:
   - type: UseDelay
     delay: 2
@@ -323,7 +323,7 @@
 - type: entity
   id: CrossbowImprovisedHand
   parent: [ NFBaseWeaponEncumbranceCrossbowHand, BaseCrossbow, BaseC1Contraband ]
-  name: improvised hand crossbow
+  name: improvised hand crossbow # improvised hand crossbow name adjusted for clarity | Aurora
   components:
   - type: UseDelay
     delay: 2
