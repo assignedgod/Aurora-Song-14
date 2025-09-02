@@ -1,15 +1,15 @@
 using Content.Server.Power.Components;
-using Content.Shared._EinsteinEngines.Silicon.Systems;
+using Content.Shared._EE.Silicon.Systems;
 using Content.Shared.Bed.Sleep;
-using Content.Server._EinsteinEngines.Silicon.Charge;
-using Content.Server._EinsteinEngines.Power.Components;
+using Content.Server._EE.Silicon.Charge;
+using Content.Server._EE.Power.Components;
 using Content.Shared.StatusEffectNew;
 using Content.Server.Humanoid;
 using Content.Shared.Humanoid;
 using Content.Shared.StatusEffectNew.Components;
 using Robust.Shared.Prototypes;
 
-namespace Content.Server._EinsteinEngines.Silicon.Death;
+namespace Content.Server._EE.Silicon.Death;
 
 public sealed class SiliconDeathSystem : EntitySystem
 {
