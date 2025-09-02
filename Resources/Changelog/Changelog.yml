@@ -4247,3 +4247,10 @@ Entries:
   id: 8621
   time: '2025-09-02T15:03:03.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/440
+- author: assignedgod
+  changes:
+    - type: Tweak
+      message: Put access locks on ships with chemvends
+  id: 8622
+  time: '2025-09-02T15:03:25.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/441
