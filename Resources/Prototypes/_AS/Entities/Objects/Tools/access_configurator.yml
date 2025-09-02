@@ -2,7 +2,7 @@
   parent: [AccessConfigurator, BaseC1Contraband]
   id: AccessConfiguratorCivilian
   name: civilian access configurator
-  description: Used to modify the access level requirements for airlocks and other lockable devices. Modified for civilian use. 
+  description: Used to modify the access level requirements for airlocks and other lockable devices. Modified for civilian use.
   components:
     - type: Sprite
       sprite: _AS/Objects/Tools/civilian_access_configurator.rsi
