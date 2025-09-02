@@ -1,0 +1,13 @@
+﻿- type: entity
+  id: ThrusterMedicMachineCircuitboard
+  parent: BaseMachineCircuitboard
+  name: SLE thruster machine board
+  components:
+  - type: Sprite
+    state: medical
+  - type: MachineBoard
+    prototype: ThrusterMedic
+    requirements:
+      Capacitor: 3
+    stackRequirements:
+      Steel: 5

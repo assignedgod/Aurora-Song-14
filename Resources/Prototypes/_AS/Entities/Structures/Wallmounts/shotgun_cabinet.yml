@@ -1,0 +1,19 @@
+﻿- type: entity
+  parent: ShotGunCabinet
+  id: ShotGunCabinetFilledMedical
+  description: ...and thats how I lost my medical license!
+  suffix: Filled, Medical
+  components:
+  - type: ContainerFill
+    containers:
+      ItemCabinet:
+      - NFWeaponShotgunKammerer # Aurora: use NF version
+  - type: AccessReader
+    access: [["Medical"]]
+  - type: ItemSlots
+    slots:
+      ItemCabinet:
+        ejectOnInteract: true
+        whitelist:
+          tags:
+          - WeaponShotgunKammerer
