@@ -52,9 +52,11 @@ public sealed class SiliconDeathSystem : EntitySystem
         if (deadEvent.Cancelled)
             return;
 
-        EntityManager.EnsureComponent<SleepingComponent>(uid);
-        EntityManager.EnsureComponent<StatusEffectComponent>(uid);  // New Status Effect System - Aurora
-        EntityManager.EnsureComponent<ForcedSleepingStatusEffectComponent>(uid); // New Forced Sleep component from StatusEffectNew - Aurora
+        // Okay so, commenting out the SleepingComponent has resulted in the IPC being, get this, unable to sleep. Great news though, they can still use their hands when EMP'd, or speak.
+        // This is actually really useful, because it means they can still interact with stuff, and aren't just one tap EMP'd and then helpless. You're welcome IPC mains. | Aurora
+        //EntityManager.EnsureComponent<SleepingComponent>(uid);
+        //EntityManager.EnsureComponent<StatusEffectComponent>(uid);  // New Status Effect System - Aurora
+        //EntityManager.EnsureComponent<ForcedSleepingStatusEffectComponent>(uid); // New Forced Sleep component from StatusEffectNew - Aurora
 
         if (TryComp(uid, out HumanoidAppearanceComponent? humanoidAppearanceComponent))
         {
@@ -69,7 +71,7 @@ public sealed class SiliconDeathSystem : EntitySystem
 
     private void SiliconUnDead(EntityUid uid, SiliconDownOnDeadComponent siliconDeadComp, BatteryComponent? batteryComp, EntityUid batteryUid)
     {
-        RemComp<ForcedSleepingStatusEffectComponent>(uid); // New Forced Sleep component from StatusEffectNew - Aurora
+        //RemComp<ForcedSleepingStatusEffectComponent>(uid); // New Forced Sleep component from StatusEffectNew - Aurora
         _sleep.TryWaking(uid, true, null);
 
         siliconDeadComp.Dead = false;
