@@ -4238,3 +4238,12 @@ Entries:
   id: 8620
   time: '2025-09-02T03:16:47.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/439
+- author: assignedgod
+  changes:
+    - type: Add
+      message: >-
+        Added the Interdyne Halo, a search and rescue ship for use by medical
+        staff
+  id: 8621
+  time: '2025-09-02T15:03:03.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/440
