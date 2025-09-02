@@ -16,6 +16,7 @@
     ShipyardRCDAmmo: 20 # Frontier
     DoorRemoteShipyard: 5 # Frontier
     ClothingHeadHatCone: 10 # Frontier: 4<10
+    AccessConfiguratorCivilian: 5 # Aurora Song: Civilian access configurator.
   contrabandInventory:
     CowToolboxFilled: 1
     DrinkBeerCan: 3
