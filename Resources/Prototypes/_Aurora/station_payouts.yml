@@ -107,3 +107,20 @@
   id: managerPay
   payPerHour: 30000
   job: PlantManager
+
+#Exfils
+
+- type: stationPay
+  id: CellCommanderPay
+  payPerHour: 20000
+  job: CellCommander
+
+- type: stationPay
+  id: CellMedicPay
+  payPerHour: 17500
+  job: CellMedic
+
+- type: stationPay
+  id: CellOperativePay
+  payPerHour: 15000
+  job: CellOperative

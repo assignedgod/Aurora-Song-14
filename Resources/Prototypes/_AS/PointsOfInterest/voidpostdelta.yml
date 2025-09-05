@@ -29,6 +29,9 @@
         stationSubtext: 'aurora-lobby-exfiltrators-subtext'
         stationDescription: 'aurora-lobby-exfiltrators-description'
         lobbySortOrder: 4
+      - type: StationDeadDropHintExempt
+      - type: StationDeadDropReporting
+        messageSet: Exfiltrators
       - type: StationJobs
         availableJobs:
           CellCommander: [ 1, 1 ]

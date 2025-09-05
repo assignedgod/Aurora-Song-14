@@ -1,0 +1,11 @@
+﻿- type: smugglingReportMessageSet
+  id: Exfiltrators
+  channel: Exfiltrator
+  messageSets:
+  - prob: 0.6 #High probability
+    minDelay: 6
+    maxDelay: 10
+    messages:
+    - type: PodLocation
+      message: smuggling-report-exfiltrators
+      maxError: 200 # They should know about where it is
