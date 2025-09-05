@@ -59,7 +59,7 @@
       - LacerAutoInjector
 
 - type: task
-  id: MedicalTestTask
+  id: CrisisAutoInjectorTask
   taskGroup: MedicalTaskGroup
   reward: 15000
   description: task-item-meds
@@ -71,7 +71,7 @@
       - CrisisAutoInjector
 
 - type: task
-  id: MedicalTestTask
+  id: StimulantAutoInjectorTask
   taskGroup: MedicalTaskGroup
   reward: 15000
   description: task-item-meds
@@ -83,7 +83,7 @@
       - StimulantAutoInjector
 
 - type: task
-  id: MedicalTestTask
+  id: HemostasisAutoInjectorTask
   taskGroup: MedicalTaskGroup
   reward: 15000
   description: task-item-meds
@@ -95,7 +95,7 @@
       - HemostasisAutoInjector
 
 - type: task
-  id: MedicalTestTask
+  id: BruteAutoInjectorTask
   taskGroup: MedicalTaskGroup
   reward: 15000
   description: task-item-meds
@@ -107,7 +107,7 @@
       - BruteAutoInjector
 
 - type: task
-  id: MedicalTestTask
+  id: BurnAutoInjectorTask
   taskGroup: MedicalTaskGroup
   reward: 15000
   description: task-item-meds
@@ -119,7 +119,7 @@
       - BurnAutoInjector
 
 - type: task
-  id: MedicalTestTask
+  id: RadAutoInjectorTask
   taskGroup: MedicalTaskGroup
   reward: 15000
   description: task-item-meds
@@ -131,7 +131,7 @@
       - RadAutoInjector
 
 - type: task
-  id: MedicalTestTask
+  id: PunctAutoInjectorTask
   taskGroup: MedicalTaskGroup
   reward: 15000
   description: task-item-meds
@@ -143,7 +143,7 @@
       - PunctAutoInjector
 
 - type: task
-  id: MedicalTestTask
+  id: PyraAutoInjectorTask
   taskGroup: MedicalTaskGroup
   reward: 15000
   description: task-item-meds
@@ -156,7 +156,7 @@
 
 
 - type: task
-  id: MedicalTestTask
+  id: AirlossAutoInjectorTask
   taskGroup: MedicalTaskGroup
   reward: 15000
   description: task-item-meds
