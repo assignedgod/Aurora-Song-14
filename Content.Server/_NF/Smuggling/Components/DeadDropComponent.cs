@@ -15,7 +15,7 @@ public sealed partial class DeadDropComponent : Component
     ///     The name for the deaddrop pod
     /// </summary>
     [DataField]
-    public LocId Name = "deaddrop-shuttle-name";
+    public LocId Name = "deaddrop-shuttle-name-cargo";  // AS: Arcadia version
 
     /// <summary>
     ///     When the next drop will occur. Used internally.

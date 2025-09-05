@@ -1,0 +1,41 @@
+# Author Info
+# GitHub:
+# Discord: Assignedgod
+
+# Maintainer Info
+# GitHub: ???
+# Discord: ???
+
+# Notes:
+# new smuggling outpost
+- type: pointOfInterest
+  id: Nyx
+  parent: BasePOI
+  name: 'Nyx Autonomous Observation Vessel'
+  minimumDistance: 4000
+  maximumDistance: 6000
+  spawnGroup: SyndicateFOB
+  gridPath: /Maps/_AS/POI/Nyx.yml
+  hideWarp: true
+  addComponents:
+  - type: IFF
+    color: "#C83737"
+    flags: [HideLabel, Hide]
+    readOnly: false
+  - type: SyndicateFOB # For pinpointer
+
+- type: gameMap
+  id: Nyx
+  mapName: 'Nyx Autonomous Observation Vessel'
+  mapPath: /Maps/_AS/POI/Nyx.yml
+  minPlayers: 0
+  stations:
+    Nyx:
+      stationProto: StandardFrontierOutpost
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Nyx Autonomous Observation Vessel'
+        - type: StationJobs
+          availableJobs: {}
+        - type: StationDeadDropHintExempt
+        - type: BindToStationVariationPassExemption
