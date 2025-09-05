@@ -20,14 +20,6 @@
       shader: unshaded
       visible: false
       offset: 0, 1
-  - type: Destructible
-    thresholds: &secDestructibleThresholds
-    - trigger:
-        !type:DamageTrigger
-        damage: 600  # Considering we need a lot of thrusters didn't want to make an individual one too tanky
-      behaviors:
-        - !type:DoActsBehavior
-          acts: ["Destruction"]
   - type: Machine
     board: ThrusterSyndicateMachineCircuitboard
 
