@@ -4,6 +4,8 @@ test-task-description = A Test Task
 task-item-exfil-weapon = We have detected a piece of syndicate ordinance within the sector. Find it and ensure it gets back in the proper hands.
 task-item-exfil-infiltration =  We have detectied an uncontrolled piece of syndicate infiltration technology. Find it and ensure it gets back in the proper hands.
 task-item-exfil-armor = An uncontrolled hardsuit has been deployed within the sector. Find it and retrieve it. Use caution.
+task-item-meds = The colony has place an order on medical supplies.
+
 
 task-item-SolandMoss = Soland Moss
 task-item-atreides = Atreides
@@ -27,3 +29,17 @@ task-item-jetpack = IFFless Jetpack
 task-item-chameleon = Chameleon Projector
 task-item-syndicate-jaws = Syndicate Jaws Of Life
 
+
+task-item-ethylredoxrazineautoinjector = Ethylredoxrazine AutoInjector
+task-item-polyautoinjector = Poly AutoInjector
+task-item-bruizautoinjector = Bruiz AutoInjector
+task-item-lacerautoinjector = Lacer AutoInjector
+task-item-crisisautoinjector = Crisis AutoInjector
+task-item-stimulantautoinjector = Stimulant AutoInjector
+task-item-hemostasisautoinjector = Hemostasis AutoInjector
+task-item-bruteautoinjector = Brute AutoInjector
+task-item-burnautoinjector = Burn AutoInjector
+task-item-radautoinjector = Rad AutoInjector
+task-item-punctautoinjector = Punct AutoInjector
+task-item-pyraautoinjector = Pyra AutoInjector
+task-item-airlossautoinjector = Airloss AutoInjector

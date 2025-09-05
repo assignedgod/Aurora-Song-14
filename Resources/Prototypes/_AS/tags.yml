@@ -98,3 +98,42 @@
 
 - type: Tag
   id: SolandMoss
+
+- type: Tag
+  id: EthylredoxrazineAutoInjector
+
+- type: Tag
+  id: PolyAutoInjector
+
+- type: Tag
+  id: BruizAutoInjector
+
+- type: Tag
+  id: LacerAutoInjector
+
+- type: Tag
+  id: CrisisAutoInjector
+
+- type: Tag
+  id: StimulantAutoInjector
+
+- type: Tag
+  id: HemostasisAutoInjector
+
+- type: Tag
+  id: BruteAutoInjector
+
+- type: Tag
+  id: BurnAutoInjector
+
+- type: Tag
+  id: RadAutoInjector
+
+- type: Tag
+  id: PunctAutoInjector
+
+- type: Tag
+  id: PyraAutoInjector
+
+- type: Tag
+  id: AirlossAutoInjector
