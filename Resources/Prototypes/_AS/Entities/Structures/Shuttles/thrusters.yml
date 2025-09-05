@@ -1,4 +1,4 @@
-
+﻿
 #region Security
 - type: entity
   id: ThrusterSyndicate
@@ -10,7 +10,7 @@
     sprite: _NF/Structures/Shuttles/thruster.rsi
     layers: &secThrusterLayers
     - state: base_syndi
-          map: ["enum.ThrusterVisualLayers.Base"]
+      map: ["enum.ThrusterVisualLayers.Base"]
     - state: thrust
       map: ["enum.ThrusterVisualLayers.ThrustOn"]
       shader: unshaded
