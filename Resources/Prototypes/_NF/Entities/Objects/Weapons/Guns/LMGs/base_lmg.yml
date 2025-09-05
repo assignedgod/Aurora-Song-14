@@ -1,7 +1,7 @@
 #region base
 - type: entity
   id: NFBaseWeaponFrameLightMachineGun
-  parent: [ NFBaseWeaponEncumbranceLMG, NFBaseItemWeaponGunMagazineFed ]
+  parent: [ NFBaseWeaponEncumbranceLMG, NFBaseItemWeaponGunMagazineFed ] # Encumbrance adjusted for LMGs | Aurora
   suffix: Frontier
   abstract: true
   components:
@@ -13,11 +13,11 @@
     maxAngle: -0
   - type: Gun
     projectileSpeed: 30
-    minAngle: 4
-    maxAngle: 25
+    minAngle: 4 # Slightly less accurate than assault rifles | Aurora
+    maxAngle: 25 # Slightly less accurate than assault rifles | Aurora
     angleIncrease: 4
-    angleDecay: 16
-    fireRate: 8
+    angleDecay: 16 # high decay to encourage controlled bursts | Aurora
+    fireRate: 8 # LMGs fire fast, you suppress areas with them | Aurora
     selectedMode: FullAuto
     availableModes:
     - FullAuto
@@ -31,21 +31,21 @@
   abstract: true
   components:
   - type: Gun
-    minAngle: 4
-    maxAngle: 25
+    minAngle: 4 # See base weapon frame | Aurora
+    maxAngle: 25 # See base weapon frame | Aurora
     angleIncrease: 4
-    angleDecay: 16
-    fireRate: 8
+    angleDecay: 16 # See base weapon frame | Aurora
+    fireRate: 8 # See base weapon frame | Aurora
   - type: NFWeaponDetails
     manufacturer: weapon-details-manufacturer-gorlex-steel-works
 
 #region chamber
 - type: entity
-  id: NFBaseWeaponLightMachineGunChamber30
+  id: NFBaseWeaponLightMachineGunChamber30 # back to being a .30 caliber weapon | Aurora
   abstract: true
   components:
   - type: Gun
-    examineCaliber: gun-examine-caliber-30
+    examineCaliber: gun-examine-caliber-30 # adjusted to show proper caliber | Aurora
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/lmg.ogg
     soundEmpty:
@@ -57,20 +57,20 @@
     slots:
       gun_magazine:
         name: Magazine
-        startingItem: NFMagazineBoxRifle30
+        startingItem: NFMagazineBoxRifle30 # Proper magazine loaded | Aurora
         insertSound: /Audio/Weapons/Guns/MagIn/batrifle_magin.ogg
         ejectSound: /Audio/Weapons/Guns/MagOut/batrifle_magout.ogg
         priority: 2
         whitelist:
           tags:
-            - NFMagazineBoxRifle30
+            - NFMagazineBoxRifle30 # Proper magazine loaded | Aurora
       gun_chamber:
         name: Chamber
-        startingItem: NFCartridgeRifle30
+        startingItem: NFCartridgeRifle30 # back to being a .30 caliber weapon | Aurora
         priority: 1
         whitelist:
           tags:
-            - NFCartridgeRifle30
+            - NFCartridgeRifle30 # back to being a .30 caliber weapon | Aurora
   - type: ContainerContainer
     containers:
       gun_magazine: !type:ContainerSlot

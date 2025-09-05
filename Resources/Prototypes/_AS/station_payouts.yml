@@ -107,7 +107,6 @@
   id: managerPay
   payPerHour: 30000
   job: PlantManager
-
 #Exfils
 
 - type: stationPay

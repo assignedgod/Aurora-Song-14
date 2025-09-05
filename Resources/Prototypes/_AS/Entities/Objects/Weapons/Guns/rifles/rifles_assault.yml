@@ -28,7 +28,7 @@
   name: Lecter
   description: |-
     A reliable military-grade assault rifle. On the receiver is a label that says 'Certified Surplus.'
-  parent: [BaseC1Contraband, NFWeaponRifleAssaultLecter]
+  parent: [BaseC2Contraband, NFWeaponRifleAssaultLecter]
   id: ASWeaponRifleSurpLecter
   suffix: Surplus
   components:
@@ -45,7 +45,7 @@
 # Admin
 
 - type: entity
-  name: Lecter
+  name: Lecter #This is a admeme for the server owner, don't modify this one
   description: |-
     A reliable military-grade assault rifle. Blacked-out finish. On the receiver is a blue spray-paint marking.
   categories: [ HideSpawnMenu ] # Admin-only

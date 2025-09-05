@@ -1,4 +1,5 @@
-﻿#region Security
+
+#region Security
 - type: entity
   id: ThrusterSyndicate
   parent: Thruster
@@ -9,7 +10,7 @@
     sprite: _NF/Structures/Shuttles/thruster.rsi
     layers: &secThrusterLayers
     - state: base_syndi
-      map: ["enum.ThrusterVisualLayers.Base"]
+          map: ["enum.ThrusterVisualLayers.Base"]
     - state: thrust
       map: ["enum.ThrusterVisualLayers.ThrustOn"]
       shader: unshaded
@@ -29,3 +30,25 @@
           acts: ["Destruction"]
   - type: Machine
     board: ThrusterSyndicateMachineCircuitboard
+
+- type: entity
+  id: ThrusterMedic
+  parent: ThrusterSecurity
+  suffix: MEDIC
+  components:
+  - type: Sprite
+    sprite: _NF/Structures/Shuttles/thruster.rsi
+    layers: &nfsdThrusterLayers
+    - state: AS_base_medic
+      map: ["enum.ThrusterVisualLayers.Base"]
+    - state: thrust
+      map: ["enum.ThrusterVisualLayers.ThrustOn"]
+      shader: unshaded
+      visible: false
+    - state: thrust_burn_unshaded
+      map: ["enum.ThrusterVisualLayers.ThrustingUnshaded"]
+      shader: unshaded
+      visible: false
+      offset: 0, 1
+  - type: Machine
+    board: ThrusterMedicMachineCircuitboard

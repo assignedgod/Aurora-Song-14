@@ -8,3 +8,5 @@
     contents:
       - id: BaseChemistryEmptyVial
         amount: 8
+      - id: CigPackBlue
+        amount: 1

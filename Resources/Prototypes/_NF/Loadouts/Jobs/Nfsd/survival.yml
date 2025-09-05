@@ -28,3 +28,15 @@
   storage:
     back:
     - NFBoxSurvivalExtendedSheleg
+
+# Begin Aurora Song
+- type: loadout
+  id: SleBoxSurvivalSleFeroxi
+  name: extended-water-vapor survival box
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: ASFeroxi
+  storage:
+    back:
+    - ASBoxSurvivalExtendedFeroxi
+# End Aurora Song

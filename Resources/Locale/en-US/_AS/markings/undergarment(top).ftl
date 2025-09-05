@@ -1,0 +1,10 @@
+marking-UndershirtBinder = Undershirt Binder
+marking-UndershirtBraClassic = Undershirt Classic Bra
+marking-UndershirtBraSports = Sports Bra
+marking-UndershirtBraStrapless = Strapless Bra
+marking-UndershirtDefault = Underhirt (Default)
+marking-UndershirtGrossSleeveless = Undershirt Sleeveless (Dirty)
+marking-UndershirtNanotrasen = Nanotrasen Undershirt
+marking-UndershirtRolled = Undershirt (Rolled)
+marking-UndershirtRolledSleeveless = Undershirt (Rolled Sleeveless)
+marking-UndershirtSleeveless = Undershirt Sleeveless

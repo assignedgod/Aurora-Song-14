@@ -17,7 +17,7 @@
     maxAngle: 8.7
     angleIncrease: 2
     angleDecay: 4
-    fireRate: 5
+    fireRate: 5 # fire rate tweak, increase | Aurora
     selectedMode: FullAuto
     availableModes:
     - SemiAuto
@@ -40,21 +40,21 @@
     maxAngle: 12
     angleIncrease: 2.5
     angleDecay: 3
-    fireRate: 6
+    fireRate: 6 # fire rate tweak, increase | Aurora
   - type: NFWeaponDetails
-    manufacturer: weapon-details-manufacturer-nanotrasen-munitions
+    manufacturer: weapon-details-manufacturer-nanotrasen-munitions # Nanotrasen Munitions flavour text | Aurora
 
 - type: entity
   id: NFBaseWeaponFrameRifleAssaultCybersun
-  parent: [ BaseC2ContrabandUnredeemable, NFBaseWeaponFrameRifleAssault ]
+  parent: [ BaseC2ContrabandUnredeemable, NFBaseWeaponFrameRifleAssault ] # Contraband adjustment | Aurora
   abstract: true
   components:
   - type: Gun
     angleIncrease: 2
     angleDecay: 5
-    fireRate: 5.5
+    fireRate: 5.5 # fire rate tweak, increase | Aurora
   - type: NFWeaponDetails
-    manufacturer: weapon-details-manufacturer-cybersun-industries
+    manufacturer: weapon-details-manufacturer-cybersun-industries # Cybersun Industries flavour text | Aurora
 
 - type: entity
   id: NFBaseWeaponFrameRifleAssaultFrontierGunsmith
@@ -66,7 +66,7 @@
     maxAngle: 11
     angleIncrease: 2
     angleDecay: 3
-    fireRate: 5
+    fireRate: 5 # fire rate tweak, increase | Aurora
   - type: NFWeaponDetails
     class: weapon-details-manufacturer-frontier-gunsmith-consortium
 
@@ -242,7 +242,7 @@
         whitelist: *mag30Whitelist
         whitelistFailPopup: gun-magazine-whitelist-fail
       gun_chamber: *chamber30Rubber
-
+#region .25 caliber rifle | Aurora
 - type: entity
   id: ASBaseWeaponRifleAssaultChamber25
   parent: NFBaseWeaponRifleAssaultChamber
@@ -271,3 +271,4 @@
         whitelist:
           tags:
             - NFCartridgeRifle25
+#endregion .25 caliber rifle | Aurora

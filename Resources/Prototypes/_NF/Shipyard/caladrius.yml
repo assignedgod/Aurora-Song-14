@@ -17,6 +17,7 @@
   price: 200000 # 133217 0.5 199825.5
   category: Large
   group: Medical
+  access: Medical # Aurora
   shuttlePath: /Maps/_NF/Shuttles/caladrius.yml
   guidebookPage: ShipyardCaladrius
   class:
