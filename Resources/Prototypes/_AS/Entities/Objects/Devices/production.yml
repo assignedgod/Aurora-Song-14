@@ -24,10 +24,10 @@
     stackRequirements:
       Steel: 5
 
-  - type: entity
+- type: entity
   id: ThrusterMedicMachineCircuitboard
   parent: BaseMachineCircuitboard
-  name: SLE thruster machine board
+  name: Medic thruster machine board
   components:
   - type: Sprite
     state: medical
