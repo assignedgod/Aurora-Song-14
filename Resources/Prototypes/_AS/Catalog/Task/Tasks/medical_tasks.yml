@@ -76,7 +76,7 @@
   reward: 15000
   description: task-item-meds
   itemEntries:
-  - name: task-item-stimulantautoinject
+  - name: task-item-stimulantautoinjector
     amount: 5
     whitelist:
       tags:
@@ -88,7 +88,7 @@
   reward: 15000
   description: task-item-meds
   itemEntries:
-  - name: task-item-hemostasisautoinjec
+  - name: task-item-hemostasisautoinjecor
     amount: 5
     whitelist:
       tags:
