@@ -12,6 +12,7 @@
   price: 62500 # 52038 0.2 62445.6
   category: Medium
   group: Medical
+  access: Medical # Aurora
   shuttlePath: /Maps/_NF/Shuttles/eagle.yml
   guidebookPage: ShipyardEagle
   class:

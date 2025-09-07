@@ -72,7 +72,7 @@
     maxFaxes: 2
     name: deaddrop-faxed-hint-name
     prototypeId: PaperDeadDropFax
-    content: deaddrop-faxed-hint-content # Default contents, will be edited.
+    content: deaddrop-faxed-hint-content-arcadia # Default contents, will be edited.  //AS: Arcadia version
     stampedBy:
     - stampedName: deaddrop-faxed-hint-signature
       stampedColor: "#850000"
@@ -93,9 +93,9 @@
     maxFaxes: 4
     name: deaddrop-faxed-hint-name
     prototypeId: PaperDeadDropFax
-    content: deaddrop-faxed-hint-content # Default contents, will be edited.
+    content: deaddrop-faxed-hint-content-arcadia # Default contents, will be edited. # AS: Arcadia version
     stampedBy:
-    - stampedName: deaddrop-faxed-hint-signature
+    - stampedName: deaddrop-faxed-hint-signature-arcadia # AS: Arcadia version
       stampedColor: "#850000"
     stampState: paper_stamp-syndicate
     preFaxActions:

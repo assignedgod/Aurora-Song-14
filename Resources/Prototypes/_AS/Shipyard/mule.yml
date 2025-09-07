@@ -1,0 +1,43 @@
+# Author Info
+# GitHub: Zenixic
+# Discord: zenixic
+
+# Maintainer Info
+# GitHub: Zenixic
+# Discord: zenixic
+
+# Shuttle Notes:
+#
+- type: vessel
+  id: Mule
+  parent: BaseVessel
+  name: BH Mule
+  description: A Cargo ship with a large cargo bay, EMU and Cargo racks included.
+  price: 44000 # ~35500 appraise, ~10% markup + EMU(+5000)
+  category: Medium
+  group: Shipyard
+  shuttlePath: /Maps/_AS/Shuttles/mule.yml
+  guidebookPage: Null
+  class:
+  - Cargo
+  engine:
+  - Uranium
+
+- type: gameMap
+  id: Mule
+  mapName: 'BH Mule'
+  mapPath: /Maps/_AS/Shuttles/mule.yml
+  minPlayers: 0
+  stations:
+    Mule:
+      stationProto: StandardFrontierVessel
+      components:
+      - type: StationNameSetup
+        mapNameTemplate: 'Mule {1}'
+        nameGenerator: !type:NanotrasenNameGenerator
+          prefixCreator: '14'
+      - type: StationJobs
+        availableJobs:
+          ContractorInterview: [ 0, 0 ]
+          PilotInterview: [ 0, 0 ]
+          MercenaryInterview: [ 0, 0 ]

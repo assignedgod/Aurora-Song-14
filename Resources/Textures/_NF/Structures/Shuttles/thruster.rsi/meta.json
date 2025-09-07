@@ -23,6 +23,10 @@
             "directions": 4
         },
         {
+            "name": "AS_base_medic",
+            "directions": 4
+        },
+        {
             "name": "base_small",
             "directions": 4
         },

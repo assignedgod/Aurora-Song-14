@@ -521,11 +521,11 @@ public sealed class DeadDropSystem : EntitySystem
 
         // here we are just building a string for the hint paper so that it looks pretty and RP-like on the paper itself.
         var dropHint = new StringBuilder();
-        dropHint.AppendLine(Loc.GetString("deaddrop-hint-pretext"));
+        dropHint.AppendLine(Loc.GetString("deaddrop-hint-pretext-arcadia")); //AS: Arcadia version
         dropHint.AppendLine();
         dropHint.AppendLine(dropLocation.ToString());
         dropHint.AppendLine();
-        dropHint.AppendLine(Loc.GetString("deaddrop-hint-posttext"));
+        dropHint.AppendLine(Loc.GetString("deaddrop-hint-posttext-arcadia"));  // AS: Arcadia version
         dropHint.AppendLine();
         dropHint.AppendLine(Loc.GetString("deaddrop-hint-next-drop", ("time", hintNextDrop.ToString("hh\\:mm") + ":00")));
 
@@ -689,6 +689,6 @@ public sealed class DeadDropSystem : EntitySystem
             hintLines.AppendLine(Loc.GetString("dead-drop-hint-line", ("object", objectHintString), ("poi", stationHintString), ("time", timeString)));
             hints++;
         }
-        return Loc.GetString("dead-drop-hint-note", ("drops", hintLines));
+        return Loc.GetString("dead-drop-hint-note-arcadia", ("drops", hintLines));
     }
 }

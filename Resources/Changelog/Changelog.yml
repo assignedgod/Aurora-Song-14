@@ -4238,3 +4238,48 @@ Entries:
   id: 8620
   time: '2025-09-02T03:16:47.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/439
+- author: assignedgod
+  changes:
+    - type: Add
+      message: >-
+        Added the Interdyne Halo, a search and rescue ship for use by medical
+        staff
+  id: 8621
+  time: '2025-09-02T15:03:03.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/440
+- author: assignedgod
+  changes:
+    - type: Tweak
+      message: Put access locks on ships with chemvends
+  id: 8622
+  time: '2025-09-02T15:03:25.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/441
+- author: Zenixic
+  changes:
+    - type: Add
+      message: added the BH Mule into normal shipyard
+  id: 8623
+  time: '2025-09-05T00:24:07.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/445
+- author: assignedgod
+  changes:
+    - type: Tweak
+      message: >-
+        Allowed explosives and EMPs to fire off on TO. Pirates go crazy,
+        self-antags get bwoinked
+  id: 8624
+  time: '2025-09-06T19:39:02.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/442
+- author: assignedgod
+  changes:
+    - type: Add
+      message: Added Arcadia POI
+    - type: Remove
+      message: Removed LPB (Goodnight, sweet prince)
+    - type: Tweak
+      message: Increased smuggling crate prices
+    - type: Fix
+      message: Fixed plasma blaster shooting through windows
+  id: 8625
+  time: '2025-09-06T19:47:09.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/447

@@ -5715,8 +5715,8 @@ entities:
       hostileMobKillSound: !type:SoundPathSpecifier
         path: /Audio/Effects/holy.ogg
       preventArtifactTriggers: True
-      preventExplosions: True
-      preventEmpEvents: True
+      preventExplosions: False #Aurora
+      preventEmpEvents: False #Aurora
       preventRCDUse: True
       preventFloorPlacement: True
       preventFloorRemoval: True
