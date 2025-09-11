@@ -596,5 +596,6 @@ public sealed class NanoChatCartridgeSystem : EntitySystem
             notificationsMuted = card.NotificationsMuted;
             listNumber = card.ListNumber;
         }
+
     }
 }
