@@ -120,10 +120,9 @@
   - type: StatusEffects
     allowed:
     - Stun
-    - KnockedDown
+    - Friction
     - SlowedDown
     - Stutter
-    - SeeingRainbows
     - Electrocution
     - Drunk
     - SlurredSpeech

@@ -13,6 +13,7 @@ using Content.Shared.Gravity;
 using Content.Shared.Hands;
 using Content.Shared.Hands.Components;
 using Content.Shared.Item; // Delta-V: Felinids in duffelbags can't shoot.
+using Content.Shared.Hands.EntitySystems;
 using Content.Shared.Popups;
 using Content.Shared.Projectiles;
 using Content.Shared.Tag;
@@ -51,6 +52,7 @@ public abstract partial class SharedGunSystem : EntitySystem
     [Dependency] protected readonly ISharedAdminLogManager Logs = default!;
     [Dependency] protected readonly DamageableSystem Damageable = default!;
     [Dependency] protected readonly ExamineSystemShared Examine = default!;
+    [Dependency] private   readonly SharedHandsSystem _hands = default!;
     [Dependency] private   readonly ItemSlotsSystem _slots = default!;
     [Dependency] private   readonly RechargeBasicEntityAmmoSystem _recharge = default!;
     [Dependency] protected readonly SharedActionsSystem Actions = default!;
@@ -177,8 +179,7 @@ public abstract partial class SharedGunSystem : EntitySystem
         gunEntity = default;
         gunComp = null;
 
-        if (EntityManager.TryGetComponent(entity, out HandsComponent? hands) &&
-            hands.ActiveHandEntity is { } held &&
+        if (_hands.GetActiveItem(entity) is { } held &&
             TryComp(held, out GunComponent? gun))
         {
             gunEntity = held;
@@ -399,11 +400,14 @@ public abstract partial class SharedGunSystem : EntitySystem
         var shotEv = new GunShotEvent(user, ev.Ammo);
         RaiseLocalEvent(gunUid, ref shotEv);
 
-        if (userImpulse && TryComp<PhysicsComponent>(user, out var userPhysics))
-        {
-            if (_gravity.IsWeightless(user, userPhysics))
-                CauseImpulse(fromCoordinates, toCoordinates.Value, user, userPhysics);
-        }
+        if (!userImpulse || !TryComp<PhysicsComponent>(user, out var userPhysics))
+            return;
+
+        var shooterEv = new ShooterImpulseEvent();
+        RaiseLocalEvent(user, ref shooterEv);
+
+        if (shooterEv.Push || _gravity.IsWeightless(user, userPhysics))
+            CauseImpulse(fromCoordinates, toCoordinates.Value, user, userPhysics);
     }
 
     public void Shoot(
@@ -655,6 +659,16 @@ public record struct AttemptShootEvent(EntityUid User, string? Message, bool Can
 /// <param name="User">The user that fired this gun.</param>
 [ByRefEvent]
 public record struct GunShotEvent(EntityUid User, List<(EntityUid? Uid, IShootable Shootable)> Ammo);
+
+/// <summary>
+/// Raised on an entity after firing a gun to see if any components or systems would allow this entity to be pushed
+/// by the gun they're firing. If true, GunSystem will create an impulse on our entity.
+/// </summary>
+[ByRefEvent]
+public record struct ShooterImpulseEvent()
+{
+    public bool Push;
+};
 
 public enum EffectLayers : byte
 {
