@@ -7,15 +7,15 @@ using Content.Server.Radio.Components;
 using Content.Server.Station.Systems;
 using Content.Shared.Access.Components;
 using Content.Shared.CartridgeLoader;
+using Content.Shared.CCVar;
 using Content.Shared.Database;
 using Content.Shared._DV.CartridgeLoader.Cartridges;
 using Content.Shared._DV.NanoChat;
 using Content.Shared.PDA;
 using Content.Shared.Radio.Components;
+using Robust.Shared.Configuration;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Timing;
-using Content.Shared.CCVar; // Goob
-using Robust.Shared.Configuration; // Goob
 
 namespace Content.Server._DV.CartridgeLoader.Cartridges;
 
@@ -23,6 +23,7 @@ public sealed class NanoChatCartridgeSystem : EntitySystem
 {
     [Dependency] private readonly CartridgeLoaderSystem _cartridge = default!;
     [Dependency] private readonly IAdminLogManager _adminLogger = default!;
+    [Dependency] private readonly IConfigurationManager _cfg = default!;
     [Dependency] private readonly IGameTiming _timing = default!;
     [Dependency] private readonly IPrototypeManager _prototype = default!;
     [Dependency] private readonly SharedNanoChatSystem _nanoChat = default!;
@@ -34,6 +35,9 @@ public sealed class NanoChatCartridgeSystem : EntitySystem
     // no point in storing it on the comp
     private const int NotificationMaxLength = 64;
 
+    // The max length of the name and job title on the notification before being truncated.
+    private const int NotificationTitleMaxLength = 32;
+
     private int _maxNameLength;
     private int _maxIdJobLength;
 
@@ -44,8 +48,8 @@ public sealed class NanoChatCartridgeSystem : EntitySystem
         SubscribeLocalEvent<NanoChatCartridgeComponent, CartridgeUiReadyEvent>(OnUiReady);
         SubscribeLocalEvent<NanoChatCartridgeComponent, CartridgeMessageEvent>(OnMessage);
 
-        Subs.CVar(_cfgManager, CCVars.MaxNameLength, value => _maxNameLength = value, true);
-        Subs.CVar(_cfgManager, CCVars.MaxIdJobLength, value => _maxIdJobLength = value, true);
+        Subs.CVar(_cfg, CCVars.MaxNameLength, x => _maxNameLength = x, true);
+        Subs.CVar(_cfg, CCVars.MaxIdJobLength, x => _maxIdJobLength = x, true);
     }
 
     private void UpdateClosed(Entity<NanoChatCartridgeComponent> ent)
@@ -211,6 +215,42 @@ public sealed class NanoChatCartridgeSystem : EntitySystem
                 msg.RecipientNumber.Value,
                 recipient with { HasUnread = false });
         }
+    }
+
+    /// <summary>
+    ///     Handles editing the current chat conversation.
+    /// </summary>
+    private void HandleEditChat(Entity<NanoChatCardComponent> card, NanoChatUiMessageEvent msg)
+    {
+        if (msg.RecipientNumber == null || msg.Content == null || msg.RecipientNumber == card.Comp.Number ||
+            _nanoChat.GetRecipient((card, card.Comp), msg.RecipientNumber.Value) is not { } recipient)
+            return;
+
+        var name = msg.Content;
+        if (!string.IsNullOrWhiteSpace(name))
+        {
+            name = name.Trim();
+            if (name.Length > _maxNameLength)
+                name = name[.._maxNameLength];
+        }
+
+        var jobTitle = msg.RecipientJob;
+        if (!string.IsNullOrWhiteSpace(jobTitle))
+        {
+            jobTitle = jobTitle.Trim();
+            if (jobTitle.Length > _maxIdJobLength)
+                jobTitle = jobTitle[.._maxIdJobLength];
+        }
+
+        // Update recipient
+        recipient.Name = name;
+        recipient.JobTitle = jobTitle;
+
+        _nanoChat.SetRecipient((card, card.Comp), msg.RecipientNumber.Value, recipient);
+
+        var recipientEv = new NanoChatRecipientUpdatedEvent(card);
+        RaiseLocalEvent(ref recipientEv);
+        UpdateUIForCard(card);
     }
 
     /// <summary>
