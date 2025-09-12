@@ -951,5 +951,3 @@
     interfaces:
       enum.AgentIDCardUiKey.Key:
         type: AgentIDCardBoundUserInterface
-  - type: NanoChatCard # DeltaV
-    notificationsMuted: true
