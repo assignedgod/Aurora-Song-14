@@ -8,6 +8,7 @@ namespace Content.Client._DV.CartridgeLoader.Cartridges;
 [GenerateTypedNameReferences]
 public sealed partial class EditChatPopup : DefaultWindow
 {
+    private const int MaxInputLength = 32;
     private const int MaxNumberLength = 4;
 
     // Used to see if the user input is different from the original data
@@ -38,15 +39,15 @@ public sealed partial class EditChatPopup : DefaultWindow
         // Input validation
         NameInput.OnTextChanged += args =>
         {
-            if (args.Text.Length > IdCardConsoleComponent.MaxFullNameLength)
-                NameInput.Text = args.Text[..IdCardConsoleComponent.MaxFullNameLength];
+            if (args.Text.Length > MaxInputLength) // Goob
+                NameInput.Text = args.Text[..MaxInputLength]; // Goob
             ValidateInputs();
         };
 
         JobInput.OnTextChanged += args =>
         {
-            if (args.Text.Length > IdCardConsoleComponent.MaxJobTitleLength)
-                JobInput.Text = args.Text[..IdCardConsoleComponent.MaxJobTitleLength];
+            if (args.Text.Length > MaxInputLength) //Goob
+                JobInput.Text = args.Text[..MaxInputLength]; //Goob
             ValidateInputs();
         };
     }

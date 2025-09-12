@@ -14,8 +14,8 @@ using Content.Shared.PDA;
 using Content.Shared.Radio.Components;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Timing;
-using Content.Shared.CCVar;
-using Robust.Shared.Configuration;
+using Content.Shared.CCVar; // Goob
+using Robust.Shared.Configuration; // Goob
 
 namespace Content.Server._DV.CartridgeLoader.Cartridges;
 
