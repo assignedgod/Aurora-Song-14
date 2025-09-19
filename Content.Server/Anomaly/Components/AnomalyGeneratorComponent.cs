@@ -27,7 +27,7 @@ public sealed partial class AnomalyGeneratorComponent : Component
     /// The cooldown between generating anomalies.
     /// </summary>
     [DataField("cooldownLength"), ViewVariables(VVAccess.ReadWrite)]
-    public TimeSpan CooldownLength = TimeSpan.FromMinutes(5);
+    public TimeSpan CooldownLength = TimeSpan.FromMinutes(2); // Aurora: 5<2
 
     /// <summary>
     /// How long it takes to generate an anomaly after pushing the button.
@@ -45,7 +45,7 @@ public sealed partial class AnomalyGeneratorComponent : Component
     /// The amount of material needed to generate a single anomaly
     /// </summary>
     [DataField("materialPerAnomaly"), ViewVariables(VVAccess.ReadWrite)]
-    public int MaterialPerAnomaly = 300; // Frontier - 1500<300
+    public int MaterialPerAnomaly = 100; // Frontier - 1500<300 // Aurora Song : 300<100
 
     /// <summary>
     /// The random anomaly spawner entity
