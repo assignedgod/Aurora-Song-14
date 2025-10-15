@@ -48,19 +48,17 @@
 
 - type: entityTable
   id: DungeonLootMercenaryUIVGuns
-  table: !type:GroupSelector #Intended goal is to put more weight on certain guns while allowing others to still spawn
+  table: !type:GroupSelector
       children:
       - id: SpawnDungeonLootGunT3
       - id: SpawnDungeonLootGunT4
-      - id: SpawnDungeonLootMeleeT4
       - !type:GroupSelector
        children:
        - id: DungeonLootMercenaryUIVGunsSpawnerRare
-       weight: 0.1
+       weight: 0.01
 
 - type: entityTable
-  id: DungeonLootMercenaryUIVGunsRare  #Intended goal is to make syndicate guns spawn less than other guns
+  id: DungeonLootMercenaryUIVGunsRare
   table: !type:GroupSelector
       children:
        - id: SpawnDungeonLootGunT5
-       - id: SpawnDungeonLootMeleeT5

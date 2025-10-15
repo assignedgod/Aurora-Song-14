@@ -1,0 +1,28 @@
+﻿- type: entity
+  id: SpawnMobMercenaryUIVExplorer
+  name: explorer spawner, Mercenary
+  suffix: AI, Hostile, UIV
+  parent: SpawnMobMercenaryT1
+  components:
+  - type: RandomSpawner
+    prototypes:
+    - MobMercExplorerRangedT3
+    - MobMercExplorerMeleeT3
+    - MobMercenarySoldierEVANovalite
+    chance: 1
+    offset: 0.0
+    rarePrototypes:
+    - SpawnMobMercenaryEVAT2
+    rareChance: 0.05
+
+- type: entity
+  id: SpawnMobMercenaryUIVExplorerBoss
+  parent: SpawnMobExplorerT3
+  name: explorer boss spawner, Mercenary
+  suffix: AI, Hostile, UIV
+  components:
+  - type: RandomSpawner
+    prototypes:
+    - UIVMercenaryExplorerBoss
+    chance: 1
+    offset: 0.0

@@ -1,0 +1,18 @@
+﻿# Tier 4
+- type: startingGear
+  id: MobHumanoidMercExplorerGearBoss
+  equipment:
+    pocket1: ClothingBackpackExplorerBossMercenaryUIV
+    pocket2: ConstructionBag
+    shoes: ClothingShoesBootsSalvage
+    suitstorage: AirTankFilled
+    neck: ClothingNeckIFFCyan
+
+- type: startingGear
+  id: MobHumanoidMercExplorerGearBossAlt
+  equipment:
+    pocket1: ClothingBackpackExplorerBoss
+    pocket2: ConstructionBag
+    shoes: ClothingShoesBootsSalvage
+    suitstorage: AirTankFilled
+    neck: ClothingNeckIFFCyan

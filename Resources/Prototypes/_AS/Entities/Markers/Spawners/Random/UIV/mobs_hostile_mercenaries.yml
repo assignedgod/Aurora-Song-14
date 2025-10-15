@@ -1,0 +1,23 @@
+﻿- type: entity
+  name: Salvage officer boss spawner
+  id: SpawnSalvageOfficer
+  parent: MarkerBase
+  suffix: AI, Hostile, T4, UIV
+  components:
+  - type: Sprite
+    layers:
+    - state: red
+    - state: ai
+    - sprite: _NF/Mobs/Species/Templates/human.rsi
+      state: human
+    - sprite: Clothing/OuterClothing/Hardsuits/salvage.rsi
+      state: equipped-OUTERCLOTHING
+    - sprite: Clothing/Head/Hardsuits/salvage.rsi
+      state: off-equipped-HELMET
+    - sprite: Objects/Weapons/Melee/pickaxe.rsi
+      state: wielded-inhand-right
+  - type: RandomSpawner
+    prototypes:
+    -
+    chance: 1
+    offset: 0.0

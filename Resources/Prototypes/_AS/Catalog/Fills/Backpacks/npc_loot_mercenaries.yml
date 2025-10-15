@@ -1,0 +1,53 @@
+﻿## TIER 4
+- type: entity
+  parent: ExplorerDuffelGiftBox
+  id: ClothingBackpackExplorerBossMercenaryUIV
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: SpawnItemsOnUse
+    items:
+    - id: MercCoin10
+    # Cash
+    - id: SpaceCash2500
+      prob: 0.9
+    - id: SpaceCash2500
+      prob: 0.4
+    - id: SpaceCash2500
+      prob: 0.2
+    # Weapons
+    - id: NFEnergyPickaxe
+      prob: 0.4
+      amount: 1
+    - id: NFBlueprintEnergyPickaxe
+      prob: 0.5
+      amount: 1
+    - id: NFWeaponPkaCannon
+      prob: 0.05
+      amount: 1
+    # Items
+    - id: SpawnDungeonLootClutterEngi
+      prob: 0.9
+      amount: 8
+    - id: SpawnDungeonLootMaterialsBasicFull
+      prob: 0.6
+    - id: SpawnDungeonLootOresFull
+      prob: 0.8
+      amount: 5
+    # Bonus Loot T3
+    - id: SpaceCash2500
+      prob: 0.9
+    - id: SpaceCash1000
+      prob: 0.9
+    - id: SpaceCash2500
+      prob: 0.7
+    - id: SpawnDungeonLootMaterialsValuableFull
+      prob: 0.7
+    - id: SpawnDungeonLootPartsEngi
+      amount: 2
+      prob: 0.7
+    - id: SpawnDungeonLootFlatpacks
+      prob: 0.5
+    - id: SpawnDungeonLootToolsAdvancedEngineering
+      prob: 0.4
+    sound:
+      path: /Audio/Items/jumpsuit_equip.ogg

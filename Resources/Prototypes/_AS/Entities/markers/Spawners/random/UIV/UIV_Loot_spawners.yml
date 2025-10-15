@@ -15,16 +15,10 @@
       - !type:NestedSelector
         tableId: DungeonLootMercenaryUIVRare
         weight: 5
-    # 4% chance of a gun
+    # 5% chance of a gun
     - !type:NestedSelector
       tableId: DungeonLootMercenaryUIVGuns
-      weight: 4.5
-    # 0.5% chance of a rare gun
-    - !type:GroupSelector
-      weight: 0.5
-      children:
-      - !type:NestedSelector
-        tableId: DungeonLootMercenaryUIVGunsRare
+      weight: 5
 
 - type: entity
   parent: MarkerBase
