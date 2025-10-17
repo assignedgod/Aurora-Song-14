@@ -24,6 +24,7 @@
       - id: ClothingEyesHudBountyHunter
       - id: SpawnDungeonLootKitsFirstAid
       - id: SpawnDungeonLootClutterSalvage
+      - id: SpawnDungeonLootAmmoLethal
       - !type:GroupSelector
        children:
        - id: SpaceCash5000
@@ -39,10 +40,13 @@
       - id: SpaceCash5000
       - id: ChemistryBottleOmnizine
       - id: QuadraticCapacitorStockPart
+      - id: SpawnDungeonLootMeleeT3
       - !type:GroupSelector
        children:
        - id: SpawnDungeonLootHardsuitsMercenary
        weight: 0.5
+      - id: SpawnDungeonLootMeleeT4
+      - id: 0.4
       - id: SpaceCash20000
         weight: 0.1
 
@@ -51,7 +55,10 @@
   table: !type:GroupSelector
       children:
       - id: SpawnDungeonLootGunT3
-      - id: SpawnDungeonLootGunT4
+      - !type:GroupSelector
+       children:
+       - id: DungeonLootMercenaryUIVGunsSpawnerUncommon
+       weight: 0.5
       - !type:GroupSelector
        children:
        - id: DungeonLootMercenaryUIVGunsSpawnerRare
@@ -62,3 +69,10 @@
   table: !type:GroupSelector
       children:
        - id: SpawnDungeonLootGunT5
+
+- type: entityTable
+  id: DungeonLootMercenaryUIVGunsUncommon
+  table: !type:GroupSelector
+      children:
+       - id: SpawnDungeonLootGunT4
+       - id: SpawnDungeonLootMeleeT4

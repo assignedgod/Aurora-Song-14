@@ -358,4 +358,4 @@
         - type: PreventPilot
         - type: ForceAnchor
         paths:
-        - /Maps/_AS/Bluespace/mercuiv.yml
+        - /Maps/_AS/Bluespace/mercuiv2.yml
