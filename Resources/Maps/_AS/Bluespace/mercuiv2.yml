@@ -4,7 +4,7 @@ meta:
   engineVersion: 261.2.2
   forkId: ""
   forkVersion: ""
-  time: 10/17/2025 20:01:39
+  time: 10/17/2025 20:24:58
   entityCount: 2911
 maps: []
 grids:
@@ -1154,7 +1154,7 @@ entities:
       pos: 3.5,28.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -13.362309
+      secondsUntilStateChange: -1407.2655
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -10144,8 +10144,6 @@ entities:
     - type: Transform
       pos: -11.5,36.5
       parent: 1
-- proto: GeneratorRTGDamaged
-  entities:
   - uid: 1658
     components:
     - type: Transform
@@ -10633,7 +10631,7 @@ entities:
       pos: 11.5,20.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -10925.785
+      secondsUntilStateChange: -12319.688
       state: Opening
   - uid: 1749
     components:
@@ -10642,7 +10640,7 @@ entities:
       pos: 13.5,20.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -10927.085
+      secondsUntilStateChange: -12320.988
       state: Opening
   - uid: 1750
     components:
@@ -10651,7 +10649,7 @@ entities:
       pos: 14.5,20.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -10927.552
+      secondsUntilStateChange: -12321.455
       state: Opening
   - uid: 1751
     components:
@@ -10660,7 +10658,7 @@ entities:
       pos: 12.5,20.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -10926.552
+      secondsUntilStateChange: -12320.455
       state: Opening
 - proto: LandMineExplosive
   entities:
