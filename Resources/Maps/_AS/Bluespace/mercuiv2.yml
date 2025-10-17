@@ -4,7 +4,7 @@ meta:
   engineVersion: 261.2.2
   forkId: ""
   forkVersion: ""
-  time: 10/17/2025 20:24:58
+  time: 10/17/2025 20:26:20
   entityCount: 2911
 maps: []
 grids:
@@ -1154,7 +1154,7 @@ entities:
       pos: 3.5,28.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -1407.2655
+      secondsUntilStateChange: -1488.3325
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -10144,11 +10144,6 @@ entities:
     - type: Transform
       pos: -11.5,36.5
       parent: 1
-  - uid: 1658
-    components:
-    - type: Transform
-      pos: -11.5,34.5
-      parent: 1
 - proto: GravityGeneratorMini
   entities:
   - uid: 1659
@@ -10631,7 +10626,7 @@ entities:
       pos: 11.5,20.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -12319.688
+      secondsUntilStateChange: -12400.756
       state: Opening
   - uid: 1749
     components:
@@ -10640,7 +10635,7 @@ entities:
       pos: 13.5,20.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -12320.988
+      secondsUntilStateChange: -12402.056
       state: Opening
   - uid: 1750
     components:
@@ -10649,7 +10644,7 @@ entities:
       pos: 14.5,20.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -12321.455
+      secondsUntilStateChange: -12402.522
       state: Opening
   - uid: 1751
     components:
@@ -10658,7 +10653,7 @@ entities:
       pos: 12.5,20.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -12320.455
+      secondsUntilStateChange: -12401.522
       state: Opening
 - proto: LandMineExplosive
   entities:
@@ -14173,6 +14168,11 @@ entities:
       parent: 1
 - proto: WallPlastitanium
   entities:
+  - uid: 1658
+    components:
+    - type: Transform
+      pos: -11.5,34.5
+      parent: 1
   - uid: 2355
     components:
     - type: Transform
