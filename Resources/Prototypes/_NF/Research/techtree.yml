@@ -203,6 +203,7 @@
   - ClothingBackpackDuffelHolding
   - ClothingBackpackMessengerHolding
   - ConstructionBagOfHolding
+  - ASClothingBackpackDuffelSyndicate
   technologyPrerequisites:
   - NFMiscellaneousItemsOrganization
   position: 3, 3

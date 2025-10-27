@@ -8,3 +8,7 @@
     Steel: 300
     Glass: 200
 
+- type: latheRecipe
+  parent: ClothingBackpackHolding
+  id: ASClothingBackpackDuffelSyndicate
+  result: ASClothingBackpackDuffelSyndicate

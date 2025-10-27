@@ -1,0 +1,30 @@
+﻿- type: entity
+  parent: [ClothingBackpackHolding, BaseC3Contraband, ContrabandClothing] # Frontier: BaseSyndicateContraband<BaseC3Contraband, added ContrabandClothing as parent
+  id: ASClothingBackpackDuffelSyndicate
+  name: syndicate duffel bag of holding
+  description: A bluespace duffel designed for stealth operations.
+  components:
+  - type: Sprite
+    sprite: Clothing/Back/Duffels/syndicate.rsi
+    state: icon
+    layers:
+    - state: icon
+  - type: Item
+    size: Ginormous
+    inhandVisuals:
+      left:
+      - state: inhand-left
+      right:
+      - state: inhand-right
+  - type: Storage
+    maxItemSize: Huge
+    grid:
+    - 0,0,9,6
+  - type: ClothingSpeedModifier
+    sprintModifier: 1 # makes its stats identical to other variants of bag of holding
+  - type: HeldSpeedModifier
+  - type: Clothing
+    sprite:  Clothing/Back/Duffels/syndicate.rsi
+    clothingVisuals:
+      back:
+      - state: equipped-BACKPACK
