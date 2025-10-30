@@ -86,7 +86,7 @@
   parent: ClothingHeadBase
   id: ClothingHeadHatCasa
   name: casa
-  description: Cone-shaped hat.
+  description: Cone-shaped hat
   components:
     - type: Sprite
       sprite: Clothing/Head/Hats/casa.rsi
@@ -139,12 +139,12 @@
   parent: ClothingHeadBase
   id: ClothingHeadHatBeretQM
   name: quartermaster's beret
-  description: A beret with the cargo department's insignia.
+  description: A newly issued beret with the cargo's insignia emblazoned on it. The designers say "It was easier to redesign the beret than owe that lady anything"
   components:
   - type: Sprite
-    sprite: Clothing/Head/Hats/beret_qm.rsi
+    sprite: _AS/Clothing/Head/Hats/beret_qm.rsi #Aurora
   - type: Clothing
-    sprite: Clothing/Head/Hats/beret_qm.rsi
+    sprite: _AS/Clothing/Head/Hats/beret_qm.rsi #Aurora
   - type: Tag
     tags:
     - PetWearable
@@ -1206,7 +1206,7 @@
 - type: entity
   parent: ClothingHeadBase
   id: ClothingHeadHatGladiator
-  name: gladiator helmet
+  name: Gladiator helmet
   description: Protects the head from harsh ash winds and toy spears.
   components:
   - type: Sprite

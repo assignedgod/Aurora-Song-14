@@ -108,7 +108,7 @@ namespace Content.Server.Lathe
                 if (lathe.CurrentRecipe == null)
                     continue;
 
-                if (_timing.CurTime - comp.StartTime >= comp.ProductionLength * ProductionTimeMultiplier) // Frontier: increase production time
+                if (_timing.CurTime - comp.StartTime >= (comp.ProductionLength * 2))
                     FinishProducing(uid, lathe);
             }
 

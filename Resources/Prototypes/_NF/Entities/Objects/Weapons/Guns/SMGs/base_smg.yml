@@ -5,18 +5,18 @@
   name: submachine gun
   abstract: true
   components:
-  - type: Wieldable
-    unwieldOnUse: false
-  - type: GunWieldBonus
-    minAngle: -0.7
-    maxAngle: -3
-  - type: Gun
-    projectileSpeed: 22.5
-    minAngle: 3.1
-    maxAngle: 15.5
-    angleIncrease: 0.7
-    angleDecay: 3.5
-    fireRate: 6
+#  - type: Wieldable # Remove Wielding | AS
+#    unwieldOnUse: false
+#  - type: GunWieldBonus
+#    minAngle: -0.8
+#    maxAngle: -4
+  - type: Gun # base stats, to be modified by manufacturers, slight increase to projectile speed and fireRate | Aurora
+    projectileSpeed: 30
+    minAngle: 4.2
+    maxAngle: 14.6
+    angleIncrease: 1
+    angleDecay: 2
+    fireRate: 7
     selectedMode: FullAuto
     availableModes:
     - SemiAuto
@@ -33,50 +33,64 @@
   abstract: true
   components:
   - type: Gun
-    minAngle: 3.6
-    maxAngle: 18
+    minAngle: 6.7
+    maxAngle: 17 # Slightly less accurate but faster fire rate | Aurora
     angleIncrease: 1
-    angleDecay: 3.4
-    fireRate: 5.1
+    angleDecay: 2
+    fireRate: 7
   - type: NFWeaponDetails
     manufacturer: weapon-details-manufacturer-nanotrasen-munitions
 
 - type: entity
   id: NFBaseWeaponFrameSubMachineGunCybersun
-  parent: [ BaseC3SyndicateContraband, NFBaseWeaponFrameSubMachineGun ]
+  parent: [ BaseC2ContrabandUnredeemable, NFBaseWeaponFrameSubMachineGun ] # Contraband adjusted | Aurora
   abstract: true
   components:
   - type: Gun
-    angleIncrease: 0.7
-    angleDecay: 5
-    fireRate: 4.8
+    minAngle: 4
+    maxAngle: 21
+    angleIncrease: 1
+    angleDecay: 2
+    fireRate: 7
+    burstCooldown: 0.5
+    shotsPerBurst: 5
+    availableModes:
+    - Burst
+    - FullAuto
+    - SemiAuto
   - type: NFWeaponDetails
     manufacturer: weapon-details-manufacturer-cybersun-industries
 
 - type: entity
   id: NFBaseWeaponFrameSubMachineGunGorlex
-  parent: [ BaseC3SyndicateContraband, NFBaseWeaponFrameSubMachineGun ]
+  parent: [ BaseC2ContrabandUnredeemable, NFBaseWeaponFrameSubMachineGun ] # Contraband adjusted | Aurora
   abstract: true
   components:
-  - type: Gun
-    minAngle: 3.4
-    maxAngle: 17
-    angleIncrease: 1.2
-    angleDecay: 4.3
+# SMG frames no longer inherently wieldable | AS
+#  - type: GunWieldBonus #Gorlex SMG doesn't become more accurate, but does handle recoil better in two hands | Aurora
+#    minAngle: 0
+#    maxAngle: 0
+#    angleIncrease: -1
+  - type: Gun #Adjust angle slightly | Aurora
+    minAngle: 2
+    maxAngle: 21
+    fireRate: 8
+    angleIncrease: 3
+    angleDecay: 12
   - type: NFWeaponDetails
     manufacturer: weapon-details-manufacturer-gorlex-steel-works
 
 - type: entity
   id: NFBaseWeaponFrameSubMachineGunFrontierGunsmith
-  parent: [ NFBaseWeaponFrameSubMachineGun ]
+  parent: [ ASBaseWeaponFrameSubMachineGunWieldable ] # Aurora: Wieldable SMG
   abstract: true
-  components:
+  components: #Adjusted to make the gun more accurate | Aurora Song
   - type: Gun
-    minAngle: 3.7
-    maxAngle: 15
-    angleIncrease: 1.4
-    angleDecay: 4.5
-    fireRate: 4.8
+    minAngle: 3
+    maxAngle: 21
+    angleIncrease: 2
+    angleDecay: 2
+    fireRate: 7
   - type: NFWeaponDetails
     manufacturer: weapon-details-manufacturer-frontier-gunsmith-consortium
 

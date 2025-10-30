@@ -1,10 +1,7 @@
 #region WizDen
 - type: entity
   id: NFWeaponShotgunBulldog
-  parent:
-  - BaseC3SyndicateContraband
-  - NFBaseWeaponShotgunChamber50Magazine
-  - NFBaseWeaponFrameShotgunWieldable
+  parent: [BaseC2ContrabandUnredeemable, NFBaseWeaponShotgunChamber12gMagazine, NFBaseWeaponFrameShotgunWieldable, NFBaseWeaponFrameShotgunGorlex] # Contraband status adjusted | Aurora
   name: Bulldog
   description: |-
     An automatic magazine-fed shotgun for close-quarters combat. Kicks like a mule on steroids.
@@ -13,8 +10,10 @@
     sprite: Objects/Weapons/Guns/Shotguns/bulldog.rsi
   - type: Clothing
     sprite: Objects/Weapons/Guns/Shotguns/bulldog.rsi
-  - type: GunSpreadModifier
-    spread: 1.1
+  - type: Item # Size fix attempted, possibly still goes into boots for some reason | Aurora
+    size: Large
+    shape:
+    - 0,0,4,3
   - type: Gun
     selectedMode: FullAuto
     availableModes:
@@ -24,7 +23,7 @@
 
 - type: entity
   id: NFWeaponShotgunDoubleBarreled
-  parent: [ NFBaseWeaponShotgunChamber50, NFBaseWeaponFrameShotgunWieldable ]
+  parent: [ NFBaseWeaponShotgunChamber12g, NFBaseWeaponFrameShotgunWieldable ] # renamed from .50 to 12g | Aurora
   name: double-barreled shotgun
   description: |-
     An immortal classic. A civilian grade shotgun.
@@ -34,6 +33,9 @@
   - type: Clothing
     sprite: Objects/Weapons/Guns/Shotguns/db_shotgun.rsi
   - type: Item
+    size: Normal
+    shape:
+    - 0,0,4,0 # Aurora Song
     sprite: Objects/Weapons/Guns/Shotguns/db_shotgun_inhands_64x.rsi
   - type: GunSpreadModifier
     spread: 0.5
@@ -47,23 +49,26 @@
 
 - type: entity
   id: NFWeaponShotgunEnforcer
-  parent: [ NFBaseWeaponShotgunChamber50, NFBaseWeaponFrameShotgunWieldable ]
+  parent: [BaseC2ContrabandUnredeemable,NFBaseWeaponShotgunChamber12g, NFBaseWeaponFrameShotgunNanotrasen] # Contraband status adjusted | Aurora
   name: Enforcer
   description: |-
     A premium semi-automatic shotgun, featuring an upgraded tube capacity.
   components:
+  - type: BallisticAmmoProvider
+    capacity: 7
   - type: Sprite
     sprite: Objects/Weapons/Guns/Shotguns/enforcer.rsi
   - type: Clothing
     sprite: Objects/Weapons/Guns/Shotguns/enforcer.rsi
   - type: Item
+    size: Large
     sprite: Objects/Weapons/Guns/Shotguns/enforcer_inhands_64x.rsi
   - type: NFWeaponDetails
     manufacturer: weapon-details-manufacturer-nanotrasen-munitions
 
 - type: entity
   id: NFWeaponShotgunKammerer
-  parent: [ NFBaseWeaponShotgunChamber50, NFBaseWeaponFrameShotgunWieldable ]
+  parent: [ NFBaseWeaponShotgunChamber12g, NFBaseWeaponFrameShotgunWieldable ] # renamed from .50 to 12g | Aurora
   name: Kammerer
   description: |-
     An old yet faithful design, and a favorite among irregular forces on many worlds.
@@ -73,6 +78,9 @@
   - type: Clothing
     sprite: _NF/Objects/Weapons/Guns/Shotguns/pump.rsi
   - type: Item
+    size: Normal
+    shape:
+    - 0,0,4,0
     sprite: _NF/Objects/Weapons/Guns/Shotguns/pump_inhands_64x.rsi
   - type: GunSpreadModifier
     spread: 0.7
@@ -80,10 +88,13 @@
     capacity: 5
   - type: NFWeaponDetails
     manufacturer: weapon-details-manufacturer-nanotrasen-munitions
+  - type: Tag #Aurora, makes it work with wall cabinets
+    tags:
+    - WeaponShotgunKammerer
 
 - type: entity
   id: NFWeaponShotgunSawn
-  parent: [ NFBaseWeaponShotgunChamber50, NFBaseWeaponFrameShotgun ]
+  parent: [ NFBaseWeaponShotgunChamber12g, NFBaseWeaponFrameShotgun, NFBaseWeaponEncumbrancePistol ] # renamed from .50 to 12g | Aurora
   name: sawn-off shotgun
   description: |-
     Groovy!
@@ -93,11 +104,9 @@
   - type: Clothing
     sprite: _DV/Objects/Weapons/Guns/Shotguns/sawn.rsi
   - type: Item
-    size: Normal
+    size: Small # Aurora Song Normal>Small
     shape:
-      - 0,0,2,1
-  - type: GunSpreadModifier
-    spread: 1.4
+    - 0,0,1,0 # Aurora Song 0,0,4,0>0,0,1,0
   - type: BallisticAmmoProvider
     capacity: 2
   - type: NFWeaponDetails
@@ -115,7 +124,7 @@
 
 - type: entity
   id: NFWeaponShotgunHandmade
-  parent: [ NFBaseWeaponShotgunChamber50, NFBaseWeaponFrameShotgun ]
+  parent: [ NFBaseWeaponShotgunChamber12g, NFBaseWeaponFrameShotgun ] # renamed from .50 to 12g | Aurora
   name: handmade pistol
   description: |-
     Looks unreliable, but legal.
@@ -147,7 +156,7 @@
 
 - type: entity
   id: NFWeaponShotgunBlunderbuss
-  parent: [ BaseC3PirateContraband, NFBaseWeaponShotgunChamber50, NFBaseWeaponFrameShotgunWieldable ]
+  parent: [ BaseC3PirateContraband, NFBaseWeaponShotgunChamber12g, NFBaseWeaponFrameShotgunWieldable ] # renamed from .50 to 12g | Aurora
   name: blunderbuss
   description: |-
     Deadly at close range, an illegal shotgun often found at the side of a pirate.
@@ -157,6 +166,9 @@
   - type: Clothing
     sprite: Objects/Weapons/Guns/Shotguns/blunderbuss.rsi
   - type: Item
+    size: Normal
+    shape:
+    - 0,0,4,0
     sprite: Objects/Weapons/Guns/Shotguns/blunderbuss.rsi
   - type: GunSpreadModifier
     spread: 1.1
@@ -167,7 +179,7 @@
 
 - type: entity
   id: NFWeaponShotgunImprovised
-  parent: [ NFBaseWeaponShotgunChamber50, NFBaseWeaponFrameShotgunWieldable ]
+  parent: [ NFBaseWeaponShotgunChamber12g, NFBaseWeaponFrameShotgunWieldable ] # renamed from .50 to 12g | Aurora
   name: improvised shotgun
   description: |-
     A shitty, but legal, hand-made shotgun. It can only hold one round in the chamber.
@@ -177,6 +189,9 @@
   - type: Clothing
     sprite: Objects/Weapons/Guns/Shotguns/improvised_shotgun.rsi
   - type: Item
+    size: Normal
+    shape:
+    - 0,0,4,0
     sprite: Objects/Weapons/Guns/Shotguns/improvised_shotgun_inhands_64x.rsi
   - type: GunSpreadModifier
     spread: 1.2
@@ -213,3 +228,4 @@
   components:
   - type: BallisticAmmoProvider
     proto: NFShellShotgunBeanbag
+    capacity: 5

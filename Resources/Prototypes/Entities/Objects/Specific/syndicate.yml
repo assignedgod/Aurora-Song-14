@@ -6,6 +6,7 @@
   suffix: 20 TC
   description: It seems to be pulsing with suspiciously enticing energies.
   components:
+  - type: NFCoin
   - type: Sprite
     sprite: Objects/Specific/Syndicate/telecrystal.rsi
     state: telecrystal

@@ -241,22 +241,22 @@
   group: market
 
 - type: cargoProduct
-  id: FunATV
-  icon:
-    sprite: Objects/Vehicles/atv.rsi
-    state: vehicle
-  product: CrateFunATV
-  cost: 5000 # Frontier: 1500<5000
-  category: cargoproduct-category-name-fun
-  group: market
-
-- type: cargoProduct
   id: HydratedScurret
   icon:
     sprite: Structures/Wallmounts/posters.rsi
     state: poster55_legit
   product: CrateFunScurret
   cost: 25000 # You will surely not regret buying this
+  category: cargoproduct-category-name-fun
+  group: market
+
+- type: cargoProduct
+  id: FunATV
+  icon:
+    sprite: Objects/Vehicles/atv.rsi
+    state: vehicle
+  product: CrateFunATV
+  cost: 5000 # Frontier: 1500<5000
   category: cargoproduct-category-name-fun
   group: market
 

@@ -41,6 +41,7 @@
   - Atmospherics
   - GenpopEnter
   - GenpopLeave
+  - Prisoner
 
 - type: accessGroup
   id: General

@@ -73,12 +73,12 @@
 - type: entity
   parent: ClothingBackpackDuffelSyndicateBundle
   id: ClothingBackpackDuffelSyndicateFilledRevolver
-  name: ritland-45 bundle # Frontier
+  name: Python bundle # Frontier
   description: "Go loud and proud with a fully loaded Magnum Python, bundled with two speed loaders."
   components:
   - type: StorageFill
     contents:
-      - id: NFWeaponRevolverRitland45 # Frontier: WeaponRevolverPythonAP<NFWeaponRevolverRitland45
+      - id: NFWeaponRevolverPython45 # Frontier: WeaponRevolverPythonAP<NFWeaponRevolverPython45
       - id: NFSpeedLoaderPistol45 # Frontier: SpeedLoaderMagnumAP<NFSpeedLoaderPistol45
         amount: 2
 
@@ -91,7 +91,7 @@
   - type: StorageFill
     contents:
       - id: NFWeaponLightMachineGunL6 # Frontier: WeaponLightMachineGunL6<NFWeaponLightMachineGunL6
-      - id: NFMagazineBoxRifle20 # Frontier: MagazineLightRifleBox<NFMagazineBoxRifle20
+      - id: NFMagazineBoxRifle30 # Frontier: MagazineLightRifleBox<NFMagazineBoxRifle20
 
 - type: entity
   parent: ClothingBackpackDuffelSyndicateBundle
@@ -110,19 +110,15 @@
 - type: entity
   parent: ClothingBackpackDuffelSyndicateBundle
   id: ClothingBackpackDuffelSyndicateFilledCarbine
-  name: M-90gl bundle
-  description: "A versatile battle rifle with an attached grenade launcher, bundled with 3 magazines and 6 grenades of various capabilities."
+  name: M-90 bundle
+  description: "A versatile battle rifle, bundled up with six magazines. Two of which are P+ rounds."
   components:
   - type: StorageFill
     contents:
-      - id: NFWeaponRifleAssaultM90GrenadeLauncher # Frontier: WeaponRifleM90GrenadeLauncher<NFWeaponRifleAssaultM90GrenadeLauncher
+      - id: NFWeaponRifleAssaultM90 # Aurora: NFWeaponRifleAssaultM90GrenadeLauncher<NFWeaponRifleAssaultM90
       - id: NFMagazineRifle20 # Frontier: MagazineRifle<NFMagazineRifle20
-        amount: 2
-      - id: NFGrenadeBlast # Frontier: GrenadeBlast<NFGrenadeBlast
-        amount: 2
-      - id: NFGrenadeFlash # Frontier: GrenadeFlash<NFGrenadeFlash
-        amount: 2
-      - id: NFGrenadeFrag # Frontier: GrenadeFrag<NFGrenadeFrag
+        amount: 4
+      - id: NFMagazineRifle20Overpressure
         amount: 2
 
 - type: entity
@@ -141,7 +137,7 @@
         amount: 3
       - id: NFMagazineShotgunDrumSlug # Frontier: MagazineShotgunSlug<NFMagazineShotgunDrumSlug
         amount: 1
-      - id: NFMagazineBoxRifle20 # Frontier: MagazineLightRifleBox<NFMagazineBoxRifle20
+      - id: NFMagazineBoxRifle30 # Frontier: MagazineLightRifleBox<NFMagazineBoxRifle20
         amount: 2
 
 - type: entity
@@ -293,7 +289,7 @@
   - type: StorageFill
     contents:
       - id: SyringeRomerol
-      - id: NFWeaponRevolverRitland45 # Frontier: WeaponRevolverPython<NFWeaponRevolverRitland45
+      - id: NFWeaponRevolverPython45 # Frontier: WeaponRevolverPython<NFWeaponRevolverPython45
       - id: NFAmmunitionBoxPistol45Incendiary # Frontier: MagazineBoxMagnumIncendiary<NFAmmunitionBoxPistol45Incendiary
       - id: PillAmbuzolPlus
       - id: PillAmbuzol

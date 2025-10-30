@@ -1,5 +1,6 @@
-defaultWindowTitle: Frontier Station
-windowIconSet: /Textures/_NF/Logo/icon
-splashLogo: /Textures/_NF/Logo/logo.png
+defaultWindowTitle: Aurora's Song
+windowIconSet: /Textures/_AS/Logo/icon
+splashLogo: /Textures/_AS/Logo/logo.png
 
-# PJB PLEASE
+# This is the manifest file for Aurora's Song.
+# I'm not sure why this file originally said 'PJB PLEASE' but I am concerned

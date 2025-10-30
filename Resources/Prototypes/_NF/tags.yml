@@ -261,6 +261,9 @@
   id: NFMagazineRifle30 # OG WizDen: MagazineLightRifle
 
 - type: Tag
+  id: NFMagazineBoxRifle30 # OG WizDen: MagazineLightRifleBox
+
+- type: Tag
   id: NFMagazineLowCapacityRifle30 # MagazineLightRifleLowCapacity
 
 #region .60 rifle

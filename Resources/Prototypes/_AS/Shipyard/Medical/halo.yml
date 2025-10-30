@@ -1,0 +1,32 @@
+﻿- type: vessel
+  id: halo
+  parent: BaseVessel
+  name: ID Halo
+  description: The Interdyne Halo is a high speed search and rescue ship with specialized material efficient thrusters. The design was comissioned for use within the Aurora Song sector.
+  price: 50000 #Appraisal is 39000
+  category: Medium
+  group: Medical
+  access: Medical
+  shuttlePath: /Maps/_AS/Shuttles/halo.yml
+  class:
+  - Medical
+  engine:
+  - Uranium
+
+- type: gameMap
+  id: halo
+  mapName: 'ID Halo'
+  mapPath: /Maps/_AS/Shuttles/halo.yml
+  minPlayers: 0
+  stations:
+    halo:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Halo {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            Medic: [ 0, 0 ]

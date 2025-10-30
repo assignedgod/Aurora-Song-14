@@ -25,11 +25,14 @@
     - WhitelistChameleonIdCard
   - type: StealTarget
     stealGroup: IDCard
-  - type: StaticPrice # Frontier
-    price: 5 # Frontier The card need to cost less then the PDA that comes with a card and a pen in it.
-  - type: CargoSellBlacklist # Frontier
-  - type: ShipyardSellCondition # Frontier: Teleport to shipyard console on sale
+  # Frontier: extra components
+  - type: StaticPrice
+    price: 5
+  - type: CargoSellBlacklist
+  - type: ShipyardSellCondition
     preserveOnSale: true
+  - type: DeletionCensusExempt
+  # End Frontier: extra components
 
 #IDs with layers
 
@@ -325,6 +328,22 @@
     - type: Tag #  Ignore Chameleon tags
       tags:
       - DoorBumpOpener
+
+- type: entity # DeltaV - Security dog Laika ID card
+  parent: IDCardStandard
+  id: SecDogIDCard
+  name: Security Dog ID card
+  components:
+  - type: Sprite
+    layers:
+    - state: default
+    - state: idsecurityofficer
+  - type: PresetIdCard
+    job: SecurityOfficer
+    name: Laika
+  - type: Tag
+    tags:
+    - DoorBumpOpener
 
 - type: entity
   parent: IDCardStandard
@@ -749,6 +768,7 @@
   - type: Access
     tags:
     - GenpopEnter
+    - Prisoner
   - type: GenpopIdCard
   - type: IdCard
     jobTitle: job-name-prisoner
@@ -757,6 +777,7 @@
   - type: ExpireIdCard
     expireMessage: genpop-prisoner-id-expire
     expiredAccess:
+    - Prisoner
     - GenpopLeave
   - type: Speech
     speechVerb: Robotic

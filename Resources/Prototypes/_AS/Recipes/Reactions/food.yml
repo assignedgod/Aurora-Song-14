@@ -1,0 +1,32 @@
+- type: reaction
+  id: OilToOliveOil
+  reactants:
+    Oil:
+      amount: 5
+    Enzyme:
+      amount: 1
+      catalyst: true
+  products:
+   OilOlive: 3
+
+- type: reaction
+  id: CornOilToOliveOil
+  reactants:
+    Cornoil:
+      amount: 5
+    Enzyme:
+      amount: 1
+      catalyst: true
+  products:
+   OilOlive: 3
+
+- type: reaction
+  id: GheeToOliveOil
+  reactants:
+    OilGhee:
+      amount: 5
+    Enzyme:
+      amount: 1
+      catalyst: true
+  products:
+   OilOlive: 3

@@ -1,0 +1,24 @@
+﻿- type: latheRecipePack
+  id: ASMercenaryEmag
+  recipes:
+  - NFAmmunitionBoxRifle25
+  - NFAmmunitionBoxRifle25Overpressure
+  - NFAmmunitionBoxPistol45
+  - ASMagazineCaselessRifleShort
+  - ASMagazineCaselessRifle
+  - FireAxe
+  - NFMagazineSubMachineGun35
+
+- type: latheRecipePack
+  id: ASAmmofabEmag
+  recipes:
+  - NFAmmunitionBoxRifle20Incendiary
+  - NFAmmunitionBoxPistol45Incendiary
+  - NFAmmunitionBoxPistol35Incendiary
+  - NFAmmunitionBoxRifle30Incendiary
+  - NFAmmunitionBoxShellShotgunIncendiary
+
+- type: latheRecipePack
+  id: ASSalvageLatheEmag
+  recipes:
+  - FireAxe

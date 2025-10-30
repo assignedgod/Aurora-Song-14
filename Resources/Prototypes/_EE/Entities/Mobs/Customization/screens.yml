@@ -1,0 +1,321 @@
+## CANT SET THESE SCREENS TO "shader: unshaded"
+## RobustToolbox/Robust.Shared/Utility/SpriteSpecifier.cs
+
+# Aurora Song: Add base markings
+- type: marking
+  abstract: true
+  parent: BaseSpeciesIPC
+  id: BaseRobotScreen
+  bodyPart: Eyes # DeltaV - Moves screen to the eyes layer
+  markingCategory: Eyes
+# End Aurora Song
+
+- type: marking
+  parent: BaseRobotScreen # Aurora Song: Add inheritance for species restriction / category
+  id: ScreenStatic
+  sprites:
+    - sprite: _EE/Mobs/Customization/ipc_screens.rsi
+      state: ipc_screen_static
+
+
+- type: marking
+  parent: BaseRobotScreen # Aurora Song: Add inheritance for species restriction / category
+  id: ScreenBlue
+  sprites:
+    - sprite: _EE/Mobs/Customization/ipc_screens.rsi
+      state: ipc_screen_blue
+
+
+- type: marking
+  parent: BaseRobotScreen # Aurora Song: Add inheritance for species restriction / category
+  id: ScreenBreakout
+  sprites:
+    - sprite: _EE/Mobs/Customization/ipc_screens.rsi
+      state: ipc_screen_breakout
+
+
+- type: marking
+  parent: BaseRobotScreen # Aurora Song: Add inheritance for species restriction / category
+  id: ScreenEight
+  sprites:
+    - sprite: _EE/Mobs/Customization/ipc_screens.rsi
+      state: ipc_screen_eight
+
+
+- type: marking
+  parent: BaseRobotScreen # Aurora Song: Add inheritance for species restriction / category
+  id: ScreenGoggles
+  sprites:
+    - sprite: _EE/Mobs/Customization/ipc_screens.rsi
+      state: ipc_screen_goggles
+
+
+- type: marking
+  parent: BaseRobotScreen # Aurora Song: Add inheritance for species restriction / category
+  id: ScreenExclaim
+  sprites:
+    - sprite: _EE/Mobs/Customization/ipc_screens.rsi
+      state: ipc_screen_exclaim
+
+
+- type: marking
+  parent: BaseRobotScreen # Aurora Song: Add inheritance for species restriction / category
+  id: ScreenHeart
+  sprites:
+    - sprite: _EE/Mobs/Customization/ipc_screens.rsi
+      state: ipc_screen_heart
+
+
+- type: marking
+  parent: BaseRobotScreen # Aurora Song: Add inheritance for species restriction / category
+  id: ScreenMonoeye
+  sprites:
+    - sprite: _EE/Mobs/Customization/ipc_screens.rsi
+      state: ipc_screen_monoeye
+
+
+- type: marking
+  parent: BaseRobotScreen # Aurora Song: Add inheritance for species restriction / category
+  id: ScreenNature
+  sprites:
+    - sprite: _EE/Mobs/Customization/ipc_screens.rsi
+      state: ipc_screen_nature
+
+
+- type: marking
+  parent: BaseRobotScreen # Aurora Song: Add inheritance for species restriction / category
+  id: ScreenOrange
+  sprites:
+    - sprite: _EE/Mobs/Customization/ipc_screens.rsi
+      state: ipc_screen_orange
+
+
+- type: marking
+  parent: BaseRobotScreen # Aurora Song: Add inheritance for species restriction / category
+  id: ScreenPink
+  sprites:
+    - sprite: _EE/Mobs/Customization/ipc_screens.rsi
+      state: ipc_screen_pink
+
+
+- type: marking
+  parent: BaseRobotScreen # Aurora Song: Add inheritance for species restriction / category
+  id: ScreenQuestion
+  sprites:
+    - sprite: _EE/Mobs/Customization/ipc_screens.rsi
+      state: ipc_screen_question
+
+
+- type: marking
+  parent: BaseRobotScreen # Aurora Song: Add inheritance for species restriction / category
+  id: ScreenShower
+  sprites:
+    - sprite: _EE/Mobs/Customization/ipc_screens.rsi
+      state: ipc_screen_shower
+
+
+- type: marking
+  parent: BaseRobotScreen # Aurora Song: Add inheritance for species restriction / category
+  id: ScreenYellow
+  sprites:
+    - sprite: _EE/Mobs/Customization/ipc_screens.rsi
+      state: ipc_screen_yellow
+
+
+- type: marking
+  parent: BaseRobotScreen # Aurora Song: Add inheritance for species restriction / category
+  id: ScreenScroll
+  sprites:
+    - sprite: _EE/Mobs/Customization/ipc_screens.rsi
+      state: ipc_screen_scroll
+
+
+- type: marking
+  parent: BaseRobotScreen # Aurora Song: Add inheritance for species restriction / category
+  id: ScreenConsole
+  sprites:
+    - sprite: _EE/Mobs/Customization/ipc_screens.rsi
+      state: ipc_screen_console
+
+
+- type: marking
+  parent: BaseRobotScreen # Aurora Song: Add inheritance for species restriction / category
+  id: ScreenRgb
+  sprites:
+    - sprite: _EE/Mobs/Customization/ipc_screens.rsi
+      state: ipc_screen_rgb
+
+
+- type: marking
+  parent: BaseRobotScreen # Aurora Song: Add inheritance for species restriction / category
+  id: ScreenGlider
+  sprites:
+    - sprite: _EE/Mobs/Customization/ipc_screens.rsi
+      state: ipc_screen_glider
+
+
+- type: marking
+  parent: BaseRobotScreen # Aurora Song: Add inheritance for species restriction / category
+  id: ScreenRainbowhoriz
+  sprites:
+    - sprite: _EE/Mobs/Customization/ipc_screens.rsi
+      state: ipc_screen_rainbowhoriz
+
+
+- type: marking
+  parent: BaseRobotScreen # Aurora Song: Add inheritance for species restriction / category
+  id: ScreenBsod
+  sprites:
+    - sprite: _EE/Mobs/Customization/ipc_screens.rsi
+      state: ipc_screen_bsod
+
+
+- type: marking
+  parent: BaseRobotScreen # Aurora Song: Add inheritance for species restriction / category
+  id: ScreenRedtext
+  sprites:
+    - sprite: _EE/Mobs/Customization/ipc_screens.rsi
+      state: ipc_screen_redtext
+
+
+- type: marking
+  parent: BaseRobotScreen # Aurora Song: Add inheritance for species restriction / category
+  id: ScreenSinewave
+  sprites:
+    - sprite: _EE/Mobs/Customization/ipc_screens.rsi
+      state: ipc_screen_sinewave
+
+
+- type: marking
+  parent: BaseRobotScreen # Aurora Song: Add inheritance for species restriction / category
+  id: ScreenSquarewave
+  sprites:
+    - sprite: _EE/Mobs/Customization/ipc_screens.rsi
+      state: ipc_screen_squarewave
+
+
+- type: marking
+  parent: BaseRobotScreen # Aurora Song: Add inheritance for species restriction / category
+  id: ScreenEcgwave
+  sprites:
+    - sprite: _EE/Mobs/Customization/ipc_screens.rsi
+      state: ipc_screen_ecgwave
+
+
+- type: marking
+  parent: BaseRobotScreen # Aurora Song: Add inheritance for species restriction / category
+  id: ScreenEyes
+  sprites:
+    - sprite: _EE/Mobs/Customization/ipc_screens.rsi
+      state: ipc_screen_eyes
+
+
+- type: marking
+  parent: BaseRobotScreen # Aurora Song: Add inheritance for species restriction / category
+  id: ScreenEyestall
+  sprites:
+    - sprite: _EE/Mobs/Customization/ipc_screens.rsi
+      state: ipc_screen_eyestall
+
+
+- type: marking
+  parent: BaseRobotScreen # Aurora Song: Add inheritance for species restriction / category
+  id: ScreenEyesangry
+  sprites:
+    - sprite: _EE/Mobs/Customization/ipc_screens.rsi
+      state: ipc_screen_eyesangry
+
+
+- type: marking
+  parent: BaseRobotScreen # Aurora Song: Add inheritance for species restriction / category
+  id: ScreenLoading
+  sprites:
+    - sprite: _EE/Mobs/Customization/ipc_screens.rsi
+      state: ipc_screen_loading
+
+
+- type: marking
+  parent: BaseRobotScreen # Aurora Song: Add inheritance for species restriction / category
+  id: ScreenWindowsxp
+  sprites:
+    - sprite: _EE/Mobs/Customization/ipc_screens.rsi
+      state: ipc_screen_windowsxp
+
+
+- type: marking
+  parent: BaseRobotScreen # Aurora Song: Add inheritance for species restriction / category
+  id: ScreenTetris
+  sprites:
+    - sprite: _EE/Mobs/Customization/ipc_screens.rsi
+      state: ipc_screen_tetris
+
+
+- type: marking
+  parent: BaseRobotScreen # Aurora Song: Add inheritance for species restriction / category
+  id: ScreenTv
+  sprites:
+    - sprite: _EE/Mobs/Customization/ipc_screens.rsi
+      state: ipc_screen_tv
+
+
+- type: marking
+  parent: BaseRobotScreen # Aurora Song: Add inheritance for species restriction / category
+  id: ScreenTextdrop
+  sprites:
+    - sprite: _EE/Mobs/Customization/ipc_screens.rsi
+      state: ipc_screen_textdrop
+
+
+- type: marking
+  parent: BaseRobotScreen # Aurora Song: Add inheritance for species restriction / category
+  id: ScreenStars
+  sprites:
+    - sprite: _EE/Mobs/Customization/ipc_screens.rsi
+      state: ipc_screen_stars
+
+
+- type: marking
+  parent: BaseRobotScreen # Aurora Song: Add inheritance for species restriction / category
+  id: ScreenRainbowdiag
+  sprites:
+    - sprite: _EE/Mobs/Customization/ipc_screens.rsi
+      state: ipc_screen_rainbowdiag
+
+
+- type: marking
+  parent: BaseRobotScreen # Aurora Song: Add inheritance for species restriction / category
+  id: ScreenBlank
+  sprites:
+    - sprite: _EE/Mobs/Customization/ipc_screens.rsi
+      state: ipc_screen_blank
+
+
+- type: marking
+  parent: BaseRobotScreen # Aurora Song: Add inheritance for species restriction / category
+  id: ScreenSmile
+  sprites:
+    - sprite: _EE/Mobs/Customization/ipc_screens.rsi
+      state: ipc_screen_smile
+
+- type: marking
+  parent: BaseRobotScreen # Aurora Song: Add inheritance for species restriction / category
+  id: ScreenFrown
+  sprites:
+    - sprite: _EE/Mobs/Customization/ipc_screens.rsi
+      state: ipc_screen_frown
+
+
+- type: marking
+  parent: BaseRobotScreen # Aurora Song: Add inheritance for species restriction / category
+  id: ScreenRing
+  sprites:
+    - sprite: _EE/Mobs/Customization/ipc_screens.rsi
+      state: ipc_screen_ring
+
+
+- type: marking
+  parent: BaseRobotScreen # Aurora Song: Add inheritance for species restriction / category
+  id: ScreenL
+  sprites:
+    - sprite: _EE/Mobs/Customization/ipc_screens.rsi
+      state: ipc_screen_l

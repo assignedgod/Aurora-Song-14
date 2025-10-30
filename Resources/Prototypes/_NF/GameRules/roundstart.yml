@@ -28,6 +28,7 @@
     - id: BluespaceSyndicateFTLInterception
     - id: BluespaceWizardFederationScout
     - id: BluespaceBloodMoon
+    - id: BluespaceMercenaryFTLCrash # Aurora
 
 - type: entity
   id: BluespaceDungeonEventScheduler

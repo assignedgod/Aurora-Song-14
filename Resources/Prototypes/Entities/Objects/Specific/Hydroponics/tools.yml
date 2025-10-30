@@ -146,7 +146,9 @@
     # End Frontier
   - type: Item
     storedRotation: -90
-    size: Ginormous # Frontier
+    size: Normal # Aurora
+    shape: # Aurora: Overriding damage done from elsewhere, I don't have the patience to follow and assess it
+    - 0,0,1,1
   - type: Clothing
     quickEquip: false
     slots:

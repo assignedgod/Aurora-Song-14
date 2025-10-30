@@ -805,7 +805,7 @@
 
 - type: marking
   id: VoxLegGradientRLeg
-  bodyPart: RLeg
+  bodyPart: RFoot
   markingCategory: Legs
   speciesRestriction: [ Vox ]
   forcedColoring: false
@@ -963,7 +963,7 @@
 
 - type: marking
   id: VoxLegsStripesRLeg
-  bodyPart: RLeg
+  bodyPart: RFoot
   markingCategory: Legs
   speciesRestriction: [ Vox ]
   forcedColoring: false
@@ -1095,7 +1095,7 @@
   id: VitiligoArmR
   bodyPart: RArm
   markingCategory: Arms
-  speciesRestriction: [ Human, Dwarf, Oni, Goblin, Felinid] # Frontier: add Oni, Goblin, Felinid
+  speciesRestriction: [ Human, Dwarf, Oni, Goblin, Felinid] # Frontier: add  Oni, Felinid
   forcedColoring: true
   coloring:
     default:
@@ -1110,7 +1110,7 @@
   id: VitiligoArmL
   bodyPart: LArm
   markingCategory: Arms
-  speciesRestriction: [ Human, Dwarf, Oni, Goblin, Felinid] # Frontier: add Oni, Goblin, Felinid
+  speciesRestriction: [ Human, Dwarf, Oni, Goblin, Felinid] # Frontier: add  Oni, Felinid
   forcedColoring: true
   coloring:
     default:
@@ -1125,7 +1125,7 @@
   id: VitiligoHandR
   bodyPart: RHand
   markingCategory: Arms
-  speciesRestriction: [ Human, Dwarf, Oni, Goblin, Felinid] # Frontier: add Oni, Goblin, Felinid
+  speciesRestriction: [ Human, Dwarf, Oni, Goblin, Felinid] # Frontier: add  Oni, Felinid
   forcedColoring: true
   coloring:
     default:
@@ -1140,7 +1140,7 @@
   id: VitiligoHandL
   bodyPart: LHand
   markingCategory: Arms
-  speciesRestriction: [ Human, Dwarf, Oni, Goblin, Felinid] # Frontier: add Oni, Goblin, Felinid
+  speciesRestriction: [ Human, Dwarf, Oni, Goblin, Felinid] # Frontier: add  Oni, Felinid
   forcedColoring: true
   coloring:
     default:
@@ -1153,9 +1153,9 @@
 
 - type: marking
   id: VitiligoLegR
-  bodyPart: RLeg
+  bodyPart: RFoot
   markingCategory: Legs
-  speciesRestriction: [ Human, Dwarf, Oni, Goblin, Felinid] # Frontier: add Oni, Goblin, Felinid
+  speciesRestriction: [ Human, Dwarf, Oni, Goblin, Felinid] # Frontier: add  Oni, Felinid
   forcedColoring: true
   coloring:
     default:
@@ -1170,7 +1170,7 @@
   id: VitiligoLegL
   bodyPart: LLeg
   markingCategory: Legs
-  speciesRestriction: [ Human, Dwarf, Oni, Goblin, Felinid] # Frontier: add Oni, Goblin, Felinid
+  speciesRestriction: [ Human, Dwarf, Oni, Goblin, Felinid] # Frontier: add  Oni, Felinid
   forcedColoring: true
   coloring:
     default:

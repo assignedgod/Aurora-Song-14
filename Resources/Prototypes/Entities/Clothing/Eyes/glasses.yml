@@ -70,6 +70,7 @@
   - type: Tag
     tags:
     - PetWearable
+    - SecDogWearable
     - WhitelistChameleon
 
 - type: entity
@@ -166,6 +167,7 @@
     - PetWearable
     - HamsterWearable
     - WhitelistChameleon
+    - SecDogWearable # DeltaV - let Laika wear sunglasses
 
 - type: entity
   parent: [ClothingEyesBase, ShowSecurityIcons, BaseC2ContrabandUnredeemable] # Frontier: BaseSecurityContraband<BaseC2ContrabandUnredeemable
@@ -188,6 +190,7 @@
     - HamsterWearable
     - PetWearable
     - WhitelistChameleon
+    - SecDogWearable # DeltaV - let Laika wear secglasses
   - type: GuideHelp
     guides:
     - Security

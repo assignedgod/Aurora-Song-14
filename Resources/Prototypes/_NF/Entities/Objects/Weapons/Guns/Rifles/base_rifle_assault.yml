@@ -13,11 +13,11 @@
     maxAngle: -0
   - type: Gun
     projectileSpeed: 30
-    minAngle: 2
-    maxAngle: 10
-    angleIncrease: 0.5
-    angleDecay: 2.5
-    fireRate: 4
+    minAngle: 2.9
+    maxAngle: 8.7
+    angleIncrease: 2
+    angleDecay: 4
+    fireRate: 5 # fire rate tweak, increase | Aurora
     selectedMode: FullAuto
     availableModes:
     - SemiAuto
@@ -36,25 +36,25 @@
   abstract: true
   components:
   - type: Gun
-    minAngle: 2.3
-    maxAngle: 11.5
-    angleIncrease: 0.8
-    angleDecay: 2.7
-    fireRate: 3.4
+    minAngle: 4
+    maxAngle: 12
+    angleIncrease: 2.5
+    angleDecay: 3
+    fireRate: 6 # fire rate tweak, increase | Aurora
   - type: NFWeaponDetails
-    class: weapon-details-manufacturer-nanotrasen-munitions
+    manufacturer: weapon-details-manufacturer-nanotrasen-munitions # Nanotrasen Munitions flavour text | Aurora
 
 - type: entity
   id: NFBaseWeaponFrameRifleAssaultCybersun
-  parent: [ BaseC3SyndicateContraband, NFBaseWeaponFrameRifleAssault ]
+  parent: [ BaseC2ContrabandUnredeemable, NFBaseWeaponFrameRifleAssault ] # Contraband adjustment | Aurora
   abstract: true
   components:
   - type: Gun
-    angleIncrease: 0.6
-    angleDecay: 4.2
-    fireRate: 3.2
+    angleIncrease: 2
+    angleDecay: 5
+    fireRate: 5.5 # fire rate tweak, increase | Aurora
   - type: NFWeaponDetails
-    class: weapon-details-manufacturer-cybersun-industries
+    manufacturer: weapon-details-manufacturer-cybersun-industries # Cybersun Industries flavour text | Aurora
 
 - type: entity
   id: NFBaseWeaponFrameRifleAssaultFrontierGunsmith
@@ -62,11 +62,11 @@
   abstract: true
   components:
   - type: Gun
-    minAngle: 2.4
-    maxAngle: 12
-    angleIncrease: 1.2
-    angleDecay: 3.8
-    fireRate: 3.2
+    minAngle: 3.5
+    maxAngle: 11
+    angleIncrease: 2
+    angleDecay: 3
+    fireRate: 5 # fire rate tweak, increase | Aurora
   - type: NFWeaponDetails
     class: weapon-details-manufacturer-frontier-gunsmith-consortium
 
@@ -242,3 +242,33 @@
         whitelist: *mag30Whitelist
         whitelistFailPopup: gun-magazine-whitelist-fail
       gun_chamber: *chamber30Rubber
+#region .25 caliber rifle | Aurora
+- type: entity
+  id: ASBaseWeaponRifleAssaultChamber25
+  parent: NFBaseWeaponRifleAssaultChamber
+  abstract: true
+  components:
+  - type: Gun
+    examineCaliber: gun-examine-caliber-25
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/rifle2.ogg
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: ASMagazineCaselessRifle
+        insertSound: /Audio/Weapons/Guns/MagIn/batrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/batrifle_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - ASMagazineCaselessRifle
+        whitelistFailPopup: gun-magazine-whitelist-fail
+      gun_chamber:
+        name: Chamber
+        startingItem: NFCartridgeRifle25
+        priority: 1
+        whitelist:
+          tags:
+            - NFCartridgeRifle25
+#endregion .25 caliber rifle | Aurora

@@ -33,7 +33,7 @@ public sealed class ContrabandPriceGunSystem : EntitySystem
         if (!TryComp(entity, out UseDelayComponent? useDelay) || _useDelay.IsDelayed((entity, useDelay)))
             return;
 
-        if (!TryComp<ContrabandComponent>(args.Target, out var contraband) || !contraband.TurnInValues.ContainsKey(entity.Comp.Currency))
+        if (!TryComp<ContrabandComponent>(args.Target, out var contraband) || contraband.TurnInValues is not {} turnInValues || !turnInValues.ContainsKey(entity.Comp.Currency))
             return;
 
         var price = contraband.TurnInValues[entity.Comp.Currency];
@@ -62,7 +62,7 @@ public sealed class ContrabandPriceGunSystem : EntitySystem
         if (!TryComp(entity, out UseDelayComponent? useDelay) || _useDelay.IsDelayed((entity, useDelay)))
             return;
 
-        if (TryComp<ContrabandComponent>(args.Target, out var contraband) && contraband.TurnInValues.ContainsKey(entity.Comp.Currency))
+        if (TryComp<ContrabandComponent>(args.Target, out var contraband) && contraband.TurnInValues is {} turnInValues && turnInValues.ContainsKey(entity.Comp.Currency))
             _popupSystem.PopupEntity(Loc.GetString($"{entity.Comp.LocStringPrefix}contraband-price-gun-pricing-result", ("object", Identity.Entity(args.Target.Value, EntityManager)), ("price", contraband.TurnInValues[entity.Comp.Currency])), args.User, args.User);
         else
             _popupSystem.PopupEntity(Loc.GetString($"{entity.Comp.LocStringPrefix}contraband-price-gun-pricing-result-none", ("object", Identity.Entity(args.Target.Value, EntityManager))), args.User, args.User);

@@ -4,10 +4,14 @@
   loadouts:
   - DeputyClothingUniformJumpsuitDeputy
   - DeputyClothingUniformJumpskirtDeputy
+  - DeputyClothingUniformJumpsuitSle # Aurora Song
+  - DeputyClothingUniformJumpskirtSle # Aurora Song
   fallbacks:
   - DeputyClothingUniformJumpsuitDeputy
   - DeputyClothingUniformJumpskirtDeputy
-  
+  - DeputyClothingUniformJumpsuitSle # Aurora Song
+  - DeputyClothingUniformJumpskirtSle # Aurora Song
+
 - type: loadoutGroup
   id: DeputyOuterClothing
   name: loadout-group-contractor-outerclothing

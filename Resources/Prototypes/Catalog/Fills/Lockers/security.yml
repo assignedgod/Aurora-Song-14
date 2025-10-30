@@ -220,7 +220,7 @@
   parent: [GunSafeBaseSecure, BaseC2ContrabandUnredeemable ] # Frontier: BaseSecurityContraband<BaseC2ContrabandUnredeemable
   id: GunSafePistolMk58
   name: mk58 safe
-  categories: [ HideSpawnMenu ] # Frontier
+#  categories: [ HideSpawnMenu ] # Frontier
   components:
   - type: EntityTableContainerFill
     containers:
@@ -240,7 +240,7 @@
   parent: [GunSafeBaseSecure, BaseC2ContrabandUnredeemable ] # Frontier: BaseSecurityContraband<BaseC2ContrabandUnredeemable
   id: GunSafeRifleLecter
   name: Lecter safe # Frontier: caps
-  categories: [ HideSpawnMenu ] # Frontier
+#  categories: [ HideSpawnMenu ] # Frontier
   components:
   - type: EntityTableContainerFill
     containers:
@@ -260,7 +260,7 @@
   parent: [GunSafeBaseSecure, BaseC2ContrabandUnredeemable ] # Frontier: BaseSecurityContraband<BaseC2ContrabandUnredeemable
   id: GunSafeSubMachineGunDrozd
   name: Drozd safe # Frontier: caps
-  categories: [ HideSpawnMenu ] # Frontier
+#  categories: [ HideSpawnMenu ] # Frontier
   components:
   - type: EntityTableContainerFill
     containers:
@@ -280,7 +280,7 @@
   parent: [GunSafeBaseSecure, BaseC2ContrabandUnredeemable ] # Frontier: BaseSecurityContraband<BaseC2ContrabandUnredeemable
   id: GunSafeShotgunEnforcer
   name: Enforcer safe # Frontier: caps
-  categories: [ HideSpawnMenu ] # Frontier
+#  categories: [ HideSpawnMenu ] # Frontier
   components:
   - type: EntityTableContainerFill
     containers:
@@ -300,7 +300,7 @@
   parent: [GunSafeBaseSecure, BaseC2ContrabandUnredeemable ] # Frontier: BaseSecurityContraband<BaseC2ContrabandUnredeemable
   id: GunSafeShotgunKammerer
   name: Kammerer safe # Frontier: caps
-  categories: [ HideSpawnMenu ] # Frontier
+#  categories: [ HideSpawnMenu ] # Frontier
   components:
   - type: EntityTableContainerFill
     containers:
@@ -321,7 +321,7 @@
   suffix: Wt550
   parent: [GunSafeBaseSecure, BaseC2ContrabandUnredeemable ] # Frontier: BaseSecurityContraband<BaseC2ContrabandUnredeemable
   name: WT-550 safe # Frontier: caps
-  categories: [ HideSpawnMenu ] # Frontier
+#  categories: [ HideSpawnMenu ] # Frontier
   components:
   - type: EntityTableContainerFill
     containers:
@@ -341,7 +341,7 @@
   parent: [GunSafeBaseSecure] # Frontier: remove BaseSecurityContraband
   id: GunSafeLaserCarbine
   name: laser safe
-  categories: [ HideSpawnMenu ] # Frontier
+#  categories: [ HideSpawnMenu ] # Frontier
   components:
   - type: EntityTableContainerFill
     containers:

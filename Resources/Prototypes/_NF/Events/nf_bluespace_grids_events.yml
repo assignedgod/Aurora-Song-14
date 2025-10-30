@@ -3,7 +3,7 @@
   parent: BaseStationEventShortDelay
   components:
   - type: StationEvent
-    
+
     startAnnouncement: station-event-bluespace-cache-start-announcement
     startAudio:
       path: /Audio/_NF/Announcements/PocketSizedAndy/andy2_bluespace_cache_arrival.ogg
@@ -37,10 +37,14 @@
           preventArtifactTriggers: true
         - type: PreventPilot
         - type: ForceAnchor # Added post-FTL, so anchoring is fine.
+        - type: DeletionCensusExempt
         paths:
         - /Maps/_NF/Bluespace/cache.yml
     rewardAccounts:
-      Nfsd: 1.0
+      Nfsd: 0.25
+      Frontier: 0.25
+      Medical: 0.25
+      Edison: 0.25
 
 - type: entity
   id: BluespaceVaultError
@@ -60,6 +64,8 @@
     duration: 1020
     maxDuration: 1350
     reoccurrenceDelay: 360 # 6 hours
+    requiredJobs:
+      Sheriff: 1
   - type: BluespaceErrorRule
     groups:
       grid: !type:GridSpawnGroup
@@ -78,6 +84,7 @@
           preventArtifactTriggers: true
         - type: PreventPilot
         - type: ForceAnchor
+        - type: DeletionCensusExempt
         paths:
         - /Maps/_NF/Bluespace/vault.yml
     rewardAccounts:
@@ -103,6 +110,8 @@
     duration: 590
     maxDuration: 780
     reoccurrenceDelay: 360 # 6 hours
+    requiredJobs:
+      Sheriff: 1
   - type: BluespaceErrorRule
     groups:
       grid: !type:GridSpawnGroup
@@ -121,6 +130,7 @@
           preventArtifactTriggers: true
         - type: PreventPilot
         - type: ForceAnchor
+        - type: DeletionCensusExempt
         paths:
         - /Maps/_NF/Bluespace/vaultsmall.yml
     rewardAccounts:
@@ -141,7 +151,7 @@
     endAudio:
       path: /Audio/_NF/Announcements/PocketSizedAndy/andy2_bluespace_ship_leave.ogg
     earliestStart: 80
-    minimumPlayers: 15
+    minimumPlayers: 2 #Revert to 15 when tests are done, Aurora
     weight: 1
     duration: 1800
     maxDuration: 2400
@@ -151,6 +161,8 @@
       grid: !type:GridSpawnGroup
         nameLoc:
         - station-event-bluespace-name-UnidentifiedVessel
+        minCount: 2 #Aurora's Song
+        maxCount: 3 #Aurora's Song
         minimumDistance: 1500
         maximumDistance: 2500
         addComponents:
@@ -164,6 +176,7 @@
           preventArtifactTriggers: true
         - type: PreventPilot
         - type: ForceAnchor
+        - type: DeletionCensusExempt
         paths:
         - /Maps/_NF/Bluespace/syndieftlintercept.yml
 
@@ -180,7 +193,7 @@
     endAudio:
       path: /Audio/_NF/Announcements/PocketSizedAndy/andy2_bluespace_ship_leave.ogg
     earliestStart: 100
-    minimumPlayers: 15
+    minimumPlayers: 2 #Revert to 15 when tests are done, Aurora
     weight: 1
     duration: 900
     maxDuration: 1200
@@ -190,6 +203,8 @@
       grid: !type:GridSpawnGroup
         nameLoc:
         - station-event-bluespace-name-UnidentifiedVessel
+        minCount: 2 #Aurora's Song
+        maxCount: 3 #Aurora's Song
         minimumDistance: 1500
         maximumDistance: 2500
         addComponents:
@@ -203,6 +218,7 @@
           preventArtifactTriggers: true
         - type: PreventPilot
         - type: ForceAnchor
+        - type: DeletionCensusExempt
         paths:
         - /Maps/_NF/Bluespace/wizardprobealt.yml
 
@@ -219,7 +235,7 @@
     endAudio:
       path: /Audio/_NF/Announcements/PocketSizedAndy/andy2_bluespace_ship_leave.ogg
     earliestStart: 80
-    minimumPlayers: 15
+    minimumPlayers: 2 #Revert to 15 when tests are done, Aurora
     weight: 1
     duration: 1800
     maxDuration: 2400
@@ -229,6 +245,8 @@
       grid: !type:GridSpawnGroup
         nameLoc:
         - station-event-bluespace-name-UnidentifiedVessel
+        minCount: 2 #Aurora's Song
+        maxCount: 3 #Aurora's Song
         minimumDistance: 1500
         maximumDistance: 2500
         addComponents:
@@ -242,6 +260,7 @@
           preventArtifactTriggers: true
         - type: PreventPilot
         - type: ForceAnchor
+        - type: DeletionCensusExempt
         paths:
         - /Maps/_NF/Bluespace/bloodmoon.yml
 
@@ -279,6 +298,7 @@
           preventArtifactTriggers: true
         - type: PreventPilot
         - type: ForceAnchor
+        - type: DeletionCensusExempt
         paths:
         - /Maps/_NF/Bluespace/cave.yml
 
@@ -287,14 +307,11 @@
   parent: BaseStationEventShortDelay
   components:
   - type: StationEvent
-  # TODO: Maybe change start & end to unique Voice over audio
-    startAnnouncement: station-event-bluespace-generic-ftl-start-announcement
+    startAnnouncement: station-event-bluespace-mcargo-ftl-start-announcement #Aurora event text
     startAudio:
-      path: /Audio/_NF/Announcements/PocketSizedAndy/andy2_bluespace_ship_arrival.ogg
-    warningAnnouncement: station-event-bluespace-generic-ftl-warning-announcement
-    endAnnouncement: station-event-bluespace-generic-ftl-end-announcement
-    endAudio:
-      path: /Audio/_NF/Announcements/PocketSizedAndy/andy2_bluespace_ship_leave.ogg
+      path: /Audio/Misc/notice1.ogg
+    warningAnnouncement: station-event-bluespace-mcargo-ftl-warning-announcement
+    endAnnouncement: station-event-bluespace-mcargo-ftl-end-announcement
     earliestStart: 20
     maximumPlayers: 20
     weight: 5
@@ -316,5 +333,45 @@
         - type: ProtectedGrid
           preventArtifactTriggers: true
         - type: PreventPilot
+        - type: DeletionCensusExempt
         paths:
         - /Maps/_NF/Bluespace/mcevent.yml
+
+- type: entity #aurora
+  id: BluespaceMercenaryFTLCrash
+  parent: BaseStationEventShortDelay
+  components:
+  - type: StationEvent
+    startAnnouncement: station-event-bluespace-generic-ftl-start-announcement
+    startAudio:
+      path: /Audio/Misc/notice1.ogg
+    warningAnnouncement: station-event-bluespace-generic-ftl-warning-announcement
+    endAnnouncement: station-event-bluespace-generic-ftl-end-announcement
+    earliestStart: 80
+    minimumPlayers: 2
+    weight: 1
+    duration: 1800
+    maxDuration: 2400
+    reoccurrenceDelay: 360 # 6 hours
+  - type: BluespaceErrorRule
+    groups:
+      grid: !type:GridSpawnGroup
+        nameLoc:
+        - station-event-bluespace-name-UnidentifiedVessel
+        minCount: 2 #Aurora's Song
+        maxCount: 3 #Aurora's Song
+        minimumDistance: 1500
+        maximumDistance: 2500
+        addComponents:
+        - type: Gravity
+          enabled: true
+          inherent: true
+        - type: IFF
+          color: "#E10F9B"
+        - type: LinkedLifecycleGridParent
+        - type: ProtectedGrid
+          preventArtifactTriggers: true
+        - type: PreventPilot
+        - type: ForceAnchor
+        paths:
+        - /Maps/_AS/Bluespace/mercuiv.yml

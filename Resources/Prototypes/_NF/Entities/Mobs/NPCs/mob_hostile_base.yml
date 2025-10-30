@@ -258,32 +258,32 @@
   abstract: true
   components:
   - type: MovementSpeedModifier
-    baseWalkSpeed : 4.2 # ~10% slowdown
-    baseSprintSpeed : 4.2 # ~10% slowdown
+    baseWalkSpeed : 4.4 # ~10% slowdown
+    baseSprintSpeed : 4.4 # ~10% slowdown
 
 - type: entity
   id: MobMovementSpeedModifierEVAMelee
   abstract: true
   components:
   - type: MovementSpeedModifier
-    baseWalkSpeed : 3.8 # ~15% slowdown
-    baseSprintSpeed : 3.8 # ~15% slowdown
+    baseWalkSpeed : 4.4
+    baseSprintSpeed : 4.4
 
 - type: entity
   id: MobMovementSpeedModifierRanged
   abstract: true
   components:
   - type: MovementSpeedModifier
-    baseWalkSpeed : 3.5
-    baseSprintSpeed : 3.5
+    baseWalkSpeed : 4.2
+    baseSprintSpeed : 4.2
 
 - type: entity
   id: MobMovementSpeedModifierEVARanged
   abstract: true
   components:
   - type: MovementSpeedModifier
-    baseWalkSpeed : 3 # ~15% slowdown
-    baseSprintSpeed : 3 # ~15% slowdown
+    baseWalkSpeed : 4.2
+    baseSprintSpeed : 4.2
 
 - type: entity
   id: MobMovementSpeedModifierSpecial
@@ -308,7 +308,7 @@
   abstract: true
   components:
   - type: Stamina
-    critThreshold: 80
+    critThreshold: 0
 
 - type: entity
   id: MobStaminaSpecial
@@ -449,8 +449,10 @@
   - type: MobThresholds
     thresholds:
       0: Alive
-      80: Critical
-      120: Dead
+      100: Critical
+      140: Dead
+  - type: Stamina
+    critThreshold: 100
   - type: SlowOnDamage
     speedModifierThresholds:
       40: 0.7
@@ -459,7 +461,7 @@
   - type: Butcherable
     butcheringType: Spike
     spawned:
-    - id: FoodMeatRotten
+    - id: FoodMeatHuman
       amount: 2
   - type: NpcFactionMember
     factions:
@@ -537,8 +539,10 @@
   - type: MobThresholds
     thresholds:
       0: Alive
-      65: Critical
-      100: Dead
+      80: Critical
+      120: Dead
+  - type: Stamina
+    critThreshold: 100
   - type: NpcFactionMember
     factions:
     - SimpleHostile

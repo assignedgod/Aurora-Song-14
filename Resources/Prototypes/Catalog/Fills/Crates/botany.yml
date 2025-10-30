@@ -92,6 +92,7 @@
       - id: WatermelonSeeds
       - id: PeaSeeds
       - id: CherrySeeds
+      - id: PomegranateSeeds
 
 - type: entity
   id: CrateHydroponicsTray

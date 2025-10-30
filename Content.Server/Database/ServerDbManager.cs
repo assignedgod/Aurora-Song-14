@@ -5,6 +5,7 @@ using System.Text.Json;
 using System.Threading;
 using System.Threading.Tasks;
 using Content.Server.Administration.Logs;
+using Content.Shared._Floof.Consent;
 using Content.Shared.Administration.Logs;
 using Content.Shared.CCVar;
 using Content.Shared.Construction.Prototypes;
@@ -252,6 +253,13 @@ namespace Content.Server.Database
         IAsyncEnumerable<SharedAdminLog> GetAdminLogs(LogFilter? filter = null);
         IAsyncEnumerable<JsonDocument> GetAdminLogsJson(LogFilter? filter = null);
         Task<int> CountAdminLogs(int round);
+
+        #endregion
+
+        #region Consent Settings
+
+        Task SavePlayerConsentSettingsAsync(NetUserId userId, PlayerConsentSettings consentSettings);
+        Task<PlayerConsentSettings> GetPlayerConsentSettingsAsync(NetUserId userId);
 
         #endregion
 
@@ -1013,6 +1021,18 @@ namespace Content.Server.Database
         {
             DbWriteOpsMetric.Inc();
             return RunDbCommand(() => _db.MarkMessageAsSeen(id, dismissedToo));
+        }
+
+        public Task SavePlayerConsentSettingsAsync(NetUserId userId, PlayerConsentSettings consentSettings) // Floofstation
+        {
+            DbWriteOpsMetric.Inc();
+            return RunDbCommand(() => _db.SavePlayerConsentSettingsAsync(userId, consentSettings));
+        }
+
+        public Task<PlayerConsentSettings> GetPlayerConsentSettingsAsync(NetUserId userId) // Floofstation
+        {
+            DbReadOpsMetric.Inc();
+            return RunDbCommand(() => _db.GetPlayerConsentSettingsAsync(userId));
         }
 
         public Task AddJobWhitelist(Guid player, ProtoId<JobPrototype> job)

@@ -27,6 +27,7 @@ using Robust.Shared.Random;
 using Robust.Shared.Timing;
 using Content.Server._NF.Station.Systems;
 using Robust.Shared.EntitySerialization.Systems;
+using Content.Server._NF.GC.Components;
 
 namespace Content.Server._NF.Smuggling;
 
@@ -458,6 +459,9 @@ public sealed class DeadDropSystem : EntitySystem
         _shuttle.SetIFFColor(grid, component.Color);
         _shuttle.AddIFFFlag(grid, IFFFlags.HideLabel);
 
+        //ensure the drop pod isn't deleted
+        EnsureComp<DeletionCensusExemptComponent>(grid);
+
         //this is where we set up all the information that FTL is going to need, including a new null entity as a destination target because FTL needs it for reasons?
         //dont ask me im just fulfilling FTL requirements.
         var dropLocation = _random.NextVector2(component.MinimumDistance, component.MaximumDistance);
@@ -517,11 +521,11 @@ public sealed class DeadDropSystem : EntitySystem
 
         // here we are just building a string for the hint paper so that it looks pretty and RP-like on the paper itself.
         var dropHint = new StringBuilder();
-        dropHint.AppendLine(Loc.GetString("deaddrop-hint-pretext"));
+        dropHint.AppendLine(Loc.GetString("deaddrop-hint-pretext-arcadia")); //AS: Arcadia version
         dropHint.AppendLine();
         dropHint.AppendLine(dropLocation.ToString());
         dropHint.AppendLine();
-        dropHint.AppendLine(Loc.GetString("deaddrop-hint-posttext"));
+        dropHint.AppendLine(Loc.GetString("deaddrop-hint-posttext-arcadia"));  // AS: Arcadia version
         dropHint.AppendLine();
         dropHint.AppendLine(Loc.GetString("deaddrop-hint-next-drop", ("time", hintNextDrop.ToString("hh\\:mm") + ":00")));
 
@@ -685,6 +689,6 @@ public sealed class DeadDropSystem : EntitySystem
             hintLines.AppendLine(Loc.GetString("dead-drop-hint-line", ("object", objectHintString), ("poi", stationHintString), ("time", timeString)));
             hints++;
         }
-        return Loc.GetString("dead-drop-hint-note", ("drops", hintLines));
+        return Loc.GetString("dead-drop-hint-note-arcadia", ("drops", hintLines));
     }
 }

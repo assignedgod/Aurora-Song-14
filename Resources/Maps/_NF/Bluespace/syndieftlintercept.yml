@@ -4460,6 +4460,13 @@ entities:
     - type: Transform
       pos: -3.646531,6.2902155
       parent: 1
+- proto: SpawnDungeonLootHardsuitCrateSyndicate
+  entities:
+  - uid: 944
+    components:
+    - type: Transform
+      pos: 4.5,-2.5
+      parent: 1
 - proto: SpawnDungeonLootMeleeT3
   entities:
   - uid: 926
@@ -4813,29 +4820,29 @@ entities:
     - type: Transform
       pos: -1.5,-0.5
       parent: 1
-- proto: SuitStorageEVASyndicate
-  entities:
-  - uid: 319
-    components:
-    - type: Transform
-      pos: 2.5,6.5
-      parent: 1
-  - uid: 403
-    components:
-    - type: Transform
-      pos: 3.5,6.5
-      parent: 1
-- proto: SuitStorageSyndie
+- proto: SuitStorageEVASyndicateAdvanced
   entities:
   - uid: 11
     components:
     - type: Transform
-      pos: 5.5,3.5
+      pos: 7.5,1.5
       parent: 1
   - uid: 103
     components:
     - type: Transform
-      pos: 7.5,1.5
+      pos: 5.5,3.5
+      parent: 1
+- proto: SuitStorageEVASyndicateNoMask
+  entities:
+  - uid: 319
+    components:
+    - type: Transform
+      pos: 3.5,6.5
+      parent: 1
+  - uid: 403
+    components:
+    - type: Transform
+      pos: 2.5,6.5
       parent: 1
 - proto: SurveillanceCameraMedical
   entities:

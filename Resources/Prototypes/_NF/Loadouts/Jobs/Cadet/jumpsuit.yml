@@ -7,3 +7,15 @@
   id: CadetClothingUniformJumpskirtCadet
   equipment:
     jumpsuit: ClothingUniformJumpskirtNfsdShort
+
+# Aurora Song
+- type: loadout
+  id: CadetClothingUniformJumpsuitSle
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitSle
+
+- type: loadout
+  id: CadetClothingUniformJumpskirtSle
+  equipment:
+    jumpsuit: ClothingUniformJumpskirtSle
+# Aurora Song

@@ -19,7 +19,8 @@ chat-manager-no-such-channel = There is no channel with key '{$key}'!
 chat-manager-whisper-headset-on-message = You can't whisper on the radio!
 
 chat-manager-server-wrap-message = [bold]{$message}[/bold]
-chat-manager-sender-announcement = Central Command
+# chat-manager-sender-announcement = Central Command
+chat-manager-sender-announcement = Colonial Command
 chat-manager-sender-announcement-wrap-message = [font size=14][bold]{$sender} Announcement:[/font][font size=12]
                                                 {$message}[/bold][/font]
 chat-manager-entity-say-wrap-message = [BubbleHeader][bold][Name]{$entityName}[/Name][/bold][/BubbleHeader] {$verb}, [font={$fontType} size={$fontSize}]"[BubbleContent]{$message}[/BubbleContent]"[/font]
@@ -31,7 +32,12 @@ chat-manager-entity-whisper-unknown-wrap-message = [font size=11][italic][Bubble
 # THE() is not used here because the entity and its name can technically be disconnected if a nameOverride is passed...
 chat-manager-entity-me-wrap-message = [italic]{ PROPER($entity) ->
     *[false] The {$entityName} {$message}[/italic]
-     [true] {CAPITALIZE($entityName)} {$message}[/italic]
+     [true] [Name]{CAPITALIZE($entityName)}[/Name] {$message}[/italic]
+    }
+
+chat-manager-entity-subtle-wrap-message = [italic][color={$color}]{ PROPER($entity) ->
+    *[false] the {$entityName} {$message}[/color][/italic]
+     [true] {$entityName} {$message}[/color][/italic]
     }
 
 chat-manager-entity-looc-wrap-message = LOOC: [bold]{$entityName}:[/bold] {$message}

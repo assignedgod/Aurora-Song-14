@@ -102,7 +102,7 @@ public sealed class NFCCVars
     /// Base sell rate (multiplier: 0.95 = 95%)
     /// </summary>
     public static readonly CVarDef<float> ShipyardSellRate =
-        CVarDef.Create("shuttle.shipyard_base_sell_rate", 0.95f, CVar.SERVERONLY);
+        CVarDef.Create("shuttle.shipyard_base_sell_rate", 1f, CVar.SERVERONLY);
 
     /*
      * Salvage
@@ -233,7 +233,7 @@ public sealed class NFCCVars
     ///     If true, allows map extraction (scrubbing a planet's atmosphere).
     /// </summary>
     public static readonly CVarDef<bool> AllowMapGasExtraction =
-        CVarDef.Create("nf14.atmos.allow_map_gas_extraction", false, CVar.SERVER | CVar.REPLICATED);
+        CVarDef.Create("nf14.atmos.allow_map_gas_extraction", true, CVar.SERVER | CVar.REPLICATED);
 
     /*
      * Audio
@@ -264,6 +264,34 @@ public sealed class NFCCVars
     /// </summary>
     public static readonly CVarDef<bool> XenoarchSingleUseNodes =
         CVarDef.Create("nf14.xenoarch.single_use_nodes", true, CVar.REPLICATED);
+
+    /*
+     * Garbage Collection
+     */
+
+    /// <summary>
+    /// If true, garbage collection will be run.
+    /// </summary>
+    public static readonly CVarDef<bool> GarbageCollectionEnabled =
+        CVarDef.Create("nf14.gc.enabled", true, CVar.SERVER | CVar.ARCHIVE);
+
+    /// <summary>
+    /// The period to run garbage collection at, in seconds.
+    /// </summary>
+    public static readonly CVarDef<int> GarbageCollectionPeriod =
+        CVarDef.Create("nf14.gc.period", 900, CVar.SERVER | CVar.ARCHIVE);
+
+    /// <summary>
+    /// The number of entities to check per tick.
+    /// </summary>
+    public static readonly CVarDef<int> GarbageCollectionEntitiesPerTick =
+        CVarDef.Create("nf14.gc.entities_per_tick", 64, CVar.SERVER | CVar.ARCHIVE);
+
+    /// <summary>
+    /// The number of times an object must be seen as idle before being garbage collected.
+    /// </summary>
+    public static readonly CVarDef<int> GarbageCollectionTally =
+        CVarDef.Create("nf14.gc.idle_count", 3, CVar.SERVER | CVar.ARCHIVE);
 
     /*
      * Greeting

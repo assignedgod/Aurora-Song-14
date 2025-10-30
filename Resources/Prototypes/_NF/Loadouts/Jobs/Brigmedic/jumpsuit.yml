@@ -7,3 +7,15 @@
   id: BrigmedicClothingUniformJumpskirtBrigmedic
   equipment:
     jumpsuit: ClothingUniformJumpskirtNfsd
+
+# Aurora Song
+- type: loadout
+  id: BrigmedicClothingUniformJumpsuitSle
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitSle
+
+- type: loadout
+  id: BrigmedicClothingUniformJumpskirtSle
+  equipment:
+    jumpsuit: ClothingUniformJumpskirtSle
+# Aurora Song

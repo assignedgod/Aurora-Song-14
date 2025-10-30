@@ -50,7 +50,7 @@
 - type: startingGear
   id: SheriffGear
   equipment:
-    pocket1: NFWeaponPistolUniversalNfsdLessLethal
+    pocket1: ASWeaponPistolMk58SLELessLethal
     pocket2: NFWeaponEnergyPistolLaserX01Multiphase
   storage:
     back:
@@ -60,6 +60,8 @@
     - DoorRemoteNfsd
     - BaseSecurityUplinkRadioSheriff
     - RubberStampSheriff
+  licenses:
+  - LicenseContrabandHandling
 
 - type: chameleonOutfit
   id: SheriffChameleonOutfit

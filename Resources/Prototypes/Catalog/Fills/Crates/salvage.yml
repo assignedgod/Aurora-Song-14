@@ -344,7 +344,7 @@
         # TRAITOR EQUIPMENT (0.01%)
       - id: Telecrystal10
         prob: 0.0001
-      - id: NFWeaponRevolverRitland45 # Frontier: WeaponRevolverPython<NFWeaponRevolverRitland45
+      - id: NFWeaponRevolverPython45 # Frontier: WeaponRevolverPython<NFWeaponRevolverPython45
         prob: 0.0001
       - id: NFWeaponRevolverWard45 # Frontier: WeaponRevolverMateba<NFWeaponRevolverWard45
         prob: 0.0001

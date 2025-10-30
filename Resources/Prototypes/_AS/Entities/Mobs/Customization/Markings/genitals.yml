@@ -1,0 +1,18 @@
+- type: marking
+  id: TPenis
+  bodyPart: Chest
+  markingCategory: Chest
+  speciesRestriction: [Human, Felinid, Goblin, Dwarf, Oni, Sheleg]
+  sprites:
+    - sprite: _AS/Mobs/Customization/genitals.rsi
+      state: tpenis
+
+
+- type: marking
+  id: TVagina
+  bodyPart: Chest
+  markingCategory: Chest
+  speciesRestriction: [Human, Felinid, Goblin, Dwarf, Oni, Sheleg]
+  sprites:
+    - sprite: _AS/Mobs/Customization/genitals.rsi
+      state: tvagina

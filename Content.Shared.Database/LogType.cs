@@ -496,6 +496,8 @@ public enum LogType
     /// </summary>
     AtmosDirectionChanged = 204,
 
+    Consent = 12489, //Floofstation, high number random, avoid upstream conflict
+
     /// <summary>
     /// A player has posted a bounty contract.
     /// </summary>
@@ -525,4 +527,8 @@ public enum LogType
     /// </summary>
     ObjectiveSummary = 422,
     #endregion DeltaV Values
+
+	#region Aurora
+    StationPayDeposit = 14001,
+    #endregion
 }

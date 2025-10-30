@@ -13,6 +13,7 @@ using Content.Client.Mind;
 using Content.Client.Roles;
 using Content.Client.Stylesheets;
 using Content.Client.UserInterface.Screens;
+using Content.Client.UserInterface.Systems.Chat.Controls.Denu;
 using Content.Client.UserInterface.Systems.Chat.Widgets;
 using Content.Client.UserInterface.Systems.Gameplay;
 using Content.Shared.Administration;
@@ -58,6 +59,7 @@ public sealed partial class ChatUIController : UIController
     [Dependency] private readonly IStateManager _state = default!;
     [Dependency] private readonly IGameTiming _timing = default!;
     [Dependency] private readonly IReplayRecordingManager _replayRecording = default!;
+    [Dependency] private readonly DenuUIController _denuUIController = default!;
 
     [UISystemDependency] private readonly ExamineSystem? _examine = default;
     [UISystemDependency] private readonly GhostSystem? _ghost = default;
@@ -82,9 +84,12 @@ public sealed partial class ChatUIController : UIController
         {SharedChatSystem.OOCPrefix, ChatSelectChannel.OOC},
         {SharedChatSystem.EmotesPrefix, ChatSelectChannel.Emotes},
         {SharedChatSystem.EmotesAltPrefix, ChatSelectChannel.Emotes},
+        {SharedChatSystem.SubtlePrefix, ChatSelectChannel.Subtle}, // Floofstation
+        {SharedChatSystem.SubtleOOCPrefix, ChatSelectChannel.SubtleOOC}, // Den
         {SharedChatSystem.AdminPrefix, ChatSelectChannel.Admin},
         {SharedChatSystem.RadioCommonPrefix, ChatSelectChannel.Radio},
         {SharedChatSystem.DeadPrefix, ChatSelectChannel.Dead}
+
     };
 
     public static readonly Dictionary<ChatSelectChannel, char> ChannelPrefixes = new()
@@ -95,6 +100,8 @@ public sealed partial class ChatUIController : UIController
         {ChatSelectChannel.LOOC, SharedChatSystem.LOOCPrefix},
         {ChatSelectChannel.OOC, SharedChatSystem.OOCPrefix},
         {ChatSelectChannel.Emotes, SharedChatSystem.EmotesPrefix},
+        {ChatSelectChannel.Subtle, SharedChatSystem.SubtlePrefix}, // Floofstation
+        {ChatSelectChannel.SubtleOOC, SharedChatSystem.SubtleOOCPrefix}, // Den
         {ChatSelectChannel.Admin, SharedChatSystem.AdminPrefix},
         {ChatSelectChannel.Radio, SharedChatSystem.RadioCommonPrefix},
         {ChatSelectChannel.Dead, SharedChatSystem.DeadPrefix}
@@ -534,16 +541,22 @@ public sealed partial class ChatUIController : UIController
             FilterableChannels |= ChatChannel.Whisper;
             FilterableChannels |= ChatChannel.Radio;
             FilterableChannels |= ChatChannel.Emotes;
+            FilterableChannels |= ChatChannel.Subtle; //Floof
             FilterableChannels |= ChatChannel.Notifications;
 
             // Can only send local / radio / emote when attached to a non-ghost entity.
             // TODO: this logic is iffy (checking if controlling something that's NOT a ghost), is there a better way to check this?
             if (_ghost is not {IsGhost: true})
             {
+                FilterableChannels |= ChatChannel.Subtle;
+                FilterableChannels |= ChatChannel.SubtleOOC;
+
                 CanSendChannels |= ChatSelectChannel.Local;
                 CanSendChannels |= ChatSelectChannel.Whisper;
                 CanSendChannels |= ChatSelectChannel.Radio;
                 CanSendChannels |= ChatSelectChannel.Emotes;
+                CanSendChannels |= ChatSelectChannel.Subtle; // Floofstation
+                CanSendChannels |= ChatSelectChannel.SubtleOOC;
             }
         }
 
@@ -552,6 +565,12 @@ public sealed partial class ChatUIController : UIController
         {
             FilterableChannels |= ChatChannel.Dead;
             CanSendChannels |= ChatSelectChannel.Dead;
+        }
+
+        if (_admin.HasFlag(AdminFlags.Pii) && _ghost is { IsGhost: true })
+        {
+            FilterableChannels |= ChatChannel.Subtle;
+            FilterableChannels |= ChatChannel.SubtleOOC;
         }
 
         // only admins can see / filter asay
@@ -739,6 +758,7 @@ public sealed partial class ChatUIController : UIController
         _typingIndicator?.ClientSubmittedChatText();
 
         var text = box.ChatInput.Input.Text;
+
         box.ChatInput.Input.Clear();
         box.ChatInput.Input.ReleaseKeyboardFocus();
         UpdateSelectedChannel(box);
@@ -763,6 +783,11 @@ public sealed partial class ChatUIController : UIController
         {
             // radio must have prefix as it goes through the say command.
             text = $";{text}";
+        }
+
+        if (_denuUIController!.AutoFormatterEnabled)
+        {
+            text = _denuUIController.FormatMessage(text);
         }
 
         _manager.SendMessage(text, prefixChannel == 0 ? channel : prefixChannel);
@@ -821,7 +846,7 @@ public sealed partial class ChatUIController : UIController
     public void ProcessChatMessage(ChatMessage msg, bool speechBubble = true)
     {
         // color the name unless it's something like "the old man"
-        if ((msg.Channel == ChatChannel.Local || msg.Channel == ChatChannel.Whisper) && _chatNameColorsEnabled)
+        if ((msg.Channel == ChatChannel.Local || msg.Channel == ChatChannel.Whisper || msg.Channel == ChatChannel.Emotes || msg.Channel == ChatChannel.Subtle) && _chatNameColorsEnabled)
         {
             var grammar = _ent.GetComponentOrNull<GrammarComponent>(_ent.GetEntity(msg.SenderEntity));
             if (grammar != null && grammar.ProperNoun == true)

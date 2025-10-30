@@ -9,7 +9,7 @@
       amount: 1
   products:
     Traumoxadone: 2
-    
+
 - type: reaction
   id: Stelloxadone
   reactants:
@@ -50,7 +50,7 @@
   products:
       Aloxadone: 4
 
-- type: reaction
+- type: reaction # Aurora's Song
   id: Caramexinin
   minTemp: 370
   reactants:
@@ -60,3 +60,8 @@
       amount: 1
   products:
     Caramexinin: 2
+
+
+#don't use past here if something breaks
+
+

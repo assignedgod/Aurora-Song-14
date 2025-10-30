@@ -1,6 +1,7 @@
-﻿- type: codewordGenerator
-  id: TraitorCodewordGenerator
-  words:
-  - Adjectives
-  - Verbs
-  amount: 4
+﻿#- type: codewordGenerator
+#  id: TraitorCodewordGenerator
+#  words:
+#  - Adjectives
+#  - Verbs
+#  amount: 4
+# Unused | aurora

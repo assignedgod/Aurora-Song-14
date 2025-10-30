@@ -1,0 +1,9 @@
+﻿- type: cargoProduct
+  id: Gambling
+  icon:
+    sprite: _NF/Structures/Storage/Crates/tradedark.rsi
+    state: icon
+  product: CrateGAMBLINGLOTTERY
+  cost: 300000
+  category: cargoproduct-category-name-cargo
+  group: market

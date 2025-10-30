@@ -52,10 +52,10 @@
       points: 3
       required: false
     Legs:
-      points: 1
+      points: 8 # Aurora 4<8
       required: false
     Arms:
-      points: 1
+      points: 8 # Aurora 4<8
       required: false
     Snout:
       points: 1
@@ -72,6 +72,9 @@
       points: 1
       required: true
       defaultMarkings: [ VulpEar ]
+    Chest: # Aurora - matching human values
+      points: 2
+      required: false
 
 - type: humanoidBaseSprite
   id: MobVulpkaninHead

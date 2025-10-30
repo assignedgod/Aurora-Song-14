@@ -1,48 +1,48 @@
-#Mercenary Hardsuit
-- type: entity
-  parent: ClothingOuterHardsuitBaseNF
-  id: ClothingOuterHardsuitMercenary # stats are of luxury mining hardsuit
-  name: mercenary hardsuit
-  description: A special suit that protects from the danger of space, employed by mercenary forces. Not certified to be blunderbuss-proof.
-  components:
-  - type: Sprite
-    sprite: _NF/Clothing/OuterClothing/Hardsuits/mercenary.rsi
-  - type: Clothing
-    sprite: _NF/Clothing/OuterClothing/Hardsuits/mercenary.rsi
-  - type: PressureProtection
-    highPressureMultiplier: 0.5
-    lowPressureMultiplier: 1000
-  - type: ExplosionResistance
-    damageCoefficient: 0.6 # Removed 10%
-  - type: Armor
-    modifiers:
-      coefficients:
-        Blunt: 0.75
-        Slash: 0.75
-        Piercing: 0.75
-        Heat: 0.8
-        Radiation: 0.6
-        Caustic: 0.8
-  - type: ClothingSpeedModifier
-    walkModifier: 0.95
-    sprintModifier: 0.9
-  - type: HeldSpeedModifier
-  - type: ToggleableClothing
-    clothingPrototype: ClothingHeadHelmetHardsuitMercenary
-
-- type: entity
-  parent: ClothingOuterHardsuitMercenary
-  id: ClothingOuterHardsuitPrivateSecurity # stats are of merc hardsuit
-  name: private security hardsuit
-  description: A special suit that protects from the danger of space, employed by private security forces.
-  components:
-  - type: Sprite
-    sprite: _NF/Clothing/OuterClothing/Hardsuits/private_security.rsi
-  - type: Clothing
-    sprite: _NF/Clothing/OuterClothing/Hardsuits/private_security.rsi
-  - type: ToggleableClothing
-    clothingPrototype: ClothingHeadHelmetHardsuitPrivateSecurity
-
+##Mercenary Hardsuit
+#- type: entity Aurora: Commented both out as they've been moved to our namespace
+#  parent: ClothingOuterHardsuitBaseNF
+#  id: ClothingOuterHardsuitMercenary # stats are of luxury mining hardsuit
+#  name: mercenary hardsuit
+#  description: A special suit that protects from the danger of space, employed by mercenary forces. Not certified to be blunderbuss-proof.
+#  components:
+#  - type: Sprite
+#    sprite: _NF/Clothing/OuterClothing/Hardsuits/mercenary.rsi
+#  - type: Clothing
+#    sprite: _NF/Clothing/OuterClothing/Hardsuits/mercenary.rsi
+#  - type: PressureProtection
+#    highPressureMultiplier: 0.5
+#    lowPressureMultiplier: 1000
+#  - type: ExplosionResistance
+#    damageCoefficient: 0.6 # Removed 10%
+#  - type: Armor
+#    modifiers:
+#      coefficients:
+#        Blunt: 0.75
+#        Slash: 0.75
+#        Piercing: 0.75
+#        Heat: 0.8
+#        Radiation: 0.6
+#        Caustic: 0.8
+#  - type: ClothingSpeedModifier
+#    walkModifier: 0.95
+#    sprintModifier: 0.9
+#  - type: HeldSpeedModifier
+#  - type: ToggleableClothing
+#    clothingPrototype: ClothingHeadHelmetHardsuitMercenary
+#
+#- type: entity
+#  parent: ClothingOuterHardsuitMercenary
+#  id: ClothingOuterHardsuitPrivateSecurity # stats are of merc hardsuit
+#  name: private security hardsuit
+#  description: A special suit that protects from the danger of space, employed by private security forces.
+#  components:
+#  - type: Sprite
+#    sprite: _NF/Clothing/OuterClothing/Hardsuits/private_security.rsi
+#  - type: Clothing
+#    sprite: _NF/Clothing/OuterClothing/Hardsuits/private_security.rsi
+#  - type: ToggleableClothing
+#    clothingPrototype: ClothingHeadHelmetHardsuitPrivateSecurity
+#
 # Pilot Hardsuit - Spationaut stats
 - type: entity
   parent: ClothingOuterHardsuitBaseNF
@@ -148,8 +148,8 @@
 - type: entity
   parent: ClothingOuterHardsuitBaseNFNfsd
   id: ClothingOuterHardsuitNfsdBronze
-  name: NFSD bronze patrol suit
-  description: The standard-issue NFSD space proof suit for patrol duty. This bronze variant has cadet rank markings.
+  name: SLE bronze patrol suit
+  description: The standard-issue SLE space proof suit for patrol duty. This bronze variant has cadet rank markings.
   components:
   - type: Sprite
     sprite: _NF/Clothing/OuterClothing/Hardsuits/nfsd_bronze.rsi
@@ -175,8 +175,8 @@
 - type: entity
   parent: ClothingOuterHardsuitNfsdBronze
   id: ClothingOuterHardsuitNfsdSilver
-  name: NFSD silver patrol suit
-  description: The standard-issue NFSD space proof suit for patrol duty. This silver variant has officer rank markings.
+  name: SLE silver patrol suit
+  description: The standard-issue SLE space proof suit for patrol duty. This silver variant has officer rank markings.
   components:
   - type: Sprite
     sprite: _NF/Clothing/OuterClothing/Hardsuits/nfsd_silver.rsi
@@ -188,8 +188,8 @@
 - type: entity
   parent: ClothingOuterHardsuitNfsdBronze
   id: ClothingOuterHardsuitNfsdGold
-  name: NFSD gold patrol suit
-  description: The standard-issue NFSD space proof suit for patrol duty. This gold variant has supervisor rank markings.
+  name: SLE gold patrol suit
+  description: The standard-issue SLE space proof suit for patrol duty. This gold variant has supervisor rank markings.
   components:
   - type: Sprite
     sprite: _NF/Clothing/OuterClothing/Hardsuits/nfsd_gold.rsi
@@ -201,8 +201,8 @@
 - type: entity
   parent: ClothingOuterHardsuitNfsdBronze
   id: ClothingOuterHardsuitNfsdSheriff
-  name: NFSD sheriff patrol suit
-  description: The standard-issue NFSD space proof suit for patrol duty. This gold variant has sheriff rank markings.
+  name: SLE sheriff patrol suit
+  description: The standard-issue SLE space proof suit for patrol duty. This gold variant has sheriff rank markings.
   components:
   - type: Sprite
     sprite: _NF/Clothing/OuterClothing/Hardsuits/nfsd_sheriff.rsi
@@ -214,8 +214,8 @@
 - type: entity
   parent: ClothingOuterHardsuitNfsdBronze
   id: ClothingOuterHardsuitNfsdBrigmedic
-  name: NFSD brigmedic patrol suit
-  description: The standard-issue NFSD space proof suit for patrol duty. This brighter variant has brigmedic rank markings.
+  name: SLE brigmedic patrol suit
+  description: The standard-issue SLE space proof suit for patrol duty. This brighter variant has brigmedic rank markings.
   components:
   - type: Sprite
     sprite: _NF/Clothing/OuterClothing/Hardsuits/nfsd_brigmed.rsi
@@ -227,8 +227,8 @@
 - type: entity
   parent: [BaseC2ContrabandUnredeemable, ClothingOuterHardsuitJuggernaut] # Jugger Suit
   id: ClothingOuterHardsuitNfsdExperimental
-  name: NFSD experimental combat suit
-  description: A very heavily armored NFSD suit. This space proof marvel of engineering uses state of the art alloys to provide immense protection while sacrificing little mobility.
+  name: SLE experimental combat suit
+  description: A very heavily armored SLE suit. This space proof marvel of engineering uses state of the art alloys to provide immense protection while sacrificing little mobility.
   components:
   - type: Sprite
     sprite: _NF/Clothing/OuterClothing/Hardsuits/nfsd_experimental.rsi
@@ -260,8 +260,8 @@
 - type: entity
   parent: ClothingOuterHardsuitBaseNFNfsd
   id: ClothingOuterHardsuitNfsdCombat
-  name: NFSD combat suit
-  description: A heavily armored NFSD suit. Space proof, with thick armor plating at the expense of mobility.
+  name: SLE combat suit
+  description: A heavily armored SLE suit. Space proof, with thick armor plating at the expense of mobility.
   components:
   - type: Sprite
     sprite: _NF/Clothing/OuterClothing/Hardsuits/nfsd_combat.rsi
@@ -288,8 +288,8 @@
 - type: entity
   parent: ClothingOuterHardsuitBaseNFNfsd
   id: ClothingOuterHardsuitNfsdCommand
-  name: NFSD command combat suit
-  description: A heavily armored NFSD suit. Space proof, with thick armor plating at the expense of mobility. This variant has supervisor rank markings.
+  name: SLE command combat suit
+  description: A heavily armored SLE suit. Space proof, with thick armor plating at the expense of mobility. This variant has supervisor rank markings.
   components:
   - type: Sprite
     sprite: _NF/Clothing/OuterClothing/Hardsuits/nfsd_command.rsi

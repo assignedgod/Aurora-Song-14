@@ -79,6 +79,8 @@
   - EmergencyNitrogen
   - EmergencyOxygen
   - LoadoutSpeciesVoxNitrogen
+  - EmergencyIPCBox # DeltaV
+  - EmergencyWaterVapor # DeltaV
 
 # nitrogen or oxygen tank, depending on what your species needs
 - type: loadoutGroup
@@ -88,6 +90,7 @@
   loadouts:
   - LoadoutSpeciesEVANitrogen
   - LoadoutSpeciesEVAOxygen
+  - LoadoutSpeciesEVAWaterVapor # DeltaV
 
 # vox get a nitrogen tank, other species get nothing
 - type: loadoutGroup
@@ -104,6 +107,7 @@
   loadouts:
   - LoadoutSpeciesPocketDoubleNitrogen
   - LoadoutSpeciesPocketDoubleOxygen
+  - LoadoutSpeciesPocketDoubleWaterVapor # DeltaV
 
 # Command
 - type: loadoutGroup
@@ -498,6 +502,8 @@
   - EmergencyNitrogenClown
   - EmergencyOxygenClown
   - LoadoutSpeciesVoxNitrogen
+  - EmergencyIPCBox # DeltaV
+  - EmergencyWaterVaporClown # DeltaV
 
 - type: loadoutGroup
   id: MimeHead
@@ -555,6 +561,8 @@
   - EmergencyOxygenMime
   - EmergencySpeciesMothMime
   - LoadoutSpeciesVoxNitrogen
+  - EmergencyIPCBox # DeltaV
+  - EmergencyWaterVaporMime # DeltaV
 
 - type: loadoutGroup
   id: MusicianJumpsuit
@@ -840,6 +848,8 @@
   - EmergencyNitrogenExtended
   - EmergencyOxygenExtended
   - LoadoutSpeciesVoxNitrogen
+  - EmergencyIPCBox # DeltaV
+  - EmergencyWaterVaporExtended # DeltaV
 
 # Science
 - type: loadoutGroup
@@ -1121,6 +1131,8 @@
   - EmergencyNitrogenSecurity
   - EmergencyOxygenSecurity
   - LoadoutSpeciesVoxNitrogen
+  - EmergencyIPCBox # DeltaV
+  - EmergencyWaterVaporSecurity # DeltaV
 
 - type: loadoutGroup
   id: SecurityStar
@@ -1322,6 +1334,8 @@
   - EmergencyNitrogenMedical
   - EmergencyOxygenMedical
   - LoadoutSpeciesVoxNitrogen
+  - EmergencyIPCBox # DeltaV
+  - EmergencyWaterVaporMedical # DeltaV
 
 # Wildcards
 - type: loadoutGroup
@@ -1364,6 +1378,8 @@
   - EmergencyNitrogenSyndicate
   - EmergencyOxygenSyndicate
   - LoadoutSpeciesVoxNitrogen
+  - EmergencyIPCBox # DeltaV
+  - EmergencyWaterVaporSyndicate # DeltaV
 
 - type: loadoutGroup
   id: GroupSpeciesBreathTool

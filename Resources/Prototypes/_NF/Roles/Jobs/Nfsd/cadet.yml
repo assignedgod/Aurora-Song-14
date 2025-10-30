@@ -28,7 +28,7 @@
 - type: startingGear
   id: CadetGear
   equipment:
-    pocket1: NFWeaponPistolUniversalNfsdLessLethal
+    pocket1: ASWeaponPistolMk58SLELessLethal
     pocket2: BookSecurity
   storage:
     back:
@@ -36,6 +36,8 @@
     - NFMagazineHighCapacityPistol35
     - NFMagazineHighCapacityPistol35Rubber
     - FrontierUplinkCoin10
+  licenses:
+  - LicenseContrabandHandling
 
 - type: chameleonOutfit
   id: CadetChameleonOutfit

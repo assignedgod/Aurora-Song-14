@@ -1,7 +1,7 @@
 #region WizDen
 - type: entity
   id: NFWeaponRifleBarlowsBolt
-  parent: [ BaseC3SyndicateContraband, NFBaseWeaponRifleChamber30, NFBaseWeaponFrameRifleSteelbolt, BaseGunMelee ]
+  parent: [ NFBaseWeaponRifleChamber30, NFBaseWeaponFrameRifleSteelbolt, BaseGunMelee ] #Stop parenting from self | Aurora
   name: Barlows bolt-action rifle # Renamed: real brand name
   description: A weapon for hunting, or endless trench warfare. Equipped with bayonet.
   components:
@@ -56,10 +56,12 @@
 #region DeltaV
 - type: entity
   id: NFWeaponRifleCeremonial
-  parent: [ NFBaseWeaponRifleChamber20, NFBaseWeaponFrameRifleFrontierGunsmith ]
+  parent: [ NFBaseWeaponRifleChamber30, NFBaseWeaponFrameRifleFrontierGunsmith ] #Back to .30 rifle with you | Aurora Song
   name: ceremonial rifle
   description: A ceremonial variant of the Mark 1 Rifle, in tasteful blue and white.
   components:
+  - type: BallisticAmmoProvider # Internal magazine required | Aurora Song
+    capacity: 12
   - type: Sprite
     sprite: _DV/Objects/Weapons/Guns/Rifles/ceremonial_grand.rsi
   - type: Clothing
@@ -68,7 +70,7 @@
 #region Frontier
 - type: entity
   id: NFWeaponRifleRepeater
-  parent: [ NFBaseWeaponRifleChamber20, NFBaseWeaponFrameRifleFrontierGunsmith ]
+  parent: [ NFBaseWeaponRifleChamber45, NFBaseWeaponFrameRifleFrontierGunsmith ] # Changed to .45 | Aurora Song
   name: N2524 pattern repeater
   description: A civilian grade lever action firearm, favored by space cowboys across the Frontier for its reliability.
   components:
@@ -87,6 +89,8 @@
   components:
   - type: Sprite
     sprite: _NF/Objects/Weapons/Guns/Rifles/svs42.rsi
+  - type: Item #Size fix | Aurora
+    size: Huge
   - type: Clothing
     sprite: _NF/Objects/Weapons/Guns/Rifles/svs42.rsi
   - type: AltFireMelee

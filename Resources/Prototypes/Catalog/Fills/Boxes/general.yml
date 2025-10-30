@@ -17,7 +17,7 @@
   - type: Tag
     tags:
     - BoxCardboard
-    - Trash # Frontier
+    # - Trash Aurora Song, removed to prevent nesting in trash bags
 
 - type: entity
   name: mousetrap box
@@ -352,7 +352,7 @@
         amount: 4
 
 - type: entity
-  name: NFSD encryption key box
+  name: SLE encryption key box
   parent: BoxEncryptionKeyPassenger
   id: BoxEncryptionKeySecurity
   components:

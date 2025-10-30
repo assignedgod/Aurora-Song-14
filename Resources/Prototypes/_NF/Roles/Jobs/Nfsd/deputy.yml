@@ -6,16 +6,13 @@
   requirements:
     - !type:OverallPlaytimeRequirement
       time: 43200 # 12 hours
-    - !type:DepartmentTimeRequirement
-      department: Security
-      time: 21600 # 6 hours
-  alternateRequirementSets:
-    longerPlaytimeLessSec:
-    - !type:OverallPlaytimeRequirement
-      time: 360000 # 100 hours
-    - !type:RoleTimeRequirement
-      role: JobSecurityGuard
-      time: 21600 # 6 hours as security guard
+    - !type:RoleTimeRequirement # Aurora Song
+      role: JobSecurityCadet
+      time: 10800 # 3 hours
+#  alternateRequirementSets: # Aurora Song - Remove alt playtime reqs, you should be trained for this role as a Rookie.
+#    longerPlaytimeLessSec:
+#    - !type:OverallPlaytimeRequirement
+#      time: 360000 # 100 hours
   startingGear: DeputyGear
   icon: JobIconDeputy
   supervisors: job-supervisors-sergeant
@@ -34,13 +31,15 @@
 - type: startingGear
   id: DeputyGear
   equipment:
-    pocket1: NFWeaponPistolUniversalNfsdLessLethal
+    pocket1: ASWeaponPistolMk58SLELessLethal
   storage:
     back:
     - Flash
     - NFMagazineHighCapacityPistol35Overpressure
     - NFMagazineHighCapacityPistol35Rubber
     - FrontierUplinkCoin10
+  licenses:
+  - LicenseContrabandHandling
 
 - type: chameleonOutfit
   id: DeputyChameleonOutfit

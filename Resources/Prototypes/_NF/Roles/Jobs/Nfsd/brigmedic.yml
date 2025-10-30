@@ -9,13 +9,10 @@
     - !type:DepartmentTimeRequirement
       department: Security
       time: 21600 # 6 hours
-  alternateRequirementSets:
-    longerPlaytimeLessSec:
-    - !type:OverallPlaytimeRequirement
-      time: 360000 # 100 hours
-    - !type:RoleTimeRequirement
-      role: JobSecurityGuard
-      time: 21600 # 6 hours as security guard
+#  alternateRequirementSets: # Aurora Song - Remove alt playtime reqs, you should be trained for this role as a Rookie.
+#    longerPlaytimeLessSec:
+#    - !type:OverallPlaytimeRequirement
+#      time: 360000 # 100 hours
   startingGear: BrigmedicGear
   icon: JobIconBrigmedicNF
   supervisors: job-supervisors-bailiff
@@ -24,6 +21,7 @@
   canBeAntag: false
   access:
   - Brigmedic
+  - Prisoner
   accessGroups:
   - GeneralNfsdAccess
   special:
@@ -36,15 +34,15 @@
 - type: startingGear
   id: BrigmedicGear
   equipment:
-    pocket1: NFWeaponPistolUniversalNfsdLessLethal
+    pocket1: ASWeaponPistolMk58SLELessLethal
   storage:
     back:
     - Flash
     - NFMagazineHighCapacityPistol35Overpressure
     - NFMagazineHighCapacityPistol35Rubber
     - FrontierUplinkCoin10
-  encryptionKeys:
-  - EncryptionKeyMedical
+  licenses:
+  - LicenseContrabandHandling
 
 - type: chameleonOutfit
   id: BrigmedicChameleonOutfit

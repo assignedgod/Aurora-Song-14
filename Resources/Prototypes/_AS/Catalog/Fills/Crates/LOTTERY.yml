@@ -1,0 +1,27 @@
+﻿- type: entity
+  id: CrateGAMBLINGLOTTERY
+  suffix: GAMBLING!
+  parent: CrateGenericSteel
+  name: Grand Gambling Crate
+  components:
+  - type: EntityStorage
+    capacity: 31
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: Gamble
+        rolls: !type:RangeNumberSelector
+          range: 30, 31
+
+- type: entityTable
+  id: Gamble
+  table: !type:GroupSelector
+    children:
+    - id: LotteryPullBasic
+      weight: 1
+    - id: LotteryPullBasic
+      weight: 1
+    - id: LotteryPullBasic
+      weight: 1
+    - id: LotteryPullBasic
+      weight: 1

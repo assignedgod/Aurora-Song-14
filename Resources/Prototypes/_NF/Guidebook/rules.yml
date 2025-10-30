@@ -5,26 +5,33 @@
   priority: -2
   ruleEntry: true
   children:
-  - FrontierRuleZeroTolerance
-  - FrontierRule1
-  - FrontierRule2
-  - FrontierRule3
-  - FrontierRule4
-  - FrontierRule5
-  - FrontierRule6
-  - FrontierRule7
-  - FrontierRule8
-  - FrontierRule9
-  - FrontierRule10
-  - FrontierRule11
-  - FrontierRule12
-  - FrontierRule13
+    - FrontierRuleZeroTolerance
+    - AuroraERP # Aurora
+    - FrontierRule1
+    - FrontierRule2
+    - FrontierRule3
+    - FrontierRule4
+    - FrontierRule5
+    - FrontierRule6
+    - FrontierRule7
+    - FrontierRule8
+    - FrontierRule9
+    - FrontierRule10
+    - FrontierRule11
+    - FrontierRule12
+    - FrontierRule13
 
 - type: guideEntry
   id: FrontierRuleZeroTolerance
   name: guide-entry-frontier-rule-zero-tolerance
-  ruleEntry: true
   text: "/ServerInfo/_NF/Guidebook/Rules/Zero_Tolerance.xml"
+  ruleEntry: true
+
+- type: guideEntry
+  id: AuroraERP
+  name: guide-entry-AuroraERP
+  text: "/ServerInfo/_AS/Guidebook/Rules/ERP_Rules.xml"
+  ruleEntry: true
 
 - type: guideEntry
   id: FrontierRule1

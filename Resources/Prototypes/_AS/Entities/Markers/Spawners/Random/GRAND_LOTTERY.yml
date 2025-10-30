@@ -1,0 +1,131 @@
+﻿# Basic Gambling Crate
+- type: entity
+  name: LotteryPullBasic
+  id: LotteryPullBasic
+  parent: MarkerBasePlaceFree
+  suffix: "Gambling"
+  components:
+  - type: Sprite
+    layers:
+      - state: green
+        scale: 0.7, 0.7
+      - sprite: Objects/Misc/skub.rsi
+        scale: 0.7, 0.7
+        state: icon
+      - sprite: _NF/Markers/general.rsi
+        state: questionmark
+        color: red
+  - type: RandomSpawner
+    prototypes:
+    - SpawnDungeonLootCircuitBoard
+    - SpawnDungeonLootToolbox
+    - SpawnDungeonLootFlatpacksEngi
+    - SpawnDungeonLootFlatpacks
+    - SpawnDungeonLootFlatpacks
+    - SpawnDungeonLootPartsEngi
+    - SpawnDungeonLootToolsBasicEngineering
+    - SpawnDungeonLootMaterialsValuableSingle
+    - SpawnDungeonLootMaterialsBasicSingle
+    - SpawnDungeonLootMaterialsBasicFull
+    - SpawnDungeonLootClothesEngi
+    - SpawnDungeonLootVendingRestocks
+    - SpawnDungeonLootFlatpacksEngi
+    - SpawnDungeonLootBureaucracy
+    - SpawnDungeonLootGunT2
+    - Telecrystal1
+    - Telecrystal5
+    - FoodCakeSlime
+    - SpaceCash30000
+    - SpaceCash10000
+    - SpaceCash5000
+    - SpaceCash2500
+    - SpaceCash500
+    - SpaceCash100
+    - SpaceCash10
+    - SpaceCash
+    - CigaretteSpent
+    - SpawnDungeonLootMeleeT3
+    - SpawnDungeonLootGunT2
+    - SpawnDungeonLootGunT3
+    - Sledgehammer
+    - WeaponMeleeToolboxRobust
+    - ThrowingStar
+    - SpawnDungeonLootMeleeT2
+    - WeaponFlareGun
+    - ToySword
+    - Shovel
+    - WeaponWaterPistol
+    - WeaponWaterBlaster
+    - NFWeaponRifleFoam
+    - ClothingUniformJumpsuitFamilyGuy
+    - ClothingOuterFlannelBlue
+    - ClothingHeadHelmetBone
+    - ClothingOuterSuitCarp
+    - ClothingHeadHatCatEars
+    - ClothingHeadHatDogEars
+    - ClothingOuterArmorReflective
+    - ClothingUniformJumpskirtSyndieFormalDress
+    - ClothingNeckCloakNanotrasen
+    - ClothingUniformJumpsuitNanotrasen
+    - ClothingShoesSnakeskinBoots
+    - ClothingOuterCoatSpaceAsshole
+    - ClothingUniformJumpsuitHawaiYellow
+    - ClothingHeadSafari
+    - ClothingMaskGasMercenary
+    - ClothingHeadHatCardborg
+    - ClothingUnderSocksCoder
+    - ClothingUniformJumpskirtOfLife
+    - ClothingNeckBling
+    - ClothingShoesBling
+    - IngotGold
+    - GoldOre1
+    - GoldOre
+    - DrinkGoldenCup
+    - ToolboxGoldFilled
+    - ClothingEyesGlassesGar
+    - ClothingEyesGlassesGarGiga
+    - ClothingEyesGlassesGarOrange
+    - ClothingHeadHatChameleon
+    - ClothingBeltChampion
+    - PlushieRGBee
+    - PlushieGhost
+    - PlushieHampter
+    - PlushiePenguin
+    - PlushieHuman
+    - PlushieLizard
+    - PlushieLamp
+    - PlushieSharkBlue
+    - PlushieMoth
+    - PlushieArachind
+    - PlushieThrongler
+    - AmeJar
+    - SoapOmega
+    - ClothingEyesGlassesMeson
+    - Chainsaw
+    - Crowbar
+    - WelderIndustrial
+    - HydroponicsToolHatchet
+    - ToyAmongPequeno
+    - Lamp
+    - NFCartridgeCap
+    - CableHVStack1
+    - DrinkMugBlue
+    - CablecuffsBroken
+    - FoodPlateTin
+    - NFMagazineBoxFoam
+    - NFBoxDonkSoftBox
+    - GrenadeFoamDart
+    - StorageFillAmmoBoxHonk35
+    - StorageFillAmmoBoxHonk35SMG
+    - ClothingHandsKnuckleDustersQM
+    chance: 1
+    offset: 0.0
+    rarePrototypes:
+    - SweepingSongGAMBLING
+    - ASWeaponPKSLAYGambling
+    - ClothingHandsGlovesNorthStarRaiden
+    - ClothingMagbootsGamblingCursed
+    - ClothingEyesHudOmni
+    - Omnitool
+    #- MobWizFedWizardViolet
+    rareChance: 0.001

@@ -58,7 +58,7 @@
   components:
   - type: Item
     shape:
-    - 0,0,2,0
+    - 0,0,1,0
     - 0,1,0,1
 
 # SMGs
@@ -67,17 +67,15 @@
   abstract: true
   components:
   - type: Item
-    size: Normal
-    shape:
-    - 0,0,2,2
+    size: Large
   - type: Clothing
     quickEquip: false
     slots:
     - Back
     - suitStorage
-  - type: SpeedModifiedOnWield
-    walkModifier: 0.95
-    sprintModifier: 0.95
+#  - type: SpeedModifiedOnWield Aurora song: Removes slowdown
+#    walkModifier: 0.9
+#    sprintModifier: 0.9
 
 # Rifles / Shotguns
 - type: entity
@@ -85,15 +83,13 @@
   abstract: true
   components:
   - type: Item
-    size: Large
-    shape:
-    - 0,0,4,2
+    size: Huge
   - type: Clothing
     quickEquip: false
     slots:
     - Back
     - suitStorage
-  - type: SpeedModifiedOnWield
+  - type: SpeedModifiedOnWield #Aurora song: 0.8>0.9
     walkModifier: 0.9
     sprintModifier: 0.9
 
@@ -111,9 +107,9 @@
     slots:
     - Back
     - suitStorage
-  - type: SpeedModifiedOnWield
-    walkModifier: 0.925
-    sprintModifier: 0.925
+  - type: SpeedModifiedOnWield #Aurora Song: Decrease slowdown by 5%
+    walkModifier: 0.85
+    sprintModifier: 0.85
 
 # Launchers
 - type: entity
@@ -130,8 +126,8 @@
     - Back
     - suitStorage
   - type: SpeedModifiedOnWield
-    walkModifier: 0.65
-    sprintModifier: 0.65
+    walkModifier: 0.5
+    sprintModifier: 0.5
 
 # Sniper Rifles / LMGs
 - type: entity
@@ -140,8 +136,6 @@
   components:
   - type: Item
     size: Huge
-    #shape:
-    #- 0,0,4,3
   - type: Clothing
     quickEquip: false
     slots:

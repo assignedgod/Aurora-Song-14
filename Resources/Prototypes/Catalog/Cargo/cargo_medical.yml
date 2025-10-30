@@ -160,3 +160,13 @@
   cost: 750
   category: cargoproduct-category-name-medical
   group: market
+
+- type: cargoProduct # Aurora - this is a testing product, may remove later
+  id: CrateChemistryLabKit
+  icon:
+    sprite: Structures/Storage/Crates/chemcrate_secure.rsi
+    state: icon
+  product: CrateServiceKitChemLab
+  cost: 100000
+  category: cargoproduct-category-name-medical
+  group: market

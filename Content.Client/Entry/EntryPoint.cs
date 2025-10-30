@@ -1,3 +1,70 @@
+// SPDX-FileCopyrightText: 2018 PJB3005
+// SPDX-FileCopyrightText: 2018 clusterfack
+// SPDX-FileCopyrightText: 2019 Silver
+// SPDX-FileCopyrightText: 2020 Clyybber
+// SPDX-FileCopyrightText: 2020 DamianX
+// SPDX-FileCopyrightText: 2020 Exp
+// SPDX-FileCopyrightText: 2020 F77F
+// SPDX-FileCopyrightText: 2020 FL-OZ
+// SPDX-FileCopyrightText: 2020 Injazz
+// SPDX-FileCopyrightText: 2020 Jackson Lewis
+// SPDX-FileCopyrightText: 2020 Swept
+// SPDX-FileCopyrightText: 2020 Tomeno
+// SPDX-FileCopyrightText: 2020 Tyler Young
+// SPDX-FileCopyrightText: 2020 Víctor Aguilera Puerto
+// SPDX-FileCopyrightText: 2020 adrian
+// SPDX-FileCopyrightText: 2020 ancientpower
+// SPDX-FileCopyrightText: 2020 chairbender
+// SPDX-FileCopyrightText: 2020 ike709
+// SPDX-FileCopyrightText: 2020 moneyl
+// SPDX-FileCopyrightText: 2020 nuke
+// SPDX-FileCopyrightText: 2020 py01
+// SPDX-FileCopyrightText: 2020 scuffedjays
+// SPDX-FileCopyrightText: 2020 zumorica
+// SPDX-FileCopyrightText: 2021 AJCM-git
+// SPDX-FileCopyrightText: 2021 GraniteSidewalk
+// SPDX-FileCopyrightText: 2021 Pancake
+// SPDX-FileCopyrightText: 2021 Paul
+// SPDX-FileCopyrightText: 2021 ShadowCommander
+// SPDX-FileCopyrightText: 2021 Visne
+// SPDX-FileCopyrightText: 2022 0x6273
+// SPDX-FileCopyrightText: 2022 20kdc
+// SPDX-FileCopyrightText: 2022 Acruid
+// SPDX-FileCopyrightText: 2022 Alex Evgrashin
+// SPDX-FileCopyrightText: 2022 Flipp Syder
+// SPDX-FileCopyrightText: 2022 Jezithyr
+// SPDX-FileCopyrightText: 2022 Kara
+// SPDX-FileCopyrightText: 2022 Paul Ritter
+// SPDX-FileCopyrightText: 2022 Rane
+// SPDX-FileCopyrightText: 2022 Vera Aguilera Puerto
+// SPDX-FileCopyrightText: 2022 Veritius
+// SPDX-FileCopyrightText: 2022 mirrorcult
+// SPDX-FileCopyrightText: 2022 wrexbe
+// SPDX-FileCopyrightText: 2023 Debug
+// SPDX-FileCopyrightText: 2023 DrSmugleaf
+// SPDX-FileCopyrightText: 2023 Leon Friedrich
+// SPDX-FileCopyrightText: 2023 Miro Kavaliou
+// SPDX-FileCopyrightText: 2023 Moony
+// SPDX-FileCopyrightText: 2023 TemporalOroboros
+// SPDX-FileCopyrightText: 2023 c4llv07e
+// SPDX-FileCopyrightText: 2024 DEATHB4DEFEAT
+// SPDX-FileCopyrightText: 2024 LordCarve
+// SPDX-FileCopyrightText: 2024 Nemanja
+// SPDX-FileCopyrightText: 2024 Pierson Arnold
+// SPDX-FileCopyrightText: 2024 Pieter-Jan Briers
+// SPDX-FileCopyrightText: 2024 Simon
+// SPDX-FileCopyrightText: 2024 Tayrtahn
+// SPDX-FileCopyrightText: 2024 VMSolidus
+// SPDX-FileCopyrightText: 2024 Vasilis
+// SPDX-FileCopyrightText: 2024 deltanedas
+// SPDX-FileCopyrightText: 2024 metalgearsloth
+// SPDX-FileCopyrightText: 2025 MajorMoth
+// SPDX-FileCopyrightText: 2025 Rosycup
+// SPDX-FileCopyrightText: 2025 sleepyyapril
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+using Content.Client._Floof.Consent;
 using Content.Client.Administration.Managers;
 using Content.Client.Changelog;
 using Content.Client.Chat.Managers;
@@ -57,6 +124,7 @@ namespace Content.Client.Entry
         [Dependency] private readonly FullscreenHook _fullscreenHook = default!;
         [Dependency] private readonly ChangelogManager _changelogManager = default!;
         [Dependency] private readonly ViewportManager _viewportManager = default!;
+        [Dependency] private readonly IClientConsentManager _clientConsentManager = default!;
         [Dependency] private readonly IUserInterfaceManager _userInterfaceManager = default!;
         [Dependency] private readonly IInputManager _inputManager = default!;
         [Dependency] private readonly IOverlayManager _overlayManager = default!;
@@ -129,8 +197,7 @@ namespace Content.Client.Entry
             _prototypeManager.RegisterIgnore("ghostRoleRaffleDecider");
             _prototypeManager.RegisterIgnore("pointOfInterest"); // Frontier: worldgen-related, server-only
             _prototypeManager.RegisterIgnore("publicTransitRoute"); // Frontier: worldgen-related, server-only
-            _prototypeManager.RegisterIgnore("codewordGenerator");
-            _prototypeManager.RegisterIgnore("codewordFaction");
+			_prototypeManager.RegisterIgnore("stationPay"); // Aurora
 
             _componentFactory.GenerateNetIds();
             _adminManager.Initialize();
@@ -173,6 +240,7 @@ namespace Content.Client.Entry
             _overlayManager.AddOverlay(new RadiationPulseOverlay());
             _overlayManager.AddOverlay(new EmpBlastOverlay()); // Frontier
             _chatManager.Initialize();
+            _clientConsentManager.Initialize(); // Floofstation
             _clientPreferencesManager.Initialize();
             _euiManager.Initialize();
             _voteManager.Initialize();

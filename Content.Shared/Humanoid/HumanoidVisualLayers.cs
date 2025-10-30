@@ -17,6 +17,8 @@ namespace Content.Shared.Humanoid
         Snout,
         HeadSide, // side parts (i.e., frills)
         HeadTop,  // top parts (i.e., ears)
+        Genitals,
+        Nipples,
         Eyes,
         RArm,
         LArm,

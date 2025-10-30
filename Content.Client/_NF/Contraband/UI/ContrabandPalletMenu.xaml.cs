@@ -12,6 +12,7 @@ public sealed partial class ContrabandPalletMenu : FancyWindow
 {
     public Action? SellRequested;
     public Action? AppraiseRequested;
+    public Action? RegisterRequested; // Aurora
 
     private string _locPrefix = string.Empty;
 
@@ -20,7 +21,7 @@ public sealed partial class ContrabandPalletMenu : FancyWindow
         RobustXamlLoader.Load(this);
         SellButton.OnPressed += OnSellPressed;
         AppraiseButton.OnPressed += OnAppraisePressed;
-
+        RegisterButton.OnPressed += OnRegisterPressed; // Aurora
     }
 
     public void SetWindowText(string locPrefix)
@@ -37,6 +38,13 @@ public sealed partial class ContrabandPalletMenu : FancyWindow
             CountLabel.Text = Loc.GetString($"{_locPrefix}contraband-pallet-menu-no-goods-text");
             AppraiseButton.Text = Loc.GetString($"{_locPrefix}contraband-pallet-appraise-button");
             SellButton.Text = Loc.GetString($"{_locPrefix}contraband-pallet-sell-button");
+            // Begin Aurora - Add Register
+            RegisterLabelLeft.Text = Loc.GetString($"{_locPrefix}contraband-pallet-unregistered-count-label");
+            RegisterLabel.Text = Loc.GetString($"{_locPrefix}contraband-pallet-no-unregistered-label");
+            RegisterButton.Text = Loc.GetString($"{_locPrefix}contraband-pallet-register-button");
+            RegisterDisclaimer.Text = Loc.GetString($"{_locPrefix}contraband-pallet-register-disclaimer");
+            SellDisclaimer.Text = Loc.GetString($"{_locPrefix}contraband-pallet-sell-disclaimer");
+            // End Aurora
         }
     }
 
@@ -50,10 +58,18 @@ public sealed partial class ContrabandPalletMenu : FancyWindow
     {
         CountLabel.Text = count.ToString();
     }
+
+    // Aurora
+    public void SetUnregistered(int unregistered)
+    {
+        RegisterLabel.Text = unregistered.ToString();
+    }
+
     public void SetEnabled(bool enabled)
     {
         AppraiseButton.Disabled = !enabled;
         SellButton.Disabled = !enabled;
+        RegisterButton.Disabled = !enabled; // Aurora
     }
 
     private void OnSellPressed(BaseButton.ButtonEventArgs obj)
@@ -64,5 +80,11 @@ public sealed partial class ContrabandPalletMenu : FancyWindow
     private void OnAppraisePressed(BaseButton.ButtonEventArgs obj)
     {
         AppraiseRequested?.Invoke();
+    }
+
+    // Aurora
+    private void OnRegisterPressed(BaseButton.ButtonEventArgs obj)
+    {
+        RegisterRequested?.Invoke();
     }
 }

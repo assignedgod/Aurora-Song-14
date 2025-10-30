@@ -108,28 +108,36 @@
       amount: 2
     - id: DrinkCreamCarton
       amount: 2
+      # Flooftier - uncomment once cum bottle added
+    # - id: DrinkCumBottleFull # Floof
+      # amount: 2
+    - id: DrinkIceJug # Floof
+      amount: 2
 
 - type: entity
   id: CrateFoodSoftdrinks
   parent: CratePlasticBiodegradable # Frontier: CratePlastic<CratePlasticBiodegradable
   categories: [ HideSpawnMenu ] # Frontier
   components:
-  - type: StorageFill
-    contents:
-    - id: DrinkColaCan
-      amount: 4
-    - id: DrinkGrapeCan
-      amount: 2
-    - id: DrinkRootBeerCan
-      amount: 2
-    - id: DrinkIcedTeaCan
-      amount: 2
-    - id: DrinkLemonLimeCan
-      amount: 2
-    - id: DrinkLemonLimeCranberryCan
-      amount: 2
-    - id: DrinkFourteenLokoCan
-      amount: 2
+    - type: StorageFill
+      contents:
+      - id: DrinkColaCan
+        amount: 4
+      - id: DrinkGrapeCan
+        amount: 2
+      - id: DrinkRootBeerCan
+        amount: 2
+      - id: DrinkIcedTeaCan
+        amount: 2
+      - id: DrinkLemonLimeCan
+        amount: 4
+      - id: DrinkLemonLimeCranberryCan
+        amount: 4
+      - id: DrinkFourteenLokoCan
+        amount: 2
+        # Flooftier - uncomment once NNN ported
+      # - id: DrinkNNNCan # Floof
+        # amount: 2
 
 - type: entity
   id: CrateFoodGetMore

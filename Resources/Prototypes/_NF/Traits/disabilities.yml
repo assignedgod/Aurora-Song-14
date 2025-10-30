@@ -32,9 +32,9 @@
 
 # Upstream
 - type: trait
-  id: WheelchairBound
-  name: trait-wheelchair-bound-name
-  description: trait-wheelchair-bound-desc
+  id: Wheelchair-User
+  name: trait-wheelchair-user-name
+  description: trait-wheelchair-user-desc
   category: Disabilities
   blacklist:
     components:

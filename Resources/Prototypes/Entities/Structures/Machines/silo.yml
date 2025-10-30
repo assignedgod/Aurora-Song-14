@@ -18,12 +18,14 @@
           True: { state: silo_active }
           False: { state: silo }
   - type: OreSilo
+    range: 100 #AS14 - Range should cover an entire ship basically
   - type: MaterialStorage
     whitelist:
       tags:
       - Sheet
       - RawMaterial
       - Ingot
+      - RawMaterial # Frontier
       - Ore # Frontier
   - type: ActivatableUI
     key: enum.OreSiloUiKey.Key

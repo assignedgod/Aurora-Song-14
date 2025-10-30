@@ -48,6 +48,11 @@
     solutions:
       glass:
         canReact: false
+  # EE - IPC Healing
+  - type: BlindHealing
+    damageContainers:
+      - Silicon
+      - HumanoidSilicon # DeltaV - IPCs need to see
 
 - type: entity
   parent: SheetGlassBase

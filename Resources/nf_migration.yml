@@ -402,7 +402,7 @@ MagazineGrenadeEmpty: NFMagazineGrenadeEmpty
 MagazineGrenadeFlash: NFMagazineGrenadeFlash
 MagazineGrenadeFrag: NFMagazineGrenadeFrag
 MagazineLightRifle: NFMagazineRifle30
-MagazineLightRifleBox: NFMagazineBoxRifle20 # 20??
+MagazineLightRifleBox: NFMagazineBoxRifle20 # 20?? // Aurora: NFMagazineBoxRifle30
 MagazineLightRifleEmpty: NFMagazineRifle30Empty
 MagazineLightRifleIncendiary: NFMagazineRifle30Incendiary
 MagazineLightRifleLowCapacity: NFMagazineLowCapacityRifle30
@@ -545,15 +545,15 @@ WeaponRevolverLucky: NFWeaponRevolverLucky
 WeaponRevolverMateba: NFWeaponRevolverWard45
 WeaponRevolverMatebaAP: NFWeaponRevolverWard45
 WeaponRevolverPirate: NFWeaponRevolverPirate
-WeaponRevolverPython: NFWeaponRevolverRitland45
-WeaponRevolverPythonAP: NFWeaponRevolverRitland45
+WeaponRevolverPython: NFWeaponRevolverPython45
+WeaponRevolverPythonAP: NFWeaponRevolverPython45
 WeaponRifleAk: NFWeaponRifleAssaultSm
 WeaponRifleFoam: NFWeaponRifleFoam
 WeaponRifleGestio: NFWeaponRifleAssaultGestio
 WeaponRifleJackdaw: NFWeaponRifleAssaultJackdaw
 WeaponRifleLecter: NFWeaponRifleAssaultLecter
 WeaponRifleLecterRubber: NFWeaponRifleAssaultLecterLessLethal # ??
-WeaponRifleM90GrenadeLauncher: NFWeaponRifleAssaultM90GrenadeLauncher
+WeaponRifleM90GrenadeLauncher: NFWeaponRifleAssaultM90 # Aurora: NFWeaponRifleAssaultM90GrenadeLauncher < NFWeaponRifleAssaultM90
 WeaponRifleNovaliteC1: NFWeaponRifleAssaultNovaliteC1
 WeaponRifleSVS: NFWeaponRifleSVS
 WeaponRifleVulcan: NFWeaponRifleAssaultVulcan
@@ -610,6 +610,10 @@ CellRechargerCircuitboard: WeaponCapacitorRechargerCircuitboard
 
 # 2025-07-15 Upstream hardsuit changes
 SuitStorageWallmountBasic: SuitStorageWallmountEVA
+
+# 2025-07-01 | Aurora: M90 refactored to no longer have useless GL
+NFWeaponRifleAssaultM90GrenadeLauncher: NFWeaponRifleAssaultM90
+
 
 # 2025-08-21 Wizden smartfridge
 DVSmartFridge: SmartFridge

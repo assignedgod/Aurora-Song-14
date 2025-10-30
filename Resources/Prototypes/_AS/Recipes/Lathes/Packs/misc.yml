@@ -1,0 +1,14 @@
+﻿- type: latheRecipePack
+  id: SexAS
+  recipes:
+    - ClothingNeckShockCollar
+    - LeashBasic
+    - ClothingNeckCollarCmd
+
+- type: latheRecipePack
+  id: ASBlueMagentaColorFlashlights
+  recipes:
+    - BlueFloodlight
+    - MagentaFloodlight
+    - MagentaFlashlight
+    - BlueFlashlight

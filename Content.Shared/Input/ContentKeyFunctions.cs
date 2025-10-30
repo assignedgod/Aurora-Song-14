@@ -31,8 +31,11 @@ namespace Content.Shared.Input
         public static readonly BoundKeyFunction OpenGuidebook = "OpenGuidebook";
         public static readonly BoundKeyFunction OpenInventoryMenu = "OpenInventoryMenu";
         public static readonly BoundKeyFunction SmartEquipBackpack = "SmartEquipBackpack";
+        public static readonly BoundKeyFunction SmartEquipPocket1 = "SmartEquipPocket1";
+        public static readonly BoundKeyFunction SmartEquipPocket2 = "SmartEquipPocket2";
         public static readonly BoundKeyFunction SmartEquipBelt = "SmartEquipBelt";
         public static readonly BoundKeyFunction SmartEquipWallet = "SmartEquipWallet"; // Frontier
+        public static readonly BoundKeyFunction SmartEquipSuitStorage = "SmartEquipSuitStorage";
         public static readonly BoundKeyFunction OpenBackpack = "OpenBackpack";
         public static readonly BoundKeyFunction OpenBelt = "OpenBelt";
         public static readonly BoundKeyFunction OpenWallet = "OpenWallet"; // Frontier
@@ -49,6 +52,7 @@ namespace Content.Shared.Input
         public static readonly BoundKeyFunction MouseMiddle = "MouseMiddle";
         public static readonly BoundKeyFunction RotateObjectClockwise = "RotateObjectClockwise";
         public static readonly BoundKeyFunction RotateObjectCounterclockwise = "RotateObjectCounterclockwise";
+        public static readonly BoundKeyFunction OpenConsentWindow = "OpenConsentWindow"; //Floofstation
         public static readonly BoundKeyFunction FlipObject = "FlipObject";
         public static readonly BoundKeyFunction ToggleRoundEndSummaryWindow = "ToggleRoundEndSummaryWindow";
         public static readonly BoundKeyFunction OpenEntitySpawnWindow = "OpenEntitySpawnWindow";

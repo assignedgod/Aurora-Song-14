@@ -33,6 +33,7 @@
   - Sergeant
   - Bailiff
   - Brigmedic
+  - Prisoner
   accessGroups:
   - GeneralNfsdAccess
   special:
@@ -45,7 +46,7 @@
 - type: startingGear
   id: BailiffGear
   equipment:
-    pocket1: NFWeaponPistolUniversalNfsdLessLethal
+    pocket1: ASWeaponPistolMk58SLELessLethal
     pocket2: HoloprojectorNfsd
   storage:
     back:
@@ -55,6 +56,8 @@
     - BaseSecurityUplinkRadioOfficer
     - ShipVoucherNfsdBailiff
     - RubberStampBailiff
+  licenses:
+  - LicenseContrabandHandling
 
 - type: chameleonOutfit
   id: BailiffChameleonOutfit

@@ -1,0 +1,80 @@
+# Limited
+- type: entity # AKMS - Restored by Aurora's Song, intended for memes and reference
+  id: ASWeaponRifleAK
+  parent: [ NFBaseWeaponRifleAssaultChamber30, NFBaseWeaponFrameRifleAssaultCybersun ]
+  name: AKMS
+  description: |-
+    A somewhat battered combat rifle of a design originating from old Earth. Favored by criminals, militias, and terrorists due to its famed reliability and easy-to-manufacture design. Feeds from .30 rifle magazines.
+  components:
+  - type: Clothing
+    sprite: Objects/Weapons/Guns/Rifles/ak.rsi
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Rifles/ak.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Gun
+    fireRate: 6
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+
+# Surplus
+- type: entity # Aurora's Song - Copy of Lecter from NF but legalized with sprite changes
+  name: Lecter
+  description: |-
+    A reliable military-grade assault rifle. On the receiver is a label that says 'Certified Surplus.'
+  parent: [ BaseC2ContrabandUnredeemable, NFWeaponRifleAssaultLecter ]
+  id: ASWeaponRifleAssaultSurpLecter
+  suffix: Surplus
+  components:
+  - type: Sprite
+    sprite: _AS/Objects/Weapons/Guns/Rifles/surplecter.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-0
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: _AS/Objects/Weapons/Guns/Rifles/surplecter.rsi
+
+- type: entity # Aurora's Song - Copy of Soland-Moss from NF but legalized with sprite changes
+  id: ASWeaponRifleAssaultSurpSm
+  parent: [ BaseC2ContrabandUnredeemable, NFWeaponRifleAssaultSm ]
+  name: Soland-Moss # Renamed: real brand name
+  suffix: Surplus
+  description: |-
+    An iconic weapon of war. Previously a firearm often used by Syndicate agents. On the receiver is a label that says 'Certified Surplus.'
+  components:
+  - type: Clothing
+    sprite: _AS/Objects/Weapons/Guns/Rifles/surpsolandmoss.rsi
+  - type: Sprite
+    sprite: _AS/Objects/Weapons/Guns/Rifles/surpsolandmoss.rsi
+  - type: MagazineVisuals
+    magState: mag
+    steps: 4
+    zeroVisible: true
+
+# Admin
+- type: entity
+  name: Lecter # Aurora's Song - This is a admeme for the server owner, don't modify this one
+  description: |-
+    A reliable military-grade assault rifle. Blacked-out finish. On the receiver is a blue spray-paint marking.
+  categories: [ HideSpawnMenu ] # Admin-only
+  parent: [ BaseC2ContrabandUnredeemable, NFWeaponRifleAssaultLecter ]
+  id: ASWeaponRifleTFLecter
+  suffix: TF
+  components:
+  - type: Sprite
+    sprite: _AS/Objects/Weapons/Guns/Rifles/tflecter.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-0
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: _AS/Objects/Weapons/Guns/Rifles/tflecter.rsi

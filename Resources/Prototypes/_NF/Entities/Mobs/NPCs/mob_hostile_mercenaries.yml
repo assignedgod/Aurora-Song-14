@@ -23,8 +23,8 @@
   - type: MobThresholds
     thresholds:
       0: Alive
-      80: Critical
-      100: Dead
+      100: Critical
+      110: Dead
   - type: SlowOnDamage
     speedModifierThresholds:
       48: 0.7
@@ -36,7 +36,7 @@
   - type: Butcherable
     butcheringType: Spike
     spawned:
-    - id: FoodMeatRotten
+    - id: FoodMeatHuman
       amount: 2
   - type: RechargeBasicEntityAmmo
     rechargeCooldown: 1.5
@@ -337,7 +337,7 @@
     rechargeSound:
       path: /Audio/_NF/Effects/silence.ogg
   - type: BasicEntityAmmoProvider
-    proto: NFShellShotgunBuckshotOverpressure
+    proto: NFShellShotgunBuckshot
     capacity: 1
     count: 1
   - type: Gun

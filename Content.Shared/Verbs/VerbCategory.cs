@@ -91,5 +91,7 @@ namespace Content.Shared.Verbs
 
         public static readonly VerbCategory Pen = // Frontier
             new("verb-categories-pen", "/Textures/Interface/pencil.png"); // Frontier
+
+        public static readonly VerbCategory Interaction = new("verb-categories-interaction", null);
     }
 }

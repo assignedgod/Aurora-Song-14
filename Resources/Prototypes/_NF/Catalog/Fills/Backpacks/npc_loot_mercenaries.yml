@@ -67,7 +67,7 @@
 - type: entity
   parent: BaseItem
   id: MercenaryWebbingBox
-  name: mercanary ammo bundle
+  name: mercenary ammo bundle
   description: Loot boxes? Here?
   abstract: true
   categories: [ HideSpawnMenu ]
@@ -92,12 +92,13 @@
   components:
   - type: SpawnItemsOnUse
     items:
+    - id: MercCoin1
     # Cash
     - id: SpaceCash100
       prob: 0.9
-    - id: SpaceCash500
+    - id: SpaceCash1000
       prob: 0.65
-    - id: SpaceCash500
+    - id: SpaceCash1000
       prob: 0.45
     # Weapons
     - id: NFWeaponPistolMk58Expedition
@@ -109,9 +110,9 @@
     - id: ClothingNeckIFFNeutral
       prob: 0.2
     # Bonus Loot T1
-    - id: SpaceCash500
-      prob: 0.9
     - id: SpaceCash1000
+      prob: 0.9
+    - id: SpaceCash2500
       prob: 0.7
     - id: SpawnDungeonLootPartsEngi
       prob: 0.7
@@ -146,12 +147,13 @@
   components:
   - type: SpawnItemsOnUse
     items:
+    - id: MercCoin1
     # Cash
     - id: SpaceCash100
       prob: 0.9
-    - id: SpaceCash500
+    - id: SpaceCash1000
       prob: 0.65
-    - id: SpaceCash500
+    - id: SpaceCash1000
       prob: 0.45
     # Weapons
     - id: NFWeaponRifleAssaultNovaliteC1Expedition
@@ -163,11 +165,11 @@
     - id: ClothingNeckIFFNeutral
       prob: 0.2
     # Bonus Loot T2
-    - id: SpaceCash1000
+    - id: SpaceCash2500
       prob: 0.9
     - id: SpawnDungeonLootMaterialsBasicFull
       prob: 0.7
-    - id: SpaceCash1000
+    - id: SpaceCash2500
       prob: 0.7
     - id: SpawnDungeonLootPartsEngi
       amount: 2
@@ -207,12 +209,13 @@
   components:
   - type: SpawnItemsOnUse
     items:
+    - id: MercCoin1
     # Cash
-    - id: SpaceCash500
+    - id: SpaceCash1000
       prob: 0.9
-    - id: SpaceCash500
+    - id: SpaceCash1000
       prob: 0.65
-    - id: SpaceCash500
+    - id: SpaceCash1000
       prob: 0.45
     # Weapons
     - id: NFWeaponShotgunKammererExpedition
@@ -224,11 +227,11 @@
     - id: ClothingNeckIFFNeutral
       prob: 0.2
     # Bonus Loot T2
-    - id: SpaceCash1000
+    - id: SpaceCash2500
       prob: 0.9
     - id: SpawnDungeonLootMaterialsBasicFull
       prob: 0.7
-    - id: SpaceCash1000
+    - id: SpaceCash2500
       prob: 0.7
     - id: SpawnDungeonLootPartsEngi
       amount: 2
@@ -247,9 +250,9 @@
   components:
   - type: SpawnItemsOnUse
     items:
-    - id: NFAmmunitionBoxShellShotgunOverpressure
+    - id: NFAmmunitionBoxShellShotgunBuckshot
       prob: 0.4
-    - id: NFAmmunitionBoxShellShotgunOverpressure
+    - id: NFAmmunitionBoxShellShotgunBuckshot
       prob: 0.2
     sound:
       path: /Audio/Items/jumpsuit_equip.ogg
@@ -261,12 +264,13 @@
   components:
   - type: SpawnItemsOnUse
     items:
+    - id: MercCoin1
     # Cash
-    - id: SpaceCash500
+    - id: SpaceCash1000
       prob: 0.9
-    - id: SpaceCash500
+    - id: SpaceCash1000
       prob: 0.65
-    - id: SpaceCash500
+    - id: SpaceCash1000
       prob: 0.45
     # Weapons
     - id: NFWeaponRevolverArgentiExpedition
@@ -282,9 +286,9 @@
     - id: ClothingNeckIFFNeutral
       prob: 0.2
     # Bonus Loot T2
-    - id: SpaceCash1000
+    - id: SpaceCash2500
       prob: 0.9
-    - id: SpaceCash1000
+    - id: SpaceCash2500
       prob: 0.7
     - id: SpawnDungeonLootMaterialsValuableFull
       prob: 0.7
@@ -329,12 +333,13 @@
   components:
   - type: SpawnItemsOnUse
     items:
+    - id: MercCoin1
     # Cash
-    - id: SpaceCash500
-      prob: 0.9
-    - id: SpaceCash500
-      prob: 0.4
     - id: SpaceCash1000
+      prob: 0.9
+    - id: SpaceCash1000
+      prob: 0.4
+    - id: SpaceCash2500
       prob: 0.2
     # Weapons
     - id: NFWeaponEnergyPistolLaserExpedition
@@ -348,13 +353,13 @@
     - id: ClothingNeckIFFNeutral
       prob: 0.2
     # Bonus Loot T3
-    - id: SpaceCash1000
+    - id: SpaceCash2500
       prob: 0.9
-    - id: SpaceCash500
+    - id: SpaceCash1000
       prob: 0.9
     - id: SpawnDungeonLootMaterialsBasicFull
       prob: 0.7
-    - id: SpaceCash1000
+    - id: SpaceCash2500
       prob: 0.7
     - id: SpawnDungeonLootPartsEngi
       amount: 2
@@ -401,12 +406,13 @@
   components:
   - type: SpawnItemsOnUse
     items:
+    - id: MercCoin1
     # Cash
-    - id: SpaceCash500
-      prob: 0.9
-    - id: SpaceCash500
-      prob: 0.4
     - id: SpaceCash1000
+      prob: 0.9
+    - id: SpaceCash1000
+      prob: 0.4
+    - id: SpaceCash2500
       prob: 0.2
     # Weapons
     - id: NFWeaponRifleAssaultGestioExpedition
@@ -418,11 +424,11 @@
     - id: ClothingNeckIFFNeutral
       prob: 0.2
     # Bonus Loot T3
-    - id: SpaceCash1000
-      prob: 0.9
-    - id: SpaceCash500
+    - id: SpaceCash2500
       prob: 0.9
     - id: SpaceCash1000
+      prob: 0.9
+    - id: SpaceCash2500
       prob: 0.7
     - id: SpawnDungeonLootMaterialsValuableFull
       prob: 0.7
@@ -498,12 +504,13 @@
         color: "#eeeeee"
   - type: SpawnItemsOnUse
     items:
+    - id: MercCoin1
     # Cash
     - id: SpaceCash2500
       prob: 0.9
-    - id: SpaceCash500
+    - id: SpaceCash1000
       prob: 0.65
-    - id: SpaceCash500
+    - id: SpaceCash1000
       prob: 0.45
     - id: SpaceCash2500
       prob: 0.1
@@ -515,21 +522,27 @@
       prob: 0.4
     # Items
     - id: NFAmmunitionBoxBigRifle30Overpressure
-      prob: 0.7
+      prob: 0.5
     - id: NFAmmunitionBoxBigRifle30Overpressure
-      prob: 0.3
+      prob: 0.2
     - id: ClothingNeckIFFNeutral
       prob: 0.2
     - id: NFAmmunitionBoxBigRifle30Overpressure
       prob: 0.1
     - id: AmmoTechFabCircuitboard
       prob: 0.1
+    - id: NFAmmunitionBoxBigRifle20Overpressure
+      prob: 0.5
+    - id: NFAmmunitionBoxBigRifle20Overpressure
+      prob: 0.2
+    - id: NFAmmunitionBoxBigRifle20Overpressure
+      prob: 0.1
     # Bonus Loot T4
     - id: SpaceCash2500
       prob: 0.9
     - id: SpawnDungeonLootFlatpacks
       prob: 0.9
-    - id: SpaceCash1000
+    - id: SpaceCash2500
       prob: 0.7
     - id: SpawnDungeonLootMaterialsValuableFull
       prob: 0.7

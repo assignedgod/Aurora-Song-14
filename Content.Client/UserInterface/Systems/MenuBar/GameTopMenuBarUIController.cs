@@ -1,3 +1,15 @@
+// SPDX-FileCopyrightText: 2023 AJCM-git
+// SPDX-FileCopyrightText: 2023 Flipp Syder
+// SPDX-FileCopyrightText: 2023 Nemanja
+// SPDX-FileCopyrightText: 2023 metalgearsloth
+// SPDX-FileCopyrightText: 2024 DEATHB4DEFEAT
+// SPDX-FileCopyrightText: 2024 FoxxoTrystan
+// SPDX-FileCopyrightText: 2024 Pierson Arnold
+// SPDX-FileCopyrightText: 2025 sleepyyapril
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+using Content.Client._Floof.Consent.UI;
 using Content.Client.UserInterface.Systems.Actions;
 using Content.Client.UserInterface.Systems.Admin;
 using Content.Client.UserInterface.Systems.Bwoink;
@@ -24,6 +36,7 @@ public sealed class GameTopMenuBarUIController : UIController
     [Dependency] private readonly SandboxUIController _sandbox = default!;
     [Dependency] private readonly GuidebookUIController _guidebook = default!;
     [Dependency] private readonly EmotesUIController _emotes = default!;
+    [Dependency] private readonly ConsentUiController _consent = default!;
 
     private GameTopMenuBar? GameTopMenuBar => UIManager.GetActiveUIWidgetOrNull<GameTopMenuBar>();
 
@@ -47,6 +60,7 @@ public sealed class GameTopMenuBarUIController : UIController
         _action.UnloadButton();
         _sandbox.UnloadButton();
         _emotes.UnloadButton();
+        _consent.UnloadButton();
     }
 
     public void LoadButtons()
@@ -60,5 +74,6 @@ public sealed class GameTopMenuBarUIController : UIController
         _action.LoadButton();
         _sandbox.LoadButton();
         _emotes.LoadButton();
+        _consent.LoadButton();
     }
 }

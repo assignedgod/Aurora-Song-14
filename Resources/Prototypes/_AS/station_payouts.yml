@@ -1,0 +1,109 @@
+#- type: stationPay # Example of how to add a station pay
+#  id: cargoPay
+#  payPerHour: 14000
+#  job: CargoTechnician
+
+# Default station payouts below here
+
+- type: stationPay
+  id: borgPay
+  payPerHour: 9000
+  job: Borg
+
+- type: stationPay
+  id: srPay
+  payPerHour: 30000
+  job: StationRepresentative
+
+- type: stationPay
+  id: stcPay
+  payPerHour: 25000
+  job: StationTrafficController
+
+- type: stationPay
+  id: docPay
+  payPerHour: 30000
+  job: DirectorOfCare
+
+- type: stationPay
+  id: secguardPay
+  payPerHour: 15000
+  job: SecurityGuard
+
+- type: stationPay
+  id: valetPay
+  payPerHour: 15000
+  job: Valet
+
+- type: stationPay
+  id: nfjanitorPay
+  payPerHour: 15000
+  job: NFJanitor
+
+- type: stationPay
+  id: mailcarrierPay
+  payPerHour: 15000
+  job: MailCarrier
+
+- type: stationPay
+  id: medicPay
+  payPerHour: 20000
+  job: Medic
+
+- type: stationPay
+  id: servicePay
+  payPerHour: 15000
+  job: Service
+
+# Default police payouts below here
+
+- type: stationPay
+  id: sheriffPay
+  payPerHour: 30000
+  job: Sheriff
+
+- type: stationPay
+  id: bailiffPay
+  payPerHour: 25000
+  job: Bailiff
+
+- type: stationPay
+  id: sergeantPay
+  payPerHour: 20000
+  job: SeniorOfficer
+
+- type: stationPay
+  id: brigmedPay
+  payPerHour: 20000
+  job: Brigmedic
+
+- type: stationPay
+  id: nfdetectivePay
+  payPerHour: 20000
+  job: NFDetective
+
+- type: stationPay
+  id: palPay
+  payPerHour: 20000
+  job: PublicAffairsLiaison
+
+- type: stationPay
+  id: deputyPay
+  payPerHour: 15000
+  job: Deputy
+
+- type: stationPay
+  id: cadetPay
+  payPerHour: 15000
+  job: Cadet
+
+#Edison
+- type: stationPay
+  id: TechnicianPay
+  payPerHour: 15000
+  job: PlantTechnician
+
+- type: stationPay
+  id: managerPay
+  payPerHour: 30000
+  job: PlantManager

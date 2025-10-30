@@ -3,45 +3,6 @@
 #For now, since locational damage is not a thing, all "combat" hardsuits (with the exception of the deathsquad hardsuit) have the equvilent of a helmet in terms of armor. This is so people don't need to wear both regular, on-station helmets and hardsuits to get full protection.
 #Generally, unless you're adding something like caustic damage, you should probably avoid messing with armor outside of the above scenario.
 
-#Mercenary Hardsuit
-- type: entity
-  parent: NFClothingHeadHardsuitWithLightBase
-  id: ClothingHeadHelmetHardsuitMercenary
-  categories: [ HideSpawnMenu ]
-  name: mercenary hardsuit helmet
-  description: Lightly armored hardsuit helmet for mercenary needs.
-  components:
-  - type: BreathMask
-  - type: Sprite
-    sprite: _NF/Clothing/Head/Hardsuits/mercenary.rsi
-  - type: Clothing
-    sprite: _NF/Clothing/Head/Hardsuits/mercenary.rsi
-  - type: PointLight
-    color: "#ffeead"
-  - type: PressureProtection
-    highPressureMultiplier: 0.525
-    lowPressureMultiplier: 10000
-  - type: Armor
-    modifiers:
-      coefficients:
-        Blunt: 0.9
-        Slash: 0.9
-        Piercing: 0.9
-        Heat: 0.9
-
-- type: entity
-  parent: ClothingHeadHelmetHardsuitMercenary
-  id: ClothingHeadHelmetHardsuitPrivateSecurity
-  name: private security hardsuit helmet
-  description: Lightly armored hardsuit helmet for private security needs.
-  components:
-  - type: Sprite
-    sprite: _NF/Clothing/Head/Hardsuits/private_security.rsi
-  - type: Clothing
-    sprite: _NF/Clothing/Head/Hardsuits/private_security.rsi
-  - type: PointLight
-    color: "#ffff00"
-
 #Pilot Hardsuit
 - type: entity
   parent: NFClothingHeadHardsuitWithLightBase
@@ -57,6 +18,7 @@
     sprite: _NF/Clothing/Head/Hardsuits/pilot.rsi
   - type: PointLight
     color: "#ffdbad"
+    radius: 5 # Aurora
   - type: PressureProtection
     highPressureMultiplier: 0.1
     lowPressureMultiplier: 1000
@@ -98,7 +60,7 @@
   parent: NFClothingHeadHardsuitWithLightBaseNfsd
   id: ClothingHeadHelmetHardsuitNfsdBronze
   categories: [ HideSpawnMenu ]
-  name: NFSD patrol suit helmet
+  name: SLE patrol suit helmet
   description: Lightly armored softsuit helmet for beat-cop needs.
   components:
   - type: Sprite
@@ -159,8 +121,8 @@
   parent: NFClothingHeadHardsuitWithLightBaseNfsd
   id: ClothingHeadHelmetHardsuitNfsdExperimental
   categories: [ HideSpawnMenu ]
-  name: NFSD experimental combat suit helmet
-  description: Heavily armored hardsuit helmet for NFSD raids.
+  name: SLE experimental combat suit helmet
+  description: Heavily armored hardsuit helmet for SLE raids.
   components:
   - type: Sprite
     sprite: _NF/Clothing/Head/Hardsuits/nfsd_experimental.rsi
@@ -182,8 +144,8 @@
   parent: NFClothingHeadHardsuitWithLightBaseNfsd
   id: ClothingHeadHelmetHardsuitNfsdCombat
   categories: [ HideSpawnMenu ]
-  name: NFSD combat suit helmet
-  description: Medium armored hardsuit helmet for NFSD raids.
+  name: SLE combat suit helmet
+  description: Medium armored hardsuit helmet for SLE raids.
   components:
   - type: Sprite
     sprite: _NF/Clothing/Head/Hardsuits/nfsd_combat.rsi
@@ -207,8 +169,8 @@
   parent: NFClothingHeadHardsuitWithLightBaseNfsd
   id: ClothingHeadHelmetHardsuitNfsdCommand
   categories: [ HideSpawnMenu ]
-  name: NFSD command combat suit helmet
-  description: Medium armored hardsuit helmet for NFSD raids.
+  name: SLE command combat suit helmet
+  description: Medium armored hardsuit helmet for SLE raids.
   components:
   - type: Sprite
     sprite: _NF/Clothing/Head/Hardsuits/nfsd_command.rsi
@@ -315,6 +277,7 @@
     sprite: _NF/Clothing/Head/Hardsuits/brickwizard.rsi
   - type: PointLight
     color: "#6dead6"
+    radius: 6 # Aurora
   - type: PressureProtection
     highPressureMultiplier: 0.27
     lowPressureMultiplier: 1000

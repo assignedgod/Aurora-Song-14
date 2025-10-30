@@ -1,0 +1,10 @@
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpskirtSle
+  name: SLE jumpskirt
+  description: A long sleeved jumpskirt produced for deputy sheriffs. Designed to reduce chaffing between the legs for the comfort of skin, slime, scales, fluff, and wood.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Uniforms/Jumpskirt/sle_jumpskirt.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/Uniforms/Jumpskirt/sle_jumpskirt.rsi

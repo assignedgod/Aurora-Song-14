@@ -749,7 +749,7 @@
 - type: entity
   parent: BaseComputerTabletopStationAdminBankATM
   id: ComputerTabletopStationAdminBankATMNfsd
-  description: Used to transfer funds to and from NFSD's bank account.
+  description: Used to transfer funds to and from SLE's bank account.
   suffix: NFSD, Tabletop
   components:
   - type: StationBankATM

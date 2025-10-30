@@ -1,0 +1,53 @@
+﻿#region .25 caseless
+- type: Tag
+  id: ASMagazineCaselessRifle
+
+- type: Tag
+  id: ASMagazineCaselessRifleShort
+
+- type: Tag
+  id: ASMagazinePistolCaselessRifle
+
+#region Docking Tags
+- type: Tag
+  id: SecDock
+
+- type: Tag
+  id: RegularDock
+
+- type: Tag
+  id: MediDock
+
+- type: Tag
+  id: MercDock
+
+- type: Tag
+  id: ArrivalShuttle
+
+#region uplinks - Aurora
+- type: Tag
+  id: MercenaryUplink
+
+- type: Tag
+  id: ExchangeUplink
+
+#region licenses
+- type: Tag
+  id: License
+
+#region Power Cells
+
+- type: Tag
+  id: PowerCellMedium
+
+- type: Tag
+  id: PowerCellHigh
+
+- type: Tag
+  id: PowerCellHyper
+
+- type: Tag
+  id: PowerCellFusion
+
+- type: Tag
+  id: PowerCellAntique

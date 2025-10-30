@@ -206,7 +206,8 @@
   id: NFAmmunitionBoxBigRifle20Incendiary
   result: NFAmmunitionBoxBigRifle20Incendiary
   materials:
-    Plastic: 4000 # box - free, 200 [bullets] * 20 [Plastic per bullet]
+    Steel: 1000 # 200 [bullets] * 15 [Steel per bullet]
+    Plastic: 3000 # box - free, 200 [bullets] * 15 [Plastic per bullet]
 
 - type: latheRecipe
   parent: BaseAmmoRecipe
@@ -223,6 +224,21 @@
   materials:
     Plastic: 2000 # box - free, 60 [bullets] * 10 [Plastic per bullet]
     Steel: 2000 # box - free, 60 [bullets] * 10 [Steel per bullet]
+
+#region .25 Ammo Box - Aurora Song
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: NFAmmunitionBoxRifle25
+  result: NFAmmunitionBoxRifle25
+  materials:
+    Steel: 1200 # box - free, 60 [bullets] * 20 [Steel per bullet]
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: NFAmmunitionBoxRifle25Overpressure
+  result: NFAmmunitionBoxRifle25Overpressure
+  materials:
+    Steel: 1800 # box - free, 60 [bullets] * 20 [Steel per bullet]
 
 #region .30 Ammo Box
 - type: latheRecipe
@@ -295,7 +311,8 @@
   id: NFAmmunitionBoxBigRifle30Incendiary
   result: NFAmmunitionBoxBigRifle30Incendiary
   materials:
-    Plastic: 4000 # box - free, 200 [bullets] * 20 [Plastic per bullet]
+    Steel: 1000 # 200 [bullets] * 15 [Steel per bullet]
+    Plastic: 3000 # box - free, 200 [bullets] * 15 [Plastic per bullet]
 
 - type: latheRecipe
   parent: BaseAmmoRecipe
@@ -321,12 +338,12 @@
   materials:
     Steel: 400 # box - free, 20 [bullets] * 20 [Steel per bullet]
 
-- type: latheRecipe
-  parent: BaseAmmoRecipe
-  id: NFAmmunitionBoxShellShotgunOverpressure
-  result: NFAmmunitionBoxShellShotgunOverpressure
-  materials:
-    Steel: 600 # box - free, 20 [bullets] * 30 [Steel per bullet]
+#- type: latheRecipe
+#  parent: BaseAmmoRecipe
+#  id: NFAmmunitionBoxShellShotgunOverpressure
+#  result: NFAmmunitionBoxShellShotgunOverpressure
+#  materials:
+#    Steel: 600 # box - free, 20 [bullets] * 30 [Steel per bullet]
 
 - type: latheRecipe
   parent: BaseAmmoRecipe
@@ -475,6 +492,117 @@
   result: NFMagazineDrumRifle20Empty
   materials:
     Steel: 40
+
+- type: latheRecipe # Aurora
+  parent: BaseEmptyMagazineRecipe
+  id: NFMagazineShotgunDrumEmpty
+  result: NFMagazineShotgunDrumEmpty
+  materials:
+    Steel: 40
+
+#region Filled Mags QOL, Aurora
+- type: latheRecipe # novalite mag
+  parent: BaseFilledMagazineRecipe
+  id: NFMagazineClipRifle20
+  result: NFMagazineClipRifle20
+  materials:
+    Steel: 520 # Same register as before but costs the clip as well. Same efficiency
+
+- type: latheRecipe # gestio mag
+  parent: BaseFilledMagazineRecipe
+  id: NFMagazineRifle30
+  result: NFMagazineRifle30
+  materials:
+    Steel: 620
+
+- type: latheRecipe
+  parent: BaseFilledMagazineRecipe
+  id: NFSpeedLoaderPistol35
+  result: NFSpeedLoaderPistol35
+  materials:
+    Steel: 110
+
+- type: latheRecipe
+  parent: BaseFilledMagazineRecipe
+  id: NFSpeedLoaderPistol45
+  result: NFSpeedLoaderPistol45
+  materials:
+    Steel: 110
+
+- type: latheRecipe
+  parent: BaseFilledMagazineRecipe
+  id: NFMagazinePistol35
+  result: NFMagazinePistol35
+  materials:
+    Steel: 170
+
+- type: latheRecipe
+  parent: BaseFilledMagazineRecipe
+  id: NFMagazineHighCapacityPistol35
+  result: NFMagazineHighCapacityPistol35
+  materials:
+    Steel: 240
+
+- type: latheRecipe
+  parent: BaseFilledMagazineRecipe
+  id: NFMagazineSubMachineGun35
+  result: NFMagazineSubMachineGun35
+  materials:
+    Steel: 555
+
+- type: latheRecipe
+  parent: BaseFilledMagazineRecipe
+  id: NFMagazineSubMachineGunTopMounted35
+  result: NFMagazineSubMachineGunTopMounted35
+  materials:
+    Steel: 555
+
+- type: latheRecipe
+  parent: BaseFilledMagazineRecipe
+  id: NFMagazinePistol45
+  result: NFMagazinePistol45
+  materials:
+    Steel: 395
+
+- type: latheRecipe
+  parent: BaseFilledMagazineRecipe
+  id: NFMagazineRifle20
+  result: NFMagazineRifle20
+  materials:
+    Steel: 530
+
+- type: latheRecipe
+  parent: BaseFilledMagazineRecipe
+  id: ASMagazineCaselessRifle
+  result: ASMagazineCaselessRifle
+  materials:
+    Steel: 680
+
+- type: latheRecipe
+  parent: BaseFilledMagazineRecipe
+  id: ASMagazineCaselessRifleShort
+  result: ASMagazineCaselessRifleShort
+  materials:
+    Steel: 600
+
+# region Incendiary Mags | Aurora
+
+- type: latheRecipe
+  parent: BaseFilledMagazineRecipe
+  id: NFMagazineShotgunDrumIncendiary
+  result: NFMagazineShotgunDrumIncendiary
+  materials:
+    Steel: 600 # 40 [Steel for empty mag] + 560 [Steel for 8 bullets * 70 Steel per bullet]
+    Plastic: 200 # No plastic for mag, + 200 [Plastic for 8 bullets * 25 Plastic per bullet]
+
+- type: latheRecipe
+  parent: BaseFilledMagazineRecipe
+  id: NFMagazineRifle20Incendiary
+  result: NFMagazineRifle20Incendiary
+  materials:
+    Steel: 340 # 40 [Steel for empty mag] + 300 [Steel for 30 bullets * 10 Steel per bullet]
+    Plastic: 150 # 0 plastic for mag, + 150 [Plastic for 30 bullets * 5 Plastic per bullet]
+
 
 #region Weapons
 - type: latheRecipe

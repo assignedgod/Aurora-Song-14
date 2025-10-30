@@ -7,6 +7,7 @@ using Content.Shared.Damage;
 using Robust.Server.Containers;
 using Robust.Shared.Physics.Components;
 using Robust.Shared.Timing;
+using Content.Shared.Cuffs.Components;
 
 namespace Content.Server.Atmos.Rotting;
 
@@ -44,6 +45,29 @@ public sealed class RottingSystem : SharedRottingSystem
         if (args.Handled)
             return;
         args.Handled = component.CurrentTemperature < Atmospherics.T0C + 0.85f;
+    }
+
+
+    public void ReduceAccumulator(EntityUid uid, TimeSpan time)
+    {
+        if (!TryComp<PerishableComponent>(uid, out var perishable))
+            return;
+
+        if (!TryComp<RottingComponent>(uid, out var rotting))
+        {
+            perishable.RotAccumulator -= time;
+            return;
+        }
+        var total = (rotting.TotalRotTime + perishable.RotAccumulator) - time;
+
+        if (total < perishable.RotAfter)
+        {
+            RemCompDeferred(uid, rotting);
+            perishable.RotAccumulator = total;
+        }
+
+        else
+            rotting.TotalRotTime = total - perishable.RotAfter;
     }
 
     /// <summary>

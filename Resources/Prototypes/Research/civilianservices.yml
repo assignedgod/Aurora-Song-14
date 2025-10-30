@@ -130,7 +130,6 @@
   cost: 5000
   recipeUnlocks:
   - BorgModuleAdvancedChemical
-  - BorgModuleAdvancedParamedic # Frontier
 
 - type: technology
   id: AdvancedCleaning
@@ -145,8 +144,6 @@
   - AdvMopItem
   - MegaSprayBottle
   - BorgModuleAdvancedCleaning
-  - ReinforcedJug # Frontier
-  - PortablePumpMachineCircuitBoard # Frontier
 
 - type: technology
   id: HONKMech
@@ -181,21 +178,17 @@
   - WeaponSprayNozzle
   - ClothingBackpackWaterTank
 
-# Frontier
-
-# - type: technology
-#   id: BluespaceCargoTransport
-#   name: research-technology-bluespace-cargo-transport
-#   icon:
-#     sprite: Structures/cargo_telepad.rsi
-#     state: display
-#   discipline: CivilianServices
-#   tier: 2
-#   cost: 15000
-#   recipeUnlocks:
-#   - CargoTelepadMachineCircuitboard
-
-# End Frontier
+- type: technology
+  id: BluespaceCargoTransport
+  name: research-technology-bluespace-cargo-transport
+  icon:
+    sprite: Structures/cargo_telepad.rsi
+    state: display
+  discipline: CivilianServices
+  tier: 2
+  cost: 15000
+  recipeUnlocks:
+  - CargoTelepadMachineCircuitboard
 
 - type: technology
   id: PushHorn
@@ -219,7 +212,7 @@
     state: icon
   discipline: CivilianServices
   tier: 3
-  cost: 15000 # Frontier - 10000<15000
+  cost: 10000
   recipeUnlocks:
   - ClothingShoesBootsSpeed
 

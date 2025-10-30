@@ -22,11 +22,11 @@
       map: ["closed-coin"]
       visible: false
   - type: Storage
+    quickInsert: true
+    areaInsert: true
     maxItemSize: Small
     grid:
     - 0,0,3,1
-    quickInsert: true
-    areaInsert: true
     whitelist:
       components:
       - Cash
@@ -81,3 +81,7 @@
         closed-coin:
           Open: { state: open-coin }
           Closed: { state: closed-coin }
+  - type: MagnetPickup
+    magnetEnabled: false
+    magnetCanBeEnabled: true
+    slotFlags: WALLET

@@ -105,3 +105,72 @@
     Gold: 100
     Silver: 100
     Plasma: 1000
+
+# AI
+- type: latheRecipe
+  id: AiRemoteBrain
+  result: AiRemoteBrain
+  completetime: 4
+  materials:
+    Steel: 300
+    Glass: 400
+    Gold: 400
+    Silver: 200
+
+## Modules
+#
+#- type: latheRecipe
+#  parent: BaseBorgModuleRecipe
+#  id: BorgModuleTool
+#  result: BorgModuleTool
+#
+#- type: latheRecipe
+#  parent: BaseBorgModuleRecipe
+#  id: BorgModuleCable
+#  result: BorgModuleCable
+#
+#- type: latheRecipe
+#  parent: BaseBorgModuleRecipe
+#  id: BorgModuleFireExtinguisher
+#  result: BorgModuleFireExtinguisher
+#
+## Cargo Modules
+#
+#- type: latheRecipe
+#  parent: BaseGoldBorgModuleRecipe
+#  id: BorgModuleAdvancedMining
+#  result: BorgModuleAdvancedMining
+#  # Frontier: higher cost
+#  materials:
+#    Steel: 1000
+#    Glass: 1000
+#    Plastic: 250
+#    Bluespace: 200 # OreBagOfHolding Bluespace price
+#    Diamond: 100 # MiningDrillDiamond Diamond price
+#  # End Frontier: higher cost
+#
+## Engineering Modules
+#
+#- type: latheRecipe
+#  parent: BaseGoldBorgModuleRecipe
+#  id: BorgModuleAdvancedTool
+#  result: BorgModuleAdvancedTool
+#
+## Janitor Modules
+#
+#- type: latheRecipe
+#  parent: BaseGoldBorgModuleRecipe
+#  id: BorgModuleAdvancedCleaning
+#  result: BorgModuleAdvancedCleaning
+#
+## Medical Modules
+#
+#- type: latheRecipe
+#  parent: BaseGoldBorgModuleRecipe
+#  id: BorgModuleAdvancedChemical
+#  result: BorgModuleAdvancedChemical
+#
+## Science Modules (if we add a advanced sci module that requires crafting)
+#
+## Service Modules
+#

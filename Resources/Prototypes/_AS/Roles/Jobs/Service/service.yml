@@ -1,0 +1,44 @@
+﻿- type: job
+  id: Service
+  name: job-name-service
+  description: job-description-Service
+  playTimeTracker: JobService
+  requirements:
+    - !type:OverallPlaytimeRequirement
+      time: 10800
+  whitelisted: false
+  startingGear: ServiceGear
+  alwaysUseSpawner: true
+  icon: "JobIconServiceWorker"
+  supervisors: job-supervisors-sr
+  weight: 170
+  displayWeight: 55 # Second from the top
+  canBeAntag: false
+  access:
+  - Maintenance
+  - External # Frontier
+  - Service
+  - Frontier
+  special:
+  - !type:AddImplantSpecial
+    implants: [ TrackingImplant ]
+  - !type:GiveItemOnHolidaySpecial
+    holiday: FrontierBirthday
+    prototype: FrontierBirthdayGift
+
+- type: startingGear
+  id: ServiceGear
+  storage:
+    back:
+    - EncryptionKeyService # Frontier
+
+- type: chameleonOutfit
+  id: ServiceChameleonOutfit
+  job: Service
+  equipment:
+    head: ClothingHeadHatWelding
+    eyes: ClothingEyesGlassesCheapSunglasses
+    mask: ClothingMaskGas
+    neck: ClothingNeckMantle
+    outerClothing: ClothingOuterWinterCoat
+    gloves: ClothingHandsGlovesColorYellowBudget

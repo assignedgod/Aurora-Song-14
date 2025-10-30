@@ -60,6 +60,7 @@
     - ReportingStatic # DeltaV
     - NFLightsColoredStatic
     - NFServiceArchetypeStatic
+    - SexAS
   - type: EmagLatheRecipes
     emagStaticPacks:
     - NFServiceTechfabEmagStatic
@@ -215,8 +216,8 @@
 - type: entity
   id: NfsdTechFab
   parent: [ NFBlueprintReceiverBase, SecurityTechFab ]
-  name: NFSD techfab
-  description: Prints equipment for use by NFSD.
+  name: SLE techfab
+  description: Prints equipment for use by SLE.
   components:
   - type: Sprite
     sprite: _NF/Structures/Machines/techfab.rsi
@@ -306,7 +307,13 @@
     - NFMercenaryMagazineStatic
     - NFTopicalsStatic
     - NFMercenaryArchetypeStatic
-
+    dynamicPacks:
+    - ScienceExplosives
+    - AdvancedTools
+    - NFPouches
+  - type: EmagLatheRecipes
+    emagStaticPacks:
+    - ASMercenaryEmag
   - type: BlueprintReceiver
     whitelist:
       tags:
@@ -362,7 +369,7 @@
     - NFBasicEvaStatic
     - NFBasicEVAToolsStatic
     - NFBasicEvaLightsStatic
-    - NFMaterialElectronicsStatic 
+    - NFMaterialElectronicsStatic
     - NFMercenaryStatic
     - NFMercenaryClothesStatic
     - NFMercenaryStorageStatic

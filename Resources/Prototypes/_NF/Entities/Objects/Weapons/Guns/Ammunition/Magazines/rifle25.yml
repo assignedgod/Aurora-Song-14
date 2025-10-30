@@ -1,6 +1,69 @@
+# Aurora - With the refactor from .25 caseless to .25 rifle, we need to update the magazine prototypes accordingly.
+#region .25 Rifle mags | Aurora
+- type: entity
+  id: ASMagazinePistolCaselessRifle
+  name: pistol magazine (.25 rifle)
+  parent: BaseMagazinePistolCaselessRifle
+  components:
+  - type: Tag
+    tags:
+      - ASMagazinePistolCaselessRifle
+  - type: BallisticAmmoProvider
+    proto: NFCartridgeRifle25
+    capacity: 10
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Ammunition/Magazine/CaselessRifle/caseless_pistol_mag.rsi
+    layers:
+    - state: red
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 6
+    zeroVisible: false
+  - type: Appearance
+
+- type: entity
+  id: ASMagazineCaselessRifle
+  name: magazine (.25 rifle)
+  parent: BaseMagazineCaselessRifle
+  components:
+  - type: Tag
+    tags:
+      - ASMagazineCaselessRifle
+  - type: BallisticAmmoProvider
+    proto: NFCartridgeRifle25
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Ammunition/Magazine/CaselessRifle/caseless_rifle_mag.rsi
+    layers:
+    - state: red
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+
+- type: entity
+  id: ASMagazineCaselessRifleShort
+  name: short magazine (.25 rifle)
+  parent: BaseMagazineCaselessRifle
+  components:
+  - type: Tag
+    tags:
+      - ASMagazineCaselessRifle
+  - type: BallisticAmmoProvider
+    proto: NFCartridgeRifle25
+    capacity: 20
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Ammunition/Magazine/CaselessRifle/caseless_rifle_mag_short.rsi
+    layers:
+    - state: red
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+#endregion .25 Rifle mags | Aurora
 - type: entity
   id: MagazinePistolCaselessRifleRubber
-  name: pistol magazine (.25 caseless, rubber)
+  name: pistol magazine (.25 rifle, rubber) # updated name to be consistent | Aurora
   parent: BaseMagazinePistolCaselessRifle
   components:
   - type: BallisticAmmoProvider
@@ -32,7 +95,7 @@
 
 - type: entity
   id: MagazineCaselessRifleRubber
-  name: magazine (.25 caseless, rubber)
+  name: magazine (.25 rifle, rubber) # updated name to be consistent | Aurora
   parent: BaseMagazineCaselessRifle
   components:
   - type: BallisticAmmoProvider
@@ -47,7 +110,7 @@
 
 - type: entity
   id: MagazineCaselessRifleShortRubber
-  name: short magazine (.25 caseless, rubber)
+  name: short magazine (.25 rifle, rubber) # updated name to be consistent | Aurora
   parent: BaseMagazineCaselessRifle
   components:
   - type: BallisticAmmoProvider

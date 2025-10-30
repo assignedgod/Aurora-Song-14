@@ -1,0 +1,15 @@
+﻿- type: construction
+  name: pole-stripper-lewd
+  id: FurnStripPole
+  graph: Lewd
+  startNode: start
+  targetNode: FurnStripPole
+  category: construction-category-furniture
+#  icon:
+#    sprite: Floof/Structures/pole.rsi
+#    state: pole
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+  - !type:TileNotBlocked

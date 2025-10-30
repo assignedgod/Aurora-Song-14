@@ -339,6 +339,7 @@
   - SeedExtractorMachineCircuitboard
   - HydroponicsTrayMachineCircuitboard
   - ReagentGrinderIndustrialMachineCircuitboard
+  - ASBluespaceReagentGrinderIndustrialMachineCircuitboard # Aurora Song
   - PlantAnalyzer
   # AudioVisualCommunication
   - SurveillanceWirelessCameraMovableCircuitboard
@@ -382,7 +383,6 @@
   - ElectricGrillMachineCircuitboard
   - BoozeDispenserMachineCircuitboard
   - SodaDispenserMachineCircuitboard
-  - ImpCoffeeMachineCircuitboard
   # MiscellaneousItemsOrganization
   - NFPouchUtility
   - NFPouchEngineering
@@ -466,10 +466,10 @@
   # ImprovedRifleAmmo
   - NFAmmunitionBoxRifle20Overpressure
   - NFAmmunitionBoxRifle30Overpressure
-  - NFAmmunitionBoxShellShotgunOverpressure
   - NFMagazineRifle20Empty
   - NFMagazineRifle30Empty
-  - NFMagazineDrumRifle20Empty
+ # - NFMagazineDrumRifle20Empty
+  - NFMagazineShotgunDrumEmpty
   - MagazineAsmgtUniversalEmpty
   # BulkRifleAmmo
   - NFAmmunitionBoxBigRifle20
@@ -493,6 +493,9 @@
   - NFMagazineGrenadeEmpty
   # NFPortableMicrofusionWeaponry
   - NFPortableRecharger
+  # Aurora Song - weapons
+  - ASWeaponBasinLasPistol
+  - ASWeaponKasyreLasRifle
 
 # region Engineering & Science
 - type: latheRecipePack

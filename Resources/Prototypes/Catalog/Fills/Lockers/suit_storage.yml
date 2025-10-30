@@ -335,17 +335,11 @@
   parent: SuitStorageBase
   suffix: Wizard
   components:
-  - type: EntityTableContainerFill
-    containers:
-      entity_storage: !type:NestedSelector
-        tableId: FillSuitStorageWizard
-
-- type: entityTable
-  id: FillSuitStorageWizard
-  table: !type:AllSelector
-    children:
-    - id: NFTankO2N2EqualFilled # Frontier OxygenTankFilled>NFTankO2N2EqualFilled
-    - id: ClothingMaskBreath
-    # TODO: Gone until reworked to have no space protection
-    #- id: ClothingOuterHardsuitWizard
-    #- id: JetpackVoidFilled
+  - type: StorageFill
+    contents:
+#        - id: OxygenTankFilled
+        - id: NFTankO2N2EqualFilled # Frontier
+        # TODO: Gone until reworked to have no space protection
+        - id: ClothingOuterHardsuitWizard #Aurora: Added hardsuit. May Alora enjoy wizard time
+        - id: ClothingMaskBreath
+        - id: JetpackBlackFilled # Frontier: JetpackVoidFilled<JetpackBlackFilled

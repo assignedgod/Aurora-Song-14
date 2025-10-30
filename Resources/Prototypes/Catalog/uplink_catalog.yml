@@ -859,7 +859,7 @@
   description: uplink-cyberpen-desc
   productEntity: CyberPen
   cost:
-    Telecrystal: 8 # Frontier: 1<8 - same price as an emag, should be more useful here
+    Telecrystal: 4 # Frontier: 1<8 - same price as an emag, should be more useful here
   categories:
   - UplinkDeception
 
@@ -945,24 +945,24 @@
   productEntity: AccessBreaker
   discountCategory: rareDiscounts
   discountDownTo:
-    Telecrystal: 2
+    Telecrystal: 3
   cost:
-    Telecrystal: 4
+    Telecrystal: 5 # Aurora - make unable to be acquired from one vendor
   categories:
   - UplinkDisruption
 
-# - type: listing # Frontier
-  # id: UplinkEmag
-  # name: uplink-emag-name
-  # description: uplink-emag-desc
-  # productEntity: Emag
-  # discountCategory: veryRareDiscounts
-  # discountDownTo:
-    # Telecrystal: 3
-  # cost:
-    # Telecrystal: 5
-  # categories:
-  # - UplinkDisruption
+- type: listing # Frontier
+  id: UplinkEmag
+  name: uplink-emag-name
+  description: uplink-emag-desc
+  productEntity: Emag
+  discountCategory: veryRareDiscounts
+  discountDownTo:
+   Telecrystal: 3
+  cost:
+   Telecrystal: 6
+  categories:
+  - UplinkDisruption
 
 - type: listing
   id: UplinkRadioJammer
@@ -1127,7 +1127,7 @@
   description: uplink-surplus-bundle-desc
   productEntity: CrateSyndicateSurplusBundle
   cost:
-    Telecrystal: 35 # Frontier: 20<35
+    Telecrystal: 30 # Frontier: 20<30
   categories:
   - UplinkDisruption
   conditions:
@@ -1744,11 +1744,6 @@
     Telecrystal: 12
   categories:
   - UplinkWearables
-  conditions:
-  - !type:StoreWhitelistCondition
-    whitelist:
-      tags:
-      - NukeOpsUplink
 
 - type: listing
   id: UplinkClothingOuterHardsuitJuggernaut
@@ -1979,9 +1974,9 @@
   productEntity: GatfruitSeeds
   discountCategory: usualDiscounts
   discountDownTo:
-    Telecrystal: 5 # Frontier: 3<5
+    Telecrystal: 2 # Frontier: 3<5
   cost:
-    Telecrystal: 10 # Frontier: 6<10 (all the time in the world)
+    Telecrystal: 4 # Frontier: 6<10 (all the time in the world). Aurora: Very silly to make this cost so much when you cannot make seeds with it
   categories:
   - UplinkWeaponry # Frontier: UplinkJob<UplinkWeaponry
   # conditions: # Frontier:

@@ -1,3 +1,4 @@
-﻿- type: codewordFaction
-  id: Traitor
-  generator: TraitorCodewordGenerator
+﻿#- type: codewordFaction
+#  id: Traitor
+#  generator: TraitorCodewordGenerator
+# We don't use this | Aurora

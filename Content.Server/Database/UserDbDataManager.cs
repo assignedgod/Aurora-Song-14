@@ -1,5 +1,17 @@
-﻿using System.Threading;
+// SPDX-FileCopyrightText: 2022 Veritius
+// SPDX-FileCopyrightText: 2023 Debug
+// SPDX-FileCopyrightText: 2023 Leon Friedrich
+// SPDX-FileCopyrightText: 2024 DEATHB4DEFEAT
+// SPDX-FileCopyrightText: 2024 FoxxoTrystan
+// SPDX-FileCopyrightText: 2024 Pierson Arnold
+// SPDX-FileCopyrightText: 2024 Pieter-Jan Briers
+// SPDX-FileCopyrightText: 2025 sleepyyapril
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+using System.Threading;
 using System.Threading.Tasks;
+using Content.Server._Floof.Consent;
 using Content.Server.Preferences.Managers;
 using Robust.Shared.Network;
 using Robust.Shared.Player;
@@ -18,6 +30,7 @@ namespace Content.Server.Database;
 public sealed class UserDbDataManager : IPostInjectInit
 {
     [Dependency] private readonly ILogManager _logManager = default!;
+    [Dependency] private readonly IServerConsentManager _consent = default!;
 
     private readonly Dictionary<NetUserId, UserData> _users = new();
     private readonly List<OnLoadPlayer> _onLoadPlayer = [];
@@ -50,6 +63,8 @@ public sealed class UserDbDataManager : IPostInjectInit
         data.Cancel.Cancel();
         data.Cancel.Dispose();
 
+        _consent.OnClientDisconnected(session);//Floofstation
+
         foreach (var onDisconnect in _onPlayerDisconnect)
         {
             onDisconnect(session);
@@ -68,6 +83,8 @@ public sealed class UserDbDataManager : IPostInjectInit
             {
                 tasks.Add(action(session, cancel));
             }
+
+            tasks.Add(_consent.LoadData(session, cancel));//Floofstation
 
             await Task.WhenAll(tasks);
 

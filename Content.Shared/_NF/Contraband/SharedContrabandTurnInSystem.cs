@@ -15,9 +15,9 @@ public abstract class SharedContrabandTurnInSystem : EntitySystem
     public void ClearContrabandValue(EntityUid item)
     {
         // Clear contraband value for printed items
-        if (TryComp<ContrabandComponent>(item, out var contraband))
+        if (TryComp<ContrabandComponent>(item, out var contraband) && contraband.TurnInValues is {} turnInValues)
         {
-            foreach (var valueKey in contraband.TurnInValues.Keys)
+            foreach (var valueKey in turnInValues.Keys)
             {
                 contraband.TurnInValues[valueKey] = 0;
             }
