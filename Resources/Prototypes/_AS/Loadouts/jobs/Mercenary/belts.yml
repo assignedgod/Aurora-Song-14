@@ -26,3 +26,9 @@
   equipment:
     belt: MedicRigMedical
 
+- type: loadout #Damnation
+  id: ClothingBeltSecurityWebbing
+  name: security carrier
+  price: 500
+  equipment:
+    belt: ClothingBeltMercenaryWebbing

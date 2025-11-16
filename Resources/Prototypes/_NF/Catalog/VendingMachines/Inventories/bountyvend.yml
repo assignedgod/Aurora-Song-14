@@ -33,6 +33,7 @@
     ClothingBackpackDuffelMercenary: 3
     ClothingBackpackSatchelMercenary: 3
     ClothingBackpackMessengerMercenary: 3
+    ClothingBeltSecurityWebbing: 3 # Damnation
 # Private Security
     ClothingHeadHatBeretSecurity: 3
     ClothingEyesGlassesSunglasses: 3
@@ -100,6 +101,7 @@
     ClothingBackpackDuffelMercenary: 3
     ClothingBackpackSatchelMercenary: 3
     ClothingBackpackMessengerMercenary: 3
+    ClothingBeltSecurityWebbing: 3 # Damnation
 # Private Security
     ClothingHeadHatBeretSecurity: 4294967295 # Infinite
     ClothingEyesGlassesSunglasses: 4294967295 # Infinite

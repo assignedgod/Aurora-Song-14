@@ -334,6 +334,8 @@
     netsync: false
     radius: 2
     color: green
+  - type: StaticPrice # Damnation
+    price: 75 # Damnation
 
 - type: entity
   parent: Lighter
@@ -389,6 +391,8 @@
         - ReagentId: WeldingFuel
           Quantity: 3
         maxVol: 3
+  - type: StaticPrice # Damnation
+    price: 5 # Damnation
 
 - type: entity
   parent: [BaseBrandedLighter, BaseC3SyndicateContraband] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband
@@ -409,6 +413,8 @@
     netsync: false
     radius: 2
     color: magenta
+  - type: StaticPrice # Damnation
+    price: 75 # Damnation
 
 - type: entity
   parent: [BaseBrandedLighter, BaseC3SyndicateContraband] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband
@@ -433,6 +439,8 @@
     netsync: false
     radius: 2
     color: cyan
+  - type: StaticPrice # Damnation
+    price: 75 # Damnation
 
 - type: entity
   parent: [BaseBrandedLighter]
@@ -463,6 +471,8 @@
         - ReagentId: Plasma
           Quantity: 10
         maxVol: 10
+  - type: StaticPrice # Damnation
+    price: 50 # Damnation
 
 - type: entity
   parent: [BaseBrandedLighter, BaseCentcommContraband]
@@ -549,6 +559,8 @@
     netsync: false
     radius: 2
     color: brown
+  - type: StaticPrice # Damnation
+    price: 50 # Damnation
 
 - type: entity
   parent: [BaseBrandedLighter]
@@ -594,6 +606,8 @@
     netsync: false
     radius: 2
     color: yellow
+  - type: StaticPrice # Damnation
+    price: 50 # Damnation
 
 - type: entity
   parent: [BaseBrandedLighter]
@@ -640,3 +654,5 @@
     netsync: false
     radius: 2
     color: orange
+  - type: StaticPrice # Damnation
+    price: 50 # Damnation

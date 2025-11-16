@@ -82,6 +82,8 @@
     sprite: Objects/Specific/Chapel/necronomicon.rsi
   - type: Item
     sprite: Objects/Specific/Chapel/necronomicon.rsi
+  - type: StaticPrice # Damnation
+    price: 90  # Damnation
 
 - type: entity
   parent: BaseAction

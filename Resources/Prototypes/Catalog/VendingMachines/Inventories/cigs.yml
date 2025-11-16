@@ -14,6 +14,8 @@
     CheapLighter: 4
     Lighter: 2
     FlippoLighter: 2
+    DiscountDanLighter: 3
+    WaffleCoFlippo: 3
     NFAshtray: 4
     SmokingPipe: 4 # Frontier
     TobaccoPouchBrownFilled: 2 # Frontier
@@ -25,3 +27,13 @@
     GroundTobacco: 3
     CigarGold: 2
     Igniter: 1
+    NanotrasenFlippo: 2
+    HonkCoFlippo: 2
+    DonkcoLighter: 2
+  emaggedInventory: # Damnation, GIVE US OUR ILLEGAL SMOKES
+    CigarPlatinumCase: 1 
+    CigPackSyndicate: 1
+    SyndicateFlippo: 2
+    CybersunFlippo: 2
+    InterdyneFlippo: 2
+    

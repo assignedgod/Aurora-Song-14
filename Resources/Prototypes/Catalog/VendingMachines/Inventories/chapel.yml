@@ -47,9 +47,16 @@
     DrinkWineBottleFull: 1
     ToyFigurineChaplain: 1
     ClothingNeckScarfStripedBlack: 3
+    BibleNanoTrasen: 3
+    BibleCommunistManifesto: 3
+    BibleDruid: 3
+    BibleTanakh: 3
   emaggedInventory:
     WoodenStake: 6 # Frontier
     ClothingOuterRobesCult: 3
     ClothingHeadHatHoodCulthood: 3
     ClothingShoesCult: 6
     BedsheetCult: 4
+    BibleNecronomicon: 2 # Damnation
+    BibleSatanic: 2 # Damnation
+    

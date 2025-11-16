@@ -1,5 +1,6 @@
 # TODO: make more categories
-# Guns
+# DAMNATION NOTE: Added regions to contravend for future ease in overhauling
+#region Guns
 
 - type: listing
   abstract: true # Frontier: moved to _NF uplink catalog
@@ -247,7 +248,7 @@
   categories:
   - UplinkWeaponry
 
-# Explosives
+#region Explosives
 
 # - type: listing # Frontier
   # id: UplinkExplosiveGrenade
@@ -493,7 +494,7 @@
   categories:
     - UplinkExplosives
 
-# Ammo
+#region Ammo
 
 - type: listing
   abstract: true # Frontier: moved to _NF uplink catalog
@@ -626,7 +627,7 @@
         components:
           - SurplusBundle
 
-#Chemicals
+#region Chemicals
 
 - type: listing
   id: UplinkHypopen
@@ -787,7 +788,7 @@
         components:
           - SurplusBundle
 
-# Deception
+#region Deception
 
 - type: listing
   id: UplinkAgentIDCard
@@ -936,7 +937,7 @@
   # categories:
   # - UplinkDeception
 
-# Disruption
+#region Disruption
 
 - type: listing
   id: UplinkAccessBreaker
@@ -1205,7 +1206,7 @@
   categories:
   - UplinkDisruption
 
-# Allies
+#region Allies
 
 - type: listing
   id: UplinkHoloparaKit
@@ -1363,7 +1364,7 @@
   - !type:ListingLimitedStockCondition
     stock: 1
 
-# Implants
+#region Implants
 
 - type: listing
   id: UplinkStorageImplanter
@@ -1562,7 +1563,7 @@
   - UplinkImplants
 
 
-# Wearables
+#region Wearables
 
 - type: listing
   id: UplinkJetpack
@@ -1796,7 +1797,7 @@
   categories:
     - UplinkWearables
 
- # Pointless
+ #region Pointless
 
 - type: listing
   id: UplinkBarberScissors
@@ -1965,7 +1966,7 @@
   - !type:ListingLimitedStockCondition
     stock: 3
 
-# Job Specific
+#region Job Specific
 
 - type: listing
   id: uplinkGatfruitSeeds
