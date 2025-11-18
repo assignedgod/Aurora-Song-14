@@ -1,0 +1,8 @@
+- type: entity
+  id: ArmBladeImplanter
+  name: tiger cooperative implanter
+  parent: BaseImplantOnlyImplanterSyndi
+  components:
+  - type: Implanter
+    implant: ArmBladeImplant
+    

@@ -1,0 +1,29 @@
+- type: entity
+  name: implanted arm blade
+  parent: BaseItem
+  id: ImplantedArmBlade
+  description: A grotesque blade made out of bone and flesh that can clumsily pry open doors and cleaves through people as a hot knife through butter.
+  components:
+  - type: Sharp
+  - type: Execution
+    doAfterDuration: 4.0
+  - type: Sprite
+    sprite: Objects/Weapons/Melee/armblade.rsi #TODO: alter sprite to cooler/violet palette, more novice in appearance.
+    state: icon
+  - type: MeleeWeapon
+    soundHit:
+      collection: AlienClaw
+    wideAnimationRotation: 90
+    attackRate: 0.9 #slightly slower, slash/pierce is hard to treat at the moment because bloodloss will usually always kill.
+    damage:
+      types: # Same as energy sword, but slash/pierce instead of slash/heat
+        Slash: 15
+        Piercing: 15
+        Structural: 20
+  - type: Item
+    size: Normal
+    sprite: Objects/Weapons/Melee/armblade.rsi
+  - type: Prying
+    speedModifier: .85 # Slower than crowbar, clumsy for non-changelings to use.
+    pryPowered: true
+    

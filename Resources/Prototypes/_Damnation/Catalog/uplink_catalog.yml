@@ -1,0 +1,14 @@
+- type: listing
+  id: UplinkArmBladeImplanter
+  name: uplink-armblade-implanter-name
+  description: uplink-armblade-implanter-desc
+  icon: { sprite: /Textures/Interface/Actions/changeling.rsi, state: armblade }
+  productEntity: ArmBladeImplanter
+  discountCategory: rareDiscounts
+  discountDownTo:
+    Telecrystal: 8
+  cost:
+    Telecrystal: 10
+  categories:
+    - UplinkImplants
+    

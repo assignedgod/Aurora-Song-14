@@ -1,0 +1,12 @@
+- type: entity
+  parent: BaseSubdermalImplant
+  id: ArmBladeImplant
+  name: arm blade implant
+  description: This implant grants the user the ability to shape their limbs into crude, deadly blades.
+  categories: [ HideSpawnMenu ]
+  components:
+    - type: SubdermalImplant
+      implantAction: ActionRetractableItemImplantedArmBlade
+    - type: Tag
+      tags:
+      - Changeling
