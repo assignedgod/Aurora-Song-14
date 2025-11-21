@@ -14,8 +14,8 @@
   contrabandInventory: # Damnation
     MagicalLamp: 1
     FireballZine: 1
-    KnockZine: 1
-    #BlinkZine: 1 #removed at server owner's request
+    #KnockZine: 1 #removed at server owner's request
+    BlinkZine: 1 
   emaggedInventory: #Damnation
     ClothingOuterHardsuitWizard: 1
     #TODO:
