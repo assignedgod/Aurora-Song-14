@@ -7,9 +7,9 @@
   components:
     - type: SubdermalImplant
       implantAction: ActionRetractableItemImplantedArmBlade
-    - type: Tag
-      tags:
-      - Changeling
+    #- type: Tag #removing this
+      #tags:
+      #- Changeling
 
 - type: entity
   parent: BaseSubdermalImplant
