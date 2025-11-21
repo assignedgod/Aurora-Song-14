@@ -1,15 +1,15 @@
 # region Upstream
 # Guns
-- type: listing
-  id: UplinkNFPistolViper
-  name: uplink-pistol-viper-name
-  description: uplink-pistol-viper-desc
-  productEntity: NFWeaponPistolViper
-  discountCategory: rareDiscounts
-  cost:
-    Telecrystal: 3
-  categories:
-  - UplinkWeaponry
+#- type: listing #Damnation; very common pistol through expeds/uiv/vroids and dungeon loot spawners, 3TC is silly
+  #id: UplinkNFPistolViper
+  #name: uplink-pistol-viper-name
+  #description: uplink-pistol-viper-desc
+  #productEntity: NFWeaponPistolViper
+  #discountCategory: rareDiscounts
+  #cost:
+    #Telecrystal: 3
+  #categories:
+  #- UplinkWeaponry
 
 - type: listing
   id: UplinkNFRevolverPython
@@ -33,7 +33,7 @@
   categories:
   - UplinkWeaponry
 
-- type: listing
+- type: listing #Damnation, mosin stays- gotta have my mosin
   id: UplinkNFRifleBarlows
   name: uplink-rifle-mosin-name
   description: uplink-rifle-mosin-desc
@@ -44,27 +44,27 @@
   - UplinkWeaponry
 
 # Ammo
-- type: listing
-  id: UplinkNFPistol9mmMagazine
-  name: uplink-pistol-magazine-name
-  description: uplink-pistol-magazine-desc
-  icon: { sprite: /Textures/Objects/Weapons/Guns/Ammunition/Magazine/Pistol/pistol_mag.rsi, state: red-icon }
-  productEntity: NFMagazinePistol35
-  cost:
-    Telecrystal: 1
-  categories:
-  - UplinkAmmo
+#- type: listing #Damnation; anyone with means to access a contravend/surplus crate will already have means to print ammo/mags- this exists mostly for station-based play, which frontier forks are not.
+  #id: UplinkNFPistol9mmMagazine
+  #name: uplink-pistol-magazine-name
+  #description: uplink-pistol-magazine-desc
+  #icon: { sprite: /Textures/Objects/Weapons/Guns/Ammunition/Magazine/Pistol/pistol_mag.rsi, state: red-icon }
+  #productEntity: NFMagazinePistol35
+  #cost:
+    #Telecrystal: 1
+  #categories:
+  #- UplinkAmmo
 
-- type: listing
-  id: UplinkNFMagazinePistolSubMachineGun
-  name: uplink-pistol-magazine-c20r-name
-  description: uplink-pistol-magazine-c20r-desc
-  icon: { sprite: /Textures/Objects/Weapons/Guns/Ammunition/Magazine/Pistol/smg_mag.rsi, state: red-icon }
-  productEntity: NFMagazineSubMachineGun35
-  cost:
-    Telecrystal: 2
-  categories:
-  - UplinkAmmo
+#- type: listing #Damnation; anyone with means to access a contravend/surplus crate will already have means to print ammo/mags- this exists mostly for station-based play, which frontier forks are not.
+  #id: UplinkNFMagazinePistolSubMachineGun
+  #name: uplink-pistol-magazine-c20r-name
+  #description: uplink-pistol-magazine-c20r-desc
+  #icon: { sprite: /Textures/Objects/Weapons/Guns/Ammunition/Magazine/Pistol/smg_mag.rsi, state: red-icon }
+  #productEntity: NFMagazineSubMachineGun35
+  #cost:
+    #Telecrystal: 2
+  #categories:
+  #- UplinkAmmo
 
 - type: listing
   id: UplinkNFMagazineShotgunPellet
@@ -75,7 +75,8 @@
   cost:
     Telecrystal: 2
   categories:
-    - UplinkAmmo
+  - UplinkWeaponry #Damnation; Consolidating tabs/categories
+    #- UplinkAmmo #Damnation
 
 - type: listing
   id: UplinkNFMagazineShotgunSlug
@@ -86,7 +87,8 @@
   cost:
     Telecrystal: 3
   categories:
-    - UplinkAmmo
+  - UplinkWeaponry #Damnation; Consolidating tabs/categories
+    #- UplinkAmmo #Damnation
 
 - type: listing
   id: UplinkNFMagazinePistolCaselessRifle
@@ -97,29 +99,30 @@
   cost:
     Telecrystal: 1
   categories:
-  - UplinkAmmo
+  - UplinkWeaponry #Damnation; Consolidating tabs/categories
+  #- UplinkAmmo #Damnation
 
-- type: listing
-  id: UplinkNFSpeedLoaderMagnum
-  name: uplink-speedloader-magnum-non-ap-name
-  description: uplink-speedloader-magnum-non-ap-desc # Frontier: uplink-speedloader-magnu-desc<uplink-speedloader-magnum-non-ap-desc
-  icon: { sprite: /Textures/Objects/Weapons/Guns/Ammunition/SpeedLoaders/Magnum/magnum_speed_loader.rsi, state: icon }
-  productEntity: NFSpeedLoaderPistol45
-  cost:
-    Telecrystal: 3
-  categories:
-  - UplinkAmmo
+#- type: listing  #Damnation; anyone with means to access a contravend/surplus crate will already have means to print ammo/mags- this exists mostly for station-based play, which frontier forks are not.
+  #id: UplinkNFSpeedLoaderMagnum
+  #name: uplink-speedloader-magnum-non-ap-name
+  #description: uplink-speedloader-magnum-non-ap-desc # Frontier: uplink-speedloader-magnu-desc<uplink-speedloader-magnum-non-ap-desc
+  #icon: { sprite: /Textures/Objects/Weapons/Guns/Ammunition/SpeedLoaders/Magnum/magnum_speed_loader.rsi, state: icon }
+  #productEntity: NFSpeedLoaderPistol45
+  #cost:
+    #Telecrystal: 3
+  #categories:
+  #- UplinkAmmo
 
-- type: listing
-  id: UplinkNFMosinAmmo
-  name: uplink-mosin-ammo-name
-  description: uplink-mosin-ammo-desc
-  icon: { sprite: /Textures/_NF/Objects/Weapons/Guns/Ammunition/Boxes/rifle.rsi, state: icon-30 }
-  productEntity: NFAmmunitionBoxRifle30
-  cost:
-    Telecrystal: 1
-  categories:
-  - UplinkAmmo
+#- type: listing #Damnation; anyone with means to access a contravend/surplus crate will already have means to print ammo/mags- this exists mostly for station-based play, which frontier forks are not.
+  #id: UplinkNFMosinAmmo
+  #name: uplink-mosin-ammo-name
+  #description: uplink-mosin-ammo-desc
+  #icon: { sprite: /Textures/_NF/Objects/Weapons/Guns/Ammunition/Boxes/rifle.rsi, state: icon-30 }
+  #productEntity: NFAmmunitionBoxRifle30
+  #cost:
+    #Telecrystal: 1
+  #categories:
+  #- UplinkAmmo
 
 - type: listing
   id: UplinkNFHristovAmmo
@@ -130,7 +133,8 @@
   cost:
     Telecrystal: 2
   categories:
-  - UplinkAmmo
+  - UplinkWeaponry #Damnation; Consolidating tabs/categories
+  #- UplinkAmmo #Damnation
 
 # region Frontier
 - type: listing
@@ -140,7 +144,7 @@
   icon: { sprite: /Textures/Objects/Weapons/Guns/Launchers/china_lake.rsi, state: icon }
   productEntity: ClothingBackpackDuffelSyndicateFilledEmpGrenadeLauncher
   cost:
-    Telecrystal: 25
+    Telecrystal: 20 #Damnation, 25 > 20; explosive variant re-added, more expensive
   categories:
   - UplinkWeaponry
 
@@ -153,7 +157,7 @@
   cost:
     Telecrystal: 1
   categories:
-    - UplinkPointless
+  - UplinkPointless
 
 - type: listing
   id: UplinkEmagPass
@@ -177,4 +181,4 @@
   cost:
     Telecrystal: 10
   categories:
-    - UplinkPointless
+  - UplinkPointless

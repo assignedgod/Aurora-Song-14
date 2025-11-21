@@ -6,7 +6,7 @@
     name: store-preset-name-uplink
     categories:
     - UplinkWeaponry
-    - UplinkAmmo
+    #- UplinkAmmo #Damnation; Consolidating ammo + weaponry, as normal ammo + mags are far easier to come across in a shuttle fork- but specialty magazines such as the bulldog drums/cobra .25 mags are still necessary
     - UplinkExplosives
     - UplinkChemicals
     - UplinkDeception

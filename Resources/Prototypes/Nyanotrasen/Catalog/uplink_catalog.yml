@@ -12,15 +12,15 @@
   #   whitelist:
   #   - Oni
 
-- type: listing
-  id: UplinkRickenbacker
-  name: uplink-rickenbacker4001-name
-  description: uplink-rickenbacker4001-desc
-  productEntity: Rickenbacker4001Instrument
-  cost:
-    Telecrystal: 10
-  categories:
-  - UplinkWeaponry
+#- type: listing #Damnation; available through manager wire of instrument vends, 10tc is very silly
+  #id: UplinkRickenbacker
+  #name: uplink-rickenbacker4001-name
+  #description: uplink-rickenbacker4001-desc
+  #productEntity: Rickenbacker4001Instrument
+  #cost:
+    #Telecrystal: 10
+  #categories:
+  #- UplinkWeaponry
   # conditions: # Frontier: no musicians
   # - !type:BuyerJobCondition
   #   whitelist:

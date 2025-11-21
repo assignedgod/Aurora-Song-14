@@ -10,3 +10,21 @@
     - type: Tag
       tags:
       - Changeling
+
+- type: entity
+  parent: BaseSubdermalImplant
+  id: MicroJetImplant
+  name: micro-jet implant
+  description: This implant sets a number of small thrusters into the user's skin, allowing for quick leaps while under gravity.
+  categories: [ HideSpawnMenu ]
+  components:
+    #- type: SubdermalImplant
+      #implantAction: ActionGravityJump #maybe can remove? idk, we'll see
+    - type: AddComponentsImplant
+      componentsToAdd:
+      - type: ActionGrant
+        actions:
+          - ActionGravityJump
+      - type: JumpAbility
+        jumpDistance: 4
+        jumpSound: /Audio/Effects/stealthoff.ogg

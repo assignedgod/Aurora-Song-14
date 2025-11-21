@@ -5,4 +5,11 @@
   components:
   - type: Implanter
     implant: ArmBladeImplant
-    
+  
+- type: entity
+  id: MicroJetImplanter
+  name: micro-jet implanter
+  parent: BaseImplantOnlyImplanterSyndi
+  components:
+  - type: Implanter
+    implant: MicroJetImplant
