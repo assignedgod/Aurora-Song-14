@@ -25,30 +25,30 @@
     - type: StaticPrice # Damnation
       price: 250 # Damnation
 
-- type: entity
-  id: KnockZine
-  name: knock for dummies
-  parent: BaseSpellbook
-  description: A thick "zine" describing the simple basics of opening doors through expectedly complicated thaumaturgy.
-  components:
-    - type: Sprite
-      sprite: Objects/Misc/books.rsi
-      layers:
-      - state: paper
-      - state: cover_strong
-        color: "#117045"
-      - state: decor_wingette_circle
-        color: gold
-      - state: icon_magic_knock
-      - state: detail_rivets
-        color: gold
-      - state: detail_bookmark
-        color: "#98c495"
-    - type: Spellbook
-      spellActions:
-        ActionKnock: 3
-    - type: StaticPrice # Damnation
-      price: 250 # Damnation
+#- type: entity
+  #id: KnockZine #Damnation; removed at server owner's request
+  #name: knock for dummies
+  #parent: BaseSpellbook
+  #description: A thick "zine" describing the simple basics of opening doors through expectedly complicated thaumaturgy.
+  #components:
+    #- type: Sprite
+      #sprite: Objects/Misc/books.rsi
+      #layers:
+      #- state: paper
+      #- state: cover_strong
+        #color: "#117045"
+      #- state: decor_wingette_circle
+        #color: gold
+      #- state: icon_magic_knock
+      #- state: detail_rivets
+        #color: gold
+      #- state: detail_bookmark
+        #color: "#98c495"
+    #- type: Spellbook
+      #pellActions:
+        #ActionKnock: 3
+    #- type: StaticPrice # Damnation
+      #price: 250 # Damnation
 
 - type: entity
   id: BlinkZine

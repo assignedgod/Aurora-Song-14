@@ -15,7 +15,7 @@
     MagicalLamp: 1
     FireballZine: 1
     KnockZine: 1
-    BlinkZine: 1
+    #BlinkZine: 1 #removed at server owner's request
   emaggedInventory: #Damnation
     ClothingOuterHardsuitWizard: 1
     #TODO:
