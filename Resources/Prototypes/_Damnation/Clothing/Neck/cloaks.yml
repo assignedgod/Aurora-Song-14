@@ -21,7 +21,7 @@
       passiveVisibilityRate: -0.37
       movementVisibilityRate: 0.20 # adjacent to stealth box, but no silent footsteps
   - type: PowerCellDraw
-    drawRate: 4 # 180 seconds on the starter cell
+    drawRate: 4 # 270 seconds on the starter cell
   - type: ToggleCellDraw
   - type: ExaminableBattery
   - type: PowerCellSlot
@@ -33,6 +33,6 @@
     slots:
       cell_slot:
         name: power-cell-slot-component-slot-name-default
-        startingItem: PowerCellMicroreactor
+        startingItem: PowerCellHigh
         disableEject: false
         swap: true #allows for on-the-fly recharge if the micro recharge rate isn't fast enough for hijinks, + getting more hijink mileage out of the rare antique power cells if one were lucky.
