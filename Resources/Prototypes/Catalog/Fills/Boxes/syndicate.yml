@@ -29,8 +29,8 @@
       - id: ClothingEyesGlassesChemical
       - id: VestineChemistryVial
         amount: 3 # Aurora: 3>4
-      - id: BaseChemistryEmptyVial # Aurora: Put 2 vials in again
-        amount: 2
+      - id: BaseChemistryEmptyVial # Aurora: 2:1
+        amount: 1
       - id: SyringeStimulants
 
 - type: entity
