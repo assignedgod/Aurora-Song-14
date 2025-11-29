@@ -28,7 +28,7 @@
       # It would be cool to have special "syndicate" chemical analysis goggles
       - id: ClothingEyesGlassesChemical
       - id: VestineChemistryVial
-        amount: 3 # Aurora: Increase to 3
+        amount: 3 # Aurora: 3>4
       - id: BaseChemistryEmptyVial # Aurora: Put 2 vials in again
         amount: 2
       - id: SyringeStimulants
