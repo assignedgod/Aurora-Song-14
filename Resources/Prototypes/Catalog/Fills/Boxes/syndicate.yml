@@ -28,8 +28,9 @@
       # It would be cool to have special "syndicate" chemical analysis goggles
       - id: ClothingEyesGlassesChemical
       - id: VestineChemistryVial
-        amount: 4 #Damnation, 2 > 4; removing noct bottle from uplink to encourage chemistry engagement/remove a costy item from the uplink which is easier to obtain in frontier forks.
-      #- id: BaseChemistryEmptyVial # Damnation- not enough room and there's already vials + beakers in this thing, empty one out and use that.
+        amount: 3 # Aurora: Increase to 3
+      - id: BaseChemistryEmptyVial # Aurora: Put 2 vials in again
+        amount: 2
       - id: SyringeStimulants
 
 - type: entity
