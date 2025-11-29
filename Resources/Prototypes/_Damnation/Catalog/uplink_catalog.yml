@@ -1,4 +1,4 @@
-#- type: listing
+#- type: listing # Aurora
 #  id: UplinkArmBladeImplanter
 #  name: uplink-armblade-implanter-name
 #  description: uplink-armblade-implanter-desc
@@ -12,19 +12,19 @@
 #  categories:
 #    - UplinkImplants
 
-- type: listing
-  id: UplinkMicroJetImplanter
-  name: uplink-micro-jet-implanter-name
-  description: uplink-micro-jet-implanter-desc
-  icon: { sprite: /Textures/Interface/Actions/jump.rsi, state: icon }
-  productEntity: MicroJetImplanter
-  discountCategory: rareDiscounts
-  discountDownTo:
-    Telecrystal: 3
-  cost:
-    Telecrystal: 4
-  categories:
-    - UplinkImplants
+# - type: listing # Aurora
+#   id: UplinkMicroJetImplanter
+#   name: uplink-micro-jet-implanter-name
+#   description: uplink-micro-jet-implanter-desc
+#   icon: { sprite: /Textures/Interface/Actions/jump.rsi, state: icon }
+#   productEntity: MicroJetImplanter
+#   discountCategory: rareDiscounts
+#   discountDownTo:
+#     Telecrystal: 3
+#   cost:
+#     Telecrystal: 4
+#   categories:
+#     - UplinkImplants
 
 - type: listing
   id: UplinkPhantomCloakingUnit

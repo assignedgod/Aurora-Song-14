@@ -8,9 +8,9 @@
     sprite: _Damnation/Clothing/Neck/Cloaks/phantomcloak.rsi
   - type: Clothing
     sprite: _Damnation/Clothing/Neck/Cloaks/phantomcloak.rsi
-  - type: ItemToggle # needed or action toggle doesn't function
-  - type: ToggleClothing 
-    action: ActionTogglePhantomCloak 
+  - type: ItemToggle
+  - type: ToggleClothing
+    action: ActionTogglePhantomCloak
     disableOnUnequip: true
   - type: ComponentToggler
     parent: true
@@ -21,7 +21,7 @@
       passiveVisibilityRate: -0.37
       movementVisibilityRate: 0.20 # adjacent to stealth box, but no silent footsteps
   - type: PowerCellDraw
-    drawRate: 4 # 270 seconds on the starter cell
+    drawRate: 4
   - type: ToggleCellDraw
   - type: ExaminableBattery
   - type: PowerCellSlot
@@ -33,6 +33,16 @@
     slots:
       cell_slot:
         name: power-cell-slot-component-slot-name-default
-        startingItem: PowerCellHigh
+        startingItem: PowerCellMedium # Aurora: Start with a short burst, work your way up
         disableEject: false
-        swap: true #allows for on-the-fly recharge if the micro recharge rate isn't fast enough for hijinks, + getting more hijink mileage out of the rare antique power cells if one were lucky.
+        swap: true
+        whitelist: # Aurora: Disallow micros. Power draw 4 only draws 4 power per second: Micros recharge more than this.
+          tags:
+          - PowerCellSmall
+          - PowerCellMedium
+          - PowerCellHigh
+          - PowerCellHyper
+        blacklist:
+          tags:
+          - PowerCellAntique
+          - PowerCellFusion
