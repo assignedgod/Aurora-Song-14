@@ -11,13 +11,13 @@
     ClothingHeadHelmetWizardHelm: 3
     ClothingShoesWizard: 9
 
-  contrabandInventory: # Damnation
-    MagicalLamp: 1
-    FireballZine: 1
-    #KnockZine: 1 #removed at server owner's request
-    BlinkZine: 1 
-  emaggedInventory: #Damnation
-    ClothingOuterHardsuitWizard: 1
+ # contrabandInventory: # Damnation #Aurora: Commented out, not going to add these without more testing
+ #   MagicalLamp: 1
+ #   FireballZine: 1
+ #   #KnockZine: 1 #removed at server owner's request
+ #   BlinkZine: 1
+ # emaggedInventory: #Damnation # We aren't adding this to magivends
+ #   ClothingOuterHardsuitWizard: 1
     #TODO:
     #only missing staff
     #and if wizarditis reagent when hacked if we want this.
