@@ -4,4 +4,4 @@
   applyMaterialDiscount: false
   completetime: 0.06 # Frontier: 0<0.06 (~2/30)
   materials:
-    Anomalite: 35
+    Anomalite: 30
