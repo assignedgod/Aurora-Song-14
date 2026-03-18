@@ -303,7 +303,7 @@
     activeSound:
       path: /Audio/Weapons/ebladehum.ogg
       params:
-        volume: 3
+        volume: 0 # Aurora: 3>0
   - type: ComponentToggler
     components:
     - type: Sharp
