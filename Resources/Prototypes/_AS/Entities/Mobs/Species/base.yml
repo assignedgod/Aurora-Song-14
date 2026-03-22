@@ -58,3 +58,12 @@
   - type: FireVisuals
     alternateState: Standing
   - type: StunVisuals
+  - type: Internals
+  - type:
+    MinSaturation: 0
+    damage:
+      types:
+        Asphyxiation: 1.0
+    damageRecovery:
+      types:
+        Asphyxiation: -1.0
