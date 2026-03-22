@@ -60,10 +60,9 @@
   - type: StunVisuals
   - type: Internals
   - type: Respirator
-    MinSaturation: 0.0
     damage:
       types:
-        Asphyxiation: 1.0
+        Asphyxiation: 0.0
     damageRecovery:
       types:
         Asphyxiation: -1.0
