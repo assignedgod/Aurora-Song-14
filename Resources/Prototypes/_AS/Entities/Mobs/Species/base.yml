@@ -59,7 +59,7 @@
     alternateState: Standing
   - type: StunVisuals
   - type: Internals
-  - type:
+  - type: Respirator
     MinSaturation: 0
     damage:
       types:
