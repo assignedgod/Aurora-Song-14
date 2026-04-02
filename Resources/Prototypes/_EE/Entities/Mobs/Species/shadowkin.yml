@@ -14,7 +14,7 @@
             damage: 300
           behaviors:
             - !type:GibBehavior {}
-            #- !type:SpawnEntitiesBehavior
+            #- !type:SpawnEntitiesBehavior # Aurora Song: No Psionics
             #  spawn:
             #    ShadowkinShadow:
             #      min: 1
@@ -90,7 +90,7 @@
 #        Brute:
 #          sprite: Mobs/Effects/brute_damage.rsi
 #          color: "#1c1624"
-    - type: Barotrauma
+    - type: Barotrauma # Aurora: They can handle lower pressures for a bit longer
       damage:
         types:
           Blunt: 0.35 # per second, scales with pressure and other constants.
@@ -102,7 +102,7 @@
         types:
           Bloodloss: -0.25
       bloodReagent: BlackBlood
-    - type: Temperature
+    - type: Temperature # Aurora: They can handle colder temps
       heatDamageThreshold: 330
       coldDamageThreshold: 195
       currentTemperature: 310.15
