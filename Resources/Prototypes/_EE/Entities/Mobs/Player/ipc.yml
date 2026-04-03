@@ -37,6 +37,7 @@
     factions:
       - NanoTrasen
   - type: StandingState
+  - type: Crawler
   - type: MobState
     allowedStates:
       - Alive
@@ -110,7 +111,11 @@
   - type: CombatMode # DeltaV - let IPCs disarm
     canDisarm: true
   - type: SnoutHelmet # DeltaV - IPC Snouts
-    replacementRace: vulpkanin
+  #  replacementRace: vulpkanin # Aurora's Song - Refactored helmet component
+  - type: Wagging # Aurora's Song - Add wagging
+  - type: DamagedSiliconAccent # Aurora's Song - Add silicon accent
+    enableChargeCorruption: false
+    damageAtMaxCorruption: 200
 
 - type: entity
   save: false

@@ -33,6 +33,7 @@
     - Binary
     - Common
     - Traffic
+    - Shipboard
     - Science
     - Supply
     - Engineering
@@ -46,6 +47,7 @@
     - Supply
     - Engineering
     - Medical
+    - Shipboard
   - type: IgnoreUIRange
   - type: StationAiHeld
   - type: StationAiOverlay
@@ -180,7 +182,7 @@
 
 - type: entity
   id: BorgChassisShipmind
-  parent: [BaseBorgChassisSyndicate, ShowMedicalIcons]
+  parent: [BaseBorgChassisNotIonStormable, ShowMedicalIcons]
   name: Remote Shipmind Cyborg
   description: An advanced cyborg chassis designed to be remote controlled by a Shipmind
   components:
@@ -223,7 +225,7 @@
         borg_brain:
           - AiRemoteBrain
         borg_module:
-          - ShipmindModuleHand
+          - ShipmindModuleTool
           - ShipmindModuleSpaceMovement
           - ShipmindModuleCombat
     - type: ItemSlots
@@ -235,3 +237,56 @@
       mindRole: "MindRoleSiliconBrain"
       silent: true
     - type: AiRemoteController
+    - type: LockingWhitelist
+      blacklist:
+        components:
+        - RoboticsConsole # Lets them unlock other borgs
+ # Below is things from its previous parenting of BaseBorgChassisSyndicate, minus antag icons, to make it not an ion storm target
+    - type: MovementAlwaysTouching
+    - type: Speech
+      speechSounds: SyndieBorg
+      allowedEmotes:
+        - Laugh
+        - Scream
+    - type: Vocal
+      sounds:
+        Unsexed: UnisexSiliconSyndicate
+    - type: PointLight
+      color: "#dd200b"
+      radius: 8
+    - type: Stripping # They have hands, let them put hats on their borgs. Or take things off people.
+    - type: MobThresholds
+      thresholds:
+        0: Alive
+        150: Critical # 50% chunkier than a standard borg
+        300: Dead
+    - type: Damageable
+      damageModifierSet: MobHostileDamageModifierSetHigh # And a smattering of light resists (I'm not sure why the modifier set is labeled 'high')
+    - type: Destructible
+      thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 100
+        behaviors:
+        - !type:PlaySoundBehavior
+          sound:
+            path: /Audio/Machines/warning_buzzer.ogg
+            params:
+              volume: 5
+      - trigger:
+          !type:DamageTrigger
+          damage: 450
+        behaviors:
+        - !type:PlaySoundBehavior
+          sound:
+            collection: MetalBreak
+        - !type:EmptyContainersBehaviour
+          containers:
+          - borg_brain
+          - borg_module
+          - cell_slot
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+    - type: NpcFactionMember # Turns out not having a faction means you are friendly to everything
+      factions:
+      - NanoTrasen
