@@ -1414,7 +1414,7 @@ namespace Content.Client.Lobby.UI
             Profile = Profile?.WithSpawnPriorityPreference(newSpawnPriority);
             SetDirty();
         }
-// Aurora: Sliders
+        // Aurora: Sliders
         private void SetHeight(float newHeight)
         {
             if (Profile != null &&
@@ -1717,7 +1717,8 @@ namespace Content.Client.Lobby.UI
 
             SpawnPriorityButton.SelectId((int) Profile.SpawnPriority);
         }
-// Aurora Song: Height and Width Sliders
+        // Aurora Song: Height and Width Sliders
+
         private void UpdateHeightControls()
         {
             if (Profile == null || HeightSlider == null)
@@ -1749,6 +1750,7 @@ namespace Content.Client.Lobby.UI
             }
         }
         // Aurora Song: Height and Width Sliders End
+
         private void UpdateHairPickers()
         {
             if (Profile == null)
