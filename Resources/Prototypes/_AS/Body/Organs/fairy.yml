@@ -50,7 +50,7 @@
             - ReagentId: Sugar
               Quantity: 5
     - type: Metabolizer
-      metabolizerTypes: [ Human ]
+      metabolizerTypes: [Human, Fairy]
       updateInterval: 1.5
       groups:
         - id: Food
@@ -110,14 +110,15 @@
   - type: Metabolizer
     updateInterval: 1.5
     maxReagents: 2
-    metabolizerTypes: [ Fairy ]
+    metabolizerTypes: [Human, Fairy]
     groups:
     - id: Medicine
-      rateModifier: 0.1
+      rateModifier: 0.2
     - id: Cryogenic # Frontier
-      rateModifier: 0.1
+      rateModifier: 0.2
     - id: Poison
-      rateModifier: 0.1
+      rateModifier: 0.4
+      scaleModifier: 2 # Stop infinite fairy chems fr, also make them weak to poisons
     - id: Narcotic
       scaleModifier: 10 # because low rate mods stop narcotics from accumulating correctly presently, we use scale
 
@@ -136,10 +137,10 @@
   - type: Metabolizer # The liver metabolizes certain chemicals only, like alcohol.
     updateInterval: 1.5
     maxReagents: 1
-    metabolizerTypes: [Animal, Fairy]
+    metabolizerTypes: [Human, Fairy]
     groups:
     - id: Alcohol
-      rateModifier: 0.1 # removes alcohol very slowly along with the stomach removing it as a drink
+      rateModifier: 0.5 # removes alcohol very slowly along with the stomach removing it as a drink
 
 - type: entity
   id: OrganFairyKidneys
@@ -159,14 +160,5 @@
   - type: Metabolizer
     updateInterval: 1.5
     maxReagents: 5
-    metabolizerTypes: [Animal]
+    metabolizerTypes: [Human, Fairy]
     removeEmpty: true
-    groups:
-    - id: Medicine
-      rateModifier: 0.2
-    - id: Cryogenic # Frontier
-      rateModifier: 0.2
-    - id: Poison
-      rateModifier: 0.2
-    - id: Narcotic
-      rateModifier: 0.2
