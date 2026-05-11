@@ -114,13 +114,15 @@
     groups:
     - id: Medicine
       rateModifier: 0.2
-    - id: Cryogenic # Frontier
+      scaleModifier: 5
+    - id: Cryogenic
       rateModifier: 0.2
+      scaleModifier: 5
     - id: Poison
-      rateModifier: 0.4
-      scaleModifier: 2 # Stop infinite fairy chems fr, also make them weak to poisons
+      rateModifier: 0.2
+      scaleModifier: 5 # Stop infinite fairy chems fr, also make them weak to poisons
     - id: Narcotic
-      scaleModifier: 10 # because low rate mods stop narcotics from accumulating correctly presently, we use scale
+      scaleModifier: 5 # because low rate mods stop narcotics from accumulating correctly presently, scale only. Also makes things like tear gas and noct hit them harder
 
 - type: entity
   id: OrganFairyLiver

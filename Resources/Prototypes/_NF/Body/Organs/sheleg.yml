@@ -118,12 +118,16 @@
     groups:
     - id: Sheleg
       rateModifier: 0.20
+      scaleModifier: 5 # Aurora: Fix sheleg chems
     - id: Cryogenic
       rateModifier: 0.20
+      scaleModifier: 5 # Aurora: Fix sheleg chems
     - id: Poison
       rateModifier: 0.20
+      scaleModifier: 5 # Aurora: Fix sheleg chems
     - id: Narcotic
       rateModifier: 0.20
+      scaleModifier: 5 # Aurora: Fix sheleg chems
 
 - type: entity
   id: OrganShelegStomach
