@@ -1,5 +1,4 @@
-﻿
-- type: reaction
+﻿- type: reaction
   id: Purge
   impact: Medium
   reactants:
