@@ -1,0 +1,11 @@
+- type: entity
+  parent: MobShadowkin
+  id: MobShadowkinRandom
+  name: Urist McShadowkin
+  suffix: Random Appearance
+  components:
+  - type: RandomHumanoidAppearance
+  - type: RandomMetadata
+    nameSegments:
+    - NamesShadowkin
+    nameFormat: random-metadata-name-format-default
