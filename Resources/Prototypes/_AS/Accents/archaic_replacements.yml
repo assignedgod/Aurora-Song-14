@@ -44,18 +44,18 @@
     accent-archaic-words-24-2: accent-archaic-words-replace-24
     accent-archaic-words-25: accent-archaic-words-replace-25
     accent-archaic-words-25-2: accent-archaic-words-replace-25
-    accent-archaic-words-26: accent-archaic-words-replace-26
-    accent-archaic-words-26-2: accent-archaic-words-replace-26
-    accent-archaic-words-26-3: accent-archaic-words-replace-26
-    accent-archaic-words-26-4: accent-archaic-words-replace-26
-    accent-archaic-words-26-5: accent-archaic-words-replace-26
-    accent-archaic-words-27: accent-archaic-words-replace-27
-    accent-archaic-words-27-2: accent-archaic-words-replace-27
-    accent-archaic-words-27-3: accent-archaic-words-replace-27
-    accent-archaic-words-27-4: accent-archaic-words-replace-27
-    accent-archaic-words-27-5: accent-archaic-words-replace-27
-    accent-archaic-words-28: accent-archaic-words-replace-28
-    accent-archaic-words-28-2: accent-archaic-words-replace-28
+    # accent-archaic-words-26: accent-archaic-words-replace-26 #Aurora Song: 26/27 all ascribe gun as "Inelegant weapon", changing intent
+    # accent-archaic-words-26-2: accent-archaic-words-replace-26
+    # accent-archaic-words-26-3: accent-archaic-words-replace-26
+    # accent-archaic-words-26-4: accent-archaic-words-replace-26
+    # accent-archaic-words-26-5: accent-archaic-words-replace-26
+    # accent-archaic-words-27: accent-archaic-words-replace-27
+    # accent-archaic-words-27-2: accent-archaic-words-replace-27
+    # accent-archaic-words-27-3: accent-archaic-words-replace-27
+    # accent-archaic-words-27-4: accent-archaic-words-replace-27
+    # accent-archaic-words-27-5: accent-archaic-words-replace-27
+    # accent-archaic-words-28: accent-archaic-words-replace-28 #Aurora Song: Hydroponics and Botany -> Peasants isn't an equivilant
+    # accent-archaic-words-28-2: accent-archaic-words-replace-28
     accent-archaic-words-29: accent-archaic-words-replace-29
     accent-archaic-words-30: accent-archaic-words-replace-30
     accent-archaic-words-31: accent-archaic-words-replace-31
@@ -66,8 +66,8 @@
     accent-archaic-words-35: accent-archaic-words-replace-35
     accent-archaic-words-36: accent-archaic-words-replace-36
     accent-archaic-words-37: accent-archaic-words-replace-37
-    accent-archaic-words-38: accent-archaic-words-replace-38
-    accent-archaic-words-38-2: accent-archaic-words-replace-38
+    #accent-archaic-words-38: accent-archaic-words-replace-38 #Aurora Song: "Bullshit" -> "Tall Tales" changes the grammar
+    #accent-archaic-words-38-2: accent-archaic-words-replace-38
     accent-archaic-words-39: accent-archaic-words-replace-39
     accent-archaic-words-40: accent-archaic-words-replace-40
     accent-archaic-words-41: accent-archaic-words-replace-41
@@ -106,7 +106,7 @@
     accent-archaic-words-67: accent-archaic-words-replace-67
     accent-archaic-words-68: accent-archaic-words-replace-68
     accent-archaic-words-68-2: accent-archaic-words-replace-68
-    accent-archaic-words-69: accent-archaic-words-replace-69
+    #accent-archaic-words-69: accent-archaic-words-replace-69 // Aurora Song: Sex is had on the server, Dalliances isn't an acceptable equiv
     accent-archaic-words-70: accent-archaic-words-replace-70
     accent-archaic-words-71: accent-archaic-words-replace-71
     accent-archaic-words-72: accent-archaic-words-replace-72
@@ -186,7 +186,7 @@
     accent-archaic-words-113: accent-archaic-words-replace-113
     accent-archaic-words-113-2: accent-archaic-words-replace-113
     accent-archaic-words-114: accent-archaic-words-replace-114
-    accent-archaic-words-115: accent-archaic-words-replace-115
+    accent-archaic-words-115: accent-archaic-words-replace-115 # Aurora Song: "Healing" can't be 100% replaced with "Succor" accurately
     accent-archaic-words-116: accent-archaic-words-replace-116
     accent-archaic-words-117: accent-archaic-words-replace-117
     accent-archaic-words-118: accent-archaic-words-replace-118
@@ -205,7 +205,7 @@
     accent-archaic-words-128: accent-archaic-words-replace-128
     accent-archaic-words-128-2: accent-archaic-words-replace-128
     accent-archaic-words-128-3: accent-archaic-words-replace-128
-    accent-archaic-words-129: accent-archaic-words-replace-129
+    #accent-archaic-words-129: accent-archaic-words-replace-129 // Aurora Song: Hop" can be used for "Hop to it" etc
     accent-archaic-words-129-2: accent-archaic-words-replace-129
     accent-archaic-words-129-3: accent-archaic-words-replace-129
     accent-archaic-words-130: accent-archaic-words-replace-130
@@ -221,19 +221,19 @@
     accent-archaic-words-137: accent-archaic-words-replace-137
     accent-archaic-words-138: accent-archaic-words-replace-138
     accent-archaic-words-138-2: accent-archaic-words-replace-138
-    accent-archaic-words-139: accent-archaic-words-replace-139
-    accent-archaic-words-139-2: accent-archaic-words-replace-139
-    accent-archaic-words-140: accent-archaic-words-replace-140
-    accent-archaic-words-141: accent-archaic-words-replace-141
-    accent-archaic-words-142: accent-archaic-words-replace-142
+    #accent-archaic-words-139: accent-archaic-words-replace-139 // Aurora Song: 139-142 are all varations of "Fuck them", has more use on an ERP enabled server
+    #accent-archaic-words-139-2: accent-archaic-words-replace-139
+    #accent-archaic-words-140: accent-archaic-words-replace-140
+    #accent-archaic-words-141: accent-archaic-words-replace-141
+    #accent-archaic-words-142: accent-archaic-words-replace-142
     accent-archaic-words-143: accent-archaic-words-replace-143
     accent-archaic-words-143-2: accent-archaic-words-replace-143
     accent-archaic-words-143-3: accent-archaic-words-replace-143
     accent-archaic-words-143-4: accent-archaic-words-replace-143
     accent-archaic-words-144: accent-archaic-words-replace-144
     accent-archaic-words-145: accent-archaic-words-replace-145
-    accent-archaic-words-146: accent-archaic-words-replace-146
-    accent-archaic-words-147: accent-archaic-words-replace-147
+    #accent-archaic-words-146: accent-archaic-words-replace-146 // Aurora Song: 146 and 147 changes "Replicant" to "Souless husk", this applies a predetermined opinion on the character
+    #accent-archaic-words-147: accent-archaic-words-replace-147 //
     accent-archaic-words-148: accent-archaic-words-replace-148
     accent-archaic-words-149: accent-archaic-words-replace-149
     accent-archaic-words-149-2: accent-archaic-words-replace-149
@@ -249,11 +249,11 @@
     accent-archaic-words-157: accent-archaic-words-replace-157
     accent-archaic-words-157-2: accent-archaic-words-replace-157
     accent-archaic-words-157-3: accent-archaic-words-replace-157
-    accent-archaic-words-157-4: accent-archaic-words-replace-157
+    #accent-archaic-words-157-4: accent-archaic-words-replace-157 // Aurora Song: Replaces "Cunt" See: Erp allowed server
     accent-archaic-words-158: accent-archaic-words-replace-158
     accent-archaic-words-158-2: accent-archaic-words-replace-158
     accent-archaic-words-158-3: accent-archaic-words-replace-158
-    accent-archaic-words-158-4: accent-archaic-words-replace-158
+    #accent-archaic-words-158-4: accent-archaic-words-replace-158 // Aurora Song: Replaces "Cunt" See: Erp allowed server
     accent-archaic-words-159: accent-archaic-words-replace-159
     accent-archaic-words-160: accent-archaic-words-replace-160
     accent-archaic-words-160-2: accent-archaic-words-replace-160
@@ -273,10 +273,10 @@
     accent-archaic-words-170: accent-archaic-words-replace-170
     accent-archaic-words-171: accent-archaic-words-replace-171
     accent-archaic-words-172: accent-archaic-words-replace-172
-    accent-archaic-words-173: accent-archaic-words-replace-173
-    accent-archaic-words-173-2: accent-archaic-words-replace-173
-    accent-archaic-words-173-3: accent-archaic-words-replace-173
-    accent-archaic-words-174: accent-archaic-words-replace-174
+    #accent-archaic-words-173: accent-archaic-words-replace-173 // Aurora Song: 173 is replacement for "Penis", has more use here
+    #accent-archaic-words-173-2: accent-archaic-words-replace-173
+    #accent-archaic-words-173-3: accent-archaic-words-replace-173
+    #accent-archaic-words-174: accent-archaic-words-replace-174 // Aurora Song: See above but "Balls"
     accent-archaic-words-175: accent-archaic-words-replace-175
     accent-archaic-words-176: accent-archaic-words-replace-176
     accent-archaic-words-176-2: accent-archaic-words-replace-176
@@ -325,7 +325,7 @@
     accent-archaic-words-203-2: accent-archaic-words-replace-203
     accent-archaic-words-204: accent-archaic-words-replace-204
     accent-archaic-words-205: accent-archaic-words-replace-205
-    accent-archaic-words-206: accent-archaic-words-replace-206
+    #accent-archaic-words-206: accent-archaic-words-replace-206 // Aurora Song: "Fuck" has a lot more use on an ERP enabled server
     accent-archaic-words-207: accent-archaic-words-replace-207
     accent-archaic-words-207-2: accent-archaic-words-replace-207
     accent-archaic-words-207-3: accent-archaic-words-replace-207
@@ -351,14 +351,13 @@
     accent-archaic-words-220: accent-archaic-words-replace-220
     accent-archaic-words-221: accent-archaic-words-replace-221
     accent-archaic-words-222: accent-archaic-words-replace-222
-    accent-archaic-words-223: accent-archaic-words-replace-223
-    accent-archaic-words-224: accent-archaic-words-replace-224
+    #accent-archaic-words-223: accent-archaic-words-replace-223 // Aurora Song: "Fuck" has a lot more use on an ERP enabled server
+    #accent-archaic-words-224: accent-archaic-words-replace-224 // Aurora Song: "Fuck" has a lot more use on an ERP enabled server
     accent-archaic-words-225: accent-archaic-words-replace-225
     accent-archaic-words-225-2: accent-archaic-words-replace-225
-    accent-archaic-words-226: accent-archaic-words-replace-226
-    accent-archaic-words-227: accent-archaic-words-replace-227
+    #accent-archaic-words-226: accent-archaic-words-replace-226 // Aurora Song: "Fuck" has a lot more use on an ERP enabled server    accent-archaic-words-227: accent-archaic-words-replace-227
     accent-archaic-words-229: accent-archaic-words-replace-229
     accent-archaic-words-230: accent-archaic-words-replace-230
     accent-archaic-words-231: accent-archaic-words-replace-231
 
-    
+
