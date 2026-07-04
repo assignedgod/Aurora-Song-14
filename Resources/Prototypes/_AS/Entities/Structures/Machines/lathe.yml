@@ -49,3 +49,61 @@
       - NFBlueprintNfsdTechfab
       - NFBlueprintAdvanced
   - type: OreSiloClient
+
+- type: entity
+  id: ASTechFabAdvancedMedical
+  parent: [ NFBlueprintReceiverBase, MedicalTechFab ]
+  name: advanced medical techfab
+  description: A cutting edge medical fabricator developed by interdyne pharmecuticals, comissioned by the auroran government.
+  components:
+  - type: Sprite
+    sprite: _AS/Structures/Machines/techfab.rsi
+    snapCardinals: true
+    layers:
+    - state: icon
+      map: ["enum.LatheVisualLayers.IsRunning"]
+    - state: advmedical
+    - state: unlit
+      shader: unshaded
+      map: ["enum.PowerDeviceVisualLayers.Powered"]
+    - state: inserting
+      map: ["enum.MaterialStorageVisualLayers.Inserting"]
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: Machine
+    board: ASTechFabAdvancedMedicalCircuitboard
+  - type: Lathe
+    idleState: icon
+    runningState: icon
+    unlitIdleState: unlit
+    unlitRunningState: unlit-building
+    staticPacks:
+    - NFLightsStatic
+    - NFBasicToolsStatic
+    - NFBasicStorageStatic
+    - NFBasicPartsStatic
+    - NFBasicElectronicsStatic
+    - NFBasicEvaStatic
+    - NFBasicEVAToolsStatic
+    - ReportingStatic
+    - NFPaperAndPaperAccessories
+    - ASBlueMagentaLights
+    - ASBlueMagentaColorFlashlights
+    - NFMedicalStatic
+    - NFMedicalClothingStatic
+    - NFChemistryBasicStatic
+    - NFMedicalMobilityStatic
+    - NFEmptyMedkitsStatic
+    - NFSurgeryBasicStatic
+    - NFSurgeryMedicalToolsStatic
+    - NFTopicalsStatic
+    - ASSmallMachines
+    - NFMedicalBoards
+    - NFMedical
+    - ASAdvancedMedfab
+  - type: BlueprintReceiver
+    whitelist:
+      tags:
+      - NFBlueprintMedicalTechfab
+      - NFBlueprintAdvanced
+  - type: OreSiloClient

@@ -1,0 +1,12 @@
+- type: latheRecipePack
+  id: ASAdvancedMedfab
+  recipes:
+  - DefibrillatorCompact
+  - Implanter
+  - ClothingOuterHardsuitMedical
+  - AdvancedBrutepack
+  - AdvancedOintment
+  - StasisBedMachineCircuitboard
+  - CryoPodMachineCircuitboard
+  - ThermomachineFreezerMachineCircuitBoard
+  - HellfireFreezerMachineCircuitBoard

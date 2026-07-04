@@ -45,6 +45,8 @@
     AirlockGlassShuttleFlatpack: 4294967295 # Infinite
     PoweredDirectionalFanFlatpack: 4294967295 # Infinite - Aurora's Song - Added for shipbuilding
     PoweredTinyFanFlatpack: 4294967295 # Infinite - Aurora's Song - Added for shipbuilding
+    # Aurora, Medical
+    MedicalTechFabFlatpack: 4294967295 # Infinite - Aurora's Song
     # Science
     MachineArtifactAnalyzerFlatpack: 4294967295 # Infinite
     ResearchAndDevelopmentServerFlatpack: 4294967295 # Infinite

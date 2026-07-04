@@ -65,7 +65,7 @@
 - type: latheRecipePack
   id: NFSurgeryMedicalToolsStatic
   recipes:
-  - Implanter
+  #- Implanter // Aurora, Move to adv medfab
   - Defibrillator
   - HandheldHealthAnalyzer
   - DiseaseSwab
@@ -89,8 +89,8 @@
   - JugBluespace
   - ReinforcedJug
   - VialBluespace
-  - ClothingOuterHardsuitMedical
-  - DefibrillatorCompact
+  #- ClothingOuterHardsuitMedical // Aurora: move to advanced medfab
+  #- DefibrillatorCompact // Aurora: Move to advanced medfab
   - MedicalPouch
 
 - type: latheRecipePack

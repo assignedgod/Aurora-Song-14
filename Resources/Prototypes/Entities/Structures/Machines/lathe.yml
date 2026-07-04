@@ -566,7 +566,11 @@
     - NFSurgeryMedicalToolsStatic #Frontier
     - NFTopicalsStatic # Frontier
     - ASSmallMachines # Aurora Song
-    - ASBlueMagentaLights # Aurora
+    - ASBlueMagentaLights # Aurora Song
+    - NFMedicalBoards # Aurora Song
+    - NFMedical # Aurora Song
+    - MedicalBoardsStatic # Aurora  Song
+    - Chemistry # Aurora
     # dynamicPacks: # Frontier
     # - Chemistry # Frontier
   - type: Machine

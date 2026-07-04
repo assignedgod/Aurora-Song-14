@@ -23,3 +23,14 @@
       state: sle
     - type: MachineBoard
       prototype: ASTechFabSLE
+
+- type: entity
+  id: ASTechFabAdvancedMedicalCircuitboard
+  parent: MedicalTechFabCircuitboard
+  name: Advanced medical techfab machine board
+  description: A machine printed circuit board for an advanced medical techfab.
+  components:
+  - type: Sprite
+    state: medical
+  - type: MachineBoard
+    prototype: ASTechFabAdvancedMedical

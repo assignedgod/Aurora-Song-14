@@ -59,3 +59,18 @@
   components:
   - type: Flatpack
     entity: ChemDispenserEmpty
+
+- type: entity
+  parent: BaseNFFlatpack
+  id: ASAdvancedMedicalTechFabFlatpack
+  name: advanced medical techfab flatpack
+  description: A flatpack used for constructing an advanced medical techfab.
+  components:
+  - type: Flatpack
+    entity: ASTechFabAdvancedMedical
+  - type: StaticPrice
+    price: 250
+    vendPrice: 4000 # Aurora's Song: Vend price to 100k (It multiplies it by 25x)
+  - type: Sprite
+    layers:
+    - state: medical_lathe
