@@ -16,6 +16,7 @@
   price: 16000
   category: Small
   group: Medical
+  access: Medical # Aurora's Song
   shuttlePath: /Maps/_NF/Shuttles/spirit.yml
   guidebookPage: ShipyardSpirit
   class:

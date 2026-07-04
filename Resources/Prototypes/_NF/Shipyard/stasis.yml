@@ -16,6 +16,7 @@
   price: 56000 # 15% tier 2
   category: Medium
   group: Medical
+  access: Medical # Aurora's Song
   shuttlePath: /Maps/_NF/Shuttles/stasis.yml
   guidebookPage: ShipyardStasis
   class:

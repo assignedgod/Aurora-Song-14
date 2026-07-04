@@ -3952,7 +3952,7 @@ entities:
     - type: Transform
       pos: 6.5,10.5
       parent: 1
-- proto: MedicalTechFab
+- proto: ASTechFabAdvancedMedical
   entities:
   - uid: 469
     components:

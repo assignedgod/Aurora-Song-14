@@ -6,6 +6,7 @@
   price: 40000 #Appraisal is 19000
   category: Medium
   group: Medical
+  access: Medical # Aurora's Song
   shuttlePath: /Maps/_AS/Shuttles/potion_seller.yml
   class:
   - Medical

@@ -4049,7 +4049,7 @@ entities:
     - type: Transform
       pos: 7.5,8.5
       parent: 1
-- proto: MedicalTechFab
+- proto: ASTechFabAdvancedMedical
   entities:
   - uid: 491
     components:

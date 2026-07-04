@@ -16,6 +16,7 @@
   price: 21600 #19255 0.05 20217.75 | Aurora's song - price increased by 100 to pass arbitrage check
   category: Small
   group: Medical
+  access: Medical # Aurora's Song
   shuttlePath: /Maps/_NF/Shuttles/tyne.yml
   class:
   - Medical
