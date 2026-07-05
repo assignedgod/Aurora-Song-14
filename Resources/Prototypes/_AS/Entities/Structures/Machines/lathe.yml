@@ -101,6 +101,7 @@
     - NFMedicalBoards
     - NFMedical
     - ASAdvancedMedfab
+    - NFBotanyToolsStatic
   - type: BlueprintReceiver
     whitelist:
       tags:
