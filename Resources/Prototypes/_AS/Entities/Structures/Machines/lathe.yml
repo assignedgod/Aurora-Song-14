@@ -102,6 +102,7 @@
     - NFMedical
     - ASAdvancedMedfab
     - NFBotanyToolsStatic
+    - BluespaceReagentGrinderRecipieAS
   - type: BlueprintReceiver
     whitelist:
       tags:
