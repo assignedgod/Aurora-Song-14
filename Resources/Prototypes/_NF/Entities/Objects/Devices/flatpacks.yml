@@ -452,7 +452,7 @@
   - type: Flatpack
     entity: MedicalTechFab
   - type: StaticPrice
-    price: 1000000 # Aurora : 250 -> 100k
+    price: 4000 # Aurora : 250 -> 4000, with vend price increases that gets it up to 100k
   - type: Sprite
     layers:
     - state: medical_lathe
