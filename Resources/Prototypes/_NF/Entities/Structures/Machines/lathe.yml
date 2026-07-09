@@ -106,11 +106,11 @@
     - NFPaperAndPaperAccessories
     - ReportingStatic # DeltaV
     - LunchboxPack # Imp
-    - NFServiceBoards
-    - NFMcServiceTechfabStatic
-    - NFService
-    - BluespaceReagentGrinderRecipieAS
-    - ServiceBoards
+    - NFServiceBoards # Aurora Song
+    - NFMcServiceTechfabStatic # Aurora Song
+    - NFService # Aurora Song
+    - BluespaceReagentGrinderRecipieAS # Aurora Song
+    - ServiceBoards # Aurora Song
   - type: EmagLatheRecipes
     emagStaticPacks:
     - NFServiceTechfabEmagStatic
