@@ -78,6 +78,8 @@
     unlitIdleState: unlit
     unlitRunningState: unlit-building
     staticPacks:
+    - MedicalBoardsStatic
+    - Chemistry
     - NFLightsStatic
     - NFBasicToolsStatic
     - NFBasicStorageStatic
