@@ -39,3 +39,11 @@
       state: chitin
     - type: Stack
       count: 1
+
+- type: entity
+  parent: MaterialMnemolith
+  id: MaterialMnemolith30
+  suffix: Thirty
+  components:
+  - type: Stack
+    count: 30

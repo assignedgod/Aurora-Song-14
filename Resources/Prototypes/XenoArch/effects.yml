@@ -54,13 +54,13 @@
     - id: XenoArtifactStealth
       weight: 1.0
     - id: XenoArtifactRareMaterialSpawnSilver
-      weight: 1.8 # amount is laughable
+      weight: 1.8 # amount is laughable # Aurora's Song: Like hell it is
     - id: XenoArtifactRareMaterialSpawnPlasma
-      weight: 2.0 # amount is laughable
+      weight: 2.0 # amount is laughable # Aurora's Song: Like hell it is
     - id: XenoArtifactRareMaterialSpawnGold
-      weight: 1.8 # amount is laughable
+      weight: 1.8 # amount is laughable # Aurora's Song: Like hell it is
     - id: XenoArtifactRareMaterialSpawnUranium
-      weight: 1.0 # amount is laughable
+      weight: 1.0 # amount is laughable # Aurora's Song: Like hell it is
     - id: XenoArtifactAngryCarpSpawn
       weight: 4.0
     - id: XenoArtifactFaunaSpawn
@@ -127,10 +127,12 @@
       weight: 4.0
     - id: XenoArtifactEffectCreationGasCarbonDioxide
       weight: 4.0
-    - id: NFXenoArtifactEffectSpawnGrimforgedConstruct # Frontier
-      weight: 1.5 # Frontier
+   # - id: NFXenoArtifactEffectSpawnGrimforgedConstruct # Frontier #Aurora's Song: It isn't gonne be just mercs doing this
+   #   weight: 1.5 # Frontier
     - id: NFXenoArtifactEffectAnomaliteSpawn # Frontier
       weight: 6.0 # Frontier
+    - id: XenoArtifactRareMaterialSpawnMnemolith # Aurora's Song: important for new plans
+      weight: 3.8 # Aurora's Song
 
 - type: entityTable
   id: XenoArtifactEffectsHandheldOnlyTable
@@ -790,21 +792,21 @@
       deleteSpawnerAfterSpawn: false
       table: !type:AllSelector
         children:
-        - id: SilverOre1
+        - id: IngotSilver # Aurora's Song: Increase material yield
           rolls: !type:ConstantNumberSelector
-            value: 6
+            value: 1
           prob: 0.3
-        - id: PlasmaOre1
+        - id: SheetPlasma # Aurora's Song: Increase material yield
           rolls: !type:ConstantNumberSelector
-            value: 6
+            value: 1
           prob: 0.3
-        - id: GoldOre1
+        - id: IngotGold # Aurora's Song: Increase material yield
           rolls: !type:ConstantNumberSelector
-            value: 6
+            value: 1
           prob: 0.3
-        - id: UraniumOre1
+        - id: SheetUranium # Aurora's Song: Increase material yield
           rolls: !type:ConstantNumberSelector
-            value: 6
+            value: 1
           prob: 0.3
 
 - type: entity
@@ -826,9 +828,9 @@
       deleteSpawnerAfterSpawn: false
       table: !type:AllSelector
         children:
-        - id: SilverOre1
+        - id: IngotSilver #Aurora's Song: Increase material amount
           rolls: !type:ConstantNumberSelector
-            value: 6
+            value: 2 #Aurora's Song: Lower rolls
           prob: 0.3
 
 - type: entity
@@ -850,9 +852,9 @@
       deleteSpawnerAfterSpawn: false
       table: !type:AllSelector
         children:
-        - id: PlasmaOre1
+        - id: SheetPlasma # Aurora's Song: Increase material yield
           rolls: !type:ConstantNumberSelector
-            value: 6
+            value: 2
           prob: 0.3
 
 - type: entity
@@ -874,9 +876,9 @@
       deleteSpawnerAfterSpawn: false
       table: !type:AllSelector
         children:
-        - id: GoldOre1
+        - id: IngotGold # Aurora's Song: Increase material yield
           rolls: !type:ConstantNumberSelector
-            value: 6
+            value: 2 # Aurora's Song 6>2
           prob: 0.3
 
 - type: entity
@@ -898,9 +900,9 @@
       deleteSpawnerAfterSpawn: false
       table: !type:AllSelector
         children:
-        - id: UraniumOre1
+        - id: SheetUranium # Aurora's Song: Increase material yield
           rolls: !type:ConstantNumberSelector
-            value: 3
+            value: 2
           prob: 0.3
 
 - type: entity
